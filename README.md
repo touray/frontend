@@ -24,7 +24,10 @@ These instructions will get you a copy of the project up setup in a new theme. S
 The following commands can be run to compile:
 
 * ```gulp``` - Compiles, then watches for changes to files to re-compile
-
+* ```gulp lint``` - Lints JavaScript files
+* ```gulp scripts``` - Lints and compiles JavaScript files
+* ```gulp compass``` - Compiles Sass files
+* ```gulp images``` - Minifies images
 
 ### Contributing
 
