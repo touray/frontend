@@ -1,0 +1,212 @@
+////////////////////////
+// Variables
+//
+// All theme variables should be placed here.
+////////////////////////
+
+// 1. Global
+// ---------
+
+$global-width:             1260;
+$global-font-size:         18px;
+$global-lineheight:        1.4;
+
+$primary-color:            #1779d4;
+$secondary-color:          #1779d4;
+$trinary-color:            #5ba253;
+
+$success-color:            $trinary-color;
+$warning-color:            #ffae00;
+$alert-color:              #ce3e3e;
+
+$white:                    #fff;
+$black:                    #000;
+$gray:                     #ccc;
+
+$xlight-gray:              #f0f0f0;
+$light-gray:               #f0f0f3;
+$medium-gray:              #7e7e7e;
+$dark-gray:                #333;
+$xdark-gray:               #dfe0e1;
+
+$body-background:          $white;
+$border-color:             $light-gray;
+
+$body-font-color:          $dark-gray;
+$body-font-family:         Arial, Helvetica Neue, Helvetica, sans-serif;
+$body-antialiased:         true;
+$global-margin:            ($global-font-size * 2);
+$global-padding:           30;
+
+$global-weight-normal:     400;
+$global-weight-medium:     500;
+$global-weight-semibold:   600;
+$global-weight-bold:       700;
+
+$global-radius:            rem-calc(3);
+$global-text-direction:    ltr;
+$rem-base:                 $global-font-size;
+$global-transition-timing: .2s;
+
+// 2. Breakpoints
+// --------------
+
+$breakpoint-decrease: .8;
+
+$small:  980px;
+$medium: 1024px;
+$large:  1600px;
+
+$medium-down: 0px $medium;
+$large-down:  0px $large;
+
+// 3. Base Typography
+// ------------------
+
+$font-family-monospace: Consolas, "Liberation Mono", Courier, monospace;
+
+$header-font-family: $body-font-family;
+$header-font-weight: $global-weight-normal;
+$header-font-style:  $global-weight-normal;
+
+$header-color:             $black;
+$header-lineheight:        $global-lineheight;
+$header-margin-bottom:     rem-calc($global-margin);
+$header-text-rendering:    optimizeLegibility;
+$header-small-font-color:  $medium-gray;
+
+$header-1-size: rem-calc($global-font-size + 22);
+$header-2-size: rem-calc($global-font-size + 11);
+$header-3-size: rem-calc($global-font-size + 8);
+$header-4-size: rem-calc($global-font-size + 4);
+$header-5-size: rem-calc($global-font-size + 2);
+$header-6-size: rem-calc($global-font-size);
+
+$xxxlarge-font-size:    $header-1-size;
+$xxlarge-font-size:     $header-2-size;
+$xlarge-font-size:      $header-3-size;
+$large-font-size:       $header-4-size;
+$medium-font-size:      $header-5-size;
+$normal-font-size:      $header-6-size;
+$small-font-size:       rem-calc($global-font-size - 2);
+$xsmall-font-size:      rem-calc($global-font-size - 4);
+$xxsmall-font-size:     rem-calc($global-font-size - 6);
+$xxxsmall-font-size:    rem-calc($global-font-size - 8);
+
+$paragraph-lineheight:     $global-lineheight;
+$paragraph-margin-bottom:  rem-calc($global-margin);
+$paragraph-text-rendering: optimizeLegibility;
+
+$code-color:       $body-font-color;
+$code-font-family: $font-family-monospace;
+$code-font-weight: $global-weight-normal;
+$code-background:  $xlight-gray;
+$code-border:      rem-calc(1) solid $light-gray;
+$code-padding:     rem-calc(2);
+
+$anchor-color: $primary-color;
+$anchor-color-hover: scale-color($anchor-color, $lightness: -14%);
+$anchor-text-decoration: none;
+$anchor-text-decoration-hover: none;
+
+$hr-width:  $global-width;
+$hr-border: rem-calc(1) solid $gray;
+$hr-margin: rem-calc($global-margin) auto;
+
+$list-lineheight: $paragraph-lineheight;
+$list-margin-bottom: $paragraph-margin-bottom;
+$list-style-type: disc;
+$list-style-position: outside;
+$list-side-margin: 1.25rem;
+$list-nested-side-margin: 1.25rem;
+$defnlist-margin-bottom: 1rem;
+$defnlist-term-weight: $global-weight-bold;
+$defnlist-term-margin-bottom: 0.3rem;
+$blockquote-color: $dark-gray;
+$blockquote-padding: rem-calc(9 20 0 19);
+$blockquote-border: 1px solid $medium-gray;
+$cite-font-size: rem-calc(13);
+$cite-color: $dark-gray;
+$keystroke-font: $font-family-monospace;
+$keystroke-color: $black;
+$keystroke-background: $light-gray;
+$keystroke-padding: rem-calc(2 4 0);
+$keystroke-radius: $global-radius;
+$abbr-underline: 1px dotted $black;
+
+// 4. Forms
+// ---------
+
+$fieldset-border: 1px solid $medium-gray;
+$fieldset-padding: rem-calc(20);
+$fieldset-margin: rem-calc(18 0);
+$legend-padding: rem-calc(0 3);
+$form-spacing: rem-calc(15);
+$helptext-color: #333;
+$helptext-font-size: rem-calc(13);
+$helptext-font-style: italic;
+$input-prefix-color: $black;
+$input-prefix-background: $light-gray;
+$input-prefix-border: 1px solid $medium-gray;
+$input-prefix-padding: 1rem;
+$form-label-color: $black;
+$form-label-font-size: rem-calc(14);
+$form-label-font-weight: $global-weight-normal;
+$form-label-line-height: 1.8;
+$select-background: #fafafa;
+$select-triangle-color: #333;
+$select-radius: $global-radius;
+
+$input-color:            $dark-gray;
+$input-font-family:      inherit;
+$input-font-size:        rem-calc($global-font-size);
+
+$input-background:          $body-background;
+$input-background-focus:    $xlight-gray;
+$input-background-disabled: $light-gray;
+
+$input-border:       rem-calc(1) solid $gray;
+$input-border-focus: rem-calc(1) solid $gray;
+$input-shadow:       none;
+$input-shadow-focus: none;
+
+$input-cursor-disabled: default;
+$input-transition: box-shadow 0.5s, border-color 0.25s ease-in-out;
+$input-number-spinners: true;
+$input-radius: $global-radius;
+
+// 5. Label
+// ---------
+
+$label-background: $primary-color;
+$label-color: foreground($label-background);
+$label-font-size: 0.8rem;
+$label-padding: 0.33333rem 0.5rem;
+$label-radius: $global-radius;
+
+// 6. Table
+// ---------
+
+$table-background: $white;
+$table-color-scale: 5%;
+$table-border: 1px solid smart-scale($table-background, $table-color-scale);
+$table-padding: rem-calc(8 10 10);
+$table-hover-scale: 2%;
+$table-row-hover: darken($table-background, $table-hover-scale);
+$table-row-stripe-hover: darken($table-background, $table-color-scale + $table-hover-scale);
+$table-striped-background: smart-scale($table-background, $table-color-scale);
+$table-stripe: even;
+$table-head-background: smart-scale($table-background, $table-color-scale / 2);
+$table-foot-background: smart-scale($table-background, $table-color-scale);
+$table-head-font-color: $body-font-color;
+$show-header-for-stacked: false;
+
+// 6. Grid
+// ---------
+
+$num-columns:      12;
+$include-clearfix: true;
+
+// Internal variables used for text direction
+$global-left: if($global-text-direction == rtl, right, left);
+$global-right: if($global-text-direction == rtl, left, right);

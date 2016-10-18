@@ -1,0 +1,25 @@
+////////////////////////
+// Style File
+//
+// This file gets turned into style.css. This file should really hold nothing except for imports of your base, style guide, layout, and design partials.
+////////////////////////
+
+////////////////////////
+// Global Import
+////////////////////////
+@import 'partials/global/global';
+
+////////////////////////
+// Reset & Base Import
+////////////////////////
+@import "compass/reset";
+
+////////////////////////
+// Import Layouts
+////////////////////////
+@import 'partials/layout/layouts';
+
+////////////////////////
+// Import Components
+////////////////////////
+@import 'partials/components/components';

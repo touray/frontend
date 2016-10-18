@@ -1,0 +1,11 @@
+///////////////////////////////////////////
+// Layout Styles
+//
+// All layout styles should be placed here.
+///////////////////////////////////////////
+
+/* Components */
+
+.container {
+  @extend %container;
+}

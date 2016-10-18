@@ -1,0 +1,37 @@
+{
+  "name": "frontend",
+  "version": "1.0.0",
+  "description": "A universal, organized, developer-driven frontend theme starter kit.",
+  "main": "README.md",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bmarshall511/frontend.git"
+  },
+  "keywords": [
+    "frontend"
+  ],
+  "author": "Ben Marshall",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bmarshall511/frontend/issues"
+  },
+  "homepage": "https://github.com/bmarshall511/frontend#readme",
+  "devDependencies": {
+    "compass-options": "^0.1.1",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-clean-css": "^2.0.13",
+    "gulp-compass": "^2.1.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-imagemin": "^3.0.3",
+    "gulp-jshint": "^2.0.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-strip-debug": "^1.1.0",
+    "gulp-uglify": "^2.0.0",
+    "jshint": "^2.9.3",
+    "jshint-stylish": "^2.2.1"
+  }
+}

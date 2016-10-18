@@ -1,0 +1,39 @@
+/////////////////////////////////////////
+// Grid Styles
+//
+// All grid styles should be placed here.
+/////////////////////////////////////////
+
+.col-12-1 {
+  @include grid-span(1, 1);
+}
+
+@include breakpoint($small) {
+  .col-12-1 {
+    @include grid-span(12, 1);
+  }
+
+  .col-3-10-med {
+    @include grid-span(3, 10);
+  }
+
+  .col-4-9-med {
+    @include grid-span(4, 9);
+  }
+
+  .col-6-1-med {
+    @include grid-span(6, 1);
+  }
+
+  .col-6-7-med {
+    @include grid-span(6, 7);
+  }
+
+  .col-8-1-med {
+    @include grid-span(8, 1);
+  }
+
+  .col-9-1-med {
+    @include grid-span(9, 1);
+  }
+}

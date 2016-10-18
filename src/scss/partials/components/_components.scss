@@ -1,0 +1,22 @@
+////////////////////////////////////////////////////////////////////////////////
+// Component Partials
+//
+// Separate your Layout from Design
+// Build sub folders and partials in this folder, with everything being
+// imported, in cascading order, into this file.
+////////////////////////////////////////////////////////////////////////////////
+
+@import 'base';
+@import 'layout';
+@import 'typography';
+@import 'forms';
+@import 'fonts';
+@import 'icons';
+@import 'grid';
+@import 'header';
+@import 'footer';
+@import 'common';
+@import 'buttons';
+
+
+// Design Styles

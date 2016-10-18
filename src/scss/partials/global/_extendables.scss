@@ -1,0 +1,22 @@
+////////////////////////////////////////////////////////////////////////////////
+// Extendables
+//
+// All extendables should be placed here.
+////////////////////////////////////////////////////////////////////////////////
+
+%container {
+  width: 100%;
+  max-width: rem-calc($global-width + $global-padding);
+  margin: 0 auto;
+  @include clearfix;
+}
+
+%list-inline-block {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  li {
+    display: inline-block;
+  }
+}

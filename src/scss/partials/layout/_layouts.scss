@@ -1,0 +1,10 @@
+////////////////////////
+// Layout Partials
+//
+// These files should only include layout styles.
+////////////////////////
+
+@include add-grid(1);
+@include add-grid($num-columns at $small);
+@include add-gutter-style('split');
+@include add-gutter(rem-calc($global-padding));

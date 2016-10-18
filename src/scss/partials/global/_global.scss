@@ -1,0 +1,22 @@
+////////////////////////
+// Base Partials
+//
+// These files will be shared across all three of your output CSS files.
+////////////////////////
+
+////////////////////////
+// Compass & Singularity Extensions
+////////////////////////
+@import 'compass';
+@import 'breakpoint';
+@import 'singularitygs';
+@import 'toolkit';
+@import 'toolkit/kickstart';
+
+////////////////////////
+// Private Imports
+////////////////////////
+@import 'functions';
+@import 'variables';
+@import 'mixins';
+@import 'extendables';
