@@ -1,7 +1,9 @@
 # Frontend v1.0.0
 > A light-weight, skeleton frontend framework.
 
-Frontend was created to give frontend developers a jumpstart when building new themes and sites. It's a light-weight, no bloat, skeleton framework that utilizes [Gulp](http://gulpjs.com/) to compile stylesheets, JavaScript files and images in a organized, easy to navigate folder structure. Features include:
+Frontend was created to give frontend developers a jumpstart when building new themes and sites. It's a light-weight, no bloat, skeleton framework that utilizes [Gulp](http://gulpjs.com/) to compile stylesheets, JavaScript files and images in a organized, easy to navigate folder structure.
+
+## Features
 
 * [Gulp](http://gulpjs.com/) - Development task manager
 * [Sass](http://sass-lang.com/) - CSS extension language
