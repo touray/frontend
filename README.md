@@ -1,7 +1,15 @@
 # Frontend v1.0.0
 > A light-weight, skeleton frontend framework.
 
-Frontend is a universal starter theme for developers that can be used to jumpstart theme setup.
+Frontend was created to give frontend developers a jumpstart when building new themes and sites. It's a light-weight, no bloat, skeleton framework that utilizes [Gulp](http://gulpjs.com/) to compile stylesheets, JavaScript files and images in a organized, easy to navigate folder structure. Features include:
+
+* [Gulp](http://gulpjs.com/) - Development task manager
+* [Sass](http://sass-lang.com/) - CSS extension language
+* [Compass](http://compass-style.org/) - CSS authoring framework
+* [JSHint](http://jshint.com/) - JavaScript code quality tester
+* [imagemin](https://github.com/imagemin/imagemin) - Image minifier
+* [Singularity](https://github.com/at-import/Singularity) - Grid framework
+* [Breakpoint](http://breakpoint-sass.com/) - Sass media queries
 
 ## Getting Started
 
