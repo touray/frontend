@@ -16,9 +16,9 @@
   "author": "Ben Marshall",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/bmarshall511/frontend/issues"
+    "url": "https://github.com/bmarshall511/frontend.github.io.git/issues"
   },
-  "homepage": "https://github.com/bmarshall511/frontend#readme",
+  "homepage": "https://github.com/bmarshall511/frontend.github.io.git#readme",
   "devDependencies": {
     "compass-options": "^0.1.1",
     "gulp": "^3.9.1",
