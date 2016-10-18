@@ -1,8 +1,8 @@
-////////////////////////
+////////////////////////////////////////////////////////////////////////////////
 // Mixins
 //
 // All Sass mixins should be placed here.
-////////////////////////
+////////////////////////////////////////////////////////////////////////////////
 
 /// Adds a downward-facing triangle as a background image to an element. The image is formatted as an SVG, making it easy to change the color. Because Internet Explorer doesn't support encoded SVGs as background images, a PNG fallback is also included.
 /// There are two PNG fallbacks: a black triangle and a white triangle. The one used depends on the lightness of the input color.

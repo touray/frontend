@@ -39,21 +39,21 @@ The following commands can be run to compile:
 * ```gulp compass``` - Compiles Sass files
 * ```gulp images``` - Minifies images
 
-### Contributing
+## Contributing
 
 Please read [CONTRIBUTING.md](https://gist.github.com/bmarshall511/4e6cf39876a5b0394fbe54f1c7fb324b) for details on our code of conduct, and the process for submitting pull requests to us.
 
-### Versioning
+## Versioning
 
 We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/bmarshall511/tags).
 
-### Authors
+## Authors
 
 * **Ben Marshall** - *Initial work* - [bmarshall511](https://github.com/bmarshall511)
 
 See also the list of [contributors](https://github.com/bmarshall511/frontend/contributors) who participated in this project.
 
-### License
+## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
 
