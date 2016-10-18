@@ -13,6 +13,16 @@
 
 /* Elements */
 
+.col-#{$num-columns} {
+  @include grid-span($num-columns, 1);
+}
+
+@include breakpoint($small) {
+  .col-#{$num-columns}-small {
+    @include grid-span($num-columns-small, 1);
+  }
+}
+
 
 /* Theme */
 

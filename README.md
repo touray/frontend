@@ -1,7 +1,7 @@
-# Frontend by Ben Marshall (v1.0.0)
-> A universal, organized, developer-driven frontend theme starter kit.
+# Frontend v1.0.0
+> A light-weight, skeleton frontend framework.
 
-Frontend by Ben Marshall is a universal starter theme for developers that can be used to jumpstart theme setup.
+Frontend is a universal starter theme for developers that can be used to jumpstart theme setup.
 
 ## Getting Started
 

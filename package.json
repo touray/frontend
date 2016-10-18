@@ -1,7 +1,7 @@
 {
   "name": "frontend",
   "version": "1.0.0",
-  "description": "A universal, organized, developer-driven frontend theme starter kit.",
+  "description": "A light-weight, skeleton frontend framework.",
   "main": "README.md",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
