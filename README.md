@@ -59,6 +59,6 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## Changelog
 
-### v1.0.0 (Released Oct. 18, 2016)
+### v1.0.0 (Oct. 18, 2016)
 
 * Initial commit.
