@@ -1,11 +1,11 @@
-# Frontend by Ben Marshall
+# Frontend by Ben Marshall (v1.0.0)
 > A universal, organized, developer-driven frontend theme starter kit.
 
 Frontend by Ben Marshall is a universal starter theme for developers that can be used to jumpstart theme setup.
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+These instructions will get you a copy of the project up setup in a new theme. See compiling for notes on how to compile the code while developing.
 
 ### Prerequisites
 
@@ -14,7 +14,17 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Installing
 
-### Deployment
+[Download](https://github.com/bmarshall511/frontend/archive/master.zip) and extract the Frontend files to your project folder. Then run the following in Terminal from that location:
+
+1. ```bundle install``` to install gem dependencies
+2. ```npm install``` to install development dependencies
+
+### Compiling
+
+The following commands can be run to compile:
+
+* ```gulp``` - Compiles, then watches for changes to files to re-compile
+
 
 ### Contributing
 
