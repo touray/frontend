@@ -35,7 +35,14 @@ gulp.task('lint', function() {
 gulp.task('scripts', ['lint'], function() {
   // global.js
   gulp.src([
-    sourceJs + '/config.js'
+    // Config
+    sourceJs + '/config.js',
+
+    // Services
+    sourceJs + '/services/callback.js',
+
+    // Global controllers
+    sourceJs + '/controllers/global.js'
   ])
     .pipe(concat('global.js'))
     .pipe(gulp.dest(paths.js))

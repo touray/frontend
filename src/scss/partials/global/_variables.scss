@@ -204,7 +204,8 @@ $show-header-for-stacked: false;
 // 6. Grid
 // ---------
 
-$num-columns:      12;
+$num-columns:       1;
+$num-columns-small: 12;
 $include-clearfix: true;
 
 // Internal variables used for text direction
