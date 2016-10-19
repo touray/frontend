@@ -7,11 +7,11 @@
 ( function( $ ) {
   'use strict';
 
-  Theme.Controllers.Global = {
+  Frontend.Controllers.Global = {
     init: function( callback ) {
 
       // Optional callback function
-      Theme.Services.callback( callback );
+      Frontend.Services.callback( callback );
     }
   };
 

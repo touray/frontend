@@ -1,4 +1,4 @@
-# Frontend v1.0.1
+# Frontend v1.1.0
 > A light-weight, skeleton frontend framework.
 
 Frontend was created to give frontend developers a jumpstart when building new themes and sites. It's a light-weight, no bloat, skeleton framework that utilizes [Gulp](http://gulpjs.com/) to compile stylesheets, JavaScript files and images in a organized, easy to navigate folder structure.
@@ -12,6 +12,7 @@ Frontend was created to give frontend developers a jumpstart when building new t
 * [imagemin](https://github.com/imagemin/imagemin) - Image minifier
 * [Singularity](https://github.com/at-import/Singularity) - Grid framework
 * [Breakpoint](http://breakpoint-sass.com/) - Sass media queries
+* [Complexity](https://www.npmjs.com/package/gulp-complexity) - JavaScript complexity analysis gulp task
 
 ## Getting Started
 
@@ -39,6 +40,34 @@ The following commands can be run to compile:
 * ```gulp compass``` - Compiles Sass files
 * ```gulp images``` - Minifies images
 
+## Documentation
+
+### CSS, Sass &amp; Compass
+
+Before beginning any theming, be sure to review and set the variables in the ```src/scss/partials/global/_variables.scss``` file.
+
+Sass files are organized into 4 main folders:
+
+* base - All theme base styles (base selectors, styles set via variables). DO NOT EDIT ANY OF THESE FILES!
+* components - Includes all styled components broken down into seperate folders including:
+** design - Contains all themed sections and standalone components (header, footer, buttons, etc.)
+** lib - Contains all CSS/Sass libraries (Foundation, Bootstrap, slick, etc.)
+
+### JavaScript
+
+* jQuery is required.
+* Global JS variables should be set in the ```src/js/config.js``` file.
+* Variables, controllers and services should all be namespaced with ```Frontend``` to avoid conflicts with other libraries.
+* All controllers loaded on a page will be automatically initialized and do not needed to be called directly.
+* Call ```Frontend.init();``` to reinitialize page controllers (useful with AJAX calls when new content is added).
+* Modify the <em>JavaScript Task</em> in the ```gulpfile.js``` to add, alter compiled JS files.
+
+Scripts are organized into 3 different categories:
+
+* Controllers - Component specific functionality (main menu dropdown, accordions, etc.)
+* Services - Helper functions
+* Libraries - JavaScript libraries (jQuery, slick, etc.)
+
 ## Contributing
 
 Please read [CONTRIBUTING.md](https://gist.github.com/bmarshall511/4e6cf39876a5b0394fbe54f1c7fb324b) for details on our code of conduct, and the process for submitting pull requests to us.
@@ -59,10 +88,11 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## Changelog
 
-### v1.0.1 (TBD)
+### v1.1.0 (TBD)
 
 * Updated file documentation.
 * Re-organized some folder structures.
+* Installed gulp-complexity.
 
 ### v1.0.0 (Oct. 18, 2016)
 

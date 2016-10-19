@@ -5,10 +5,14 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 // Namespace all theme specific functionality
-var Theme = {
+var Frontend = {
   Config: {
     debug: true
   },
+
+////////////////////////////////////////////////////////////////////////////////
+// DON'T EDIT ANYTHING BELOW THIS LINE!
+////////////////////////////////////////////////////////////////////////////////
 
   // Theme services and controllers. Don't add directly here, sepearte into the
   // controllers and services directories.
@@ -18,10 +22,10 @@ var Theme = {
   // Initialize all page controllers. Should be called when new content is added
   // to the page (ex. AJAX).
   init: function() {
-    $.each( Theme.Controllers, function( index, value ) {
+    $.each( Frontend.Controllers, function( index, value ) {
       console.log( "'" + index + "'" + ' controller initialized...' );
       value.init( function() {
-        if ( Theme.Config.debug ) {
+        if ( Frontend.Config.debug ) {
           console.log( '... ' + "'" + index + "'" + ' controller completed.' );
         }
       } );
@@ -29,11 +33,10 @@ var Theme = {
   }
 };
 
-// DON'T EDIT ANYTHING BELOW THIS LINE!
-
 ( function( $ ) {
   $( function() {
-    Theme.init();
+    // Initialize theme JS on page ready.
+    Frontend.init();
   } );
 } ) ( jQuery );
 ////////////////////////////////////////////////////////////////////////////////
@@ -46,13 +49,13 @@ var Theme = {
 ( function( $ ) {
   'use strict';
 
-  Theme.Services.callback = function( callback ) {
+  Frontend.Services.callback = function( callback ) {
     if ( typeof callback !== 'undefined' ) {
       try {
         callback();
       }
       catch( err ) {
-        if ( Theme.Config.debug ) {
+        if ( Frontend.Config.debug ) {
           console.log( err );
         }
       }
@@ -69,11 +72,11 @@ var Theme = {
 ( function( $ ) {
   'use strict';
 
-  Theme.Controllers.Global = {
+  Frontend.Controllers.Global = {
     init: function( callback ) {
 
       // Optional callback function
-      Theme.Services.callback( callback );
+      Frontend.Services.callback( callback );
     }
   };
 

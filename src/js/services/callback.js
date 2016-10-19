@@ -8,13 +8,13 @@
 ( function( $ ) {
   'use strict';
 
-  Theme.Services.callback = function( callback ) {
+  Frontend.Services.callback = function( callback ) {
     if ( typeof callback !== 'undefined' ) {
       try {
         callback();
       }
       catch( err ) {
-        if ( Theme.Config.debug ) {
+        if ( Frontend.Config.debug ) {
           console.log( err );
         }
       }

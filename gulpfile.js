@@ -1,17 +1,18 @@
 'use strict';
 
-var gulp       = require('gulp'),
-    jshint     = require('gulp-jshint'),
-    stylish    = require('jshint-stylish'),
-    paths      = require('compass-options').dirs(),
-    rename     = require('gulp-rename'),
-    stripDebug = require('gulp-strip-debug'),
-    uglify     = require('gulp-uglify'),
-    concat     = require('gulp-concat'),
-    compass    = require('gulp-compass'),
-    prefix     = require('gulp-autoprefixer'),
-    cleanCSS   = require('gulp-clean-css'),
-    imagemin   = require('gulp-imagemin');
+const gulp       = require('gulp'),
+     jshint      = require('gulp-jshint'),
+     stylish     = require('jshint-stylish'),
+     paths       = require('compass-options').dirs(),
+     rename      = require('gulp-rename'),
+     stripDebug  = require('gulp-strip-debug'),
+     uglify      = require('gulp-uglify'),
+     concat      = require('gulp-concat'),
+     compass     = require('gulp-compass'),
+     prefix      = require('gulp-autoprefixer'),
+     cleanCSS    = require('gulp-clean-css'),
+     imagemin    = require('gulp-imagemin'),
+     complexity  = require('gulp-complexity');
 
 
 // Config Variables
@@ -30,9 +31,18 @@ gulp.task('lint', function() {
 
 
 //////////////////////////////
+// JavaScript Complexity Task
+//////////////////////////////
+gulp.task('jscomplexity', ['lint'], function() {
+  return gulp.src([ sourceJs + '/**/*.js', '!' + sourceJs + '/lib/*' ])
+    .pipe(complexity());
+});
+
+
+//////////////////////////////
 // JavaScript Task
 //////////////////////////////
-gulp.task('scripts', ['lint'], function() {
+gulp.task('scripts', ['jscomplexity'], function() {
   // global.js
   gulp.src([
     // Config
