@@ -76,7 +76,7 @@ Please read [CONTRIBUTING.md](https://gist.github.com/bmarshall511/4e6cf39876a5b
 
 ## Versioning
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/bmarshall511/tags).
+We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/bmarshall511/frontend/releases).
 
 ## Authors
 
