@@ -48,10 +48,10 @@ Before beginning any theming, be sure to review and set the variables in the ```
 
 Sass files are organized into 4 main folders:
 
-* **base** - All theme base styles ***(base selectors, styles set via variables)***. DO NOT EDIT ANY OF THESE FILES!
+* **base** - All theme base styles *(base selectors, styles set via variables)*. DO NOT EDIT ANY OF THESE FILES!
 * **components** - Includes all styled components broken down into seperate folders including:
- * **design** - Contains all themed sections and standalone components ***(header, footer, buttons, etc.)***
- * **lib** - Contains all CSS/Sass libraries ***(Foundation, Bootstrap, slick, etc.)***
+ * **design** - Contains all themed sections and standalone components *(header, footer, buttons, etc.)*
+ * **lib** - Contains all CSS/Sass libraries *(Foundation, Bootstrap, slick, etc.)*
 
 ### JavaScript
 
@@ -60,13 +60,13 @@ Sass files are organized into 4 main folders:
 * Variables, controllers and services should all be namespaced with ```Frontend``` to avoid conflicts with other libraries.
 * All controllers loaded on a page will be automatically initialized and do not needed to be called directly.
 * Call ```Frontend.init();``` to reinitialize page controllers (useful with AJAX calls when new content is added).
-* Modify the ***JavaScript Task*** in the ```gulpfile.js``` to add, alter compiled JS files.
+* Modify the *JavaScript Task* in the ```gulpfile.js``` to add, alter compiled JS files.
 
 Scripts are organized into 3 different categories:
 
-* **Controllers** - Component specific functionality ***(main menu dropdown, accordions, etc.)***
+* **Controllers** - Component specific functionality *(main menu dropdown, accordions, etc.)*
 * **Services** - Helper functions
-* **Libraries** - JavaScript libraries ***(jQuery, slick, etc.)***
+* **Libraries** - JavaScript libraries *(jQuery, slick, etc.)*
 
 ## Contributing
 
