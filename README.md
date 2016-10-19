@@ -1,7 +1,7 @@
 # Frontend v1.1.0
 > A light-weight, skeleton frontend framework.
 
-Frontend was created to give frontend developers a jumpstart when building new themes and sites. It's a light-weight, no bloat, skeleton framework that utilizes [Gulp](http://gulpjs.com/) to compile stylesheets, JavaScript files and images in a organized, easy to navigate folder structure.
+[Frontend](https://bmarshall511.github.io/frontend/) was created to give frontend developers a jumpstart when building new themes and sites. It's a light-weight, no-bloat, skeleton framework that utilizes [Gulp](http://gulpjs.com/) to compile stylesheets, JavaScript files and images in a organized, easy to navigate folder structure.
 
 ## Features
 
@@ -53,7 +53,7 @@ Sass files are organized into 4 main folders:
  * **design** - Contains all themed sections and standalone components *(header, footer, buttons, etc.)*
  * **lib** - Contains all CSS/Sass libraries *(Foundation, Bootstrap, slick, etc.)*
 * **global** - All global Sass functions, variables, mixins, etc.
-* **layout** - Contains layout styles (grids, page templates, etc.)
+* **layout** - Contains layout styles *(grids, page templates, etc.)*
 
 ### JavaScript
 
@@ -61,7 +61,7 @@ Sass files are organized into 4 main folders:
 * Global JS variables should be set in the ```src/js/config.js``` file.
 * Variables, controllers and services should all be namespaced with ```Frontend``` to avoid conflicts with other libraries.
 * All controllers loaded on a page will be automatically initialized and do not needed to be called directly.
-* Call ```Frontend.init();``` to reinitialize page controllers (useful with AJAX calls when new content is added).
+* Call ```Frontend.init();``` to reinitialize page controllers *(useful with AJAX calls when new content is added)*.
 * Modify the *JavaScript Task* in the ```gulpfile.js``` to add, alter compiled JS files.
 
 Scripts are organized into 3 different categories:
