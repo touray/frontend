@@ -1,4 +1,4 @@
-# Frontend v1.0.0
+# Frontend v1.0.1
 > A light-weight, skeleton frontend framework.
 
 Frontend was created to give frontend developers a jumpstart when building new themes and sites. It's a light-weight, no bloat, skeleton framework that utilizes [Gulp](http://gulpjs.com/) to compile stylesheets, JavaScript files and images in a organized, easy to navigate folder structure.
@@ -58,6 +58,11 @@ See also the list of [contributors](https://github.com/bmarshall511/frontend/con
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
 
 ## Changelog
+
+### v1.0.1 (TBD)
+
+* Updated file documentation.
+* Re-organized some folder structures.
 
 ### v1.0.0 (Oct. 18, 2016)
 

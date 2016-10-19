@@ -1,6 +1,6 @@
 {
   "name": "frontend",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A light-weight, skeleton frontend framework.",
   "main": "README.md",
   "scripts": {
@@ -18,7 +18,7 @@
   "bugs": {
     "url": "https://github.com/bmarshall511/frontend/issues"
   },
-  "homepage": "https://github.com/bmarshall511/frontend#readme",
+  "homepage": "https://bmarshall511.github.io/frontend/",
   "devDependencies": {
     "compass-options": "^0.1.1",
     "gulp": "^3.9.1",

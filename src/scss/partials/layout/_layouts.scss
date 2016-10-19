@@ -8,3 +8,28 @@
 @include add-grid($num-columns-small at $small);
 @include add-gutter-style('split');
 @include add-gutter(rem-calc($global-padding));
+
+/* Components */
+
+.container {
+  @extend %container;
+}
+
+
+/* Elements */
+
+.col-#{$num-columns} {
+  @include grid-span($num-columns, 1);
+}
+
+@include breakpoint($small) {
+  .col-#{$num-columns}-small {
+    @include grid-span($num-columns-small, 1);
+  }
+}
+
+
+/* Theme */
+
+
+/* Modifiers */
