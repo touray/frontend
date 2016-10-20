@@ -60,3 +60,15 @@
     display: list-inline-block;
   }
 }
+
+@include breakpoint($small) {
+  .list-inline-block-small {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+      display: list-inline-block;
+    }
+  }
+}

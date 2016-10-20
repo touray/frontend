@@ -95,6 +95,7 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 * Updated file documentation.
 * Re-organized some folder structures.
 * Installed gulp-complexity.
+* Added additional Frontend common styles.
 
 ### v1.0.0 (Oct. 18, 2016)
 
