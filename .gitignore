@@ -9,7 +9,3 @@
 # Development #
 ###############
 node_modules
-
-# Production #
-###############
-index.html
