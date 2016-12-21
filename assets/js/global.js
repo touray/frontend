@@ -4,6 +4,17 @@
 // Add only theme JS configuration variables in this file.
 ////////////////////////////////////////////////////////////////////////////////
 
+// Requires jQuery
+if ( typeof jQuery == 'undefined' ) {
+  var script = document.createElement( 'script' );
+  script.type = 'text/javascript';
+  script.setAttribute( 'integrity', 'sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=' );
+  script.setAttribute( 'crossorigin', 'anonymous' );
+  script.src = 'https://code.jquery.com/jquery-3.1.1.min.js';
+
+  document.getElementsByTagName( 'head' )[0].appendChild( script );
+}
+
 // Namespace all theme specific functionality
 var Frontend = {
   Config: {
@@ -22,7 +33,7 @@ var Frontend = {
   // Initialize all page controllers. Should be called when new content is added
   // to the page (ex. AJAX).
   init: function() {
-    $.each( Frontend.Controllers, function( index, value ) {
+    jQuery.each( Frontend.Controllers, function( index, value ) {
       console.log( "'" + index + "'" + ' controller initialized...' );
       value.init( function() {
         if ( Frontend.Config.debug ) {
@@ -39,6 +50,7 @@ var Frontend = {
     Frontend.init();
   } );
 } ) ( jQuery );
+
 ////////////////////////////////////////////////////////////////////////////////
 // Callback Service
 //
