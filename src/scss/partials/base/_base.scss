@@ -9,12 +9,8 @@
 
 html,
 body {
-  font-size: ($global-font-size * $breakpoint-decrease);
+  font-size: $global-font-size;
   box-sizing: border-box;
-
-  @include breakpoint($small) {
-    font-size: $global-font-size;
-  }
 }
 
 // Set box-sizing globally to handle padding and border widths

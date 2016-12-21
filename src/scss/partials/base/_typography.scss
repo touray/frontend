@@ -72,13 +72,8 @@ h6 {
   color: $header-color;
   text-rendering: $header-text-rendering;
   margin-top: 0;
-  margin-bottom: ($header-margin-bottom * $breakpoint-decrease);
-  line-height: ($header-lineheight * $breakpoint-decrease);
-
-  @include breakpoint($small) {
-    margin-bottom: $header-margin-bottom;
-    line-height: $header-lineheight;
-  }
+  margin-bottom: $header-margin-bottom;
+  line-height: $header-lineheight;
 
   small {
     color: $header-small-font-color;
@@ -88,53 +83,27 @@ h6 {
 
 // Heading sizes
 h1 {
-  font-size: ($header-1-size * $breakpoint-decrease);
+  font-size: $header-1-size;
 }
 
 h2 {
-  font-size: ($header-2-size * $breakpoint-decrease);
+  font-size: $header-2-size;
 }
 
 h3 {
-  font-size: ($header-3-size * $breakpoint-decrease);
+  font-size: $header-3-size;
 }
 
 h4 {
-  font-size: ($header-4-size * $breakpoint-decrease);
+  font-size: $header-4-size;
 }
 
 h5 {
-  font-size: ($header-5-size * $breakpoint-decrease);
+  font-size: $header-5-size;
 }
 
 h6 {
-  font-size: ($header-6-size * $breakpoint-decrease);
-}
-
-@include breakpoint($small) {
-  h1 {
-    font-size: $header-1-size;
-  }
-
-  h2 {
-    font-size: $header-2-size;
-  }
-
-  h3 {
-    font-size: $header-3-size;
-  }
-
-  h4 {
-    font-size: $header-4-size;
-  }
-
-  h5 {
-    font-size: $header-5-size;
-  }
-
-  h6 {
-    font-size: $header-6-size;
-  }
+  font-size: $header-6-size;
 }
 
 // Links

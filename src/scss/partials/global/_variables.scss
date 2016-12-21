@@ -7,36 +7,35 @@
 // 1. Global
 // ---------
 
-$global-width:             1260;
+$global-width:             1140;
 $global-font-size:         16px;
-$global-lineheight:        1.4;
+$global-lineheight:        1.3;
 
 $primary-color:            #fff;
 $secondary-color:          #000;
-$trinary-color:            #5ba253;
 
-$success-color:            $trinary-color;
+$success-color:            #009900;
 $warning-color:            #ffae00;
 $alert-color:              #ce3e3e;
 
 $white:                    #fff;
 $black:                    #000;
-$gray:                     #ccc;
 
 $xlight-gray:              #f0f0f0;
 $light-gray:               #f0f0f3;
+$gray:                     #ccc;
 $medium-gray:              #7e7e7e;
 $dark-gray:                #333;
 $xdark-gray:               #dfe0e1;
 
-$body-background:          $black;
-$border-color:             $light-gray;
+$body-background:          $white;
+$border-color:             $gray;
 
-$body-font-color:          $white;
-$body-font-family:         'Merriweather', serif;
+$body-font-color:          $black;
+$body-font-family:         Arial, Helvetica, sans-serif;
 $body-antialiased:         true;
-$global-margin:            ($global-font-size * 2);
-$global-padding:           30;
+$global-margin:            1.5rem;
+$global-padding:           1rem;
 
 $global-weight-normal:     400;
 $global-weight-medium:     500;
@@ -51,8 +50,6 @@ $global-transition-timing: .2s;
 // 2. Breakpoints
 // --------------
 
-$breakpoint-decrease: .8;
-
 $small:  980px;
 $medium: 1024px;
 $large:  1600px;
@@ -65,15 +62,15 @@ $large-down:  0px $large;
 
 $font-family-monospace: Consolas, "Liberation Mono", Courier, monospace;
 
-$header-font-family: 'Poppins', sans-serif;
-$header-font-weight: $global-weight-normal;
-$header-font-style:  $global-weight-normal;
+$header-font-family: Georgia, serif;
+$header-font-weight: $global-weight-bold;
+$header-font-style:  'normal';
 
 $header-color:             inherit;
 $header-lineheight:        $global-lineheight;
 $header-margin-bottom:     rem-calc($global-margin);
 $header-text-rendering:    optimizeLegibility;
-$header-small-font-color:  $medium-gray;
+$header-small-font-color:  $gray;
 
 $header-1-size: rem-calc($global-font-size + 22);
 $header-2-size: rem-calc($global-font-size + 11);
@@ -100,70 +97,70 @@ $paragraph-text-rendering: optimizeLegibility;
 $code-color:       $body-font-color;
 $code-font-family: $font-family-monospace;
 $code-font-weight: $global-weight-normal;
-$code-background:  $xlight-gray;
-$code-border:      rem-calc(1) solid $light-gray;
+$code-background:  $light-gray;
+$code-border:      rem-calc(1) solid $gray;
 $code-padding:     rem-calc(2);
 
-$anchor-color: $primary-color;
-$anchor-color-hover: scale-color($anchor-color, $lightness: -14%);
-$anchor-text-decoration: none;
+$anchor-color:                 $primary-color;
+$anchor-color-hover:           scale-color($anchor-color, $lightness: -14%);
+$anchor-text-decoration:       none;
 $anchor-text-decoration-hover: none;
 
 $hr-width:  $global-width;
 $hr-border: rem-calc(1) solid $gray;
 $hr-margin: rem-calc($global-margin) auto;
 
-$list-lineheight: $paragraph-lineheight;
-$list-margin-bottom: $paragraph-margin-bottom;
-$list-style-type: disc;
-$list-style-position: outside;
-$list-side-margin: 1.25rem;
-$list-nested-side-margin: 1.25rem;
-$defnlist-margin-bottom: 1rem;
-$defnlist-term-weight: $global-weight-bold;
+$list-lineheight:             $paragraph-lineheight;
+$list-margin-bottom:          $paragraph-margin-bottom;
+$list-style-type:             disc;
+$list-style-position:         outside;
+$list-side-margin:            1.25rem;
+$list-nested-side-margin:     1.25rem;
+$defnlist-margin-bottom:      1rem;
+$defnlist-term-weight:        $global-weight-bold;
 $defnlist-term-margin-bottom: 0.3rem;
-$blockquote-color: $dark-gray;
-$blockquote-padding: rem-calc(9 20 0 19);
-$blockquote-border: 1px solid $medium-gray;
-$cite-font-size: rem-calc(13);
-$cite-color: $dark-gray;
-$keystroke-font: $font-family-monospace;
-$keystroke-color: $black;
-$keystroke-background: $light-gray;
-$keystroke-padding: rem-calc(2 4 0);
-$keystroke-radius: $global-radius;
-$abbr-underline: 1px dotted $black;
+$blockquote-color:            $gray;
+$blockquote-padding:          $global-padding;
+$blockquote-border:           rem-calc(1) solid $gray;
+$cite-font-size:              $small-font-size;
+$cite-color:                  $gray;
+$keystroke-font:              $font-family-monospace;
+$keystroke-color:             $black;
+$keystroke-background:        $light-gray;
+$keystroke-padding:           $global-padding;
+$keystroke-radius:            $global-radius;
+$abbr-underline:              rem-calc(1) dotted $black;
 
 // 4. Forms
 // ---------
 
-$fieldset-border: 1px solid $medium-gray;
-$fieldset-padding: rem-calc(20);
-$fieldset-margin: rem-calc(18 0);
-$legend-padding: rem-calc(0 3);
-$form-spacing: rem-calc(15);
-$helptext-color: #333;
-$helptext-font-size: rem-calc(13);
-$helptext-font-style: italic;
-$input-prefix-color: $black;
+$fieldset-border:         rem-calc(1) solid $gray;
+$fieldset-padding:        $global-padding;
+$fieldset-margin:         $global-margin;
+$legend-padding:          $global-padding;
+$form-spacing:            $global-padding;
+$helptext-color:          $gray;
+$helptext-font-size:      $small-font-size;
+$helptext-font-style:     italic;
+$input-prefix-color:      $black;
 $input-prefix-background: $light-gray;
-$input-prefix-border: 1px solid $medium-gray;
-$input-prefix-padding: 1rem;
-$form-label-color: $black;
-$form-label-font-size: rem-calc(14);
-$form-label-font-weight: $global-weight-normal;
-$form-label-line-height: 1.8;
-$select-background: #fafafa;
-$select-triangle-color: #333;
-$select-radius: $global-radius;
+$input-prefix-border:     rem-calc(1) solid $gray;
+$input-prefix-padding:    $global-padding;
+$form-label-color:        $black;
+$form-label-font-size:    $small-font-size;
+$form-label-font-weight:  $global-weight-bold;
+$form-label-line-height:  1.8;
+$select-background:       $gray;
+$select-triangle-color:   $black;
+$select-radius:           $global-radius;
 
-$input-color:            $dark-gray;
-$input-font-family:      inherit;
-$input-font-size:        rem-calc($global-font-size);
+$input-color:       $dark-gray;
+$input-font-family: inherit;
+$input-font-size:   rem-calc($global-font-size);
 
 $input-background:          $body-background;
-$input-background-focus:    $xlight-gray;
-$input-background-disabled: $light-gray;
+$input-background-focus:    $light-gray;
+$input-background-disabled: $gray;
 
 $input-border:       rem-calc(1) solid $gray;
 $input-border-focus: rem-calc(1) solid $gray;
@@ -171,43 +168,43 @@ $input-shadow:       none;
 $input-shadow-focus: none;
 
 $input-cursor-disabled: default;
-$input-transition: box-shadow 0.5s, border-color 0.25s ease-in-out;
+$input-transition:      box-shadow 0.5s, border-color 0.25s ease-in-out;
 $input-number-spinners: true;
-$input-radius: $global-radius;
+$input-radius:          $global-radius;
 
 // 5. Label
 // ---------
 
 $label-background: $primary-color;
-$label-color: foreground($label-background);
-$label-font-size: 0.8rem;
-$label-padding: 0.33333rem 0.5rem;
-$label-radius: $global-radius;
+$label-color:      foreground($label-background);
+$label-font-size:  0.8rem;
+$label-padding:    $global-padding;
+$label-radius:     $global-radius;
 
 // 6. Table
 // ---------
 
-$table-background: $white;
-$table-color-scale: 5%;
-$table-border: 1px solid smart-scale($table-background, $table-color-scale);
-$table-padding: rem-calc(8 10 10);
-$table-hover-scale: 2%;
-$table-row-hover: darken($table-background, $table-hover-scale);
-$table-row-stripe-hover: darken($table-background, $table-color-scale + $table-hover-scale);
+$table-background:         $white;
+$table-color-scale:        5%;
+$table-border:             rem-calc(1) solid smart-scale($table-background, $table-color-scale);
+$table-padding:            $global-padding;
+$table-hover-scale:        2%;
+$table-row-hover:          darken($table-background, $table-hover-scale);
+$table-row-stripe-hover:   darken($table-background, $table-color-scale + $table-hover-scale);
 $table-striped-background: smart-scale($table-background, $table-color-scale);
-$table-stripe: even;
-$table-head-background: smart-scale($table-background, $table-color-scale / 2);
-$table-foot-background: smart-scale($table-background, $table-color-scale);
-$table-head-font-color: $body-font-color;
-$show-header-for-stacked: false;
+$table-stripe:             even;
+$table-head-background:    smart-scale($table-background, $table-color-scale / 2);
+$table-foot-background:    smart-scale($table-background, $table-color-scale);
+$table-head-font-color:    $body-font-color;
+$show-header-for-stacked:  false;
 
 // 6. Grid
 // ---------
 
 $num-columns:       1;
 $num-columns-small: 12;
-$include-clearfix: true;
+$include-clearfix:  true;
 
 // Internal variables used for text direction
-$global-left: if($global-text-direction == rtl, right, left);
+$global-left:  if($global-text-direction == rtl, right, left);
 $global-right: if($global-text-direction == rtl, left, right);

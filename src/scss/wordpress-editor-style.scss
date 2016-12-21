@@ -1,14 +1,21 @@
 ////////////////////////////////////////////////////////////////////////////////
-// Demo File
+// Wordpress Editor (WYSIWYG) Style File
 //
-// This file gets turned into demo.css. This file should really hold nothing
-// except for imports of your base, style guide, layout, and design partials.
+// This file gets turned into wordpress-editor-style.css. This file should
+// really hold nothing except for imports of your base, style guide, layout, and
+// design partials.
 ////////////////////////////////////////////////////////////////////////////////
 
 ////////////////////////
 // Global Import
 ////////////////////////
 @import 'partials/global/global';
+
+////////////////////////
+// Reset & Base Import
+////////////////////////
+@import 'compass/reset';
+@import 'partials/base/base';
 
 ////////////////////////
 // Import Layouts
@@ -19,5 +26,4 @@
 // Import Components
 ////////////////////////
 @import 'partials/components/components';
-
-@import 'partials/components/demo';
+@import 'partials/components/wordpress';

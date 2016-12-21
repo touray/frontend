@@ -96,6 +96,7 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 * Re-organized some folder structures.
 * Installed gulp-complexity.
 * Added additional Frontend common styles.
+* Added opitonal Wordpress core styles.
 
 ### v1.0.0 (Oct. 18, 2016)
 

@@ -60,6 +60,15 @@ gulp.task('scripts', ['jscomplexity'], function() {
     .pipe(stripDebug())
     .pipe(uglify())
     .pipe(gulp.dest(paths.js));
+
+  // html5.js
+  gulp.src([sourceJs + '/lib/html5.js'])
+    .pipe(concat('html5.js'))
+    .pipe(gulp.dest(paths.js))
+    .pipe(rename('html5.min.js'))
+    .pipe(stripDebug())
+    .pipe(uglify())
+    .pipe(gulp.dest(paths.js));
 });
 
 
