@@ -69,6 +69,15 @@ gulp.task('scripts', ['jscomplexity'], function() {
     .pipe(stripDebug())
     .pipe(uglify())
     .pipe(gulp.dest(paths.js));
+
+  // skip-link-focus-fix.js
+  gulp.src([sourceJs + '/lib/skip-link-focus-fix.js'])
+    .pipe(concat('skip-link-focus-fix.js'))
+    .pipe(gulp.dest(paths.js))
+    .pipe(rename('skip-link-focus-fix.min.js'))
+    .pipe(stripDebug())
+    .pipe(uglify())
+    .pipe(gulp.dest(paths.js));
 });
 
 
