@@ -1,0 +1,190 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="description" content="">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Frontend by Ben Marshall Documentation</title>
+<link href="http://fonts.googleapis.com/css?family=Raleway:700,300" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/prettify.css">
+</head>
+<body>
+<div class="wrapper">
+
+  <nav>
+    <div class="pull-left">
+      <h1><a href="https://github.com/bmarshall511/frontend"><img src="img/icon.png" alt="Frontend by Ben Marshall"><span>Frontend by Ben Marshall</span></a></h1>
+    </div>
+
+    <div class="pull-right">
+      <a href="https://github.com/bmarshall511/frontend/archive/master.zip" target="_blank" class="btn btn-download"><img src="img/download.png" width="25" alt="Frontend by Ben Marshall"> Download Now</a>
+    </div>
+  </nav>
+
+  <header>
+    <div class="container">
+      <h2 class="lone-header">Frontend &mdash; A light-weight, skeleton frontend framework.</h2>
+    </div>
+  </header>
+
+  <section>
+    <div class="container">
+
+      <ul class="docs-nav">
+        <li><strong>About Frontend</strong>
+        <li><a href="#welcome" class="cc-active">Welcome</a>
+        <li><a href="#features" class="cc-active">Features</a>
+        <li><a href="#license" class="cc-active">License</a>
+        <li class="separator">
+        <li><strong>Getting Started</strong>
+        <li><a href="#prerequisites" class="cc-active">Prerequisites</a>
+        <li><a href="#installation" class="cc-active">Installation</a>
+        <li><a href="#Compiling" class="cc-active">Compiling</a>
+        <li><strong>Documentation</strong>
+        <li><a href="#css" class="cc-active">CSS, Sass &amp; Compass</a>
+        <li><a href="#js" class="cc-active">JavaScript</a>
+        <li><a href="#contributing" class="cc-active">Contributing</a>
+        <li><a href="#versioning" class="cc-active">Versioning</a>
+        <li><strong>Changelog</strong>
+        <li><a href="#v110" class="cc-active">v1.1.0</a>
+        <li><a href="#v100" class="cc-active">v1.0.0</a>
+      </ul>
+
+      <div class="docs-content">
+
+
+        <h2>About Frontend</h2>
+        <h3 id="welcome">Welcome</h3>
+        <p><a href="https://github.com/bmarshall511/frontend" target="_blank">Frontend by Ben Marshall</a> was created to give frontend developers a jumpstart when building new themes and sites. It's a light-weight, no-bloat, skeleton framework that utilizes <a href="http://gulpjs.com/" target="_blank">Gulp</a> to compile stylesheets, JavaScript files and images in a organized, easy to navigate folder structure.</p>
+
+        <h3 id="features">Features</h3>
+        <ul>
+          <li><a href="http://gulpjs.com/" target="_blank">Gulp</a> - Development task manager
+          <li><a href="http://sass-lang.com/" target="_blank">Sass</a> - CSS extension language
+          <li><a href="http://compass-style.org/" target="_blank">Compass</a> - CSS authoring framework
+          <li><a href="http://jshint.com/" target="_blank">JSHint</a> - JavaScript code quality tester
+          <li><a href="https://github.com/imagemin/imagemin" target="_blank">imagemin</a> - Image minifier
+          <li><a href="https://github.com/at-import/Singularity" target="_blank">Singularity</a> - Grid framework
+          <li><a href="http://breakpoint-sass.com/" target="_blank">Breakpoint</a> - Sass media queries
+          <li><a href="https://www.npmjs.com/package/gulp-complexity" target="_blank">Complexity</a> - JavaScript complexity analysis gulp task
+        </ul>
+
+        <h3 id="license">License</h3>
+        <p>Frontend by Ben Marshall is free for personal and commercial projects as long as you are providing a link back to this page. If you don’t want
+          to provide a link back, simply contribute to the development and improvement of this tool. See <a href="https://github.com/bmarshall511/frontend/blob/master/LICENSE.md" target="_blank">LICENSE.md</a> file for details.</p>
+        <hr>
+
+
+        <h2>Getting Started</h2>
+        <p>These instructions will get a copy of the project setup in a new theme. See <a href="#compiling">compiling</a> for details on how to compile code while developing.</p>
+
+        <h3 id="prerequisites">Prerequisites</h3>
+        <ul>
+          <li><a href="https://www.npmjs.com/" target="_blank">Node Package Manager (NPM)</a>
+          <li><a href="http://bundler.io/" target="_blank">Bundler</a>
+        </ul>
+
+        <h3 id="installation">Installation</h3>
+        <p><a href="https://github.com/bmarshall511/frontend/archive/master.zip" target="_blank">Download</a> and extract the Frontend files to your project folder. Then run the following in Terminal from that location:</p>
+
+        <ol>
+          <li>To install gem dependencies: <pre class="prettyprint">$ bundle install</pre>
+          <li>To install development dependencies: <pre class="prettyprint">$ npm install</pre>
+        </ol>
+
+        <h3 id="compiling">Compiling</h3>
+        <p>The following commands can be run to compile:</p>
+        <ul>
+          <li>Compiles, then watches for changes to files to re-compile: <pre class="prettyprint">$ gulp</pre>
+          <li>Lints JavaScript files: <pre class="prettyprint">$ gulp lint</pre>
+          <li>Lints and compiles JavaScript files: <pre class="prettyprint">$ gulp scripts</pre>
+          <li>Compiles Sass files: <pre class="prettyprint">$ gulp compass</pre>
+          <li>Minifies images: <pre class="prettyprint">$ gulp images</pre>
+        </ul>
+        <hr>
+
+
+        <h2>Documentation</h2>
+
+        <h3 id="css">CSS, Sass &amp; Compass</h3>
+        <p>Before beginning any theming, be sure to review and set the variables in the <b>src/scss/partials/global/_variables.scss</b> file.</p>
+        <p>Sass files are organized into 4 main folders:</p>
+        <ul>
+          <li><b>base</b> - All theme base styles <em>(base selectors, styles set via variables)</em>. <b>DO NOT EDIT ANY OF THESE FILES!</b>
+          <li><b>components</b> - Includes all styled components broken down into seperate folders including:
+            <ul>
+              <li><b>design</b> - Contains all themed sections and standalone components <em>(header, footer, buttons, etc.)</em>
+              <li><b>lib</b> - Contains all themed sections and standalone components <em>(header, footer, buttons, etc.)</em>
+            </ul>
+          <li><b>global</b> - All global Sass functions, variables, mixins, etc.
+          <li><b>layout</b> - Contains layout styles <em>(grids, page templates, etc.)</em>
+        </ul>
+
+        <h3 id="js">JavaScript</h3>
+        <ul>
+          <li>jQuery is required.
+          <li>Global JS variables should be set in the <b>src/js/config.js</b> file.
+          <li>Variables, controllers and services should all be namespaced with <b>Frontend</b> to avoid conflicts with other libraries.
+          <li>All controllers loaded on a page will be automatically initialized and do not needed to be called directly.
+          <li>Call <b>Frontend.init();</b> to reinitialize page controllers <em>(useful with AJAX calls when new content is added)</em>.
+          <li>Modify the <em>JavaScript Task</em> in the <b>gulpfile.js</b> to add, alter compiled JS files.
+        </ul>
+        <p>Scripts are organized into 3 different categories:</p>
+        <ul>
+          <li><b>Controllers</b> - Component specific functionality <em>(main menu dropdown, accordions, etc.)</em>
+          <li><b>Services</b> - Helper functions
+          <li><b>Libraries</b> - JavaScript libraries <em>(jQuery, slick, etc.)</em>
+        </ul>
+
+        <h3 id="contributing">Contributing</h3>
+        <p>Please read <a href="https://gist.github.com/bmarshall511/4e6cf39876a5b0394fbe54f1c7fb324b" target="_blank">CONTRIBUTING.md</a> for details on our code of conduct, and the process for submitting pull requests to us.</p>
+
+        <h3 id="versioning">Versioning</h3>
+        <p>We use <a href="http://semver.org/" target="_blank">SemVer</a> for versioning. For the versions available, see the <a href="https://github.com/bmarshall511/frontend/releases" target="_blank">tags on this repository</a>.</p>
+
+        <h3 id="authors">Authors</h3>
+        <ul>
+          <li><b>Ben Marshall</b> - <em>Initial work</em> - <a href="https://github.com/bmarshall511" target="_blank">bmarshall511</a>
+        </ul>
+        <p>See the full list of <a href="https://github.com/bmarshall511/frontend/contributors" target="_blank">contributors</a> who participated in this project.
+        <hr>
+
+
+        <h2>Changelog</h3>
+        <h3 id="v110">v1.1.0 (TBD)</h3>
+        <ul>
+          <li>Updated file documentation.
+          <li>Re-organized some folder structures.
+          <li>Installed gulp-complexity.
+          <li>Added additional Frontend common styles.
+          <li>Added opitonal Wordpress core styles.
+        </ul>
+
+        <h3 id="v100">v1.0.0 (Oct 18, 2016)</h3>
+        <ul>
+          <li>Initial commit.
+        </ul>
+
+      </div>
+    </div>
+  </section>
+  <section class="vibrant centered">
+    <div class="">
+      <h4> This documentation template is provided by <a href="http://www.frittt.com" target="_blank">Frittt Templates</a>. You can download and use this template for free. If you have used this template, please pay the developer's effort by Tweeting, sharing on Facebook, social mention or with a linkback. Enjoy! :)</h4>
+    </div>
+  </section>
+  <footer>
+    <div class="">
+      <p> &copy; Copyright Frittt Templates. All Rights Reserved.</p>
+    </div>
+  </footer>
+</div>
+<script src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/prettify/prettify.js"></script>
+<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?lang=css&skin=sunburst"></script>
+<script src="js/layout.js"></script>
+</body>
+</html>

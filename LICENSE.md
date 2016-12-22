@@ -1,6 +1,6 @@
 MIT License
 
-Copyright (c) 2016 Frontend by Ben Marshall
+Copyright (c) 2016 - 2017 Frontend by Ben Marshall
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
