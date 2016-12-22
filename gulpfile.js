@@ -78,6 +78,15 @@ gulp.task('scripts', ['jscomplexity'], function() {
     .pipe(stripDebug())
     .pipe(uglify())
     .pipe(gulp.dest(paths.js));
+
+  // jquery.scrollTo.ks
+  gulp.src([sourceJs + '/lib/jquery.scrollTo.js'])
+    .pipe(concat('jquery.scrollTo.js'))
+    .pipe(gulp.dest(paths.js))
+    .pipe(rename('jquery.scrollTo.min.js'))
+    .pipe(stripDebug())
+    .pipe(uglify())
+    .pipe(gulp.dest(paths.js));
 });
 
 
