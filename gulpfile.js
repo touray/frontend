@@ -79,11 +79,20 @@ gulp.task('scripts', ['jscomplexity'], function() {
     .pipe(uglify())
     .pipe(gulp.dest(paths.js));
 
-  // jquery.scrollTo.ks
+  // jquery.scrollTo.js
   gulp.src([sourceJs + '/lib/jquery.scrollTo.js'])
     .pipe(concat('jquery.scrollTo.js'))
     .pipe(gulp.dest(paths.js))
     .pipe(rename('jquery.scrollTo.min.js'))
+    .pipe(stripDebug())
+    .pipe(uglify())
+    .pipe(gulp.dest(paths.js));
+
+  // wordpress-customize-preview.js
+  gulp.src([sourceJs + '/wordpress/customize-preview.js'])
+    .pipe(concat('wordpress-customize-preview.js'))
+    .pipe(gulp.dest(paths.js))
+    .pipe(rename('wordpress-customize-preview.min.js'))
     .pipe(stripDebug())
     .pipe(uglify())
     .pipe(gulp.dest(paths.js));
