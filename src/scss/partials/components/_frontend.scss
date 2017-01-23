@@ -4,6 +4,29 @@
 // Includes all Frontend common styles.
 ////////////////////////////////////////////////////////////////////////////////
 
+/* Visibility */
+
+// Hide/show content on mobile.
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+@include breakpoint($small) {
+  // Hide/show content on small (desktop) screens.
+  .hide-small {
+    display: none;
+  }
+
+  .show-small {
+    display: block;
+  }
+}
+
+
 /* Alignment */
 
 .float-left {
