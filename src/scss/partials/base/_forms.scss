@@ -8,7 +8,7 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 @mixin form-element {
-  $height: ($input-font-size + ($form-spacing * 1.5) - rem-calc(1));
+  $height: $input-font-size + $form-spacing;
 
   display: block;
   box-sizing: border-box;

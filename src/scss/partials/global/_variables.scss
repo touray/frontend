@@ -7,7 +7,7 @@
 // 1. Global
 // ---------
 
-$global-width:             1140;
+$global-width:             1140px;
 $global-font-size:         16px;
 $global-lineheight:        1.3;
 
@@ -34,15 +34,15 @@ $border-color:             $gray;
 $body-font-color:          $black;
 $body-font-family:         Arial, Helvetica, sans-serif;
 $body-antialiased:         true;
-$global-margin:            1.5rem;
-$global-padding:           30;
+$global-margin:            30px;
+$global-padding:           30px;
 
 $global-weight-normal:     400;
 $global-weight-medium:     500;
 $global-weight-semibold:   600;
 $global-weight-bold:       700;
 
-$global-radius:            rem-calc(3);
+$global-radius:            3px;
 $global-text-direction:    ltr;
 $rem-base:                 $global-font-size;
 $global-transition-timing: .2s;
@@ -106,7 +106,7 @@ $anchor-color-hover:           scale-color($anchor-color, $lightness: -14%);
 $anchor-text-decoration:       none;
 $anchor-text-decoration-hover: none;
 
-$hr-width:  $global-width;
+$hr-width:  rem-calc($global-width);
 $hr-border: rem-calc(1) solid $gray;
 $hr-margin: rem-calc($global-margin) auto;
 
@@ -120,39 +120,39 @@ $defnlist-margin-bottom:      1rem;
 $defnlist-term-weight:        $global-weight-bold;
 $defnlist-term-margin-bottom: 0.3rem;
 $blockquote-color:            $gray;
-$blockquote-padding:          $global-padding;
+$blockquote-padding:          rem-calc($global-padding);
 $blockquote-border:           rem-calc(1) solid $gray;
 $cite-font-size:              $small-font-size;
 $cite-color:                  $gray;
 $keystroke-font:              $font-family-monospace;
 $keystroke-color:             $black;
 $keystroke-background:        $light-gray;
-$keystroke-padding:           $global-padding;
-$keystroke-radius:            $global-radius;
+$keystroke-padding:           rem-calc($global-padding);
+$keystroke-radius:            rem-calc($global-radius);
 $abbr-underline:              rem-calc(1) dotted $black;
 
 // 4. Forms
 // ---------
 
 $fieldset-border:         rem-calc(1) solid $gray;
-$fieldset-padding:        $global-padding;
-$fieldset-margin:         $global-margin;
-$legend-padding:          $global-padding;
-$form-spacing:            $global-padding;
+$fieldset-padding:        rem-calc($global-padding);
+$fieldset-margin:         rem-calc($global-margin);
+$legend-padding:          rem-calc($global-padding);
+$form-spacing:            rem-calc(20px);
 $helptext-color:          $gray;
 $helptext-font-size:      $small-font-size;
 $helptext-font-style:     italic;
 $input-prefix-color:      $black;
 $input-prefix-background: $light-gray;
 $input-prefix-border:     rem-calc(1) solid $gray;
-$input-prefix-padding:    $global-padding;
+$input-prefix-padding:    rem-calc($global-padding);
 $form-label-color:        $black;
 $form-label-font-size:    $small-font-size;
 $form-label-font-weight:  $global-weight-bold;
 $form-label-line-height:  1.8;
 $select-background:       $gray;
 $select-triangle-color:   $black;
-$select-radius:           $global-radius;
+$select-radius:           rem-calc($global-radius);
 
 $input-color:       $dark-gray;
 $input-font-family: inherit;
@@ -170,7 +170,7 @@ $input-shadow-focus: none;
 $input-cursor-disabled: default;
 $input-transition:      box-shadow 0.5s, border-color 0.25s ease-in-out;
 $input-number-spinners: true;
-$input-radius:          $global-radius;
+$input-radius:          rem-calc($global-radius);
 
 // 5. Label
 // ---------
@@ -178,8 +178,8 @@ $input-radius:          $global-radius;
 $label-background: $primary-color;
 $label-color:      foreground($label-background);
 $label-font-size:  0.8rem;
-$label-padding:    $global-padding;
-$label-radius:     $global-radius;
+$label-padding:    rem-calc($global-padding);
+$label-radius:     rem-calc($global-radius);
 
 // 6. Table
 // ---------
@@ -187,7 +187,7 @@ $label-radius:     $global-radius;
 $table-background:         $white;
 $table-color-scale:        5%;
 $table-border:             rem-calc(1) solid smart-scale($table-background, $table-color-scale);
-$table-padding:            $global-padding;
+$table-padding:            rem-calc($global-padding);
 $table-hover-scale:        2%;
 $table-row-hover:          darken($table-background, $table-hover-scale);
 $table-row-stripe-hover:   darken($table-background, $table-color-scale + $table-hover-scale);
