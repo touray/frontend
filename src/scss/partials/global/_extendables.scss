@@ -20,3 +20,26 @@
     display: inline-block;
   }
 }
+
+%button {
+  $height: $input-font-size + $form-spacing;
+
+  display: inline-block;
+  cursor: pointer;
+  border-radius: $input-radius;
+  background-color: $anchor-color;
+  color: $white;
+  border: $input-border;
+  border-color: $primary-color;
+  font-family: $input-font-family;
+  font-size: $input-font-size;
+  margin: 0 0 $form-spacing;
+  padding: $form-spacing / 2;
+  height: $height;
+  line-height: 1;
+  transition: background-color $global-transition-timing;
+
+  &:hover {
+    background-color: $anchor-color-hover;
+  }
+}
