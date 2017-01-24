@@ -8,7 +8,35 @@
 /* Form Styles */
 .form-submit {
   @extend %button;
+  margin: rem-calc(10 10 10 0);
 }
+
+.form-item {
+  [type=color],
+  [type=date],
+  [type=datetime-local],
+  [type=datetime],
+  [type=email],
+  [type=month],
+  [type=number],
+  [type=password],
+  [type=search],
+  [type=tel],
+  [type=text],
+  [type=time],
+  [type=url],
+  [type=week],
+  textarea {
+    margin-bottom: 0;
+  }
+
+  .description {
+    margin-top: rem-calc(5);
+    font-size: $xsmall-font-size;
+    color: $dark-gray;
+  }
+}
+
 
 /* Page Styles */
 .pager {
@@ -49,4 +77,52 @@
       border-color: $primary-color;
     }
   }
+}
+
+
+/* System Messages */
+div.status,
+.ok {
+  color: $success-color;
+}
+
+div.warning,
+.warning {
+  color: $warning-color;
+}
+
+div.error,
+.error {
+  color: $alert-color;
+}
+
+div.status,
+table tr.ok {
+  background-color: rgba($success-color, .05);
+}
+
+div.warning,
+table tr.warning {
+  background-color: rgba($warning-color, .05)
+}
+
+div.error,
+table tr.error {
+  background-color: rgba($alert-color, .05)
+}
+
+div.status {
+  border-color: $success-color;
+}
+
+div.status,
+div.warning,
+div.error {
+  background-image: none;
+}
+
+div.messages {
+  border-radius: $global-radius;
+  border: rem-calc(1) solid;
+  padding: rem-calc(15 20);
 }

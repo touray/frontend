@@ -74,6 +74,7 @@ button {
 /// Adds the general styles for tables.
 /// @param {Keyword} $stripe [$table-stripe] - Uses kewords even, odd, or none to darken rows of the table. The defualt value is even.
 @mixin table($stripe: $table-stripe) {
+  width: 100%;
   margin-bottom: $global-margin;
   border-radius: $global-radius;
 
