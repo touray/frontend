@@ -136,7 +136,7 @@ $abbr-underline:              rem-calc(1) dotted $black;
 
 $fieldset-border:         rem-calc(1) solid $gray;
 $fieldset-padding:        rem-calc($global-padding);
-$fieldset-margin:         rem-calc(0 0 $global-margin);
+$fieldset-margin:         rem-calc($global-margin);
 $legend-padding:          rem-calc(5);
 $form-spacing:            rem-calc(20);
 $helptext-color:          $gray;
