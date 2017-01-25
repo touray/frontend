@@ -38,7 +38,7 @@
 }
 
 
-/* Page Styles */
+/* Pager Styles */
 .pager {
   @extend %list-inline-block;
   text-transform: uppercase;
@@ -125,4 +125,18 @@ div.messages {
   border-radius: $global-radius;
   border: rem-calc(1) solid;
   padding: rem-calc(15 20);
+}
+
+
+/* Theme */
+.marker,
+.form-required {
+  color: $alert-color;
+}
+
+
+/* Styleguide */
+#styleguide-header {
+  background-color: $xlight-gray;
+  border-color: $light-gray;
 }
