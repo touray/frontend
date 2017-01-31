@@ -1,8 +1,8 @@
 {
   "name": "frontend",
-  "version": "1.1.0",
-  "description": "A light-weight, skeleton frontend framework.",
-  "main": "README.md",
+  "version": "2.0.0",
+  "description": "A light-weight frontend framework for any project.",
+  "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -18,21 +18,21 @@
   "bugs": {
     "url": "https://github.com/bmarshall511/frontend/issues"
   },
-  "homepage": "https://bmarshall511.github.io/frontend/",
+  "homepage": "https://github.com/bmarshall511/frontend#readme",
   "devDependencies": {
     "compass-options": "^0.1.1",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.1",
-    "gulp-clean-css": "^2.0.13",
+    "gulp-clean-css": "^2.3.2",
     "gulp-compass": "^2.1.0",
     "gulp-complexity": "^0.3.2",
-    "gulp-concat": "^2.6.0",
-    "gulp-imagemin": "^3.0.3",
-    "gulp-jshint": "^2.0.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-imagemin": "^3.1.1",
+    "gulp-jshint": "^2.0.4",
     "gulp-rename": "^1.2.2",
     "gulp-strip-debug": "^1.1.0",
-    "gulp-uglify": "^2.0.0",
-    "jshint": "^2.9.3",
+    "gulp-uglify": "^2.0.1",
+    "jshint": "^2.9.4",
     "jshint-stylish": "^2.2.1"
   }
 }

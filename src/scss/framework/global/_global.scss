@@ -1,0 +1,20 @@
+////////////////////////////////////////////////////////////////////////////////
+// Global Partial
+//
+// Includes all required framework functions, mixins and default variables.
+//
+// DO NOT EDIT to allow for easier Frontend updates.
+////////////////////////////////////////////////////////////////////////////////
+
+/* Compass & Singularity Extensions */
+@import 'compass';
+@import 'breakpoint';
+@import 'singularitygs';
+@import 'toolkit';
+@import 'toolkit/kickstart';
+
+/* Private Imports */
+@import 'functions';
+@import 'variables';
+@import 'mixins';
+@import 'extendables';

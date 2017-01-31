@@ -5,11 +5,11 @@ require 'toolkit'
 
 # Set this to the root of your project when deployed:
 http_path = ""
-css_dir = "assets/css"
+css_dir = "dist/css"
 sass_dir = "src/scss"
-images_dir = "assets/img"
-javascripts_dir = "assets/js"
-fonts_dir = "assets/fonts"
+images_dir = "dist/img"
+javascripts_dir = "dist/js"
+fonts_dir = "dist/font"
 
 # You can select your preferred output style here (can be overridden via the command line):
 # output_style = :compressed
