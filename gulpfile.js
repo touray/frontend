@@ -62,7 +62,7 @@ gulp.task('scripts', ['jscomplexity'], function() {
     .pipe(gulp.dest(paths.js));
 
   // html5.js
-  gulp.src([sourceJs + '/lib/html5.js'])
+  gulp.src([sourceJs + '/framework/lib/html5.js'])
     .pipe(concat('html5.js'))
     .pipe(gulp.dest(paths.js))
     .pipe(rename('html5.min.js'))
@@ -71,7 +71,7 @@ gulp.task('scripts', ['jscomplexity'], function() {
     .pipe(gulp.dest(paths.js));
 
   // skip-link-focus-fix.js
-  gulp.src([sourceJs + '/lib/skip-link-focus-fix.js'])
+  gulp.src([sourceJs + '/framework/lib/skip-link-focus-fix.js'])
     .pipe(concat('skip-link-focus-fix.js'))
     .pipe(gulp.dest(paths.js))
     .pipe(rename('skip-link-focus-fix.min.js'))
@@ -80,7 +80,7 @@ gulp.task('scripts', ['jscomplexity'], function() {
     .pipe(gulp.dest(paths.js));
 
   // jquery.scrollTo.js
-  gulp.src([sourceJs + '/lib/jquery.scrollTo.js'])
+  gulp.src([sourceJs + '/framework/lib/jquery.scrollTo.js'])
     .pipe(concat('jquery.scrollTo.js'))
     .pipe(gulp.dest(paths.js))
     .pipe(rename('jquery.scrollTo.min.js'))
