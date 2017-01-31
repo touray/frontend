@@ -87,15 +87,6 @@ gulp.task('scripts', ['jscomplexity'], function() {
     .pipe(stripDebug())
     .pipe(uglify())
     .pipe(gulp.dest(paths.js));
-
-  // wordpress-customize-preview.js
-  gulp.src([sourceJs + '/wordpress/customize-preview.js'])
-    .pipe(concat('wordpress-customize-preview.js'))
-    .pipe(gulp.dest(paths.js))
-    .pipe(rename('wordpress-customize-preview.min.js'))
-    .pipe(stripDebug())
-    .pipe(uglify())
-    .pipe(gulp.dest(paths.js));
 });
 
 

@@ -10,3 +10,14 @@
 ###############
 node_modules
 gulpfile.js
+
+# Application #
+###############
+src/js/application/controllers/*
+src/js/application/lib/*
+src/js/application/services/*
+
+src/scss/application/base/*
+src/scss/application/components/*
+src/scss/application/global/*
+src/scss/application/layout/*
