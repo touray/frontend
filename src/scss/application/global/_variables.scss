@@ -1,6 +1,20 @@
 ////////////////////////////////////////////////////////////////////////////////
 // Application Variables
 //
-// Contains all application variables and framework variable overrides.
+// Contains all application variables and framework variable overrides. Use the
+// variables defined in src/scss/framework/global/_variables.scss for reference.
 ////////////////////////////////////////////////////////////////////////////////
 
+
+// 1. Global
+// -----------------------------------------------------------------------------
+
+//$primary-color:   #512c44;
+//$secondary-color: #e86c1f;
+
+
+// 3. Base Typography
+// -----------------------------------------------------------------------------
+
+//$anchor-color:       $primary-color;
+//$anchor-color-hover: scale-color($anchor-color, $lightness: -14%);
