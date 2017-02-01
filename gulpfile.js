@@ -116,7 +116,7 @@ gulp.task('compass', function() {
 gulp.task('images', function() {
   return gulp.src(sourceImg + '/*')
     .pipe(imagemin())
-    .pipe(gulp.dest('assets/img'));
+    .pipe(gulp.dest('dist/img'));
 });
 
 
