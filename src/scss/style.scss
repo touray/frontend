@@ -1,27 +1,45 @@
 ////////////////////////////////////////////////////////////////////////////////
-// Style File
+// Main Style File
 //
-// This file gets turned into style.css. This file should really hold nothing
-// except for imports of your base, style guide, layout, and design partials.
+// Edit this file to add/remove framework and application imports. When
+// compiled, this file gets turned into style.css.
+//
+// This file should really hold nothing except for imports of the framework and
+// application styles.
 ////////////////////////////////////////////////////////////////////////////////
 
-////////////////////////
-// Global Import
-////////////////////////
-@import 'partials/global/global';
+/* Framework Imports */
 
-////////////////////////
-// Reset & Base Import
-////////////////////////
+// REQUIRED. Global functions, mixins, default variables and extendables
+@import 'framework/global/global';
+
+// Application variables and framework variable overrides
+@import 'application/global/variables';
+
+// Reset & base imports
 @import 'compass/reset';
-@import 'partials/base/base';
+@import 'framework/base/base';
 
-////////////////////////
-// Import Layouts
-////////////////////////
-@import 'partials/layout/layouts';
+// Import default layouts
+@import 'framework/layout/layouts';
 
-////////////////////////
-// Import Components
-////////////////////////
-@import 'partials/components/components';
+// Import default components
+@import 'framework/components/frontend';
+//@import 'framework/components/drupal7';
+//@import 'framework/components/wordpress';
+
+
+/* Application Imports */
+
+// Application functions, mixins, default variables and extendables
+@import 'application/global/variables';
+
+// Base imports
+//@import 'application/base/base';
+
+// Import layouts
+//@import 'application/layout/layouts';
+
+// Import components
+//@import 'application/components/components';
+

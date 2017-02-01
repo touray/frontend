@@ -34,7 +34,7 @@ gulp.task('lint', function() {
 // JavaScript Complexity Task
 //////////////////////////////
 gulp.task('jscomplexity', ['lint'], function() {
-  return gulp.src([ sourceJs + '/**/*.js', '!' + sourceJs + '/lib/*' ])
+  return gulp.src([ sourceJs + '/**/*.js', '!' + sourceJs + '/application/lib/*', '!' + sourceJs + '/framework/lib/*' ])
     .pipe(complexity());
 });
 
@@ -46,13 +46,13 @@ gulp.task('scripts', ['jscomplexity'], function() {
   // global.js
   gulp.src([
     // Config
-    sourceJs + '/config.js',
+    sourceJs + '/framework/config.js',
 
     // Services
-    sourceJs + '/services/callback.js',
+    sourceJs + '/framework/services/callback.js',
 
-    // Global controllers
-    sourceJs + '/controllers/global.js'
+    // Example controller
+    // sourceJs + '/framework/controllers/global.js'
   ])
     .pipe(concat('global.js'))
     .pipe(gulp.dest(paths.js))
@@ -62,7 +62,7 @@ gulp.task('scripts', ['jscomplexity'], function() {
     .pipe(gulp.dest(paths.js));
 
   // html5.js
-  gulp.src([sourceJs + '/lib/html5.js'])
+  gulp.src([sourceJs + '/framework/lib/html5.js'])
     .pipe(concat('html5.js'))
     .pipe(gulp.dest(paths.js))
     .pipe(rename('html5.min.js'))
@@ -71,7 +71,7 @@ gulp.task('scripts', ['jscomplexity'], function() {
     .pipe(gulp.dest(paths.js));
 
   // skip-link-focus-fix.js
-  gulp.src([sourceJs + '/lib/skip-link-focus-fix.js'])
+  gulp.src([sourceJs + '/framework/lib/skip-link-focus-fix.js'])
     .pipe(concat('skip-link-focus-fix.js'))
     .pipe(gulp.dest(paths.js))
     .pipe(rename('skip-link-focus-fix.min.js'))
@@ -80,19 +80,10 @@ gulp.task('scripts', ['jscomplexity'], function() {
     .pipe(gulp.dest(paths.js));
 
   // jquery.scrollTo.js
-  gulp.src([sourceJs + '/lib/jquery.scrollTo.js'])
+  gulp.src([sourceJs + '/framework/lib/jquery.scrollTo.js'])
     .pipe(concat('jquery.scrollTo.js'))
     .pipe(gulp.dest(paths.js))
     .pipe(rename('jquery.scrollTo.min.js'))
-    .pipe(stripDebug())
-    .pipe(uglify())
-    .pipe(gulp.dest(paths.js));
-
-  // wordpress-customize-preview.js
-  gulp.src([sourceJs + '/wordpress/customize-preview.js'])
-    .pipe(concat('wordpress-customize-preview.js'))
-    .pipe(gulp.dest(paths.js))
-    .pipe(rename('wordpress-customize-preview.min.js'))
     .pipe(stripDebug())
     .pipe(uglify())
     .pipe(gulp.dest(paths.js));

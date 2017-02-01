@@ -1,0 +1,129 @@
+////////////////////////////////////////////////////////////////////////////////
+// Frontend Styles
+//
+// Includes all Frontend common styles.
+////////////////////////////////////////////////////////////////////////////////
+
+/* Visibility */
+
+// Hide/show content on mobile.
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.screen-reader-text {
+  clip: rect(rem-calc(1), rem-calc(1), rem-calc(1), rem-calc(1));
+  height: rem-calc(1);
+  overflow: hidden;
+  position: absolute !important;
+  width: rem-calc(1);
+  margin-bottom: rem-calc(-1);
+  padding: 0;
+  border: 0;
+  word-wrap: normal !important;
+
+  &:focus {
+    background-color: #f1f1f1;
+    border-radius: rem-calc($global-radius);
+    box-shadow: rem-calc(0 0 2 2) rgba(0, 0, 0, 0.6);
+    clip: auto !important;
+    color: #21759b;
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    height: auto;
+    line-height: normal;
+    padding: rem-calc(15 23 14);
+    position: absolute;
+    left: rem-calc(5);
+    top: rem-calc(5);
+    text-decoration: none;
+    width: auto;
+    z-index: 100000; /* Above WP toolbar */
+  }
+}
+
+@include breakpoint($small) {
+  // Hide/show content on small (desktop) screens.
+  .hide-small {
+    display: none;
+  }
+
+  .show-small {
+    display: block;
+  }
+}
+
+
+/* Alignment */
+
+.float-left {
+  float: left;
+}
+
+.float-right {
+  float: right;
+}
+
+.align-left {
+  text-align: left;
+}
+
+.align-right {
+  text-align: right;
+}
+
+.align-center {
+  text-align: center;
+}
+
+@include breakpoint($small) {
+  .float-left-small {
+    float: left;
+  }
+
+  .float-right-small {
+    float: right;
+  }
+
+  .align-left-small {
+    text-align: left;
+  }
+
+  .align-right-small {
+    text-align: right;
+  }
+
+  .align-center-small {
+    text-align: center;
+  }
+}
+
+
+/* Lists */
+
+.list-inline-block {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  li {
+    display: list-inline-block;
+  }
+}
+
+@include breakpoint($small) {
+  .list-inline-block-small {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+      display: list-inline-block;
+    }
+  }
+}
