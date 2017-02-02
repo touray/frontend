@@ -16,5 +16,10 @@
 /* Private Imports */
 @import 'functions';
 @import 'variables';
+
+// Application variables and framework variable overrides
+@import 'application/global/variables';
+
+/* Continued Private Imports */
 @import 'mixins';
 @import 'extendables';

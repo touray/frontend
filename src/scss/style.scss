@@ -13,9 +13,6 @@
 // REQUIRED. Global functions, mixins, default variables and extendables
 @import 'framework/global/global';
 
-// Application variables and framework variable overrides
-@import 'application/global/variables';
-
 // Reset & base imports
 @import 'compass/reset';
 @import 'framework/base/base';
