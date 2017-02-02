@@ -48,6 +48,15 @@ $global-text-direction:    ltr                                         !default;
 $rem-base:                 $global-font-size                           !default;
 $global-transition-timing: .2s                                         !default;
 
+$button-radius:           $global-radius                               !default;
+$button-background:       $primary-color                               !default;
+$button-background-hover: $secondary-color                             !default;
+$button-font-size:        $global-font-size                            !default;
+$button-line-height:      1                                            !default;
+$button-padding:          8px 10px                                     !default;
+$button-color:            $white                                       !default;
+$button-color-hover:      $button-color                                !default;
+
 
 // 2. Breakpoints
 // -----------------------------------------------------------------------------

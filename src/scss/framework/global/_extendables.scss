@@ -10,3 +10,16 @@
   margin: 0 auto;
   @include clearfix;
 }
+
+%button {
+  border-radius: rem-calc($button-radius);
+  background: $button-background;
+  font-size: rem-calc($button-font-size);
+  line-height: $button-line-height;
+  padding: rem-calc($button-padding);
+
+  &:hover {
+    background: $button-background-hover;
+    color: $button-color-hover;
+  }
+}
