@@ -19,6 +19,7 @@
   padding: rem-calc($button-padding);
   border: $button-border;
   color: $button-color;
+  cursor: pointer;
 
   &:hover {
     background: $button-background-hover;
