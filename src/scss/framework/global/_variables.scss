@@ -56,6 +56,8 @@ $button-line-height:      1                                            !default;
 $button-padding:          8px 10px                                     !default;
 $button-color:            $white                                       !default;
 $button-color-hover:      $button-color                                !default;
+$button-border:           rem-calc(1) solid $primary-color             !default;
+$button-border-hover:     rem-calc(1) solid $secondary-color           !default;
 
 
 // 2. Breakpoints
@@ -76,7 +78,7 @@ $font-family-monospace: "Courier New", Courier, monospace              !default;
 
 $header-font-family: Georgia, serif                                    !default;
 $header-font-weight: $global-weight-bold                               !default;
-$header-font-style:  'normal'                                          !default;
+$header-font-style:  normal                                            !default;
 
 $header-color:             inherit                                     !default;
 $header-lineheight:        $global-lineheight                          !default;

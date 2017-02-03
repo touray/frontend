@@ -17,20 +17,38 @@
   font-size: rem-calc($button-font-size);
   line-height: $button-line-height;
   padding: rem-calc($button-padding);
+  border: $button-border;
+  color: $button-color;
 
   &:hover {
     background: $button-background-hover;
     color: $button-color-hover;
+    border: $button-border-hover;
   }
 }
 
+
+/* Lists */
 %list-inline-block {
   list-style: none;
   padding-left: 0;
+  margin-left: 0;
   margin-top: rem-calc($global-margin);
   margin-bottom: rem-calc($global-margin);
 
   li {
     display: inline-block;
+  }
+}
+
+%list-block {
+  list-style: none;
+  padding-left: 0;
+  margin-left: 0;
+  margin-top: rem-calc($global-margin);
+  margin-bottom: rem-calc($global-margin);
+
+  li {
+    display: block;
   }
 }
