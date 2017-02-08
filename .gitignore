@@ -16,11 +16,12 @@ dist/js/*
 
 # Application #
 ###############
-src/js/application/controllers/*
-src/js/application/lib/*
-src/js/application/services/*
+src/scss/*
+!src/scss/style-example.scss
 
-src/scss/application/base/*
-src/scss/application/components/*
-src/scss/application/global/*
-src/scss/application/layout/*
+src/js/application/*
+!src/js/application/base/.gitkeep
+!src/js/application/components/.gitkeep
+!src/js/application/global/.gitkeep
+!src/js/application/global/_variables-example.scss
+!src/js/application/layout/.gitkeep
