@@ -1,0 +1,55 @@
+////////////////////////////////////////////////////////////////////////////////
+// Extendables
+//
+// All extendables should be placed here.
+////////////////////////////////////////////////////////////////////////////////
+
+%container {
+  width: 100%;
+  max-width: rem-calc($global-width + $global-padding);
+  margin: 0 auto;
+  @include clearfix;
+}
+
+%button {
+  border-radius: rem-calc($button-radius);
+  background: $button-background;
+  font-size: rem-calc($button-font-size);
+  line-height: $button-line-height;
+  padding: rem-calc($button-padding);
+  border: $button-border;
+  color: $button-color;
+  cursor: pointer;
+
+  &:hover {
+    background: $button-background-hover;
+    color: $button-color-hover;
+    border: $button-border-hover;
+  }
+}
+
+
+/* Lists */
+%list-inline-block {
+  list-style: none;
+  padding-left: 0;
+  margin-left: 0;
+  margin-top: rem-calc($global-margin);
+  margin-bottom: rem-calc($global-margin);
+
+  li {
+    display: inline-block;
+  }
+}
+
+%list-block {
+  list-style: none;
+  padding-left: 0;
+  margin-left: 0;
+  margin-top: rem-calc($global-margin);
+  margin-bottom: rem-calc($global-margin);
+
+  li {
+    display: block;
+  }
+}

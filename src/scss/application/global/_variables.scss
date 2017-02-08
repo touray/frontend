@@ -1,0 +1,228 @@
+////////////////////////////////////////////////////////////////////////////////
+// Application Variables
+//
+// DO NOT DELETE. Contains all application variables and framework variable
+// overrides. Use the variables defined in
+// src/scss/framework/global/_variables.scss for reference.
+////////////////////////////////////////////////////////////////////////////////
+
+
+// 1. Global
+// -----------------------------------------------------------------------------
+
+$global-width:             1140px;
+$global-font-size:         16px;
+$global-lineheight:        1.3;
+
+$primary-color:            #0092dd;
+$secondary-color:          #000;
+
+$success-color:            #009900;
+$warning-color:            #ffae00;
+$alert-color:              #ce3e3e;
+
+$white:                    #fff;
+$black:                    #000;
+
+$xlight-gray:              #f0f0f0;
+$light-gray:               #d0d0d0;
+$gray:                     #ccc;
+$medium-gray:              #999;
+$dark-gray:                #666;
+$xdark-gray:               #333;
+
+$body-background:          $white;
+$border-color:             $gray;
+
+$body-font-color:          $black;
+$body-font-family:         Arial, Helvetica, sans-serif;
+$body-antialiased:         true;
+$global-margin:            30px;
+$global-padding:           30px;
+
+$global-weight-normal:     400;
+$global-weight-medium:     500;
+$global-weight-semibold:   600;
+$global-weight-bold:       700;
+
+$global-radius:            3px;
+$global-text-direction:    ltr;
+$rem-base:                 $global-font-size;
+$global-transition-timing: .2s;
+
+$button-radius:           $global-radius;
+$button-background:       $primary-color;
+$button-background-hover: $secondary-color;
+$button-font-size:        $global-font-size;
+$button-line-height:      1;
+$button-padding:          8px 10px;
+$button-color:            $white;
+$button-color-hover:      $button-color;
+
+
+// 2. Breakpoints
+// -----------------------------------------------------------------------------
+
+$small:  980px;
+$medium: 1024px;
+$large:  1600px;
+
+$medium-down: 0px $medium;
+$large-down:  0px $large;
+
+
+// 3. Base Typography
+// -----------------------------------------------------------------------------
+
+$font-family-monospace: "Courier New", Courier, monospace;
+
+$header-font-family: Georgia, serif;
+$header-font-weight: $global-weight-bold;
+$header-font-style:  'normal';
+
+$header-color:             inherit;
+$header-lineheight:        $global-lineheight;
+$header-margin-bottom:     rem-calc($global-margin);
+$header-text-rendering:    optimizeLegibility;
+$header-small-font-color:  $gray;
+
+$header-1-size: rem-calc($global-font-size + 15);
+$header-2-size: rem-calc($global-font-size + 12);
+$header-3-size: rem-calc($global-font-size + 9);
+$header-4-size: rem-calc($global-font-size + 6);
+$header-5-size: rem-calc($global-font-size + 3);
+$header-6-size: rem-calc($global-font-size);
+
+$xxxlarge-font-size:    $header-1-size;
+$xxlarge-font-size:     $header-2-size;
+$xlarge-font-size:      $header-3-size;
+$large-font-size:       $header-4-size;
+$medium-font-size:      $header-5-size;
+$normal-font-size:      $header-6-size;
+$small-font-size:       rem-calc($global-font-size - 2);
+$xsmall-font-size:      rem-calc($global-font-size - 4);
+$xxsmall-font-size:     rem-calc($global-font-size - 6);
+$xxxsmall-font-size:    rem-calc($global-font-size - 8);
+
+$paragraph-lineheight:     $global-lineheight;
+$paragraph-margin-bottom:  rem-calc($global-margin);
+$paragraph-text-rendering: optimizeLegibility;
+
+$code-color:       $xdark-gray;
+$code-font-family: $font-family-monospace;
+$code-font-weight: $global-weight-normal;
+$code-background:  $xlight-gray;
+$code-border:      0;
+$code-padding:     rem-calc(2);
+
+$anchor-color:                 $primary-color;
+$anchor-color-hover:           scale-color($anchor-color, $lightness: -14%);
+$anchor-text-decoration:       none;
+$anchor-text-decoration-hover: none;
+
+$hr-width:  rem-calc($global-width);
+$hr-border: rem-calc(1) solid $gray;
+$hr-margin: rem-calc($global-margin) auto;
+
+$list-lineheight:             $paragraph-lineheight;
+$list-margin-bottom:          $paragraph-margin-bottom;
+$list-style-type:             disc;
+$list-style-position:         outside;
+$list-side-margin:            1.25rem;
+$list-nested-side-margin:     1.25rem;
+$defnlist-margin-bottom:      1rem;
+$defnlist-term-weight:        $global-weight-bold;
+$defnlist-term-margin-bottom: 0.3rem;
+$blockquote-color:            $dark-gray;
+$blockquote-padding:          rem-calc(0 $global-padding);
+$blockquote-border:           rem-calc(1) solid $gray;
+$cite-font-size:              $small-font-size;
+$cite-color:                  $gray;
+$keystroke-font:              $font-family-monospace;
+$keystroke-color:             $black;
+$keystroke-background:        $light-gray;
+$keystroke-padding:           rem-calc($global-padding);
+$keystroke-radius:            rem-calc($global-radius);
+$abbr-underline:              rem-calc(1) dotted $black;
+
+
+// 4. Forms
+// -----------------------------------------------------------------------------
+
+$fieldset-border:         rem-calc(1) solid $gray;
+$fieldset-padding:        rem-calc($global-padding);
+$fieldset-margin:         rem-calc($global-margin);
+$legend-padding:          rem-calc(5);
+$form-spacing:            rem-calc(20);
+$helptext-color:          $gray;
+$helptext-font-size:      $small-font-size;
+$helptext-font-style:     italic;
+$input-prefix-color:      $black;
+$input-prefix-background: $light-gray;
+$input-prefix-border:     rem-calc(1) solid $gray;
+$input-prefix-padding:    rem-calc($global-padding);
+$form-label-color:        $black;
+$form-label-font-size:    $small-font-size;
+$form-label-font-weight:  $global-weight-bold;
+$form-label-line-height:  1.8;
+$select-background:       $body-background;
+$select-triangle-color:   $black;
+$select-radius:           rem-calc($global-radius);
+
+$input-color:       $dark-gray;
+$input-font-family: inherit;
+$input-font-size:   rem-calc($global-font-size);
+
+$input-background:          $body-background;
+$input-background-focus:    $light-gray;
+$input-background-disabled: $gray;
+
+$input-border:       rem-calc(1) solid $gray;
+$input-border-focus: rem-calc(1) solid $gray;
+$input-shadow:       none;
+$input-shadow-focus: none;
+
+$input-cursor-disabled: default;
+$input-transition:      box-shadow 0.5s, border-color 0.25s ease-in-out;
+$input-number-spinners: true;
+$input-radius:          rem-calc($global-radius);
+
+
+// 5. Label
+// -----------------------------------------------------------------------------
+
+$label-background: $primary-color;
+$label-color:      foreground($label-background);
+$label-font-size:  0.8rem;
+$label-padding:    rem-calc($global-padding);
+$label-radius:     rem-calc($global-radius);
+
+
+// 6. Table
+// -----------------------------------------------------------------------------
+
+$table-background:         $white;
+$table-color-scale:        5%;
+$table-border:             rem-calc(1) solid smart-scale($table-background, $table-color-scale);
+$table-padding:            rem-calc(10);
+$table-hover-scale:        2%;
+$table-row-hover:          darken($table-background, $table-hover-scale);
+$table-row-stripe-hover:   darken($table-background, $table-color-scale + $table-hover-scale);
+$table-striped-background: smart-scale($table-background, $table-color-scale);
+$table-stripe:             even;
+$table-head-background:    smart-scale($table-background, $table-color-scale / 2);
+$table-foot-background:    smart-scale($table-background, $table-color-scale);
+$table-head-font-color:    $body-font-color;
+$show-header-for-stacked:  false;
+
+// 6. Grid
+// ---------
+
+$num-columns:       1;
+$num-columns-small: 12;
+$include-clearfix:  true;
+$gutter-style:      'split';
+
+// Internal variables used for text direction
+$global-left:  if($global-text-direction == rtl, right, left);
+$global-right: if($global-text-direction == rtl, left, right);

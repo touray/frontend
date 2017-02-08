@@ -13,15 +13,3 @@ gulpfile.js
 dist/css/*
 dist/font/*
 dist/js/*
-
-# Application #
-###############
-src/scss/*
-!src/scss/style-example.scss
-
-src/js/application/*
-!src/js/application/base/.gitkeep
-!src/js/application/components/.gitkeep
-!src/js/application/global/.gitkeep
-!src/js/application/global/_variables-example.scss
-!src/js/application/layout/.gitkeep
