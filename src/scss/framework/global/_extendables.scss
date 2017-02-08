@@ -4,12 +4,17 @@
 // All extendables should be placed here.
 ////////////////////////////////////////////////////////////////////////////////
 
+/* Layout */
+
 %container {
   width: 100%;
   max-width: rem-calc($global-width + $global-padding);
   margin: 0 auto;
   @include clearfix;
 }
+
+
+/* Button */
 
 %button {
   border-radius: rem-calc($button-radius);
@@ -51,5 +56,46 @@
 
   li {
     display: block;
+  }
+}
+
+
+/* Pager */
+%pager {
+  @extend %list-inline-block;
+  text-transform: $pager-text-transform;
+
+  a {
+    display: inline-block;
+    transition: $pager-transition;
+    padding: $pager-link-padding;
+    border: $pager-link-border;
+    border-radius: $pager-link-border-radius;
+    color: $pager-link-color;
+    background: $pager-link-background;
+
+    &:hover {
+      background: $pager-link-background-hover;
+      border: $pager-link-border-hover;
+      color: $pager-link-color-hover;
+    }
+  }
+
+  li {
+    &.pager-ellipsis {
+      padding: $pager-ellipsis-padding;
+      border: $pager-ellipsis-border;
+      border-radius: $pager-ellipsis-border-radius;
+      color: $pager-ellipsis-color;
+      background: $pager-ellipsis-background;
+    }
+
+    &.pager-current {
+      background: $primary-color;
+      color: $white;
+      font-weight: $global-weight-normal;
+      border-color: $primary-color;
+      background: $pager-current-background;
+    }
   }
 }

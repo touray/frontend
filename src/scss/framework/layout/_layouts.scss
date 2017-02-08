@@ -5,10 +5,15 @@
 // main page layouts.
 ////////////////////////////////////////////////////////////////////////////////
 
-@include add-grid($num-columns);
-@include add-grid($num-columns-small at $small);
+@include add-grid($num-columns);                   // Mobile & up
+@include add-grid($num-columns-medium at $medium); // Tablet & up
+@include add-grid($num-columns-large at $large);   // Desktop & up
+
+@include add-gutter($gutter-padding at $small);        // Mobile & up
+@include add-gutter($gutter-padding-medium at $medium); // Tablet & up
+@include add-gutter($gutter-padding-large at $large);   // Desktop & up
+
 @include add-gutter-style($gutter-style);
-@include add-gutter(rem-calc($global-padding));
 
 /* Components */
 .container {
@@ -20,14 +25,26 @@
 
 // Build additional mobile columns using the format below:
 // (.col-NUM_COL_SPAN-STARTING_AT)
+
+// Mobile & up
 .col-#{$num-columns}-1 {
   @include grid-span($num-columns, 1);
 }
 
-@include breakpoint($small) {
+// Tablet & up
+@include breakpoint($medium) {
   // Build additional desktop columns using the format below:
   // (.col-NUM_COL_SPAN-STARTING_AT-small)
-  .col-#{$num-columns}-1-small {
-    @include grid-span($num-columns-small, 1);
+  .col-#{$num-columns-medium}-1-small {
+    @include grid-span($num-columns-medium, 1);
+  }
+}
+
+// Desktop & up
+@include breakpoint($large) {
+  // Build additional desktop columns using the format below:
+  // (.col-NUM_COL_SPAN-STARTING_AT-small)
+  .col-#{$num-columns-large}-1-small {
+    @include grid-span($num-columns-large, 1);
   }
 }

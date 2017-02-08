@@ -8,19 +8,19 @@
 // 1. Global
 // -----------------------------------------------------------------------------
 
-$global-width:             1140px                                      !default;
+$global-width:             1240px                                      !default;
 $global-font-size:         16px                                        !default;
 $global-lineheight:        1.3                                         !default;
 
-$primary-color:            #0092dd                                     !default;
-$secondary-color:          #000                                        !default;
+$primary-color:            #e52d87                                     !default;
+$secondary-color:          #0093bb                                     !default;
 
 $success-color:            #009900                                     !default;
 $warning-color:            #ffae00                                     !default;
 $alert-color:              #ce3e3e                                     !default;
 
-$white:                    #fff                                        !default;
-$black:                    #000                                        !default;
+$white:                    #f4f4f4                                     !default;
+$black:                    #231e20                                     !default;
 
 $xlight-gray:              #f0f0f0                                     !default;
 $light-gray:               #d0d0d0                                     !default;
@@ -30,7 +30,6 @@ $dark-gray:                #666                                        !default;
 $xdark-gray:               #333                                        !default;
 
 $body-background:          $white                                      !default;
-$border-color:             $gray                                       !default;
 
 $body-font-color:          $black                                      !default;
 $body-font-family:         Arial, Helvetica, sans-serif                !default;
@@ -63,12 +62,13 @@ $button-border-hover:     rem-calc(1) solid $secondary-color           !default;
 // 2. Breakpoints
 // -----------------------------------------------------------------------------
 
-$small:  980px                                                         !default;
-$medium: 1024px                                                        !default;
-$large:  1600px                                                        !default;
+$small:  684px                                                         !default; // Mobile & up
+$medium: 1000px                                                        !default; // Tablet & up
+$large:  1320px                                                        !default; // Desktop & up
 
-$medium-down: 0px $medium                                              !default;
-$large-down:  0px $large                                               !default;
+$small-down:  0px $small                                               !default; // Mobile & down
+$medium-down: 0px $medium                                              !default; // Tablet & down
+$large-down:  0px $large                                               !default; // Desktop & down
 
 
 // 3. Base Typography
@@ -215,14 +215,50 @@ $table-foot-background:    smart-scale($table-background, $table-color-scale) !d
 $table-head-font-color:    $body-font-color                            !default;
 $show-header-for-stacked:  false                                       !default;
 
-// 6. Grid
-// ---------
 
-$num-columns:       1                                                  !default;
-$num-columns-small: 12                                                 !default;
-$include-clearfix:  true                                               !default;
-$gutter-style:      'split'                                            !default;
+// 7. Grid
+// -----------------------------------------------------------------------------
+
+$num-columns:        1                                                 !default; // Mobile & up
+$num-columns-medium: 12                                                !default; // Tablet & up
+$num-columns-large:  12                                                !default; // Desktop & up
+
+$gutter-padding:        rem-calc(32)                                   !default; // Mobile & up
+$gutter-padding-medium: rem-calc(32)                                   !default; // Tablet & up
+$gutter-padding-large:  rem-calc(32)                                   !default; // Desktop & up
+
+$include-clearfix:   true                                              !default;
+$gutter-style:       'split'                                           !default;
 
 // Internal variables used for text direction
 $global-left:  if($global-text-direction == rtl, right, left)          !default;
 $global-right: if($global-text-direction == rtl, left, right)          !default;
+
+
+// 8. Pager
+// -----------------------------------------------------------------------------
+
+$pager-text-transform: uppercase                                       !default;
+$pager-transition:     all $global-transition-timing                   !default;
+
+$pager-link-padding:       0.5rem 0.9rem                               !default;
+$pager-link-border:        0                                           !default;
+$pager-link-border-radius: rem-calc($global-radius)                    !default;
+$pager-link-color:         $black                                      !default;
+$pager-link-background:    transparent                                 !default;
+
+$pager-link-background-hover: transparent                              !default;
+$pager-link-color-hover:      $primary-color                           !default;
+$pager-link-border-hover:     0                                        !default;
+
+$pager-current-padding:       0.5rem 0.9rem                            !default;
+$pager-current-border:        rem-calc(1) solid $gray                  !default;
+$pager-current-border-radius: rem-calc($global-radius)                 !default;
+$pager-current-color:         $body-font-color                         !default;
+$pager-current-background:    transparent                              !default;
+
+$pager-ellipsis-padding:       0.5rem 0.9rem                           !default;
+$pager-ellipsis-border:        rem-calc(1) solid $gray                 !default;
+$pager-ellipsis-border-radius: rem-calc($global-radius)                !default;
+$pager-ellipsis-color:         $body-font-color                        !default;
+$pager-ellipsis-background:    transparent                             !default;

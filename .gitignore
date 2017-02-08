@@ -13,3 +13,4 @@ gulpfile.js
 dist/css/*
 dist/font/*
 dist/js/*
+src/scss/style.scss

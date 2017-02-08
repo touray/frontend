@@ -127,3 +127,10 @@
     }
   }
 }
+
+
+/* Pager */
+
+.pager {
+  @extend %pager;
+}

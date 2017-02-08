@@ -39,48 +39,14 @@
 
 
 /* Pager Styles */
+
 .pager {
-  @extend %list-inline-block;
-  text-transform: uppercase;
-
-  a,
-  li.pager-current,
-  li.pager-ellipsis {
-    padding: 0.5rem 0.9rem;
-    border: rem-calc(1) solid $border-color;
-    border-radius: rem-calc($global-radius);
-    color: $body-font-color;
-  }
-
-  a {
-    display: inline-block;
-    transition: all $global-transition-timing;
-
-    &:hover {
-      background: $primary-color;
-      color: $white;
-      border-color: $primary-color;
-    }
-  }
-
-  li {
-    display: inline-block;
-
-    &.pager-ellipsis {
-      border: 0;
-    }
-
-    &.pager-current {
-      background: $primary-color;
-      color: $white;
-      font-weight: $global-weight-normal;
-      border-color: $primary-color;
-    }
-  }
+  @extend %pager;
 }
 
 
 /* System Messages */
+
 div.status,
 .ok {
   color: $success-color;
