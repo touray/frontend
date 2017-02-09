@@ -8,7 +8,11 @@
 // 1. Global
 // -----------------------------------------------------------------------------
 
-$global-width:             1240px                                      !default;
+$global-width:             286px                                       !default; // Mobile
+$global-width-small:       604px                                       !default; // Tablet & up
+$global-width-medium:      922px                                       !default; // Desktop & up
+$global-width-large:       1240px                                      !default; // Large screens & up
+
 $global-font-size:         16px                                        !default;
 $global-lineheight:        1.3                                         !default;
 
@@ -34,8 +38,13 @@ $body-background:          $white                                      !default;
 $body-font-color:          $black                                      !default;
 $body-font-family:         Arial, Helvetica, sans-serif                !default;
 $body-antialiased:         true                                        !default;
+
 $global-margin:            30px                                        !default;
-$global-padding:           30px                                        !default;
+
+$global-padding:        30px                                           !default; // Mobile
+$global-padding-small:  30px                                           !default; // Tablet & up
+$global-padding-medium: 30px                                           !default; // Desktop & up
+$global-padding-large:  30px                                           !default; // Large screens & up
 
 $global-weight-normal:     400                                         !default;
 $global-weight-medium:     500                                         !default;
@@ -246,6 +255,9 @@ $pager-link-border:        0                                           !default;
 $pager-link-border-radius: rem-calc($global-radius)                    !default;
 $pager-link-color:         $black                                      !default;
 $pager-link-background:    transparent                                 !default;
+$pager-link-size:          $small-font-size                            !default;
+$pager-link-line-height:   1                                           !default;
+$pager-link-font-family:   $body-font-family                           !default;
 
 $pager-link-background-hover: transparent                              !default;
 $pager-link-color-hover:      $primary-color                           !default;

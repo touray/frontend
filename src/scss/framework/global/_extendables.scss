@@ -11,6 +11,33 @@
   max-width: rem-calc($global-width + $global-padding);
   margin: 0 auto;
   @include clearfix;
+
+  @include breakpoint($small) {
+    max-width: rem-calc($global-width-small + $global-padding-small);
+  }
+
+  @include breakpoint($medium) {
+    max-width: rem-calc($global-width-medium + $global-padding-medium);
+  }
+
+  @include breakpoint($large) {
+    max-width: rem-calc($global-width-large + $global-padding-large);
+  }
+}
+
+%flexbox {
+  display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;      /* TWEENER - IE 10 */
+  display: -webkit-flex;     /* NEW - Chrome */
+  display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+
+  justify-content: space-between;
 }
 
 
@@ -73,6 +100,9 @@
     border-radius: $pager-link-border-radius;
     color: $pager-link-color;
     background: $pager-link-background;
+    font-size: $pager-link-size;
+    line-height: $pager-link-line-height;
+    font-family: $pager-link-font-family;
 
     &:hover {
       background: $pager-link-background-hover;
