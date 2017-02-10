@@ -10,6 +10,22 @@
 html,
 body {
   font-size: $global-font-size;
+
+  // Tablet & up
+  @include breakpoint($small) {
+    font-size: $global-font-size-small;
+  }
+
+  // Desktop & up
+  @include breakpoint($medium) {
+    font-size: $global-font-size-medium;
+  }
+
+  // Large screens
+  @include breakpoint($large) {
+    font-size: $global-font-size-large;
+  }
+
   box-sizing: border-box;
 }
 
