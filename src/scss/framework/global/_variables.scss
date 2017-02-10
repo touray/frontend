@@ -13,7 +13,11 @@ $global-width-small:       604px                                       !default;
 $global-width-medium:      922px                                       !default; // Desktop & up
 $global-width-large:       1240px                                      !default; // Large screens & up
 
-$global-font-size:         16px                                        !default;
+$global-font-size:        16px                                         !default; // Mobile
+$global-font-size-small:  $global-font-size                            !default; // Tablet & up
+$global-font-size-medium: $global-font-size                            !default; // Desktop & up
+$global-font-size-large:  $global-font-size                            !default; // Large screens & up
+
 $global-lineheight:        1.3                                         !default;
 
 $primary-color:            #e52d87                                     !default;
@@ -229,12 +233,14 @@ $show-header-for-stacked:  false                                       !default;
 // -----------------------------------------------------------------------------
 
 $num-columns:        1                                                 !default; // Mobile & up
-$num-columns-medium: 12                                                !default; // Tablet & up
-$num-columns-large:  12                                                !default; // Desktop & up
+$num-columns-small:  $num-columns                                      !default; // Tablet & up
+$num-columns-medium: $num-columns                                      !default; // Tablet & up
+$num-columns-large:  $num-columns                                      !default; // Desktop & up
 
-$gutter-padding:        rem-calc(32)                                   !default; // Mobile & up
-$gutter-padding-medium: rem-calc(32)                                   !default; // Tablet & up
-$gutter-padding-large:  rem-calc(32)                                   !default; // Desktop & up
+$gutter-padding:        30px                                           !default; // Mobile & up
+$gutter-padding-small:  $gutter-padding                                !default; // Tablet & up
+$gutter-padding-medium: $gutter-padding                                !default; // Desktop & up
+$gutter-padding-large:  $gutter-padding                                !default; // Large screen & up
 
 $include-clearfix:   true                                              !default;
 $gutter-style:       'split'                                           !default;

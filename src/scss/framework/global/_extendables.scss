@@ -13,15 +13,15 @@
   @include clearfix;
 
   @include breakpoint($small) {
-    max-width: rem-calc($global-width-small + $global-padding-small);
+    max-width: rem-calc($global-width-small + $gutter-padding-small, $global-font-size-small);
   }
 
   @include breakpoint($medium) {
-    max-width: rem-calc($global-width-medium + $global-padding-medium);
+    max-width: rem-calc($global-width-medium + $gutter-padding-medium, $global-font-size-medium);
   }
 
   @include breakpoint($large) {
-    max-width: rem-calc($global-width-large + $global-padding-large);
+    max-width: rem-calc($global-width-large + $gutter-padding-large, $global-font-size-large);
   }
 }
 
