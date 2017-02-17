@@ -4,6 +4,59 @@
 // Includes all Frontend common styles.
 ////////////////////////////////////////////////////////////////////////////////
 
+/* Table */
+
+.table {
+  display: table;
+  width: 100%;
+  background: $table-background;
+}
+
+.table-header {
+  background: $table-head-background;
+  color: $table-head-font-color;
+
+  // Tablet & up
+  @include breakpoint($small) {
+    display: table-header-group;
+  }
+}
+
+.table-footer {
+  background: $table-foot-background;
+
+  // Tablet & up
+  @include breakpoint($small) {
+    display: table-footer-group;
+  }
+}
+
+.table-body {
+  // Tablet & up
+  @include breakpoint($small) {
+    display: table-row-group;
+  }
+}
+
+.table-row {
+  // Tablet & up
+  @include breakpoint($small) {
+    display: table-row;
+  }
+}
+
+.table-col {
+  // Tablet & up
+  @include breakpoint($small) {
+    display: table-cell;
+  }
+}
+
+.table-col {
+  padding: $table-padding;
+}
+
+
 /* Typography */
 
 .strikethrough {

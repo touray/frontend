@@ -5,13 +5,15 @@
 // main page layouts.
 ////////////////////////////////////////////////////////////////////////////////
 
-@include add-grid($num-columns);                  // Mobile
-@include add-grid($num-columns-medium at $small); // Tablet & up
-@include add-grid($num-columns-large at $medium); // Desktop & up
+@include add-grid($num-columns);                   // Mobile
+@include add-grid($num-columns-small at $small);   // Tablet & up
+@include add-grid($num-columns-medium at $medium); // Desktop & up
+@include add-grid($num-columns-large at $large);   // Large screens
 
-@include add-gutter($gutter-padding);                  // Mobile
-@include add-gutter($gutter-padding-medium at $small); // Tablet & up
-@include add-gutter($gutter-padding-large at $medium); // Desktop & up
+@include add-gutter($gutter-padding);                   // Mobile
+@include add-gutter($gutter-padding-small at $small);   // Tablet & up
+@include add-gutter($gutter-padding-medium at $medium); // Desktop & up
+@include add-gutter($gutter-padding-large at $large);   // Large screens
 
 @include add-gutter-style($gutter-style);
 
