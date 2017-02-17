@@ -158,13 +158,6 @@ button {
   }
 }
 
-/// Adds the ability to horizontally scroll the table when the content overflows horizontally.
-@mixin table-scroll {
-  display: block;
-  width: 100%;
-  overflow-y: scroll;
-}
-
 /// Slightly darkens the table rows on hover.
 @mixin table-hover {
   tr {
@@ -231,10 +224,6 @@ table.stack {
   @include breakpoint($medium-down) {
     @include table-stack;
   }
-}
-
-table.scroll {
-  @include table-scroll;
 }
 
 table.hover {

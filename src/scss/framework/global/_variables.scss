@@ -13,10 +13,10 @@ $global-width-small:       604px                                       !default;
 $global-width-medium:      922px                                       !default; // Desktop & up
 $global-width-large:       1240px                                      !default; // Large screens & up
 
-$global-font-size:        16px                                         !default; // Mobile
-$global-font-size-small:  $global-font-size                            !default; // Tablet & up
-$global-font-size-medium: $global-font-size                            !default; // Desktop & up
-$global-font-size-large:  $global-font-size                            !default; // Large screens & up
+$global-font-size:         16px                                        !default; // Mobile
+$global-font-size-small:   $global-font-size                           !default; // Tablet & up
+$global-font-size-medium:  $global-font-size                           !default; // Desktop & up
+$global-font-size-large:   $global-font-size                           !default; // Large screens & up
 
 $global-lineheight:        1.3                                         !default;
 
@@ -31,70 +31,66 @@ $white:                    #fff                                        !default;
 $black:                    #000                                        !default;
 
 $xlight-gray:              #f0f0f0                                     !default;
-$light-gray:               #d0d0d0                                     !default;
-$gray:                     #ccc                                        !default;
-$medium-gray:              #999                                        !default;
-$dark-gray:                #666                                        !default;
-$xdark-gray:               #333                                        !default;
+$light-gray:               #f4f4f4                                     !default;
+$gray:                     #dcdcdc                                     !default;
+$medium-gray:              #b4b4b4                                     !default;
+$dark-gray:                #686868                                     !default;
+$xdark-gray:               #231e20                                     !default;
 
 $body-background:          $white                                      !default;
 
-$body-font-color:          $black                                      !default;
-$body-font-family:         Arial, Helvetica, sans-serif                !default;
+$body-font-color:          $xdark-gray                                 !default;
+$body-font-family:         "Trebuchet MS", Helvetica, sans-serif       !default;
 $body-antialiased:         true                                        !default;
 
 $global-margin:            30px                                        !default;
-
-$global-padding:        30px                                           !default; // Mobile
-$global-padding-small:  30px                                           !default; // Tablet & up
-$global-padding-medium: 30px                                           !default; // Desktop & up
-$global-padding-large:  30px                                           !default; // Large screens & up
+$global-padding:           30px                                        !default;
 
 $global-weight-normal:     400                                         !default;
 $global-weight-medium:     500                                         !default;
 $global-weight-semibold:   600                                         !default;
 $global-weight-bold:       700                                         !default;
 
+$global-outline:           none                                        !default;
 $global-radius:            3px                                         !default;
 $global-text-direction:    ltr                                         !default;
-$rem-base:                 $global-font-size                           !default;
 $global-transition-timing: .2s                                         !default;
-$global-outline:           none                                        !default;
+$rem-base:                 $global-font-size                           !default;
 
 
 // 2. Breakpoints
 // -----------------------------------------------------------------------------
 
-$small:  684px                                                         !default; // Mobile & up
-$medium: 1000px                                                        !default; // Tablet & up
-$large:  1320px                                                        !default; // Desktop & up
+$small:        320px                                                   !default; // Tablet & up
+$medium:       768px                                                   !default; // Desktop & up
+$large:        1200px                                                  !default; // Large screens
 
-$small-down:  0px $small                                               !default; // Mobile & down
-$medium-down: 0px $medium                                              !default; // Tablet & down
-$large-down:  0px $large                                               !default; // Desktop & down
+$small-down:   0px $small                                              !default; // Tablet & up
+$medium-down:  0px $medium                                             !default; // Desktop & up
+$large-down:   0px $large                                              !default; // Large screens
 
 
 // 3. Base Typography
 // -----------------------------------------------------------------------------
 
-$font-family-monospace: "Courier New", Courier, monospace              !default;
+$font-family-monospace:    "Courier New", Courier, monospace           !default;
 
-$header-font-family: Georgia, serif                                    !default;
-$header-font-weight: $global-weight-bold                               !default;
-$header-font-style:  normal                                            !default;
+$header-font-family:       Arial, Helvetica, sans-serif                !default;
+$header-font-weight:       $global-weight-bold                         !default;
+$header-font-style:        normal                                      !default;
 
 $header-color:             inherit                                     !default;
 $header-lineheight:        $global-lineheight                          !default;
 $header-margin-bottom:     rem-calc($global-margin)                    !default;
 $header-text-rendering:    optimizeLegibility                          !default;
-$header-small-font-color:  $gray                                       !default;
+$header-small-font-color:  $dark-gray                                  !default;
 
-$header-1-size: rem-calc($global-font-size + 15)                       !default;
-$header-2-size: rem-calc($global-font-size + 12)                       !default;
-$header-3-size: rem-calc($global-font-size + 9)                        !default;
-$header-4-size: rem-calc($global-font-size + 6)                        !default;
-$header-5-size: rem-calc($global-font-size + 3)                        !default;
-$header-6-size: rem-calc($global-font-size)                            !default;
+$header-1-size:            rem-calc($global-font-size + 15)            !default;
+$header-2-size:            rem-calc($global-font-size + 12)            !default;
+$header-3-size:            rem-calc($global-font-size + 9)             !default;
+$header-4-size:            rem-calc($global-font-size + 6)             !default;
+$header-5-size:            rem-calc($global-font-size + 3)             !default;
+$header-6-size:            rem-calc($global-font-size)                 !default;
 
 $xxxlarge-font-size:    $header-1-size                                 !default;
 $xxlarge-font-size:     $header-2-size                                 !default;
@@ -123,7 +119,7 @@ $anchor-color-hover:           scale-color($anchor-color, $lightness: -14%) !def
 $anchor-text-decoration:       none                                    !default;
 $anchor-text-decoration-hover: none                                    !default;
 
-$hr-width:  rem-calc($global-width)                                    !default;
+$hr-width:  100%                                                       !default;
 $hr-border: rem-calc(1) solid $gray                                    !default;
 $hr-margin: rem-calc($global-margin) auto                              !default;
 
@@ -270,7 +266,7 @@ $pager-current-color:         $body-font-color                         !default;
 $pager-current-background:    transparent                              !default;
 
 $pager-ellipsis-padding:       0.5rem 0.9rem                           !default;
-$pager-ellipsis-border:        rem-calc(1) solid $gray                 !default;
+$pager-ellipsis-border:        0                                       !default;
 $pager-ellipsis-border-radius: rem-calc($global-radius)                !default;
 $pager-ellipsis-color:         $body-font-color                        !default;
 $pager-ellipsis-background:    transparent                             !default;
@@ -279,15 +275,15 @@ $pager-ellipsis-background:    transparent                             !default;
 // 8. Buttons
 // -----------------------------------------------------------------------------
 
-$button-radius:           rem-calc($global-radius)                     !default;
-$button-background:       $primary-color                               !default;
-$button-background-hover: $secondary-color                             !default;
+$button-radius:           0                                            !default;
+$button-background:       transparent                                  !default;
+$button-background-hover: $xdark-gray                                  !default;
 $button-font-size:        rem-calc($global-font-size)                  !default;
 $button-line-height:      1                                            !default;
 $button-padding:          rem-calc(8 10)                               !default;
-$button-color:            $white                                       !default;
-$button-color-hover:      $button-color                                !default;
-$button-border:           rem-calc(1) solid $primary-color             !default;
-$button-border-hover:     rem-calc(1) solid $secondary-color           !default;
+$button-color:            $xdark-gray                                  !default;
+$button-color-hover:      $white                                       !default;
+$button-border:           rem-calc(1) solid $xdark-gray                !default;
+$button-border-hover:     rem-calc(1) solid $xdark-gray                !default;
 $button-font-family:      $body-font-family                            !default;
-$button-text-transform:   none                                         !default;
+$button-text-transform:   uppercase                                    !default;
