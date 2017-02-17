@@ -24,7 +24,7 @@ var sourceJs  = 'src/js',
 // JavaScript Lint Task
 //////////////////////////////
 gulp.task('lint', function() {
-  return gulp.src([ sourceJs + '/**/*.js', '!' + sourceJs + '/lib/*' ])
+  return gulp.src([ sourceJs + '/**/*.js', '!' + sourceJs + '/application/lib/*', '!' + sourceJs + '/framework/lib/*' ])
     .pipe(jshint())
     .pipe(jshint.reporter(stylish))
 });
@@ -45,11 +45,11 @@ gulp.task('jscomplexity', ['lint'], function() {
 gulp.task('scripts', ['jscomplexity'], function() {
   // global.js
   gulp.src([
-    // Config
-    sourceJs + '/framework/config.js',
+    // Config (optional)
+    //sourceJs + '/framework/config.js',
 
-    // Services
-    sourceJs + '/framework/services/callback.js',
+    // Services (optional)
+    //sourceJs + '/framework/services/callback.js',
 
     // Example controller
     // sourceJs + '/framework/controllers/global.js'
@@ -61,32 +61,32 @@ gulp.task('scripts', ['jscomplexity'], function() {
     .pipe(uglify())
     .pipe(gulp.dest(paths.js));
 
-  // html5.js
-  gulp.src([sourceJs + '/framework/lib/html5.js'])
+  // html5.js (optional)
+  /*gulp.src([sourceJs + '/framework/lib/html5.js'])
     .pipe(concat('html5.js'))
     .pipe(gulp.dest(paths.js))
     .pipe(rename('html5.min.js'))
     .pipe(stripDebug())
     .pipe(uglify())
-    .pipe(gulp.dest(paths.js));
+    .pipe(gulp.dest(paths.js));*/
 
-  // skip-link-focus-fix.js
-  gulp.src([sourceJs + '/framework/lib/skip-link-focus-fix.js'])
+  // skip-link-focus-fix.js (optional)
+  /*gulp.src([sourceJs + '/framework/lib/skip-link-focus-fix.js'])
     .pipe(concat('skip-link-focus-fix.js'))
     .pipe(gulp.dest(paths.js))
     .pipe(rename('skip-link-focus-fix.min.js'))
     .pipe(stripDebug())
     .pipe(uglify())
-    .pipe(gulp.dest(paths.js));
+    .pipe(gulp.dest(paths.js));*/
 
-  // jquery.scrollTo.js
-  gulp.src([sourceJs + '/framework/lib/jquery.scrollTo.js'])
+  // jquery.scrollTo.js (optional)
+  /*gulp.src([sourceJs + '/framework/lib/jquery.scrollTo.js'])
     .pipe(concat('jquery.scrollTo.js'))
     .pipe(gulp.dest(paths.js))
     .pipe(rename('jquery.scrollTo.min.js'))
     .pipe(stripDebug())
     .pipe(uglify())
-    .pipe(gulp.dest(paths.js));
+    .pipe(gulp.dest(paths.js));*/
 });
 
 
@@ -114,7 +114,7 @@ gulp.task('compass', function() {
 // Images Task
 //////////////////////////////
 gulp.task('images', function() {
-  return gulp.src(sourceImg + '/*')
+  return gulp.src(sourceImg + '/**/*')
     .pipe(imagemin())
     .pipe(gulp.dest('dist/img'));
 });

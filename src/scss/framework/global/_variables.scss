@@ -60,17 +60,6 @@ $global-text-direction:    ltr                                         !default;
 $rem-base:                 $global-font-size                           !default;
 $global-transition-timing: .2s                                         !default;
 
-$button-radius:           $global-radius                               !default;
-$button-background:       $primary-color                               !default;
-$button-background-hover: $secondary-color                             !default;
-$button-font-size:        $global-font-size                            !default;
-$button-line-height:      1                                            !default;
-$button-padding:          8px 10px                                     !default;
-$button-color:            $white                                       !default;
-$button-color-hover:      $button-color                                !default;
-$button-border:           rem-calc(1) solid $primary-color             !default;
-$button-border-hover:     rem-calc(1) solid $secondary-color           !default;
-
 
 // 2. Breakpoints
 // -----------------------------------------------------------------------------
@@ -280,3 +269,19 @@ $pager-ellipsis-border:        rem-calc(1) solid $gray                 !default;
 $pager-ellipsis-border-radius: rem-calc($global-radius)                !default;
 $pager-ellipsis-color:         $body-font-color                        !default;
 $pager-ellipsis-background:    transparent                             !default;
+
+
+// 9. Buttons
+// -----------------------------------------------------------------------------
+
+$button-radius:           $global-radius                               !default;
+$button-background:       $primary-color                               !default;
+$button-background-hover: $secondary-color                             !default;
+$button-font-size:        $global-font-size                            !default;
+$button-line-height:      1                                            !default;
+$button-padding:          8px 10px                                     !default;
+$button-color:            $white                                       !default;
+$button-color-hover:      $button-color                                !default;
+$button-border:           rem-calc(1) solid $primary-color             !default;
+$button-border-hover:     rem-calc(1) solid $secondary-color           !default;
+$button-font-family:      $body-font-family                            !default;

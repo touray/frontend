@@ -25,6 +25,24 @@
   }
 }
 
+%container-full {
+  width: 100%;
+  margin: 0 auto;
+  @include clearfix;
+
+  @include breakpoint($small) {
+    max-width: 100%;
+  }
+
+  @include breakpoint($medium) {
+    max-width: 100%;
+  }
+
+  @include breakpoint($large) {
+    max-width: 100%;
+  }
+}
+
 %flexbox {
   display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
   display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
@@ -44,6 +62,7 @@
 /* Button */
 
 %button {
+  display: inline-block;
   border-radius: rem-calc($button-radius);
   background: $button-background;
   font-size: rem-calc($button-font-size);
@@ -52,6 +71,8 @@
   border: $button-border;
   color: $button-color;
   cursor: pointer;
+  font-family: $button-font-family;
+  text-align: center;
 
   &:hover {
     background: $button-background-hover;
