@@ -27,8 +27,8 @@ $success-color:            #009900                                     !default;
 $warning-color:            #ffae00                                     !default;
 $alert-color:              #ce3e3e                                     !default;
 
-$white:                    #f4f4f4                                     !default;
-$black:                    #231e20                                     !default;
+$white:                    #fff                                        !default;
+$black:                    #000                                        !default;
 
 $xlight-gray:              #f0f0f0                                     !default;
 $light-gray:               #d0d0d0                                     !default;
@@ -59,6 +59,7 @@ $global-radius:            3px                                         !default;
 $global-text-direction:    ltr                                         !default;
 $rem-base:                 $global-font-size                           !default;
 $global-transition-timing: .2s                                         !default;
+$global-outline:           none                                        !default;
 
 
 // 2. Breakpoints
@@ -135,9 +136,14 @@ $list-nested-side-margin:     1.25rem                                  !default;
 $defnlist-margin-bottom:      1rem                                     !default;
 $defnlist-term-weight:        $global-weight-bold                      !default;
 $defnlist-term-margin-bottom: 0.3rem                                   !default;
-$blockquote-color:            $dark-gray                               !default;
+
+$blockquote-color:            inherit                                  !default;
 $blockquote-padding:          rem-calc(0 $global-padding)              !default;
 $blockquote-border:           rem-calc(1) solid $gray                  !default;
+$blockquote-font-family:      inherit                                  !default;
+$blockquote-font-size:        inherit                                  !default;
+$blockquote-line-height:      inherit                                  !default;
+
 $cite-font-size:              $small-font-size                         !default;
 $cite-color:                  $gray                                    !default;
 $keystroke-font:              $font-family-monospace                   !default;
@@ -163,10 +169,14 @@ $input-prefix-color:      $black                                       !default;
 $input-prefix-background: $light-gray                                  !default;
 $input-prefix-border:     rem-calc(1) solid $gray                      !default;
 $input-prefix-padding:    rem-calc($global-padding)                    !default;
-$form-label-color:        $black                                       !default;
-$form-label-font-size:    $small-font-size                             !default;
-$form-label-font-weight:  $global-weight-bold                          !default;
-$form-label-line-height:  1.8                                          !default;
+
+$form-label-color:          $black                                     !default;
+$form-label-font-size:      $small-font-size                           !default;
+$form-label-font-weight:    $global-weight-bold                        !default;
+$form-label-line-height:    1.8                                        !default;
+$form-label-font-family:    $body-font-family                          !default;
+$form-label-text-transform: none                                       !default;
+
 $select-background:       $body-background                             !default;
 $select-triangle-color:   $black                                       !default;
 $select-radius:           rem-calc($global-radius)                     !default;
@@ -189,18 +199,12 @@ $input-transition:      box-shadow 0.5s, border-color 0.25s ease-in-out !default
 $input-number-spinners: true                                           !default;
 $input-radius:          rem-calc($global-radius)                       !default;
 
-
-// 5. Label
-// -----------------------------------------------------------------------------
-
-$label-background: $primary-color                                      !default;
-$label-color:      foreground($label-background)                       !default;
-$label-font-size:  0.8rem                                              !default;
-$label-padding:    rem-calc($global-padding)                           !default;
-$label-radius:     rem-calc($global-radius)                            !default;
+$placeholder-color:          $gray                                     !default;
+$placeholder-font-family:    $input-font-family                        !default;
+$placeholder-text-transform: none                                      !default;
 
 
-// 6. Table
+// 5. Table
 // -----------------------------------------------------------------------------
 
 $table-background:         $white                                      !default;
@@ -218,7 +222,7 @@ $table-head-font-color:    $body-font-color                            !default;
 $show-header-for-stacked:  false                                       !default;
 
 
-// 7. Grid
+// 6. Grid
 // -----------------------------------------------------------------------------
 
 $num-columns:        1                                                 !default; // Mobile & up
@@ -239,11 +243,12 @@ $global-left:  if($global-text-direction == rtl, right, left)          !default;
 $global-right: if($global-text-direction == rtl, left, right)          !default;
 
 
-// 8. Pager
+// 7. Pager
 // -----------------------------------------------------------------------------
 
 $pager-text-transform: uppercase                                       !default;
 $pager-transition:     all $global-transition-timing                   !default;
+$pager-text-align:     center                                          !default;
 
 $pager-link-padding:       0.5rem 0.9rem                               !default;
 $pager-link-border:        0                                           !default;
@@ -271,17 +276,18 @@ $pager-ellipsis-color:         $body-font-color                        !default;
 $pager-ellipsis-background:    transparent                             !default;
 
 
-// 9. Buttons
+// 8. Buttons
 // -----------------------------------------------------------------------------
 
-$button-radius:           $global-radius                               !default;
+$button-radius:           rem-calc($global-radius)                     !default;
 $button-background:       $primary-color                               !default;
 $button-background-hover: $secondary-color                             !default;
-$button-font-size:        $global-font-size                            !default;
+$button-font-size:        rem-calc($global-font-size)                  !default;
 $button-line-height:      1                                            !default;
-$button-padding:          8px 10px                                     !default;
+$button-padding:          rem-calc(8 10)                               !default;
 $button-color:            $white                                       !default;
 $button-color-hover:      $button-color                                !default;
 $button-border:           rem-calc(1) solid $primary-color             !default;
 $button-border-hover:     rem-calc(1) solid $secondary-color           !default;
 $button-font-family:      $body-font-family                            !default;
+$button-text-transform:   none                                         !default;

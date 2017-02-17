@@ -187,6 +187,9 @@ blockquote {
   margin: 0 0 $paragraph-margin-bottom;
   padding: $blockquote-padding;
   border-#{$global-left}: $blockquote-border;
+  font-family: $blockquote-font-family;
+  font-size: $blockquote-font-size;
+  line-height: $blockquote-line-height;
 
   &, p {
     line-height: $paragraph-lineheight;

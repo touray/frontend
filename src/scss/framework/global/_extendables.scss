@@ -63,16 +63,17 @@
 
 %button {
   display: inline-block;
-  border-radius: rem-calc($button-radius);
+  border-radius: $button-radius;
   background: $button-background;
-  font-size: rem-calc($button-font-size);
+  font-size: $button-font-size;
   line-height: $button-line-height;
-  padding: rem-calc($button-padding);
+  padding: $button-padding;
   border: $button-border;
   color: $button-color;
   cursor: pointer;
   font-family: $button-font-family;
   text-align: center;
+  text-transform: $button-text-transform;
 
   &:hover {
     background: $button-background-hover;
@@ -83,17 +84,6 @@
 
 
 /* Lists */
-%list-inline-block {
-  list-style: none;
-  padding-left: 0;
-  margin-left: 0;
-  margin-top: rem-calc($global-margin);
-  margin-bottom: rem-calc($global-margin);
-
-  li {
-    display: inline-block;
-  }
-}
 
 %list-block {
   list-style: none;
@@ -109,9 +99,11 @@
 
 
 /* Pager */
+
 %pager {
-  @extend %list-inline-block;
+  @include inline-block-list;
   text-transform: $pager-text-transform;
+  text-align: $pager-text-align;
 
   a {
     display: inline-block;

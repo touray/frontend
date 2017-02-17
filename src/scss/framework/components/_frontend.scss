@@ -4,6 +4,31 @@
 // Includes all Frontend common styles.
 ////////////////////////////////////////////////////////////////////////////////
 
+/* Typography */
+
+.strikethrough {
+  text-decoration: line-through;
+}
+
+
+/* Colors */
+
+.color-primary {
+  color: $primary-color;
+}
+
+.color-secondary {
+  color: $secondary-color;
+}
+
+
+/* Buttons */
+
+.button {
+  @extend %button;
+}
+
+
 /* Visibility */
 
 // Hide/show content on mobile.
@@ -81,6 +106,7 @@
   text-align: center;
 }
 
+// Tablet & up
 @include breakpoint($small) {
   .float-left-small {
     float: left;
@@ -103,28 +129,102 @@
   }
 }
 
+// Desktop & up
+@include breakpoint($medium) {
+  .float-left-medium {
+    float: left;
+  }
+
+  .float-right-medium {
+    float: right;
+  }
+
+  .align-left-medium {
+    text-align: left;
+  }
+
+  .align-right-medium {
+    text-align: right;
+  }
+
+  .align-center-medium {
+    text-align: center;
+  }
+}
+
+// Large screens
+@include breakpoint($large) {
+  .float-left-large {
+    float: left;
+  }
+
+  .float-right-large {
+    float: right;
+  }
+
+  .align-left-large {
+    text-align: left;
+  }
+
+  .align-right-large {
+    text-align: right;
+  }
+
+  .align-center-large {
+    text-align: center;
+  }
+}
+
 
 /* Lists */
 
 .list-inline-block {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+  @include inline-block-list;
+}
 
-  li {
-    display: list-inline-block;
+// Tablet & up
+@include breakpoint($small) {
+  .list-inline-block-small {
+    @include inline-block-list;
   }
 }
 
-@include breakpoint($small) {
-  .list-inline-block-small {
-    margin: 0;
-    padding: 0;
-    list-style: none;
+// Desktop & up
+@include breakpoint($medium) {
+  .list-inline-block-medium {
+    @include inline-block-list;
+  }
+}
 
-    li {
-      display: list-inline-block;
-    }
+// Large screens
+@include breakpoint($large) {
+  .list-inline-block-large {
+    @include inline-block-list;
+  }
+}
+
+.list-inline {
+  @include inline-list;
+}
+
+// Tablet & up
+@include breakpoint($small) {
+  .list-inline-small {
+    @include inline-block-list;
+  }
+}
+
+// Desktop & up
+@include breakpoint($medium) {
+  .list-inline-medium {
+    @include inline-block-list;
+  }
+}
+
+// Large screens
+@include breakpoint($large) {
+  .list-inline-large {
+    @include inline-block-list;
   }
 }
 

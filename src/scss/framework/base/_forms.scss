@@ -40,6 +40,30 @@
       transition: $input-transition;
     }
   }
+
+  &::-webkit-input-placeholder {
+    color: $placeholder-color;
+    font-family: $placeholder-font-family;
+    text-transform: $placeholder-text-transform;
+  }
+
+  &:-moz-placeholder { /* Firefox 18- */
+    color: $placeholder-color;
+    font-family: $placeholder-font-family;
+    text-transform: $placeholder-text-transform;
+  }
+
+  &::-moz-placeholder {  /* Firefox 19+ */
+    color: $placeholder-color;
+    font-family: $placeholder-font-family;
+    text-transform: $placeholder-text-transform;
+  }
+
+  &:-ms-input-placeholder {
+    color: $placeholder-color;
+    font-family: $placeholder-font-family;
+    text-transform: $placeholder-text-transform;
+  }
 }
 
 // Text inputs
@@ -129,6 +153,8 @@ label > [type="label"] {
   font-weight: $form-label-font-weight;
   line-height: $form-label-line-height;
   color: $form-label-color;
+  font-family: $form-label-font-family;
+  text-transform: $form-label-text-transform;
 }
 
 @mixin form-label-middle {

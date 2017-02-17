@@ -7,6 +7,10 @@
 // in the application folder.
 ////////////////////////////////////////////////////////////////////////////////
 
+* {
+  outline: $global-outline;
+}
+
 html,
 body {
   font-size: $global-font-size;

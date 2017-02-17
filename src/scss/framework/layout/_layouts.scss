@@ -16,8 +16,13 @@
 @include add-gutter-style($gutter-style);
 
 /* Components */
+
 .container {
   @extend %container;
+}
+
+.container-full {
+  @extend %container-full;
 }
 
 
@@ -32,18 +37,27 @@
 }
 
 // Tablet & up
-@include breakpoint($medium) {
+@include breakpoint($small) {
   // Build additional desktop columns using the format below:
   // (.col-NUM_COL_SPAN-STARTING_AT-small)
   .col-#{$num-columns-medium}-1-small {
-    @include grid-span($num-columns-medium, 1);
+    @include grid-span($num-columns-small, 1);
   }
 }
 
 // Desktop & up
+@include breakpoint($medium) {
+  // Build additional desktop columns using the format below:
+  // (.col-NUM_COL_SPAN-STARTING_AT-medium)
+  .col-#{$num-columns-medium}-1-medium {
+    @include grid-span($num-columns-medium, 1);
+  }
+}
+
+// Large screen
 @include breakpoint($large) {
   // Build additional desktop columns using the format below:
-  // (.col-NUM_COL_SPAN-STARTING_AT-small)
+  // (.col-NUM_COL_SPAN-STARTING_AT-large)
   .col-#{$num-columns-large}-1-small {
     @include grid-span($num-columns-large, 1);
   }

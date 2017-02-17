@@ -20,36 +20,36 @@ var sourceJs  = 'src/js',
     sourceImg = 'src/img';
 
 
-//////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
 // JavaScript Lint Task
-//////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
 gulp.task('lint', function() {
-  return gulp.src([ sourceJs + '/**/*.js', '!' + sourceJs + '/lib/*' ])
+  return gulp.src([ sourceJs + '/**/*.js', '!' + sourceJs + '/application/lib/*', '!' + sourceJs + '/framework/lib/*' ])
     .pipe(jshint())
     .pipe(jshint.reporter(stylish))
 });
 
 
-//////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
 // JavaScript Complexity Task
-//////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
 gulp.task('jscomplexity', ['lint'], function() {
   return gulp.src([ sourceJs + '/**/*.js', '!' + sourceJs + '/application/lib/*', '!' + sourceJs + '/framework/lib/*' ])
     .pipe(complexity());
 });
 
 
-//////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
 // JavaScript Task
-//////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
 gulp.task('scripts', ['jscomplexity'], function() {
   // global.js
   gulp.src([
-    // Config
-    sourceJs + '/framework/config.js',
+    // Config (optional)
+    //sourceJs + '/framework/config.js',
 
-    // Services
-    sourceJs + '/framework/services/callback.js',
+    // Services (optional)
+    //sourceJs + '/framework/services/callback.js',
 
     // Example controller
     // sourceJs + '/framework/controllers/global.js'
@@ -61,39 +61,91 @@ gulp.task('scripts', ['jscomplexity'], function() {
     .pipe(uglify())
     .pipe(gulp.dest(paths.js));
 
-  // html5.js
-  gulp.src([sourceJs + '/framework/lib/html5.js'])
+  // html5.js (optional)
+  /*gulp.src([sourceJs + '/framework/lib/html5.js'])
     .pipe(concat('html5.js'))
     .pipe(gulp.dest(paths.js))
     .pipe(rename('html5.min.js'))
     .pipe(stripDebug())
     .pipe(uglify())
-    .pipe(gulp.dest(paths.js));
+    .pipe(gulp.dest(paths.js));*/
 
-  // skip-link-focus-fix.js
-  gulp.src([sourceJs + '/framework/lib/skip-link-focus-fix.js'])
+  // skip-link-focus-fix.js (optional)
+  /*gulp.src([sourceJs + '/framework/lib/skip-link-focus-fix.js'])
     .pipe(concat('skip-link-focus-fix.js'))
     .pipe(gulp.dest(paths.js))
     .pipe(rename('skip-link-focus-fix.min.js'))
     .pipe(stripDebug())
     .pipe(uglify())
-    .pipe(gulp.dest(paths.js));
+    .pipe(gulp.dest(paths.js));*/
 
-  // jquery.scrollTo.js
-  gulp.src([sourceJs + '/framework/lib/jquery.scrollTo.js'])
+  // jquery.scrollTo.js (optional)
+  /*gulp.src([sourceJs + '/framework/lib/jquery.scrollTo.js'])
     .pipe(concat('jquery.scrollTo.js'))
     .pipe(gulp.dest(paths.js))
     .pipe(rename('jquery.scrollTo.min.js'))
     .pipe(stripDebug())
     .pipe(uglify())
+    .pipe(gulp.dest(paths.js));*/
+});
+
+gulp.task('scripts_dev', ['jscomplexity'], function() {
+  // global.js
+  gulp.src([
+    // Config (optional)
+    //sourceJs + '/framework/config.js',
+
+    // Services (optional)
+    //sourceJs + '/framework/services/callback.js',
+
+    // Example controller
+    // sourceJs + '/framework/controllers/global.js'
+  ])
+    .pipe(concat('global.js'))
+    .pipe(gulp.dest(paths.js))
+    .pipe(rename('global.min.js'))
     .pipe(gulp.dest(paths.js));
+
+  // html5.js (optional)
+  /*gulp.src([sourceJs + '/framework/lib/html5.js'])
+    .pipe(concat('html5.js'))
+    .pipe(gulp.dest(paths.js))
+    .pipe(rename('html5.min.js'))
+    .pipe(gulp.dest(paths.js));*/
+
+  // skip-link-focus-fix.js (optional)
+  /*gulp.src([sourceJs + '/framework/lib/skip-link-focus-fix.js'])
+    .pipe(concat('skip-link-focus-fix.js'))
+    .pipe(gulp.dest(paths.js))
+    .pipe(rename('skip-link-focus-fix.min.js'))
+    .pipe(gulp.dest(paths.js));*/
+
+  // jquery.scrollTo.js (optional)
+  /*gulp.src([sourceJs + '/framework/lib/jquery.scrollTo.js'])
+    .pipe(concat('jquery.scrollTo.js'))
+    .pipe(gulp.dest(paths.js))
+    .pipe(rename('jquery.scrollTo.min.js'))
+    .pipe(gulp.dest(paths.js));*/
 });
 
 
-//////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
 // Compass Task
-//////////////////////////////
-gulp.task('compass', function() {
+////////////////////////////////////////////////////////////////////////////////
+gulp.task('compass_dev', ['images'], function() {
+  return gulp.src(paths.sass + '/**/*.scss')
+    .pipe(compass({
+      config_file: './config.rb',
+      css: paths.css,
+      sass: paths.sass,
+      bundle_exec: true,
+      time: true
+    }))
+    .pipe(prefix(["last 1 version", "> 1%", "ie 9"]))
+    .pipe(gulp.dest(paths.css));
+});
+
+gulp.task('compass', ['images'], function() {
   return gulp.src(paths.sass + '/**/*.scss')
     .pipe(compass({
       config_file: './config.rb',
@@ -105,24 +157,27 @@ gulp.task('compass', function() {
     .pipe(prefix(["last 1 version", "> 1%", "ie 9"]))
     .pipe(cleanCSS({
       compatibility: 'ie9'
+    }, function(details) {
+      console.log(details.name + ': ' + details.stats.originalSize);
+      console.log(details.name + ': ' + details.stats.minifiedSize);
     }))
     .pipe(gulp.dest(paths.css));
 });
 
 
-//////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
 // Images Task
-//////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
 gulp.task('images', function() {
-  return gulp.src(sourceImg + '/*')
+  return gulp.src(sourceImg + '/**/*')
     .pipe(imagemin())
     .pipe(gulp.dest('dist/img'));
 });
 
 
-//////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
 // Watch Task
-//////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
 gulp.task('watch', function () {
   gulp.watch(sourceJs + '/**/*.js', ['scripts']);
   gulp.watch(paths.sass + '/**/*.scss', ['compass']);
@@ -130,7 +185,13 @@ gulp.task('watch', function () {
 });
 
 
-//////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
 // Default Task
-//////////////////////////////
-gulp.task('default', ['scripts', 'images', 'compass', 'watch']);
+////////////////////////////////////////////////////////////////////////////////
+gulp.task('default', ['scripts_dev', 'compass_dev', 'watch']);
+
+
+////////////////////////////////////////////////////////////////////////////////
+// Compile Task (for production)
+////////////////////////////////////////////////////////////////////////////////
+gulp.task('compile', ['scripts', 'compass']);
