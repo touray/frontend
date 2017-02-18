@@ -46,13 +46,13 @@ gulp.task('scripts', ['jscomplexity'], function() {
   // global.js
   gulp.src([
     // Config (optional)
-    //sourceJs + '/framework/config.js',
+    sourceJs + '/framework/frontend.js',
 
     // Services (optional)
-    //sourceJs + '/framework/services/callback.js',
+    sourceJs + '/framework/services/callback.js',
 
     // Example controller
-    // sourceJs + '/framework/controllers/global.js'
+    //sourceJs + '/framework/controllers/example.js'
   ])
     .pipe(concat('global.js'))
     .pipe(gulp.dest(paths.js))
@@ -80,25 +80,25 @@ gulp.task('scripts', ['jscomplexity'], function() {
     .pipe(gulp.dest(paths.js));*/
 
   // jquery.scrollTo.js (optional)
-  /*gulp.src([sourceJs + '/framework/lib/jquery.scrollTo.js'])
+  gulp.src([sourceJs + '/framework/lib/jquery.scrollTo.js'])
     .pipe(concat('jquery.scrollTo.js'))
     .pipe(gulp.dest(paths.js))
     .pipe(rename('jquery.scrollTo.min.js'))
     .pipe(stripDebug())
     .pipe(uglify())
-    .pipe(gulp.dest(paths.js));*/
+    .pipe(gulp.dest(paths.js));
 });
 
 gulp.task('scripts_dev', ['jscomplexity'], function() {
   // global.js
   gulp.src([
-    // Config (optional)
-    //sourceJs + '/framework/config.js',
+    // Frontend JS (optional)
+    //sourceJs + '/framework/frontend.js',
 
-    // Services (optional)
+    // Services (optional, needed for Frontend JS)
     //sourceJs + '/framework/services/callback.js',
 
-    // Example controller
+    // Example controller for Frontend JS
     // sourceJs + '/framework/controllers/global.js'
   ])
     .pipe(concat('global.js'))
@@ -141,6 +141,10 @@ gulp.task('compass_dev', ['images'], function() {
       bundle_exec: true,
       time: true
     }))
+    .on('error', function(error) {
+      console.log(error);
+      this.emit('end');
+    })
     .pipe(prefix(["last 1 version", "> 1%", "ie 9"]))
     .pipe(gulp.dest(paths.css));
 });
@@ -154,6 +158,10 @@ gulp.task('compass', ['images'], function() {
       bundle_exec: true,
       time: true
     }))
+    .on('error', function(error) {
+      console.log(error);
+      this.emit('end');
+    })
     .pipe(prefix(["last 1 version", "> 1%", "ie 9"]))
     .pipe(cleanCSS({
       compatibility: 'ie9'

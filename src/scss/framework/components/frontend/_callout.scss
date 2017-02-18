@@ -1,0 +1,19 @@
+////////////////////////////////////////////////////////////////////////////////
+// Callout Styles
+//
+// Includes all Frontend callout styles.
+////////////////////////////////////////////////////////////////////////////////
+
+.callout {
+  background: $callout-background;
+  padding: $callout-padding;
+  border: $callout-border;
+  color: $callout-color;
+  border-radius: $callout-radius;
+
+  p {
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

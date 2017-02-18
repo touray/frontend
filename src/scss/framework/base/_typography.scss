@@ -184,16 +184,21 @@ dl {
 
 // Blockquotes
 blockquote {
-  margin: 0 0 $paragraph-margin-bottom;
+  margin: $blockquote-margin;
   padding: $blockquote-padding;
   border-#{$global-left}: $blockquote-border;
   font-family: $blockquote-font-family;
   font-size: $blockquote-font-size;
   line-height: $blockquote-line-height;
+  background: $blockquote-background;
 
   &, p {
     line-height: $paragraph-lineheight;
     color: $blockquote-color;
+  }
+
+  footer {
+    margin-top: -$paragraph-margin-bottom;
   }
 }
 

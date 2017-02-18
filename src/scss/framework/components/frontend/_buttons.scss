@@ -1,0 +1,46 @@
+////////////////////////////////////////////////////////////////////////////////
+// Button Styles
+//
+// Includes all Frontend button styles.
+////////////////////////////////////////////////////////////////////////////////
+
+.button {
+  @extend %button;
+}
+
+.button--full {
+  width: 100%;
+}
+
+// Tablet & up
+@include breakpoint($small) {
+  .button--full-small {
+    width: 100%;
+  }
+
+  .button--normal-small {
+    width: auto;
+  }
+}
+
+// Desktop & up
+@include breakpoint($medium) {
+  .button--full-medium {
+    width: 100%;
+  }
+
+  .button--normal-medium {
+    width: auto;
+  }
+}
+
+// Large screens
+@include breakpoint($large) {
+  .button--full-large {
+    width: 100%;
+  }
+
+  .button--normal-large {
+    width: auto;
+  }
+}

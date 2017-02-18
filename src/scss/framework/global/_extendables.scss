@@ -74,11 +74,13 @@
   font-family: $button-font-family;
   text-align: center;
   text-transform: $button-text-transform;
+  text-decoration: none;
 
   &:hover {
     background: $button-background-hover;
     color: $button-color-hover;
     border: $button-border-hover;
+    text-decoration: none;
   }
 }
 

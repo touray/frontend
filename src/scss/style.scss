@@ -21,7 +21,15 @@
 @import 'framework/layout/layouts';
 
 // Import default components
-@import 'framework/components/frontend';
+@import 'framework/components/frontend/layout';
+@import 'framework/components/frontend/alignment';
+@import 'framework/components/frontend/buttons';
+@import 'framework/components/frontend/lists';
+@import 'framework/components/frontend/header';
+@import 'framework/components/frontend/frontend';
+@import 'framework/components/frontend/visibility';
+@import 'framework/components/frontend/colors';
+@import 'framework/components/frontend/callout';
 //@import 'framework/components/drupal7';
 //@import 'framework/components/wordpress';
 

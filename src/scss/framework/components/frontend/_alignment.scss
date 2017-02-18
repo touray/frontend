@@ -1,0 +1,103 @@
+////////////////////////////////////////////////////////////////////////////////
+// Frontend Alignment Styles
+//
+// Includes all Frontend alignment styles.
+////////////////////////////////////////////////////////////////////////////////
+
+
+.float-left {
+  float: left;
+}
+img.float-left {
+  margin-right: rem-calc($global-padding);
+  margin-bottom: rem-calc($global-padding);
+}
+
+.float-right {
+  float: right;
+}
+img.float-right {
+  margin-left: rem-calc($global-padding);
+  margin-bottom: rem-calc($global-padding);
+}
+
+.align-left {
+  text-align: left;
+}
+
+.align-right {
+  text-align: right;
+}
+
+.align-center {
+  text-align: center;
+}
+
+// Tablet & up
+@include breakpoint($small) {
+  .float-left-small {
+    float: left;
+  }
+
+  .float-right-small {
+    float: right;
+  }
+
+  .align-left-small {
+    text-align: left;
+  }
+
+  .align-right-small {
+    text-align: right;
+  }
+
+  .align-center-small {
+    text-align: center;
+  }
+}
+
+// Desktop & up
+@include breakpoint($medium) {
+  .float-left-medium {
+    float: left;
+  }
+
+  .float-right-medium {
+    float: right;
+  }
+
+  .align-left-medium {
+    text-align: left;
+  }
+
+  .align-right-medium {
+    text-align: right;
+  }
+
+  .align-center-medium {
+    text-align: center;
+  }
+}
+
+// Large screens
+@include breakpoint($large) {
+  .float-left-large {
+    float: left;
+  }
+
+  .float-right-large {
+    float: right;
+  }
+
+  .align-left-large {
+    text-align: left;
+  }
+
+  .align-right-large {
+    text-align: right;
+  }
+
+  .align-center-large {
+    text-align: center;
+  }
+}

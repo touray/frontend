@@ -4,17 +4,6 @@
 // Add only theme JS configuration variables in this file.
 ////////////////////////////////////////////////////////////////////////////////
 
-// Requires jQuery
-if ( typeof jQuery == 'undefined' ) {
-  var script = document.createElement( 'script' );
-  script.type = 'text/javascript';
-  script.setAttribute( 'integrity', 'sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=' );
-  script.setAttribute( 'crossorigin', 'anonymous' );
-  script.src = 'https://code.jquery.com/jquery-3.1.1.min.js';
-
-  document.getElementsByTagName( 'head' )[0].appendChild( script );
-}
-
 // Namespace all theme specific functionality
 var Frontend = {
   Config: {
@@ -45,6 +34,32 @@ var Frontend = {
 };
 
 ( function( $ ) {
+  // Header
+  Frontend.Controllers.header = {
+    init: function( callback ) {
+      if ( $( '.header--fixed' ).length ) {
+        $( 'body' ).css( 'padding-top', $( '.header--fixed' ).outerHeight() );
+      }
+    }
+  };
+
+  // Menu toggle
+  Frontend.Controllers.menuToggle = {
+    init: function( callback ) {
+
+    }
+  };
+
+  // Header
+  Frontend.Controllers.scrollTo = {
+    init: function( callback ) {
+      $( 'a[href*="#"]' ).click( function( e ) {
+        $.scrollTo( this.hash, 1500, { easing:'swing', offset: -($( '.header' ).outerHeight()) });
+        return false;
+      });
+    }
+  };
+
   $( function() {
     // Initialize theme JS on page ready.
     Frontend.init();

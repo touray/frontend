@@ -1,0 +1,26 @@
+////////////////////////////////////////////////////////////////////////////////
+// Frontend Header Styles
+//
+// Includes all Frontend .header styles.
+////////////////////////////////////////////////////////////////////////////////
+
+/* Components */
+
+.header {
+  border-bottom: $header-border-bottom;
+  margin-bottom: $header-margin-bottom;
+  padding-top: $header-padding-top;
+  padding-bottom: $header-padding-bottom;
+  background: $header-background;
+}
+
+
+/* Modifiers */
+
+.header--fixed {
+  position: fixed;
+  z-index: 9;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
