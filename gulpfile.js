@@ -93,10 +93,10 @@ gulp.task('scripts_dev', ['jscomplexity'], function() {
   // global.js
   gulp.src([
     // Frontend JS (optional)
-    //sourceJs + '/frontend/frontend.js',
+    sourceJs + '/frontend/frontend.js',
 
     // Services (optional, needed for Frontend JS)
-    //sourceJs + '/frontend/services/callback.js',
+    sourceJs + '/frontend/services/callback.js',
 
     // Example controller for Frontend JS
     // sourceJs + '/frontend/controllers/global.js'
@@ -121,11 +121,11 @@ gulp.task('scripts_dev', ['jscomplexity'], function() {
     .pipe(gulp.dest(paths.js));*/
 
   // jquery.scrollTo.js (optional)
-  /*gulp.src([sourceJs + '/frontend/lib/jquery.scrollTo.js'])
+  gulp.src([sourceJs + '/frontend/lib/jquery.scrollTo.js'])
     .pipe(concat('jquery.scrollTo.js'))
     .pipe(gulp.dest(paths.js))
     .pipe(rename('jquery.scrollTo.min.js'))
-    .pipe(gulp.dest(paths.js));*/
+    .pipe(gulp.dest(paths.js));
 });
 
 
