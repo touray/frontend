@@ -24,7 +24,7 @@ var sourceJs  = 'src/js',
 // JavaScript Lint Task
 ////////////////////////////////////////////////////////////////////////////////
 gulp.task('lint', function() {
-  return gulp.src([ sourceJs + '/**/*.js', '!' + sourceJs + '/application/lib/*', '!' + sourceJs + '/framework/lib/*' ])
+  return gulp.src([ sourceJs + '/**/*.js', '!' + sourceJs + '/application/lib/*', '!' + sourceJs + '/frontend/lib/*' ])
     .pipe(jshint())
     .pipe(jshint.reporter(stylish))
 });
@@ -34,7 +34,7 @@ gulp.task('lint', function() {
 // JavaScript Complexity Task
 ////////////////////////////////////////////////////////////////////////////////
 gulp.task('jscomplexity', ['lint'], function() {
-  return gulp.src([ sourceJs + '/**/*.js', '!' + sourceJs + '/application/lib/*', '!' + sourceJs + '/framework/lib/*' ])
+  return gulp.src([ sourceJs + '/**/*.js', '!' + sourceJs + '/application/lib/*', '!' + sourceJs + '/frontend/lib/*' ])
     .pipe(complexity());
 });
 
@@ -46,13 +46,13 @@ gulp.task('scripts', ['jscomplexity'], function() {
   // global.js
   gulp.src([
     // Config (optional)
-    sourceJs + '/framework/frontend.js',
+    sourceJs + '/frontend/frontend.js',
 
     // Services (optional)
-    sourceJs + '/framework/services/callback.js',
+    sourceJs + '/frontend/services/callback.js',
 
     // Example controller
-    //sourceJs + '/framework/controllers/example.js'
+    //sourceJs + '/frontend/controllers/example.js'
   ])
     .pipe(concat('global.js'))
     .pipe(gulp.dest(paths.js))
@@ -62,7 +62,7 @@ gulp.task('scripts', ['jscomplexity'], function() {
     .pipe(gulp.dest(paths.js));
 
   // html5.js (optional)
-  /*gulp.src([sourceJs + '/framework/lib/html5.js'])
+  /*gulp.src([sourceJs + '/frontend/lib/html5.js'])
     .pipe(concat('html5.js'))
     .pipe(gulp.dest(paths.js))
     .pipe(rename('html5.min.js'))
@@ -71,7 +71,7 @@ gulp.task('scripts', ['jscomplexity'], function() {
     .pipe(gulp.dest(paths.js));*/
 
   // skip-link-focus-fix.js (optional)
-  /*gulp.src([sourceJs + '/framework/lib/skip-link-focus-fix.js'])
+  /*gulp.src([sourceJs + '/frontend/lib/skip-link-focus-fix.js'])
     .pipe(concat('skip-link-focus-fix.js'))
     .pipe(gulp.dest(paths.js))
     .pipe(rename('skip-link-focus-fix.min.js'))
@@ -80,7 +80,7 @@ gulp.task('scripts', ['jscomplexity'], function() {
     .pipe(gulp.dest(paths.js));*/
 
   // jquery.scrollTo.js (optional)
-  gulp.src([sourceJs + '/framework/lib/jquery.scrollTo.js'])
+  gulp.src([sourceJs + '/frontend/lib/jquery.scrollTo.js'])
     .pipe(concat('jquery.scrollTo.js'))
     .pipe(gulp.dest(paths.js))
     .pipe(rename('jquery.scrollTo.min.js'))
@@ -93,13 +93,13 @@ gulp.task('scripts_dev', ['jscomplexity'], function() {
   // global.js
   gulp.src([
     // Frontend JS (optional)
-    //sourceJs + '/framework/frontend.js',
+    //sourceJs + '/frontend/frontend.js',
 
     // Services (optional, needed for Frontend JS)
-    //sourceJs + '/framework/services/callback.js',
+    //sourceJs + '/frontend/services/callback.js',
 
     // Example controller for Frontend JS
-    // sourceJs + '/framework/controllers/global.js'
+    // sourceJs + '/frontend/controllers/global.js'
   ])
     .pipe(concat('global.js'))
     .pipe(gulp.dest(paths.js))
@@ -107,21 +107,21 @@ gulp.task('scripts_dev', ['jscomplexity'], function() {
     .pipe(gulp.dest(paths.js));
 
   // html5.js (optional)
-  /*gulp.src([sourceJs + '/framework/lib/html5.js'])
+  /*gulp.src([sourceJs + '/frontend/lib/html5.js'])
     .pipe(concat('html5.js'))
     .pipe(gulp.dest(paths.js))
     .pipe(rename('html5.min.js'))
     .pipe(gulp.dest(paths.js));*/
 
   // skip-link-focus-fix.js (optional)
-  /*gulp.src([sourceJs + '/framework/lib/skip-link-focus-fix.js'])
+  /*gulp.src([sourceJs + '/frontend/lib/skip-link-focus-fix.js'])
     .pipe(concat('skip-link-focus-fix.js'))
     .pipe(gulp.dest(paths.js))
     .pipe(rename('skip-link-focus-fix.min.js'))
     .pipe(gulp.dest(paths.js));*/
 
   // jquery.scrollTo.js (optional)
-  /*gulp.src([sourceJs + '/framework/lib/jquery.scrollTo.js'])
+  /*gulp.src([sourceJs + '/frontend/lib/jquery.scrollTo.js'])
     .pipe(concat('jquery.scrollTo.js'))
     .pipe(gulp.dest(paths.js))
     .pipe(rename('jquery.scrollTo.min.js'))
