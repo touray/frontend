@@ -1,6 +1,6 @@
 {
   "name": "frontend",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "A light-weight frontend framework for any project.",
   "main": "gulpfile.js",
   "scripts": {
