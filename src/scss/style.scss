@@ -1,50 +1,53 @@
 ////////////////////////////////////////////////////////////////////////////////
-// Main Style File
+// Global Styles File (style.css, v2.0.0)
 //
-// Edit this file to add/remove framework and application imports. When
-// compiled, this file gets turned into style.css.
-//
-// This file should really hold nothing except for imports of the framework and
-// application styles.
+// Add all global style imports here. This file should only contain imports and
+// no individual style definitions.
 ////////////////////////////////////////////////////////////////////////////////
 
-/* Framework Imports */
+/* Framework Partials */
 
-// REQUIRED. Global functions, mixins, default variables and extendables
-@import 'framework/global/global';
+// REQUIRED. Global Frontend functions, mixins, default variables and
+// extendables.
+@import 'frontend/global/global';
 
-// Reset & base imports
+// Reset & base Frontend partials, should only be included once per CSS file.
 @import 'compass/reset';
-@import 'framework/base/base';
+@import 'frontend/base/base';
 
-// Import default layouts
-@import 'framework/layout/layouts';
+// Import Frontend partials
+@import 'frontend/layout/layouts';
 
-// Import default components
-@import 'framework/components/frontend/layout';
-@import 'framework/components/frontend/alignment';
-@import 'framework/components/frontend/buttons';
-@import 'framework/components/frontend/lists';
-@import 'framework/components/frontend/header';
-@import 'framework/components/frontend/frontend';
-@import 'framework/components/frontend/visibility';
-@import 'framework/components/frontend/colors';
-@import 'framework/components/frontend/callout';
-//@import 'framework/components/drupal7';
-//@import 'framework/components/wordpress';
+// Import Frontend component class partials
+@import 'frontend/components/classes/layout';
+@import 'frontend/components/classes/typography';
+@import 'frontend/components/classes/alignment';
+@import 'frontend/components/classes/buttons';
+@import 'frontend/components/classes/lists';
+@import 'frontend/components/classes/header';
+@import 'frontend/components/classes/frontend';
+@import 'frontend/components/classes/visibility';
+@import 'frontend/components/classes/colors';
+@import 'frontend/components/classes/callout';
 
 
-/* Application Imports */
+/* CMS Partials */
+
+//@import 'frontend/components/drupal7';
+//@import 'frontend/components/wordpress';
+
+
+/* Application Partials */
 
 // Application functions, mixins, default variables and extendables
-//@import 'application/global/extendables';
+//@import 'application/global/..';
 
-// Base imports
-//@import 'application/base/base';
+// Application base partials
+//@import 'application/base/..';
 
-// Import layouts
-//@import 'application/layout/layouts';
+// Application layout partials
+//@import 'application/layout/..';
 
-// Import components
-//@import 'application/components/components';
+// Application component partials
+//@import 'application/components/..';
 

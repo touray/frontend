@@ -1,15 +1,18 @@
 ////////////////////////////////////////////////////////////////////////////////
-// Framework Default Variables
+// Framework Variables (v2.0.0)
 //
-// All framework default variables should be placed here.
+// All framework pre-packaged variables.
+//
+// DO NOT EDIT! To add/override variables, create a _variables.scss file in
+// src/scss/application/global.
 ////////////////////////////////////////////////////////////////////////////////
 
 
 // 1. Global
 // -----------------------------------------------------------------------------
 
-$global-width:             600px                                       !default; // Mobile
-$global-width-small:       768px                                       !default; // Tablet & up
+$global-width:             320px                                       !default; // Mobile
+$global-width-small:       728px                                       !default; // Tablet & up
 $global-width-medium:      1200px                                      !default; // Desktop & up
 $global-width-large:       1400px                                      !default; // Large screens & up
 
@@ -18,7 +21,12 @@ $global-font-size-small:   $global-font-size                           !default;
 $global-font-size-medium:  $global-font-size                           !default; // Desktop & up
 $global-font-size-large:   $global-font-size                           !default; // Large screens & up
 
-$global-lineheight:        1.3                                         !default;
+$rem-base:                 $global-font-size                           !default;
+
+$global-lineheight:         1.3                                        !default; // Mobile
+$global-lineheight-small:   $global-lineheight                         !default; // Tablet & up
+$global-lineheight-medium:  $global-lineheight                         !default; // Desktop & up
+$global-lineheight-large:   $global-lineheight                         !default; // Large screens & up
 
 $primary-color:            #00b282                                     !default;
 $secondary-color:          #0093bb                                     !default;
@@ -38,9 +46,8 @@ $medium-gray:              #b4b4b4                                     !default;
 $dark-gray:                #686868                                     !default;
 $xdark-gray:               #231e20                                     !default;
 
-$body-background:          #ffffff                                     !default;
-
-$body-font-color:          $xdark-gray                                 !default;
+$body-background:          $white                                      !default;
+$body-font-color:          $dark-gray                                 !default;
 $body-font-family:         "Trebuchet MS", Helvetica, sans-serif       !default;
 $body-antialiased:         true                                        !default;
 
@@ -56,15 +63,15 @@ $global-outline:           none                                        !default;
 $global-radius:            3px                                         !default;
 $global-text-direction:    ltr                                         !default;
 $global-transition-timing: .2s                                         !default;
-$rem-base:                 $global-font-size                           !default;
+$global-box-sizing:        border-box                                  !default;
 
 
 // 2. Breakpoints
 // -----------------------------------------------------------------------------
 
-$small:        768px                                                   !default; // Tablet & up
-$medium:       900px                                                   !default; // Desktop & up
-$large:        1200px                                                  !default; // Large screens
+$small:        $global-width-small                                     !default; // Tablet & up
+$medium:       $global-width-medium                                    !default; // Desktop & up
+$large:        $global-width-large                                     !default; // Large screens
 
 $small-down:   0px $small                                              !default; // Tablet & up
 $medium-down:  0px $medium                                             !default; // Desktop & up
@@ -80,17 +87,19 @@ $header-font-family:       Arial, Helvetica, sans-serif                !default;
 $header-font-weight:       $global-weight-bold                         !default;
 $header-font-style:        normal                                      !default;
 
-$header-color:             inherit                                     !default;
+$header-color:             $black                                      !default;
 $header-lineheight:        $global-lineheight                          !default;
 $header-margin-bottom:     rem-calc($global-margin)                    !default;
 $header-text-rendering:    optimizeLegibility                          !default;
 $header-small-font-color:  $dark-gray                                  !default;
 
-$header-1-size:            rem-calc($global-font-size + 18)            !default;
-$header-2-size:            rem-calc($global-font-size + 12)            !default;
-$header-3-size:            rem-calc($global-font-size + 9)             !default;
-$header-4-size:            rem-calc($global-font-size + 6)             !default;
-$header-5-size:            rem-calc($global-font-size + 3)             !default;
+// These should not be used to define sizes within stylesheets. Instead, use the
+// font sizes defined in the next section below.
+$header-1-size:            rem-calc($global-font-size + 35)            !default;
+$header-2-size:            rem-calc($global-font-size + 28)            !default;
+$header-3-size:            rem-calc($global-font-size + 21)            !default;
+$header-4-size:            rem-calc($global-font-size + 14)            !default;
+$header-5-size:            rem-calc($global-font-size + 7)             !default;
 $header-6-size:            rem-calc($global-font-size)                 !default;
 
 $xxxlarge-font-size:    $header-1-size                                 !default;
@@ -99,10 +108,10 @@ $xlarge-font-size:      $header-3-size                                 !default;
 $large-font-size:       $header-4-size                                 !default;
 $medium-font-size:      $header-5-size                                 !default;
 $normal-font-size:      $header-6-size                                 !default;
-$small-font-size:       rem-calc($global-font-size - 2)                !default;
-$xsmall-font-size:      rem-calc($global-font-size - 4)                !default;
-$xxsmall-font-size:     rem-calc($global-font-size - 6)                !default;
-$xxxsmall-font-size:    rem-calc($global-font-size - 8)                !default;
+$small-font-size:       rem-calc($global-font-size - 1)                !default;
+$xsmall-font-size:      rem-calc($global-font-size - 3)                !default;
+$xxsmall-font-size:     rem-calc($global-font-size - 5)                !default;
+$xxxsmall-font-size:    rem-calc($global-font-size - 7)                !default;
 
 $paragraph-lineheight:     $global-lineheight                          !default;
 $paragraph-margin-bottom:  rem-calc($global-margin)                    !default;
@@ -234,7 +243,7 @@ $num-columns-large:  $num-columns                                      !default;
 $gutter-padding:        30px                                           !default; // Mobile & up
 $gutter-padding-small:  $gutter-padding                                !default; // Tablet & up
 $gutter-padding-medium: $gutter-padding                                !default; // Desktop & up
-$gutter-padding-large:  $gutter-padding                                !default; // Large screen & up
+$gutter-padding-large:  $gutter-padding                                !default; // Large screens & up
 
 $include-clearfix:   true                                              !default;
 $gutter-style:       'split'                                           !default;

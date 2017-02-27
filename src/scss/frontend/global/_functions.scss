@@ -1,7 +1,8 @@
 ////////////////////////////////////////////////////////////////////////////////
-// Functions
+// Frontend Functions
 //
-// All Sass functions should be placed here.
+// DO NOT EDIT! To add/override functions, create a _functions.scss file in
+// src/scss/application/global.
 ////////////////////////////////////////////////////////////////////////////////
 
 /// Defines the base font size of the page, which is the value `1rem` is equal to.
@@ -10,8 +11,11 @@
 $rem-base: 16px !default;
 
 /// Converts one or more pixel values into matching rem values.
-/// @param {Number|List} $values - One or more values to convert. Be sure to separate them with spaces and not commas. If you need to convert a comma-separated list, wrap the list in parentheses.
-/// @param {Number} $base [$rem-base] - The base value to use when calculating the `rem`. If you're using Foundation out of the box, this is 16px.
+/// @param {Number|List} $values - One or more values to convert. Be sure to
+/// separate them with spaces and not commas. If you need to convert a
+/// comma-separated list, wrap the list in parentheses.
+/// @param {Number} $base [$rem-base] - The base value to use when calculating
+/// the `rem`. If you're using Foundation out of the box, this is 16px.
 /// @returns {List} A list of converted values.
 @function rem-calc($values, $base: $rem-base) {
   $rem-values: ();

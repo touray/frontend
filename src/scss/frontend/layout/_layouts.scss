@@ -1,0 +1,21 @@
+////////////////////////////////////////////////////////////////////////////////
+// Frontend Layout Partials
+//
+// These files should only include layout styles. This includes grid styles and
+// main page layouts.
+//
+// DO NOT EDIT! To add/override styles, create a _layouts.scss file in
+// src/scss/application/layout.
+////////////////////////////////////////////////////////////////////////////////
+
+@include add-grid($num-columns);                   // Mobile
+@include add-grid($num-columns-small at $small);   // Tablet & up
+@include add-grid($num-columns-medium at $medium); // Desktop & up
+@include add-grid($num-columns-large at $large);   // Large screens
+
+@include add-gutter($gutter-padding);                   // Mobile
+@include add-gutter($gutter-padding-small at $small);   // Tablet & up
+@include add-gutter($gutter-padding-medium at $medium); // Desktop & up
+@include add-gutter($gutter-padding-large at $large);   // Large screens
+
+@include add-gutter-style($gutter-style);

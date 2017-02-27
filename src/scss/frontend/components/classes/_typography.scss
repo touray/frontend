@@ -1,0 +1,77 @@
+////////////////////////////////////////////////////////////////////////////////
+// Frontend Typography Styles
+//
+// DO NOT EDIT! Contains all of Frontend's pre-packaged typography class styles.
+////////////////////////////////////////////////////////////////////////////////
+
+/* Text Decorations */
+
+.strikethrough {
+  text-decoration: line-through;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+
+/* Font Weights */
+
+.font-weight-normal {
+  font-weight: $global-weight-normal;
+}
+
+.font-weight-medium {
+  font-weight: $global-weight-medium;
+}
+
+.font-weight-semibold {
+  font-weight: $global-weight-semibold;
+}
+
+.font-weight-bold {
+  font-weight: $global-weight-bold;
+}
+
+
+/* Font Sizes */
+
+.font-size-xxxlarge {
+  font-size: $xxxlarge-font-size;
+}
+
+.font-size-xxlarge {
+  font-size: $xxlarge-font-size;
+}
+
+.font-size-xlarge {
+  font-size: $xlarge-font-size;
+}
+
+.font-size-large {
+  font-size: $large-font-size;
+}
+
+.font-size-medium {
+  font-size: $medium-font-size;
+}
+
+.font-size-normal {
+  font-size: $normal-font-size;
+}
+
+.font-size-small {
+  font-size: $small-font-size;
+}
+
+.font-size-xsmall {
+  font-size: $xsmall-font-size;
+}
+
+.font-size-xxsmall {
+  font-size: $xxsmall-font-size;
+}
+
+.font-size-xxxsmall {
+  font-size: $xxxsmall-font-size;
+}

@@ -1,7 +1,8 @@
 ////////////////////////////////////////////////////////////////////////////////
-// Extendables
+// Frontend Extendables
 //
-// All extendables should be placed here.
+// DO NOT EDIT! To add/override extendables, create a _extendables.scss file in
+// src/scss/application/global.
 ////////////////////////////////////////////////////////////////////////////////
 
 /* Layout */
@@ -43,7 +44,7 @@
   }
 }
 
-%flexbox {
+%flex {
   display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
   display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
   display: -ms-flexbox;      /* TWEENER - IE 10 */

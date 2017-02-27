@@ -43,16 +43,12 @@
         <li><strong>Getting Started</strong>
         <li><a href="#prerequisites" class="cc-active">Prerequisites</a>
         <li><a href="#installation" class="cc-active">Installation</a>
-        <li><a href="#Compiling" class="cc-active">Compiling</a>
+        <li><a href="#compiling" class="cc-active">Compiling</a>
         <li><strong>Documentation</strong>
-        <!--<li><a href="#css" class="cc-active">CSS, Sass &amp; Compass</a>
-        <li><a href="#js" class="cc-active">JavaScript</a>-->
         <li><a href="#contributing" class="cc-active">Contributing</a>
         <li><a href="#versioning" class="cc-active">Versioning</a>
         <li><strong>Changelog</strong>
         <li><a href="#v200" class="cc-active">v2.0.0</a>
-        <li><a href="#v110" class="cc-active">v1.1.0</a>
-        <li><a href="#v100" class="cc-active">v1.0.0</a>
       </ul>
 
       <div class="docs-content">
@@ -101,6 +97,7 @@
         <p>The following commands can be run to compile:</p>
         <ul>
           <li>Compiles, then watches for changes to files to re-compile: <pre class="prettyprint">$ gulp</pre>
+          <li>Compiles for live environments: <pre class="prettyprint">$ gulp compile</pre>
           <li>Lints JavaScript files: <pre class="prettyprint">$ gulp lint</pre>
           <li>Lints and compiles JavaScript files: <pre class="prettyprint">$ gulp scripts</pre>
           <li>Compiles Sass files: <pre class="prettyprint">$ gulp compass</pre>
@@ -108,38 +105,7 @@
         </ul>
         <hr>
 
-
         <h2>Documentation</h2>
-
-        <!--<h3 id="css">CSS, Sass &amp; Compass</h3>
-        <p>Before beginning any theming, be sure to review and set the variables in the <b>src/scss/partials/global/_variables.scss</b> file.</p>
-        <p>Sass files are organized into 4 main folders:</p>
-        <ul>
-          <li><b>base</b> - All theme base styles <em>(base selectors, styles set via variables)</em>. <b>DO NOT EDIT ANY OF THESE FILES!</b>
-          <li><b>components</b> - Includes all styled components broken down into seperate folders including:
-            <ul>
-              <li><b>design</b> - Contains all themed sections and standalone components <em>(header, footer, buttons, etc.)</em>
-              <li><b>lib</b> - Contains all themed sections and standalone components <em>(header, footer, buttons, etc.)</em>
-            </ul>
-          <li><b>global</b> - All global Sass functions, variables, mixins, etc.
-          <li><b>layout</b> - Contains layout styles <em>(grids, page templates, etc.)</em>
-        </ul>
-
-        <h3 id="js">JavaScript</h3>
-        <ul>
-          <li>jQuery is required.
-          <li>Global JS variables should be set in the <b>src/js/config.js</b> file.
-          <li>Variables, controllers and services should all be namespaced with <b>Frontend</b> to avoid conflicts with other libraries.
-          <li>All controllers loaded on a page will be automatically initialized and do not needed to be called directly.
-          <li>Call <b>Frontend.init();</b> to reinitialize page controllers <em>(useful with AJAX calls when new content is added)</em>.
-          <li>Modify the <em>JavaScript Task</em> in the <b>gulpfile.js</b> to add, alter compiled JS files.
-        </ul>
-        <p>Scripts are organized into 3 different categories:</p>
-        <ul>
-          <li><b>Controllers</b> - Component specific functionality <em>(main menu dropdown, accordions, etc.)</em>
-          <li><b>Services</b> - Helper functions
-          <li><b>Libraries</b> - JavaScript libraries <em>(jQuery, slick, etc.)</em>
-        </ul>-->
 
         <h3 id="contributing">Contributing</h3>
         <p>Please read <a href="https://gist.github.com/bmarshall511/4e6cf39876a5b0394fbe54f1c7fb324b" target="_blank">CONTRIBUTING.md</a> for details on our code of conduct, and the process for submitting pull requests to us.</p>
@@ -154,25 +120,10 @@
         <p>See the full list of <a href="https://github.com/bmarshall511/frontend/contributors" target="_blank">contributors</a> who participated in this project.
         <hr>
 
-
         <h2>Changelog</h3>
-        <h3 id="v200">v2.0.0 (TBD)</h3>
+        <h3 id="v200">v2.0.0 <small>(Feb. 27, 2017)</small></h3>
         <ul>
           <li>Complete re-organization of files to allow the framework to easily get updated.
-        </ul>
-
-        <h3 id="v110">v1.1.0 (Unreleased)</h3>
-        <ul>
-          <li>Updated file documentation.
-          <li>Re-organized some folder structures.
-          <li>Installed gulp-complexity.
-          <li>Added additional Frontend common styles.
-          <li>Added opitonal Wordpress core styles.
-        </ul>
-
-        <h3 id="v100">v1.0.0 (Oct 18, 2016)</h3>
-        <ul>
-          <li>Initial commit.
         </ul>
 
       </div>
