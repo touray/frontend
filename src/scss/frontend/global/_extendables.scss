@@ -76,6 +76,7 @@
   text-align: center;
   text-transform: $button-text-transform;
   text-decoration: none;
+  font-weight: $button-font-weight;
 
   &:hover {
     background: $button-background-hover;

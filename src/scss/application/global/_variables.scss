@@ -1,5 +1,5 @@
 ////////////////////////////////////////////////////////////////////////////////
-// Application Variables (v3.0.0)
+// Application Variables (v3.0.1)
 //
 // DO NOT DELETE. Should contain all application variables and Frontend variable
 // overrides. Clone src/scss/frontend/global/_variables.scss as a start.
@@ -280,9 +280,9 @@ $pager-ellipsis-color:         $body-font-color;
 $pager-ellipsis-background:    transparent;
 
 $button-radius:           0;
-$button-background:       transparent;
+$button-background:       $white;
 $button-background-hover: $xdark-gray;
-$button-font-size:        rem-calc($global-font-size);
+$button-font-size:        $normal-font-size;
 $button-line-height:      1;
 $button-padding:          rem-calc(20 40);
 $button-color:            $xdark-gray;
@@ -290,7 +290,8 @@ $button-color-hover:      $white;
 $button-border:           rem-calc(1) solid $xdark-gray;
 $button-border-hover:     rem-calc(1) solid $xdark-gray;
 $button-font-family:      $body-font-family;
-$button-text-transform:   uppercase;
+$button-text-transform:   none;
+$button-font-weight:      $global-weight-bold;
 
 $header-border-bottom:   rem-calc(1) solid $gray;
 $header-padding-top:     rem-calc($global-margin);

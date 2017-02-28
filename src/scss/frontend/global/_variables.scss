@@ -1,5 +1,5 @@
 ////////////////////////////////////////////////////////////////////////////////
-// Framework Variables (v3.0.0)
+// Framework Variables (v3.0.1)
 //
 // All framework pre-packaged variables.
 //
@@ -47,7 +47,7 @@ $dark-gray:                #686868                                     !default;
 $xdark-gray:               #231e20                                     !default;
 
 $body-background:          $white                                      !default;
-$body-font-color:          $dark-gray                                 !default;
+$body-font-color:          $dark-gray                                  !default;
 $body-font-family:         "Trebuchet MS", Helvetica, sans-serif       !default;
 $body-antialiased:         true                                        !default;
 
@@ -282,9 +282,9 @@ $pager-ellipsis-color:         $body-font-color                        !default;
 $pager-ellipsis-background:    transparent                             !default;
 
 $button-radius:           0                                            !default;
-$button-background:       transparent                                  !default;
+$button-background:       $white                                       !default;
 $button-background-hover: $xdark-gray                                  !default;
-$button-font-size:        rem-calc($global-font-size)                  !default;
+$button-font-size:        $normal-font-size                            !default;
 $button-line-height:      1                                            !default;
 $button-padding:          rem-calc(20 40)                              !default;
 $button-color:            $xdark-gray                                  !default;
@@ -292,7 +292,8 @@ $button-color-hover:      $white                                       !default;
 $button-border:           rem-calc(1) solid $xdark-gray                !default;
 $button-border-hover:     rem-calc(1) solid $xdark-gray                !default;
 $button-font-family:      $body-font-family                            !default;
-$button-text-transform:   uppercase                                    !default;
+$button-text-transform:   none                                         !default;
+$button-font-weight:      $global-weight-bold                          !default;
 
 $header-border-bottom:   rem-calc(1) solid $gray                       !default;
 $header-padding-top:     rem-calc($global-margin)                      !default;

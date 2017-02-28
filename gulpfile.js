@@ -191,6 +191,7 @@ gulp.task('watch', function () {
   gulp.watch(sourceJs + '/**/*.js', ['scripts']);
   gulp.watch(paths.sass + '/**/*.scss', ['compass']);
   gulp.watch(sourceImg + '/*', ['images']);
+  gulp.watch('src/scss/frontend/global/_variables.scss', ['variables']);
 });
 
 
