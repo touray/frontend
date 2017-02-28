@@ -12,7 +12,8 @@ const gulp       = require('gulp'),
      prefix      = require('gulp-autoprefixer'),
      cleanCSS    = require('gulp-clean-css'),
      imagemin    = require('gulp-imagemin'),
-     complexity  = require('gulp-complexity');
+     complexity  = require('gulp-complexity'),
+     replace     = require('gulp-replace');
 
 
 // Config Variables
@@ -190,6 +191,19 @@ gulp.task('watch', function () {
   gulp.watch(sourceJs + '/**/*.js', ['scripts']);
   gulp.watch(paths.sass + '/**/*.scss', ['compass']);
   gulp.watch(sourceImg + '/*', ['images']);
+});
+
+
+////////////////////////////////////////////////////////////////////////////////
+// Application Variables Task
+////////////////////////////////////////////////////////////////////////////////
+gulp.task('variables', function() {
+  return gulp.src('src/scss/frontend/global/_variables.scss')
+             .pipe(replace('Framework Variables', 'Application Variables'))
+             .pipe(replace('All framework pre-packaged variables.', 'DO NOT DELETE. Should contain all application variables and Frontend variable\r\n// overrides. Clone src/scss/frontend/global/_variables.scss as a start.'))
+             .pipe(replace('\n//\n// DO NOT EDIT! To add/override variables, create a _variables.scss file in\n// src/scss/application/global.', ''))
+             .pipe(replace(/\s*!default/g, ''))
+             .pipe(gulp.dest('src/scss/application/global'));
 });
 
 

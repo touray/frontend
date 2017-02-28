@@ -36,7 +36,7 @@
       <ul class="docs-nav">
         <li><strong>About Frontend</strong>
         <li><a href="#welcome" class="cc-active">Welcome</a>
-        <li><a href="demo.html" class="cc-active">Demo</a>
+        <li><a href="demo.html" class="cc-active">View Demo</a>
         <li><a href="#features" class="cc-active">Features</a>
         <li><a href="#license" class="cc-active">License</a>
         <li class="separator">
@@ -55,9 +55,11 @@
       <div class="docs-content">
 
 
-        <h2>About Frontend</h2>
-        <h3 id="welcome">Welcome</h3>
-        <p><a href="https://github.com/bmarshall511/frontend" target="_blank">Frontend by Ben Marshall</a> was created to give frontend developers a jumpstart when building new themes and sites. It's a light-weight, no-bloat, skeleton framework that utilizes <a href="http://gulpjs.com/" target="_blank">Gulp</a> to compile stylesheets, JavaScript files and images in a organized, easy to navigate folder structure.</p>
+        <h2>Frontend Documentation</h2>
+        <h3 id="welcome">Thanks for checkout out Frontend!</h3>
+        <p><a href="https://github.com/bmarshall511/frontend" target="_blank">Frontend</a> is a light-weight, no-bloat <em>frontend development framework</em>. It's purpose is to give developers a jumpstart utilizing <a href="http://gulpjs.com/" target="_blank">Gulp</a> to automate repetitive tasks, a variables file to quickly configure base elements and a <b>standards-driven approach</b> to help avoid spaghetti code while decreasing new developer ramp-up time.</p>
+
+        <p>Unlike other frontend frameworks like <a href="http://foundation.zurb.com/" target="_blank">Foundation</a> or <a href="http://getbootstrap.com/" target="_blank">Bootstrap</a>, Frontend doesn't restrict you to any one in particular. You could think of Frontend like a base framework for others like Foundation and Bootstrap. <b>Use what you like, discard what you don't &mdash; keeping your files well optimized.</b></p>
 
         <h3 id="features">Features</h3>
         <ul>
@@ -68,17 +70,16 @@
           <li><a href="https://github.com/imagemin/imagemin" target="_blank">imagemin</a> - Image minifier
           <li><a href="https://github.com/at-import/Singularity" target="_blank">Singularity</a> - Grid framework
           <li><a href="http://breakpoint-sass.com/" target="_blank">Breakpoint</a> - Sass media queries
-          <li><a href="https://www.npmjs.com/package/gulp-complexity" target="_blank">Complexity</a> - JavaScript complexity analysis gulp task
+          <li><a href="https://www.npmjs.com/package/gulp-complexity" target="_blank">Complexity</a> - JavaScript complexity analysis
         </ul>
 
         <h3 id="license">License</h3>
-        <p>Frontend by Ben Marshall is free for personal and commercial projects as long as you are providing a link back to this page. If you don’t want
+        <p>Frontend is free for personal and commercial projects as long as you are providing a link back to this page. If you don’t want
           to provide a link back, simply contribute to the development and improvement of this tool. See <a href="https://github.com/bmarshall511/frontend/blob/master/LICENSE.md" target="_blank">LICENSE.md</a> file for details.</p>
         <hr>
 
 
         <h2>Getting Started</h2>
-        <p>These instructions will get a copy of the project setup in a new theme. See <a href="#compiling">compiling</a> for details on how to compile code while developing.</p>
 
         <h3 id="prerequisites">Prerequisites</h3>
         <ul>
@@ -98,6 +99,7 @@
         <p>The following commands can be run to compile:</p>
         <ul>
           <li>Compiles, then watches for changes to files to re-compile: <pre class="prettyprint">$ gulp</pre>
+          <li>Create a application variables file <strong><small>(only run once or your variables will be overridden)</small></strong> <pre class="prettyprint">$ gulp variables</pre>
           <li>Compiles for live environments: <pre class="prettyprint">$ gulp compile</pre>
           <li>Lints JavaScript files: <pre class="prettyprint">$ gulp lint</pre>
           <li>Lints and compiles JavaScript files: <pre class="prettyprint">$ gulp scripts</pre>
@@ -127,6 +129,7 @@
           <li>Removed optional compiled JS libraries.
           <li>Removed deprecated table variables.
           <li>Updated documentation.
+          <li>Created a <code>gulp variables</code> task to automatically setup a application <code>_variables.scss</code> file.
         </ul>
 
         <h3 id="v300">v3.0.0 <small>(Feb. 27, 2017)</small></h3>

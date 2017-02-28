@@ -31,7 +31,7 @@
       <div class="float-left-medium clearfix" style="white-space: nowrap;">
         <a href="index.html" target="_blank"><img src="https://placehold.it/61x61/231e20/ffffff" class="float-left round no-margin"></a>
         <div class="hide show-large">
-          <h1 class="no-margin" style="font-size: 30px;"><a href="index.html" rel="home">Frontend</a> <small>3.0.0</small></h1>
+          <h1 class="no-margin" style="font-size: 30px;"><a href="index.html" rel="home">Frontend</a> <small>3.0.1</small></h1>
           <p class="no-margin"><small><em>Light-weight frontend for any project.</em></small></p>
         </div>
       </div>
@@ -39,9 +39,9 @@
         <ul class="list-block list-inline-block-medium list-menu">
           <li><a href="#colors">Colors</a>
           <li><a href="#typography">Typography</a>
-          <li><a href="#frontend">Frontend</a>
+          <li><a href="#classes">Classes</a>
           <li><a href="index.html">Docs</a>
-          <li><a href="https://github.com/bmarshall511/frontend/issues" target="_blank">Bugs</a>
+          <li><a href="https://github.com/bmarshall511/frontend/issues" target="_blank">Issues</a>
           <li><a href="https://github.com/bmarshall511/frontend/archive/master.zip" class="button button--full button--normal-medium" target="_blank">Download</a>
         </ul>
       </nav>
@@ -65,14 +65,7 @@
 
   <div class="container">
     <div class="col-1-1 col-12-1-small">
-      <section style="margin-top: 30px">
-        <h3>Thanks for checking out Frontend! <small>last updated February 27<sup>th</sup>, 2017</small></h3>
-        <p class="color-info"><b>TIP:</b> Keep this file as a style guide to refer to as you develop and test.</p>
-      </section>
-
-      <hr>
-
-      <section id="colors">
+      <section style="margin-top: 30px" id="colors">
         <h3>Color Palette</h3>
         <p>Below are all of the pre-packaged and configuarable colors that come with Frontend. To change or add additional colors, edit/add variables in the <code>src/scss/application/global/_variables.scss</code> (for more information, see <a href="#variables">_variables.scss</a>).</p>
 
@@ -97,7 +90,7 @@
       <hr>
 
       <section id="typography">
-        <h2 id="typography">General Typography</h2>
+        <h3 id="typography">Typography</h3>
 
         <img src="https://placehold.it/300x250" class="float-right"><p><em>This text is enclosed by the <code>em</code> tag</em>, <a href="#">consectetuer adipiscing elit</a>. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. <b>This text is enclosed in the <code>b</code> tag.</b></p>
 
@@ -135,7 +128,7 @@
 
       <hr>
 
-      <h3>Table</h3>
+      <h3>Tables</h3>
       <table>
         <thead>
           <tr>
@@ -171,7 +164,7 @@
 
       <hr>
 
-      <section id="frontend">
+      <section id="classes">
         <h2>Frontend Styles <small><code>scss/frontend/components/classes/*</code></small></h2>
 
         <p>These styles can be included/removed in the <code>_style.scss</code>.</p>
@@ -255,9 +248,7 @@
         <p>This file is an example of how to create individual CSS files within your application. Add/comment/uncomment the individual partials as needed.</p>
 
         <h5 id="variables">Variables <small>(<code>src/scss/frontend/global/_variables.scss</code>)</small></h5>
-        <p>Frontend comes with a list of global variables used for theming. These can be helpful to keep site styles and branding consistent. You can edit/add variables by cloning the framework file and placing it in <code>src/scss/application/global</code> directory. Once created, you'll need to add the file as an import in your stylesheet after all other Frontend framework imports.</p>
-
-        <p class="color-alert font-size-small"><b>IMPORTANT:</b> After you've cloned the file, be sure to delete the <code>!default</code> parameter and the preceeding spacing (leaving the <code>;</code>) for all variables.</p>
+        <p>Frontend comes with a list of global variables used for theming. These can be helpful to keep site styles and branding consistent. You can edit/add variables by running <code>gulp variables</code>.</p>
 
         <h4>Frontend Classes</h4>
 

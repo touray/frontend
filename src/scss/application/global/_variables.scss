@@ -4,3 +4,303 @@
 // DO NOT DELETE. Should contain all application variables and Frontend variable
 // overrides. Clone src/scss/frontend/global/_variables.scss as a start.
 ////////////////////////////////////////////////////////////////////////////////
+
+
+// 1. Global
+// -----------------------------------------------------------------------------
+
+$global-width:             320px; // Mobile
+$global-width-small:       728px; // Tablet & up
+$global-width-medium:      1200px; // Desktop & up
+$global-width-large:       1400px; // Large screens & up
+
+$global-font-size:         16px; // Mobile
+$global-font-size-small:   $global-font-size; // Tablet & up
+$global-font-size-medium:  $global-font-size; // Desktop & up
+$global-font-size-large:   $global-font-size; // Large screens & up
+
+$rem-base:                 $global-font-size;
+
+$global-lineheight:         1.3; // Mobile
+$global-lineheight-small:   $global-lineheight; // Tablet & up
+$global-lineheight-medium:  $global-lineheight; // Desktop & up
+$global-lineheight-large:   $global-lineheight; // Large screens & up
+
+$primary-color:            #00b282;
+$secondary-color:          #0093bb;
+
+$success-color:            #009900;
+$warning-color:            #ffae00;
+$alert-color:              #ce3e3e;
+$info-color:               #0058b2;
+
+$white:                    #f9f9f9;
+$black:                    #000;
+
+$xlight-gray:              #f0f0f0;
+$light-gray:               #f4f4f4;
+$gray:                     #dcdcdc;
+$medium-gray:              #b4b4b4;
+$dark-gray:                #686868;
+$xdark-gray:               #231e20;
+
+$body-background:          $white;
+$body-font-color:          $dark-gray;
+$body-font-family:         "Trebuchet MS", Helvetica, sans-serif;
+$body-antialiased:         true;
+
+$global-margin:            30px;
+$global-padding:           30px;
+
+$global-weight-normal:     400;
+$global-weight-medium:     500;
+$global-weight-semibold:   600;
+$global-weight-bold:       700;
+
+$global-outline:           none;
+$global-radius:            3px;
+$global-text-direction:    ltr;
+$global-transition-timing: .2s;
+$global-box-sizing:        border-box;
+
+
+// 2. Breakpoints
+// -----------------------------------------------------------------------------
+
+$small:        $global-width-small; // Tablet & up
+$medium:       $global-width-medium; // Desktop & up
+$large:        $global-width-large; // Large screens
+
+$small-down:   0px $small; // Tablet & up
+$medium-down:  0px $medium; // Desktop & up
+$large-down:   0px $large; // Large screens
+
+
+// 3. Base Typography
+// -----------------------------------------------------------------------------
+
+$font-family-monospace:    "Courier New", Courier, monospace;
+
+$header-font-family:       Arial, Helvetica, sans-serif;
+$header-font-weight:       $global-weight-bold;
+$header-font-style:        normal;
+
+$header-color:             $black;
+$header-lineheight:        $global-lineheight;
+$header-margin-bottom:     rem-calc($global-margin);
+$header-text-rendering:    optimizeLegibility;
+$header-small-font-color:  $dark-gray;
+
+// These should not be used to define sizes within stylesheets. Instead, use the
+// font sizes defined in the next section below.
+$header-1-size:            rem-calc($global-font-size + 35);
+$header-2-size:            rem-calc($global-font-size + 28);
+$header-3-size:            rem-calc($global-font-size + 21);
+$header-4-size:            rem-calc($global-font-size + 14);
+$header-5-size:            rem-calc($global-font-size + 7);
+$header-6-size:            rem-calc($global-font-size);
+
+$xxxlarge-font-size:    $header-1-size;
+$xxlarge-font-size:     $header-2-size;
+$xlarge-font-size:      $header-3-size;
+$large-font-size:       $header-4-size;
+$medium-font-size:      $header-5-size;
+$normal-font-size:      $header-6-size;
+$small-font-size:       rem-calc($global-font-size - 1);
+$xsmall-font-size:      rem-calc($global-font-size - 3);
+$xxsmall-font-size:     rem-calc($global-font-size - 5);
+$xxxsmall-font-size:    rem-calc($global-font-size - 7);
+
+$paragraph-lineheight:     $global-lineheight;
+$paragraph-margin-bottom:  rem-calc($global-margin);
+$paragraph-text-rendering: optimizeLegibility;
+
+$code-color:       $xdark-gray;
+$code-font-family: $font-family-monospace;
+$code-font-weight: $global-weight-normal;
+$code-background:  $xlight-gray;
+$code-border:      0;
+$code-padding:     rem-calc(2);
+
+$anchor-color:                 $primary-color;
+$anchor-color-hover:           scale-color($anchor-color, $lightness: -50%);
+$anchor-text-decoration:       none;
+$anchor-text-decoration-hover: underline;
+
+$hr-width:  100%;
+$hr-border: rem-calc(1) solid $gray;
+$hr-margin: rem-calc($global-margin) auto;
+
+$list-lineheight:             $paragraph-lineheight;
+$list-margin-bottom:          $paragraph-margin-bottom;
+$list-style-type:             disc;
+$list-style-position:         outside;
+$list-side-margin:            1.25rem;
+$list-nested-side-margin:     1.25rem;
+$defnlist-margin-bottom:      1rem;
+$defnlist-term-weight:        $global-weight-bold;
+$defnlist-term-margin-bottom: 0.3rem;
+
+$blockquote-color:            $dark-gray;
+$blockquote-padding:          rem-calc($global-padding);
+$blockquote-margin:           rem-calc($global-margin 0);
+$blockquote-border:           rem-calc(5) solid $gray;
+$blockquote-font-family:      $header-font-family;
+$blockquote-font-size:        $large-font-size;
+$blockquote-line-height:      inherit;
+$blockquote-background:       $xlight-gray;
+
+$cite-font-size:              $small-font-size;
+$cite-color:                  $dark-gray;
+
+$keystroke-font:              $font-family-monospace;
+$keystroke-color:             $black;
+$keystroke-background:        $light-gray;
+$keystroke-padding:           rem-calc($global-padding);
+$keystroke-radius:            rem-calc($global-radius);
+
+$abbr-underline:              rem-calc(1) dotted $black;
+
+
+// 4. Forms
+// -----------------------------------------------------------------------------
+
+$fieldset-border:         rem-calc(1) solid $gray;
+$fieldset-padding:        rem-calc($global-padding);
+$fieldset-margin:         rem-calc($global-margin);
+$legend-padding:          rem-calc(5);
+$form-spacing:            rem-calc(20);
+$helptext-color:          $gray;
+$helptext-font-size:      $small-font-size;
+$helptext-font-style:     italic;
+$input-prefix-color:      $black;
+$input-prefix-background: $light-gray;
+$input-prefix-border:     rem-calc(1) solid $gray;
+$input-prefix-padding:    rem-calc($global-padding);
+
+$form-label-color:          $black;
+$form-label-font-size:      $small-font-size;
+$form-label-font-weight:    $global-weight-bold;
+$form-label-line-height:    1.8;
+$form-label-font-family:    $body-font-family;
+$form-label-text-transform: none;
+
+$select-background:       $body-background;
+$select-triangle-color:   $black;
+$select-radius:           rem-calc($global-radius);
+
+$input-color:       $dark-gray;
+$input-font-family: inherit;
+$input-font-size:   rem-calc($global-font-size);
+
+$input-background:          $body-background;
+$input-background-focus:    $light-gray;
+$input-background-disabled: $gray;
+
+$input-border:       rem-calc(1) solid $gray;
+$input-border-focus: rem-calc(1) solid $gray;
+$input-shadow:       none;
+$input-shadow-focus: none;
+
+$input-cursor-disabled: default;
+$input-transition:      box-shadow 0.5s, border-color 0.25s ease-in-out;
+$input-number-spinners: true;
+$input-radius:          rem-calc($global-radius);
+
+$placeholder-color:          $gray;
+$placeholder-font-family:    $input-font-family;
+$placeholder-text-transform: none;
+
+
+// 5. Table
+// -----------------------------------------------------------------------------
+
+$table-background:         $white;
+$table-color-scale:        5%;
+$table-border:             rem-calc(1) solid smart-scale($table-background, $table-color-scale);
+$table-padding:            rem-calc(10);
+$table-striped-background: smart-scale($table-background, $table-color-scale);
+$table-stripe:             even;
+$table-head-background:    smart-scale($table-background, $table-color-scale / 2);
+$table-foot-background:    smart-scale($table-background, $table-color-scale);
+$table-head-font-color:    $body-font-color;
+
+
+// 6. Grid
+// -----------------------------------------------------------------------------
+
+$num-columns:        1; // Mobile & up
+$num-columns-small:  $num-columns; // Tablet & up
+$num-columns-medium: $num-columns; // Tablet & up
+$num-columns-large:  $num-columns; // Desktop & up
+
+$gutter-padding:        30px; // Mobile & up
+$gutter-padding-small:  $gutter-padding; // Tablet & up
+$gutter-padding-medium: $gutter-padding; // Desktop & up
+$gutter-padding-large:  $gutter-padding; // Large screens & up
+
+$include-clearfix:   true;
+$gutter-style:       'split';
+
+// Internal variables used for text direction
+$global-left:  if($global-text-direction == rtl, right, left);
+$global-right: if($global-text-direction == rtl, left, right);
+
+
+// 7. Frontend
+// -----------------------------------------------------------------------------
+
+$pager-text-transform: uppercase;
+$pager-transition:     all $global-transition-timing;
+$pager-text-align:     center;
+
+$pager-link-padding:       0.5rem 0.9rem;
+$pager-link-border:        0;
+$pager-link-border-radius: rem-calc($global-radius);
+$pager-link-color:         $black;
+$pager-link-background:    transparent;
+$pager-link-size:          $small-font-size;
+$pager-link-line-height:   1;
+$pager-link-font-family:   $body-font-family;
+
+$pager-link-background-hover: transparent;
+$pager-link-color-hover:      $primary-color;
+$pager-link-border-hover:     0;
+
+$pager-current-padding:       0.5rem 0.9rem;
+$pager-current-border:        rem-calc(1) solid $gray;
+$pager-current-border-radius: rem-calc($global-radius);
+$pager-current-color:         $body-font-color;
+$pager-current-background:    transparent;
+
+$pager-ellipsis-padding:       0.5rem 0.9rem;
+$pager-ellipsis-border:        0;
+$pager-ellipsis-border-radius: rem-calc($global-radius);
+$pager-ellipsis-color:         $body-font-color;
+$pager-ellipsis-background:    transparent;
+
+$button-radius:           0;
+$button-background:       transparent;
+$button-background-hover: $xdark-gray;
+$button-font-size:        rem-calc($global-font-size);
+$button-line-height:      1;
+$button-padding:          rem-calc(20 40);
+$button-color:            $xdark-gray;
+$button-color-hover:      $white;
+$button-border:           rem-calc(1) solid $xdark-gray;
+$button-border-hover:     rem-calc(1) solid $xdark-gray;
+$button-font-family:      $body-font-family;
+$button-text-transform:   uppercase;
+
+$header-border-bottom:   rem-calc(1) solid $gray;
+$header-padding-top:     rem-calc($global-margin);
+$header-padding-bottom:  rem-calc($global-margin - $global-padding);
+$header-margin-bottom:   rem-calc($global-margin);
+$header-background:      rgba($body-background, .95);
+
+$callout-background:     rgba($info-color, .3);
+$callout-padding:        rem-calc($global-padding);
+$callout-border:         rem-calc(1) solid rgba($info-color, .2);
+$callout-color:          $info-color;
+$callout-radius:         rem-calc($global-radius);
+
