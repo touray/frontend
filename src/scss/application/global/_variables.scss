@@ -16,15 +16,15 @@ $global-width-large:       1400px; // Large screens & up
 
 $global-font-size:         16px; // Mobile
 $global-font-size-small:   $global-font-size; // Tablet & up
-$global-font-size-medium:  $global-font-size; // Desktop & up
-$global-font-size-large:   $global-font-size; // Large screens & up
+$global-font-size-medium:  $global-font-size-small; // Desktop & up
+$global-font-size-large:   $global-font-size-medium; // Large screens & up
 
 $rem-base:                 $global-font-size;
 
 $global-lineheight:         1.3; // Mobile
 $global-lineheight-small:   $global-lineheight; // Tablet & up
-$global-lineheight-medium:  $global-lineheight; // Desktop & up
-$global-lineheight-large:   $global-lineheight; // Large screens & up
+$global-lineheight-medium:  $global-lineheight-small; // Desktop & up
+$global-lineheight-large:   $global-lineheight-medium; // Large screens & up
 
 $primary-color:            #00b282;
 $secondary-color:          #0093bb;
@@ -52,6 +52,7 @@ $body-antialiased:         true;
 $global-margin:            30px;
 $global-padding:           30px;
 
+$global-weight-light:      300;
 $global-weight-normal:     400;
 $global-weight-medium:     500;
 $global-weight-semibold:   600;
@@ -64,19 +65,41 @@ $global-transition-timing: .2s;
 $global-box-sizing:        border-box;
 
 
-// 2. Breakpoints
+// 2. Grid
 // -----------------------------------------------------------------------------
 
-$small:        $global-width-small; // Tablet & up
-$medium:       $global-width-medium; // Desktop & up
-$large:        $global-width-large; // Large screens
+$num-columns:        1; // Mobile & up
+$num-columns-small:  $num-columns; // Tablet & up
+$num-columns-medium: $num-columns-small; // Tablet & up
+$num-columns-large:  $num-columns-medium; // Desktop & up
+
+$gutter-padding:        30px; // Mobile & up
+$gutter-padding-small:  $gutter-padding; // Tablet & up
+$gutter-padding-medium: $gutter-padding-small; // Desktop & up
+$gutter-padding-large:  $gutter-padding-medium; // Large screens & up
+
+$include-clearfix:   true;
+$gutter-style:       'fixed';
+
+// Internal variables used for text direction
+$global-left:  if($global-text-direction == rtl, right, left);
+$global-right: if($global-text-direction == rtl, left, right);
+
+
+
+// 3. Breakpoints
+// -----------------------------------------------------------------------------
+
+$small:        $global-width-small + $gutter-padding-small; // Tablet & up
+$medium:       $global-width-medium + $gutter-padding-medium; // Desktop & up
+$large:        $global-width-large + $gutter-padding-large; // Large screens
 
 $small-down:   0px $small; // Tablet & up
 $medium-down:  0px $medium; // Desktop & up
 $large-down:   0px $large; // Large screens
 
 
-// 3. Base Typography
+// 4. Base Typography
 // -----------------------------------------------------------------------------
 
 $font-family-monospace:    "Courier New", Courier, monospace;
@@ -90,6 +113,7 @@ $header-lineheight:        $global-lineheight;
 $header-margin-bottom:     rem-calc($global-margin);
 $header-text-rendering:    optimizeLegibility;
 $header-small-font-color:  $dark-gray;
+$header-letter-spacing:    normal;
 
 // These should not be used to define sizes within stylesheets. Instead, use the
 // font sizes defined in the next section below.
@@ -162,7 +186,7 @@ $keystroke-radius:            rem-calc($global-radius);
 $abbr-underline:              rem-calc(1) dotted $black;
 
 
-// 4. Forms
+// 5. Forms
 // -----------------------------------------------------------------------------
 
 $fieldset-border:         rem-calc(1) solid $gray;
@@ -212,7 +236,7 @@ $placeholder-font-family:    $input-font-family;
 $placeholder-text-transform: none;
 
 
-// 5. Table
+// 6. Table
 // -----------------------------------------------------------------------------
 
 $table-background:         $white;
@@ -224,27 +248,6 @@ $table-stripe:             even;
 $table-head-background:    smart-scale($table-background, $table-color-scale / 2);
 $table-foot-background:    smart-scale($table-background, $table-color-scale);
 $table-head-font-color:    $body-font-color;
-
-
-// 6. Grid
-// -----------------------------------------------------------------------------
-
-$num-columns:        1; // Mobile & up
-$num-columns-small:  $num-columns; // Tablet & up
-$num-columns-medium: $num-columns; // Tablet & up
-$num-columns-large:  $num-columns; // Desktop & up
-
-$gutter-padding:        30px; // Mobile & up
-$gutter-padding-small:  $gutter-padding; // Tablet & up
-$gutter-padding-medium: $gutter-padding; // Desktop & up
-$gutter-padding-large:  $gutter-padding; // Large screens & up
-
-$include-clearfix:   true;
-$gutter-style:       'split';
-
-// Internal variables used for text direction
-$global-left:  if($global-text-direction == rtl, right, left);
-$global-right: if($global-text-direction == rtl, left, right);
 
 
 // 7. Frontend
@@ -293,11 +296,11 @@ $button-font-family:      $body-font-family;
 $button-text-transform:   none;
 $button-font-weight:      $global-weight-bold;
 
-$header-border-bottom:   rem-calc(1) solid $gray;
-$header-padding-top:     rem-calc($global-margin);
-$header-padding-bottom:  rem-calc($global-margin - $global-padding);
-$header-margin-bottom:   rem-calc($global-margin);
-$header-background:      rgba($body-background, .95);
+$site-header-border-bottom:   rem-calc(1) solid $gray;
+$site-header-padding-top:     rem-calc($global-padding / 2);
+$site-header-padding-bottom:  rem-calc($global-padding / 2);
+$site-header-margin-bottom:   rem-calc($global-margin);
+$site-header-background:      $body-background;
 
 $callout-background:     rgba($info-color, .3);
 $callout-padding:        rem-calc($global-padding);

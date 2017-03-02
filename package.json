@@ -21,6 +21,7 @@
   "homepage": "https://github.com/bmarshall511/frontend#readme",
   "devDependencies": {
     "compass-options": "^0.1.1",
+    "del": "^2.2.2",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.1",
     "gulp-clean-css": "^2.3.2",

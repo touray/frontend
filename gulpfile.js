@@ -13,7 +13,8 @@ const gulp       = require('gulp'),
      cleanCSS    = require('gulp-clean-css'),
      imagemin    = require('gulp-imagemin'),
      complexity  = require('gulp-complexity'),
-     replace     = require('gulp-replace');
+     replace     = require('gulp-replace'),
+     del         = require('del');
 
 
 // Config Variables
@@ -207,6 +208,13 @@ gulp.task('variables', function() {
              .pipe(gulp.dest('src/scss/application/global'));
 });
 
+
+////////////////////////////////////////////////////////////////////////////////
+// First-time Setup Task
+////////////////////////////////////////////////////////////////////////////////
+gulp.task('setup', ['variables'] function() {
+  return del(['.git/**/*']);
+});
 
 ////////////////////////////////////////////////////////////////////////////////
 // Default Task
