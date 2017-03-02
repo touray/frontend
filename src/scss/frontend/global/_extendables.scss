@@ -84,6 +84,18 @@
     border: $button-border-hover;
     text-decoration: none;
   }
+
+  &[disabled="disabled"] {
+    background: $button-background-disabled;
+    color: $button-color-disabled;
+    border: $button-border-disabled;
+
+    &:hover {
+      background: $button-background-disabled;
+      color: $button-color-disabled;
+      border: $button-border-disabled;
+    }
+  }
 }
 
 
@@ -131,18 +143,23 @@
   li {
     &.pager-ellipsis {
       padding: $pager-ellipsis-padding;
-      border: $pager-ellipsis-border;
-      border-radius: $pager-ellipsis-border-radius;
       color: $pager-ellipsis-color;
+      border: $pager-ellipsis-border;
       background: $pager-ellipsis-background;
+      border-radius: $pager-ellipsis-border-radius;
     }
 
     &.pager-current {
-      background: $primary-color;
-      color: $white;
-      font-weight: $global-weight-normal;
-      border-color: $primary-color;
+      padding: $pager-current-padding;
+      color: $pager-current-color;
+      border: $pager-current-border;
       background: $pager-current-background;
+      border-radius: $pager-current-border-radius;
+
+      a {
+        color: $white;
+        padding: 0;
+      }
     }
   }
 }

@@ -85,26 +85,116 @@ h6 {
 // Heading sizes
 h1 {
   font-size: $header-1-size;
+
+  // Tablet & up
+  @include breakpoint($small) {
+    font-size: $header-1-size-small;
+  }
+
+  // Desktop & up
+  @include breakpoint($medium) {
+    font-size: $header-1-size-medium;
+  }
+
+  // Large screens
+  @include breakpoint($large) {
+    font-size: $header-1-size-large;
+  }
 }
 
 h2 {
   font-size: $header-2-size;
+
+  // Tablet & up
+  @include breakpoint($small) {
+    font-size: $header-2-size-small;
+  }
+
+  // Desktop & up
+  @include breakpoint($medium) {
+    font-size: $header-2-size-medium;
+  }
+
+  // Large screens
+  @include breakpoint($large) {
+    font-size: $header-2-size-large;
+  }
 }
 
 h3 {
   font-size: $header-3-size;
+
+  // Tablet & up
+  @include breakpoint($small) {
+    font-size: $header-3-size-small;
+  }
+
+  // Desktop & up
+  @include breakpoint($medium) {
+    font-size: $header-3-size-medium;
+  }
+
+  // Large screens
+  @include breakpoint($large) {
+    font-size: $header-3-size-large;
+  }
 }
 
 h4 {
   font-size: $header-4-size;
+
+  // Tablet & up
+  @include breakpoint($small) {
+    font-size: $header-4-size-small;
+  }
+
+  // Desktop & up
+  @include breakpoint($medium) {
+    font-size: $header-4-size-medium;
+  }
+
+  // Large screens
+  @include breakpoint($large) {
+    font-size: $header-4-size-large;
+  }
 }
 
 h5 {
   font-size: $header-5-size;
+
+  // Tablet & up
+  @include breakpoint($small) {
+    font-size: $header-5-size-small;
+  }
+
+  // Desktop & up
+  @include breakpoint($medium) {
+    font-size: $header-5-size-medium;
+  }
+
+  // Large screens
+  @include breakpoint($large) {
+    font-size: $header-5-size-large;
+  }
 }
 
 h6 {
   font-size: $header-6-size;
+
+  // Tablet & up
+  @include breakpoint($small) {
+    font-size: $header-6-size-small;
+  }
+
+  // Desktop & up
+  @include breakpoint($medium) {
+    font-size: $header-6-size-medium;
+  }
+
+  // Large screens
+  @include breakpoint($large) {
+    font-size: $header-6-size-large;
+  }
 }
 
 // Links
@@ -196,10 +286,6 @@ blockquote {
   &, p {
     line-height: $paragraph-lineheight;
     color: $blockquote-color;
-  }
-
-  footer {
-    margin-top: -$paragraph-margin-bottom;
   }
 }
 

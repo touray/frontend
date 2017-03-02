@@ -48,7 +48,7 @@
         <li><a href="#contributing" class="cc-active">Contributing</a>
         <li><a href="#versioning" class="cc-active">Versioning</a>
         <li><strong>Changelog</strong>
-        <li><a href="#v301" class="cc-active">v3.0.1</a>
+        <li><a href="#v320" class="cc-active">v3.2.0</a>
         <li><a href="#v300" class="cc-active">v3.0.0</a>
       </ul>
 
@@ -93,12 +93,14 @@
         <ol>
           <li>To install gem dependencies: <pre class="prettyprint">$ bundle install</pre>
           <li>To install development dependencies: <pre class="prettyprint">$ npm install</pre>
+          <li>For first-time setup: <pre class="prettyprint">$ gulp setup</pre>
         </ol>
 
         <h3 id="compiling">Compiling</h3>
         <p>The following commands can be run to compile:</p>
         <ul>
           <li>Compiles, then watches for changes to files to re-compile: <pre class="prettyprint">$ gulp</pre>
+          <li>First-time setup <strong><small>(only run once or your variables will be overridden)</small></strong> <pre class="prettyprint">$ gulp setup</pre>
           <li>Create a application variables file <strong><small>(only run once or your variables will be overridden)</small></strong> <pre class="prettyprint">$ gulp variables</pre>
           <li>Compiles for live environments: <pre class="prettyprint">$ gulp compile</pre>
           <li>Lints JavaScript files: <pre class="prettyprint">$ gulp lint</pre>
@@ -124,7 +126,7 @@
         <hr>
 
         <h2>Changelog</h3>
-        <h3 id="v301">v3.0.1 <small>(TBD)</small></h3>
+        <h3 id="v320">v3.2.0 <small>(TBD)</small></h3>
         <ul>
           <li>Removed optional compiled JS libraries.
           <li>Removed deprecated table variables.
@@ -140,6 +142,7 @@
           <li>Several updates to the default variable for grid layout.
           <li>Added the <code>$global-weight-light</code> variable.
           <li>Created a <code>gulp setup</code> task to automatically setup a application for the first time.
+          <li>Added additional breakpoint variables for header font sizes.
         </ul>
 
         <h3 id="v300">v3.0.0 <small>(Feb. 27, 2017)</small></h3>

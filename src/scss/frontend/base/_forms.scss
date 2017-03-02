@@ -96,9 +96,9 @@ textarea {
 // Reset styles on button-like inputs
 [type="submit"],
 [type="button"] {
-  border-radius: $global-radius;
   -webkit-appearance: none;
   -moz-appearance: none;
+  @extend %button;
 }
 
 // Reset Normalize setting content-box to search elements

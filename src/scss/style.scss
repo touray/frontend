@@ -19,13 +19,13 @@
 @import 'frontend/layout/layouts';
 
 // Import Frontend component class partials
+@import 'frontend/components/classes/common';
 @import 'frontend/components/classes/layout';
 @import 'frontend/components/classes/typography';
 @import 'frontend/components/classes/alignment';
 @import 'frontend/components/classes/buttons';
 @import 'frontend/components/classes/lists';
 @import 'frontend/components/classes/header';
-@import 'frontend/components/classes/frontend';
 @import 'frontend/components/classes/visibility';
 @import 'frontend/components/classes/colors';
 @import 'frontend/components/classes/callout';

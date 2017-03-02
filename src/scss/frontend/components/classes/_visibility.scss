@@ -12,6 +12,14 @@
   display: block;
 }
 
+.show-inline {
+  display: inline;
+}
+
+.show-inline-block {
+  display: inline-block;
+}
+
 @include breakpoint($small) {
   // Hide/show content on small (tablet) screens.
   .hide-small {
@@ -20,6 +28,14 @@
 
   .show-small {
     display: block;
+  }
+
+  .show-inline-small {
+    display: inline;
+  }
+
+  .show-inline-block-small {
+    display: inline-block;
   }
 }
 
@@ -32,6 +48,14 @@
   .show-medium {
     display: block;
   }
+
+  .show-inline-medium {
+    display: inline;
+  }
+
+  .show-inline-block-medium {
+    display: inline-block;
+  }
 }
 
 @include breakpoint($large) {
@@ -42,6 +66,14 @@
 
   .show-large {
     display: block;
+  }
+
+  .show-inline-large {
+    display: inline;
+  }
+
+  .show-inline-block-large {
+    display: inline-block;
   }
 }
 

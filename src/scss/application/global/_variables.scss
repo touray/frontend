@@ -1,5 +1,5 @@
 ////////////////////////////////////////////////////////////////////////////////
-// Application Variables (v3.0.1)
+// Application Variables (v3.2.0)
 //
 // DO NOT DELETE. Should contain all application variables and Frontend variable
 // overrides. Clone src/scss/frontend/global/_variables.scss as a start.
@@ -14,27 +14,37 @@ $global-width-small:       728px; // Tablet & up
 $global-width-medium:      1200px; // Desktop & up
 $global-width-large:       1400px; // Large screens & up
 
-$global-font-size:         16px; // Mobile
+$rem-base:                 16px;
+
+$global-font-size:         $rem-base; // Mobile
 $global-font-size-small:   $global-font-size; // Tablet & up
 $global-font-size-medium:  $global-font-size-small; // Desktop & up
 $global-font-size-large:   $global-font-size-medium; // Large screens & up
-
-$rem-base:                 $global-font-size;
 
 $global-lineheight:         1.3; // Mobile
 $global-lineheight-small:   $global-lineheight; // Tablet & up
 $global-lineheight-medium:  $global-lineheight-small; // Desktop & up
 $global-lineheight-large:   $global-lineheight-medium; // Large screens & up
 
-$primary-color:            #00b282;
-$secondary-color:          #0093bb;
+$global-weight-light:      300;
+$global-weight-normal:     400;
+$global-weight-medium:     500;
+$global-weight-semibold:   600;
+$global-weight-bold:       700;
 
-$success-color:            #009900;
-$warning-color:            #ffae00;
-$alert-color:              #ce3e3e;
-$info-color:               #0058b2;
+$global-margin:            30px;
+$global-padding:           30px;
+$global-outline:           none;
+$global-radius:            3px;
+$global-text-direction:    ltr;
+$global-transition-timing: .2s;
+$global-box-sizing:        border-box;
 
-$white:                    #f9f9f9;
+
+// 2. Colors
+// -----------------------------------------------------------------------------
+
+$white:                    #fff;
 $black:                    #000;
 
 $xlight-gray:              #f0f0f0;
@@ -44,28 +54,21 @@ $medium-gray:              #b4b4b4;
 $dark-gray:                #686868;
 $xdark-gray:               #231e20;
 
+$primary-color:            #00b282;
+$secondary-color:          #0093bb;
+
+$success-color:            #009900;
+$warning-color:            #ffae00;
+$alert-color:              #ce3e3e;
+$info-color:               #0058b2;
+
+/* Body */
+
 $body-background:          $white;
 $body-font-color:          $dark-gray;
-$body-font-family:         "Trebuchet MS", Helvetica, sans-serif;
-$body-antialiased:         true;
-
-$global-margin:            30px;
-$global-padding:           30px;
-
-$global-weight-light:      300;
-$global-weight-normal:     400;
-$global-weight-medium:     500;
-$global-weight-semibold:   600;
-$global-weight-bold:       700;
-
-$global-outline:           none;
-$global-radius:            3px;
-$global-text-direction:    ltr;
-$global-transition-timing: .2s;
-$global-box-sizing:        border-box;
 
 
-// 2. Grid
+// 3. Grid
 // -----------------------------------------------------------------------------
 
 $num-columns:        1; // Mobile & up
@@ -87,7 +90,7 @@ $global-right: if($global-text-direction == rtl, left, right);
 
 
 
-// 3. Breakpoints
+// 4. Breakpoints
 // -----------------------------------------------------------------------------
 
 $small:        $global-width-small + $gutter-padding-small; // Tablet & up
@@ -99,10 +102,14 @@ $medium-down:  0px $medium; // Desktop & up
 $large-down:   0px $large; // Large screens
 
 
-// 4. Base Typography
+// 5. Base Typography
 // -----------------------------------------------------------------------------
 
+$body-font-family:         "Trebuchet MS", Helvetica, sans-serif;
 $font-family-monospace:    "Courier New", Courier, monospace;
+$body-antialiased:         true;
+
+/* Header (h1, h2, h3, etc.) */
 
 $header-font-family:       Arial, Helvetica, sans-serif;
 $header-font-weight:       $global-weight-bold;
@@ -115,14 +122,49 @@ $header-text-rendering:    optimizeLegibility;
 $header-small-font-color:  $dark-gray;
 $header-letter-spacing:    normal;
 
-// These should not be used to define sizes within stylesheets. Instead, use the
-// font sizes defined in the next section below.
+/**
+ * Header Font Sizes
+ *
+ * These should not be used to define sizes within stylesheets. Instead, use the
+ * font sizes defined in the next section below.
+ */
+
 $header-1-size:            rem-calc($global-font-size + 35);
 $header-2-size:            rem-calc($global-font-size + 28);
 $header-3-size:            rem-calc($global-font-size + 21);
 $header-4-size:            rem-calc($global-font-size + 14);
 $header-5-size:            rem-calc($global-font-size + 7);
 $header-6-size:            rem-calc($global-font-size);
+
+// Tablet & up
+$header-1-size-small:            rem-calc($global-font-size-small + 35);
+$header-2-size-small:            rem-calc($global-font-size-small + 28);
+$header-3-size-small:            rem-calc($global-font-size-small + 21);
+$header-4-size-small:            rem-calc($global-font-size-small + 14);
+$header-5-size-small:            rem-calc($global-font-size-small + 7);
+$header-6-size-small:            rem-calc($global-font-size-small);
+
+// Desktop & up
+$header-1-size-medium:            rem-calc($global-font-size-medium + 35);
+$header-2-size-medium:            rem-calc($global-font-size-medium + 28);
+$header-3-size-medium:            rem-calc($global-font-size-medium + 21);
+$header-4-size-medium:            rem-calc($global-font-size-medium + 14);
+$header-5-size-medium:            rem-calc($global-font-size-medium + 7);
+$header-6-size-medium:            rem-calc($global-font-size-medium);
+
+// Large screens
+$header-1-size-large:            rem-calc($global-font-size-large + 35);
+$header-2-size-large:            rem-calc($global-font-size-large + 28);
+$header-3-size-large:            rem-calc($global-font-size-large + 21);
+$header-4-size-large:            rem-calc($global-font-size-large + 14);
+$header-5-size-large:            rem-calc($global-font-size-large + 7);
+$header-6-size-large:            rem-calc($global-font-size-large);
+
+/**
+ * Font Sizes
+ *
+ * Use these variables when targeting element font sizes.
+ */
 
 $xxxlarge-font-size:    $header-1-size;
 $xxlarge-font-size:     $header-2-size;
@@ -151,9 +193,9 @@ $anchor-color-hover:           scale-color($anchor-color, $lightness: -50%);
 $anchor-text-decoration:       none;
 $anchor-text-decoration-hover: underline;
 
-$hr-width:  100%;
+$hr-width:  50%;
 $hr-border: rem-calc(1) solid $gray;
-$hr-margin: rem-calc($global-margin) auto;
+$hr-margin: rem-calc($global-margin * 2) auto;
 
 $list-lineheight:             $paragraph-lineheight;
 $list-margin-bottom:          $paragraph-margin-bottom;
@@ -170,9 +212,9 @@ $blockquote-padding:          rem-calc($global-padding);
 $blockquote-margin:           rem-calc($global-margin 0);
 $blockquote-border:           rem-calc(5) solid $gray;
 $blockquote-font-family:      $header-font-family;
-$blockquote-font-size:        $large-font-size;
+$blockquote-font-size:        $medium-font-size;
 $blockquote-line-height:      inherit;
-$blockquote-background:       $xlight-gray;
+$blockquote-background:       transparent;
 
 $cite-font-size:              $small-font-size;
 $cite-color:                  $dark-gray;
@@ -186,12 +228,12 @@ $keystroke-radius:            rem-calc($global-radius);
 $abbr-underline:              rem-calc(1) dotted $black;
 
 
-// 5. Forms
+// 6. Forms
 // -----------------------------------------------------------------------------
 
 $fieldset-border:         rem-calc(1) solid $gray;
 $fieldset-padding:        rem-calc($global-padding);
-$fieldset-margin:         rem-calc($global-margin);
+$fieldset-margin:         rem-calc($global-margin 0);
 $legend-padding:          rem-calc(5);
 $form-spacing:            rem-calc(20);
 $helptext-color:          $gray;
@@ -203,10 +245,10 @@ $input-prefix-border:     rem-calc(1) solid $gray;
 $input-prefix-padding:    rem-calc($global-padding);
 
 $form-label-color:          $black;
-$form-label-font-size:      $small-font-size;
+$form-label-font-size:      $normal-font-size;
 $form-label-font-weight:    $global-weight-bold;
 $form-label-line-height:    1.8;
-$form-label-font-family:    $body-font-family;
+$form-label-font-family:    $header-font-family;
 $form-label-text-transform: none;
 
 $select-background:       $body-background;
@@ -232,11 +274,11 @@ $input-number-spinners: true;
 $input-radius:          rem-calc($global-radius);
 
 $placeholder-color:          $gray;
-$placeholder-font-family:    $input-font-family;
+$placeholder-font-family:    $header-font-family;
 $placeholder-text-transform: none;
 
 
-// 6. Table
+// 7. Table
 // -----------------------------------------------------------------------------
 
 $table-background:         $white;
@@ -250,14 +292,14 @@ $table-foot-background:    smart-scale($table-background, $table-color-scale);
 $table-head-font-color:    $body-font-color;
 
 
-// 7. Frontend
+// 8. Frontend
 // -----------------------------------------------------------------------------
 
 $pager-text-transform: uppercase;
 $pager-transition:     all $global-transition-timing;
 $pager-text-align:     center;
 
-$pager-link-padding:       0.5rem 0.9rem;
+$pager-link-padding:       rem-calc(8 10);
 $pager-link-border:        0;
 $pager-link-border-radius: rem-calc($global-radius);
 $pager-link-color:         $black;
@@ -270,31 +312,34 @@ $pager-link-background-hover: transparent;
 $pager-link-color-hover:      $primary-color;
 $pager-link-border-hover:     0;
 
-$pager-current-padding:       0.5rem 0.9rem;
+$pager-current-padding:       rem-calc(8 10);
 $pager-current-border:        rem-calc(1) solid $gray;
 $pager-current-border-radius: rem-calc($global-radius);
-$pager-current-color:         $body-font-color;
-$pager-current-background:    transparent;
+$pager-current-color:         $white;
+$pager-current-background:    $xdark-gray;
 
-$pager-ellipsis-padding:       0.5rem 0.9rem;
+$pager-ellipsis-padding:      rem-calc(8 10);
 $pager-ellipsis-border:        0;
 $pager-ellipsis-border-radius: rem-calc($global-radius);
 $pager-ellipsis-color:         $body-font-color;
 $pager-ellipsis-background:    transparent;
 
-$button-radius:           0;
-$button-background:       $white;
-$button-background-hover: $xdark-gray;
-$button-font-size:        $normal-font-size;
-$button-line-height:      1;
-$button-padding:          rem-calc(20 40);
-$button-color:            $xdark-gray;
-$button-color-hover:      $white;
-$button-border:           rem-calc(1) solid $xdark-gray;
-$button-border-hover:     rem-calc(1) solid $xdark-gray;
-$button-font-family:      $body-font-family;
-$button-text-transform:   none;
-$button-font-weight:      $global-weight-bold;
+$button-radius:              rem-calc($global-radius);
+$button-background:          $white;
+$button-background-hover:    $xdark-gray;
+$button-font-size:           $normal-font-size;
+$button-line-height:         1;
+$button-padding:             rem-calc(20 40);
+$button-color:               $xdark-gray;
+$button-color-hover:         $white;
+$button-border:              rem-calc(1) solid $xdark-gray;
+$button-border-hover:        rem-calc(1) solid $xdark-gray;
+$button-font-family:         $body-font-family;
+$button-text-transform:      none;
+$button-font-weight:         $global-weight-bold;
+$button-background-disabled: $gray;
+$button-color-disabled:      $dark-gray;
+$button-border-disabled:     rem-calc(1) solid $gray;
 
 $site-header-border-bottom:   rem-calc(1) solid $gray;
 $site-header-padding-top:     rem-calc($global-padding / 2);
@@ -303,8 +348,15 @@ $site-header-margin-bottom:   rem-calc($global-margin);
 $site-header-background:      $body-background;
 
 $callout-background:     rgba($info-color, .3);
+$callout-margin:         rem-calc(0 0 $global-margin 0);
 $callout-padding:        rem-calc($global-padding);
 $callout-border:         rem-calc(1) solid rgba($info-color, .2);
 $callout-color:          $info-color;
 $callout-radius:         rem-calc($global-radius);
+
+
+// 9. Custom variables
+// -----------------------------------------------------------------------------
+
+@import 'variables-custom';
 

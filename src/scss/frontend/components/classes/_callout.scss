@@ -4,16 +4,40 @@
 // Includes all Frontend callout styles.
 ////////////////////////////////////////////////////////////////////////////////
 
+/* Components */
+
 .callout {
   background: $callout-background;
   padding: $callout-padding;
   border: $callout-border;
   color: $callout-color;
   border-radius: $callout-radius;
+  margin: $callout-margin;
 
   p {
     &:last-child {
       margin-bottom: 0;
     }
   }
+}
+
+
+/* Modifiers */
+
+.callout--alert {
+  background-color: rgba($alert-color, .3);
+  border-color: rgba($alert-color, .2);
+  color: $alert-color;
+}
+
+.callout--warning {
+  background-color: rgba($warning-color, .3);
+  border-color: rgba($warning-color, .2);
+  color: $warning-color;
+}
+
+.callout--success {
+  background-color: rgba($success-color, .3);
+  border-color: rgba($success-color, .2);
+  color: $success-color;
 }
