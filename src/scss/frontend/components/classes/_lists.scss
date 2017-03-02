@@ -4,13 +4,14 @@
 // Includes all Frontend list styles.
 ////////////////////////////////////////////////////////////////////////////////
 
-.list-menu {
+.list--menu {
   li {
     margin-bottom: rem-calc($global-margin);
 
     // Tablet & up
     @include breakpoint($small) {
       margin-right: rem-calc($global-padding);
+      margin-bottom: 0;
 
       &:last-child {
         margin-right: 0;
