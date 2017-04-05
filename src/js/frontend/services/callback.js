@@ -5,20 +5,13 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 
-( function( $ ) {
+( function() {
   'use strict';
 
   Frontend.Services.callback = function( callback ) {
     if ( typeof callback !== 'undefined' ) {
-      try {
-        return callback();
-      }
-      catch( err ) {
-        if ( Frontend.Config.debug ) {
-          console.log( err );
-        }
-      }
+      return callback();
     }
   };
 
-}( jQuery ));
+}());

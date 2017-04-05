@@ -6,10 +6,6 @@
 
 // Namespace all theme specific functionality
 var Frontend = {
-  Config: {
-    debug: true
-  },
-
 ////////////////////////////////////////////////////////////////////////////////
 // DON'T EDIT ANYTHING BELOW THIS LINE!
 ////////////////////////////////////////////////////////////////////////////////
@@ -23,43 +19,12 @@ var Frontend = {
   // to the page (ex. AJAX).
   init: function() {
     jQuery.each( Frontend.Controllers, function( index, value ) {
-      console.log( "'" + index + "'" + ' controller initialized...' );
-      value.init( function() {
-        if ( Frontend.Config.debug ) {
-          console.log( '... ' + "'" + index + "'" + ' controller completed.' );
-        }
-      } );
+      value.init();
     });
   }
 };
 
 ( function( $ ) {
-  // Header
-  Frontend.Controllers.header = {
-    init: function( callback ) {
-      if ( $( '.header--fixed' ).length ) {
-        $( 'body' ).css( 'padding-top', $( '.header--fixed' ).outerHeight() );
-      }
-    }
-  };
-
-  // Menu toggle
-  Frontend.Controllers.menuToggle = {
-    init: function( callback ) {
-
-    }
-  };
-
-  // Header
-  Frontend.Controllers.scrollTo = {
-    init: function( callback ) {
-      $( 'a[href*="#"]' ).click( function( e ) {
-        $.scrollTo( this.hash, 1500, { easing:'swing', offset: -($( '.header' ).outerHeight()) });
-        return false;
-      });
-    }
-  };
-
   $( function() {
     // Initialize theme JS on page ready.
     Frontend.init();

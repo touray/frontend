@@ -3,6 +3,7 @@
 //
 // Below is an example on how to create Drupal behaviors.
 ////////////////////////////////////////////////////////////////////////////////
+/* eslint-disable */
 
 ( function ( $ ) {
   Drupal.behaviors.example = {

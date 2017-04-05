@@ -2,10 +2,7 @@
   "name": "frontend",
   "version": "3.0.0",
   "description": "A light-weight frontend framework for any project.",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/bmarshall511/frontend.git"
-  },
+  "repository": "https://github.com/bmarshall511/frontend",
   "keywords": [
     "frontend",
     "frontend-web",
@@ -18,7 +15,7 @@
   ],
   "author": {
     "name": "Ben Marshall",
-    "url": "https://benmarshall.me",
+    "url": "https://benmarshall.me"
   },
   "maintainers": [
     {
@@ -37,7 +34,6 @@
     "url": "https://github.com/bmarshall511/slider-menu.jquery.js/issues",
     "email": "me@benmarshall.me"
   },
-  "repository": "https://github.com/bmarshall511/frontend",
   "homepage": "https://github.com/bmarshall511/frontend#readme",
   "devDependencies": {
     "compass-options": "^0.1.1",
@@ -48,6 +44,7 @@
     "gulp-compass": "^2.1.0",
     "gulp-complexity": "^0.3.2",
     "gulp-concat": "^2.6.1",
+    "gulp-eslint": "^3.0.1",
     "gulp-imagemin": "^3.1.1",
     "gulp-jshint": "^2.0.4",
     "gulp-rename": "^1.2.2",

@@ -15,7 +15,8 @@ const gulp       = require('gulp'),
      complexity  = require('gulp-complexity'),
      replace     = require('gulp-replace'),
      del         = require('del'),
-     scsslint    = require('gulp-scss-lint');
+     scsslint    = require('gulp-scss-lint'),
+     eslint      = require('gulp-eslint');
 
 
 // Config Variables
@@ -27,9 +28,14 @@ var sourceJs  = 'src/js',
 // JavaScript Lint Task
 ////////////////////////////////////////////////////////////////////////////////
 gulp.task('lint', function() {
-  return gulp.src([ sourceJs + '/**/*.js', '!' + sourceJs + '/application/lib/*', '!' + sourceJs + '/frontend/lib/*' ])
+  return gulp.src([
+    sourceJs + '/**/*.js',
+    '!' + sourceJs + '/application/lib/*'
+  ])
     .pipe(jshint())
     .pipe(jshint.reporter(stylish))
+    .pipe(eslint())
+    .pipe(eslint.format())
 });
 
 
@@ -72,24 +78,6 @@ gulp.task('scripts', ['jscomplexity'], function() {
     .pipe(stripDebug())
     .pipe(uglify())
     .pipe(gulp.dest(paths.js));*/
-
-  // skip-link-focus-fix.js (optional)
-  /*gulp.src([sourceJs + '/frontend/lib/skip-link-focus-fix.js'])
-    .pipe(concat('skip-link-focus-fix.js'))
-    .pipe(gulp.dest(paths.js))
-    .pipe(rename('skip-link-focus-fix.min.js'))
-    .pipe(stripDebug())
-    .pipe(uglify())
-    .pipe(gulp.dest(paths.js));*/
-
-  // jquery.scrollTo.js (optional)
-  gulp.src([sourceJs + '/frontend/lib/jquery.scrollTo.js'])
-    .pipe(concat('jquery.scrollTo.js'))
-    .pipe(gulp.dest(paths.js))
-    .pipe(rename('jquery.scrollTo.min.js'))
-    .pipe(stripDebug())
-    .pipe(uglify())
-    .pipe(gulp.dest(paths.js));
 });
 
 gulp.task('scripts_dev', ['jscomplexity'], function() {
@@ -107,27 +95,6 @@ gulp.task('scripts_dev', ['jscomplexity'], function() {
     .pipe(concat('global.js'))
     .pipe(gulp.dest(paths.js))
     .pipe(rename('global.min.js'))
-    .pipe(gulp.dest(paths.js));
-
-  // html5.js (optional)
-  /*gulp.src([sourceJs + '/frontend/lib/html5.js'])
-    .pipe(concat('html5.js'))
-    .pipe(gulp.dest(paths.js))
-    .pipe(rename('html5.min.js'))
-    .pipe(gulp.dest(paths.js));*/
-
-  // skip-link-focus-fix.js (optional)
-  /*gulp.src([sourceJs + '/frontend/lib/skip-link-focus-fix.js'])
-    .pipe(concat('skip-link-focus-fix.js'))
-    .pipe(gulp.dest(paths.js))
-    .pipe(rename('skip-link-focus-fix.min.js'))
-    .pipe(gulp.dest(paths.js));*/
-
-  // jquery.scrollTo.js (optional)
-  gulp.src([sourceJs + '/frontend/lib/jquery.scrollTo.js'])
-    .pipe(concat('jquery.scrollTo.js'))
-    .pipe(gulp.dest(paths.js))
-    .pipe(rename('jquery.scrollTo.min.js'))
     .pipe(gulp.dest(paths.js));
 });
 
