@@ -4,15 +4,15 @@
 // Includes all Frontend callout styles.
 ////////////////////////////////////////////////////////////////////////////////
 
-/* Components */
+// Components
 
 .callout {
   background: $callout-background;
-  padding: $callout-padding;
   border: $callout-border;
-  color: $callout-color;
   border-radius: $callout-radius;
+  color: $callout-color;
   margin: $callout-margin;
+  padding: $callout-padding;
 
   p {
     &:last-child {
@@ -22,7 +22,7 @@
 }
 
 
-/* Modifiers */
+// Modifiers
 
 .callout--alert {
   background-color: rgba($alert-color, .3);

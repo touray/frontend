@@ -66,15 +66,15 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: $header-font-family;
-  font-weight: $header-font-weight;
-  font-style: $header-font-style;
   color: $header-color;
-  text-rendering: $header-text-rendering;
-  margin-top: 0;
-  margin-bottom: $header-margin-bottom;
-  line-height: $header-lineheight;
+  font-family: $header-font-family;
+  font-style: $header-font-style;
+  font-weight: $header-font-weight;
   letter-spacing: $header-letter-spacing;
+  line-height: $header-lineheight;
+  margin-bottom: $header-margin-bottom;
+  margin-top: 0;
+  text-rendering: $header-text-rendering;
 
   small {
     color: $header-small-font-color;
@@ -200,9 +200,9 @@ h6 {
 // Links
 a {
   color: $anchor-color;
-  text-decoration: $anchor-text-decoration;
-  line-height: inherit;
   cursor: pointer;
+  line-height: inherit;
+  text-decoration: $anchor-text-decoration;
 
   &:hover,
   &:focus {
@@ -219,12 +219,12 @@ a {
 
 // Horizontal rule
 hr {
-  max-width: $hr-width;
-  height: 0;
-  border-top: 0;
   border-bottom: $hr-border;
-  margin: $hr-margin;
+  border-top: 0;
   clear: both;
+  height: 0;
+  margin: $hr-margin;
+  max-width: $hr-width;
 }
 
 // Lists
@@ -232,8 +232,8 @@ ul,
 ol,
 dl {
   line-height: $list-lineheight;
-  margin-bottom: $list-margin-bottom;
   list-style-position: $list-style-position;
+  margin-bottom: $list-margin-bottom;
 }
 
 // List items
@@ -255,11 +255,12 @@ ol {
 }
 
 // Nested unordered/ordered lists
-ul, ol {
+ul,
+ol {
   & & {
+    list-style-type: inherit;
     margin-#{$global-left}: $list-nested-side-margin;
     margin-bottom: 0;
-    list-style-type: inherit;
   }
 }
 
@@ -268,68 +269,69 @@ dl {
   margin-bottom: $defnlist-margin-bottom;
 
   dt {
-    margin-bottom: $defnlist-term-margin-bottom;
     font-weight: $defnlist-term-weight;
+    margin-bottom: $defnlist-term-margin-bottom;
   }
 }
 
 // Blockquotes
 blockquote {
-  margin: $blockquote-margin;
-  padding: $blockquote-padding;
+  background: $blockquote-background;
   border-#{$global-left}: $blockquote-border;
   font-family: $blockquote-font-family;
   font-size: $blockquote-font-size;
   line-height: $blockquote-line-height;
-  background: $blockquote-background;
+  margin: $blockquote-margin;
+  padding: $blockquote-padding;
 
-  &, p {
-    line-height: $paragraph-lineheight;
+  &,
+  p {
     color: $blockquote-color;
+    line-height: $blockquote-line-height;
   }
 }
 
 // Citations
 cite {
+  color: $cite-color;
   display: block;
   font-size: $cite-font-size;
-  color: $cite-color;
 
-  &:before {
+  &::before {
     content: '\2014 \0020';
   }
 }
 
 // Abbreviations
 abbr {
+  border-bottom: $abbr-underline;
   color: $body-font-color;
   cursor: help;
-  border-bottom: $abbr-underline;
 }
 
 // Code
 code,
 pre {
-  font-family: $code-font-family;
-  font-weight: $code-font-weight;
-  color: $code-color;
   background-color: $code-background;
   border: $code-border;
+  color: $code-color;
+  font-family: $code-font-family;
+  font-weight: $code-font-weight;
   padding: $code-padding;
 }
 
 pre {
-  padding: rem-calc(20);
   margin-bottom: rem-calc($global-margin);
+  padding: rem-calc(20);
 }
 
 // Keystrokes
 kbd {
-  padding: $keystroke-padding;
-  margin: 0;
   background-color: $keystroke-background;
   color: $keystroke-color;
   font-family: $keystroke-font;
+  margin: 0;
+  padding: $keystroke-padding;
 }
 
 sup,

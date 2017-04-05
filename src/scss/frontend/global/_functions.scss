@@ -52,6 +52,7 @@ $rem-base: 16px !default;
 /// @returns {Number} A number in rems, calculated based on the given value and the base pixel value. rem values are passed through as is.
 /// @access private
 @function -zf-to-rem($value, $base: $rem-base) {
+  // scss-lint:disable ZeroUnit
   // Calculate rem if units for $value is not rem
   @if (unit($value) != 'rem') {
     $value: strip-unit($value) / strip-unit($base) * 1rem;

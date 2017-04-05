@@ -10,8 +10,8 @@
 
     // Tablet & up
     @include breakpoint($small) {
-      margin-right: rem-calc($global-padding);
       margin-bottom: 0;
+      margin-right: rem-calc($global-padding);
 
       &:last-child {
         margin-right: 0;

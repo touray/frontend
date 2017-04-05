@@ -7,18 +7,14 @@
 
 .float-left {
   float: left;
-}
-img.float-left {
-  margin-right: rem-calc($global-padding);
   margin-bottom: rem-calc($global-padding);
+  margin-right: rem-calc($global-padding);
 }
 
 .float-right {
   float: right;
-}
-img.float-right {
-  margin-left: rem-calc($global-padding);
   margin-bottom: rem-calc($global-padding);
+  margin-left: rem-calc($global-padding);
 }
 
 .align-left {

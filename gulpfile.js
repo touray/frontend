@@ -14,7 +14,8 @@ const gulp       = require('gulp'),
      imagemin    = require('gulp-imagemin'),
      complexity  = require('gulp-complexity'),
      replace     = require('gulp-replace'),
-     del         = require('del');
+     del         = require('del'),
+     scsslint    = require('gulp-scss-lint');
 
 
 // Config Variables
@@ -132,9 +133,18 @@ gulp.task('scripts_dev', ['jscomplexity'], function() {
 
 
 ////////////////////////////////////////////////////////////////////////////////
+// SCSS Lint Task
+////////////////////////////////////////////////////////////////////////////////
+gulp.task('scss-lint', function() {
+  return gulp.src(paths.sass + '/**/*.scss')
+    .pipe(scsslint());
+});
+
+
+////////////////////////////////////////////////////////////////////////////////
 // Compass Task
 ////////////////////////////////////////////////////////////////////////////////
-gulp.task('compass_dev', ['images'], function() {
+gulp.task('compass_dev', ['images', 'scss-lint'], function() {
   return gulp.src(paths.sass + '/**/*.scss')
     .pipe(compass({
       config_file: './config.rb',
@@ -151,7 +161,7 @@ gulp.task('compass_dev', ['images'], function() {
     .pipe(gulp.dest(paths.css));
 });
 
-gulp.task('compass', ['images'], function() {
+gulp.task('compass', ['images', 'scss-lint'], function() {
   return gulp.src(paths.sass + '/**/*.scss')
     .pipe(compass({
       config_file: './config.rb',

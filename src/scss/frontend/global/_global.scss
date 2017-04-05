@@ -7,20 +7,20 @@
 // src/scss/application/global.
 ////////////////////////////////////////////////////////////////////////////////
 
-/* Compass & Singularity Extensions */
+// Compass & Singularity extensions
 @import 'compass';
 @import 'breakpoint';
 @import 'singularitygs';
 @import 'toolkit';
 @import 'toolkit/kickstart';
 
-/* Private Imports */
+// Private imports
 @import 'functions';
 @import 'variables';
 
 // Application variables and framework variable overrides
 @import 'application/global/variables';
 
-/* Continued Private Imports */
+// Continued private imports
 @import 'mixins';
 @import 'extendables';

@@ -4,23 +4,23 @@
 // Includes all Frontend .header styles.
 ////////////////////////////////////////////////////////////////////////////////
 
-/* Components */
+// Components
 
 .header {
+  background: $site-header-background;
   border-bottom: $site-header-border-bottom;
   margin-bottom: $site-header-margin-bottom;
-  padding-top: $site-header-padding-top;
   padding-bottom: $site-header-padding-bottom;
-  background: $site-header-background;
+  padding-top: $site-header-padding-top;
 }
 
 
-/* Modifiers */
+// Modifiers
 
 .header--fixed {
-  position: fixed;
-  z-index: 9;
-  top: 0;
   left: 0;
+  position: fixed;
+  top: 0;
   width: 100%;
+  z-index: 9;
 }

@@ -59,12 +59,12 @@ $xdark-gray:               #231e20                                     !default;
 $primary-color:            #00b282                                     !default;
 $secondary-color:          #0093bb                                     !default;
 
-$success-color:            #009900                                     !default;
+$success-color:            #090                                        !default;
 $warning-color:            #ffae00                                     !default;
 $alert-color:              #ce3e3e                                     !default;
 $info-color:               #0058b2                                     !default;
 
-/* Body */
+// Body
 
 $body-background:          $white                                      !default;
 $body-font-color:          $dark-gray                                  !default;
@@ -99,9 +99,9 @@ $small:        $global-width-small + $gutter-padding-small             !default;
 $medium:       $global-width-medium + $gutter-padding-medium           !default; // Desktop & up
 $large:        $global-width-large + $gutter-padding-large             !default; // Large screens
 
-$small-down:   0px $small                                              !default; // Tablet & up
-$medium-down:  0px $medium                                             !default; // Desktop & up
-$large-down:   0px $large                                              !default; // Large screens
+$small-down:   0 $small                                                !default; // Tablet & up
+$medium-down:  0 $medium                                               !default; // Desktop & up
+$large-down:   0 $large                                                !default; // Large screens
 
 
 // 5. Base Typography
@@ -111,7 +111,7 @@ $body-font-family:         "Trebuchet MS", Helvetica, sans-serif       !default;
 $font-family-monospace:    "Courier New", Courier, monospace           !default;
 $body-antialiased:         true                                        !default;
 
-/* Header (h1, h2, h3, etc.) */
+// Header (h1, h2, h3, etc.)
 
 $header-font-family:       Arial, Helvetica, sans-serif                !default;
 $header-font-weight:       $global-weight-bold                         !default;
@@ -124,12 +124,10 @@ $header-text-rendering:    optimizeLegibility                          !default;
 $header-small-font-color:  $dark-gray                                  !default;
 $header-letter-spacing:    normal                                      !default;
 
-/**
- * Header Font Sizes
- *
- * These should not be used to define sizes within stylesheets. Instead, use the
- * font sizes defined in the next section below.
- */
+// Header font sizes
+//
+// These should not be used to define sizes within stylesheets. Instead, use the
+// font sizes defined in the next section below.
 
 $header-1-size:            rem-calc($global-font-size + 35)            !default;
 $header-2-size:            rem-calc($global-font-size + 28)            !default;
@@ -162,11 +160,10 @@ $header-4-size-large:            rem-calc($global-font-size-large + 14) !default
 $header-5-size-large:            rem-calc($global-font-size-large + 7)  !default;
 $header-6-size-large:            rem-calc($global-font-size-large)     !default;
 
-/**
- * Font Sizes
- *
- * Use these variables when targeting element font sizes.
- */
+
+// Font sizes
+//
+// Use these variables when targeting element font sizes.
 
 $xxxlarge-font-size:    $header-1-size                                 !default;
 $xxlarge-font-size:     $header-2-size                                 !default;
@@ -207,7 +204,7 @@ $list-side-margin:            1.25rem                                  !default;
 $list-nested-side-margin:     1.25rem                                  !default;
 $defnlist-margin-bottom:      1rem                                     !default;
 $defnlist-term-weight:        $global-weight-bold                      !default;
-$defnlist-term-margin-bottom: 0.3rem                                   !default;
+$defnlist-term-margin-bottom: .3rem                                    !default;
 
 $blockquote-color:            $dark-gray                               !default;
 $blockquote-padding:          rem-calc($global-padding)                !default;
@@ -271,7 +268,7 @@ $input-shadow:       none                                              !default;
 $input-shadow-focus: none                                              !default;
 
 $input-cursor-disabled: default                                        !default;
-$input-transition:      box-shadow 0.5s, border-color 0.25s ease-in-out !default;
+$input-transition:      box-shadow .5s, border-color .25s ease-in-out  !default;
 $input-number-spinners: true                                           !default;
 $input-radius:          rem-calc($global-radius)                       !default;
 

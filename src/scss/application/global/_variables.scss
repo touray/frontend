@@ -57,12 +57,12 @@ $xdark-gray:               #231e20;
 $primary-color:            #00b282;
 $secondary-color:          #0093bb;
 
-$success-color:            #009900;
+$success-color:            #090;
 $warning-color:            #ffae00;
 $alert-color:              #ce3e3e;
 $info-color:               #0058b2;
 
-/* Body */
+// Body
 
 $body-background:          $white;
 $body-font-color:          $dark-gray;
@@ -97,9 +97,9 @@ $small:        $global-width-small + $gutter-padding-small; // Tablet & up
 $medium:       $global-width-medium + $gutter-padding-medium; // Desktop & up
 $large:        $global-width-large + $gutter-padding-large; // Large screens
 
-$small-down:   0px $small; // Tablet & up
-$medium-down:  0px $medium; // Desktop & up
-$large-down:   0px $large; // Large screens
+$small-down:   0 $small; // Tablet & up
+$medium-down:  0 $medium; // Desktop & up
+$large-down:   0 $large; // Large screens
 
 
 // 5. Base Typography
@@ -109,7 +109,7 @@ $body-font-family:         "Trebuchet MS", Helvetica, sans-serif;
 $font-family-monospace:    "Courier New", Courier, monospace;
 $body-antialiased:         true;
 
-/* Header (h1, h2, h3, etc.) */
+// Header (h1, h2, h3, etc.)
 
 $header-font-family:       Arial, Helvetica, sans-serif;
 $header-font-weight:       $global-weight-bold;
@@ -122,12 +122,10 @@ $header-text-rendering:    optimizeLegibility;
 $header-small-font-color:  $dark-gray;
 $header-letter-spacing:    normal;
 
-/**
- * Header Font Sizes
- *
- * These should not be used to define sizes within stylesheets. Instead, use the
- * font sizes defined in the next section below.
- */
+// Header font sizes
+//
+// These should not be used to define sizes within stylesheets. Instead, use the
+// font sizes defined in the next section below.
 
 $header-1-size:            rem-calc($global-font-size + 35);
 $header-2-size:            rem-calc($global-font-size + 28);
@@ -160,11 +158,10 @@ $header-4-size-large:            rem-calc($global-font-size-large + 14);
 $header-5-size-large:            rem-calc($global-font-size-large + 7);
 $header-6-size-large:            rem-calc($global-font-size-large);
 
-/**
- * Font Sizes
- *
- * Use these variables when targeting element font sizes.
- */
+
+// Font sizes
+//
+// Use these variables when targeting element font sizes.
 
 $xxxlarge-font-size:    $header-1-size;
 $xxlarge-font-size:     $header-2-size;
@@ -205,7 +202,7 @@ $list-side-margin:            1.25rem;
 $list-nested-side-margin:     1.25rem;
 $defnlist-margin-bottom:      1rem;
 $defnlist-term-weight:        $global-weight-bold;
-$defnlist-term-margin-bottom: 0.3rem;
+$defnlist-term-margin-bottom: .3rem;
 
 $blockquote-color:            $dark-gray;
 $blockquote-padding:          rem-calc($global-padding);
@@ -269,7 +266,7 @@ $input-shadow:       none;
 $input-shadow-focus: none;
 
 $input-cursor-disabled: default;
-$input-transition:      box-shadow 0.5s, border-color 0.25s ease-in-out;
+$input-transition:      box-shadow .5s, border-color .25s ease-in-out;
 $input-number-spinners: true;
 $input-radius:          rem-calc($global-radius);
 

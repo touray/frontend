@@ -8,6 +8,7 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 @mixin form-element {
+  // scss-lint:disable VendorPrefix
   $height: $input-font-size + $form-spacing;
 
   display: block;
@@ -31,10 +32,10 @@
 
   // Focus state
   &:focus {
-    border: $input-border-focus;
     background: $input-background-focus;
-    outline: none;
+    border: $input-border-focus;
     box-shadow: $input-shadow-focus;
+    outline: none;
 
     @if hasvalue($input-transition) {
       transition: $input-transition;
@@ -47,13 +48,13 @@
     text-transform: $placeholder-text-transform;
   }
 
-  &:-moz-placeholder { /* Firefox 18- */
+  &::-moz-placeholder { // Firefox 18-
     color: $placeholder-color;
     font-family: $placeholder-font-family;
     text-transform: $placeholder-text-transform;
   }
 
-  &::-moz-placeholder {  /* Firefox 19+ */
+  &::-moz-placeholder {  // Firefox 19+
     color: $placeholder-color;
     font-family: $placeholder-font-family;
     text-transform: $placeholder-text-transform;
@@ -70,8 +71,8 @@
 #{text-inputs()},
 textarea {
   @include form-element;
-  -webkit-appearance: none;
   -moz-appearance: none;
+  -webkit-appearance: none;
 }
 
 // Text areas
@@ -96,14 +97,9 @@ textarea {
 // Reset styles on button-like inputs
 [type="submit"],
 [type="button"] {
-  -webkit-appearance: none;
-  -moz-appearance: none;
   @extend %button;
-}
-
-// Reset Normalize setting content-box to search elements
-input[type="search"] {
-  box-sizing: border-box;
+  -moz-appearance: none;
+  -webkit-appearance: none;
 }
 
 // Number input styles
@@ -129,7 +125,7 @@ input[type="search"] {
 [type="checkbox"] + label,
 [type="radio"] + label {
   display: inline-block;
-  margin-#{$global-left}: $form-spacing * 0.5;
+  margin-#{$global-left}: $form-spacing * .5;
   margin-#{$global-right}: $form-spacing;
   margin-bottom: 0;
   vertical-align: baseline;
@@ -138,7 +134,7 @@ input[type="search"] {
 // Styles for inputs inside labels
 label > [type="checkbox"],
 label > [type="label"] {
-  margin-#{$global-right}: $form-spacing * 0.5;
+  margin-#{$global-right}: $form-spacing * .5;
 }
 
 // Normalize file input width
@@ -173,15 +169,15 @@ label {
 
 fieldset {
   border: $fieldset-border;
-  padding: $fieldset-padding;
   margin: $fieldset-margin;
+  padding: $fieldset-padding;
 
   legend {
     // Covers up the fieldset's border to create artificial padding
     background: $body-background;
-    padding: $legend-padding;
     margin: 0;
     margin-#{$global-left}: rem-calc(-3);
+    padding: $legend-padding;
   }
 }
 
@@ -191,7 +187,6 @@ fieldset {
   height: $height;
   padding: ($form-spacing / 2);
   border: $input-border;
-  border-radius: $global-radius;
   margin: 0 0 $form-spacing;
   font-size: $input-font-size;
   font-family: $input-font-family;
@@ -204,10 +199,11 @@ fieldset {
 
   @if $select-triangle-color != transparent {
     @include background-triangle($select-triangle-color);
-    background-size: 9px 6px;
     background-position: $global-right ($form-spacing / 2) center;
     background-repeat: no-repeat;
+    background-size: rem-calc(9 6);
   }
+
   // Disabled state
   &:disabled {
     background-color: $input-background-disabled;

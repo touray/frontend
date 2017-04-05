@@ -5,7 +5,7 @@
 // no individual style definitions.
 ////////////////////////////////////////////////////////////////////////////////
 
-/* Framework Partials */
+// Framework Partials
 
 // REQUIRED. Global Frontend functions, mixins, default variables and
 // extendables.
@@ -31,13 +31,13 @@
 @import 'frontend/components/classes/callout';
 
 
-/* CMS Partials */
+// CMS Partials
 
 //@import 'frontend/components/drupal7';
 //@import 'frontend/components/wordpress';
 
 
-/* Application Partials */
+// Application Partials
 
 // Application functions, mixins, default variables and extendables
 //@import 'application/global/..';

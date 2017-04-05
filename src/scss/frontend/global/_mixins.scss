@@ -23,8 +23,7 @@
   @media screen and (min-width:0\0) {
     @if lightness($color) < 50% {
       background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAYCAYAAACbU/80AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAIpJREFUeNrEkckNgDAMBBfRkEt0ObRBBdsGXUDgmQfK4XhH2m8czQAAy27R3tsw4Qfe2x8uOO6oYLb6GlOor3GF+swURAOmUJ+RwtEJs9WvTGEYxBXqI1MQAZhCfUQKRzDMVj+TwrAIV6jvSUEkYAr1LSkcyTBb/V+KYfX7xAeusq3sLDtGH3kEGACPWIflNZfhRQAAAABJRU5ErkJggg==');
-    }
-    @else {
+    } @else {
       background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAYCAYAAACbU/80AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAMBJREFUeNrEllsOhCAMRVszC9IlzU7KCmVHTJsoMWYMUtpyv9BgbuXQB5ZSdgBYYY4ycgBivk8KYFsQMfMiTTBP4o3nUzCKzOabLJbLy2/g31evGkAginR4/ZegKH5qX3bJCscA3t0x3kgO5tQFyhhFf50xRqFLbyMUNJQzgyjGS/wgCpvKqkRBpuWrE4V9d+1E4dPUXqIg107SQOE/2DRQxMwTDygIInVDET9T3lCoj/6j/VCmGjZOl2lKpZ8AAwDQP7zIimDGFQAAAABJRU5ErkJggg==');
     }
   }
@@ -32,6 +31,7 @@
 
 /// Adds Mozilla specific styles.
 @mixin moz-specific() {
+  // scss-lint:disable VendorPrefix
   @-moz-document url-prefix() {
     @content;
   }
@@ -39,6 +39,7 @@
 
 /// Adds a cross-browser mask background image.
 @mixin mask-image($img) {
+  // scss-lint:disable VendorPrefix
   -moz-mask-image: $img;
   -webkit-mask-image: $img;
   mask-image: $img;
@@ -56,12 +57,13 @@
 
   // Moz specific, doesn't fully support background masks
   @include moz-specific {
-    background-color: transparent !important;
+    background-color: transparent;
   }
 }
 
 /// Adds a cross-browser mask size.
 @mixin mask-size($size) {
+  // scss-lint:disable VendorPrefix
   -moz-mask-size: $size;
   -webkit-mask-size: $size;
   mask-size: $size;
@@ -69,6 +71,7 @@
 
 /// Adds a cross-browser mask position.
 @mixin mask-position($position) {
+  // scss-lint:disable VendorPrefix
   -moz-mask-position: $position;
   -webkit-mask-position: $position;
   mask-position: $position;
@@ -76,6 +79,7 @@
 
 /// Adds a cross-browser mask repeat.
 @mixin mask-repeat($repeat) {
+  // scss-lint:disable VendorPrefix
   -moz-mask-repeat: $repeat;
   -webkit-mask-repeat: $repeat;
   mask-repeat: $repeat;

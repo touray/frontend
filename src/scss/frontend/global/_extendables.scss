@@ -5,13 +5,13 @@
 // src/scss/application/global.
 ////////////////////////////////////////////////////////////////////////////////
 
-/* Layout */
+// Layout
 
 %container {
-  width: 100%;
-  max-width: rem-calc($global-width + $gutter-padding);
-  margin: 0 auto;
   @include clearfix;
+  margin: 0 auto;
+  max-width: rem-calc($global-width + $gutter-padding);
+  width: 100%;
 
   @include breakpoint($small) {
     max-width: rem-calc($global-width-small + $gutter-padding-small, $global-font-size-small);
@@ -27,9 +27,9 @@
 }
 
 %container-full {
-  width: 100%;
-  margin: 0 auto;
   @include clearfix;
+  margin: 0 auto;
+  width: 100%;
 
   @include breakpoint($small) {
     max-width: 100%;
@@ -45,68 +45,69 @@
 }
 
 %flex {
-  display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
-  display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
-  display: -ms-flexbox;      /* TWEENER - IE 10 */
-  display: -webkit-flex;     /* NEW - Chrome */
-  display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+  // scss-lint:disable VendorPrefix
+  display: -webkit-box;      // OLD - iOS 6-, Safari 3.1-6
+  display: -moz-box;         // OLD - Firefox 19- (buggy but mostly works)
+  display: -ms-flexbox;      // TWEENER - IE 10
+  display: -webkit-flex;     // NEW - Chrome
+  display: flex;             // NEW, Spec - Opera 12.1, Firefox 20+
 
-  -webkit-flex-wrap: wrap;
-  flex-wrap: wrap;
   -webkit-flex-direction: row;
   flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
 
   justify-content: space-between;
 }
 
 
-/* Button */
+// Button
 
 %button {
-  display: inline-block;
-  border-radius: $button-radius;
   background: $button-background;
-  font-size: $button-font-size;
-  line-height: $button-line-height;
-  padding: $button-padding;
   border: $button-border;
+  border-radius: $button-radius;
   color: $button-color;
   cursor: pointer;
+  display: inline-block;
   font-family: $button-font-family;
-  text-align: center;
-  text-transform: $button-text-transform;
-  text-decoration: none;
+  font-size: $button-font-size;
   font-weight: $button-font-weight;
+  line-height: $button-line-height;
+  padding: $button-padding;
+  text-align: center;
+  text-decoration: none;
+  text-transform: $button-text-transform;
 
   &:hover {
     background: $button-background-hover;
-    color: $button-color-hover;
     border: $button-border-hover;
+    color: $button-color-hover;
     text-decoration: none;
   }
 
   &[disabled="disabled"] {
     background: $button-background-disabled;
-    color: $button-color-disabled;
     border: $button-border-disabled;
+    color: $button-color-disabled;
 
     &:hover {
       background: $button-background-disabled;
-      color: $button-color-disabled;
       border: $button-border-disabled;
+      color: $button-color-disabled;
     }
   }
 }
 
 
-/* Lists */
+// Lists
 
 %list-block {
   list-style: none;
-  padding-left: 0;
+  margin-bottom: rem-calc($global-margin);
   margin-left: 0;
   margin-top: rem-calc($global-margin);
-  margin-bottom: rem-calc($global-margin);
+  padding-left: 0;
 
   li {
     display: block;
@@ -114,24 +115,25 @@
 }
 
 
-/* Pager */
+// Pager
 
 %pager {
+  // scss-lint:disable NestingDepth
   @include inline-block-list;
-  text-transform: $pager-text-transform;
   text-align: $pager-text-align;
+  text-transform: $pager-text-transform;
 
   a {
-    display: inline-block;
-    transition: $pager-transition;
-    padding: $pager-link-padding;
+    background: $pager-link-background;
     border: $pager-link-border;
     border-radius: $pager-link-border-radius;
     color: $pager-link-color;
-    background: $pager-link-background;
+    display: inline-block;
+    font-family: $pager-link-font-family;
     font-size: $pager-link-size;
     line-height: $pager-link-line-height;
-    font-family: $pager-link-font-family;
+    padding: $pager-link-padding;
+    transition: $pager-transition;
 
     &:hover {
       background: $pager-link-background-hover;
@@ -142,19 +144,19 @@
 
   li {
     &.pager-ellipsis {
-      padding: $pager-ellipsis-padding;
-      color: $pager-ellipsis-color;
-      border: $pager-ellipsis-border;
       background: $pager-ellipsis-background;
+      border: $pager-ellipsis-border;
       border-radius: $pager-ellipsis-border-radius;
+      color: $pager-ellipsis-color;
+      padding: $pager-ellipsis-padding;
     }
 
     &.pager-current {
-      padding: $pager-current-padding;
-      color: $pager-current-color;
-      border: $pager-current-border;
       background: $pager-current-background;
+      border: $pager-current-border;
       border-radius: $pager-current-border-radius;
+      color: $pager-current-color;
+      padding: $pager-current-padding;
 
       a {
         color: $white;
@@ -165,33 +167,33 @@
 }
 
 %screen-reader-text {
+  border: 0;
   clip: rect(rem-calc(1), rem-calc(1), rem-calc(1), rem-calc(1));
   height: rem-calc(1);
-  overflow: hidden;
-  position: absolute !important;
-  width: rem-calc(1);
   margin-bottom: rem-calc(-1);
+  overflow: hidden;
   padding: 0;
-  border: 0;
-  word-wrap: normal !important;
+  position: absolute;
+  width: rem-calc(1);
+  word-wrap: normal;
 
   &:focus {
-    background-color: #f1f1f1;
+    background-color: $white;
     border-radius: rem-calc($global-radius);
-    box-shadow: rem-calc(0 0 2 2) rgba(0, 0, 0, 0.6);
-    clip: auto !important;
-    color: #21759b;
+    box-shadow: rem-calc(0 0 2 2) rgba($black, .6);
+    clip: auto;
+    color: $primary-color;
     display: block;
     font-size: 14px;
     font-weight: bold;
     height: auto;
+    left: rem-calc(5);
     line-height: normal;
     padding: rem-calc(15 23 14);
     position: absolute;
-    left: rem-calc(5);
-    top: rem-calc(5);
     text-decoration: none;
+    top: rem-calc(5);
     width: auto;
-    z-index: 100000; /* Above WP toolbar */
+    z-index: 100000; // Above WP toolbar
   }
 }

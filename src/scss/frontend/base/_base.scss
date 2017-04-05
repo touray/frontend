@@ -13,6 +13,7 @@
 
 html,
 body {
+  box-sizing: $global-box-sizing;
   font-size: $global-font-size;
 
   // Tablet & up
@@ -29,30 +30,28 @@ body {
   @include breakpoint($large) {
     font-size: $global-font-size-large;
   }
-
-  box-sizing: $global-box-sizing;
 }
 
 // Set box-sizing globally to handle padding and border widths
 *,
-*:before,
-*:after {
+*::before,
+*::after {
   box-sizing: inherit;
 }
 
 // Default body styles
 body {
-  padding: 0;
-  margin: 0;
+  background: $body-background;
+  color: $body-font-color;
   font-family: $body-font-family;
   font-weight: $global-weight-normal;
   line-height: $global-lineheight;
-  color: $body-font-color;
-  background: $body-background;
+  margin: 0;
+  padding: 0;
 
   @if ($body-antialiased) {
-    -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
   }
 
   // Tablets & up
@@ -73,52 +72,51 @@ body {
 
 img {
   // Grid defaults to get images and embeds to work properly
-  max-width: 100%;
-  height: auto;
-  -ms-interpolation-mode: bicubic;
-
   // Get rid of gap under images by making them display: inline-block; by default
   display: inline-block;
+  height: auto;
+  -ms-interpolation-mode: bicubic;
+  max-width: 100%;
   vertical-align: middle;
 }
 
 // Make sure textarea takes on height automatically
 textarea {
+  border-radius: $global-radius;
   height: auto;
   min-height: 50px;
-  border-radius: $global-radius;
 }
 
 // Make select elements are 100% width by default
 select {
-  width: 100%;
   border-radius: $global-radius;
+  width: 100%;
 }
 
 // Reset <button> styles created by most browsers
 button {
-  -webkit-appearance: none;
   -moz-appearance: none;
+  -webkit-appearance: none;
   background: transparent;
-  padding: 0;
   border: 0;
   border-radius: $global-radius;
   line-height: 1;
+  padding: 0;
 }
 
 /// Adds the general styles for tables.
 /// @param {Keyword} $stripe [$table-stripe] - Uses kewords even, odd, or none to darken rows of the table. The defualt value is even.
 @mixin table($stripe: $table-stripe) {
-  width: 100%;
-  margin-bottom: $global-margin;
   border-radius: $global-radius;
+  margin-bottom: $global-margin;
+  width: 100%;
 
   @at-root {
     thead,
     tbody,
     tfoot {
-      border: $table-border;
       background-color: $table-background;
+      border: $table-border;
     }
 
     // Caption
@@ -141,8 +139,8 @@ button {
       // Cells within head and foot
       th,
       td {
-        padding: $table-padding;
         font-weight: $global-weight-bold;
+        padding: $table-padding;
         text-align: #{$global-left};
       }
     }
@@ -150,15 +148,13 @@ button {
     // Table rows
     tbody {
       tr {
-        // If stripe is set to even, darken the even rows.
         @if $stripe == even {
+          // If stripe is set to even, darken the even rows.
           &:nth-child(even) {
             background-color: $table-striped-background;
           }
-        }
-
-        // If stripe is set to odd, darken the odd rows.
-        @else if $stripe == odd {
+        } @else if $stripe == odd {
+          // If stripe is set to odd, darken the odd rows.
           &:nth-child(odd) {
             background-color: $table-striped-background;
           }

@@ -4,12 +4,12 @@
 // Includes all Frontend classes that can be used anywhere.
 ////////////////////////////////////////////////////////////////////////////////
 
-/* Table */
+// Table
 
 .table {
+  background: $table-background;
   display: table;
   width: 100%;
-  background: $table-background;
 }
 
 .table-header {
@@ -46,17 +46,15 @@
 }
 
 .table-col {
+  padding: $table-padding;
+
   // Tablet & up
   @include breakpoint($small) {
     display: table-cell;
   }
 }
 
-.table-col {
-  padding: $table-padding;
-}
-
-/* Pager */
+// Pager
 
 .pager {
   @extend %pager;

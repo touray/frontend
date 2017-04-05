@@ -5,7 +5,7 @@
 // for more details.
 ////////////////////////////////////////////////////////////////////////////////
 
-/* Form Styles */
+// Form Styles
 .form-submit {
   @extend %button;
   margin: rem-calc(10 10 10 0);
@@ -31,77 +31,62 @@
   }
 
   .description {
-    margin-top: rem-calc(5);
-    font-size: $xsmall-font-size;
     color: $dark-gray;
+    font-size: $xsmall-font-size;
+    margin-top: rem-calc(5);
   }
 }
 
 
-/* Pager Styles */
-
+// Pager styles
 .pager {
   @extend %pager;
 }
 
 
-/* System Messages */
-
-div.status,
-.ok {
-  color: $success-color;
-}
-
-div.warning,
-.warning {
-  color: $warning-color;
-}
-
-div.error,
+// System messages
+.status,
+.warning,
 .error {
-  color: $alert-color;
-}
-
-div.status,
-table tr.ok {
-  background-color: rgba($success-color, .05);
-}
-
-div.warning,
-table tr.warning {
-  background-color: rgba($warning-color, .05)
-}
-
-div.error,
-table tr.error {
-  background-color: rgba($alert-color, .05)
-}
-
-div.status {
-  border-color: $success-color;
-}
-
-div.status,
-div.warning,
-div.error {
   background-image: none;
 }
 
-div.messages {
-  border-radius: $global-radius;
+.status,
+.ok {
+  background-color: rgba($success-color, .05);
+  color: $success-color;
+}
+
+.warning {
+  background-color: rgba($warning-color, .05);
+  color: $warning-color;
+}
+
+.error {
+  background-color: rgba($alert-color, .05);
+  color: $alert-color;
+}
+
+.status {
+  border-color: $success-color;
+}
+
+.messages {
   border: rem-calc(1) solid;
+  border-radius: $global-radius;
   padding: rem-calc(15 20);
 }
 
 
-/* Theme */
+// Theme
 .marker,
 .form-required {
   color: $alert-color;
 }
 
 
-/* Styleguide */
+// Styleguide
+// scss-lint:disable IdSelector
 #styleguide-header {
   background-color: $xlight-gray;
   border-color: $light-gray;
