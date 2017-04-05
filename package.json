@@ -2,22 +2,42 @@
   "name": "frontend",
   "version": "3.0.0",
   "description": "A light-weight frontend framework for any project.",
-  "main": "gulpfile.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/bmarshall511/frontend.git"
   },
   "keywords": [
-    "frontend"
+    "frontend",
+    "frontend-web",
+    "frontend-components",
+    "frontend-webdevelopment",
+    "frontend-developer",
+    "web-development",
+    "web-dev",
+    "web-developer"
   ],
-  "author": "Ben Marshall",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/bmarshall511/frontend/issues"
+  "author": {
+    "name": "Ben Marshall",
+    "url": "https://benmarshall.me",
   },
+  "maintainers": [
+    {
+      "name": "Ben Marshall",
+      "email": "me@benmarshall.me",
+      "url": "https://benmarshall.me"
+    }
+  ],
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://choosealicense.com/licenses/mit/"
+    }
+  ],
+  "bugs": {
+    "url": "https://github.com/bmarshall511/slider-menu.jquery.js/issues",
+    "email": "me@benmarshall.me"
+  },
+  "repository": "https://github.com/bmarshall511/frontend",
   "homepage": "https://github.com/bmarshall511/frontend#readme",
   "devDependencies": {
     "compass-options": "^0.1.1",
