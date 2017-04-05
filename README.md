@@ -11,6 +11,8 @@
 **If you're viewing this at https://github.com/bmarshall511/frontend, you're reading the documentation for the master branch.
 [View documentation for the latest release.](https://github.com/bmarshall511/frontend/tree/latest#readme)**
 
+Unlike other frontend frameworks like [Foundation](http://foundation.zurb.com/) or [Bootstrap](http://getbootstrap.com/), Frontend doesn't restrict you to any one in particular. You could think of Frontend like a base framework for others like Foundation and Bootstrap. Use what you like, discard what you don't — keeping your files well optimized.
+
 ## Getting Started
 
 ### Prerequisites
@@ -25,22 +27,23 @@ Download the script [here](https://github.com/bmarshall511/frontend/archive/late
 
 Navigate to the frontend directory in Terminal and run the following commands:
 
-1. To install gem dependencies: ```$ bundle install```
-2. To install development dependencies: ```$ npm install```
-3. For first-time setup: ```$ gulp setup```
+1. ```$ bundle install``` To install gem dependencies
+2. ```$ npm install``` To install dependencies
+3. ```$ gulp setup``` For first-time setup
 
 ## Development Usage
 
 The following commands can be run in the frontend directory during development:
 
-- Compiles, then watches for changes to files to re-compile: ```$ gulp```
-- First-time setup <strong><small>(only run once or your variables will be overridden)</small></strong> ```$ gulp setup```
-- Create a application variables file <strong><small>(only run once or your variables will be overridden)</small></strong> ```$ gulp variables```
-- Compiles for live environments: ```$ gulp compile```
-- Lints JavaScript files: ```$ gulp lint```
-- Lints and compiles JavaScript files: ```$ gulp scripts```
-- Compiles Sass files: ```$ gulp compass```
-- Minifies images: ```$ gulp images```
+- ```$ gulp``` Compiles for live environments
+- ```$ gulp compile``` Compiles then watches for changes to files to re-compile (useful during development)
+- ```$ gulp setup``` First-time setup **(only run once or your variables will be overridden)**
+- ```$ gulp variables``` Create a application variables file **(only run once or your variables will be overridden)**
+- ```$ gulp lint``` Lints JavaScript files:
+- ```$ gulp scripts``` Lints and compiles JavaScript files
+- ```$ gulp compass``` Compiles Sass files
+- ```$ gulp images``` Minifies images
+- ```$ gulp scss-lint``` Lints SCSS files
 
 ## Contributing
 
@@ -66,3 +69,23 @@ For vulnerability reports, send an e-mail to `me at benmarshall dot me`.
 
 * [Ben Marshall](https://github.com/bmarshall511)
 * And awesome [contributors](https://github.com/bmarshall511/frontend/graphs/contributors)
+
+## Changelog
+
+### v3.0.1
+- Removed optional compiled JS libraries.
+- Removed deprecated table variables.
+- Updated documentation.
+- Created a ```gulp variables``` task to automatically setup a application ```_variables.scss``` file.
+- Added the ```$button-font-weight``` variable.
+- Changed the default value of the ```$button-background``` variable.
+- Added the the ```.screen-reader-text``` styles as an extendable (```%screen-reader-text```).
+- Added the ```$header-letter-spacing``` variable.
+- Updated the variable names for the site header from ```$header``` to ```$site-header``` to fix variable naming conflicts.
+- Updated the default values for the ```$site-header-padding-top``` and ```$site-header-padding-bottom```.
+- Updated the default value for the ```$gutter-style``` variable.
+- Several updates to the default variable for grid layout.
+- Added the ```$global-weight-light``` variable.
+- Created a ```gulp setup``` task to automatically setup a application for the first time.
+- Added additional breakpoint variables for header font sizes.
+- Added SCSS linter
