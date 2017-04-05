@@ -340,12 +340,6 @@ $button-background-disabled: $gray                                     !default;
 $button-color-disabled:      $dark-gray                                !default;
 $button-border-disabled:     rem-calc(1) solid $gray                   !default;
 
-$site-header-border-bottom:   rem-calc(1) solid $gray                  !default;
-$site-header-padding-top:     rem-calc($global-padding / 2)            !default;
-$site-header-padding-bottom:  rem-calc($global-padding / 2)            !default;
-$site-header-margin-bottom:   rem-calc($global-margin)                 !default;
-$site-header-background:      $body-background                         !default;
-
 $callout-background:     rgba($info-color, .3)                         !default;
 $callout-margin:         rem-calc(0 0 $global-margin 0)                !default;
 $callout-padding:        rem-calc($global-padding)                     !default;

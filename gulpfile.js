@@ -1,3 +1,4 @@
+/* eslint-disable */
 'use strict';
 
 const gulp       = require('gulp'),
@@ -20,8 +21,25 @@ const gulp       = require('gulp'),
 
 
 // Config Variables
-var sourceJs  = 'src/js',
-    sourceImg = 'src/img';
+var sourceJs      = 'src/js',
+    sourceImg     = 'src/img',
+    compassConfig = {
+      config_file: './config.rb',
+      css: paths.css,
+      sass: paths.sass,
+      bundle_exec: true,
+      time: true
+    },
+    globalJS     = [
+      // Config (optional)
+      //sourceJs + '/frontend/frontend.js',
+
+      // Services (optional)
+      //sourceJs + '/frontend/services/callback.js',
+
+      // Example controller
+      //sourceJs + '/frontend/controllers/example.js'
+    ];
 
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -53,45 +71,18 @@ gulp.task('jscomplexity', ['lint'], function() {
 ////////////////////////////////////////////////////////////////////////////////
 gulp.task('scripts', ['jscomplexity'], function() {
   // global.js
-  gulp.src([
-    // Config (optional)
-    sourceJs + '/frontend/frontend.js',
-
-    // Services (optional)
-    sourceJs + '/frontend/services/callback.js',
-
-    // Example controller
-    //sourceJs + '/frontend/controllers/example.js'
-  ])
+  gulp.src(globalJS)
     .pipe(concat('global.js'))
     .pipe(gulp.dest(paths.js))
     .pipe(rename('global.min.js'))
     .pipe(stripDebug())
     .pipe(uglify())
     .pipe(gulp.dest(paths.js));
-
-  // html5.js (optional)
-  /*gulp.src([sourceJs + '/frontend/lib/html5.js'])
-    .pipe(concat('html5.js'))
-    .pipe(gulp.dest(paths.js))
-    .pipe(rename('html5.min.js'))
-    .pipe(stripDebug())
-    .pipe(uglify())
-    .pipe(gulp.dest(paths.js));*/
 });
 
 gulp.task('scripts_dev', ['jscomplexity'], function() {
   // global.js
-  gulp.src([
-    // Frontend JS (optional)
-    sourceJs + '/frontend/frontend.js',
-
-    // Services (optional, needed for Frontend JS)
-    sourceJs + '/frontend/services/callback.js',
-
-    // Example controller for Frontend JS
-    // sourceJs + '/frontend/controllers/global.js'
-  ])
+  gulp.src(globalJS)
     .pipe(concat('global.js'))
     .pipe(gulp.dest(paths.js))
     .pipe(rename('global.min.js'))
@@ -113,13 +104,7 @@ gulp.task('scss-lint', function() {
 ////////////////////////////////////////////////////////////////////////////////
 gulp.task('compass_dev', ['images', 'scss-lint'], function() {
   return gulp.src(paths.sass + '/**/*.scss')
-    .pipe(compass({
-      config_file: './config.rb',
-      css: paths.css,
-      sass: paths.sass,
-      bundle_exec: true,
-      time: true
-    }))
+    .pipe(compass(compassConfig))
     .on('error', function(error) {
       console.log(error);
       this.emit('end');
@@ -130,13 +115,7 @@ gulp.task('compass_dev', ['images', 'scss-lint'], function() {
 
 gulp.task('compass', ['images', 'scss-lint'], function() {
   return gulp.src(paths.sass + '/**/*.scss')
-    .pipe(compass({
-      config_file: './config.rb',
-      css: paths.css,
-      sass: paths.sass,
-      bundle_exec: true,
-      time: true
-    }))
+    .pipe(compass(compassConfig))
     .on('error', function(error) {
       console.log(error);
       this.emit('end');
