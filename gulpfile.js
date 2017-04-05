@@ -1,5 +1,5 @@
 /* eslint-disable */
-var gulp         = require('gulp'),
+var gulp        = require('gulp'),
     jshint      = require('gulp-jshint'),
     stylish     = require('jshint-stylish'),
     paths       = require('compass-options').dirs(),
