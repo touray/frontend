@@ -40,7 +40,7 @@
     "del": "^2.2.2",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.1",
-    "gulp-clean-css": "^2.3.2",
+    "gulp-clean-css": "^3.0.4",
     "gulp-compass": "^2.1.0",
     "gulp-complexity": "^0.3.2",
     "gulp-concat": "^2.6.1",
