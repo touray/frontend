@@ -94,3 +94,8 @@ For vulnerability reports, send an e-mail to `me at benmarshall dot me`.
 - Created a ```gulp setup``` task to automatically setup a application for the first time.
 - Added additional breakpoint variables for header font sizes.
 - Added SCSS linter
+
+## Support on Beerpay
+Hey dude! Help me out for a couple of :beers:!
+
+[![Beerpay](https://beerpay.io/bmarshall511/frontend/badge.svg?style=beer-square)](https://beerpay.io/bmarshall511/frontend)  [![Beerpay](https://beerpay.io/bmarshall511/frontend/make-wish.svg?style=flat-square)](https://beerpay.io/bmarshall511/frontend?focus=wish)
