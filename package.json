@@ -35,6 +35,9 @@
     "email": "me@benmarshall.me"
   },
   "homepage": "https://github.com/bmarshall511/frontend#readme",
+  "engines": {
+    "node": ">=7.1.0"
+  },
   "devDependencies": {
     "compass-options": "^0.1.1",
     "del": "^2.2.2",

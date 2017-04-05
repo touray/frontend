@@ -80,7 +80,7 @@ gulp.task('scripts', ['jscomplexity'], function() {
     .pipe(gulp.dest(paths.js));
 });
 
-gulp.task('scripts_dev', ['jscomplexity'], function() {
+gulp.task('scripts-dev', ['jscomplexity'], function() {
   // global.js
   gulp.src(globalJS)
     .pipe(concat('global.js'))
@@ -102,7 +102,7 @@ gulp.task('scss-lint', function() {
 ////////////////////////////////////////////////////////////////////////////////
 // Compass Task
 ////////////////////////////////////////////////////////////////////////////////
-gulp.task('compass_dev', ['images', 'scss-lint'], function() {
+gulp.task('compass-dev', ['images', 'scss-lint'], function() {
   return gulp.src(paths.sass + '/**/*.scss')
     .pipe(compass(compassConfig))
     .on('error', function(error) {
@@ -185,4 +185,4 @@ gulp.task('default', ['scripts', 'compass']);
 ////////////////////////////////////////////////////////////////////////////////
 // Compile Task (for development)
 ////////////////////////////////////////////////////////////////////////////////
-gulp.task('compile', ['scripts_dev', 'compass_dev', 'watch']);
+gulp.task('compile', ['scripts-dev', 'compass-dev', 'watch']);
