@@ -7,4 +7,4 @@ install:
   - gulp setup
 script: gulp
 rvm:
-  - 2.0.1
+  - 2.0.0
