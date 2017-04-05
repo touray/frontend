@@ -79,7 +79,7 @@ var Frontend = {
   Frontend.Services.callback = function( callback ) {
     if ( typeof callback !== 'undefined' ) {
       try {
-        callback();
+        return callback();
       }
       catch( err ) {
         if ( Frontend.Config.debug ) {
@@ -89,4 +89,4 @@ var Frontend = {
     }
   };
 
-} ) ( jQuery );
+}( jQuery ));
