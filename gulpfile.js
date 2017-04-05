@@ -1,23 +1,21 @@
 /* eslint-disable */
-'use strict';
-
-var gulp       = require('gulp'),
-     jshint      = require('gulp-jshint'),
-     stylish     = require('jshint-stylish'),
-     paths       = require('compass-options').dirs(),
-     rename      = require('gulp-rename'),
-     stripDebug  = require('gulp-strip-debug'),
-     uglify      = require('gulp-uglify'),
-     concat      = require('gulp-concat'),
-     compass     = require('gulp-compass'),
-     prefix      = require('gulp-autoprefixer'),
-     cleanCSS    = require('gulp-clean-css'),
-     imagemin    = require('gulp-imagemin'),
-     complexity  = require('gulp-complexity'),
-     replace     = require('gulp-replace'),
-     del         = require('del'),
-     scsslint    = require('gulp-scss-lint'),
-     eslint      = require('gulp-eslint');
+var gulp         = require('gulp'),
+    jshint      = require('gulp-jshint'),
+    stylish     = require('jshint-stylish'),
+    paths       = require('compass-options').dirs(),
+    rename      = require('gulp-rename'),
+    stripDebug  = require('gulp-strip-debug'),
+    uglify      = require('gulp-uglify'),
+    concat      = require('gulp-concat'),
+    compass     = require('gulp-compass'),
+    prefix      = require('gulp-autoprefixer'),
+    cleanCSS    = require('gulp-clean-css'),
+    imagemin    = require('gulp-imagemin'),
+    complexity  = require('gulp-complexity'),
+    replace     = require('gulp-replace'),
+    del         = require('del'),
+    scsslint    = require('gulp-scss-lint'),
+    eslint      = require('gulp-eslint');
 
 
 // Config Variables
