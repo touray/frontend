@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 source "https://rubygems.org"
-ruby "~>1.9.3"
+ruby ">1.9.3"
 
 gem 'compass', '~>1.0'
 gem 'breakpoint', '~>2.4'
