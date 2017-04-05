@@ -78,7 +78,7 @@ For vulnerability reports, send an e-mail to `me at benmarshall dot me`.
 
 ## Changelog
 
-### v3.0.1
+### v3.0.1 (April 5, 2017)
 - Removed optional compiled JS libraries.
 - Removed deprecated table variables.
 - Updated documentation.
