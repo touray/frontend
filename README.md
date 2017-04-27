@@ -79,7 +79,7 @@ For vulnerability reports, send an e-mail to `me at benmarshall dot me`.
 
 ## Changelog
 
-### v3.0.2 (TBD)
+### v3.0.2 (April 27, 2017)
 - Added [gulp-htmlmin](https://www.npmjs.com/package/gulp-htmlmin)
 - Added [gulp-uncss](https://www.npmjs.com/package/gulp-uncss)
 
