@@ -15,7 +15,9 @@ var gulp        = require('gulp'),
     replace     = require('gulp-replace'),
     del         = require('del'),
     scsslint    = require('gulp-scss-lint'),
-    eslint      = require('gulp-eslint');
+    eslint      = require('gulp-eslint'),
+    htmlmin     = require('gulp-htmlmin'),
+    uncss       = require('gulp-uncss');
 
 
 // Config Variables
@@ -89,6 +91,22 @@ gulp.task('scripts-dev', ['jscomplexity'], function() {
 
 
 ////////////////////////////////////////////////////////////////////////////////
+// HTML Minify Task
+////////////////////////////////////////////////////////////////////////////////
+gulp.task('htmlmin', function() {
+  return gulp.src('src/**/*.html')
+    .pipe(htmlmin({collapseWhitespace: true}))
+    .pipe(gulp.dest('dist'));
+});
+
+gulp.task('htmlmin-dev', function() {
+  return gulp.src('src/**/*.html')
+    .pipe(htmlmin({collapseWhitespace: false}))
+    .pipe(gulp.dest('dist'));
+});
+
+
+////////////////////////////////////////////////////////////////////////////////
 // SCSS Lint Task
 ////////////////////////////////////////////////////////////////////////////////
 gulp.task('scss-lint', function() {
@@ -130,6 +148,18 @@ gulp.task('compass', ['images', 'scss-lint'], function() {
 
 
 ////////////////////////////////////////////////////////////////////////////////
+// UnCSS Task
+////////////////////////////////////////////////////////////////////////////////
+gulp.task('uncss', ['compass', 'htmlmin'], function() {
+  return gulp.src('dist/css/**/*.css')
+    .pipe(uncss({
+      html: ['src/**/*.html']
+    }))
+    .pipe(gulp.dest(paths.css));
+});
+
+
+////////////////////////////////////////////////////////////////////////////////
 // Images Task
 ////////////////////////////////////////////////////////////////////////////////
 gulp.task('images', function() {
@@ -147,6 +177,7 @@ gulp.task('watch', function () {
   gulp.watch(paths.sass + '/**/*.scss', ['compass']);
   gulp.watch(sourceImg + '/*', ['images']);
   gulp.watch('src/scss/frontend/global/_variables.scss', ['variables']);
+  gulp.watch('src/**/*.html', ['htmlmin-dev']);
 });
 
 
@@ -177,10 +208,10 @@ gulp.task('setup', ['variables'], function() {
 ////////////////////////////////////////////////////////////////////////////////
 // Default Task
 ////////////////////////////////////////////////////////////////////////////////
-gulp.task('default', ['scripts', 'compass']);
+gulp.task('default', ['scripts', 'compass', 'htmlmin']);
 
 
 ////////////////////////////////////////////////////////////////////////////////
 // Compile Task (for development)
 ////////////////////////////////////////////////////////////////////////////////
-gulp.task('compile', ['scripts-dev', 'compass-dev', 'watch']);
+gulp.task('compile', ['scripts-dev', 'compass-dev', 'htmlmin-dev', 'watch']);

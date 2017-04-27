@@ -45,10 +45,12 @@ The following commands can be run in the frontend directory during development:
 - ```$ gulp setup``` First-time setup **(only run once or your variables will be overridden)**
 - ```$ gulp variables``` Create a application variables file **(only run once or your variables will be overridden)**
 - ```$ gulp lint``` Lints JavaScript files:
-- ```$ gulp scripts``` Lints and compiles JavaScript files
-- ```$ gulp compass``` Compiles Sass files
+- ```$ gulp scripts``` Lints and compiles JavaScript files (```gulp scripts-dev``` for development)
+- ```$ gulp compass``` Compiles Sass files (```gulp compass-dev``` for development)
 - ```$ gulp images``` Minifies images
 - ```$ gulp scss-lint``` Lints SCSS files
+- ```$ gulp htmlmin``` Minifies HTML documents (```gulp htmlmin-dev``` for development)
+- ```$ gulp uncss``` Removes unused styles (needs to be configured & called, not used by default)
 
 ## Contributing
 
@@ -76,6 +78,10 @@ For vulnerability reports, send an e-mail to `me at benmarshall dot me`.
 * And awesome [contributors](https://github.com/bmarshall511/frontend/graphs/contributors)
 
 ## Changelog
+
+### v3.0.2 (TBD)
+- Added [gulp-htmlmin](https://www.npmjs.com/package/gulp-htmlmin)
+- Added [gulp-uncss](https://www.npmjs.com/package/gulp-uncss)
 
 ### v3.0.1 (April 5, 2017)
 - Removed optional compiled JS libraries.
