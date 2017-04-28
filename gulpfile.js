@@ -172,8 +172,8 @@ gulp.task('compass', ['images', 'scss-lint'], function() {
     .pipe(cleanCSS({
       compatibility: 'ie9'
     }, function(details) {
-      console.log(details.name + ': ' + details.stats.originalSize);
-      console.log(details.name + ': ' + details.stats.minifiedSize);
+      console.log(details.name + ' Original Size: ' + details.stats.originalSize);
+      console.log(details.name + ' Minified Size: ' + details.stats.minifiedSize);
     }))
     .pipe(gulp.dest(paths.css));
 });

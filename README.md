@@ -80,13 +80,13 @@ For vulnerability reports, send an e-mail to `me at benmarshall dot me`.
 ## Changelog
 
 ### v3.0.3 (TBD)
-- Added [gulp-cached](https://www.npmjs.com/package/gulp-cached)
-- Added [gulp-plumber](https://www.npmjs.com/package/gulp-plumber)
-- Added [gulp-notify](https://www.npmjs.com/package/gulp-notify)
+- Integrated [gulp-cached](https://www.npmjs.com/package/gulp-cached).
+- Integrated [gulp-plumber](https://www.npmjs.com/package/gulp-plumber).
+- Integrated [gulp-notify](https://www.npmjs.com/package/gulp-notify).
 
 ### v3.0.2 (April 27, 2017)
-- Added [gulp-htmlmin](https://www.npmjs.com/package/gulp-htmlmin)
-- Added [gulp-uncss](https://www.npmjs.com/package/gulp-uncss)
+- Integrated [gulp-htmlmin](https://www.npmjs.com/package/gulp-htmlmin).
+- Integrated [gulp-uncss](https://www.npmjs.com/package/gulp-uncss).
 
 ### v3.0.1 (April 5, 2017)
 - Removed optional compiled JS libraries.
