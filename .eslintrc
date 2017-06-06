@@ -6,7 +6,9 @@
   },
   "extends": "eslint:recommended",
   "globals": {
-    $: true,
-    Frontend: true
+    $: true
+  },
+  "rules":{
+    "no-console": 0
   }
 }

@@ -31,21 +31,27 @@ const _onError = function( err ) {
 };
 
 // Config Variables
-const sourceJs      = 'src/js',
-      sourceImg     = 'src/img',
-      compassConfig = {
+const sourceJs        = 'src/js',
+      sourceImg       = 'src/img',
+      compassConfig   = {
         config_file : './config.rb',
         css         : paths.css,
         sass        : paths.sass,
         bundle_exec : true,
         time        : true
       },
-      globalJS     = [];
+      globalJS        = [],
+      defaultTask     = ['scripts', 'compass', 'htmlmin'],
+      developmentTask = ['scripts-dev', 'compass-dev', 'htmlmin-dev', 'watch'];
+
 
 
 ////////////////////////////////////////////////////////////////////////////////
-// JavaScript Lint Task
+// JavaScript Tasks
 ////////////////////////////////////////////////////////////////////////////////
+
+
+// Linting
 gulp.task('lint', function() {
   return gulp.src([
     sourceJs + '/**/*.js'
@@ -61,9 +67,7 @@ gulp.task('lint', function() {
 });
 
 
-////////////////////////////////////////////////////////////////////////////////
-// JavaScript Complexity Task
-////////////////////////////////////////////////////////////////////////////////
+// Complexity
 gulp.task('jscomplexity', ['lint'], function() {
   return gulp.src([
     sourceJs + '/**/*.js',
@@ -78,9 +82,7 @@ gulp.task('jscomplexity', ['lint'], function() {
 });
 
 
-////////////////////////////////////////////////////////////////////////////////
-// JavaScript Task
-////////////////////////////////////////////////////////////////////////////////
+// JavaScript (for production)
 gulp.task('scripts', ['jscomplexity'], function() {
   // global.js
   gulp.src(globalJS)
@@ -96,6 +98,8 @@ gulp.task('scripts', ['jscomplexity'], function() {
     .pipe(gulp.dest(paths.js));
 });
 
+
+// JavaScript (for development)
 gulp.task('scripts-dev', ['jscomplexity'], function() {
   // global.js
   gulp.src(globalJS)
@@ -108,6 +112,7 @@ gulp.task('scripts-dev', ['jscomplexity'], function() {
     .pipe(rename('global.min.js'))
     .pipe(gulp.dest(paths.js));
 });
+
 
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -255,10 +260,10 @@ gulp.task('setup', ['variables'], function() {
 ////////////////////////////////////////////////////////////////////////////////
 // Default Task
 ////////////////////////////////////////////////////////////////////////////////
-gulp.task('default', ['scripts', 'compass', 'htmlmin']);
+gulp.task('default', defaultTask);
 
 
 ////////////////////////////////////////////////////////////////////////////////
 // Compile Task (for development)
 ////////////////////////////////////////////////////////////////////////////////
-gulp.task('compile', ['scripts-dev', 'compass-dev', 'htmlmin-dev', 'watch']);
+gulp.task('dev', developmentTask);

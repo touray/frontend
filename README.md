@@ -41,7 +41,7 @@ Navigate to the frontend directory in Terminal and run the following commands:
 The following commands can be run in the frontend directory during development:
 
 - ```$ gulp``` Compiles for live environments
-- ```$ gulp compile``` Compiles then watches for changes to files to re-compile (useful during development)
+- ```$ gulp dev``` Compiles then watches for changes to files to re-compile (useful during development)
 - ```$ gulp setup``` First-time setup **(only run once or your variables will be overridden)**
 - ```$ gulp variables``` Create a application variables file **(only run once or your variables will be overridden)**
 - ```$ gulp lint``` Lints JavaScript files:
@@ -83,6 +83,7 @@ For vulnerability reports, send an e-mail to `me at benmarshall dot me`.
 - Integrated [gulp-cached](https://www.npmjs.com/package/gulp-cached).
 - Integrated [gulp-plumber](https://www.npmjs.com/package/gulp-plumber).
 - Integrated [gulp-notify](https://www.npmjs.com/package/gulp-notify).
+- Changed ```gulp compile``` to ```gulp dev```
 
 ### v3.0.2 (April 27, 2017)
 - Integrated [gulp-htmlmin](https://www.npmjs.com/package/gulp-htmlmin).
