@@ -18,6 +18,7 @@ import scsslint from 'gulp-scss-lint';
 import sourcemaps from 'gulp-sourcemaps';
 import stripDebug from 'gulp-strip-debug';
 import uglify from 'gulp-uglify';
+import uncss from 'gulp-uncss';
 
 // Application configuration
 const cleanOptions  = {
@@ -31,14 +32,14 @@ const cleanOptions  = {
         time        : true
       },
       cssPrefix     = ["last 1 version", "> 1%", "ie 9"],
-      defaultTasks  = ['kss', 'js-transpile', 'htmlmin'],
+      defaultTasks  = ['uncss', 'js-transpile'],
       distHTML      = 'dist',
       distImg       = paths.dirs().img,
       distJS        = paths.dirs().js,
       srcHTML       = 'src/**/*.html',
       srcImg        = 'src/img',
       srcJS         = 'src/js',
-      stylesDir     = 'styles/';
+      stylesDir     = 'styleguide';
 
 // app.js imports
 const appJS = [srcJS + '/app.js'];
@@ -131,7 +132,7 @@ gulp.task('js-transpile', ['js-complexity'], () => {
 gulp.task('kss', ['compass', 'copy-readme'], () => {
   return kss({
     source: 'src/scss',
-    destination: 'styleguide',
+    destination: stylesDir,
     css: '../dist/css/style.css',
     js: '../dist/js/app.js',
     homepage: 'README.md',
