@@ -1,20 +1,21 @@
-////////////////////////////////////////////////////////////////////////////////
-// Frontend Mixins
+// Sass Mixins
 //
-// All pre-packaged Frontend Sass mixins.
-//
-// DO NOT EDIT! To add/override mixins, create a _mixins.scss file in
+// Frontend Sass mixins. DO NOT EDIT! To add/override mixins, create a _mixins.scss file in
 // src/scss/application/global.
-////////////////////////////////////////////////////////////////////////////////
-
-/// Adds a downward-facing triangle as a background image to an element.
 //
-// The image is formatted as an SVG, making it easy to change the color. Because
+// Style guide: frontend.global.mixins
+
+// background-triangle($color)
+//
+// Adds a downward-facing triangle as a background image to an element. The
+// image is formatted as an SVG, making it easy to change the color. Because
 // Internet Explorer doesn't support encoded SVGs as background images, a PNG
 // fallback is also included. There are two PNG fallbacks: a black triangle and
 // a white triangle. The one used depends on the lightness of the input color.
 //
-/// @param {Color} $color [$black] - Color to use for the triangle.
+// $color {Color}  = $black - Color to use for the triangle.
+//
+// Style guide: frontend.global.mixins.background-triangle
 @mixin background-triangle($color: $black) {
   $rgb: 'rgb(#{red($color)}, #{green($color)}, #{blue($color)})';
 
@@ -29,7 +30,11 @@
   }
 }
 
-/// Adds Mozilla specific styles.
+// moz-specific()
+//
+// Adds Mozilla specific styles.
+//
+// Style guide: frontend.global.mixins.moz-specific
 @mixin moz-specific() {
   // scss-lint:disable VendorPrefix
   @-moz-document url-prefix() {
@@ -37,7 +42,13 @@
   }
 }
 
-/// Adds a cross-browser mask background image.
+// mask-image($img)
+//
+// Adds a cross-browser mask background image.
+//
+// $img - Image URL
+//
+// Style guide: frontend.global.mixins.mask-image
 @mixin mask-image($img) {
   // scss-lint:disable VendorPrefix
   -moz-mask-image: $img;
@@ -51,7 +62,13 @@
   }
 }
 
-/// Adds a background color for masks.
+// mask-background-color($color)
+//
+// Adds a background color for masks.
+//
+// $color {Color} - Color
+//
+// Style guide: frontend.global.mixins.mask-background-color
 @mixin mask-background-color($color) {
   background-color: $color;
 
@@ -61,7 +78,13 @@
   }
 }
 
-/// Adds a cross-browser mask size.
+// mask-size($size)
+//
+// Adds a cross-browser mask size.
+//
+// $size - Size
+//
+// Style guide: frontend.global.mixins.mask-size
 @mixin mask-size($size) {
   // scss-lint:disable VendorPrefix
   -moz-mask-size: $size;
@@ -69,7 +92,13 @@
   mask-size: $size;
 }
 
-/// Adds a cross-browser mask position.
+// mask-position($position)
+//
+// Adds a cross-browser mask position.
+//
+// $position - Position
+//
+// Style guide: frontend.global.mixins.mask-position
 @mixin mask-position($position) {
   // scss-lint:disable VendorPrefix
   -moz-mask-position: $position;
@@ -77,14 +106,16 @@
   mask-position: $position;
 }
 
-/// Adds a cross-browser mask repeat.
-@mixin mask-repeat($repeat) {
+// mask-repeat($repeat)
+//
+// Applies a cross-browser mask-repeat declaration.
+//
+// $repeat = repeat - Repeat value.
+//
+// Style guide: frontend.global.mixins.mask-repeat
+@mixin mask-repeat($repeat: repeat) {
   // scss-lint:disable VendorPrefix
   -moz-mask-repeat: $repeat;
   -webkit-mask-repeat: $repeat;
   mask-repeat: $repeat;
 }
-
-// Columns
-
-

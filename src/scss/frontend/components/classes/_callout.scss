@@ -1,11 +1,26 @@
-////////////////////////////////////////////////////////////////////////////////
-// Callout Styles
+// Callout Classes
 //
-// Includes all Frontend callout styles.
-////////////////////////////////////////////////////////////////////////////////
-
-// Components
-
+// Frontend callout classes.
+//
+// Markup:
+// <div class="callout">
+//   <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
+//   <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
+// </div>
+// <div class="callout callout--alert">
+//   <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
+//   <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
+// </div>
+// <div class="callout callout--warning">
+//   <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
+//   <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
+// </div>
+// <div class="callout callout--success">
+//   <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
+//   <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
+// </div>
+//
+// Style guide: frontend.components.callout
 .callout {
   background: $callout-background;
   border: $callout-border;
@@ -20,9 +35,6 @@
     }
   }
 }
-
-
-// Modifiers
 
 .callout--alert {
   background-color: rgba($alert-color, .3);

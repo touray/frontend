@@ -1,11 +1,9 @@
-////////////////////////////////////////////////////////////////////////////////
-// Framework Base Styles
+// Base
 //
-// All Framework base element styles should are defined here.
+// Base selector declarations. DO NOT EDIT! To add/override styles, create a
+// _base.scss file in src/scss/application/base/_base.scss.
 //
-// DO NOT EDIT! To add/override styles, create a _base.scss file in
-// src/scss/application/base/_base.scss.
-////////////////////////////////////////////////////////////////////////////////
+// Style guide: frontend.base
 
 * {
   outline: $global-outline;

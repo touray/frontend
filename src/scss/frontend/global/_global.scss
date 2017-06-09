@@ -1,11 +1,10 @@
-////////////////////////////////////////////////////////////////////////////////
-// Frontend Global Partials
+// Global
 //
-// Includes all required framework functions, mixins and default variables.
+// Includes all required Frontend extensions, functions, mixins, extendables and
+// default variables. DO NOT EDIT! To add/override styles, create a _global.scss
+// file in src/scss/application/global.
 //
-// DO NOT EDIT! To add/override styles, create a _global.scss file in
-// src/scss/application/global.
-////////////////////////////////////////////////////////////////////////////////
+// Style guide: frontend.global
 
 // Compass & Singularity extensions
 @import 'compass';
@@ -14,13 +13,15 @@
 @import 'toolkit';
 @import 'toolkit/kickstart';
 
-// Private imports
+// Frontend functions and default variables.
 @import 'functions';
 @import 'variables';
 
-// Application variables and framework variable overrides
+// Application variables.
 @import 'application/global/variables';
 
-// Continued private imports
+// Frontend mixins.
 @import 'mixins';
+
+// Frontend extendables.
 @import 'extendables';

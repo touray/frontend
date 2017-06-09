@@ -10,4 +10,3 @@ install:
   - gulp setup
 script:
   - gulp
-

@@ -1,24 +1,35 @@
 ////////////////////////////////////////////////////////////////////////////////
-// Global Styles File (style.css)
+// Global Styles (style.css)
 //
-// Add all global style imports here. This file should only contain imports and
-// no individual style definitions.
+// Contains all global partials for the style.css stylesheet.
 ////////////////////////////////////////////////////////////////////////////////
 
-// Framework Partials
+// Frontend
+//
+// REQUIRED. All Frontend imports.
+//
+// Style guide: frontend
 
-// REQUIRED. Global Frontend functions, mixins, default variables and
-// extendables.
+// Frontend global partials.
 @import 'frontend/global/global';
 
 // Reset & base Frontend partials, should only be included once per CSS file.
 @import 'compass/reset';
+
+// Frontend base styles.
 @import 'frontend/base/base';
 
-// Import Frontend partials
+// Frontend layout build.
 @import 'frontend/layout/layouts';
 
-// Import Frontend component class partials
+// Components
+//
+// All avaiable Frontend components.
+//
+// Style guide: frontend.components
+
+@import 'frontend/components/classes/callout';
+@import 'frontend/components/classes/colors';
 @import 'frontend/components/classes/common';
 @import 'frontend/components/classes/layout';
 @import 'frontend/components/classes/typography';
@@ -26,27 +37,49 @@
 @import 'frontend/components/classes/buttons';
 @import 'frontend/components/classes/lists';
 @import 'frontend/components/classes/visibility';
-@import 'frontend/components/classes/colors';
-@import 'frontend/components/classes/callout';
 
-
-// CMS Partials
-
+// Frontend Drupal 7 component, common classes & styles for Drupal 7.
 //@import 'frontend/components/drupal7';
+
+// Frontend WordPress component, common classes & styles for WordPress.
 //@import 'frontend/components/wordpress';
 
+// Application
+//
+// Global application functions, mixins, default variables, extendables and
+// styles.
+//
+// Style guide: application
 
-// Application Partials
+// Application Global
+//
+// Global application functions, mixins, default variables and extendables.
+//
+// Style guide: application.global
 
-// Application functions, mixins, default variables and extendables
 //@import 'application/global/..';
 
-// Application base partials
+// Application Base
+//
+// Application selector declarations.
+//
+// Style guide: application.global
+
 //@import 'application/base/..';
 
-// Application layout partials
+// Application Layout
+//
+// Application layout selector declarations.
+//
+// Style guide: application.layout
+
 //@import 'application/layout/..';
 
-// Application component partials
+// Application Components
+//
+// Application components.
+//
+// Style guide: application.components
+
 //@import 'application/components/..';
 

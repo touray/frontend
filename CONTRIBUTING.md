@@ -24,11 +24,11 @@ Install globally gulp using the following command:
 
 Browse to the project root directory and install the dev dependencies:
 
-    $ npm install -d
+    $ npm install
 
 To execute the build and tests run the following command in the root of the project:
 
-    $ gulp
+    $ npm start
 
 You should see a green message in the console:
 
@@ -38,4 +38,4 @@ You should see a green message in the console:
 ### Automatic build
 You can build automatically after a file change using the following command:
 
-    $ gulp watch
+    $ npm start
