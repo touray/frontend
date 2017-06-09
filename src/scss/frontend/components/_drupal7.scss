@@ -1,11 +1,9 @@
-////////////////////////////////////////////////////////////////////////////////
-// Drupal Styles
+// Drupal 7 Styles
 //
-// All core Drupal styles should be placed here. See https://goo.gl/X8Th2T
-// for more details.
-////////////////////////////////////////////////////////////////////////////////
+// Frontend pre-built Drupal 7 styles.
+//
+// Style guide: frontend.components.drupal7
 
-// Form Styles
 .form-submit {
   @extend %button;
   margin: rem-calc(10 10 10 0);
@@ -37,8 +35,6 @@
   }
 }
 
-
-// Pager styles
 .pager {
   @extend %pager;
 }
@@ -85,7 +81,6 @@
 }
 
 
-// Styleguide
 // scss-lint:disable IdSelector
 #styleguide-header {
   background-color: $xlight-gray;

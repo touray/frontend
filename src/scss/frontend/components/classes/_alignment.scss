@@ -1,9 +1,30 @@
-////////////////////////////////////////////////////////////////////////////////
-// Frontend Alignment Styles
+// Alignment Classes
 //
 // DO NOT EDIT! Contains all of Frontend's pre-packaged alignment class styles.
-////////////////////////////////////////////////////////////////////////////////
-
+//
+// Markup:
+// <p class="align-left">.align-left</p>
+// <p class="align-right">.align-right</p>
+// <p class="align-center">.align-center</p>
+// <p class="align-left-small">.align-left-small</p>
+// <p class="align-right-small">.align-right-small</p>
+// <p class="align-center-small">.align-center-small</p>
+// <p class="align-left-medium">.align-left-medium</p>
+// <p class="align-right-medium">.align-right-medium</p>
+// <p class="align-center-medium">.align-center-medium</p>
+// <p class="align-left-large">.align-left-large</p>
+// <p class="align-right-large">.align-right-large</p>
+// <p class="align-center-large">.align-center-large</p>
+// <p class="float-left">.float-left</p>
+// <p class="float-right">.float-right</p>
+// <p class="float-left">.float-left-small</p>
+// <p class="float-right">.float-right-small</p>
+// <p class="float-left-medium">.float-left-medium</p>
+// <p class="float-right-medium">.float-right-medium</p>
+// <p class="float-left-large">.float-left-large</p>
+// <p class="float-right-large">.float-right-large</p>
+//
+// Style guide: frontend.components.alignment
 
 .float-left {
   float: left;

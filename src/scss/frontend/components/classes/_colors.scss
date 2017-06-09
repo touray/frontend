@@ -1,8 +1,41 @@
-////////////////////////////////////////////////////////////////////////////////
-// Color Styles
+// Color Classes
 //
-// Includes all Frontend color styles.
-////////////////////////////////////////////////////////////////////////////////
+// Frontend color classes.
+//
+// Markup:
+// <ul>
+// <li class="color-primary">Primary color
+// <li class="color-secondary">Secondary color
+// <li class="color-success">Success color
+// <li class="color-warning">Warning color
+// <li class="color-alert">Alert color
+// <li class="color-info">Info color
+// <li class="color-black">Black color
+// <li class="color-xdark-gray">X-dark gray color
+// <li class="color-dark-gray">Dark gray color
+// <li class="color-medium-gray">Medium gray color
+// <li class="color-gray">Gray color
+// <li class="color-light-gray">Light gray color
+// <li class="color-xlight-gray">X-light gray color
+// <li class="color-white">White color
+// </ul>
+// <ul class="list-inline-block">
+//   <li class="bg-color-primary" style="width:50px;height:50px">
+//   <li class="bg-color-secondary" style="width:50px;height:50px">
+//   <li class="bg-color-success" style="width:50px;height:50px">
+//   <li class="bg-color-warning" style="width:50px;height:50px">
+//   <li class="bg-color-alert" style="width:50px;height:50px">
+//   <li class="bg-color-info" style="width:50px;height:50px">
+//   <li class="bg-color-black" style="width:50px;height:50px">
+//   <li class="bg-color-xdark-gray" style="width:50px;height:50px">
+//   <li class="bg-color-dark-gray" style="width:50px;height:50px">
+//   <li class="bg-color-medium-gray" style="width:50px;height:50px">
+//   <li class="bg-color-light-gray" style="width:50px;height:50px">
+//   <li class="bg-color-xlight-gray" style="width:50px;height:50px">
+//   <li class="bg-color-white" style="width:50px;height:50px">
+// </ul>
+//
+// Style guide: frontend.components.colors
 
 .color-primary {
   color: $primary-color;

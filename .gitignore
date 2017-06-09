@@ -1,12 +1,4 @@
-# OS Generated Files #
-######################
-.DS_Store*
-
-# SASS #
-########
+.DS_Store
 .sass-cache
-
-# Development #
-###############
-node_modules
 Gemfile.lock
+node_modules

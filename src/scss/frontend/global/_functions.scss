@@ -1,22 +1,27 @@
-////////////////////////////////////////////////////////////////////////////////
-// Frontend Functions
+// Sass Functions
 //
-// DO NOT EDIT! To add/override functions, create a _functions.scss file in
-// src/scss/application/global.
-////////////////////////////////////////////////////////////////////////////////
+// Frontend Sass functions. DO NOT EDIT! To add/override functions, create a
+// _functions.scss file in src/scss/application/global.
+//
+// Style guide: frontend.global.functions
 
-/// Defines the base font size of the page, which is the value `1rem` is equal to.
-/// @type Number
-/// @group global
+// Defines the base font size of the page, which is the value `1rem` is equal to.
+// @type Number
+// @group global
 $rem-base: 16px !default;
 
-/// Converts one or more pixel values into matching rem values.
-/// @param {Number|List} $values - One or more values to convert. Be sure to
-/// separate them with spaces and not commas. If you need to convert a
-/// comma-separated list, wrap the list in parentheses.
-/// @param {Number} $base [$rem-base] - The base value to use when calculating
-/// the `rem`. If you're using Foundation out of the box, this is 16px.
-/// @returns {List} A list of converted values.
+// rem-calc($values, $base)
+//
+// Convert px values to rem
+//
+// $values {Number|List} - One or more values to convert. Be sure to separate
+// them with spaces and not commas. If you need to convert a comma-separated
+// list, wrap the list in parentheses.
+// $base {Number} = $rem-base - The base value to use when calculating the
+// `rem`. If you're using Frontend out of the box, this is 16px.
+// @returns {List} - A list of converted values.
+//
+// Style guide: frontend.global.functions.rem-calc
 @function rem-calc($values, $base: $rem-base) {
   $rem-values: ();
   $count: length($values);
@@ -62,16 +67,27 @@ $rem-base: 16px !default;
   @return $value;
 }
 
-/// Removes the unit (e.g. px, em, rem) from a value, returning the number only.
-/// @param {Number} $num - Number to strip unit from.
-/// @returns {Number} The same number, sans unit.
+// strip-unit($num)
+//
+// Removes the unit (e.g. px, em, rem) from a value, returning the number only.
+//
+// $num {Number} - Number to strip unit from.
+// @returns {Number} - The same number, sans unit.
+//
+// Style guide: frontend.global.functions.strip-unit
 @function strip-unit($num) {
   @return $num / ($num * 0 + 1);
 }
 
-/// Determine if a value is not falsey, in CSS terms. Falsey values are `null`, `none`, `0` with any unit, or an empty list.
-/// @param $val - Value to check.
-/// @returns {Boolean} `true` if `$val` is not falsey.
+// hasvalue($val)
+//
+// Determine if a value is not falsey, in CSS terms. Falsey values are `null`,
+// `none`, `0` with any unit, or an empty list.
+//
+// $val - Value to check.
+// @returns {Boolean} - `true` if `$val` is not falsey.
+//
+// Style guide: frontend.global.functions.hasvalue
 @function hasvalue($val) {
   @if $val == null or $val == none {
     @return false;
@@ -85,8 +101,14 @@ $rem-base: 16px !default;
   @return true;
 }
 
-/// Generates a selector with every text input type. You can also filter the list to only output a subset of those selectors.
-/// @param {List|Keyword} $types [()] - A list of text input types to use. Leave blank to use all of them.
+// text-inputs($types)
+//
+// Generates a selector with every text input type. You can also filter the list
+// to only output a subset of those selectors.
+//
+// $types {List|Keyword} = [()] - A list of text input types to use. Leave blank to use all of them.
+//
+// Style guide: frontend.global.functions.text-inputs
 @function text-inputs($types: ()) {
   $return: ();
 
@@ -117,10 +139,18 @@ $rem-base: 16px !default;
   @return $return;
 }
 
-/// Given border $val, find a specific element of the border, which is $elem. The possible values for $elem are width, style, and color.
-/// @param {List} $val - Border value to find a value in.
-/// @param {Keyword} $elem - Border component to extract.
-/// @returns {Mixed} If the value exists, returns the value. If the value is not in the border definition, the function will return a 0px width, solid style, or black border.
+// get-border-value($val, $elem)
+//
+// Given border $val, find a specific element of the border, which is $elem. The
+// possible values for $elem are width, style, and color.
+//
+// $val {List} - Border value to find a value in.
+// $elem {Keyword} - Border component to extract.
+// @returns {Mixed} - If the value exists, returns the value. If the value is
+// not in the border definition, the function will return a 0px width, solid
+// style, or black border.
+//
+// Style guide: frontend.global.functions.get-border-value
 @function get-border-value($val, $elem) {
   // Find the width, style, or color and return it
   @each $v in $val {

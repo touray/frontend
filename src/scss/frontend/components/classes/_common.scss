@@ -1,18 +1,34 @@
-////////////////////////////////////////////////////////////////////////////////
-// Common Frontend Styles
+// Common Classes
 //
-// Includes all Frontend classes that can be used anywhere.
-////////////////////////////////////////////////////////////////////////////////
+// Frontend common classes.
+//
+// Style guide: frontend.components.common
 
-// Table
-
+// Responsive Table
+//
+// Make a responsive table element without the <code>table</code> element.
+//
+// Markup:
+// <div class="table">Table div vs. <code>table</code> element.</div>
+//
+// Style guide: frontend.components.common.table
 .table {
   background: $table-background;
   display: table;
   width: 100%;
 }
 
-.table-header {
+// Responsive Table Head
+//
+// Make a responsive table head element without the <code>thead</code> element.
+//
+// Markup:
+// <div class="table">
+//   <div class="table-head">Table head div vs. <code>thead</code> element.</div>
+// </div>
+//
+// Style guide: frontend.components.common.table-header
+.table-head {
   background: $table-head-background;
   color: $table-head-font-color;
 
@@ -22,7 +38,17 @@
   }
 }
 
-.table-footer {
+// Responsive Table Foot
+//
+// Make a responsive table foot element without the <code>tfoot</code> element.
+//
+// Markup:
+// <div class="table">
+//   <div class="table-foot">Table foot div vs. <code>tfoot</code> element.</div>
+// </div>
+//
+// Style guide: frontend.components.common.table-foot
+.table-foot {
   background: $table-foot-background;
 
   // Tablet & up
@@ -31,6 +57,16 @@
   }
 }
 
+// Responsive Table Body
+//
+// Make a responsive table body element without the <code>tbody</code> element.
+//
+// Markup:
+// <div class="table">
+//   <div class="table-body">Table body div vs. <code>tbody</code> element.</div>
+// </div>
+//
+// Style guide: frontend.components.common.table-body
 .table-body {
   // Tablet & up
   @include breakpoint($small) {
@@ -38,6 +74,27 @@
   }
 }
 
+// Responsive Table Row
+//
+// Make a responsive table row element without the <code>tr</code> element.
+//
+// Markup:
+// <div class="table">
+//   <div class="table-head">
+//     <div class="table-row">Table head row div vs. <code>th</code> element.</div>
+//     <div class="table-row">Another table head row</div>
+//   </div>
+//   <div class="table-body">
+//     <div class="table-row">Table row div vs. <code>tr</code> element.</div>
+//     <div class="table-row">Another table row</div>
+//   </div>
+//   <div class="table-foot">
+//     <div class="table-row">Table foot row div vs. <code>tr</code> element.</div>
+//     <div class="table-row">Another table foot row</div>
+//   </div>
+// </div>
+//
+// Style guide: frontend.components.common.table-row
 .table-row {
   // Tablet & up
   @include breakpoint($small) {
@@ -45,6 +102,36 @@
   }
 }
 
+// Responsive Table Column
+//
+// Make a responsive table column element without the <code>td</code> element.
+//
+// Markup:
+// <div class="table">
+//   <div class="table-head">
+//     <div class="table-row">
+//       <div class="table-col">Head Col 1</div>
+//       <div class="table-col">Head Col 2</div>
+//       <div class="table-col">Head Col 3</div>
+//     </div>
+//   </div>
+//   <div class="table-body">
+//     <div class="table-row">
+//       <div class="table-col">Body Col 1</div>
+//       <div class="table-col">Body Col 2</div>
+//       <div class="table-col">Body Col 3</div>
+//     </div>
+//   </div>
+//   <div class="table-foot">
+//     <div class="table-row">
+//       <div class="table-col">Footer Col 1</div>
+//       <div class="table-col">Footer Col 2</div>
+//       <div class="table-col">Footer Col 3</div>
+//     </div>
+//   </div>
+// </div>
+//
+// Style guide: frontend.components.common.table-row
 .table-col {
   padding: $table-padding;
 
@@ -55,7 +142,74 @@
 }
 
 // Pager
-
+//
+// Styles a list element as a pager.
+//
+// Markup:
+// <ul class="pager">
+//   <li><a href="#">First</a>
+//   <li class="pager-ellipsis"><a href="#">&hellip;</a>
+//   <li><a href="#">5</a>
+//   <li class="pager-current"><a href="#">6</a>
+//   <li><a href="#">7</a>
+//   <li class="pager-ellipsis"><a href="#">&hellip;</a>
+//   <li><a href="#">Last</a>
+// </ul>
+//
+// Style guide: frontend.components.common.pager
 .pager {
   @extend %pager;
+}
+
+
+// Content Styles
+//
+// Common content style classes that can be used to alter an existing elements'
+// style.
+//
+// Markup:
+// <p class="no-margin">Element with no margin</p>
+// <ul class="no-padding">
+//   <li>Element with no padding
+// </ul>
+// <div class="round bg-color-black color-white" style="display: inline-block; padding: 10px;">.round</div>
+// <div class="clearfix">.clearfix</div>
+// <div class="flex">.flex</div>
+// <div class="block">.block</div>
+// <div class="inline-block">.inline-block</div>
+//
+// Style guide: frontend.components.common.content
+.block {
+  display: block;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.no-margin {
+  margin-bottom: 0;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0;
+}
+
+.no-padding {
+  padding-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 0;
+}
+
+.round {
+  border-radius: 100%;
+  overflow: hidden;
+}
+
+.clearfix {
+  @include clearfix;
+}
+
+.flex {
+  @extend %flex;
 }

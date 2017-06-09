@@ -1,19 +1,40 @@
-////////////////////////////////////////////////////////////////////////////////
-// Frontend Layout Styles
+// Layout Classes
 //
-// DO NOT EDIT! Contains all of Frontend's pre-packaged layout class styles.
-////////////////////////////////////////////////////////////////////////////////
+// Frontend layout classes. DO NOT EDIT! Contains all of Frontend's pre-packaged
+// layout class styles.
+//
+// Style guide: frontend.components.layout
 
-.container {
-  @extend %container;
+// Grid Row
+//
+// Creates a grid row container.
+//
+// Markup:
+// <div class="row">Container content</div>
+// <div class="row">Full width container content</div>
+//
+// Style guide: frontend.components.layout.container
+.row {
+  @extend %row;
 }
 
-.container-full {
-  @extend %container-full;
+.row-full {
+  @extend %row-full;
 }
 
-// Build additional mobile columns using the format below:
-// (.col-NUM_COL_SPAN-STARTING_AT)
+// Grid Column
+//
+// Creates a grid column.
+//
+// Markup:
+// <div class="row">
+//   <div class="col-12-1 col-12-1-small">Container content</div>
+// </div>
+// <div class="row">
+//   <div class="col-12-1 col-12-1-small">Container content</div>
+// </div>
+//
+// Style guide: frontend.components.layout.col
 
 // Mobile
 .col-#{$num-columns}-1 {
@@ -45,31 +66,4 @@
   .col-#{$num-columns-large}-1-large {
     @include grid-span($num-columns-large, 1);
   }
-}
-
-.no-margin {
-  margin-bottom: 0;
-  margin-left: 0;
-  margin-right: 0;
-  margin-top: 0;
-}
-
-.no-padding {
-  padding-bottom: 0;
-  padding-left: 0;
-  padding-right: 0;
-  padding-top: 0;
-}
-
-.round {
-  border-radius: 100%;
-  overflow: hidden;
-}
-
-.clearfix {
-  @include clearfix;
-}
-
-.flex {
-  @extend %flex;
 }

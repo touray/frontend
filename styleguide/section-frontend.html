@@ -1,0 +1,3386 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Frontend Build Styleguide</title>
+
+  <meta name="description" content="">
+  <meta name="generator" content="kss-node">
+  <meta name="viewport" content="width=device-width">
+
+  <link rel="stylesheet" href="kss-assets/kss.css">
+  <link rel="stylesheet" href="../dist/css/style.css">
+
+</head>
+<body id="kss-node" >
+
+<div class="kss-sidebar kss-style">
+  <header class="kss-header">
+    <h1 class="kss-doc-title">Frontend Build Styleguide</h1>
+  </header>
+  <nav class="kss-nav">
+    <ul class="kss-nav__menu">
+      <li class="kss-nav__menu-item">
+        <a class="kss-nav__menu-link" href="./">
+          <span class="kss-nav__ref">0</span
+          ><span class="kss-nav__name">Overview</span>
+        </a>
+      </li>
+      <li class="kss-nav__menu-item">
+        <a class="kss-nav__menu-link" href="section-application.html">
+          <span class="kss-nav__ref">1</span><span class="kss-nav__name">Application</span>
+        </a>
+      </li>
+      <li class="kss-nav__menu-item">
+        <a class="kss-nav__menu-link" href="section-frontend.html">
+          <span class="kss-nav__ref">2</span><span class="kss-nav__name">Frontend</span>
+        </a>
+            <ul class="kss-nav__menu-child">
+              <li class="kss-nav__menu-item">
+                <a class="kss-nav__menu-link" href="section-frontend.html#kssref-frontend-base">
+                  <span class="kss-nav__ref ">2.1</span
+                  ><span class="kss-nav__name">Base</span>
+                </a>
+              </li>
+              <li class="kss-nav__menu-item">
+                <a class="kss-nav__menu-link" href="section-frontend.html#kssref-frontend-components">
+                  <span class="kss-nav__ref ">2.2</span
+                  ><span class="kss-nav__name">Components</span>
+                </a>
+              </li>
+              <li class="kss-nav__menu-item">
+                <a class="kss-nav__menu-link" href="section-frontend.html#kssref-frontend-components-alignment">
+                  <span class="kss-nav__ref kss-nav__ref-child">2.2.1</span
+                  ><span class="kss-nav__name">Alignment Classes</span>
+                </a>
+              </li>
+              <li class="kss-nav__menu-item">
+                <a class="kss-nav__menu-link" href="section-frontend.html#kssref-frontend-components-buttons">
+                  <span class="kss-nav__ref kss-nav__ref-child">2.2.2</span
+                  ><span class="kss-nav__name">Button Classes</span>
+                </a>
+              </li>
+              <li class="kss-nav__menu-item">
+                <a class="kss-nav__menu-link" href="section-frontend.html#kssref-frontend-components-callout">
+                  <span class="kss-nav__ref kss-nav__ref-child">2.2.3</span
+                  ><span class="kss-nav__name">Callout Classes</span>
+                </a>
+              </li>
+              <li class="kss-nav__menu-item">
+                <a class="kss-nav__menu-link" href="section-frontend.html#kssref-frontend-components-colors">
+                  <span class="kss-nav__ref kss-nav__ref-child">2.2.4</span
+                  ><span class="kss-nav__name">Color Classes</span>
+                </a>
+              </li>
+              <li class="kss-nav__menu-item">
+                <a class="kss-nav__menu-link" href="section-frontend.html#kssref-frontend-components-common">
+                  <span class="kss-nav__ref kss-nav__ref-child">2.2.5</span
+                  ><span class="kss-nav__name">Common Classes</span>
+                </a>
+              </li>
+              <li class="kss-nav__menu-item">
+                <a class="kss-nav__menu-link" href="section-frontend.html#kssref-frontend-components-drupal7">
+                  <span class="kss-nav__ref kss-nav__ref-child">2.2.6</span
+                  ><span class="kss-nav__name">Drupal 7 Styles</span>
+                </a>
+              </li>
+              <li class="kss-nav__menu-item">
+                <a class="kss-nav__menu-link" href="section-frontend.html#kssref-frontend-components-layout">
+                  <span class="kss-nav__ref kss-nav__ref-child">2.2.7</span
+                  ><span class="kss-nav__name">Layout Classes</span>
+                </a>
+              </li>
+              <li class="kss-nav__menu-item">
+                <a class="kss-nav__menu-link" href="section-frontend.html#kssref-frontend-components-lists">
+                  <span class="kss-nav__ref kss-nav__ref-child">2.2.8</span
+                  ><span class="kss-nav__name">List Classes</span>
+                </a>
+              </li>
+              <li class="kss-nav__menu-item">
+                <a class="kss-nav__menu-link" href="section-frontend.html#kssref-frontend-components-typography">
+                  <span class="kss-nav__ref kss-nav__ref-child">2.2.9</span
+                  ><span class="kss-nav__name">Typography Classes</span>
+                </a>
+              </li>
+              <li class="kss-nav__menu-item">
+                <a class="kss-nav__menu-link" href="section-frontend.html#kssref-frontend-components-visibility">
+                  <span class="kss-nav__ref kss-nav__ref-child">2.2.10</span
+                  ><span class="kss-nav__name">Visibility Classes</span>
+                </a>
+              </li>
+              <li class="kss-nav__menu-item">
+                <a class="kss-nav__menu-link" href="section-frontend.html#kssref-frontend-components-wordpress">
+                  <span class="kss-nav__ref kss-nav__ref-child">2.2.11</span
+                  ><span class="kss-nav__name">WordPress Styles</span>
+                </a>
+              </li>
+              <li class="kss-nav__menu-item">
+                <a class="kss-nav__menu-link" href="section-frontend.html#kssref-frontend-global">
+                  <span class="kss-nav__ref ">2.3</span
+                  ><span class="kss-nav__name">Global</span>
+                </a>
+              </li>
+              <li class="kss-nav__menu-item">
+                <a class="kss-nav__menu-link" href="section-frontend.html#kssref-frontend-global-extendables">
+                  <span class="kss-nav__ref kss-nav__ref-child">2.3.1</span
+                  ><span class="kss-nav__name">Sass Extendables</span>
+                </a>
+              </li>
+              <li class="kss-nav__menu-item">
+                <a class="kss-nav__menu-link" href="section-frontend.html#kssref-frontend-global-functions">
+                  <span class="kss-nav__ref kss-nav__ref-child">2.3.2</span
+                  ><span class="kss-nav__name">Sass Functions</span>
+                </a>
+              </li>
+              <li class="kss-nav__menu-item">
+                <a class="kss-nav__menu-link" href="section-frontend.html#kssref-frontend-global-mixins">
+                  <span class="kss-nav__ref kss-nav__ref-child">2.3.3</span
+                  ><span class="kss-nav__name">Sass Mixins</span>
+                </a>
+              </li>
+              <li class="kss-nav__menu-item">
+                <a class="kss-nav__menu-link" href="section-frontend.html#kssref-frontend-layout">
+                  <span class="kss-nav__ref ">2.4</span
+                  ><span class="kss-nav__name">Layout</span>
+                </a>
+              </li>
+            </ul>
+      </li>
+    </ul>
+  </nav>
+</div>
+<article role="main" class="kss-main">
+
+    <div id="kssref-frontend" class="kss-section kss-section--depth-1 ">
+
+      <div class="kss-style">
+        <h1 class="kss-title kss-title--level-1">
+          <a class="kss-title__permalink" href="#kssref-frontend">
+            <span class="kss-title__ref">
+              2
+              <span class="kss-title__permalink-hash">
+                  #frontend
+              </span>
+            </span>
+            Frontend
+          </a>
+        </h1>
+
+
+          <div class="kss-description">
+            <p>REQUIRED. All Frontend imports.</p>
+
+          </div>
+
+      </div>
+
+
+        <div class="kss-source kss-style">
+          Source: <code>style.scss</code>, line 7
+        </div>
+
+    </div>
+    <section id="kssref-frontend-base" class="kss-section kss-section--depth-2 ">
+
+      <div class="kss-style">
+        <h2 class="kss-title kss-title--level-2">
+          <a class="kss-title__permalink" href="#kssref-frontend-base">
+            <span class="kss-title__ref">
+              2.1
+              <span class="kss-title__permalink-hash">
+                  #frontend.base
+              </span>
+            </span>
+            Base
+          </a>
+        </h2>
+
+
+          <div class="kss-description">
+            <p>Base selector declarations. DO NOT EDIT! To add/override styles, create a
+_base.scss file in src/scss/application/base/_base.scss.</p>
+
+          </div>
+
+      </div>
+
+
+        <div class="kss-source kss-style">
+          Source: <code>frontend/base/_base.scss</code>, line 1
+        </div>
+
+    </section>
+    <section id="kssref-frontend-components" class="kss-section kss-section--depth-2 ">
+
+      <div class="kss-style">
+        <h2 class="kss-title kss-title--level-2">
+          <a class="kss-title__permalink" href="#kssref-frontend-components">
+            <span class="kss-title__ref">
+              2.2
+              <span class="kss-title__permalink-hash">
+                  #frontend.components
+              </span>
+            </span>
+            Components
+          </a>
+        </h2>
+
+
+          <div class="kss-description">
+            <p>All avaiable Frontend components.</p>
+
+          </div>
+
+      </div>
+
+
+        <div class="kss-source kss-style">
+          Source: <code>style.scss</code>, line 25
+        </div>
+
+    </section>
+    <section id="kssref-frontend-components-alignment" class="kss-section kss-section--depth-3 ">
+
+      <div class="kss-style">
+        <h3 class="kss-title kss-title--level-3">
+          <a class="kss-title__permalink" href="#kssref-frontend-components-alignment">
+            <span class="kss-title__ref">
+              2.2.1
+              <span class="kss-title__permalink-hash">
+                  #frontend.components.alignment
+              </span>
+            </span>
+            Alignment Classes
+          </a>
+        </h3>
+
+          <p class="kss-toolbar">
+              <a href="#kssref-frontend-components-alignment" data-kss-fullscreen="kssref-frontend-components-alignment">
+                <span class="kss-toolbar__tooltip">Toggle full screen</span>
+                <svg class="off" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                  <path class="kss-toolbar__icon-fill" d="M64 0v26l-10-10-12 12-6-6 12-12-10-10zM28 42l-12 12 10 10h-26v-26l10 10 12-12z"></path>
+                </svg>
+                <svg class="on" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                  <path class="kss-toolbar__icon-fill" d="M28 36v26l-10-10-12 12-6-6 12-12-10-10zM64 6l-12 12 10 10h-26v-26l10 10 12-12z"></path>
+                </svg>
+              </a>
+              <a href="item-frontend-components-alignment.html" target="_blank">
+                <span class="kss-toolbar__tooltip">Open in new window</span>
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                  <rect x="0" y="20" width="40" height="44" fill="#fff"/>
+                  <path class="kss-toolbar__icon-fill" d="M40,64l-40,0l0,-44l40,0l0,44Zm-36,-40l0,36l32,0l0,-36l-32,0Z"/>
+                  <rect class="kss-toolbar__icon-fill" x="0" y="20" width="40" height="10"/>
+                  <rect x="24" y="0" width="40" height="44" fill="#fff"/>
+                  <path class="kss-toolbar__icon-fill" d="M64,44l-40,0l0,-44l40,0l0,44Zm-36,-40l0,36l32,0l0,-36l-32,0Z"/>
+                  <rect class="kss-toolbar__icon-fill" x="24" y="0" width="40" height="10"/>
+                </svg>
+              </a>
+            <a href="#kssref-frontend-components-alignment" data-kss-guides="true">
+              <span class="kss-toolbar__tooltip">Toggle example guides</span>
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <rect class="kss-toolbar__icon-fill" x="5" y="35" width="5" height="9"/>
+                <rect class="kss-toolbar__icon-fill" x="54" y="21" width="5" height="9"/>
+                <rect class="kss-toolbar__icon-fill" x="54" y="35" width="5" height="9"/>
+                <rect class="kss-toolbar__icon-fill" x="5" y="21" width="5" height="9"/>
+                <rect class="kss-toolbar__icon-fill" x="5" y="0" width="5" height="15"/>
+                <rect class="kss-toolbar__icon-fill" x="35" y="5" width="9" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="20" y="5" width="9" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="0" y="5" width="15" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="54" y="0" width="5" height="15"/>
+                <rect class="kss-toolbar__icon-fill" x="49" y="5" width="15" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="54" y="49" width="5" height="15"/>
+                <rect class="kss-toolbar__icon-fill" x="49" y="54" width="15" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="5" y="49" width="5" height="15"/>
+                <rect class="kss-toolbar__icon-fill" x="0" y="54" width="15" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="35" y="54" width="9" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="20" y="54" width="9" height="5"/>
+              </svg>
+            </a>
+            <a href="#kssref-frontend-components-alignment" data-kss-markup="true">
+              <span class="kss-toolbar__tooltip">Toggle HTML markup</span>
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <path class="kss-toolbar__icon-fill" d="M37.555,46.239l6.103,6.103l20.342,-20.342l-20.342,-20.342l-6.103,6.103l14.24,14.239l-14.24,14.239Z"/>
+                <path class="kss-toolbar__icon-fill" d="M26.445,17.761l-6.103,-6.103l-20.342,20.342l20.342,20.342l6.103,-6.103l-14.24,-14.239l14.24,-14.239Z"/>
+              </svg>
+            </a>
+          </p>
+
+          <div class="kss-description">
+            <p>DO NOT EDIT! Contains all of Frontend&#39;s pre-packaged alignment class styles.</p>
+
+          </div>
+
+      </div>
+
+        <div class="kss-modifier__wrapper">
+          <div class="kss-modifier__heading kss-style">
+            Example
+          </div>
+
+
+          <div class="kss-modifier__example">
+            <p class="align-left">.align-left</p>
+<p class="align-right">.align-right</p>
+<p class="align-center">.align-center</p>
+<p class="align-left-small">.align-left-small</p>
+<p class="align-right-small">.align-right-small</p>
+<p class="align-center-small">.align-center-small</p>
+<p class="align-left-medium">.align-left-medium</p>
+<p class="align-right-medium">.align-right-medium</p>
+<p class="align-center-medium">.align-center-medium</p>
+<p class="align-left-large">.align-left-large</p>
+<p class="align-right-large">.align-right-large</p>
+<p class="align-center-large">.align-center-large</p>
+<p class="float-left">.float-left</p>
+<p class="float-right">.float-right</p>
+<p class="float-left">.float-left-small</p>
+<p class="float-right">.float-right-small</p>
+<p class="float-left-medium">.float-left-medium</p>
+<p class="float-right-medium">.float-right-medium</p>
+<p class="float-left-large">.float-left-large</p>
+<p class="float-right-large">.float-right-large</p>
+            <div class="kss-modifier__example-footer"></div>
+          </div>
+
+        </div>
+
+          <details class="kss-markup kss-style">
+            <summary>
+                Markup
+            </summary>
+            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;p class&#x3D;&quot;align-left&quot;&gt;.align-left&lt;/p&gt;
+&lt;p class&#x3D;&quot;align-right&quot;&gt;.align-right&lt;/p&gt;
+&lt;p class&#x3D;&quot;align-center&quot;&gt;.align-center&lt;/p&gt;
+&lt;p class&#x3D;&quot;align-left-small&quot;&gt;.align-left-small&lt;/p&gt;
+&lt;p class&#x3D;&quot;align-right-small&quot;&gt;.align-right-small&lt;/p&gt;
+&lt;p class&#x3D;&quot;align-center-small&quot;&gt;.align-center-small&lt;/p&gt;
+&lt;p class&#x3D;&quot;align-left-medium&quot;&gt;.align-left-medium&lt;/p&gt;
+&lt;p class&#x3D;&quot;align-right-medium&quot;&gt;.align-right-medium&lt;/p&gt;
+&lt;p class&#x3D;&quot;align-center-medium&quot;&gt;.align-center-medium&lt;/p&gt;
+&lt;p class&#x3D;&quot;align-left-large&quot;&gt;.align-left-large&lt;/p&gt;
+&lt;p class&#x3D;&quot;align-right-large&quot;&gt;.align-right-large&lt;/p&gt;
+&lt;p class&#x3D;&quot;align-center-large&quot;&gt;.align-center-large&lt;/p&gt;
+&lt;p class&#x3D;&quot;float-left&quot;&gt;.float-left&lt;/p&gt;
+&lt;p class&#x3D;&quot;float-right&quot;&gt;.float-right&lt;/p&gt;
+&lt;p class&#x3D;&quot;float-left&quot;&gt;.float-left-small&lt;/p&gt;
+&lt;p class&#x3D;&quot;float-right&quot;&gt;.float-right-small&lt;/p&gt;
+&lt;p class&#x3D;&quot;float-left-medium&quot;&gt;.float-left-medium&lt;/p&gt;
+&lt;p class&#x3D;&quot;float-right-medium&quot;&gt;.float-right-medium&lt;/p&gt;
+&lt;p class&#x3D;&quot;float-left-large&quot;&gt;.float-left-large&lt;/p&gt;
+&lt;p class&#x3D;&quot;float-right-large&quot;&gt;.float-right-large&lt;/p&gt;</code></pre>
+          </details>
+
+        <div class="kss-source kss-style">
+          Source: <code>frontend/components/classes/_alignment.scss</code>, line 1
+        </div>
+
+    </section>
+    <section id="kssref-frontend-components-buttons" class="kss-section kss-section--depth-3 ">
+
+      <div class="kss-style">
+        <h3 class="kss-title kss-title--level-3">
+          <a class="kss-title__permalink" href="#kssref-frontend-components-buttons">
+            <span class="kss-title__ref">
+              2.2.2
+              <span class="kss-title__permalink-hash">
+                  #frontend.components.buttons
+              </span>
+            </span>
+            Button Classes
+          </a>
+        </h3>
+
+          <p class="kss-toolbar">
+              <a href="#kssref-frontend-components-buttons" data-kss-fullscreen="kssref-frontend-components-buttons">
+                <span class="kss-toolbar__tooltip">Toggle full screen</span>
+                <svg class="off" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                  <path class="kss-toolbar__icon-fill" d="M64 0v26l-10-10-12 12-6-6 12-12-10-10zM28 42l-12 12 10 10h-26v-26l10 10 12-12z"></path>
+                </svg>
+                <svg class="on" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                  <path class="kss-toolbar__icon-fill" d="M28 36v26l-10-10-12 12-6-6 12-12-10-10zM64 6l-12 12 10 10h-26v-26l10 10 12-12z"></path>
+                </svg>
+              </a>
+              <a href="item-frontend-components-buttons.html" target="_blank">
+                <span class="kss-toolbar__tooltip">Open in new window</span>
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                  <rect x="0" y="20" width="40" height="44" fill="#fff"/>
+                  <path class="kss-toolbar__icon-fill" d="M40,64l-40,0l0,-44l40,0l0,44Zm-36,-40l0,36l32,0l0,-36l-32,0Z"/>
+                  <rect class="kss-toolbar__icon-fill" x="0" y="20" width="40" height="10"/>
+                  <rect x="24" y="0" width="40" height="44" fill="#fff"/>
+                  <path class="kss-toolbar__icon-fill" d="M64,44l-40,0l0,-44l40,0l0,44Zm-36,-40l0,36l32,0l0,-36l-32,0Z"/>
+                  <rect class="kss-toolbar__icon-fill" x="24" y="0" width="40" height="10"/>
+                </svg>
+              </a>
+            <a href="#kssref-frontend-components-buttons" data-kss-guides="true">
+              <span class="kss-toolbar__tooltip">Toggle example guides</span>
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <rect class="kss-toolbar__icon-fill" x="5" y="35" width="5" height="9"/>
+                <rect class="kss-toolbar__icon-fill" x="54" y="21" width="5" height="9"/>
+                <rect class="kss-toolbar__icon-fill" x="54" y="35" width="5" height="9"/>
+                <rect class="kss-toolbar__icon-fill" x="5" y="21" width="5" height="9"/>
+                <rect class="kss-toolbar__icon-fill" x="5" y="0" width="5" height="15"/>
+                <rect class="kss-toolbar__icon-fill" x="35" y="5" width="9" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="20" y="5" width="9" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="0" y="5" width="15" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="54" y="0" width="5" height="15"/>
+                <rect class="kss-toolbar__icon-fill" x="49" y="5" width="15" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="54" y="49" width="5" height="15"/>
+                <rect class="kss-toolbar__icon-fill" x="49" y="54" width="15" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="5" y="49" width="5" height="15"/>
+                <rect class="kss-toolbar__icon-fill" x="0" y="54" width="15" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="35" y="54" width="9" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="20" y="54" width="9" height="5"/>
+              </svg>
+            </a>
+            <a href="#kssref-frontend-components-buttons" data-kss-markup="true">
+              <span class="kss-toolbar__tooltip">Toggle HTML markup</span>
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <path class="kss-toolbar__icon-fill" d="M37.555,46.239l6.103,6.103l20.342,-20.342l-20.342,-20.342l-6.103,6.103l14.24,14.239l-14.24,14.239Z"/>
+                <path class="kss-toolbar__icon-fill" d="M26.445,17.761l-6.103,-6.103l-20.342,20.342l20.342,20.342l6.103,-6.103l-14.24,-14.239l14.24,-14.239Z"/>
+              </svg>
+            </a>
+          </p>
+
+          <div class="kss-description">
+            <p>DO NOT EDIT! Includes all Frontend button styles.</p>
+
+          </div>
+
+      </div>
+
+        <div class="kss-modifier__wrapper">
+          <div class="kss-modifier__heading kss-style">
+            Example
+          </div>
+
+
+          <div class="kss-modifier__example">
+            <p><a class="button" href="#">.button</a></p>
+<p><a class="button button--full" href="#">.button--full</a></p>
+<p><a class="button button--full-small" href="#">.button--full-small</a></p>
+<p><a class="button button--normal-small" href="#">.button--normal-small</a></p>
+<p><a class="button button--full-medium" href="#">.button--full-small</a></p>
+<p><a class="button button--normal-medium" href="#">.button--normal-small</a></p>
+<p><a class="button button--full-large" href="#">.button--full-large</a></p>
+<p><a class="button button--normal-large" href="#">.button--normal-large</a></p>
+            <div class="kss-modifier__example-footer"></div>
+          </div>
+
+        </div>
+
+          <details class="kss-markup kss-style">
+            <summary>
+                Markup
+            </summary>
+            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;p&gt;&lt;a class&#x3D;&quot;button&quot; href&#x3D;&quot;#&quot;&gt;.button&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class&#x3D;&quot;button button--full&quot; href&#x3D;&quot;#&quot;&gt;.button--full&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class&#x3D;&quot;button button--full-small&quot; href&#x3D;&quot;#&quot;&gt;.button--full-small&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class&#x3D;&quot;button button--normal-small&quot; href&#x3D;&quot;#&quot;&gt;.button--normal-small&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class&#x3D;&quot;button button--full-medium&quot; href&#x3D;&quot;#&quot;&gt;.button--full-small&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class&#x3D;&quot;button button--normal-medium&quot; href&#x3D;&quot;#&quot;&gt;.button--normal-small&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class&#x3D;&quot;button button--full-large&quot; href&#x3D;&quot;#&quot;&gt;.button--full-large&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class&#x3D;&quot;button button--normal-large&quot; href&#x3D;&quot;#&quot;&gt;.button--normal-large&lt;/a&gt;&lt;/p&gt;</code></pre>
+          </details>
+
+        <div class="kss-source kss-style">
+          Source: <code>frontend/components/classes/_buttons.scss</code>, line 1
+        </div>
+
+    </section>
+    <section id="kssref-frontend-components-callout" class="kss-section kss-section--depth-3 ">
+
+      <div class="kss-style">
+        <h3 class="kss-title kss-title--level-3">
+          <a class="kss-title__permalink" href="#kssref-frontend-components-callout">
+            <span class="kss-title__ref">
+              2.2.3
+              <span class="kss-title__permalink-hash">
+                  #frontend.components.callout
+              </span>
+            </span>
+            Callout Classes
+          </a>
+        </h3>
+
+          <p class="kss-toolbar">
+              <a href="#kssref-frontend-components-callout" data-kss-fullscreen="kssref-frontend-components-callout">
+                <span class="kss-toolbar__tooltip">Toggle full screen</span>
+                <svg class="off" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                  <path class="kss-toolbar__icon-fill" d="M64 0v26l-10-10-12 12-6-6 12-12-10-10zM28 42l-12 12 10 10h-26v-26l10 10 12-12z"></path>
+                </svg>
+                <svg class="on" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                  <path class="kss-toolbar__icon-fill" d="M28 36v26l-10-10-12 12-6-6 12-12-10-10zM64 6l-12 12 10 10h-26v-26l10 10 12-12z"></path>
+                </svg>
+              </a>
+              <a href="item-frontend-components-callout.html" target="_blank">
+                <span class="kss-toolbar__tooltip">Open in new window</span>
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                  <rect x="0" y="20" width="40" height="44" fill="#fff"/>
+                  <path class="kss-toolbar__icon-fill" d="M40,64l-40,0l0,-44l40,0l0,44Zm-36,-40l0,36l32,0l0,-36l-32,0Z"/>
+                  <rect class="kss-toolbar__icon-fill" x="0" y="20" width="40" height="10"/>
+                  <rect x="24" y="0" width="40" height="44" fill="#fff"/>
+                  <path class="kss-toolbar__icon-fill" d="M64,44l-40,0l0,-44l40,0l0,44Zm-36,-40l0,36l32,0l0,-36l-32,0Z"/>
+                  <rect class="kss-toolbar__icon-fill" x="24" y="0" width="40" height="10"/>
+                </svg>
+              </a>
+            <a href="#kssref-frontend-components-callout" data-kss-guides="true">
+              <span class="kss-toolbar__tooltip">Toggle example guides</span>
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <rect class="kss-toolbar__icon-fill" x="5" y="35" width="5" height="9"/>
+                <rect class="kss-toolbar__icon-fill" x="54" y="21" width="5" height="9"/>
+                <rect class="kss-toolbar__icon-fill" x="54" y="35" width="5" height="9"/>
+                <rect class="kss-toolbar__icon-fill" x="5" y="21" width="5" height="9"/>
+                <rect class="kss-toolbar__icon-fill" x="5" y="0" width="5" height="15"/>
+                <rect class="kss-toolbar__icon-fill" x="35" y="5" width="9" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="20" y="5" width="9" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="0" y="5" width="15" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="54" y="0" width="5" height="15"/>
+                <rect class="kss-toolbar__icon-fill" x="49" y="5" width="15" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="54" y="49" width="5" height="15"/>
+                <rect class="kss-toolbar__icon-fill" x="49" y="54" width="15" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="5" y="49" width="5" height="15"/>
+                <rect class="kss-toolbar__icon-fill" x="0" y="54" width="15" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="35" y="54" width="9" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="20" y="54" width="9" height="5"/>
+              </svg>
+            </a>
+            <a href="#kssref-frontend-components-callout" data-kss-markup="true">
+              <span class="kss-toolbar__tooltip">Toggle HTML markup</span>
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <path class="kss-toolbar__icon-fill" d="M37.555,46.239l6.103,6.103l20.342,-20.342l-20.342,-20.342l-6.103,6.103l14.24,14.239l-14.24,14.239Z"/>
+                <path class="kss-toolbar__icon-fill" d="M26.445,17.761l-6.103,-6.103l-20.342,20.342l20.342,20.342l6.103,-6.103l-14.24,-14.239l14.24,-14.239Z"/>
+              </svg>
+            </a>
+          </p>
+
+          <div class="kss-description">
+            <p>Frontend callout classes.</p>
+
+          </div>
+
+      </div>
+
+        <div class="kss-modifier__wrapper">
+          <div class="kss-modifier__heading kss-style">
+            Example
+          </div>
+
+
+          <div class="kss-modifier__example">
+            <div class="callout">
+  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
+  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
+</div>
+<div class="callout callout--alert">
+  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
+  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
+</div>
+<div class="callout callout--warning">
+  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
+  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
+</div>
+<div class="callout callout--success">
+  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
+  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
+</div>
+            <div class="kss-modifier__example-footer"></div>
+          </div>
+
+        </div>
+
+          <details class="kss-markup kss-style">
+            <summary>
+                Markup
+            </summary>
+            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class&#x3D;&quot;callout&quot;&gt;
+  &lt;p&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.&lt;/p&gt;
+  &lt;p&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class&#x3D;&quot;callout callout--alert&quot;&gt;
+  &lt;p&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.&lt;/p&gt;
+  &lt;p&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class&#x3D;&quot;callout callout--warning&quot;&gt;
+  &lt;p&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.&lt;/p&gt;
+  &lt;p&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class&#x3D;&quot;callout callout--success&quot;&gt;
+  &lt;p&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.&lt;/p&gt;
+  &lt;p&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+          </details>
+
+        <div class="kss-source kss-style">
+          Source: <code>frontend/components/classes/_callout.scss</code>, line 1
+        </div>
+
+    </section>
+    <section id="kssref-frontend-components-colors" class="kss-section kss-section--depth-3 ">
+
+      <div class="kss-style">
+        <h3 class="kss-title kss-title--level-3">
+          <a class="kss-title__permalink" href="#kssref-frontend-components-colors">
+            <span class="kss-title__ref">
+              2.2.4
+              <span class="kss-title__permalink-hash">
+                  #frontend.components.colors
+              </span>
+            </span>
+            Color Classes
+          </a>
+        </h3>
+
+          <p class="kss-toolbar">
+              <a href="#kssref-frontend-components-colors" data-kss-fullscreen="kssref-frontend-components-colors">
+                <span class="kss-toolbar__tooltip">Toggle full screen</span>
+                <svg class="off" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                  <path class="kss-toolbar__icon-fill" d="M64 0v26l-10-10-12 12-6-6 12-12-10-10zM28 42l-12 12 10 10h-26v-26l10 10 12-12z"></path>
+                </svg>
+                <svg class="on" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                  <path class="kss-toolbar__icon-fill" d="M28 36v26l-10-10-12 12-6-6 12-12-10-10zM64 6l-12 12 10 10h-26v-26l10 10 12-12z"></path>
+                </svg>
+              </a>
+              <a href="item-frontend-components-colors.html" target="_blank">
+                <span class="kss-toolbar__tooltip">Open in new window</span>
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                  <rect x="0" y="20" width="40" height="44" fill="#fff"/>
+                  <path class="kss-toolbar__icon-fill" d="M40,64l-40,0l0,-44l40,0l0,44Zm-36,-40l0,36l32,0l0,-36l-32,0Z"/>
+                  <rect class="kss-toolbar__icon-fill" x="0" y="20" width="40" height="10"/>
+                  <rect x="24" y="0" width="40" height="44" fill="#fff"/>
+                  <path class="kss-toolbar__icon-fill" d="M64,44l-40,0l0,-44l40,0l0,44Zm-36,-40l0,36l32,0l0,-36l-32,0Z"/>
+                  <rect class="kss-toolbar__icon-fill" x="24" y="0" width="40" height="10"/>
+                </svg>
+              </a>
+            <a href="#kssref-frontend-components-colors" data-kss-guides="true">
+              <span class="kss-toolbar__tooltip">Toggle example guides</span>
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <rect class="kss-toolbar__icon-fill" x="5" y="35" width="5" height="9"/>
+                <rect class="kss-toolbar__icon-fill" x="54" y="21" width="5" height="9"/>
+                <rect class="kss-toolbar__icon-fill" x="54" y="35" width="5" height="9"/>
+                <rect class="kss-toolbar__icon-fill" x="5" y="21" width="5" height="9"/>
+                <rect class="kss-toolbar__icon-fill" x="5" y="0" width="5" height="15"/>
+                <rect class="kss-toolbar__icon-fill" x="35" y="5" width="9" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="20" y="5" width="9" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="0" y="5" width="15" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="54" y="0" width="5" height="15"/>
+                <rect class="kss-toolbar__icon-fill" x="49" y="5" width="15" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="54" y="49" width="5" height="15"/>
+                <rect class="kss-toolbar__icon-fill" x="49" y="54" width="15" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="5" y="49" width="5" height="15"/>
+                <rect class="kss-toolbar__icon-fill" x="0" y="54" width="15" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="35" y="54" width="9" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="20" y="54" width="9" height="5"/>
+              </svg>
+            </a>
+            <a href="#kssref-frontend-components-colors" data-kss-markup="true">
+              <span class="kss-toolbar__tooltip">Toggle HTML markup</span>
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <path class="kss-toolbar__icon-fill" d="M37.555,46.239l6.103,6.103l20.342,-20.342l-20.342,-20.342l-6.103,6.103l14.24,14.239l-14.24,14.239Z"/>
+                <path class="kss-toolbar__icon-fill" d="M26.445,17.761l-6.103,-6.103l-20.342,20.342l20.342,20.342l6.103,-6.103l-14.24,-14.239l14.24,-14.239Z"/>
+              </svg>
+            </a>
+          </p>
+
+          <div class="kss-description">
+            <p>Frontend color classes.</p>
+
+          </div>
+
+      </div>
+
+        <div class="kss-modifier__wrapper">
+          <div class="kss-modifier__heading kss-style">
+            Example
+          </div>
+
+
+          <div class="kss-modifier__example">
+            <ul>
+<li class="color-primary">Primary color
+<li class="color-secondary">Secondary color
+<li class="color-success">Success color
+<li class="color-warning">Warning color
+<li class="color-alert">Alert color
+<li class="color-info">Info color
+<li class="color-black">Black color
+<li class="color-xdark-gray">X-dark gray color
+<li class="color-dark-gray">Dark gray color
+<li class="color-medium-gray">Medium gray color
+<li class="color-gray">Gray color
+<li class="color-light-gray">Light gray color
+<li class="color-xlight-gray">X-light gray color
+<li class="color-white">White color
+</ul>
+<ul class="list-inline-block">
+  <li class="bg-color-primary" style="width:50px;height:50px">
+  <li class="bg-color-secondary" style="width:50px;height:50px">
+  <li class="bg-color-success" style="width:50px;height:50px">
+  <li class="bg-color-warning" style="width:50px;height:50px">
+  <li class="bg-color-alert" style="width:50px;height:50px">
+  <li class="bg-color-info" style="width:50px;height:50px">
+  <li class="bg-color-black" style="width:50px;height:50px">
+  <li class="bg-color-xdark-gray" style="width:50px;height:50px">
+  <li class="bg-color-dark-gray" style="width:50px;height:50px">
+  <li class="bg-color-medium-gray" style="width:50px;height:50px">
+  <li class="bg-color-light-gray" style="width:50px;height:50px">
+  <li class="bg-color-xlight-gray" style="width:50px;height:50px">
+  <li class="bg-color-white" style="width:50px;height:50px">
+</ul>
+            <div class="kss-modifier__example-footer"></div>
+          </div>
+
+        </div>
+
+          <details class="kss-markup kss-style">
+            <summary>
+                Markup
+            </summary>
+            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;ul&gt;
+&lt;li class&#x3D;&quot;color-primary&quot;&gt;Primary color
+&lt;li class&#x3D;&quot;color-secondary&quot;&gt;Secondary color
+&lt;li class&#x3D;&quot;color-success&quot;&gt;Success color
+&lt;li class&#x3D;&quot;color-warning&quot;&gt;Warning color
+&lt;li class&#x3D;&quot;color-alert&quot;&gt;Alert color
+&lt;li class&#x3D;&quot;color-info&quot;&gt;Info color
+&lt;li class&#x3D;&quot;color-black&quot;&gt;Black color
+&lt;li class&#x3D;&quot;color-xdark-gray&quot;&gt;X-dark gray color
+&lt;li class&#x3D;&quot;color-dark-gray&quot;&gt;Dark gray color
+&lt;li class&#x3D;&quot;color-medium-gray&quot;&gt;Medium gray color
+&lt;li class&#x3D;&quot;color-gray&quot;&gt;Gray color
+&lt;li class&#x3D;&quot;color-light-gray&quot;&gt;Light gray color
+&lt;li class&#x3D;&quot;color-xlight-gray&quot;&gt;X-light gray color
+&lt;li class&#x3D;&quot;color-white&quot;&gt;White color
+&lt;/ul&gt;
+&lt;ul class&#x3D;&quot;list-inline-block&quot;&gt;
+  &lt;li class&#x3D;&quot;bg-color-primary&quot; style&#x3D;&quot;width:50px;height:50px&quot;&gt;
+  &lt;li class&#x3D;&quot;bg-color-secondary&quot; style&#x3D;&quot;width:50px;height:50px&quot;&gt;
+  &lt;li class&#x3D;&quot;bg-color-success&quot; style&#x3D;&quot;width:50px;height:50px&quot;&gt;
+  &lt;li class&#x3D;&quot;bg-color-warning&quot; style&#x3D;&quot;width:50px;height:50px&quot;&gt;
+  &lt;li class&#x3D;&quot;bg-color-alert&quot; style&#x3D;&quot;width:50px;height:50px&quot;&gt;
+  &lt;li class&#x3D;&quot;bg-color-info&quot; style&#x3D;&quot;width:50px;height:50px&quot;&gt;
+  &lt;li class&#x3D;&quot;bg-color-black&quot; style&#x3D;&quot;width:50px;height:50px&quot;&gt;
+  &lt;li class&#x3D;&quot;bg-color-xdark-gray&quot; style&#x3D;&quot;width:50px;height:50px&quot;&gt;
+  &lt;li class&#x3D;&quot;bg-color-dark-gray&quot; style&#x3D;&quot;width:50px;height:50px&quot;&gt;
+  &lt;li class&#x3D;&quot;bg-color-medium-gray&quot; style&#x3D;&quot;width:50px;height:50px&quot;&gt;
+  &lt;li class&#x3D;&quot;bg-color-light-gray&quot; style&#x3D;&quot;width:50px;height:50px&quot;&gt;
+  &lt;li class&#x3D;&quot;bg-color-xlight-gray&quot; style&#x3D;&quot;width:50px;height:50px&quot;&gt;
+  &lt;li class&#x3D;&quot;bg-color-white&quot; style&#x3D;&quot;width:50px;height:50px&quot;&gt;
+&lt;/ul&gt;</code></pre>
+          </details>
+
+        <div class="kss-source kss-style">
+          Source: <code>frontend/components/classes/_colors.scss</code>, line 1
+        </div>
+
+    </section>
+    <section id="kssref-frontend-components-common" class="kss-section kss-section--depth-3 ">
+
+      <div class="kss-style">
+        <h3 class="kss-title kss-title--level-3">
+          <a class="kss-title__permalink" href="#kssref-frontend-components-common">
+            <span class="kss-title__ref">
+              2.2.5
+              <span class="kss-title__permalink-hash">
+                  #frontend.components.common
+              </span>
+            </span>
+            Common Classes
+          </a>
+        </h3>
+
+
+          <div class="kss-description">
+            <p>Frontend common classes.</p>
+
+          </div>
+
+      </div>
+
+
+        <div class="kss-source kss-style">
+          Source: <code>frontend/components/classes/_common.scss</code>, line 1
+        </div>
+
+    </section>
+    <section id="kssref-frontend-components-common-content" class="kss-section kss-section--depth-4 ">
+
+      <div class="kss-style">
+        <h4 class="kss-title kss-title--level-4">
+          <a class="kss-title__permalink" href="#kssref-frontend-components-common-content">
+            <span class="kss-title__ref">
+              2.2.5.1
+              <span class="kss-title__permalink-hash">
+                  #frontend.components.common.content
+              </span>
+            </span>
+            Content Styles
+          </a>
+        </h4>
+
+          <p class="kss-toolbar">
+              <a href="#kssref-frontend-components-common-content" data-kss-fullscreen="kssref-frontend-components-common-content">
+                <span class="kss-toolbar__tooltip">Toggle full screen</span>
+                <svg class="off" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                  <path class="kss-toolbar__icon-fill" d="M64 0v26l-10-10-12 12-6-6 12-12-10-10zM28 42l-12 12 10 10h-26v-26l10 10 12-12z"></path>
+                </svg>
+                <svg class="on" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                  <path class="kss-toolbar__icon-fill" d="M28 36v26l-10-10-12 12-6-6 12-12-10-10zM64 6l-12 12 10 10h-26v-26l10 10 12-12z"></path>
+                </svg>
+              </a>
+              <a href="item-frontend-components-common-content.html" target="_blank">
+                <span class="kss-toolbar__tooltip">Open in new window</span>
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                  <rect x="0" y="20" width="40" height="44" fill="#fff"/>
+                  <path class="kss-toolbar__icon-fill" d="M40,64l-40,0l0,-44l40,0l0,44Zm-36,-40l0,36l32,0l0,-36l-32,0Z"/>
+                  <rect class="kss-toolbar__icon-fill" x="0" y="20" width="40" height="10"/>
+                  <rect x="24" y="0" width="40" height="44" fill="#fff"/>
+                  <path class="kss-toolbar__icon-fill" d="M64,44l-40,0l0,-44l40,0l0,44Zm-36,-40l0,36l32,0l0,-36l-32,0Z"/>
+                  <rect class="kss-toolbar__icon-fill" x="24" y="0" width="40" height="10"/>
+                </svg>
+              </a>
+            <a href="#kssref-frontend-components-common-content" data-kss-guides="true">
+              <span class="kss-toolbar__tooltip">Toggle example guides</span>
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <rect class="kss-toolbar__icon-fill" x="5" y="35" width="5" height="9"/>
+                <rect class="kss-toolbar__icon-fill" x="54" y="21" width="5" height="9"/>
+                <rect class="kss-toolbar__icon-fill" x="54" y="35" width="5" height="9"/>
+                <rect class="kss-toolbar__icon-fill" x="5" y="21" width="5" height="9"/>
+                <rect class="kss-toolbar__icon-fill" x="5" y="0" width="5" height="15"/>
+                <rect class="kss-toolbar__icon-fill" x="35" y="5" width="9" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="20" y="5" width="9" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="0" y="5" width="15" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="54" y="0" width="5" height="15"/>
+                <rect class="kss-toolbar__icon-fill" x="49" y="5" width="15" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="54" y="49" width="5" height="15"/>
+                <rect class="kss-toolbar__icon-fill" x="49" y="54" width="15" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="5" y="49" width="5" height="15"/>
+                <rect class="kss-toolbar__icon-fill" x="0" y="54" width="15" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="35" y="54" width="9" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="20" y="54" width="9" height="5"/>
+              </svg>
+            </a>
+            <a href="#kssref-frontend-components-common-content" data-kss-markup="true">
+              <span class="kss-toolbar__tooltip">Toggle HTML markup</span>
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <path class="kss-toolbar__icon-fill" d="M37.555,46.239l6.103,6.103l20.342,-20.342l-20.342,-20.342l-6.103,6.103l14.24,14.239l-14.24,14.239Z"/>
+                <path class="kss-toolbar__icon-fill" d="M26.445,17.761l-6.103,-6.103l-20.342,20.342l20.342,20.342l6.103,-6.103l-14.24,-14.239l14.24,-14.239Z"/>
+              </svg>
+            </a>
+          </p>
+
+          <div class="kss-description">
+            <p>Common content style classes that can be used to alter an existing elements&#39;
+style.</p>
+
+          </div>
+
+      </div>
+
+        <div class="kss-modifier__wrapper">
+          <div class="kss-modifier__heading kss-style">
+            Example
+          </div>
+
+
+          <div class="kss-modifier__example">
+            <p class="no-margin">Element with no margin</p>
+<ul class="no-padding">
+  <li>Element with no padding
+</ul>
+<div class="round bg-color-black color-white" style="display: inline-block; padding: 10px;">.round</div>
+<div class="clearfix">.clearfix</div>
+<div class="flex">.flex</div>
+<div class="block">.block</div>
+<div class="inline-block">.inline-block</div>
+            <div class="kss-modifier__example-footer"></div>
+          </div>
+
+        </div>
+
+          <details class="kss-markup kss-style">
+            <summary>
+                Markup
+            </summary>
+            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;p class&#x3D;&quot;no-margin&quot;&gt;Element with no margin&lt;/p&gt;
+&lt;ul class&#x3D;&quot;no-padding&quot;&gt;
+  &lt;li&gt;Element with no padding
+&lt;/ul&gt;
+&lt;div class&#x3D;&quot;round bg-color-black color-white&quot; style&#x3D;&quot;display: inline-block; padding: 10px;&quot;&gt;.round&lt;/div&gt;
+&lt;div class&#x3D;&quot;clearfix&quot;&gt;.clearfix&lt;/div&gt;
+&lt;div class&#x3D;&quot;flex&quot;&gt;.flex&lt;/div&gt;
+&lt;div class&#x3D;&quot;block&quot;&gt;.block&lt;/div&gt;
+&lt;div class&#x3D;&quot;inline-block&quot;&gt;.inline-block&lt;/div&gt;</code></pre>
+          </details>
+
+        <div class="kss-source kss-style">
+          Source: <code>frontend/components/classes/_common.scss</code>, line 165
+        </div>
+
+    </section>
+    <section id="kssref-frontend-components-common-pager" class="kss-section kss-section--depth-4 ">
+
+      <div class="kss-style">
+        <h4 class="kss-title kss-title--level-4">
+          <a class="kss-title__permalink" href="#kssref-frontend-components-common-pager">
+            <span class="kss-title__ref">
+              2.2.5.2
+              <span class="kss-title__permalink-hash">
+                  #frontend.components.common.pager
+              </span>
+            </span>
+            Pager
+          </a>
+        </h4>
+
+          <p class="kss-toolbar">
+              <a href="#kssref-frontend-components-common-pager" data-kss-fullscreen="kssref-frontend-components-common-pager">
+                <span class="kss-toolbar__tooltip">Toggle full screen</span>
+                <svg class="off" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                  <path class="kss-toolbar__icon-fill" d="M64 0v26l-10-10-12 12-6-6 12-12-10-10zM28 42l-12 12 10 10h-26v-26l10 10 12-12z"></path>
+                </svg>
+                <svg class="on" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                  <path class="kss-toolbar__icon-fill" d="M28 36v26l-10-10-12 12-6-6 12-12-10-10zM64 6l-12 12 10 10h-26v-26l10 10 12-12z"></path>
+                </svg>
+              </a>
+              <a href="item-frontend-components-common-pager.html" target="_blank">
+                <span class="kss-toolbar__tooltip">Open in new window</span>
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                  <rect x="0" y="20" width="40" height="44" fill="#fff"/>
+                  <path class="kss-toolbar__icon-fill" d="M40,64l-40,0l0,-44l40,0l0,44Zm-36,-40l0,36l32,0l0,-36l-32,0Z"/>
+                  <rect class="kss-toolbar__icon-fill" x="0" y="20" width="40" height="10"/>
+                  <rect x="24" y="0" width="40" height="44" fill="#fff"/>
+                  <path class="kss-toolbar__icon-fill" d="M64,44l-40,0l0,-44l40,0l0,44Zm-36,-40l0,36l32,0l0,-36l-32,0Z"/>
+                  <rect class="kss-toolbar__icon-fill" x="24" y="0" width="40" height="10"/>
+                </svg>
+              </a>
+            <a href="#kssref-frontend-components-common-pager" data-kss-guides="true">
+              <span class="kss-toolbar__tooltip">Toggle example guides</span>
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <rect class="kss-toolbar__icon-fill" x="5" y="35" width="5" height="9"/>
+                <rect class="kss-toolbar__icon-fill" x="54" y="21" width="5" height="9"/>
+                <rect class="kss-toolbar__icon-fill" x="54" y="35" width="5" height="9"/>
+                <rect class="kss-toolbar__icon-fill" x="5" y="21" width="5" height="9"/>
+                <rect class="kss-toolbar__icon-fill" x="5" y="0" width="5" height="15"/>
+                <rect class="kss-toolbar__icon-fill" x="35" y="5" width="9" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="20" y="5" width="9" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="0" y="5" width="15" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="54" y="0" width="5" height="15"/>
+                <rect class="kss-toolbar__icon-fill" x="49" y="5" width="15" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="54" y="49" width="5" height="15"/>
+                <rect class="kss-toolbar__icon-fill" x="49" y="54" width="15" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="5" y="49" width="5" height="15"/>
+                <rect class="kss-toolbar__icon-fill" x="0" y="54" width="15" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="35" y="54" width="9" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="20" y="54" width="9" height="5"/>
+              </svg>
+            </a>
+            <a href="#kssref-frontend-components-common-pager" data-kss-markup="true">
+              <span class="kss-toolbar__tooltip">Toggle HTML markup</span>
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <path class="kss-toolbar__icon-fill" d="M37.555,46.239l6.103,6.103l20.342,-20.342l-20.342,-20.342l-6.103,6.103l14.24,14.239l-14.24,14.239Z"/>
+                <path class="kss-toolbar__icon-fill" d="M26.445,17.761l-6.103,-6.103l-20.342,20.342l20.342,20.342l6.103,-6.103l-14.24,-14.239l14.24,-14.239Z"/>
+              </svg>
+            </a>
+          </p>
+
+          <div class="kss-description">
+            <p>Styles a list element as a pager.</p>
+
+          </div>
+
+      </div>
+
+        <div class="kss-modifier__wrapper">
+          <div class="kss-modifier__heading kss-style">
+            Example
+          </div>
+
+
+          <div class="kss-modifier__example">
+            <ul class="pager">
+  <li><a href="#">First</a>
+  <li class="pager-ellipsis"><a href="#">&hellip;</a>
+  <li><a href="#">5</a>
+  <li class="pager-current"><a href="#">6</a>
+  <li><a href="#">7</a>
+  <li class="pager-ellipsis"><a href="#">&hellip;</a>
+  <li><a href="#">Last</a>
+</ul>
+            <div class="kss-modifier__example-footer"></div>
+          </div>
+
+        </div>
+
+          <details class="kss-markup kss-style">
+            <summary>
+                Markup
+            </summary>
+            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;ul class&#x3D;&quot;pager&quot;&gt;
+  &lt;li&gt;&lt;a href&#x3D;&quot;#&quot;&gt;First&lt;/a&gt;
+  &lt;li class&#x3D;&quot;pager-ellipsis&quot;&gt;&lt;a href&#x3D;&quot;#&quot;&gt;&amp;hellip;&lt;/a&gt;
+  &lt;li&gt;&lt;a href&#x3D;&quot;#&quot;&gt;5&lt;/a&gt;
+  &lt;li class&#x3D;&quot;pager-current&quot;&gt;&lt;a href&#x3D;&quot;#&quot;&gt;6&lt;/a&gt;
+  &lt;li&gt;&lt;a href&#x3D;&quot;#&quot;&gt;7&lt;/a&gt;
+  &lt;li class&#x3D;&quot;pager-ellipsis&quot;&gt;&lt;a href&#x3D;&quot;#&quot;&gt;&amp;hellip;&lt;/a&gt;
+  &lt;li&gt;&lt;a href&#x3D;&quot;#&quot;&gt;Last&lt;/a&gt;
+&lt;/ul&gt;</code></pre>
+          </details>
+
+        <div class="kss-source kss-style">
+          Source: <code>frontend/components/classes/_common.scss</code>, line 144
+        </div>
+
+    </section>
+    <section id="kssref-frontend-components-common-table" class="kss-section kss-section--depth-4 ">
+
+      <div class="kss-style">
+        <h4 class="kss-title kss-title--level-4">
+          <a class="kss-title__permalink" href="#kssref-frontend-components-common-table">
+            <span class="kss-title__ref">
+              2.2.5.3
+              <span class="kss-title__permalink-hash">
+                  #frontend.components.common.table
+              </span>
+            </span>
+            Responsive Table
+          </a>
+        </h4>
+
+          <p class="kss-toolbar">
+              <a href="#kssref-frontend-components-common-table" data-kss-fullscreen="kssref-frontend-components-common-table">
+                <span class="kss-toolbar__tooltip">Toggle full screen</span>
+                <svg class="off" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                  <path class="kss-toolbar__icon-fill" d="M64 0v26l-10-10-12 12-6-6 12-12-10-10zM28 42l-12 12 10 10h-26v-26l10 10 12-12z"></path>
+                </svg>
+                <svg class="on" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                  <path class="kss-toolbar__icon-fill" d="M28 36v26l-10-10-12 12-6-6 12-12-10-10zM64 6l-12 12 10 10h-26v-26l10 10 12-12z"></path>
+                </svg>
+              </a>
+              <a href="item-frontend-components-common-table.html" target="_blank">
+                <span class="kss-toolbar__tooltip">Open in new window</span>
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                  <rect x="0" y="20" width="40" height="44" fill="#fff"/>
+                  <path class="kss-toolbar__icon-fill" d="M40,64l-40,0l0,-44l40,0l0,44Zm-36,-40l0,36l32,0l0,-36l-32,0Z"/>
+                  <rect class="kss-toolbar__icon-fill" x="0" y="20" width="40" height="10"/>
+                  <rect x="24" y="0" width="40" height="44" fill="#fff"/>
+                  <path class="kss-toolbar__icon-fill" d="M64,44l-40,0l0,-44l40,0l0,44Zm-36,-40l0,36l32,0l0,-36l-32,0Z"/>
+                  <rect class="kss-toolbar__icon-fill" x="24" y="0" width="40" height="10"/>
+                </svg>
+              </a>
+            <a href="#kssref-frontend-components-common-table" data-kss-guides="true">
+              <span class="kss-toolbar__tooltip">Toggle example guides</span>
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <rect class="kss-toolbar__icon-fill" x="5" y="35" width="5" height="9"/>
+                <rect class="kss-toolbar__icon-fill" x="54" y="21" width="5" height="9"/>
+                <rect class="kss-toolbar__icon-fill" x="54" y="35" width="5" height="9"/>
+                <rect class="kss-toolbar__icon-fill" x="5" y="21" width="5" height="9"/>
+                <rect class="kss-toolbar__icon-fill" x="5" y="0" width="5" height="15"/>
+                <rect class="kss-toolbar__icon-fill" x="35" y="5" width="9" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="20" y="5" width="9" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="0" y="5" width="15" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="54" y="0" width="5" height="15"/>
+                <rect class="kss-toolbar__icon-fill" x="49" y="5" width="15" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="54" y="49" width="5" height="15"/>
+                <rect class="kss-toolbar__icon-fill" x="49" y="54" width="15" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="5" y="49" width="5" height="15"/>
+                <rect class="kss-toolbar__icon-fill" x="0" y="54" width="15" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="35" y="54" width="9" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="20" y="54" width="9" height="5"/>
+              </svg>
+            </a>
+            <a href="#kssref-frontend-components-common-table" data-kss-markup="true">
+              <span class="kss-toolbar__tooltip">Toggle HTML markup</span>
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <path class="kss-toolbar__icon-fill" d="M37.555,46.239l6.103,6.103l20.342,-20.342l-20.342,-20.342l-6.103,6.103l14.24,14.239l-14.24,14.239Z"/>
+                <path class="kss-toolbar__icon-fill" d="M26.445,17.761l-6.103,-6.103l-20.342,20.342l20.342,20.342l6.103,-6.103l-14.24,-14.239l14.24,-14.239Z"/>
+              </svg>
+            </a>
+          </p>
+
+          <div class="kss-description">
+            <p>Make a responsive table element without the <code>table</code> element.</p>
+
+          </div>
+
+      </div>
+
+        <div class="kss-modifier__wrapper">
+          <div class="kss-modifier__heading kss-style">
+            Example
+          </div>
+
+
+          <div class="kss-modifier__example">
+            <div class="table">Table div vs. <code>table</code> element.</div>
+            <div class="kss-modifier__example-footer"></div>
+          </div>
+
+        </div>
+
+          <details class="kss-markup kss-style">
+            <summary>
+                Markup
+            </summary>
+            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class&#x3D;&quot;table&quot;&gt;Table div vs. &lt;code&gt;table&lt;/code&gt; element.&lt;/div&gt;</code></pre>
+          </details>
+
+        <div class="kss-source kss-style">
+          Source: <code>frontend/components/classes/_common.scss</code>, line 7
+        </div>
+
+    </section>
+    <section id="kssref-frontend-components-common-table-body" class="kss-section kss-section--depth-4 ">
+
+      <div class="kss-style">
+        <h4 class="kss-title kss-title--level-4">
+          <a class="kss-title__permalink" href="#kssref-frontend-components-common-table-body">
+            <span class="kss-title__ref">
+              2.2.5.4
+              <span class="kss-title__permalink-hash">
+                  #frontend.components.common.table-body
+              </span>
+            </span>
+            Responsive Table Body
+          </a>
+        </h4>
+
+          <p class="kss-toolbar">
+              <a href="#kssref-frontend-components-common-table-body" data-kss-fullscreen="kssref-frontend-components-common-table-body">
+                <span class="kss-toolbar__tooltip">Toggle full screen</span>
+                <svg class="off" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                  <path class="kss-toolbar__icon-fill" d="M64 0v26l-10-10-12 12-6-6 12-12-10-10zM28 42l-12 12 10 10h-26v-26l10 10 12-12z"></path>
+                </svg>
+                <svg class="on" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                  <path class="kss-toolbar__icon-fill" d="M28 36v26l-10-10-12 12-6-6 12-12-10-10zM64 6l-12 12 10 10h-26v-26l10 10 12-12z"></path>
+                </svg>
+              </a>
+              <a href="item-frontend-components-common-table-body.html" target="_blank">
+                <span class="kss-toolbar__tooltip">Open in new window</span>
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                  <rect x="0" y="20" width="40" height="44" fill="#fff"/>
+                  <path class="kss-toolbar__icon-fill" d="M40,64l-40,0l0,-44l40,0l0,44Zm-36,-40l0,36l32,0l0,-36l-32,0Z"/>
+                  <rect class="kss-toolbar__icon-fill" x="0" y="20" width="40" height="10"/>
+                  <rect x="24" y="0" width="40" height="44" fill="#fff"/>
+                  <path class="kss-toolbar__icon-fill" d="M64,44l-40,0l0,-44l40,0l0,44Zm-36,-40l0,36l32,0l0,-36l-32,0Z"/>
+                  <rect class="kss-toolbar__icon-fill" x="24" y="0" width="40" height="10"/>
+                </svg>
+              </a>
+            <a href="#kssref-frontend-components-common-table-body" data-kss-guides="true">
+              <span class="kss-toolbar__tooltip">Toggle example guides</span>
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <rect class="kss-toolbar__icon-fill" x="5" y="35" width="5" height="9"/>
+                <rect class="kss-toolbar__icon-fill" x="54" y="21" width="5" height="9"/>
+                <rect class="kss-toolbar__icon-fill" x="54" y="35" width="5" height="9"/>
+                <rect class="kss-toolbar__icon-fill" x="5" y="21" width="5" height="9"/>
+                <rect class="kss-toolbar__icon-fill" x="5" y="0" width="5" height="15"/>
+                <rect class="kss-toolbar__icon-fill" x="35" y="5" width="9" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="20" y="5" width="9" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="0" y="5" width="15" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="54" y="0" width="5" height="15"/>
+                <rect class="kss-toolbar__icon-fill" x="49" y="5" width="15" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="54" y="49" width="5" height="15"/>
+                <rect class="kss-toolbar__icon-fill" x="49" y="54" width="15" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="5" y="49" width="5" height="15"/>
+                <rect class="kss-toolbar__icon-fill" x="0" y="54" width="15" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="35" y="54" width="9" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="20" y="54" width="9" height="5"/>
+              </svg>
+            </a>
+            <a href="#kssref-frontend-components-common-table-body" data-kss-markup="true">
+              <span class="kss-toolbar__tooltip">Toggle HTML markup</span>
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <path class="kss-toolbar__icon-fill" d="M37.555,46.239l6.103,6.103l20.342,-20.342l-20.342,-20.342l-6.103,6.103l14.24,14.239l-14.24,14.239Z"/>
+                <path class="kss-toolbar__icon-fill" d="M26.445,17.761l-6.103,-6.103l-20.342,20.342l20.342,20.342l6.103,-6.103l-14.24,-14.239l14.24,-14.239Z"/>
+              </svg>
+            </a>
+          </p>
+
+          <div class="kss-description">
+            <p>Make a responsive table body element without the <code>tbody</code> element.</p>
+
+          </div>
+
+      </div>
+
+        <div class="kss-modifier__wrapper">
+          <div class="kss-modifier__heading kss-style">
+            Example
+          </div>
+
+
+          <div class="kss-modifier__example">
+            <div class="table">
+  <div class="table-body">Table body div vs. <code>tbody</code> element.</div>
+</div>
+            <div class="kss-modifier__example-footer"></div>
+          </div>
+
+        </div>
+
+          <details class="kss-markup kss-style">
+            <summary>
+                Markup
+            </summary>
+            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class&#x3D;&quot;table&quot;&gt;
+  &lt;div class&#x3D;&quot;table-body&quot;&gt;Table body div vs. &lt;code&gt;tbody&lt;/code&gt; element.&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+          </details>
+
+        <div class="kss-source kss-style">
+          Source: <code>frontend/components/classes/_common.scss</code>, line 60
+        </div>
+
+    </section>
+    <section id="kssref-frontend-components-common-table-foot" class="kss-section kss-section--depth-4 ">
+
+      <div class="kss-style">
+        <h4 class="kss-title kss-title--level-4">
+          <a class="kss-title__permalink" href="#kssref-frontend-components-common-table-foot">
+            <span class="kss-title__ref">
+              2.2.5.5
+              <span class="kss-title__permalink-hash">
+                  #frontend.components.common.table-foot
+              </span>
+            </span>
+            Responsive Table Foot
+          </a>
+        </h4>
+
+          <p class="kss-toolbar">
+              <a href="#kssref-frontend-components-common-table-foot" data-kss-fullscreen="kssref-frontend-components-common-table-foot">
+                <span class="kss-toolbar__tooltip">Toggle full screen</span>
+                <svg class="off" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                  <path class="kss-toolbar__icon-fill" d="M64 0v26l-10-10-12 12-6-6 12-12-10-10zM28 42l-12 12 10 10h-26v-26l10 10 12-12z"></path>
+                </svg>
+                <svg class="on" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                  <path class="kss-toolbar__icon-fill" d="M28 36v26l-10-10-12 12-6-6 12-12-10-10zM64 6l-12 12 10 10h-26v-26l10 10 12-12z"></path>
+                </svg>
+              </a>
+              <a href="item-frontend-components-common-table-foot.html" target="_blank">
+                <span class="kss-toolbar__tooltip">Open in new window</span>
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                  <rect x="0" y="20" width="40" height="44" fill="#fff"/>
+                  <path class="kss-toolbar__icon-fill" d="M40,64l-40,0l0,-44l40,0l0,44Zm-36,-40l0,36l32,0l0,-36l-32,0Z"/>
+                  <rect class="kss-toolbar__icon-fill" x="0" y="20" width="40" height="10"/>
+                  <rect x="24" y="0" width="40" height="44" fill="#fff"/>
+                  <path class="kss-toolbar__icon-fill" d="M64,44l-40,0l0,-44l40,0l0,44Zm-36,-40l0,36l32,0l0,-36l-32,0Z"/>
+                  <rect class="kss-toolbar__icon-fill" x="24" y="0" width="40" height="10"/>
+                </svg>
+              </a>
+            <a href="#kssref-frontend-components-common-table-foot" data-kss-guides="true">
+              <span class="kss-toolbar__tooltip">Toggle example guides</span>
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <rect class="kss-toolbar__icon-fill" x="5" y="35" width="5" height="9"/>
+                <rect class="kss-toolbar__icon-fill" x="54" y="21" width="5" height="9"/>
+                <rect class="kss-toolbar__icon-fill" x="54" y="35" width="5" height="9"/>
+                <rect class="kss-toolbar__icon-fill" x="5" y="21" width="5" height="9"/>
+                <rect class="kss-toolbar__icon-fill" x="5" y="0" width="5" height="15"/>
+                <rect class="kss-toolbar__icon-fill" x="35" y="5" width="9" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="20" y="5" width="9" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="0" y="5" width="15" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="54" y="0" width="5" height="15"/>
+                <rect class="kss-toolbar__icon-fill" x="49" y="5" width="15" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="54" y="49" width="5" height="15"/>
+                <rect class="kss-toolbar__icon-fill" x="49" y="54" width="15" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="5" y="49" width="5" height="15"/>
+                <rect class="kss-toolbar__icon-fill" x="0" y="54" width="15" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="35" y="54" width="9" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="20" y="54" width="9" height="5"/>
+              </svg>
+            </a>
+            <a href="#kssref-frontend-components-common-table-foot" data-kss-markup="true">
+              <span class="kss-toolbar__tooltip">Toggle HTML markup</span>
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <path class="kss-toolbar__icon-fill" d="M37.555,46.239l6.103,6.103l20.342,-20.342l-20.342,-20.342l-6.103,6.103l14.24,14.239l-14.24,14.239Z"/>
+                <path class="kss-toolbar__icon-fill" d="M26.445,17.761l-6.103,-6.103l-20.342,20.342l20.342,20.342l6.103,-6.103l-14.24,-14.239l14.24,-14.239Z"/>
+              </svg>
+            </a>
+          </p>
+
+          <div class="kss-description">
+            <p>Make a responsive table foot element without the <code>tfoot</code> element.</p>
+
+          </div>
+
+      </div>
+
+        <div class="kss-modifier__wrapper">
+          <div class="kss-modifier__heading kss-style">
+            Example
+          </div>
+
+
+          <div class="kss-modifier__example">
+            <div class="table">
+  <div class="table-foot">Table foot div vs. <code>tfoot</code> element.</div>
+</div>
+            <div class="kss-modifier__example-footer"></div>
+          </div>
+
+        </div>
+
+          <details class="kss-markup kss-style">
+            <summary>
+                Markup
+            </summary>
+            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class&#x3D;&quot;table&quot;&gt;
+  &lt;div class&#x3D;&quot;table-foot&quot;&gt;Table foot div vs. &lt;code&gt;tfoot&lt;/code&gt; element.&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+          </details>
+
+        <div class="kss-source kss-style">
+          Source: <code>frontend/components/classes/_common.scss</code>, line 41
+        </div>
+
+    </section>
+    <section id="kssref-frontend-components-common-table-header" class="kss-section kss-section--depth-4 ">
+
+      <div class="kss-style">
+        <h4 class="kss-title kss-title--level-4">
+          <a class="kss-title__permalink" href="#kssref-frontend-components-common-table-header">
+            <span class="kss-title__ref">
+              2.2.5.6
+              <span class="kss-title__permalink-hash">
+                  #frontend.components.common.table-header
+              </span>
+            </span>
+            Responsive Table Head
+          </a>
+        </h4>
+
+          <p class="kss-toolbar">
+              <a href="#kssref-frontend-components-common-table-header" data-kss-fullscreen="kssref-frontend-components-common-table-header">
+                <span class="kss-toolbar__tooltip">Toggle full screen</span>
+                <svg class="off" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                  <path class="kss-toolbar__icon-fill" d="M64 0v26l-10-10-12 12-6-6 12-12-10-10zM28 42l-12 12 10 10h-26v-26l10 10 12-12z"></path>
+                </svg>
+                <svg class="on" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                  <path class="kss-toolbar__icon-fill" d="M28 36v26l-10-10-12 12-6-6 12-12-10-10zM64 6l-12 12 10 10h-26v-26l10 10 12-12z"></path>
+                </svg>
+              </a>
+              <a href="item-frontend-components-common-table-header.html" target="_blank">
+                <span class="kss-toolbar__tooltip">Open in new window</span>
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                  <rect x="0" y="20" width="40" height="44" fill="#fff"/>
+                  <path class="kss-toolbar__icon-fill" d="M40,64l-40,0l0,-44l40,0l0,44Zm-36,-40l0,36l32,0l0,-36l-32,0Z"/>
+                  <rect class="kss-toolbar__icon-fill" x="0" y="20" width="40" height="10"/>
+                  <rect x="24" y="0" width="40" height="44" fill="#fff"/>
+                  <path class="kss-toolbar__icon-fill" d="M64,44l-40,0l0,-44l40,0l0,44Zm-36,-40l0,36l32,0l0,-36l-32,0Z"/>
+                  <rect class="kss-toolbar__icon-fill" x="24" y="0" width="40" height="10"/>
+                </svg>
+              </a>
+            <a href="#kssref-frontend-components-common-table-header" data-kss-guides="true">
+              <span class="kss-toolbar__tooltip">Toggle example guides</span>
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <rect class="kss-toolbar__icon-fill" x="5" y="35" width="5" height="9"/>
+                <rect class="kss-toolbar__icon-fill" x="54" y="21" width="5" height="9"/>
+                <rect class="kss-toolbar__icon-fill" x="54" y="35" width="5" height="9"/>
+                <rect class="kss-toolbar__icon-fill" x="5" y="21" width="5" height="9"/>
+                <rect class="kss-toolbar__icon-fill" x="5" y="0" width="5" height="15"/>
+                <rect class="kss-toolbar__icon-fill" x="35" y="5" width="9" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="20" y="5" width="9" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="0" y="5" width="15" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="54" y="0" width="5" height="15"/>
+                <rect class="kss-toolbar__icon-fill" x="49" y="5" width="15" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="54" y="49" width="5" height="15"/>
+                <rect class="kss-toolbar__icon-fill" x="49" y="54" width="15" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="5" y="49" width="5" height="15"/>
+                <rect class="kss-toolbar__icon-fill" x="0" y="54" width="15" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="35" y="54" width="9" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="20" y="54" width="9" height="5"/>
+              </svg>
+            </a>
+            <a href="#kssref-frontend-components-common-table-header" data-kss-markup="true">
+              <span class="kss-toolbar__tooltip">Toggle HTML markup</span>
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <path class="kss-toolbar__icon-fill" d="M37.555,46.239l6.103,6.103l20.342,-20.342l-20.342,-20.342l-6.103,6.103l14.24,14.239l-14.24,14.239Z"/>
+                <path class="kss-toolbar__icon-fill" d="M26.445,17.761l-6.103,-6.103l-20.342,20.342l20.342,20.342l6.103,-6.103l-14.24,-14.239l14.24,-14.239Z"/>
+              </svg>
+            </a>
+          </p>
+
+          <div class="kss-description">
+            <p>Make a responsive table head element without the <code>thead</code> element.</p>
+
+          </div>
+
+      </div>
+
+        <div class="kss-modifier__wrapper">
+          <div class="kss-modifier__heading kss-style">
+            Example
+          </div>
+
+
+          <div class="kss-modifier__example">
+            <div class="table">
+  <div class="table-head">Table head div vs. <code>thead</code> element.</div>
+</div>
+            <div class="kss-modifier__example-footer"></div>
+          </div>
+
+        </div>
+
+          <details class="kss-markup kss-style">
+            <summary>
+                Markup
+            </summary>
+            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class&#x3D;&quot;table&quot;&gt;
+  &lt;div class&#x3D;&quot;table-head&quot;&gt;Table head div vs. &lt;code&gt;thead&lt;/code&gt; element.&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+          </details>
+
+        <div class="kss-source kss-style">
+          Source: <code>frontend/components/classes/_common.scss</code>, line 21
+        </div>
+
+    </section>
+    <section id="kssref-frontend-components-common-table-row" class="kss-section kss-section--depth-4 ">
+
+      <div class="kss-style">
+        <h4 class="kss-title kss-title--level-4">
+          <a class="kss-title__permalink" href="#kssref-frontend-components-common-table-row">
+            <span class="kss-title__ref">
+              2.2.5.7
+              <span class="kss-title__permalink-hash">
+                  #frontend.components.common.table-row
+              </span>
+            </span>
+            Responsive Table Row
+          </a>
+        </h4>
+
+          <p class="kss-toolbar">
+              <a href="#kssref-frontend-components-common-table-row" data-kss-fullscreen="kssref-frontend-components-common-table-row">
+                <span class="kss-toolbar__tooltip">Toggle full screen</span>
+                <svg class="off" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                  <path class="kss-toolbar__icon-fill" d="M64 0v26l-10-10-12 12-6-6 12-12-10-10zM28 42l-12 12 10 10h-26v-26l10 10 12-12z"></path>
+                </svg>
+                <svg class="on" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                  <path class="kss-toolbar__icon-fill" d="M28 36v26l-10-10-12 12-6-6 12-12-10-10zM64 6l-12 12 10 10h-26v-26l10 10 12-12z"></path>
+                </svg>
+              </a>
+              <a href="item-frontend-components-common-table-row.html" target="_blank">
+                <span class="kss-toolbar__tooltip">Open in new window</span>
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                  <rect x="0" y="20" width="40" height="44" fill="#fff"/>
+                  <path class="kss-toolbar__icon-fill" d="M40,64l-40,0l0,-44l40,0l0,44Zm-36,-40l0,36l32,0l0,-36l-32,0Z"/>
+                  <rect class="kss-toolbar__icon-fill" x="0" y="20" width="40" height="10"/>
+                  <rect x="24" y="0" width="40" height="44" fill="#fff"/>
+                  <path class="kss-toolbar__icon-fill" d="M64,44l-40,0l0,-44l40,0l0,44Zm-36,-40l0,36l32,0l0,-36l-32,0Z"/>
+                  <rect class="kss-toolbar__icon-fill" x="24" y="0" width="40" height="10"/>
+                </svg>
+              </a>
+            <a href="#kssref-frontend-components-common-table-row" data-kss-guides="true">
+              <span class="kss-toolbar__tooltip">Toggle example guides</span>
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <rect class="kss-toolbar__icon-fill" x="5" y="35" width="5" height="9"/>
+                <rect class="kss-toolbar__icon-fill" x="54" y="21" width="5" height="9"/>
+                <rect class="kss-toolbar__icon-fill" x="54" y="35" width="5" height="9"/>
+                <rect class="kss-toolbar__icon-fill" x="5" y="21" width="5" height="9"/>
+                <rect class="kss-toolbar__icon-fill" x="5" y="0" width="5" height="15"/>
+                <rect class="kss-toolbar__icon-fill" x="35" y="5" width="9" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="20" y="5" width="9" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="0" y="5" width="15" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="54" y="0" width="5" height="15"/>
+                <rect class="kss-toolbar__icon-fill" x="49" y="5" width="15" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="54" y="49" width="5" height="15"/>
+                <rect class="kss-toolbar__icon-fill" x="49" y="54" width="15" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="5" y="49" width="5" height="15"/>
+                <rect class="kss-toolbar__icon-fill" x="0" y="54" width="15" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="35" y="54" width="9" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="20" y="54" width="9" height="5"/>
+              </svg>
+            </a>
+            <a href="#kssref-frontend-components-common-table-row" data-kss-markup="true">
+              <span class="kss-toolbar__tooltip">Toggle HTML markup</span>
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <path class="kss-toolbar__icon-fill" d="M37.555,46.239l6.103,6.103l20.342,-20.342l-20.342,-20.342l-6.103,6.103l14.24,14.239l-14.24,14.239Z"/>
+                <path class="kss-toolbar__icon-fill" d="M26.445,17.761l-6.103,-6.103l-20.342,20.342l20.342,20.342l6.103,-6.103l-14.24,-14.239l14.24,-14.239Z"/>
+              </svg>
+            </a>
+          </p>
+
+          <div class="kss-description">
+            <p>Make a responsive table row element without the <code>tr</code> element.</p>
+
+          </div>
+
+      </div>
+
+        <div class="kss-modifier__wrapper">
+          <div class="kss-modifier__heading kss-style">
+            Example
+          </div>
+
+
+          <div class="kss-modifier__example">
+            <div class="table">
+  <div class="table-head">
+    <div class="table-row">
+      <div class="table-col">Head Col 1</div>
+      <div class="table-col">Head Col 2</div>
+      <div class="table-col">Head Col 3</div>
+    </div>
+  </div>
+  <div class="table-body">
+    <div class="table-row">
+      <div class="table-col">Body Col 1</div>
+      <div class="table-col">Body Col 2</div>
+      <div class="table-col">Body Col 3</div>
+    </div>
+  </div>
+  <div class="table-foot">
+    <div class="table-row">
+      <div class="table-col">Footer Col 1</div>
+      <div class="table-col">Footer Col 2</div>
+      <div class="table-col">Footer Col 3</div>
+    </div>
+  </div>
+</div>
+            <div class="kss-modifier__example-footer"></div>
+          </div>
+
+        </div>
+
+          <details class="kss-markup kss-style">
+            <summary>
+                Markup
+            </summary>
+            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class&#x3D;&quot;table&quot;&gt;
+  &lt;div class&#x3D;&quot;table-head&quot;&gt;
+    &lt;div class&#x3D;&quot;table-row&quot;&gt;
+      &lt;div class&#x3D;&quot;table-col&quot;&gt;Head Col 1&lt;/div&gt;
+      &lt;div class&#x3D;&quot;table-col&quot;&gt;Head Col 2&lt;/div&gt;
+      &lt;div class&#x3D;&quot;table-col&quot;&gt;Head Col 3&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class&#x3D;&quot;table-body&quot;&gt;
+    &lt;div class&#x3D;&quot;table-row&quot;&gt;
+      &lt;div class&#x3D;&quot;table-col&quot;&gt;Body Col 1&lt;/div&gt;
+      &lt;div class&#x3D;&quot;table-col&quot;&gt;Body Col 2&lt;/div&gt;
+      &lt;div class&#x3D;&quot;table-col&quot;&gt;Body Col 3&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class&#x3D;&quot;table-foot&quot;&gt;
+    &lt;div class&#x3D;&quot;table-row&quot;&gt;
+      &lt;div class&#x3D;&quot;table-col&quot;&gt;Footer Col 1&lt;/div&gt;
+      &lt;div class&#x3D;&quot;table-col&quot;&gt;Footer Col 2&lt;/div&gt;
+      &lt;div class&#x3D;&quot;table-col&quot;&gt;Footer Col 3&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+          </details>
+
+        <div class="kss-source kss-style">
+          Source: <code>frontend/components/classes/_common.scss</code>, line 77
+        </div>
+
+    </section>
+    <section id="kssref-frontend-components-common-table-row" class="kss-section kss-section--depth-4 ">
+
+      <div class="kss-style">
+        <h4 class="kss-title kss-title--level-4">
+          <a class="kss-title__permalink" href="#kssref-frontend-components-common-table-row">
+            <span class="kss-title__ref">
+              2.2.5.7
+              <span class="kss-title__permalink-hash">
+                  #frontend.components.common.table-row
+              </span>
+            </span>
+            Responsive Table Column
+          </a>
+        </h4>
+
+          <p class="kss-toolbar">
+              <a href="#kssref-frontend-components-common-table-row" data-kss-fullscreen="kssref-frontend-components-common-table-row">
+                <span class="kss-toolbar__tooltip">Toggle full screen</span>
+                <svg class="off" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                  <path class="kss-toolbar__icon-fill" d="M64 0v26l-10-10-12 12-6-6 12-12-10-10zM28 42l-12 12 10 10h-26v-26l10 10 12-12z"></path>
+                </svg>
+                <svg class="on" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                  <path class="kss-toolbar__icon-fill" d="M28 36v26l-10-10-12 12-6-6 12-12-10-10zM64 6l-12 12 10 10h-26v-26l10 10 12-12z"></path>
+                </svg>
+              </a>
+              <a href="item-frontend-components-common-table-row.html" target="_blank">
+                <span class="kss-toolbar__tooltip">Open in new window</span>
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                  <rect x="0" y="20" width="40" height="44" fill="#fff"/>
+                  <path class="kss-toolbar__icon-fill" d="M40,64l-40,0l0,-44l40,0l0,44Zm-36,-40l0,36l32,0l0,-36l-32,0Z"/>
+                  <rect class="kss-toolbar__icon-fill" x="0" y="20" width="40" height="10"/>
+                  <rect x="24" y="0" width="40" height="44" fill="#fff"/>
+                  <path class="kss-toolbar__icon-fill" d="M64,44l-40,0l0,-44l40,0l0,44Zm-36,-40l0,36l32,0l0,-36l-32,0Z"/>
+                  <rect class="kss-toolbar__icon-fill" x="24" y="0" width="40" height="10"/>
+                </svg>
+              </a>
+            <a href="#kssref-frontend-components-common-table-row" data-kss-guides="true">
+              <span class="kss-toolbar__tooltip">Toggle example guides</span>
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <rect class="kss-toolbar__icon-fill" x="5" y="35" width="5" height="9"/>
+                <rect class="kss-toolbar__icon-fill" x="54" y="21" width="5" height="9"/>
+                <rect class="kss-toolbar__icon-fill" x="54" y="35" width="5" height="9"/>
+                <rect class="kss-toolbar__icon-fill" x="5" y="21" width="5" height="9"/>
+                <rect class="kss-toolbar__icon-fill" x="5" y="0" width="5" height="15"/>
+                <rect class="kss-toolbar__icon-fill" x="35" y="5" width="9" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="20" y="5" width="9" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="0" y="5" width="15" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="54" y="0" width="5" height="15"/>
+                <rect class="kss-toolbar__icon-fill" x="49" y="5" width="15" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="54" y="49" width="5" height="15"/>
+                <rect class="kss-toolbar__icon-fill" x="49" y="54" width="15" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="5" y="49" width="5" height="15"/>
+                <rect class="kss-toolbar__icon-fill" x="0" y="54" width="15" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="35" y="54" width="9" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="20" y="54" width="9" height="5"/>
+              </svg>
+            </a>
+            <a href="#kssref-frontend-components-common-table-row" data-kss-markup="true">
+              <span class="kss-toolbar__tooltip">Toggle HTML markup</span>
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <path class="kss-toolbar__icon-fill" d="M37.555,46.239l6.103,6.103l20.342,-20.342l-20.342,-20.342l-6.103,6.103l14.24,14.239l-14.24,14.239Z"/>
+                <path class="kss-toolbar__icon-fill" d="M26.445,17.761l-6.103,-6.103l-20.342,20.342l20.342,20.342l6.103,-6.103l-14.24,-14.239l14.24,-14.239Z"/>
+              </svg>
+            </a>
+          </p>
+
+          <div class="kss-description">
+            <p>Make a responsive table column element without the <code>td</code> element.</p>
+
+          </div>
+
+      </div>
+
+        <div class="kss-modifier__wrapper">
+          <div class="kss-modifier__heading kss-style">
+            Example
+          </div>
+
+
+          <div class="kss-modifier__example">
+            <div class="table">
+  <div class="table-head">
+    <div class="table-row">
+      <div class="table-col">Head Col 1</div>
+      <div class="table-col">Head Col 2</div>
+      <div class="table-col">Head Col 3</div>
+    </div>
+  </div>
+  <div class="table-body">
+    <div class="table-row">
+      <div class="table-col">Body Col 1</div>
+      <div class="table-col">Body Col 2</div>
+      <div class="table-col">Body Col 3</div>
+    </div>
+  </div>
+  <div class="table-foot">
+    <div class="table-row">
+      <div class="table-col">Footer Col 1</div>
+      <div class="table-col">Footer Col 2</div>
+      <div class="table-col">Footer Col 3</div>
+    </div>
+  </div>
+</div>
+            <div class="kss-modifier__example-footer"></div>
+          </div>
+
+        </div>
+
+          <details class="kss-markup kss-style">
+            <summary>
+                Markup
+            </summary>
+            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class&#x3D;&quot;table&quot;&gt;
+  &lt;div class&#x3D;&quot;table-head&quot;&gt;
+    &lt;div class&#x3D;&quot;table-row&quot;&gt;
+      &lt;div class&#x3D;&quot;table-col&quot;&gt;Head Col 1&lt;/div&gt;
+      &lt;div class&#x3D;&quot;table-col&quot;&gt;Head Col 2&lt;/div&gt;
+      &lt;div class&#x3D;&quot;table-col&quot;&gt;Head Col 3&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class&#x3D;&quot;table-body&quot;&gt;
+    &lt;div class&#x3D;&quot;table-row&quot;&gt;
+      &lt;div class&#x3D;&quot;table-col&quot;&gt;Body Col 1&lt;/div&gt;
+      &lt;div class&#x3D;&quot;table-col&quot;&gt;Body Col 2&lt;/div&gt;
+      &lt;div class&#x3D;&quot;table-col&quot;&gt;Body Col 3&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class&#x3D;&quot;table-foot&quot;&gt;
+    &lt;div class&#x3D;&quot;table-row&quot;&gt;
+      &lt;div class&#x3D;&quot;table-col&quot;&gt;Footer Col 1&lt;/div&gt;
+      &lt;div class&#x3D;&quot;table-col&quot;&gt;Footer Col 2&lt;/div&gt;
+      &lt;div class&#x3D;&quot;table-col&quot;&gt;Footer Col 3&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+          </details>
+
+        <div class="kss-source kss-style">
+          Source: <code>frontend/components/classes/_common.scss</code>, line 105
+        </div>
+
+    </section>
+    <section id="kssref-frontend-components-drupal7" class="kss-section kss-section--depth-3 ">
+
+      <div class="kss-style">
+        <h3 class="kss-title kss-title--level-3">
+          <a class="kss-title__permalink" href="#kssref-frontend-components-drupal7">
+            <span class="kss-title__ref">
+              2.2.6
+              <span class="kss-title__permalink-hash">
+                  #frontend.components.drupal7
+              </span>
+            </span>
+            Drupal 7 Styles
+          </a>
+        </h3>
+
+
+          <div class="kss-description">
+            <p>Frontend pre-built Drupal 7 styles.</p>
+
+          </div>
+
+      </div>
+
+
+        <div class="kss-source kss-style">
+          Source: <code>frontend/components/_drupal7.scss</code>, line 1
+        </div>
+
+    </section>
+    <section id="kssref-frontend-components-layout" class="kss-section kss-section--depth-3 ">
+
+      <div class="kss-style">
+        <h3 class="kss-title kss-title--level-3">
+          <a class="kss-title__permalink" href="#kssref-frontend-components-layout">
+            <span class="kss-title__ref">
+              2.2.7
+              <span class="kss-title__permalink-hash">
+                  #frontend.components.layout
+              </span>
+            </span>
+            Layout Classes
+          </a>
+        </h3>
+
+
+          <div class="kss-description">
+            <p>Frontend layout classes. DO NOT EDIT! Contains all of Frontend&#39;s pre-packaged
+layout class styles.</p>
+
+          </div>
+
+      </div>
+
+
+        <div class="kss-source kss-style">
+          Source: <code>frontend/components/classes/_layout.scss</code>, line 1
+        </div>
+
+    </section>
+    <section id="kssref-frontend-components-layout-col" class="kss-section kss-section--depth-4 ">
+
+      <div class="kss-style">
+        <h4 class="kss-title kss-title--level-4">
+          <a class="kss-title__permalink" href="#kssref-frontend-components-layout-col">
+            <span class="kss-title__ref">
+              2.2.7.1
+              <span class="kss-title__permalink-hash">
+                  #frontend.components.layout.col
+              </span>
+            </span>
+            Grid Column
+          </a>
+        </h4>
+
+          <p class="kss-toolbar">
+              <a href="#kssref-frontend-components-layout-col" data-kss-fullscreen="kssref-frontend-components-layout-col">
+                <span class="kss-toolbar__tooltip">Toggle full screen</span>
+                <svg class="off" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                  <path class="kss-toolbar__icon-fill" d="M64 0v26l-10-10-12 12-6-6 12-12-10-10zM28 42l-12 12 10 10h-26v-26l10 10 12-12z"></path>
+                </svg>
+                <svg class="on" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                  <path class="kss-toolbar__icon-fill" d="M28 36v26l-10-10-12 12-6-6 12-12-10-10zM64 6l-12 12 10 10h-26v-26l10 10 12-12z"></path>
+                </svg>
+              </a>
+              <a href="item-frontend-components-layout-col.html" target="_blank">
+                <span class="kss-toolbar__tooltip">Open in new window</span>
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                  <rect x="0" y="20" width="40" height="44" fill="#fff"/>
+                  <path class="kss-toolbar__icon-fill" d="M40,64l-40,0l0,-44l40,0l0,44Zm-36,-40l0,36l32,0l0,-36l-32,0Z"/>
+                  <rect class="kss-toolbar__icon-fill" x="0" y="20" width="40" height="10"/>
+                  <rect x="24" y="0" width="40" height="44" fill="#fff"/>
+                  <path class="kss-toolbar__icon-fill" d="M64,44l-40,0l0,-44l40,0l0,44Zm-36,-40l0,36l32,0l0,-36l-32,0Z"/>
+                  <rect class="kss-toolbar__icon-fill" x="24" y="0" width="40" height="10"/>
+                </svg>
+              </a>
+            <a href="#kssref-frontend-components-layout-col" data-kss-guides="true">
+              <span class="kss-toolbar__tooltip">Toggle example guides</span>
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <rect class="kss-toolbar__icon-fill" x="5" y="35" width="5" height="9"/>
+                <rect class="kss-toolbar__icon-fill" x="54" y="21" width="5" height="9"/>
+                <rect class="kss-toolbar__icon-fill" x="54" y="35" width="5" height="9"/>
+                <rect class="kss-toolbar__icon-fill" x="5" y="21" width="5" height="9"/>
+                <rect class="kss-toolbar__icon-fill" x="5" y="0" width="5" height="15"/>
+                <rect class="kss-toolbar__icon-fill" x="35" y="5" width="9" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="20" y="5" width="9" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="0" y="5" width="15" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="54" y="0" width="5" height="15"/>
+                <rect class="kss-toolbar__icon-fill" x="49" y="5" width="15" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="54" y="49" width="5" height="15"/>
+                <rect class="kss-toolbar__icon-fill" x="49" y="54" width="15" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="5" y="49" width="5" height="15"/>
+                <rect class="kss-toolbar__icon-fill" x="0" y="54" width="15" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="35" y="54" width="9" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="20" y="54" width="9" height="5"/>
+              </svg>
+            </a>
+            <a href="#kssref-frontend-components-layout-col" data-kss-markup="true">
+              <span class="kss-toolbar__tooltip">Toggle HTML markup</span>
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <path class="kss-toolbar__icon-fill" d="M37.555,46.239l6.103,6.103l20.342,-20.342l-20.342,-20.342l-6.103,6.103l14.24,14.239l-14.24,14.239Z"/>
+                <path class="kss-toolbar__icon-fill" d="M26.445,17.761l-6.103,-6.103l-20.342,20.342l20.342,20.342l6.103,-6.103l-14.24,-14.239l14.24,-14.239Z"/>
+              </svg>
+            </a>
+          </p>
+
+          <div class="kss-description">
+            <p>Creates a grid column.</p>
+
+          </div>
+
+      </div>
+
+        <div class="kss-modifier__wrapper">
+          <div class="kss-modifier__heading kss-style">
+            Example
+          </div>
+
+
+          <div class="kss-modifier__example">
+            <div class="row">
+  <div class="col-12-1 col-12-1-small">Container content</div>
+</div>
+<div class="row">
+  <div class="col-12-1 col-12-1-small">Container content</div>
+</div>
+            <div class="kss-modifier__example-footer"></div>
+          </div>
+
+        </div>
+
+          <details class="kss-markup kss-style">
+            <summary>
+                Markup
+            </summary>
+            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class&#x3D;&quot;row&quot;&gt;
+  &lt;div class&#x3D;&quot;col-12-1 col-12-1-small&quot;&gt;Container content&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class&#x3D;&quot;row&quot;&gt;
+  &lt;div class&#x3D;&quot;col-12-1 col-12-1-small&quot;&gt;Container content&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+          </details>
+
+        <div class="kss-source kss-style">
+          Source: <code>frontend/components/classes/_layout.scss</code>, line 25
+        </div>
+
+    </section>
+    <section id="kssref-frontend-components-layout-container" class="kss-section kss-section--depth-4 ">
+
+      <div class="kss-style">
+        <h4 class="kss-title kss-title--level-4">
+          <a class="kss-title__permalink" href="#kssref-frontend-components-layout-container">
+            <span class="kss-title__ref">
+              2.2.7.2
+              <span class="kss-title__permalink-hash">
+                  #frontend.components.layout.container
+              </span>
+            </span>
+            Grid Row
+          </a>
+        </h4>
+
+          <p class="kss-toolbar">
+              <a href="#kssref-frontend-components-layout-container" data-kss-fullscreen="kssref-frontend-components-layout-container">
+                <span class="kss-toolbar__tooltip">Toggle full screen</span>
+                <svg class="off" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                  <path class="kss-toolbar__icon-fill" d="M64 0v26l-10-10-12 12-6-6 12-12-10-10zM28 42l-12 12 10 10h-26v-26l10 10 12-12z"></path>
+                </svg>
+                <svg class="on" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                  <path class="kss-toolbar__icon-fill" d="M28 36v26l-10-10-12 12-6-6 12-12-10-10zM64 6l-12 12 10 10h-26v-26l10 10 12-12z"></path>
+                </svg>
+              </a>
+              <a href="item-frontend-components-layout-container.html" target="_blank">
+                <span class="kss-toolbar__tooltip">Open in new window</span>
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                  <rect x="0" y="20" width="40" height="44" fill="#fff"/>
+                  <path class="kss-toolbar__icon-fill" d="M40,64l-40,0l0,-44l40,0l0,44Zm-36,-40l0,36l32,0l0,-36l-32,0Z"/>
+                  <rect class="kss-toolbar__icon-fill" x="0" y="20" width="40" height="10"/>
+                  <rect x="24" y="0" width="40" height="44" fill="#fff"/>
+                  <path class="kss-toolbar__icon-fill" d="M64,44l-40,0l0,-44l40,0l0,44Zm-36,-40l0,36l32,0l0,-36l-32,0Z"/>
+                  <rect class="kss-toolbar__icon-fill" x="24" y="0" width="40" height="10"/>
+                </svg>
+              </a>
+            <a href="#kssref-frontend-components-layout-container" data-kss-guides="true">
+              <span class="kss-toolbar__tooltip">Toggle example guides</span>
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <rect class="kss-toolbar__icon-fill" x="5" y="35" width="5" height="9"/>
+                <rect class="kss-toolbar__icon-fill" x="54" y="21" width="5" height="9"/>
+                <rect class="kss-toolbar__icon-fill" x="54" y="35" width="5" height="9"/>
+                <rect class="kss-toolbar__icon-fill" x="5" y="21" width="5" height="9"/>
+                <rect class="kss-toolbar__icon-fill" x="5" y="0" width="5" height="15"/>
+                <rect class="kss-toolbar__icon-fill" x="35" y="5" width="9" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="20" y="5" width="9" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="0" y="5" width="15" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="54" y="0" width="5" height="15"/>
+                <rect class="kss-toolbar__icon-fill" x="49" y="5" width="15" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="54" y="49" width="5" height="15"/>
+                <rect class="kss-toolbar__icon-fill" x="49" y="54" width="15" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="5" y="49" width="5" height="15"/>
+                <rect class="kss-toolbar__icon-fill" x="0" y="54" width="15" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="35" y="54" width="9" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="20" y="54" width="9" height="5"/>
+              </svg>
+            </a>
+            <a href="#kssref-frontend-components-layout-container" data-kss-markup="true">
+              <span class="kss-toolbar__tooltip">Toggle HTML markup</span>
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <path class="kss-toolbar__icon-fill" d="M37.555,46.239l6.103,6.103l20.342,-20.342l-20.342,-20.342l-6.103,6.103l14.24,14.239l-14.24,14.239Z"/>
+                <path class="kss-toolbar__icon-fill" d="M26.445,17.761l-6.103,-6.103l-20.342,20.342l20.342,20.342l6.103,-6.103l-14.24,-14.239l14.24,-14.239Z"/>
+              </svg>
+            </a>
+          </p>
+
+          <div class="kss-description">
+            <p>Creates a grid row container.</p>
+
+          </div>
+
+      </div>
+
+        <div class="kss-modifier__wrapper">
+          <div class="kss-modifier__heading kss-style">
+            Example
+          </div>
+
+
+          <div class="kss-modifier__example">
+            <div class="row">Container content</div>
+<div class="row">Full width container content</div>
+            <div class="kss-modifier__example-footer"></div>
+          </div>
+
+        </div>
+
+          <details class="kss-markup kss-style">
+            <summary>
+                Markup
+            </summary>
+            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class&#x3D;&quot;row&quot;&gt;Container content&lt;/div&gt;
+&lt;div class&#x3D;&quot;row&quot;&gt;Full width container content&lt;/div&gt;</code></pre>
+          </details>
+
+        <div class="kss-source kss-style">
+          Source: <code>frontend/components/classes/_layout.scss</code>, line 8
+        </div>
+
+    </section>
+    <section id="kssref-frontend-components-lists" class="kss-section kss-section--depth-3 ">
+
+      <div class="kss-style">
+        <h3 class="kss-title kss-title--level-3">
+          <a class="kss-title__permalink" href="#kssref-frontend-components-lists">
+            <span class="kss-title__ref">
+              2.2.8
+              <span class="kss-title__permalink-hash">
+                  #frontend.components.lists
+              </span>
+            </span>
+            List Classes
+          </a>
+        </h3>
+
+          <p class="kss-toolbar">
+              <a href="#kssref-frontend-components-lists" data-kss-fullscreen="kssref-frontend-components-lists">
+                <span class="kss-toolbar__tooltip">Toggle full screen</span>
+                <svg class="off" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                  <path class="kss-toolbar__icon-fill" d="M64 0v26l-10-10-12 12-6-6 12-12-10-10zM28 42l-12 12 10 10h-26v-26l10 10 12-12z"></path>
+                </svg>
+                <svg class="on" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                  <path class="kss-toolbar__icon-fill" d="M28 36v26l-10-10-12 12-6-6 12-12-10-10zM64 6l-12 12 10 10h-26v-26l10 10 12-12z"></path>
+                </svg>
+              </a>
+              <a href="item-frontend-components-lists.html" target="_blank">
+                <span class="kss-toolbar__tooltip">Open in new window</span>
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                  <rect x="0" y="20" width="40" height="44" fill="#fff"/>
+                  <path class="kss-toolbar__icon-fill" d="M40,64l-40,0l0,-44l40,0l0,44Zm-36,-40l0,36l32,0l0,-36l-32,0Z"/>
+                  <rect class="kss-toolbar__icon-fill" x="0" y="20" width="40" height="10"/>
+                  <rect x="24" y="0" width="40" height="44" fill="#fff"/>
+                  <path class="kss-toolbar__icon-fill" d="M64,44l-40,0l0,-44l40,0l0,44Zm-36,-40l0,36l32,0l0,-36l-32,0Z"/>
+                  <rect class="kss-toolbar__icon-fill" x="24" y="0" width="40" height="10"/>
+                </svg>
+              </a>
+            <a href="#kssref-frontend-components-lists" data-kss-guides="true">
+              <span class="kss-toolbar__tooltip">Toggle example guides</span>
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <rect class="kss-toolbar__icon-fill" x="5" y="35" width="5" height="9"/>
+                <rect class="kss-toolbar__icon-fill" x="54" y="21" width="5" height="9"/>
+                <rect class="kss-toolbar__icon-fill" x="54" y="35" width="5" height="9"/>
+                <rect class="kss-toolbar__icon-fill" x="5" y="21" width="5" height="9"/>
+                <rect class="kss-toolbar__icon-fill" x="5" y="0" width="5" height="15"/>
+                <rect class="kss-toolbar__icon-fill" x="35" y="5" width="9" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="20" y="5" width="9" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="0" y="5" width="15" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="54" y="0" width="5" height="15"/>
+                <rect class="kss-toolbar__icon-fill" x="49" y="5" width="15" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="54" y="49" width="5" height="15"/>
+                <rect class="kss-toolbar__icon-fill" x="49" y="54" width="15" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="5" y="49" width="5" height="15"/>
+                <rect class="kss-toolbar__icon-fill" x="0" y="54" width="15" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="35" y="54" width="9" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="20" y="54" width="9" height="5"/>
+              </svg>
+            </a>
+            <a href="#kssref-frontend-components-lists" data-kss-markup="true">
+              <span class="kss-toolbar__tooltip">Toggle HTML markup</span>
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <path class="kss-toolbar__icon-fill" d="M37.555,46.239l6.103,6.103l20.342,-20.342l-20.342,-20.342l-6.103,6.103l14.24,14.239l-14.24,14.239Z"/>
+                <path class="kss-toolbar__icon-fill" d="M26.445,17.761l-6.103,-6.103l-20.342,20.342l20.342,20.342l6.103,-6.103l-14.24,-14.239l14.24,-14.239Z"/>
+              </svg>
+            </a>
+          </p>
+
+          <div class="kss-description">
+            <p>DO NOT EDIT! Includes all Frontend list styles.</p>
+
+          </div>
+
+      </div>
+
+        <div class="kss-modifier__wrapper">
+          <div class="kss-modifier__heading kss-style">
+            Example
+          </div>
+
+
+          <div class="kss-modifier__example">
+            <ul class="list-block">
+  <li>.list-block</li>
+  <li>.list-block</li>
+  <li>.list-block</li>
+</ul>
+<ul class="list-block-small">
+  <li>.list-block-small</li>
+  <li>.list-block-small</li>
+  <li>.list-block-small</li>
+</ul>
+<ul class="list-block-medium">
+  <li>.list-block-medium</li>
+  <li>.list-block-medium</li>
+  <li>.list-block-medium</li>
+</ul>
+<ul class="list-block-large">
+  <li>.list-block-large</li>
+  <li>.list-block-large</li>
+  <li>.list-block-large</li>
+</ul>
+<ul class="list-inline-block">
+  <li>.list-inline-block</li>
+  <li>.list-inline-block</li>
+  <li>.list-inline-block</li>
+</ul>
+<ul class="list-inline-block-small">
+  <li>.list-inline-block-small</li>
+  <li>.list-inline-block-small</li>
+  <li>.list-inline-block-small</li>
+</ul>
+<ul class="list-inline-block-medium">
+  <li>.list-inline-block-medium</li>
+  <li>.list-inline-block-medium</li>
+  <li>.list-inline-block-medium</li>
+</ul>
+<ul class="list-inline-block-large">
+  <li>.list-inline-block-large</li>
+  <li>.list-inline-block-large</li>
+  <li>.list-inline-block-large</li>
+</ul>
+<ul class="list-inline">
+  <li>.list-inline</li>
+  <li>.list-inline</li>
+  <li>.list-inline</li>
+</ul>
+<ul class="list-inline-small">
+  <li>.list-inline-small</li>
+  <li>.list-inline-small</li>
+  <li>.list-inline-small</li>
+</ul>
+<ul class="list-inline-medium">
+  <li>.list-inline-medium</li>
+  <li>.list-inline-medium</li>
+  <li>.list-inline-medium</li>
+</ul>
+<ul class="list-inline-large">
+  <li>.list-inline-large</li>
+  <li>.list-inline-large</li>
+  <li>.list-inline-large</li>
+</ul>
+            <div class="kss-modifier__example-footer"></div>
+          </div>
+
+        </div>
+
+          <details class="kss-markup kss-style">
+            <summary>
+                Markup
+            </summary>
+            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;ul class&#x3D;&quot;list-block&quot;&gt;
+  &lt;li&gt;.list-block&lt;/li&gt;
+  &lt;li&gt;.list-block&lt;/li&gt;
+  &lt;li&gt;.list-block&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul class&#x3D;&quot;list-block-small&quot;&gt;
+  &lt;li&gt;.list-block-small&lt;/li&gt;
+  &lt;li&gt;.list-block-small&lt;/li&gt;
+  &lt;li&gt;.list-block-small&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul class&#x3D;&quot;list-block-medium&quot;&gt;
+  &lt;li&gt;.list-block-medium&lt;/li&gt;
+  &lt;li&gt;.list-block-medium&lt;/li&gt;
+  &lt;li&gt;.list-block-medium&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul class&#x3D;&quot;list-block-large&quot;&gt;
+  &lt;li&gt;.list-block-large&lt;/li&gt;
+  &lt;li&gt;.list-block-large&lt;/li&gt;
+  &lt;li&gt;.list-block-large&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul class&#x3D;&quot;list-inline-block&quot;&gt;
+  &lt;li&gt;.list-inline-block&lt;/li&gt;
+  &lt;li&gt;.list-inline-block&lt;/li&gt;
+  &lt;li&gt;.list-inline-block&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul class&#x3D;&quot;list-inline-block-small&quot;&gt;
+  &lt;li&gt;.list-inline-block-small&lt;/li&gt;
+  &lt;li&gt;.list-inline-block-small&lt;/li&gt;
+  &lt;li&gt;.list-inline-block-small&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul class&#x3D;&quot;list-inline-block-medium&quot;&gt;
+  &lt;li&gt;.list-inline-block-medium&lt;/li&gt;
+  &lt;li&gt;.list-inline-block-medium&lt;/li&gt;
+  &lt;li&gt;.list-inline-block-medium&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul class&#x3D;&quot;list-inline-block-large&quot;&gt;
+  &lt;li&gt;.list-inline-block-large&lt;/li&gt;
+  &lt;li&gt;.list-inline-block-large&lt;/li&gt;
+  &lt;li&gt;.list-inline-block-large&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul class&#x3D;&quot;list-inline&quot;&gt;
+  &lt;li&gt;.list-inline&lt;/li&gt;
+  &lt;li&gt;.list-inline&lt;/li&gt;
+  &lt;li&gt;.list-inline&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul class&#x3D;&quot;list-inline-small&quot;&gt;
+  &lt;li&gt;.list-inline-small&lt;/li&gt;
+  &lt;li&gt;.list-inline-small&lt;/li&gt;
+  &lt;li&gt;.list-inline-small&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul class&#x3D;&quot;list-inline-medium&quot;&gt;
+  &lt;li&gt;.list-inline-medium&lt;/li&gt;
+  &lt;li&gt;.list-inline-medium&lt;/li&gt;
+  &lt;li&gt;.list-inline-medium&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul class&#x3D;&quot;list-inline-large&quot;&gt;
+  &lt;li&gt;.list-inline-large&lt;/li&gt;
+  &lt;li&gt;.list-inline-large&lt;/li&gt;
+  &lt;li&gt;.list-inline-large&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+          </details>
+
+        <div class="kss-source kss-style">
+          Source: <code>frontend/components/classes/_lists.scss</code>, line 1
+        </div>
+
+    </section>
+    <section id="kssref-frontend-components-typography" class="kss-section kss-section--depth-3 ">
+
+      <div class="kss-style">
+        <h3 class="kss-title kss-title--level-3">
+          <a class="kss-title__permalink" href="#kssref-frontend-components-typography">
+            <span class="kss-title__ref">
+              2.2.9
+              <span class="kss-title__permalink-hash">
+                  #frontend.components.typography
+              </span>
+            </span>
+            Typography Classes
+          </a>
+        </h3>
+
+          <p class="kss-toolbar">
+              <a href="#kssref-frontend-components-typography" data-kss-fullscreen="kssref-frontend-components-typography">
+                <span class="kss-toolbar__tooltip">Toggle full screen</span>
+                <svg class="off" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                  <path class="kss-toolbar__icon-fill" d="M64 0v26l-10-10-12 12-6-6 12-12-10-10zM28 42l-12 12 10 10h-26v-26l10 10 12-12z"></path>
+                </svg>
+                <svg class="on" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                  <path class="kss-toolbar__icon-fill" d="M28 36v26l-10-10-12 12-6-6 12-12-10-10zM64 6l-12 12 10 10h-26v-26l10 10 12-12z"></path>
+                </svg>
+              </a>
+              <a href="item-frontend-components-typography.html" target="_blank">
+                <span class="kss-toolbar__tooltip">Open in new window</span>
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                  <rect x="0" y="20" width="40" height="44" fill="#fff"/>
+                  <path class="kss-toolbar__icon-fill" d="M40,64l-40,0l0,-44l40,0l0,44Zm-36,-40l0,36l32,0l0,-36l-32,0Z"/>
+                  <rect class="kss-toolbar__icon-fill" x="0" y="20" width="40" height="10"/>
+                  <rect x="24" y="0" width="40" height="44" fill="#fff"/>
+                  <path class="kss-toolbar__icon-fill" d="M64,44l-40,0l0,-44l40,0l0,44Zm-36,-40l0,36l32,0l0,-36l-32,0Z"/>
+                  <rect class="kss-toolbar__icon-fill" x="24" y="0" width="40" height="10"/>
+                </svg>
+              </a>
+            <a href="#kssref-frontend-components-typography" data-kss-guides="true">
+              <span class="kss-toolbar__tooltip">Toggle example guides</span>
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <rect class="kss-toolbar__icon-fill" x="5" y="35" width="5" height="9"/>
+                <rect class="kss-toolbar__icon-fill" x="54" y="21" width="5" height="9"/>
+                <rect class="kss-toolbar__icon-fill" x="54" y="35" width="5" height="9"/>
+                <rect class="kss-toolbar__icon-fill" x="5" y="21" width="5" height="9"/>
+                <rect class="kss-toolbar__icon-fill" x="5" y="0" width="5" height="15"/>
+                <rect class="kss-toolbar__icon-fill" x="35" y="5" width="9" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="20" y="5" width="9" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="0" y="5" width="15" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="54" y="0" width="5" height="15"/>
+                <rect class="kss-toolbar__icon-fill" x="49" y="5" width="15" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="54" y="49" width="5" height="15"/>
+                <rect class="kss-toolbar__icon-fill" x="49" y="54" width="15" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="5" y="49" width="5" height="15"/>
+                <rect class="kss-toolbar__icon-fill" x="0" y="54" width="15" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="35" y="54" width="9" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="20" y="54" width="9" height="5"/>
+              </svg>
+            </a>
+            <a href="#kssref-frontend-components-typography" data-kss-markup="true">
+              <span class="kss-toolbar__tooltip">Toggle HTML markup</span>
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <path class="kss-toolbar__icon-fill" d="M37.555,46.239l6.103,6.103l20.342,-20.342l-20.342,-20.342l-6.103,6.103l14.24,14.239l-14.24,14.239Z"/>
+                <path class="kss-toolbar__icon-fill" d="M26.445,17.761l-6.103,-6.103l-20.342,20.342l20.342,20.342l6.103,-6.103l-14.24,-14.239l14.24,-14.239Z"/>
+              </svg>
+            </a>
+          </p>
+
+          <div class="kss-description">
+            <p>DO NOT EDIT! Contains all of Frontend&#39;s pre-packaged typography class styles.</p>
+
+          </div>
+
+      </div>
+
+        <div class="kss-modifier__wrapper">
+          <div class="kss-modifier__heading kss-style">
+            Example
+          </div>
+
+
+          <div class="kss-modifier__example">
+            <p class="strikethrough">.strikethrough</p>
+<p class="underline">.underline</p>
+<p class="font-weight-normal">.font-weight-normal</p>
+<p class="font-weight-medium">.font-weight-medium</p>
+<p class="font-weight-semibold">.font-weight-semibold</p>
+<p class="font-weight-bold">.font-weight-bold</p>
+<p class="font-size-xxxlarge">.font-size-xxxlarge</p>
+<p class="font-size-xxlarge">.font-size-xxlarge</p>
+<p class="font-size-xlarge">.font-size-xlarge</p>
+<p class="font-size-large">.font-size-large</p>
+<p class="font-size-medium">.font-size-medium</p>
+<p class="font-size-normal">.font-size-normal</p>
+<p class="font-size-small">.font-size-small</p>
+<p class="font-size-xsmall">.font-size-xsmall</p>
+<p class="font-size-xxsmall">.font-size-xxsmall</p>
+<p class="font-size-xxxsmall">.font-size-xxxsmall</p>
+            <div class="kss-modifier__example-footer"></div>
+          </div>
+
+        </div>
+
+          <details class="kss-markup kss-style">
+            <summary>
+                Markup
+            </summary>
+            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;p class&#x3D;&quot;strikethrough&quot;&gt;.strikethrough&lt;/p&gt;
+&lt;p class&#x3D;&quot;underline&quot;&gt;.underline&lt;/p&gt;
+&lt;p class&#x3D;&quot;font-weight-normal&quot;&gt;.font-weight-normal&lt;/p&gt;
+&lt;p class&#x3D;&quot;font-weight-medium&quot;&gt;.font-weight-medium&lt;/p&gt;
+&lt;p class&#x3D;&quot;font-weight-semibold&quot;&gt;.font-weight-semibold&lt;/p&gt;
+&lt;p class&#x3D;&quot;font-weight-bold&quot;&gt;.font-weight-bold&lt;/p&gt;
+&lt;p class&#x3D;&quot;font-size-xxxlarge&quot;&gt;.font-size-xxxlarge&lt;/p&gt;
+&lt;p class&#x3D;&quot;font-size-xxlarge&quot;&gt;.font-size-xxlarge&lt;/p&gt;
+&lt;p class&#x3D;&quot;font-size-xlarge&quot;&gt;.font-size-xlarge&lt;/p&gt;
+&lt;p class&#x3D;&quot;font-size-large&quot;&gt;.font-size-large&lt;/p&gt;
+&lt;p class&#x3D;&quot;font-size-medium&quot;&gt;.font-size-medium&lt;/p&gt;
+&lt;p class&#x3D;&quot;font-size-normal&quot;&gt;.font-size-normal&lt;/p&gt;
+&lt;p class&#x3D;&quot;font-size-small&quot;&gt;.font-size-small&lt;/p&gt;
+&lt;p class&#x3D;&quot;font-size-xsmall&quot;&gt;.font-size-xsmall&lt;/p&gt;
+&lt;p class&#x3D;&quot;font-size-xxsmall&quot;&gt;.font-size-xxsmall&lt;/p&gt;
+&lt;p class&#x3D;&quot;font-size-xxxsmall&quot;&gt;.font-size-xxxsmall&lt;/p&gt;</code></pre>
+          </details>
+
+        <div class="kss-source kss-style">
+          Source: <code>frontend/components/classes/_typography.scss</code>, line 1
+        </div>
+
+    </section>
+    <section id="kssref-frontend-components-visibility" class="kss-section kss-section--depth-3 ">
+
+      <div class="kss-style">
+        <h3 class="kss-title kss-title--level-3">
+          <a class="kss-title__permalink" href="#kssref-frontend-components-visibility">
+            <span class="kss-title__ref">
+              2.2.10
+              <span class="kss-title__permalink-hash">
+                  #frontend.components.visibility
+              </span>
+            </span>
+            Visibility Classes
+          </a>
+        </h3>
+
+          <p class="kss-toolbar">
+              <a href="#kssref-frontend-components-visibility" data-kss-fullscreen="kssref-frontend-components-visibility">
+                <span class="kss-toolbar__tooltip">Toggle full screen</span>
+                <svg class="off" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                  <path class="kss-toolbar__icon-fill" d="M64 0v26l-10-10-12 12-6-6 12-12-10-10zM28 42l-12 12 10 10h-26v-26l10 10 12-12z"></path>
+                </svg>
+                <svg class="on" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                  <path class="kss-toolbar__icon-fill" d="M28 36v26l-10-10-12 12-6-6 12-12-10-10zM64 6l-12 12 10 10h-26v-26l10 10 12-12z"></path>
+                </svg>
+              </a>
+              <a href="item-frontend-components-visibility.html" target="_blank">
+                <span class="kss-toolbar__tooltip">Open in new window</span>
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                  <rect x="0" y="20" width="40" height="44" fill="#fff"/>
+                  <path class="kss-toolbar__icon-fill" d="M40,64l-40,0l0,-44l40,0l0,44Zm-36,-40l0,36l32,0l0,-36l-32,0Z"/>
+                  <rect class="kss-toolbar__icon-fill" x="0" y="20" width="40" height="10"/>
+                  <rect x="24" y="0" width="40" height="44" fill="#fff"/>
+                  <path class="kss-toolbar__icon-fill" d="M64,44l-40,0l0,-44l40,0l0,44Zm-36,-40l0,36l32,0l0,-36l-32,0Z"/>
+                  <rect class="kss-toolbar__icon-fill" x="24" y="0" width="40" height="10"/>
+                </svg>
+              </a>
+            <a href="#kssref-frontend-components-visibility" data-kss-guides="true">
+              <span class="kss-toolbar__tooltip">Toggle example guides</span>
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <rect class="kss-toolbar__icon-fill" x="5" y="35" width="5" height="9"/>
+                <rect class="kss-toolbar__icon-fill" x="54" y="21" width="5" height="9"/>
+                <rect class="kss-toolbar__icon-fill" x="54" y="35" width="5" height="9"/>
+                <rect class="kss-toolbar__icon-fill" x="5" y="21" width="5" height="9"/>
+                <rect class="kss-toolbar__icon-fill" x="5" y="0" width="5" height="15"/>
+                <rect class="kss-toolbar__icon-fill" x="35" y="5" width="9" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="20" y="5" width="9" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="0" y="5" width="15" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="54" y="0" width="5" height="15"/>
+                <rect class="kss-toolbar__icon-fill" x="49" y="5" width="15" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="54" y="49" width="5" height="15"/>
+                <rect class="kss-toolbar__icon-fill" x="49" y="54" width="15" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="5" y="49" width="5" height="15"/>
+                <rect class="kss-toolbar__icon-fill" x="0" y="54" width="15" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="35" y="54" width="9" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="20" y="54" width="9" height="5"/>
+              </svg>
+            </a>
+            <a href="#kssref-frontend-components-visibility" data-kss-markup="true">
+              <span class="kss-toolbar__tooltip">Toggle HTML markup</span>
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <path class="kss-toolbar__icon-fill" d="M37.555,46.239l6.103,6.103l20.342,-20.342l-20.342,-20.342l-6.103,6.103l14.24,14.239l-14.24,14.239Z"/>
+                <path class="kss-toolbar__icon-fill" d="M26.445,17.761l-6.103,-6.103l-20.342,20.342l20.342,20.342l6.103,-6.103l-14.24,-14.239l14.24,-14.239Z"/>
+              </svg>
+            </a>
+          </p>
+
+          <div class="kss-description">
+            <p>DO NOT EDIT! Includes all Frontend visibility styles.</p>
+
+          </div>
+
+      </div>
+
+        <div class="kss-modifier__wrapper">
+          <div class="kss-modifier__heading kss-style">
+            Example
+          </div>
+
+
+          <div class="kss-modifier__example">
+            <div class="screen-reader-text">.screen-reader-text</div>
+<div class="display-none">.display-none</div>
+<div class="display-none-small">.display-none-small</div>
+<div class="display-none-medium">.display-none-medium</div>
+<div class="display-none-large">.display-none-large</div>
+<div class="display-block">.display-block</div>
+<div class="display-block-small">.display-block-small</div>
+<div class="display-block-medium">.display-block-medium</div>
+<div class="display-block-large">.display-block-large</div>
+<div class="display-inline">.display-inline</div>
+<div class="display-inline-small">.display-inline-small</div>
+<div class="display-inline-medium">.display-inline-medium</div>
+<div class="display-inline-large">.display-inline-large</div>
+<div class="display-inline-block">.display-inline-block</div>
+<div class="display-inline-block-small">.display-inline-block-small</div>
+<div class="display-inline-block-medium">.display-inline-block-medium</div>
+<div class="display-inline-block-large">.display-inline-block-large</div>
+            <div class="kss-modifier__example-footer"></div>
+          </div>
+
+        </div>
+
+          <details class="kss-markup kss-style">
+            <summary>
+                Markup
+            </summary>
+            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class&#x3D;&quot;screen-reader-text&quot;&gt;.screen-reader-text&lt;/div&gt;
+&lt;div class&#x3D;&quot;display-none&quot;&gt;.display-none&lt;/div&gt;
+&lt;div class&#x3D;&quot;display-none-small&quot;&gt;.display-none-small&lt;/div&gt;
+&lt;div class&#x3D;&quot;display-none-medium&quot;&gt;.display-none-medium&lt;/div&gt;
+&lt;div class&#x3D;&quot;display-none-large&quot;&gt;.display-none-large&lt;/div&gt;
+&lt;div class&#x3D;&quot;display-block&quot;&gt;.display-block&lt;/div&gt;
+&lt;div class&#x3D;&quot;display-block-small&quot;&gt;.display-block-small&lt;/div&gt;
+&lt;div class&#x3D;&quot;display-block-medium&quot;&gt;.display-block-medium&lt;/div&gt;
+&lt;div class&#x3D;&quot;display-block-large&quot;&gt;.display-block-large&lt;/div&gt;
+&lt;div class&#x3D;&quot;display-inline&quot;&gt;.display-inline&lt;/div&gt;
+&lt;div class&#x3D;&quot;display-inline-small&quot;&gt;.display-inline-small&lt;/div&gt;
+&lt;div class&#x3D;&quot;display-inline-medium&quot;&gt;.display-inline-medium&lt;/div&gt;
+&lt;div class&#x3D;&quot;display-inline-large&quot;&gt;.display-inline-large&lt;/div&gt;
+&lt;div class&#x3D;&quot;display-inline-block&quot;&gt;.display-inline-block&lt;/div&gt;
+&lt;div class&#x3D;&quot;display-inline-block-small&quot;&gt;.display-inline-block-small&lt;/div&gt;
+&lt;div class&#x3D;&quot;display-inline-block-medium&quot;&gt;.display-inline-block-medium&lt;/div&gt;
+&lt;div class&#x3D;&quot;display-inline-block-large&quot;&gt;.display-inline-block-large&lt;/div&gt;</code></pre>
+          </details>
+
+        <div class="kss-source kss-style">
+          Source: <code>frontend/components/classes/_visibility.scss</code>, line 1
+        </div>
+
+    </section>
+    <section id="kssref-frontend-components-wordpress" class="kss-section kss-section--depth-3 ">
+
+      <div class="kss-style">
+        <h3 class="kss-title kss-title--level-3">
+          <a class="kss-title__permalink" href="#kssref-frontend-components-wordpress">
+            <span class="kss-title__ref">
+              2.2.11
+              <span class="kss-title__permalink-hash">
+                  #frontend.components.wordpress
+              </span>
+            </span>
+            WordPress Styles
+          </a>
+        </h3>
+
+
+          <div class="kss-description">
+            <p>Frontend pre-built WordPress styles. See
+<a href="https://goo.gl/TR60La" target="_blank">https://goo.gl/TR60La</a> for
+more details.</p>
+
+          </div>
+
+      </div>
+
+
+        <div class="kss-source kss-style">
+          Source: <code>frontend/components/_wordpress.scss</code>, line 1
+        </div>
+
+    </section>
+    <section id="kssref-frontend-global" class="kss-section kss-section--depth-2 ">
+
+      <div class="kss-style">
+        <h2 class="kss-title kss-title--level-2">
+          <a class="kss-title__permalink" href="#kssref-frontend-global">
+            <span class="kss-title__ref">
+              2.3
+              <span class="kss-title__permalink-hash">
+                  #frontend.global
+              </span>
+            </span>
+            Global
+          </a>
+        </h2>
+
+
+          <div class="kss-description">
+            <p>Includes all required Frontend extensions, functions, mixins, extendables and
+default variables. DO NOT EDIT! To add/override styles, create a _global.scss
+file in src/scss/application/global.</p>
+
+          </div>
+
+      </div>
+
+
+        <div class="kss-source kss-style">
+          Source: <code>frontend/global/_global.scss</code>, line 1
+        </div>
+
+    </section>
+    <section id="kssref-frontend-global-extendables" class="kss-section kss-section--depth-3 ">
+
+      <div class="kss-style">
+        <h3 class="kss-title kss-title--level-3">
+          <a class="kss-title__permalink" href="#kssref-frontend-global-extendables">
+            <span class="kss-title__ref">
+              2.3.1
+              <span class="kss-title__permalink-hash">
+                  #frontend.global.extendables
+              </span>
+            </span>
+            Sass Extendables
+          </a>
+        </h3>
+
+
+          <div class="kss-description">
+            <p>Frontend Sass extendables. DO NOT EDIT! To add/override extendables, create a _extendables.scss file in
+src/scss/application/global.</p>
+
+          </div>
+
+      </div>
+
+
+        <div class="kss-source kss-style">
+          Source: <code>frontend/global/_extendables.scss</code>, line 1
+        </div>
+
+    </section>
+    <section id="kssref-frontend-global-extendables-button" class="kss-section kss-section--depth-4 ">
+
+      <div class="kss-style">
+        <h4 class="kss-title kss-title--level-4">
+          <a class="kss-title__permalink" href="#kssref-frontend-global-extendables-button">
+            <span class="kss-title__ref">
+              2.3.1.1
+              <span class="kss-title__permalink-hash">
+                  #frontend.global.extendables.button
+              </span>
+            </span>
+            %button
+          </a>
+        </h4>
+
+
+          <div class="kss-description">
+            <p>Styles an element with the default button styles.</p>
+
+          </div>
+
+      </div>
+
+
+        <div class="kss-source kss-style">
+          Source: <code>frontend/global/_extendables.scss</code>, line 79
+        </div>
+
+    </section>
+    <section id="kssref-frontend-global-extendables-container" class="kss-section kss-section--depth-4 ">
+
+      <div class="kss-style">
+        <h4 class="kss-title kss-title--level-4">
+          <a class="kss-title__permalink" href="#kssref-frontend-global-extendables-container">
+            <span class="kss-title__ref">
+              2.3.1.2
+              <span class="kss-title__permalink-hash">
+                  #frontend.global.extendables.container
+              </span>
+            </span>
+            %container
+          </a>
+        </h4>
+
+
+          <div class="kss-description">
+            <p>Centers and sets an element to the sites&#39; max width with breakpoints.</p>
+
+          </div>
+
+      </div>
+
+
+        <div class="kss-source kss-style">
+          Source: <code>frontend/global/_extendables.scss</code>, line 8
+        </div>
+
+    </section>
+    <section id="kssref-frontend-global-extendables-container-full" class="kss-section kss-section--depth-4 ">
+
+      <div class="kss-style">
+        <h4 class="kss-title kss-title--level-4">
+          <a class="kss-title__permalink" href="#kssref-frontend-global-extendables-container-full">
+            <span class="kss-title__ref">
+              2.3.1.3
+              <span class="kss-title__permalink-hash">
+                  #frontend.global.extendables.container-full
+              </span>
+            </span>
+            %container-full
+          </a>
+        </h4>
+
+
+          <div class="kss-description">
+            <p>Centers and sets an element to a max width of 100% with breakpoints.</p>
+
+          </div>
+
+      </div>
+
+
+        <div class="kss-source kss-style">
+          Source: <code>frontend/global/_extendables.scss</code>, line 32
+        </div>
+
+    </section>
+    <section id="kssref-frontend-global-extendables-flex" class="kss-section kss-section--depth-4 ">
+
+      <div class="kss-style">
+        <h4 class="kss-title kss-title--level-4">
+          <a class="kss-title__permalink" href="#kssref-frontend-global-extendables-flex">
+            <span class="kss-title__ref">
+              2.3.1.4
+              <span class="kss-title__permalink-hash">
+                  #frontend.global.extendables.flex
+              </span>
+            </span>
+            %flex
+          </a>
+        </h4>
+
+
+          <div class="kss-description">
+            <p>Sets an elements display to flex with a default justify-content:
+space-between, flex-direction: row, flex-wrap: wrap.</p>
+<p>Compatible in iOS 6+, Safari 3.1+, Firefox 19+, IE10+, Chrome, Opera 12.1+.</p>
+
+          </div>
+
+      </div>
+
+
+        <div class="kss-source kss-style">
+          Source: <code>frontend/global/_extendables.scss</code>, line 55
+        </div>
+
+    </section>
+    <section id="kssref-frontend-global-extendables-list-block" class="kss-section kss-section--depth-4 ">
+
+      <div class="kss-style">
+        <h4 class="kss-title kss-title--level-4">
+          <a class="kss-title__permalink" href="#kssref-frontend-global-extendables-list-block">
+            <span class="kss-title__ref">
+              2.3.1.5
+              <span class="kss-title__permalink-hash">
+                  #frontend.global.extendables.list-block
+              </span>
+            </span>
+            %list-block
+          </a>
+        </h4>
+
+
+          <div class="kss-description">
+            <p>Styles a list element and items to display as blocks.</p>
+
+          </div>
+
+      </div>
+
+
+        <div class="kss-source kss-style">
+          Source: <code>frontend/global/_extendables.scss</code>, line 120
+        </div>
+
+    </section>
+    <section id="kssref-frontend-global-extendables-pager" class="kss-section kss-section--depth-4 ">
+
+      <div class="kss-style">
+        <h4 class="kss-title kss-title--level-4">
+          <a class="kss-title__permalink" href="#kssref-frontend-global-extendables-pager">
+            <span class="kss-title__ref">
+              2.3.1.6
+              <span class="kss-title__permalink-hash">
+                  #frontend.global.extendables.pager
+              </span>
+            </span>
+            %pager
+          </a>
+        </h4>
+
+
+          <div class="kss-description">
+            <p>Styles a list element as a pager.</p>
+
+          </div>
+
+      </div>
+
+
+        <div class="kss-source kss-style">
+          Source: <code>frontend/global/_extendables.scss</code>, line 137
+        </div>
+
+    </section>
+    <section id="kssref-frontend-global-extendables-screen-reader-text" class="kss-section kss-section--depth-4 ">
+
+      <div class="kss-style">
+        <h4 class="kss-title kss-title--level-4">
+          <a class="kss-title__permalink" href="#kssref-frontend-global-extendables-screen-reader-text">
+            <span class="kss-title__ref">
+              2.3.1.7
+              <span class="kss-title__permalink-hash">
+                  #frontend.global.extendables.screen-reader-text
+              </span>
+            </span>
+            %screen-reader-text
+          </a>
+        </h4>
+
+
+          <div class="kss-description">
+            <p>Styles an element for screen readers only.</p>
+
+          </div>
+
+      </div>
+
+
+        <div class="kss-source kss-style">
+          Source: <code>frontend/global/_extendables.scss</code>, line 191
+        </div>
+
+    </section>
+    <section id="kssref-frontend-global-functions" class="kss-section kss-section--depth-3 ">
+
+      <div class="kss-style">
+        <h3 class="kss-title kss-title--level-3">
+          <a class="kss-title__permalink" href="#kssref-frontend-global-functions">
+            <span class="kss-title__ref">
+              2.3.2
+              <span class="kss-title__permalink-hash">
+                  #frontend.global.functions
+              </span>
+            </span>
+            Sass Functions
+          </a>
+        </h3>
+
+
+          <div class="kss-description">
+            <p>Frontend Sass functions. DO NOT EDIT! To add/override functions, create a
+_functions.scss file in src/scss/application/global.</p>
+
+          </div>
+
+      </div>
+
+
+        <div class="kss-source kss-style">
+          Source: <code>frontend/global/_functions.scss</code>, line 1
+        </div>
+
+    </section>
+    <section id="kssref-frontend-global-functions-get-border-value" class="kss-section kss-section--depth-4 ">
+
+      <div class="kss-style">
+        <h4 class="kss-title kss-title--level-4">
+          <a class="kss-title__permalink" href="#kssref-frontend-global-functions-get-border-value">
+            <span class="kss-title__ref">
+              2.3.2.1
+              <span class="kss-title__permalink-hash">
+                  #frontend.global.functions.get-border-value
+              </span>
+            </span>
+            get-border-value($val, $elem)
+          </a>
+        </h4>
+
+
+          <div class="kss-description">
+            <p>Given border $val, find a specific element of the border, which is $elem. The
+possible values for $elem are width, style, and color.</p>
+
+          </div>
+
+          <div class="kss-parameters__title">Parameters:</div>
+          <ul class="kss-parameters">
+            <li class="kss-parameters__item">
+              <div class="kss-parameters__name"><code>$val {List}</code></div>
+              <div class="kss-parameters__description">
+                Border value to find a value in.
+              </div>
+            </li>
+            <li class="kss-parameters__item">
+              <div class="kss-parameters__name"><code>$elem {Keyword}</code></div>
+              <div class="kss-parameters__description">
+                Border component to extract.
+              </div>
+            </li>
+            <li class="kss-parameters__item">
+              <div class="kss-parameters__name"><code>@returns {Mixed}</code></div>
+              <div class="kss-parameters__description">
+                If the value exists, returns the value. If the value is not in the border definition, the function will return a 0px width, solid style, or black border.
+              </div>
+            </li>
+          </ul>
+      </div>
+
+
+        <div class="kss-source kss-style">
+          Source: <code>frontend/global/_functions.scss</code>, line 142
+        </div>
+
+    </section>
+    <section id="kssref-frontend-global-functions-hasvalue" class="kss-section kss-section--depth-4 ">
+
+      <div class="kss-style">
+        <h4 class="kss-title kss-title--level-4">
+          <a class="kss-title__permalink" href="#kssref-frontend-global-functions-hasvalue">
+            <span class="kss-title__ref">
+              2.3.2.2
+              <span class="kss-title__permalink-hash">
+                  #frontend.global.functions.hasvalue
+              </span>
+            </span>
+            hasvalue($val)
+          </a>
+        </h4>
+
+
+          <div class="kss-description">
+            <p>Determine if a value is not falsey, in CSS terms. Falsey values are <code>null</code>,
+<code>none</code>, <code>0</code> with any unit, or an empty list.</p>
+
+          </div>
+
+          <div class="kss-parameters__title">Parameters:</div>
+          <ul class="kss-parameters">
+            <li class="kss-parameters__item">
+              <div class="kss-parameters__name"><code>$val</code></div>
+              <div class="kss-parameters__description">
+                Value to check.
+              </div>
+            </li>
+            <li class="kss-parameters__item">
+              <div class="kss-parameters__name"><code>@returns {Boolean}</code></div>
+              <div class="kss-parameters__description">
+                <code>true</code> if <code>$val</code> is not falsey.
+              </div>
+            </li>
+          </ul>
+      </div>
+
+
+        <div class="kss-source kss-style">
+          Source: <code>frontend/global/_functions.scss</code>, line 82
+        </div>
+
+    </section>
+    <section id="kssref-frontend-global-functions-rem-calc" class="kss-section kss-section--depth-4 ">
+
+      <div class="kss-style">
+        <h4 class="kss-title kss-title--level-4">
+          <a class="kss-title__permalink" href="#kssref-frontend-global-functions-rem-calc">
+            <span class="kss-title__ref">
+              2.3.2.3
+              <span class="kss-title__permalink-hash">
+                  #frontend.global.functions.rem-calc
+              </span>
+            </span>
+            rem-calc($values, $base)
+          </a>
+        </h4>
+
+
+          <div class="kss-description">
+            <p>Convert px values to rem</p>
+
+          </div>
+
+          <div class="kss-parameters__title">Parameters:</div>
+          <ul class="kss-parameters">
+            <li class="kss-parameters__item">
+              <div class="kss-parameters__name"><code>$values {Number|List}</code></div>
+              <div class="kss-parameters__description">
+                One or more values to convert. Be sure to separate them with spaces and not commas. If you need to convert a comma-separated list, wrap the list in parentheses.
+              </div>
+            </li>
+            <li class="kss-parameters__item">
+              <div class="kss-parameters__name"><code>$base {Number}</code></div>
+              <div class="kss-parameters__description">
+                The base value to use when calculating the <code>rem</code>. If you&#39;re using Frontend out of the box, this is 16px.
+                  <div class="kss-parameters__default-value">
+                    Defaults to: <code>$rem-base</code>
+                  </div>
+              </div>
+            </li>
+            <li class="kss-parameters__item">
+              <div class="kss-parameters__name"><code>@returns {List}</code></div>
+              <div class="kss-parameters__description">
+                A list of converted values.
+              </div>
+            </li>
+          </ul>
+      </div>
+
+
+        <div class="kss-source kss-style">
+          Source: <code>frontend/global/_functions.scss</code>, line 13
+        </div>
+
+    </section>
+    <section id="kssref-frontend-global-functions-strip-unit" class="kss-section kss-section--depth-4 ">
+
+      <div class="kss-style">
+        <h4 class="kss-title kss-title--level-4">
+          <a class="kss-title__permalink" href="#kssref-frontend-global-functions-strip-unit">
+            <span class="kss-title__ref">
+              2.3.2.4
+              <span class="kss-title__permalink-hash">
+                  #frontend.global.functions.strip-unit
+              </span>
+            </span>
+            strip-unit($num)
+          </a>
+        </h4>
+
+
+          <div class="kss-description">
+            <p>Removes the unit (e.g. px, em, rem) from a value, returning the number only.</p>
+
+          </div>
+
+          <div class="kss-parameters__title">Parameters:</div>
+          <ul class="kss-parameters">
+            <li class="kss-parameters__item">
+              <div class="kss-parameters__name"><code>$num {Number}</code></div>
+              <div class="kss-parameters__description">
+                Number to strip unit from.
+              </div>
+            </li>
+            <li class="kss-parameters__item">
+              <div class="kss-parameters__name"><code>@returns {Number}</code></div>
+              <div class="kss-parameters__description">
+                The same number, sans unit.
+              </div>
+            </li>
+          </ul>
+      </div>
+
+
+        <div class="kss-source kss-style">
+          Source: <code>frontend/global/_functions.scss</code>, line 70
+        </div>
+
+    </section>
+    <section id="kssref-frontend-global-functions-text-inputs" class="kss-section kss-section--depth-4 ">
+
+      <div class="kss-style">
+        <h4 class="kss-title kss-title--level-4">
+          <a class="kss-title__permalink" href="#kssref-frontend-global-functions-text-inputs">
+            <span class="kss-title__ref">
+              2.3.2.5
+              <span class="kss-title__permalink-hash">
+                  #frontend.global.functions.text-inputs
+              </span>
+            </span>
+            text-inputs($types)
+          </a>
+        </h4>
+
+
+          <div class="kss-description">
+            <p>Generates a selector with every text input type. You can also filter the list
+to only output a subset of those selectors.</p>
+
+          </div>
+
+          <div class="kss-parameters__title">Parameters:</div>
+          <ul class="kss-parameters">
+            <li class="kss-parameters__item">
+              <div class="kss-parameters__name"><code>$types {List|Keyword}</code></div>
+              <div class="kss-parameters__description">
+                A list of text input types to use. Leave blank to use all of them.
+                  <div class="kss-parameters__default-value">
+                    Defaults to: <code>[()]</code>
+                  </div>
+              </div>
+            </li>
+          </ul>
+      </div>
+
+
+        <div class="kss-source kss-style">
+          Source: <code>frontend/global/_functions.scss</code>, line 104
+        </div>
+
+    </section>
+    <section id="kssref-frontend-global-mixins" class="kss-section kss-section--depth-3 ">
+
+      <div class="kss-style">
+        <h3 class="kss-title kss-title--level-3">
+          <a class="kss-title__permalink" href="#kssref-frontend-global-mixins">
+            <span class="kss-title__ref">
+              2.3.3
+              <span class="kss-title__permalink-hash">
+                  #frontend.global.mixins
+              </span>
+            </span>
+            Sass Mixins
+          </a>
+        </h3>
+
+
+          <div class="kss-description">
+            <p>Frontend Sass mixins. DO NOT EDIT! To add/override mixins, create a _mixins.scss file in
+src/scss/application/global.</p>
+
+          </div>
+
+      </div>
+
+
+        <div class="kss-source kss-style">
+          Source: <code>frontend/global/_mixins.scss</code>, line 1
+        </div>
+
+    </section>
+    <section id="kssref-frontend-global-mixins-background-triangle" class="kss-section kss-section--depth-4 ">
+
+      <div class="kss-style">
+        <h4 class="kss-title kss-title--level-4">
+          <a class="kss-title__permalink" href="#kssref-frontend-global-mixins-background-triangle">
+            <span class="kss-title__ref">
+              2.3.3.1
+              <span class="kss-title__permalink-hash">
+                  #frontend.global.mixins.background-triangle
+              </span>
+            </span>
+            background-triangle($color)
+          </a>
+        </h4>
+
+
+          <div class="kss-description">
+            <p>Adds a downward-facing triangle as a background image to an element. The
+image is formatted as an SVG, making it easy to change the color. Because
+Internet Explorer doesn&#39;t support encoded SVGs as background images, a PNG
+fallback is also included. There are two PNG fallbacks: a black triangle and
+a white triangle. The one used depends on the lightness of the input color.</p>
+
+          </div>
+
+          <div class="kss-parameters__title">Parameters:</div>
+          <ul class="kss-parameters">
+            <li class="kss-parameters__item">
+              <div class="kss-parameters__name"><code>$color {Color}</code></div>
+              <div class="kss-parameters__description">
+                Color to use for the triangle.
+                  <div class="kss-parameters__default-value">
+                    Defaults to: <code>$black</code>
+                  </div>
+              </div>
+            </li>
+          </ul>
+      </div>
+
+
+        <div class="kss-source kss-style">
+          Source: <code>frontend/global/_mixins.scss</code>, line 8
+        </div>
+
+    </section>
+    <section id="kssref-frontend-global-mixins-mask-background-color" class="kss-section kss-section--depth-4 ">
+
+      <div class="kss-style">
+        <h4 class="kss-title kss-title--level-4">
+          <a class="kss-title__permalink" href="#kssref-frontend-global-mixins-mask-background-color">
+            <span class="kss-title__ref">
+              2.3.3.2
+              <span class="kss-title__permalink-hash">
+                  #frontend.global.mixins.mask-background-color
+              </span>
+            </span>
+            mask-background-color($color)
+          </a>
+        </h4>
+
+
+          <div class="kss-description">
+            <p>Adds a background color for masks.</p>
+
+          </div>
+
+          <div class="kss-parameters__title">Parameters:</div>
+          <ul class="kss-parameters">
+            <li class="kss-parameters__item">
+              <div class="kss-parameters__name"><code>$color {Color}</code></div>
+              <div class="kss-parameters__description">
+                Color
+              </div>
+            </li>
+          </ul>
+      </div>
+
+
+        <div class="kss-source kss-style">
+          Source: <code>frontend/global/_mixins.scss</code>, line 65
+        </div>
+
+    </section>
+    <section id="kssref-frontend-global-mixins-mask-image" class="kss-section kss-section--depth-4 ">
+
+      <div class="kss-style">
+        <h4 class="kss-title kss-title--level-4">
+          <a class="kss-title__permalink" href="#kssref-frontend-global-mixins-mask-image">
+            <span class="kss-title__ref">
+              2.3.3.3
+              <span class="kss-title__permalink-hash">
+                  #frontend.global.mixins.mask-image
+              </span>
+            </span>
+            mask-image($img)
+          </a>
+        </h4>
+
+
+          <div class="kss-description">
+            <p>Adds a cross-browser mask background image.</p>
+
+          </div>
+
+          <div class="kss-parameters__title">Parameters:</div>
+          <ul class="kss-parameters">
+            <li class="kss-parameters__item">
+              <div class="kss-parameters__name"><code>$img</code></div>
+              <div class="kss-parameters__description">
+                Image URL
+              </div>
+            </li>
+          </ul>
+      </div>
+
+
+        <div class="kss-source kss-style">
+          Source: <code>frontend/global/_mixins.scss</code>, line 45
+        </div>
+
+    </section>
+    <section id="kssref-frontend-global-mixins-mask-position" class="kss-section kss-section--depth-4 ">
+
+      <div class="kss-style">
+        <h4 class="kss-title kss-title--level-4">
+          <a class="kss-title__permalink" href="#kssref-frontend-global-mixins-mask-position">
+            <span class="kss-title__ref">
+              2.3.3.4
+              <span class="kss-title__permalink-hash">
+                  #frontend.global.mixins.mask-position
+              </span>
+            </span>
+            mask-position($position)
+          </a>
+        </h4>
+
+
+          <div class="kss-description">
+            <p>Adds a cross-browser mask position.</p>
+
+          </div>
+
+          <div class="kss-parameters__title">Parameters:</div>
+          <ul class="kss-parameters">
+            <li class="kss-parameters__item">
+              <div class="kss-parameters__name"><code>$position</code></div>
+              <div class="kss-parameters__description">
+                Position
+              </div>
+            </li>
+          </ul>
+      </div>
+
+
+        <div class="kss-source kss-style">
+          Source: <code>frontend/global/_mixins.scss</code>, line 95
+        </div>
+
+    </section>
+    <section id="kssref-frontend-global-mixins-mask-repeat" class="kss-section kss-section--depth-4 ">
+
+      <div class="kss-style">
+        <h4 class="kss-title kss-title--level-4">
+          <a class="kss-title__permalink" href="#kssref-frontend-global-mixins-mask-repeat">
+            <span class="kss-title__ref">
+              2.3.3.5
+              <span class="kss-title__permalink-hash">
+                  #frontend.global.mixins.mask-repeat
+              </span>
+            </span>
+            mask-repeat($repeat)
+          </a>
+        </h4>
+
+
+          <div class="kss-description">
+            <p>Applies a cross-browser mask-repeat declaration.</p>
+
+          </div>
+
+          <div class="kss-parameters__title">Parameters:</div>
+          <ul class="kss-parameters">
+            <li class="kss-parameters__item">
+              <div class="kss-parameters__name"><code>$repeat</code></div>
+              <div class="kss-parameters__description">
+                Repeat value.
+                  <div class="kss-parameters__default-value">
+                    Defaults to: <code>repeat</code>
+                  </div>
+              </div>
+            </li>
+          </ul>
+      </div>
+
+
+        <div class="kss-source kss-style">
+          Source: <code>frontend/global/_mixins.scss</code>, line 109
+        </div>
+
+    </section>
+    <section id="kssref-frontend-global-mixins-mask-size" class="kss-section kss-section--depth-4 ">
+
+      <div class="kss-style">
+        <h4 class="kss-title kss-title--level-4">
+          <a class="kss-title__permalink" href="#kssref-frontend-global-mixins-mask-size">
+            <span class="kss-title__ref">
+              2.3.3.6
+              <span class="kss-title__permalink-hash">
+                  #frontend.global.mixins.mask-size
+              </span>
+            </span>
+            mask-size($size)
+          </a>
+        </h4>
+
+
+          <div class="kss-description">
+            <p>Adds a cross-browser mask size.</p>
+
+          </div>
+
+          <div class="kss-parameters__title">Parameters:</div>
+          <ul class="kss-parameters">
+            <li class="kss-parameters__item">
+              <div class="kss-parameters__name"><code>$size</code></div>
+              <div class="kss-parameters__description">
+                Size
+              </div>
+            </li>
+          </ul>
+      </div>
+
+
+        <div class="kss-source kss-style">
+          Source: <code>frontend/global/_mixins.scss</code>, line 81
+        </div>
+
+    </section>
+    <section id="kssref-frontend-global-mixins-moz-specific" class="kss-section kss-section--depth-4 ">
+
+      <div class="kss-style">
+        <h4 class="kss-title kss-title--level-4">
+          <a class="kss-title__permalink" href="#kssref-frontend-global-mixins-moz-specific">
+            <span class="kss-title__ref">
+              2.3.3.7
+              <span class="kss-title__permalink-hash">
+                  #frontend.global.mixins.moz-specific
+              </span>
+            </span>
+            moz-specific()
+          </a>
+        </h4>
+
+
+          <div class="kss-description">
+            <p>Adds Mozilla specific styles.</p>
+
+          </div>
+
+      </div>
+
+
+        <div class="kss-source kss-style">
+          Source: <code>frontend/global/_mixins.scss</code>, line 33
+        </div>
+
+    </section>
+    <section id="kssref-frontend-layout" class="kss-section kss-section--depth-2 ">
+
+      <div class="kss-style">
+        <h2 class="kss-title kss-title--level-2">
+          <a class="kss-title__permalink" href="#kssref-frontend-layout">
+            <span class="kss-title__ref">
+              2.4
+              <span class="kss-title__permalink-hash">
+                  #frontend.layout
+              </span>
+            </span>
+            Layout
+          </a>
+        </h2>
+
+
+          <div class="kss-description">
+            <p>Frontend layout selector declarations. DO NOT EDIT! To add/override styles,
+create a _layouts.scss file in src/scss/application/layout.</p>
+
+          </div>
+
+      </div>
+
+
+        <div class="kss-source kss-style">
+          Source: <code>frontend/layout/_layouts.scss</code>, line 1
+        </div>
+
+    </section>
+</article>
+
+<!-- SCRIPTS -->
+<script src="kss-assets/kss.js"></script>
+<script src="kss-assets/scrollspy.js"></script>
+<script src="kss-assets/prettify.js"></script>
+<script src="kss-assets/kss-fullscreen.js"></script>
+<script src="kss-assets/kss-guides.js"></script>
+<script src="kss-assets/kss-markup.js"></script>
+<script>
+  prettyPrint();
+  var spy = new ScrollSpy('#kss-node', {
+    nav: '.kss-nav__menu-child > li > a',
+    className: 'is-in-viewport'
+  });
+  var kssFullScreen = new KssFullScreen({
+    idPrefix: 'kss-fullscreen-',
+    bodyClass: 'kss-fullscreen-mode',
+    elementClass: 'is-fullscreen'
+  });
+  var kssGuides = new KssGuides({
+    bodyClass: 'kss-guides-mode'
+  });
+  var kssMarkup = new KssMarkup({
+    bodyClass: 'kss-markup-mode',
+    detailsClass: 'kss-markup'
+  });
+</script>
+<script src="../dist/js/app.js"></script>
+
+
+
+<!-- Automatically built using <a href="https://github.com/kss-node/kss-node">kss-node</a>. -->
+</body>
+</html>

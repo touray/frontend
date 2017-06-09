@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Frontend Build Styleguide</title>
+
+  <meta name="description" content="">
+  <meta name="generator" content="kss-node">
+  <meta name="viewport" content="width=device-width">
+
+  <link rel="stylesheet" href="kss-assets/kss.css">
+  <link rel="stylesheet" href="../dist/css/style.css">
+
+</head>
+<body id="kss-node" >
+
+<div class="kss-sidebar kss-style">
+  <header class="kss-header">
+    <h1 class="kss-doc-title">Frontend Build Styleguide</h1>
+  </header>
+  <nav class="kss-nav">
+    <ul class="kss-nav__menu">
+      <li class="kss-nav__menu-item">
+        <a class="kss-nav__menu-link" href="./">
+          <span class="kss-nav__ref">0</span
+          ><span class="kss-nav__name">Overview</span>
+        </a>
+      </li>
+      <li class="kss-nav__menu-item">
+        <a class="kss-nav__menu-link" href="section-application.html">
+          <span class="kss-nav__ref">1</span><span class="kss-nav__name">Application</span>
+        </a>
+      </li>
+      <li class="kss-nav__menu-item">
+        <a class="kss-nav__menu-link" href="section-frontend.html">
+          <span class="kss-nav__ref">2</span><span class="kss-nav__name">Frontend</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</div>
+<article role="main" class="kss-main">
+    <div id="kssref-0" class="kss-section kss-section--depth-0 kss-overview kss-style">
+      <h1 id="frontend-sup-style-font-size-0-6875rem-vertical-align-super-build-sup-github-version-https-badge-fury-io-gh-bmarshall511-2ffrontend-svg-https-badge-fury-io-gh-bmarshall511-2ffrontend-">Frontend <sup style="font-size: 0.6875rem; vertical-align: super;">Build</sup> <a href="https://badge.fury.io/gh/bmarshall511%2Ffrontend"><img src="https://badge.fury.io/gh/bmarshall511%2Ffrontend.svg" alt="GitHub version"></a></h1>
+<p><a href="https://codeclimate.com/github/bmarshall511/frontend"><img src="https://codeclimate.com/github/bmarshall511/frontend.svg" alt="Code Climate"></a>
+<a href="https://travis-ci.org/bmarshall511/frontend"><img src="https://travis-ci.org/bmarshall511/frontend.svg?branch=master" alt="Build Status"></a>
+<a href="https://david-dm.org/bmarshall511/frontend"><img src="https://david-dm.org/bmarshall511/frontend/status.svg" alt="dependencies Status"></a>
+<a href="https://david-dm.org/bmarshall511/frontend?type=dev"><img src="https://david-dm.org/bmarshall511/frontend/dev-status.svg" alt="devDependencies Status"></a>
+<a href="https://gitter.im/frontendbyben/Lobby?utm_source=badge&amp;utm_medium=badge&amp;utm_campaign=pr-badge&amp;utm_content=badge"><img src="https://badges.gitter.im/frontendbyben/Lobby.svg" alt="Join the chat at https://gitter.im/frontendbyben/Lobby"></a>
+<a href="https://gratipay.com/~bmarshall511/"><img src="https://img.shields.io/gratipay/user/bmarshall511.svg" alt="Gratipay User"></a>
+<a href="https://beerpay.io/bmarshall511/frontend"><img src="https://beerpay.io/bmarshall511/frontend/badge.svg?style=flat" alt="Beerpay"></a></p>
+<blockquote>
+<p>Frontend Build is a light-weight, no-bloat front-end build framework. It&#39;s purpose is to give developers a jumpstart utilizing Node to automate repetitive tasks, a variables file to quickly configure base elements and a standards-driven approach to help prevent spaghetti code making new developer ramp-up time much shorter.</p>
+</blockquote>
+<p><strong>If you&#39;re viewing this at <a href="https://github.com/bmarshall511/frontend">https://github.com/bmarshall511/frontend</a>, you&#39;re reading the documentation for the master branch.
+<a href="https://github.com/bmarshall511/frontend/tree/latest#readme">View documentation for the latest release.</a></strong></p>
+<h3 id="prerequisites">Prerequisites</h3>
+<ul>
+<li><a href="http://nodejs.org/download/">NodeJS</a></li>
+<li><a href="http://bundler.io">Bundler</a></li>
+</ul>
+<h3 id="direct-download">Direct download</h3>
+<p>Download the script <a href="https://github.com/bmarshall511/frontend/archive/latest.zip">here</a> and include it (unless you are packaging scripts somehow else).</p>
+<h3 id="installation">Installation</h3>
+<p>Navigate to the frontend directory in Terminal and run the following commands:</p>
+<ol>
+<li><code>$ bundle install</code> To install gem dependencies</li>
+<li><code>$ npm install</code> To install dependencies</li>
+<li><code>$ npm start</code> Watch files &amp; run appropriate tasks when needed</li>
+</ol>
+<h3 id="development-usage">Development Usage</h3>
+<p>The following commands can be run in the frontend directory during development:</p>
+<ul>
+<li><code>$ gulp</code> Runs the tasks defined in the <code>defaultTasks</code> config variable</li>
+<li><code>$ gulp lint</code> Lints JavaScript files:</li>
+<li><code>$ gulp scripts</code> Lints and compiles JavaScript files</li>
+<li><code>$ gulp compass</code> Compiles Sass files</li>
+<li><code>$ gulp images</code> Minifies images</li>
+<li><code>$ gulp scss-lint</code> Lints SCSS files</li>
+<li><code>$ gulp htmlmin</code> Minifies HTML documents</li>
+<li><code>$ gulp uncss</code> Removes unused styles</li>
+</ul>
+<h3 id="contributing">Contributing</h3>
+<p>Check out the <a href="CONTRIBUTING.md">Contributing Guidelines</a>.</p>
+<h2 id="security">Security</h2>
+<p>For vulnerability reports, send an e-mail to <code>me at benmarshall dot me</code>.</p>
+<h3 id="authors">Authors</h3>
+<ul>
+<li><a href="https://github.com/bmarshall511">Ben Marshall</a></li>
+<li>And awesome <a href="https://github.com/bmarshall511/frontend/graphs/contributors">contributors</a></li>
+</ul>
+<h3 id="changelog">Changelog</h3>
+<h4 id="v4-0-0-tbd-">v4.0.0 (TBD)</h4>
+<ul>
+<li>A complete rewrite of the NPM package and gulp using Babel and ES2015.</li>
+<li>Now supports React, ES2015 and Babel apps.</li>
+<li>Integrates with <a href="https://github.com/kss-node/kss-node">kss</a> to automate the creation of stylesheets.</li>
+<li>Improved documentation</li>
+</ul>
+<h4 id="v3-0-3-dev-">v3.0.3 (dev)</h4>
+<ul>
+<li>Integrated <a href="https://www.npmjs.com/package/gulp-cached">gulp-cached</a>.</li>
+<li>Integrated <a href="https://www.npmjs.com/package/gulp-plumber">gulp-plumber</a>.</li>
+<li>Integrated <a href="https://www.npmjs.com/package/gulp-notify">gulp-notify</a>.</li>
+<li>Changed <code>gulp compile</code> to <code>gulp dev</code></li>
+</ul>
+<h4 id="v3-0-2-april-27-2017-">v3.0.2 (April 27, 2017)</h4>
+<ul>
+<li>Integrated <a href="https://www.npmjs.com/package/gulp-htmlmin">gulp-htmlmin</a>.</li>
+<li>Integrated <a href="https://www.npmjs.com/package/gulp-uncss">gulp-uncss</a>.</li>
+</ul>
+<h4 id="v3-0-1-april-5-2017-">v3.0.1 (April 5, 2017)</h4>
+<ul>
+<li>Removed optional compiled JS libraries.</li>
+<li>Removed deprecated table variables.</li>
+<li>Updated documentation.</li>
+<li>Created a <code>gulp variables</code> task to automatically setup a application <code>_variables.scss</code> file.</li>
+<li>Added the <code>$button-font-weight</code> variable.</li>
+<li>Changed the default value of the <code>$button-background</code> variable.</li>
+<li>Added the the <code>.screen-reader-text</code> styles as an extendable (<code>%screen-reader-text</code>).</li>
+<li>Added the <code>$header-letter-spacing</code> variable.</li>
+<li>Updated the variable names for the site header from <code>$header</code> to <code>$site-header</code> to fix variable naming conflicts.</li>
+<li>Updated the default values for the <code>$site-header-padding-top</code> and <code>$site-header-padding-bottom</code>.</li>
+<li>Updated the default value for the <code>$gutter-style</code> variable.</li>
+<li>Several updates to the default variable for grid layout.</li>
+<li>Added the <code>$global-weight-light</code> variable.</li>
+<li>Created a <code>gulp setup</code> task to automatically setup a application for the first time.</li>
+<li>Added additional breakpoint variables for header font sizes.</li>
+<li>Added SCSS linter</li>
+</ul>
+
+    </div>
+</article>
+
+<!-- SCRIPTS -->
+<script src="kss-assets/kss.js"></script>
+<script src="kss-assets/scrollspy.js"></script>
+<script src="kss-assets/prettify.js"></script>
+<script src="kss-assets/kss-fullscreen.js"></script>
+<script src="kss-assets/kss-guides.js"></script>
+<script src="kss-assets/kss-markup.js"></script>
+<script>
+  prettyPrint();
+  var spy = new ScrollSpy('#kss-node', {
+    nav: '.kss-nav__menu-child > li > a',
+    className: 'is-in-viewport'
+  });
+  var kssFullScreen = new KssFullScreen({
+    idPrefix: 'kss-fullscreen-',
+    bodyClass: 'kss-fullscreen-mode',
+    elementClass: 'is-fullscreen'
+  });
+  var kssGuides = new KssGuides({
+    bodyClass: 'kss-guides-mode'
+  });
+  var kssMarkup = new KssMarkup({
+    bodyClass: 'kss-markup-mode',
+    detailsClass: 'kss-markup'
+  });
+</script>
+<script src="../dist/js/app.js"></script>
+
+
+
+<!-- Automatically built using <a href="https://github.com/kss-node/kss-node">kss-node</a>. -->
+</body>
+</html>

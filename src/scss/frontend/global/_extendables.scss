@@ -1,32 +1,40 @@
-////////////////////////////////////////////////////////////////////////////////
-// Frontend Extendables
+// Sass Extendables
 //
-// DO NOT EDIT! To add/override extendables, create a _extendables.scss file in
+// Frontend Sass extendables. DO NOT EDIT! To add/override extendables, create a _extendables.scss file in
 // src/scss/application/global.
-////////////////////////////////////////////////////////////////////////////////
+//
+// Style guide: frontend.global.extendables
 
-// Layout
-
-%container {
+// %container
+//
+// Centers and sets an element to the sites' max width with breakpoints.
+//
+// Style guide: frontend.global.extendables.container
+%row {
   @include clearfix;
   margin: 0 auto;
-  max-width: rem-calc($global-width + $gutter-padding);
+  max-width: rem-calc($global-width);
   width: 100%;
 
   @include breakpoint($small) {
-    max-width: rem-calc($global-width-small + $gutter-padding-small, $global-font-size-small);
+    max-width: rem-calc($global-width-small, $global-font-size-small);
   }
 
   @include breakpoint($medium) {
-    max-width: rem-calc($global-width-medium + $gutter-padding-medium, $global-font-size-medium);
+    max-width: rem-calc($global-width-medium, $global-font-size-medium);
   }
 
   @include breakpoint($large) {
-    max-width: rem-calc($global-width-large + $gutter-padding-large, $global-font-size-large);
+    max-width: rem-calc($global-width-large, $global-font-size-large);
   }
 }
 
-%container-full {
+// %container-full
+//
+// Centers and sets an element to a max width of 100% with breakpoints.
+//
+// Style guide: frontend.global.extendables.container-full
+%row-full {
   @include clearfix;
   margin: 0 auto;
   width: 100%;
@@ -44,6 +52,14 @@
   }
 }
 
+// %flex
+//
+// Sets an elements display to flex with a default justify-content:
+// space-between, flex-direction: row, flex-wrap: wrap.
+//
+// Compatible in iOS 6+, Safari 3.1+, Firefox 19+, IE10+, Chrome, Opera 12.1+.
+//
+// Style guide: frontend.global.extendables.flex
 %flex {
   // scss-lint:disable VendorPrefix
   display: -webkit-box;      // OLD - iOS 6-, Safari 3.1-6
@@ -60,9 +76,11 @@
   justify-content: space-between;
 }
 
-
-// Button
-
+// %button
+//
+// Styles an element with the default button styles.
+//
+// Style guide: frontend.global.extendables.button
 %button {
   background: $button-background;
   border: $button-border;
@@ -99,9 +117,11 @@
   }
 }
 
-
-// Lists
-
+// %list-block
+//
+// Styles a list element and items to display as blocks.
+//
+// Style guide: frontend.global.extendables.list-block
 %list-block {
   list-style: none;
   margin-bottom: rem-calc($global-margin);
@@ -114,9 +134,11 @@
   }
 }
 
-
-// Pager
-
+// %pager
+//
+// Styles a list element as a pager.
+//
+// Style guide: frontend.global.extendables.pager
 %pager {
   // scss-lint:disable NestingDepth
   @include inline-block-list;
@@ -166,6 +188,11 @@
   }
 }
 
+// %screen-reader-text
+//
+// Styles an element for screen readers only.
+//
+// Style guide: frontend.global.extendables.screen-reader-text
 %screen-reader-text {
   border: 0;
   clip: rect(rem-calc(1), rem-calc(1), rem-calc(1), rem-calc(1));

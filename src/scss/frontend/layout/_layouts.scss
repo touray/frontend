@@ -1,12 +1,9 @@
-////////////////////////////////////////////////////////////////////////////////
-// Frontend Layout Partials
+// Layout
 //
-// These files should only include layout styles. This includes grid styles and
-// main page layouts.
+// Frontend layout selector declarations. DO NOT EDIT! To add/override styles,
+// create a _layouts.scss file in src/scss/application/layout.
 //
-// DO NOT EDIT! To add/override styles, create a _layouts.scss file in
-// src/scss/application/layout.
-////////////////////////////////////////////////////////////////////////////////
+// Style guide: frontend.layout
 
 @include add-grid($num-columns);                   // Mobile
 @include add-grid($num-columns-small at $small);   // Tablet & up
