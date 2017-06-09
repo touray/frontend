@@ -60,6 +60,7 @@ For vulnerability reports, send an e-mail to `me at benmarshall dot me`.
 - A complete rewrite of the NPM package and gulp using Babel and ES2015.
 - Now supports React, ES2015 and Babel apps.
 - Integrates with [kss](https://github.com/kss-node/kss-node) to automate the creation of stylesheets.
+- Improved documentation
 
 #### v3.0.3 (dev)
 - Integrated [gulp-cached](https://www.npmjs.com/package/gulp-cached).

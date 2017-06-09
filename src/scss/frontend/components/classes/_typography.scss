@@ -1,11 +1,28 @@
-////////////////////////////////////////////////////////////////////////////////
-// Frontend Typography Styles
+// Typography Classes
 //
 // DO NOT EDIT! Contains all of Frontend's pre-packaged typography class styles.
-////////////////////////////////////////////////////////////////////////////////
+//
+// Markup:
+// <p class="strikethrough">.strikethrough</p>
+// <p class="underline">.underline</p>
+// <p class="font-weight-normal">.font-weight-normal</p>
+// <p class="font-weight-medium">.font-weight-medium</p>
+// <p class="font-weight-semibold">.font-weight-semibold</p>
+// <p class="font-weight-bold">.font-weight-bold</p>
+// <p class="font-size-xxxlarge">.font-size-xxxlarge</p>
+// <p class="font-size-xxlarge">.font-size-xxlarge</p>
+// <p class="font-size-xlarge">.font-size-xlarge</p>
+// <p class="font-size-large">.font-size-large</p>
+// <p class="font-size-medium">.font-size-medium</p>
+// <p class="font-size-normal">.font-size-normal</p>
+// <p class="font-size-small">.font-size-small</p>
+// <p class="font-size-xsmall">.font-size-xsmall</p>
+// <p class="font-size-xxsmall">.font-size-xxsmall</p>
+// <p class="font-size-xxxsmall">.font-size-xxxsmall</p>
+//
+// Style guide: frontend.components.typography
 
 // Text decorations
-
 .strikethrough {
   text-decoration: line-through;
 }
@@ -16,7 +33,6 @@
 
 
 // Font weights
-
 .font-weight-normal {
   font-weight: $global-weight-normal;
 }
@@ -35,7 +51,6 @@
 
 
 // Font sizes
-
 .font-size-xxxlarge {
   font-size: $xxxlarge-font-size;
 }

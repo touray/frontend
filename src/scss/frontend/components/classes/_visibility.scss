@@ -1,78 +1,103 @@
+// Visibility Classes
+//
+// DO NOT EDIT! Includes all Frontend visibility styles.
+//
+// Markup:
+// <div class="screen-reader-text">.screen-reader-text</div>
+// <div class="display-none">.display-none</div>
+// <div class="display-none-small">.display-none-small</div>
+// <div class="display-none-medium">.display-none-medium</div>
+// <div class="display-none-large">.display-none-large</div>
+// <div class="display-block">.display-block</div>
+// <div class="display-block-small">.display-block-small</div>
+// <div class="display-block-medium">.display-block-medium</div>
+// <div class="display-block-large">.display-block-large</div>
+// <div class="display-inline">.display-inline</div>
+// <div class="display-inline-small">.display-inline-small</div>
+// <div class="display-inline-medium">.display-inline-medium</div>
+// <div class="display-inline-large">.display-inline-large</div>
+// <div class="display-inline-block">.display-inline-block</div>
+// <div class="display-inline-block-small">.display-inline-block-small</div>
+// <div class="display-inline-block-medium">.display-inline-block-medium</div>
+// <div class="display-inline-block-large">.display-inline-block-large</div>
+//
+// Style guide: frontend.components.visibility
+
 ////////////////////////////////////////////////////////////////////////////////
 // Visibility Styles
 //
-// Includes all Frontend visibility styles.
+//
 ////////////////////////////////////////////////////////////////////////////////
 
-.hide {
+.display-none {
   display: none;
 }
 
-.show {
+.display-block {
   display: block;
 }
 
-.show-inline {
+.display-inline {
   display: inline;
 }
 
-.show-inline-block {
+.display-inline-block {
   display: inline-block;
 }
 
 @include breakpoint($small) {
   // Hide/show content on small (tablet) screens.
-  .hide-small {
+  .display-none-small {
     display: none;
   }
 
-  .show-small {
+  .display-block-small {
     display: block;
   }
 
-  .show-inline-small {
+  .display-inline-small {
     display: inline;
   }
 
-  .show-inline-block-small {
+  .display-inline-block-small {
     display: inline-block;
   }
 }
 
 @include breakpoint($medium) {
   // Hide/show content on medium (desktop) screens.
-  .hide-medium {
+  .display-none-medium {
     display: none;
   }
 
-  .show-medium {
+  .display-block-medium {
     display: block;
   }
 
-  .show-inline-medium {
+  .display-inline-medium {
     display: inline;
   }
 
-  .show-inline-block-medium {
+  .display-inline-block-medium {
     display: inline-block;
   }
 }
 
 @include breakpoint($large) {
   // Hide/show content on large screens.
-  .hide-large {
+  .display-none-large {
     display: none;
   }
 
-  .show-large {
+  .display-block-large {
     display: block;
   }
 
-  .show-inline-large {
+  .display-inline-large {
     display: inline;
   }
 
-  .show-inline-block-large {
+  .display-inline-block-large {
     display: inline-block;
   }
 }

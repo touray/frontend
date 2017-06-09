@@ -1,28 +1,70 @@
-////////////////////////////////////////////////////////////////////////////////
-// Frontend List Styles
+// List Classes
 //
-// Includes all Frontend list styles.
-////////////////////////////////////////////////////////////////////////////////
-
-.list--menu {
-  li {
-    margin-bottom: rem-calc($global-margin);
-
-    // Tablet & up
-    @include breakpoint($small) {
-      margin-bottom: 0;
-      margin-right: rem-calc($global-padding);
-
-      &:last-child {
-        margin-right: 0;
-      }
-    }
-  }
-}
-
-.list-inline-block {
-  @include inline-block-list;
-}
+// DO NOT EDIT! Includes all Frontend list styles.
+//
+// Markup:
+// <ul class="list-block">
+//   <li>.list-block</li>
+//   <li>.list-block</li>
+//   <li>.list-block</li>
+// </ul>
+// <ul class="list-block-small">
+//   <li>.list-block-small</li>
+//   <li>.list-block-small</li>
+//   <li>.list-block-small</li>
+// </ul>
+// <ul class="list-block-medium">
+//   <li>.list-block-medium</li>
+//   <li>.list-block-medium</li>
+//   <li>.list-block-medium</li>
+// </ul>
+// <ul class="list-block-large">
+//   <li>.list-block-large</li>
+//   <li>.list-block-large</li>
+//   <li>.list-block-large</li>
+// </ul>
+// <ul class="list-inline-block">
+//   <li>.list-inline-block</li>
+//   <li>.list-inline-block</li>
+//   <li>.list-inline-block</li>
+// </ul>
+// <ul class="list-inline-block-small">
+//   <li>.list-inline-block-small</li>
+//   <li>.list-inline-block-small</li>
+//   <li>.list-inline-block-small</li>
+// </ul>
+// <ul class="list-inline-block-medium">
+//   <li>.list-inline-block-medium</li>
+//   <li>.list-inline-block-medium</li>
+//   <li>.list-inline-block-medium</li>
+// </ul>
+// <ul class="list-inline-block-large">
+//   <li>.list-inline-block-large</li>
+//   <li>.list-inline-block-large</li>
+//   <li>.list-inline-block-large</li>
+// </ul>
+// <ul class="list-inline">
+//   <li>.list-inline</li>
+//   <li>.list-inline</li>
+//   <li>.list-inline</li>
+// </ul>
+// <ul class="list-inline-small">
+//   <li>.list-inline-small</li>
+//   <li>.list-inline-small</li>
+//   <li>.list-inline-small</li>
+// </ul>
+// <ul class="list-inline-medium">
+//   <li>.list-inline-medium</li>
+//   <li>.list-inline-medium</li>
+//   <li>.list-inline-medium</li>
+// </ul>
+// <ul class="list-inline-large">
+//   <li>.list-inline-large</li>
+//   <li>.list-inline-large</li>
+//   <li>.list-inline-large</li>
+// </ul>
+//
+// Style guide: frontend.components.lists
 
 .list-block {
   @include inline-block-list;
@@ -30,6 +72,43 @@
   li {
     display: block;
   }
+}
+
+// Tablet & up
+@include breakpoint($small) {
+  .list-block-small {
+    @include inline-block-list;
+
+    li {
+      display: block;
+    }
+  }
+}
+
+// Desktop & up
+@include breakpoint($medium) {
+  .list-block-medium {
+    @include inline-block-list;
+
+    li {
+      display: block;
+    }
+  }
+}
+
+// Large screens
+@include breakpoint($large) {
+  .list-block-large {
+    @include inline-block-list;
+
+    li {
+      display: block;
+    }
+  }
+}
+
+.list-inline-block {
+  @include inline-block-list;
 }
 
 // Tablet & up
