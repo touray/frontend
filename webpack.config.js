@@ -17,6 +17,7 @@ module.exports = {
     filename: 'app.js'
   },
   plugins: PROD ? [
+    new webpack.DefinePlugin(GLOBALS),
     new webpack.optimize.UglifyJsPlugin({
       compress: {
         warnings: false,
@@ -25,6 +26,7 @@ module.exports = {
       comments: false
     })
   ] : [
+    new webpack.DefinePlugin(GLOBALS),
     new webpack.optimize.UglifyJsPlugin({
       compress: {
         warnings: true,
