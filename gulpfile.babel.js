@@ -2,7 +2,6 @@
 import cleanCSS from 'gulp-clean-css';
 import concat from 'gulp-concat';
 import compass from 'gulp-compass';
-import complexity from 'gulp-complexity';
 import eslint from 'gulp-eslint';
 import gulp from 'gulp';
 import htmlmin from 'gulp-htmlmin';
@@ -13,13 +12,12 @@ import plumber from 'gulp-plumber';
 import prefix from 'gulp-autoprefixer';
 import replace from 'gulp-replace';
 import scsslint from 'gulp-scss-lint';
-import sourcemaps from 'gulp-sourcemaps';
-import stripDebug from 'gulp-strip-debug';
-import uglify from 'gulp-uglify';
 
 // Import required node modules
+import del from 'del';
 import kss from 'kss';
 import paths from 'compass-options';
+import webpack from 'webpack-stream';
 import {argv} from 'yargs';
 
 // Including gulp-uncss here due to a bug including before kss
@@ -53,10 +51,11 @@ const config = {
     title: 'Frontend Build Styleguide'
   },
   paths: {
+    fonts: src + '/font/**/*.{ttf,woff,eof,svg,woff2}',
     html: 'dist',
     srcHtml: src + '/**/*.html',
-    srcImg: src + 'img/**/*',
-    srcJs: src + 'js/**/*.js',
+    srcImg: src + '/img/**/*',
+    srcJs: src + '/js/**/*.js',
     styleguide: 'styleguide'
   },
   prefix: ["last 1 version", "> 1%", "ie 9"]
@@ -87,6 +86,12 @@ gulp.task('compass', ['images', 'scss-lint'], () => {
     .pipe(gulp.dest(paths.dirs().css));
 });
 
+// Task: copy-fonts
+gulp.task('copy-fonts', () => {
+  return gulp.src(config.paths.fonts)
+   .pipe(gulp.dest(paths.dirs().fonts));
+});
+
 // Task: copy-readme
 gulp.task('copy-readme', () => {
   return gulp.src('README.md')
@@ -95,6 +100,11 @@ gulp.task('copy-readme', () => {
 
 // Task: default
 gulp.task('default', config.default);
+
+// Task: delete
+gulp.task('delete', () => {
+  return del(['dist/**']);
+});
 
 // Task: htmlmin
 gulp.task('htmlmin', () => {
@@ -116,15 +126,6 @@ gulp.task('images', () => {
     .pipe(gulp.dest(paths.dirs().img));
 });
 
-// Task: js-complexity
-gulp.task('js-complexity', ['js-lint'], () => {
-  return gulp.src(config.paths.srcJs)
-    .pipe(plumber({
-      errorHandler: _onError
-    }))
-    .pipe(complexity());
-});
-
 // Task: js-lint
 gulp.task('js-lint', () => {
   return gulp.src([config.paths.srcJs, 'gulpfile.babel.js'])
@@ -136,16 +137,10 @@ gulp.task('js-lint', () => {
 });
 
 // Task: js-transpile
-gulp.task('js-transpile', ['js-complexity'], () => {
+gulp.task('js-transpile', ['js-lint'], () => {
   gulp.src(appJs)
-    .pipe(plumber({
-      errorHandler: _onError
-    }))
-    .pipe(sourcemaps.init())
     .pipe(concat('app.js'))
-    .pipe(sourcemaps.write())
-    .pipe(ifElse(PROD === 'production', stripDebug))
-    .pipe(ifElse(PROD === 'production', uglify))
+    .pipe(webpack(require('./webpack.config')))
     .pipe(gulp.dest(paths.dirs().js));
 });
 

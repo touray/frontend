@@ -21,5 +21,6 @@
     "react/jsx-uses-vars": 2,
     "no-unused-vars": 2,
     "prefer-const": 2,
+    "no-console": 0
   }
 }

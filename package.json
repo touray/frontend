@@ -45,15 +45,17 @@
   "homepage": "https://github.com/bmarshall511/frontend#readme",
   "devDependencies": {
     "babel-core": "^6.24.1",
+    "babel-loader": "^7.1.0",
     "babel-preset-es2015": "^6.24.1",
     "babel-register": "^6.24.1",
     "compass-options": "^0.1.1",
+    "del": "^3.0.0",
+    "eslint-plugin-import": "^2.3.0",
     "eslint-plugin-react": "^7.0.1",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^4.0.0",
     "gulp-clean-css": "^3.4.1",
     "gulp-compass": "^2.1.0",
-    "gulp-complexity": "^0.3.2",
     "gulp-concat": "^2.6.1",
     "gulp-eslint": "^3.0.1",
     "gulp-htmlmin": "^3.0.0",
@@ -63,11 +65,10 @@
     "gulp-plumber": "^1.1.0",
     "gulp-replace": "^0.5.4",
     "gulp-scss-lint": "^0.4.0",
-    "gulp-sourcemaps": "^2.6.0",
-    "gulp-strip-debug": "^1.1.0",
-    "gulp-uglify": "^3.0.0",
     "gulp-uncss": "^1.0.6",
     "kss": "^3.0.0-beta.18",
+    "webpack": "^3.0.0",
+    "webpack-stream": "^3.2.0",
     "yargs": "^8.0.2"
   }
 }
