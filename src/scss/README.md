@@ -33,10 +33,14 @@ Navigate to the frontend directory in Terminal and run the following commands:
 The following commands can be run in the frontend directory during development:
 
 - ```$ gulp``` Runs the tasks defined in the ```defaultTasks``` config variable
-- ```$ gulp lint``` Lints JavaScript files:
-- ```$ gulp scripts``` Lints and compiles JavaScript files
+- ```$ gulp js-lint``` Lints JS files
+- ```$ gulp js-transpile``` Transpiles JS files
+- ```$ gulp scripts``` Lints and compiles JS files
 - ```$ gulp compass``` Compiles Sass files
+- ```$ gulp delete``` Deletes everything in the dist directory
+- ```$ gulp copy-fonts``` Copies fonts to the dist directory
 - ```$ gulp images``` Minifies images
+- ```$ gulp kss``` Generates a styleguide
 - ```$ gulp scss-lint``` Lints SCSS files
 - ```$ gulp htmlmin``` Minifies HTML documents
 - ```$ gulp uncss``` Removes unused styles
@@ -56,7 +60,7 @@ For vulnerability reports, send an e-mail to `me at benmarshall dot me`.
 
 ### Changelog
 
-#### v4.0.0 (TBD)
+#### v4.0.0 (June 21, 2017)
 - A complete rewrite of the NPM package and gulp using Babel and ES2015
 - Now supports React, ES2015 and Babel
 - Integrates with [kss](https://github.com/kss-node/kss-node) to automate the creation of stylesheets

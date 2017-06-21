@@ -72,10 +72,14 @@
 <p>The following commands can be run in the frontend directory during development:</p>
 <ul>
 <li><code>$ gulp</code> Runs the tasks defined in the <code>defaultTasks</code> config variable</li>
-<li><code>$ gulp lint</code> Lints JavaScript files:</li>
-<li><code>$ gulp scripts</code> Lints and compiles JavaScript files</li>
+<li><code>$ gulp js-lint</code> Lints JS files</li>
+<li><code>$ gulp js-transpile</code> Transpiles JS files</li>
+<li><code>$ gulp scripts</code> Lints and compiles JS files</li>
 <li><code>$ gulp compass</code> Compiles Sass files</li>
+<li><code>$ gulp delete</code> Deletes everything in the dist directory</li>
+<li><code>$ gulp copy-fonts</code> Copies fonts to the dist directory</li>
 <li><code>$ gulp images</code> Minifies images</li>
+<li><code>$ gulp kss</code> Generates a styleguide</li>
 <li><code>$ gulp scss-lint</code> Lints SCSS files</li>
 <li><code>$ gulp htmlmin</code> Minifies HTML documents</li>
 <li><code>$ gulp uncss</code> Removes unused styles</li>
@@ -90,7 +94,7 @@
 <li>And awesome <a href="https://github.com/bmarshall511/frontend/graphs/contributors">contributors</a></li>
 </ul>
 <h3 id="changelog">Changelog</h3>
-<h4 id="v4-0-0-tbd-">v4.0.0 (TBD)</h4>
+<h4 id="v4-0-0-june-21-2017-">v4.0.0 (June 21, 2017)</h4>
 <ul>
 <li>A complete rewrite of the NPM package and gulp using Babel and ES2015</li>
 <li>Now supports React, ES2015 and Babel</li>
