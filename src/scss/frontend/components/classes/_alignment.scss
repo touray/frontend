@@ -6,15 +6,19 @@
 // <p class="align-left">.align-left</p>
 // <p class="align-right">.align-right</p>
 // <p class="align-center">.align-center</p>
+// <p class="align-justify">.align-justify</p>
 // <p class="align-left-small">.align-left-small</p>
 // <p class="align-right-small">.align-right-small</p>
 // <p class="align-center-small">.align-center-small</p>
+// <p class="align-justify-small">.align-justify-small</p>
 // <p class="align-left-medium">.align-left-medium</p>
 // <p class="align-right-medium">.align-right-medium</p>
 // <p class="align-center-medium">.align-center-medium</p>
+// <p class="align-justify-medium">.align-justify-medium</p>
 // <p class="align-left-large">.align-left-large</p>
 // <p class="align-right-large">.align-right-large</p>
 // <p class="align-center-large">.align-center-large</p>
+// <p class="align-justify-large">.align-justify-large</p>
 // <p class="float-left">.float-left</p>
 // <p class="float-right">.float-right</p>
 // <p class="float-left">.float-left-small</p>
@@ -50,6 +54,10 @@
   text-align: center;
 }
 
+.align-justify {
+  text-align: justify;
+}
+
 // Tablet & up
 @include breakpoint($small) {
   .float-left-small {
@@ -70,6 +78,10 @@
 
   .align-center-small {
     text-align: center;
+  }
+
+  .align-justify-small {
+    text-align: justify;
   }
 }
 
@@ -94,6 +106,10 @@
   .align-center-medium {
     text-align: center;
   }
+
+  .align-justify-medium {
+    text-align: justify;
+  }
 }
 
 // Large screens
@@ -116,5 +132,9 @@
 
   .align-center-large {
     text-align: center;
+  }
+
+  .align-justify-large {
+    text-align: justify;
   }
 }
