@@ -37,7 +37,7 @@ The following commands can be run in the frontend directory during development:
 - ```$ gulp js-transpile``` Transpiles JS files
 - ```$ gulp scripts``` Lints and compiles JS files
 - ```$ gulp compass``` Compiles Sass files
-- ```$ gulp delete``` Deletes everything in the dist directory
+- ```$ gulp delete``` Deletes everything in the dist &amp; styleguide directory
 - ```$ gulp copy-fonts``` Copies fonts to the dist directory
 - ```$ gulp images``` Minifies images
 - ```$ gulp kss``` Generates a styleguide
