@@ -1,11 +1,11 @@
 // Gulp imports
 import cleanCSS from 'gulp-clean-css';
 import concat from 'gulp-concat';
+import cond from 'gulp-cond';
 import compass from 'gulp-compass';
 import eslint from 'gulp-eslint';
 import gulp from 'gulp';
 import htmlmin from 'gulp-htmlmin';
-import ifElse from 'gulp-if-else';
 import imagemin from 'gulp-imagemin';
 import notify from 'gulp-notify';
 import plumber from 'gulp-plumber';
@@ -80,7 +80,7 @@ gulp.task('compass', ['images', 'scss-lint'], () => {
     }))
     .pipe(compass(config.compass))
     .pipe(prefix(config.prefix))
-    .pipe(ifElse(PROD === 'production', function() {
+    .pipe(cond(PROD, function() {
       return cleanCSS(config.clean);
     }))
     .pipe(gulp.dest(paths.dirs().css));
