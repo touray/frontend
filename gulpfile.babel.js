@@ -103,7 +103,10 @@ gulp.task('default', config.default);
 
 // Task: delete
 gulp.task('delete', () => {
-  return del(['dist/**', '!.gitkeep']);
+  return del(['dist/**/*'])
+    .then(paths => {
+      console.log('Deleted files and folders:\n', paths.join('\n'));
+    });
 });
 
 // Task: htmlmin
