@@ -42,7 +42,7 @@ const config = {
     bundle_exec : true,
     time        : true
   },
-  default: ['uncss', 'js-transpile'],
+  default: ['delete', 'uncss', 'js-transpile'],
   kss: {
     // Relative to src directory
     css: ['../dist/css/style.css'],
@@ -103,7 +103,7 @@ gulp.task('default', config.default);
 
 // Task: delete
 gulp.task('delete', () => {
-  return del(['dist/**']);
+  return del(['dist/**', '!.gitkeep']);
 });
 
 // Task: htmlmin
