@@ -32,7 +32,7 @@ Navigate to the frontend directory in Terminal and run the following commands:
 
 The following commands can be run in the frontend directory during development:
 
-- ```$ gulp``` Runs the tasks defined in the ```defaultTasks``` config variable
+- ```$ gulp``` Runs the default tasks
 - ```$ gulp js-lint``` Lints JS files
 - ```$ gulp js-transpile``` Transpiles JS files
 - ```$ gulp scripts``` Lints and compiles JS files
