@@ -87,9 +87,9 @@ $global-right: if($global-text-direction == rtl, left, right)          !default;
 // 4. Breakpoints
 // -----------------------------------------------------------------------------
 
-$small:        $global-width-small - $gutter-padding-small             !default; // Tablet & up
-$medium:       $global-width-medium - $gutter-padding-medium           !default; // Desktop & up
-$large:        $global-width-large - $gutter-padding-large             !default; // Large screens
+$small:        768px                                                   !default; // Tablet & up
+$medium:       1200px                                                  !default; // Desktop & up
+$large:        1400px                                                  !default; // Large screens
 
 $small-down:   0 $small                                                !default; // Tablet & up
 $medium-down:  0 $medium                                               !default; // Desktop & up

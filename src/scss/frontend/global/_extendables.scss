@@ -13,19 +13,19 @@
 %row {
   @include clearfix;
   margin: 0 auto;
-  max-width: rem-calc($global-width);
+  max-width: $global-width;
   width: 100%;
 
   @include breakpoint($small) {
-    max-width: rem-calc($global-width-small, $global-font-size-small);
+    max-width: $global-width-small;
   }
 
   @include breakpoint($medium) {
-    max-width: rem-calc($global-width-medium, $global-font-size-medium);
+    max-width: $global-width-medium;
   }
 
   @include breakpoint($large) {
-    max-width: rem-calc($global-width-large, $global-font-size-large);
+    max-width: $global-width-large;
   }
 }
 
