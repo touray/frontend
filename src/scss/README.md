@@ -60,9 +60,13 @@ For vulnerability reports, send an e-mail to `me at benmarshall dot me`.
 
 ### Changelog
 
+#### v4.0.1 (TBD)
+- Fixed npm publish error
+- README typo fix
+
 #### v4.0.0 (June 21, 2017)
 - A complete rewrite of the NPM package and gulp using Babel and ES2015
-- Now supports React, ES2015 and Babel
+- Now supports React, ES2016 and Babel
 - Integrates with [kss](https://github.com/kss-node/kss-node) to automate the creation of stylesheets
 - Improved documentation
 
