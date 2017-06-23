@@ -66,6 +66,7 @@ For vulnerability reports, send an e-mail to `me at benmarshall dot me`.
 - Removed toolkit
 - Fixed js-transpile task error from stopping the build
 - Installed babel-preset-react to support React applications by default
+- Installed css-loader and style-loader to import CSS from JS (https://webpack.js.org/guides/code-splitting-css/)
 
 #### v4.0.0 (June 21, 2017)
 - A complete rewrite of the NPM package and gulp using Babel and ES2015
