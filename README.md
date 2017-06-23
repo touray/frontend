@@ -64,6 +64,7 @@ For vulnerability reports, send an e-mail to `me at benmarshall dot me`.
 - Fixed npm publish error
 - README typo fix
 - Removed toolkit
+- Fixed js-transpile task error from stopping the build
 
 #### v4.0.0 (June 21, 2017)
 - A complete rewrite of the NPM package and gulp using Babel and ES2015

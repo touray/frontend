@@ -142,6 +142,9 @@ gulp.task('js-lint', () => {
 // Task: js-transpile
 gulp.task('js-transpile', ['js-lint'], () => {
   gulp.src(appJs)
+    .pipe(plumber({
+      errorHandler: _onError
+    }))
     .pipe(concat('app.js'))
     .pipe(webpack(require('./webpack.config')))
     .pipe(gulp.dest(paths.dirs().js));
