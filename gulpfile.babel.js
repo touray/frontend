@@ -75,10 +75,11 @@ const _onError = (err) => {
 // Task: compass
 gulp.task('compass', ['images', 'scss-lint'], () => {
   return gulp.src(paths.dirs().sass + '/**/*.scss')
-    .pipe(plumber({
-      errorHandler: _onError
-    }))
     .pipe(compass(config.compass))
+    .on('error', function(error) {
+      console.log(error);
+      this.emit('end');
+    })
     .pipe(prefix(config.prefix))
     .pipe(cond(PROD, function() {
       return cleanCSS(config.clean);
