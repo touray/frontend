@@ -7,6 +7,7 @@ import eslint from 'gulp-eslint';
 import gulp from 'gulp';
 import htmlmin from 'gulp-htmlmin';
 import imagemin from 'gulp-imagemin';
+import plumber from 'gulp-plumber';
 import prefix from 'gulp-autoprefixer';
 import replace from 'gulp-replace';
 import scsslint from 'gulp-scss-lint';
@@ -128,6 +129,7 @@ gulp.task('js-lint', () => {
 // Task: js-transpile
 gulp.task('js-transpile', ['js-lint'], () => {
   gulp.src(appJs)
+    .pipe(plumber())
     .pipe(concat('app.js'))
     .pipe(webpack(require('./webpack.config')))
     .pipe(gulp.dest(paths.dirs().js));

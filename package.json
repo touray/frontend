@@ -63,6 +63,7 @@
     "gulp-eslint": "^4.0.0",
     "gulp-htmlmin": "^3.0.0",
     "gulp-imagemin": "^3.3.0",
+    "gulp-plumber": "^1.1.0",
     "gulp-replace": "^0.6.1",
     "gulp-scss-lint": "^0.4.0",
     "gulp-uncss": "^1.0.6",
