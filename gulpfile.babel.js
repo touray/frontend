@@ -7,8 +7,6 @@ import eslint from 'gulp-eslint';
 import gulp from 'gulp';
 import htmlmin from 'gulp-htmlmin';
 import imagemin from 'gulp-imagemin';
-import notify from 'gulp-notify';
-import plumber from 'gulp-plumber';
 import prefix from 'gulp-autoprefixer';
 import replace from 'gulp-replace';
 import scsslint from 'gulp-scss-lint';
@@ -64,14 +62,6 @@ const config = {
 // app.js imports
 const appJs = [src + '/js/app.js'];
 
-// Error handling
-const _onError = (err) => {
-  notify.onError({
-    title:   'Error',
-    message: '<%= err %>'
-  })(err);
-};
-
 // Task: compass
 gulp.task('compass', ['images', 'scss-lint'], () => {
   return gulp.src(paths.dirs().sass + '/**/*.scss')
@@ -106,16 +96,13 @@ gulp.task('default', config.default);
 gulp.task('delete', () => {
   return del(['dist/**/*', 'styleguide/**/*'])
     .then(paths => {
-      console.log('Deleted files and folders:\n', paths.join('\n'));
+      console.log('Deleted Files & Folders: ', paths.length);
     });
 });
 
 // Task: htmlmin
 gulp.task('htmlmin', () => {
   return gulp.src(config.paths.srcHtml)
-    .pipe(plumber({
-      errorHandler: _onError
-    }))
     .pipe(htmlmin({collapseWhitespace: true}))
     .pipe(gulp.dest(config.paths.html));
 });
@@ -123,9 +110,6 @@ gulp.task('htmlmin', () => {
 // Task: images
 gulp.task('images', () => {
   return gulp.src(config.paths.srcImg)
-    .pipe(plumber({
-      errorHandler: _onError
-    }))
     .pipe(imagemin())
     .pipe(gulp.dest(paths.dirs().img));
 });
@@ -135,10 +119,8 @@ gulp.task('js-lint', () => {
   return gulp.src([config.paths.srcJs, 'gulpfile.babel.js'])
     .pipe(eslint())
     .pipe(eslint.results(results => {
-      // Called once for all ESLint results.
-        console.log(`Total Results: ${results.length}`);
-        console.log(`Total Warnings: ${results.warningCount}`);
-        console.log(`Total Errors: ${results.errorCount}`);
+      console.log(`Error Count: ${results.errorCount}`);
+      console.log(`Warning Count: ${results.warningCount}`);
     }))
     .pipe(eslint.format());
 });
@@ -146,9 +128,6 @@ gulp.task('js-lint', () => {
 // Task: js-transpile
 gulp.task('js-transpile', ['js-lint'], () => {
   gulp.src(appJs)
-    .pipe(plumber({
-      errorHandler: _onError
-    }))
     .pipe(concat('app.js'))
     .pipe(webpack(require('./webpack.config')))
     .pipe(gulp.dest(paths.dirs().js));
@@ -169,18 +148,12 @@ gulp.task('kss', ['compass', 'copy-readme'], () => {
 // Task: scss-lint
 gulp.task('scss-lint', () => {
   return gulp.src(paths.dirs().sass + '/**/*.scss')
-    .pipe(plumber({
-      errorHandler: _onError
-    }))
     .pipe(scsslint());
 });
 
 // Task: uncss
 gulp.task('uncss', ['compass', 'htmlmin'], () => {
   return gulp.src(paths.dirs().css + '/**/*.css')
-    .pipe(plumber({
-      errorHandler: _onError
-    }))
     .pipe(uncss({
       html: [config.paths.srcHtml]
     }))
@@ -190,16 +163,10 @@ gulp.task('uncss', ['compass', 'htmlmin'], () => {
 // Task: variables
 gulp.task('variables', () => {
   gulp.src('src/scss/frontend/global/_variables-custom.scss')
-    .pipe(plumber({
-      errorHandler: _onError
-    }))
     .pipe(replace('// KSS //', '// Application Custom Variables\n//\n// Contains all of the Sass custom configuration variables.\n//\n// Style guide: application.global.custom-variables'))
     .pipe(gulp.dest('src/scss/application/global'));
 
   gulp.src('src/scss/frontend/global/_variables.scss')
-      .pipe(plumber({
-        errorHandler: _onError
-      }))
       .pipe(replace('// KSS //', '// Application Variables\n//\n// Contains all of the Sass configuration variables.\n//\n// Style guide: application.global.variables'))
       .pipe(replace(/\s*!default/g, ''))
       .pipe(gulp.dest('src/scss/application/global'));

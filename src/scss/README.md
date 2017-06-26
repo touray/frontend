@@ -64,12 +64,18 @@ For vulnerability reports, send an e-mail to `me at benmarshall dot me`.
 - Fixed npm publish error
 - README typo fix
 - Removed toolkit
+- Fixed js-transpile task error from stopping the build
+- Installed babel-preset-react to support React applications by default
+- Installed css-loader and style-loader to import CSS from JS (https://webpack.js.org/guides/code-splitting-css/)
+- Fixed Compass compile issue during watch when an error is found
+- Fixed elint error bug
+- Removed plumber from the js-transpile task, handled by webpack
+- Removed the plumber and notify node packages
 
 #### v4.0.0 (June 21, 2017)
 - A complete rewrite of the NPM package and gulp using Babel and ES2015
 - Now supports React, ES2016 and Babel
 - Integrates with [kss](https://github.com/kss-node/kss-node) to automate the creation of stylesheets
-- Improved documentation
 
 #### v3.0.3 (dev)
 - Integrated [gulp-cached](https://www.npmjs.com/package/gulp-cached).
