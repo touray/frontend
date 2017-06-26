@@ -133,10 +133,13 @@ gulp.task('images', () => {
 // Task: js-lint
 gulp.task('js-lint', () => {
   return gulp.src([config.paths.srcJs, 'gulpfile.babel.js'])
-    .pipe(plumber({
-      errorHandler: _onError
-    }))
     .pipe(eslint())
+    .pipe(eslint.results(results => {
+      // Called once for all ESLint results.
+        console.log(`Total Results: ${results.length}`);
+        console.log(`Total Warnings: ${results.warningCount}`);
+        console.log(`Total Errors: ${results.errorCount}`);
+    }))
     .pipe(eslint.format());
 });
 
