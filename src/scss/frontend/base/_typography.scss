@@ -204,6 +204,21 @@ a {
   line-height: inherit;
   text-decoration: $anchor-text-decoration;
 
+  &:visited {
+    color: $anchor-color-visited;
+    @if $anchor-text-decoration-visited-hover != $anchor-text-decoration {
+      text-decoration: $anchor-text-decoration-visited-hover;
+    }
+
+    &:hover,
+    &:focus {
+      color: $anchor-color-hover;
+      @if $anchor-text-decoration-hover != $anchor-text-decoration {
+        text-decoration: $anchor-text-decoration-hover;
+      }
+    }
+  }
+
   &:hover,
   &:focus {
     color: $anchor-color-hover;

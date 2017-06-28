@@ -53,7 +53,7 @@ const config = {
     fonts: src + '/font/**/*.{ttf,woff,eof,svg,woff2}',
     html: 'dist',
     srcHtml: src + '/**/*.html',
-    srcImg: src + '/img/**/*',
+    srcImg: src + '/img/*',
     srcJs: src + '/js/**/*.js',
     styleguide: 'styleguide'
   },

@@ -69,8 +69,11 @@ For vulnerability reports, send an e-mail to `me at benmarshall dot me`.
 - Installed css-loader and style-loader to import CSS from JS (https://webpack.js.org/guides/code-splitting-css/)
 - Fixed Compass compile issue during watch when an error is found
 - Fixed elint error bug
-- Removed plumber from the js-transpile task, handled by webpack
-- Removed the plumber and notify node packages
+- Updated plumber error handling
+- Added a scss-lint config file
+- Fixed gulp image path
+- Fixed styleguide typo
+- Added the `$button-letter-spacing`, `$anchor-color-visited` and `$anchor-text-decoration-visited-hover` variables
 
 #### v4.0.0 (June 21, 2017)
 - A complete rewrite of the NPM package and gulp using Babel and ES2015

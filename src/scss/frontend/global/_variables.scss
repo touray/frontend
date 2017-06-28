@@ -162,7 +162,7 @@ $xxlarge-font-size:     $header-2-size                                 !default;
 $xlarge-font-size:      $header-3-size                                 !default;
 $large-font-size:       $header-4-size                                 !default;
 $medium-font-size:      $header-5-size                                 !default;
-$normal-font-size:      $header-6-size                                 !default;
+$normal-font-size:      rem-calc($global-font-size)                    !default;
 $small-font-size:       rem-calc($global-font-size - 1)                !default;
 $xsmall-font-size:      rem-calc($global-font-size - 3)                !default;
 $xxsmall-font-size:     rem-calc($global-font-size - 5)                !default;
@@ -179,10 +179,12 @@ $code-background:  $xlight-gray                                        !default;
 $code-border:      0                                                   !default;
 $code-padding:     rem-calc(2)                                         !default;
 
-$anchor-color:                 $primary-color                          !default;
-$anchor-color-hover:           scale-color($anchor-color, $lightness: -50%) !default;
-$anchor-text-decoration:       none                                    !default;
-$anchor-text-decoration-hover: underline                               !default;
+$anchor-color:                         $primary-color                  !default;
+$anchor-color-hover:                   scale-color($anchor-color, $lightness: -50%) !default;
+$anchor-text-decoration:               none                            !default;
+$anchor-text-decoration-hover:         underline                       !default;
+$anchor-color-visited:                 $primary-color                  !default;
+$anchor-text-decoration-visited-hover: $anchor-text-decoration         !default;
 
 $hr-width:  50%                                                        !default;
 $hr-border: rem-calc(1) solid $gray                                    !default;
@@ -331,6 +333,7 @@ $button-font-weight:         $global-weight-bold                       !default;
 $button-background-disabled: $gray                                     !default;
 $button-color-disabled:      $dark-gray                                !default;
 $button-border-disabled:     rem-calc(1) solid $gray                   !default;
+$button-letter-spacing:      normal                                    !default;
 
 $callout-background:     rgba($info-color, .3)                         !default;
 $callout-margin:         rem-calc(0 0 $global-margin 0)                !default;

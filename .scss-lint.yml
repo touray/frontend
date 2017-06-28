@@ -1,0 +1,3 @@
+linters:
+  SelectorFormat:
+    convention: hyphenated_BEM
