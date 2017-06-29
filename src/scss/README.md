@@ -30,7 +30,7 @@ Navigate to the frontend directory in Terminal and run the following commands:
 
 ### Development Usage
 
-The following commands can be run in the frontend directory during development:
+The following commands can be run in the frontend directory during development. An optional `--prod` flag can be appended to run for production environments, defaults to development.
 
 - ```$ gulp``` Runs the default tasks
 - ```$ gulp js-lint``` Lints JS files
