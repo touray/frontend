@@ -67,6 +67,7 @@
     "gulp-replace": "^0.6.1",
     "gulp-scss-lint": "^0.4.0",
     "gulp-uncss": "^1.0.6",
+    "json-loader": "^0.5.4",
     "kss": "^3.0.0-beta.18",
     "style-loader": "^0.18.2",
     "webpack": "^3.0.0",

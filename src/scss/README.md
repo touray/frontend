@@ -75,6 +75,7 @@ For vulnerability reports, send an e-mail to `me at benmarshall dot me`.
 - Fixed styleguide typo
 - Added the `$button-letter-spacing`, `$anchor-color-visited` and `$anchor-text-decoration-visited-hover` variables
 - Added the `$global-min-width` variable
+- Installed `json-loader` node module to fix webpack error with json files (https://github.com/request/request/issues/1529#issuecomment-103454943)
 
 #### v4.0.0 (June 21, 2017)
 - A complete rewrite of the NPM package and gulp using Babel and ES2015

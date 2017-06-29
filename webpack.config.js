@@ -7,9 +7,15 @@ const PROD = process.env.NODE_ENV === 'production';
 
 module.exports = {
   debug: true,
+  node: {
+    fs: 'empty',
+    net: 'empty',
+    tls: 'empty'
+  },
   devtool: PROD ? 'source-map' : 'eval-source-map',
   module: {
     loaders: [
+      { test: /\.json$/, loader: 'json-loader' },
       {
         test: /\.jsx?$/,
         exclude: /node_modules/,
