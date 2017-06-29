@@ -47,7 +47,7 @@ The following commands can be run in the frontend directory during development. 
 
 **IMPORTANT: DO NOT EDIT ANYTHING IN THE `src/scss/frontend` OR `dist` DIRECTORIES!** This is for Frontend Build's core Sass setup. Updates will override any changes in these directories. In addition, all custom Sass variables should be placed in `src/scss/application/global/_variables-custom.scss`.
 
-### Setting Up Base CSS
+### Base Styles
 
 One feature to using Frontend Build is it's ability to quickly setup base and common styles. Edit the variables in `src/scss/application/global/_variables.scss` to configure your project's theme. To add additional variables, use the `src/scss/application/global/_variables-custom.scss` file (this allows Frontend Build to be updated in the future).
 
