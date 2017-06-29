@@ -32,7 +32,7 @@ Navigate to the frontend directory in Terminal and run the following commands:
 
 The following commands can be run in the frontend directory during development. An optional `--prod` flag can be appended to run for production environments, defaults to development.
 
-- ```$ gulp``` Runs the default tasks
+- ```$ gulp``` Runs the default tasks (`delete`, `uncss`, `js-transpile`, `kss`)
 - ```$ gulp js-lint``` Lints JS files
 - ```$ gulp js-transpile``` Transpiles JS files
 - ```$ gulp scripts``` Lints and compiles JS files
@@ -45,7 +45,15 @@ The following commands can be run in the frontend directory during development. 
 - ```$ gulp htmlmin``` Minifies HTML documents
 - ```$ gulp uncss``` Removes unused styles
 
-**IMPORTANT: DO NOT EDIT ANYTHING IN THE `src/scss/frontend` OR `dist` DIRECTORIES!** This is for Frontend Build's core Sass setup. Updates will override any changes in these directories.
+**IMPORTANT: DO NOT EDIT ANYTHING IN THE `src/scss/frontend` OR `dist` DIRECTORIES!** This is for Frontend Build's core Sass setup. Updates will override any changes in these directories. In addition, all custom Sass variables should be placed in `src/scss/application/global/_variables-custom.scss`.
+
+#### Setting Up Base CSS
+
+One feature to using Frontend Build is it's ability to quickly setup base and common styles. Edit the variables in `src/scss/application/global/_variables.scss` to configure your project's theme. To add additional variables, use the `src/scss/application/global/_variables-custom.scss` file (this allows Frontend Build to be updated in the future).
+
+#### Styleguide Generation
+
+Another feature to using Frontend Build is it's ability to create a styleguide automatically using [KSS](http://warpspire.com/kss/styleguides/). For more information, see [the syntax documentation](http://warpspire.com/kss/syntax/) on how to utilize this feature.
 
 ### Contributing
 
