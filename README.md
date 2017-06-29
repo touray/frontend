@@ -16,7 +16,7 @@
 - [NodeJS](http://nodejs.org/download/)
 - [Bundler](http://bundler.io)
 
-## Direct download
+## Direct Download
 
 Download the script [here](https://github.com/bmarshall511/frontend/archive/latest.zip) and include it (unless you are packaging scripts somehow else).
 
