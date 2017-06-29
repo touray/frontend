@@ -45,6 +45,8 @@ The following commands can be run in the frontend directory during development:
 - ```$ gulp htmlmin``` Minifies HTML documents
 - ```$ gulp uncss``` Removes unused styles
 
+**IMPORTANT: DO NOT EDIT ANYTHING IN THE `src/scss/frontend` OR `dist` DIRECTORIES!** This is for Frontend Build's core Sass setup. Updates will override any changes in these directories.
+
 ### Contributing
 
 Check out the [Contributing Guidelines](CONTRIBUTING.md).
@@ -76,6 +78,7 @@ For vulnerability reports, send an e-mail to `me at benmarshall dot me`.
 - Added the `$button-letter-spacing`, `$anchor-color-visited` and `$anchor-text-decoration-visited-hover` variables
 - Added the `$global-min-width` variable
 - Installed `json-loader` node module to fix webpack error with json files (https://github.com/request/request/issues/1529#issuecomment-103454943)
+- Updated documentation
 
 #### v4.0.0 (June 21, 2017)
 - A complete rewrite of the NPM package and gulp using Babel and ES2015
