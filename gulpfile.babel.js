@@ -176,6 +176,13 @@ gulp.task('variables', () => {
 
 // Task: watch
 gulp.task('watch', () => {
+  gulp.watch(src + '/scss/frontend/**/*', () => {
+    console.log('\nWARNING: PLEASE DO NOT EDIT ANY FILES/DIRECTORIES LOCATED IN SRC/SCSS/FRONTEND DIRECTORY.\n');
+    if (! argv.dev) {
+      process.exit();
+    }
+  });
+
   gulp.watch(paths.dirs().sass + '/**/*.scss', ['kss']);
   gulp.watch(config.paths.srcImg, ['images']);
   gulp.watch(config.paths.srcJs, ['js-transpile']);

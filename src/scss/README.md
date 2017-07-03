@@ -1,4 +1,4 @@
-# Frontend <sup style="font-size: 0.6875rem; vertical-align: super;">Build</sup> [![GitHub version](https://badge.fury.io/gh/bmarshall511%2Ffrontend.svg)](https://badge.fury.io/gh/bmarshall511%2Ffrontend)
+# Frontend <sup style="font-size: 0.6875rem; vertical-align: super;">build</sup> [![GitHub version](https://badge.fury.io/gh/bmarshall511%2Ffrontend.svg)](https://badge.fury.io/gh/bmarshall511%2Ffrontend)
 [![Code Climate](https://codeclimate.com/github/bmarshall511/frontend.svg)](https://codeclimate.com/github/bmarshall511/frontend)
 [![Build Status](https://travis-ci.org/bmarshall511/frontend.svg?branch=master)](https://travis-ci.org/bmarshall511/frontend)
 [![dependencies Status](https://david-dm.org/bmarshall511/frontend/status.svg)](https://david-dm.org/bmarshall511/frontend)
@@ -12,15 +12,15 @@
 **If you're viewing this at https://github.com/bmarshall511/frontend, you're reading the documentation for the master branch.
 [View documentation for the latest release.](https://github.com/bmarshall511/frontend/tree/latest#readme)**
 
-### Prerequisites
+## Prerequisites
 - [NodeJS](http://nodejs.org/download/)
 - [Bundler](http://bundler.io)
 
-### Direct download
+## Direct Download
 
 Download the script [here](https://github.com/bmarshall511/frontend/archive/latest.zip) and include it (unless you are packaging scripts somehow else).
 
-### Installation
+## Installation
 
 Navigate to the frontend directory in Terminal and run the following commands:
 
@@ -28,11 +28,11 @@ Navigate to the frontend directory in Terminal and run the following commands:
 2. ```$ npm install``` To install dependencies
 3. ```$ npm start``` Watch files &amp; run appropriate tasks when needed
 
-### Development Usage
+## Development Usage
 
 The following commands can be run in the frontend directory during development. An optional `--prod` flag can be appended to run for production environments, defaults to development.
 
-- ```$ gulp``` Runs the default tasks
+- ```$ gulp``` Runs the default tasks (`delete`, `uncss`, `js-transpile`, `kss`)
 - ```$ gulp js-lint``` Lints JS files
 - ```$ gulp js-transpile``` Transpiles JS files
 - ```$ gulp scripts``` Lints and compiles JS files
@@ -45,9 +45,17 @@ The following commands can be run in the frontend directory during development. 
 - ```$ gulp htmlmin``` Minifies HTML documents
 - ```$ gulp uncss``` Removes unused styles
 
-**IMPORTANT: DO NOT EDIT ANYTHING IN THE `src/scss/frontend` OR `dist` DIRECTORIES!** This is for Frontend Build's core Sass setup. Updates will override any changes in these directories.
+**IMPORTANT: DO NOT EDIT ANYTHING IN THE `src/scss/frontend` OR `dist` DIRECTORIES!** This is for Frontend Build's core Sass setup. Updates will override any changes in these directories. In addition, all custom Sass variables should be placed in `src/scss/application/global/_variables-custom.scss`.
 
-### Contributing
+### Base Styles
+
+One feature to using Frontend Build is it's ability to quickly setup base and common styles. Edit the variables in `src/scss/application/global/_variables.scss` to configure your project's theme. To add additional variables, use the `src/scss/application/global/_variables-custom.scss` file (this allows Frontend Build to be updated in the future).
+
+### Styleguides
+
+Another feature to using Frontend Build is it's ability to create a styleguide automatically using [KSS](http://warpspire.com/kss/styleguides/). For more information, see [the syntax documentation](http://warpspire.com/kss/syntax/) on how to utilize this feature.
+
+## Contributing
 
 Check out the [Contributing Guidelines](CONTRIBUTING.md).
 
@@ -55,14 +63,14 @@ Check out the [Contributing Guidelines](CONTRIBUTING.md).
 
 For vulnerability reports, send an e-mail to `me at benmarshall dot me`.
 
-### Authors
+## Authors
 
 * [Ben Marshall](https://github.com/bmarshall511)
 * And awesome [contributors](https://github.com/bmarshall511/frontend/graphs/contributors)
 
-### Changelog
+## Changelog
 
-#### v4.0.1 (TBD)
+### v4.0.1 (TBD)
 - Fixed npm publish error
 - README typo fix
 - Removed toolkit
@@ -79,23 +87,24 @@ For vulnerability reports, send an e-mail to `me at benmarshall dot me`.
 - Added the `$global-min-width` variable
 - Installed `json-loader` node module to fix webpack error with json files (https://github.com/request/request/issues/1529#issuecomment-103454943)
 - Updated documentation
+- Added warning when editing Frontend Build core scss files
 
-#### v4.0.0 (June 21, 2017)
+### v4.0.0 (June 21, 2017)
 - A complete rewrite of the NPM package and gulp using Babel and ES2015
 - Now supports React, ES2016 and Babel
 - Integrates with [kss](https://github.com/kss-node/kss-node) to automate the creation of stylesheets
 
-#### v3.0.3 (dev)
+### v3.0.3 (dev)
 - Integrated [gulp-cached](https://www.npmjs.com/package/gulp-cached).
 - Integrated [gulp-plumber](https://www.npmjs.com/package/gulp-plumber).
 - Integrated [gulp-notify](https://www.npmjs.com/package/gulp-notify).
 - Changed ```gulp compile``` to ```gulp dev```
 
-#### v3.0.2 (April 27, 2017)
+### v3.0.2 (April 27, 2017)
 - Integrated [gulp-htmlmin](https://www.npmjs.com/package/gulp-htmlmin).
 - Integrated [gulp-uncss](https://www.npmjs.com/package/gulp-uncss).
 
-#### v3.0.1 (April 5, 2017)
+### v3.0.1 (April 5, 2017)
 - Removed optional compiled JS libraries.
 - Removed deprecated table variables.
 - Updated documentation.

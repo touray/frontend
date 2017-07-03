@@ -41,7 +41,7 @@
 </div>
 <article role="main" class="kss-main">
     <div id="kssref-0" class="kss-section kss-section--depth-0 kss-overview kss-style">
-      <h1 id="frontend-sup-style-font-size-0-6875rem-vertical-align-super-build-sup-github-version-https-badge-fury-io-gh-bmarshall511-2ffrontend-svg-https-badge-fury-io-gh-bmarshall511-2ffrontend-">Frontend <sup style="font-size: 0.6875rem; vertical-align: super;">Build</sup> <a href="https://badge.fury.io/gh/bmarshall511%2Ffrontend"><img src="https://badge.fury.io/gh/bmarshall511%2Ffrontend.svg" alt="GitHub version"></a></h1>
+      <h1 id="frontend-sup-style-font-size-0-6875rem-vertical-align-super-build-sup-github-version-https-badge-fury-io-gh-bmarshall511-2ffrontend-svg-https-badge-fury-io-gh-bmarshall511-2ffrontend-">Frontend <sup style="font-size: 0.6875rem; vertical-align: super;">build</sup> <a href="https://badge.fury.io/gh/bmarshall511%2Ffrontend"><img src="https://badge.fury.io/gh/bmarshall511%2Ffrontend.svg" alt="GitHub version"></a></h1>
 <p><a href="https://codeclimate.com/github/bmarshall511/frontend"><img src="https://codeclimate.com/github/bmarshall511/frontend.svg" alt="Code Climate"></a>
 <a href="https://travis-ci.org/bmarshall511/frontend"><img src="https://travis-ci.org/bmarshall511/frontend.svg?branch=master" alt="Build Status"></a>
 <a href="https://david-dm.org/bmarshall511/frontend"><img src="https://david-dm.org/bmarshall511/frontend/status.svg" alt="dependencies Status"></a>
@@ -54,24 +54,24 @@
 </blockquote>
 <p><strong>If you&#39;re viewing this at <a href="https://github.com/bmarshall511/frontend">https://github.com/bmarshall511/frontend</a>, you&#39;re reading the documentation for the master branch.
 <a href="https://github.com/bmarshall511/frontend/tree/latest#readme">View documentation for the latest release.</a></strong></p>
-<h3 id="prerequisites">Prerequisites</h3>
+<h2 id="prerequisites">Prerequisites</h2>
 <ul>
 <li><a href="http://nodejs.org/download/">NodeJS</a></li>
 <li><a href="http://bundler.io">Bundler</a></li>
 </ul>
-<h3 id="direct-download">Direct download</h3>
+<h2 id="direct-download">Direct Download</h2>
 <p>Download the script <a href="https://github.com/bmarshall511/frontend/archive/latest.zip">here</a> and include it (unless you are packaging scripts somehow else).</p>
-<h3 id="installation">Installation</h3>
+<h2 id="installation">Installation</h2>
 <p>Navigate to the frontend directory in Terminal and run the following commands:</p>
 <ol>
 <li><code>$ bundle install</code> To install gem dependencies</li>
 <li><code>$ npm install</code> To install dependencies</li>
 <li><code>$ npm start</code> Watch files &amp; run appropriate tasks when needed</li>
 </ol>
-<h3 id="development-usage">Development Usage</h3>
+<h2 id="development-usage">Development Usage</h2>
 <p>The following commands can be run in the frontend directory during development. An optional <code>--prod</code> flag can be appended to run for production environments, defaults to development.</p>
 <ul>
-<li><code>$ gulp</code> Runs the default tasks</li>
+<li><code>$ gulp</code> Runs the default tasks (<code>delete</code>, <code>uncss</code>, <code>js-transpile</code>, <code>kss</code>)</li>
 <li><code>$ gulp js-lint</code> Lints JS files</li>
 <li><code>$ gulp js-transpile</code> Transpiles JS files</li>
 <li><code>$ gulp scripts</code> Lints and compiles JS files</li>
@@ -84,18 +84,22 @@
 <li><code>$ gulp htmlmin</code> Minifies HTML documents</li>
 <li><code>$ gulp uncss</code> Removes unused styles</li>
 </ul>
-<p><strong>IMPORTANT: DO NOT EDIT ANYTHING IN THE <code>src/scss/frontend</code> OR <code>dist</code> DIRECTORIES!</strong> This is for Frontend Build&#39;s core Sass setup. Updates will override any changes in these directories.</p>
-<h3 id="contributing">Contributing</h3>
+<p><strong>IMPORTANT: DO NOT EDIT ANYTHING IN THE <code>src/scss/frontend</code> OR <code>dist</code> DIRECTORIES!</strong> This is for Frontend Build&#39;s core Sass setup. Updates will override any changes in these directories. In addition, all custom Sass variables should be placed in <code>src/scss/application/global/_variables-custom.scss</code>.</p>
+<h3 id="base-styles">Base Styles</h3>
+<p>One feature to using Frontend Build is it&#39;s ability to quickly setup base and common styles. Edit the variables in <code>src/scss/application/global/_variables.scss</code> to configure your project&#39;s theme. To add additional variables, use the <code>src/scss/application/global/_variables-custom.scss</code> file (this allows Frontend Build to be updated in the future).</p>
+<h3 id="styleguides">Styleguides</h3>
+<p>Another feature to using Frontend Build is it&#39;s ability to create a styleguide automatically using <a href="http://warpspire.com/kss/styleguides/">KSS</a>. For more information, see <a href="http://warpspire.com/kss/syntax/">the syntax documentation</a> on how to utilize this feature.</p>
+<h2 id="contributing">Contributing</h2>
 <p>Check out the <a href="CONTRIBUTING.md">Contributing Guidelines</a>.</p>
 <h2 id="security">Security</h2>
 <p>For vulnerability reports, send an e-mail to <code>me at benmarshall dot me</code>.</p>
-<h3 id="authors">Authors</h3>
+<h2 id="authors">Authors</h2>
 <ul>
 <li><a href="https://github.com/bmarshall511">Ben Marshall</a></li>
 <li>And awesome <a href="https://github.com/bmarshall511/frontend/graphs/contributors">contributors</a></li>
 </ul>
-<h3 id="changelog">Changelog</h3>
-<h4 id="v4-0-1-tbd-">v4.0.1 (TBD)</h4>
+<h2 id="changelog">Changelog</h2>
+<h3 id="v4-0-1-tbd-">v4.0.1 (TBD)</h3>
 <ul>
 <li>Fixed npm publish error</li>
 <li>README typo fix</li>
@@ -113,26 +117,27 @@
 <li>Added the <code>$global-min-width</code> variable</li>
 <li>Installed <code>json-loader</code> node module to fix webpack error with json files (<a href="https://github.com/request/request/issues/1529#issuecomment-103454943">https://github.com/request/request/issues/1529#issuecomment-103454943</a>)</li>
 <li>Updated documentation</li>
+<li>Added warning when editing Frontend Build core scss files</li>
 </ul>
-<h4 id="v4-0-0-june-21-2017-">v4.0.0 (June 21, 2017)</h4>
+<h3 id="v4-0-0-june-21-2017-">v4.0.0 (June 21, 2017)</h3>
 <ul>
 <li>A complete rewrite of the NPM package and gulp using Babel and ES2015</li>
 <li>Now supports React, ES2016 and Babel</li>
 <li>Integrates with <a href="https://github.com/kss-node/kss-node">kss</a> to automate the creation of stylesheets</li>
 </ul>
-<h4 id="v3-0-3-dev-">v3.0.3 (dev)</h4>
+<h3 id="v3-0-3-dev-">v3.0.3 (dev)</h3>
 <ul>
 <li>Integrated <a href="https://www.npmjs.com/package/gulp-cached">gulp-cached</a>.</li>
 <li>Integrated <a href="https://www.npmjs.com/package/gulp-plumber">gulp-plumber</a>.</li>
 <li>Integrated <a href="https://www.npmjs.com/package/gulp-notify">gulp-notify</a>.</li>
 <li>Changed <code>gulp compile</code> to <code>gulp dev</code></li>
 </ul>
-<h4 id="v3-0-2-april-27-2017-">v3.0.2 (April 27, 2017)</h4>
+<h3 id="v3-0-2-april-27-2017-">v3.0.2 (April 27, 2017)</h3>
 <ul>
 <li>Integrated <a href="https://www.npmjs.com/package/gulp-htmlmin">gulp-htmlmin</a>.</li>
 <li>Integrated <a href="https://www.npmjs.com/package/gulp-uncss">gulp-uncss</a>.</li>
 </ul>
-<h4 id="v3-0-1-april-5-2017-">v3.0.1 (April 5, 2017)</h4>
+<h3 id="v3-0-1-april-5-2017-">v3.0.1 (April 5, 2017)</h3>
 <ul>
 <li>Removed optional compiled JS libraries.</li>
 <li>Removed deprecated table variables.</li>
