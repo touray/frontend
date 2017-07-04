@@ -12,23 +12,7 @@
 //
 // Style guide: frontend.global.extendables.container
 %row {
-  @include clearfix;
-  margin: 0 auto;
-  max-width: $global-width;
-  min-width: $global-min-width;
-  width: 100%;
-
-  @include breakpoint($small) {
-    max-width: $global-width-small;
-  }
-
-  @include breakpoint($medium) {
-    max-width: $global-width-medium;
-  }
-
-  @include breakpoint($large) {
-    max-width: $global-width-large;
-  }
+  @include row;
 }
 
 // %container-full
@@ -37,21 +21,7 @@
 //
 // Style guide: frontend.global.extendables.container-full
 %row-full {
-  @include clearfix;
-  margin: 0 auto;
-  width: 100%;
-
-  @include breakpoint($small) {
-    max-width: 100%;
-  }
-
-  @include breakpoint($medium) {
-    max-width: 100%;
-  }
-
-  @include breakpoint($large) {
-    max-width: 100%;
-  }
+  @include row-full;
 }
 
 // %flex
@@ -63,19 +33,7 @@
 //
 // Style guide: frontend.global.extendables.flex
 %flex {
-  // scss-lint:disable VendorPrefix
-  display: -webkit-box;      // OLD - iOS 6-, Safari 3.1-6
-  display: -moz-box;         // OLD - Firefox 19- (buggy but mostly works)
-  display: -ms-flexbox;      // TWEENER - IE 10
-  display: -webkit-flex;     // NEW - Chrome
-  display: flex;             // NEW, Spec - Opera 12.1, Firefox 20+
-
-  -webkit-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: wrap;
-  flex-wrap: wrap;
-
-  justify-content: space-between;
+  @include flex;
 }
 
 // %button
@@ -84,40 +42,7 @@
 //
 // Style guide: frontend.global.extendables.button
 %button {
-  background: $button-background;
-  border: $button-border;
-  border-radius: $button-radius;
-  color: $button-color;
-  cursor: pointer;
-  display: inline-block;
-  font-family: $button-font-family;
-  font-size: $button-font-size;
-  font-weight: $button-font-weight;
-  letter-spacing: $button-letter-spacing;
-  line-height: $button-line-height;
-  padding: $button-padding;
-  text-align: center;
-  text-decoration: none;
-  text-transform: $button-text-transform;
-
-  &:hover {
-    background: $button-background-hover;
-    border: $button-border-hover;
-    color: $button-color-hover;
-    text-decoration: none;
-  }
-
-  &[disabled="disabled"] {
-    background: $button-background-disabled;
-    border: $button-border-disabled;
-    color: $button-color-disabled;
-
-    &:hover {
-      background: $button-background-disabled;
-      border: $button-border-disabled;
-      color: $button-color-disabled;
-    }
-  }
+  @include button;
 }
 
 // %list-block

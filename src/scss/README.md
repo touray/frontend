@@ -88,6 +88,7 @@ For vulnerability reports, send an e-mail to `me at benmarshall dot me`.
 - Installed `json-loader` node module to fix webpack error with json files (https://github.com/request/request/issues/1529#issuecomment-103454943)
 - Updated documentation
 - Added warning when editing Frontend Build core scss files
+- Made some default extendables into mixins
 
 ### v4.0.0 (June 21, 2017)
 - A complete rewrite of the NPM package and gulp using Babel and ES2015
