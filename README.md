@@ -87,17 +87,17 @@ For vulnerability reports, send an e-mail to `me at benmarshall dot me`.
 * New warning when editing Frontend Build core scss files
 * New mixins
 * New SCSS variables:
-** `$blockquote-letter-spacing`
-** `$global-min-width`
-** `$button-letter-spacing`
-** `$anchor-color-visited`
-** `$anchor-text-decoration-visited-hover`
-** `$selection-background`
-** `$selection-color`
+  ** `$blockquote-letter-spacing`
+  ** `$global-min-width`
+  ** `$button-letter-spacing`
+  ** `$anchor-color-visited`
+  ** `$anchor-text-decoration-visited-hover`
+  ** `$selection-background`
+  ** `$selection-color`
 * New node modules:
-** `babel-preset-react` to support React applications by default
-** `css-loader` and `style-loader` to import CSS from JS (https://webpack.js.org/guides/code-splitting-css/)
-** `json-loader` to fix webpack error with json files (https://github.com/request/request/issues/1529#issuecomment-103454943)
+  ** `babel-preset-react` to support React applications by default
+  ** `css-loader` and `style-loader` to import CSS from JS (https://webpack.js.org/guides/code-splitting-css/)
+  ** `json-loader` to fix webpack error with json files (https://github.com/request/request/issues/1529#issuecomment-103454943)
 
 ### v4.0.0 (June 21, 2017)
 - A complete rewrite of the NPM package and gulp using Babel and ES2015
