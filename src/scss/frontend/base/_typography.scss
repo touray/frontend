@@ -294,6 +294,7 @@ blockquote {
   border-#{$global-left}: $blockquote-border;
   font-family: $blockquote-font-family;
   font-size: $blockquote-font-size;
+  letter-spacing: $blockquote-letter-spacing;
   line-height: $blockquote-line-height;
   margin: $blockquote-margin;
   padding: $blockquote-padding;

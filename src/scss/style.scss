@@ -37,12 +37,19 @@
 //@import 'frontend/components/classes/callout';
 //@import 'frontend/components/classes/buttons';
 //@import 'frontend/components/classes/visibility';
+//
 
-// Frontend Drupal 7 component, common classes & styles for Drupal 7.
-//@import 'frontend/components/drupal7';
+// Libraries
+//
+// All avaiable pre-defined libraries.
+//
+// Style guide: frontend.components.lib
 
-// Frontend WordPress component, common classes & styles for WordPress.
-//@import 'frontend/components/wordpress';
+// Drupal 7
+@import 'frontend/components/lib/drupal7';
+
+// WordPress
+//@import 'frontend/components/lib/wordpress';
 
 // Application
 //

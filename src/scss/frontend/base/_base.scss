@@ -69,6 +69,17 @@ body {
   }
 }
 
+// Selection styles
+::selection {
+  background: $selection-background;
+  color: $selection-color;
+}
+
+::-moz-selection {
+  background: $selection-background;
+  color: $selection-color;
+}
+
 img {
   // Grid defaults to get images and embeds to work properly
   // Get rid of gap under images by making them display: inline-block; by default

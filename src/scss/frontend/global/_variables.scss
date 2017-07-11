@@ -173,6 +173,9 @@ $paragraph-lineheight:     $global-lineheight                          !default;
 $paragraph-margin-bottom:  rem-calc($global-margin)                    !default;
 $paragraph-text-rendering: optimizeLegibility                          !default;
 
+$selection-background: $primary-color                                  !default;
+$selection-color:      $white                                          !default;
+
 $code-color:       $xdark-gray                                         !default;
 $code-font-family: $font-family-monospace                              !default;
 $code-font-weight: $global-weight-normal                               !default;
@@ -207,6 +210,7 @@ $blockquote-margin:           rem-calc($global-margin 0)               !default;
 $blockquote-border:           rem-calc(5) solid $gray                  !default;
 $blockquote-font-family:      $header-font-family                      !default;
 $blockquote-font-size:        $medium-font-size                        !default;
+$blockquote-letter-spacing:   normal                                   !default;
 $blockquote-line-height:      inherit                                  !default;
 $blockquote-background:       transparent                              !default;
 

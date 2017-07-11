@@ -50,7 +50,7 @@ const config = {
     title: 'Frontend Build Styleguide'
   },
   paths: {
-    fonts: src + '/font/**/*.{ttf,woff,eof,svg,woff2}',
+    fonts: src + '/font/**/*',
     html: 'dist',
     srcHtml: src + '/**/*.html',
     srcImg: src + '/img/*',
