@@ -75,6 +75,7 @@ body {
   color: $selection-color;
 }
 
+// scss-lint:disable VendorPrefix
 ::-moz-selection {
   background: $selection-background;
   color: $selection-color;

@@ -71,33 +71,33 @@ For vulnerability reports, send an e-mail to `me at benmarshall dot me`.
 ## Changelog
 
 ### v4.1.0 (TBD)
-- Removed toolkit
-- Updated Drupal 7 styles
-- Updated documentation
-- Updated plumber error handling
-- Fix for font directory copying issue (https://github.com/bmarshall511/frontend/issues/6)
-- Fix for styleguide typos
-- Fix for gulp image path
-- Fix for `js-transpile` task error from stopping the build
-- Fix for Compass compile issue during watch when an error is found
-- Fix for npm publish error
-- Fix for elint error bug
-- Fix for README typo
-- New scss-lint config file
-- New warning when editing Frontend Build core scss files
-- New mixins
-- New SCSS variables:
--- `$blockquote-letter-spacing`
--- `$global-min-width`
--- `$button-letter-spacing`
--- `$anchor-color-visited`
--- `$anchor-text-decoration-visited-hover`
--- `$selection-background`
--- `$selection-color`
-- New node modules:
--- `babel-preset-react` to support React applications by default
--- `css-loader` and `style-loader` to import CSS from JS (https://webpack.js.org/guides/code-splitting-css/)
--- `json-loader` to fix webpack error with json files (https://github.com/request/request/issues/1529#issuecomment-103454943)
+* Removed toolkit
+* Updated Drupal 7 styles
+* Updated documentation
+* Updated plumber error handling
+* Fix for font directory copying issue (https://github.com/bmarshall511/frontend/issues/6)
+* Fix for styleguide typos
+* Fix for gulp image path
+* Fix for `js-transpile` task error from stopping the build
+* Fix for Compass compile issue during watch when an error is found
+* Fix for npm publish error
+* Fix for elint error bug
+* Fix for README typo
+* New scss-lint config file
+* New warning when editing Frontend Build core scss files
+* New mixins
+* New SCSS variables:
+** `$blockquote-letter-spacing`
+** `$global-min-width`
+** `$button-letter-spacing`
+** `$anchor-color-visited`
+** `$anchor-text-decoration-visited-hover`
+** `$selection-background`
+** `$selection-color`
+* New node modules:
+** `babel-preset-react` to support React applications by default
+** `css-loader` and `style-loader` to import CSS from JS (https://webpack.js.org/guides/code-splitting-css/)
+** `json-loader` to fix webpack error with json files (https://github.com/request/request/issues/1529#issuecomment-103454943)
 
 ### v4.0.0 (June 21, 2017)
 - A complete rewrite of the NPM package and gulp using Babel and ES2015
