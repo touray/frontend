@@ -181,6 +181,8 @@ $paragraph-text-rendering: optimizeLegibility;
 $selection-background: $primary-color;
 $selection-color:      $white;
 
+$figure-caption-style: italic;
+
 $code-color:          $xdark-gray;
 $code-font-family:    $font-family-monospace;
 $code-font-size:      $normal-font-size;
@@ -197,7 +199,7 @@ $anchor-text-decoration-hover:         underline;
 $anchor-color-visited:                 $primary-color;
 $anchor-text-decoration-visited-hover: $anchor-text-decoration;
 
-$hr-width:  50%;
+$hr-width:  100%;
 $hr-border: rem-calc(1) solid $gray;
 $hr-margin: rem-calc($global-margin * 2) auto;
 
@@ -312,10 +314,12 @@ $pager-link-background:    transparent;
 $pager-link-size:          $small-font-size;
 $pager-link-line-height:   1;
 $pager-link-font-family:   $body-font-family;
+$pager-link-decoration:    none;
 
 $pager-link-background-hover: transparent;
 $pager-link-color-hover:      $primary-color;
 $pager-link-border-hover:     0;
+$pager-link-decoration-hover: $pager-link-decoration;
 
 $pager-current-padding:       rem-calc(8 10);
 $pager-current-border:        rem-calc(1) solid $gray;

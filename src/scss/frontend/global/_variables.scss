@@ -177,6 +177,8 @@ $paragraph-text-rendering: optimizeLegibility                          !default;
 $selection-background: $primary-color                                  !default;
 $selection-color:      $white                                          !default;
 
+$figure-caption-style: italic                                          !default;
+
 $code-color:          $xdark-gray                                      !default;
 $code-font-family:    $font-family-monospace                           !default;
 $code-font-size:      $normal-font-size                                !default;
@@ -193,7 +195,7 @@ $anchor-text-decoration-hover:         underline                       !default;
 $anchor-color-visited:                 $primary-color                  !default;
 $anchor-text-decoration-visited-hover: $anchor-text-decoration         !default;
 
-$hr-width:  50%                                                        !default;
+$hr-width:  100%                                                       !default;
 $hr-border: rem-calc(1) solid $gray                                    !default;
 $hr-margin: rem-calc($global-margin * 2) auto                          !default;
 
@@ -308,10 +310,12 @@ $pager-link-background:    transparent                                 !default;
 $pager-link-size:          $small-font-size                            !default;
 $pager-link-line-height:   1                                           !default;
 $pager-link-font-family:   $body-font-family                           !default;
+$pager-link-decoration:    none                                        !default;
 
 $pager-link-background-hover: transparent                              !default;
 $pager-link-color-hover:      $primary-color                           !default;
 $pager-link-border-hover:     0                                        !default;
+$pager-link-decoration-hover: $pager-link-decoration                   !default;
 
 $pager-current-padding:       rem-calc(8 10)                           !default;
 $pager-current-border:        rem-calc(1) solid $gray                  !default;

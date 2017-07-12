@@ -32,16 +32,15 @@
 //
 // Style guide: frontend.components
 
+@import 'frontend/components/classes/buttons';
 @import 'frontend/components/classes/colors';
 @import 'frontend/components/classes/common';
 @import 'frontend/components/classes/layout';
 @import 'frontend/components/classes/typography';
 @import 'frontend/components/classes/alignment';
 @import 'frontend/components/classes/lists';
-//@import 'frontend/components/classes/callout';
-//@import 'frontend/components/classes/buttons';
-//@import 'frontend/components/classes/visibility';
-//
+@import 'frontend/components/classes/callout';
+@import 'frontend/components/classes/visibility';
 
 // Libraries
 //
@@ -49,11 +48,23 @@
 //
 // Style guide: frontend.components.lib
 
-// Drupal 7
-@import 'frontend/components/lib/drupal7';
+// Drupal
+//
+// Contains imports for Drupal.
+//
+// Style guide: frontend.components.lib.drupal
+@import 'frontend/components/lib/drupal/d7';
+
+// Drupal Modules
+//
+// Contains imports for Drupal modules.
+//
+// Style guide: frontend.components.lib.drupal.modules
+
+@import 'frontend/components/lib/drupal/modules/d7-styleguide';
 
 // WordPress
-//@import 'frontend/components/lib/wordpress';
+//@import 'frontend/components/lib/wordpress/wordpress';
 
 // Application
 //
