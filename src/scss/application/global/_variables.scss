@@ -181,7 +181,10 @@ $paragraph-text-rendering: optimizeLegibility;
 $selection-background: $primary-color;
 $selection-color:      $white;
 
+$figure-border:        rem-calc(1) solid $gray;
 $figure-caption-style: italic;
+$figure-margin:        rem-calc(0 0 $global-margin 0);
+$figure-padding:       rem-calc(5);
 
 $code-color:          $xdark-gray;
 $code-font-family:    $font-family-monospace;

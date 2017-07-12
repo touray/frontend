@@ -370,3 +370,9 @@ figcaption,
 figure {
   font-style: $figure-caption-style;
 }
+
+figure {
+  border: $figure-border;
+  margin: $figure-margin;
+  padding: $figure-padding;
+}
