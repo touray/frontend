@@ -169,6 +169,7 @@ $xsmall-font-size:      rem-calc($global-font-size - 3)                !default;
 $xxsmall-font-size:     rem-calc($global-font-size - 5)                !default;
 $xxxsmall-font-size:    rem-calc($global-font-size - 7)                !default;
 
+$paragraph-letter-spacing: normal                                      !default;
 $paragraph-lineheight:     $global-lineheight                          !default;
 $paragraph-margin-bottom:  rem-calc($global-margin)                    !default;
 $paragraph-text-rendering: optimizeLegibility                          !default;
@@ -176,12 +177,14 @@ $paragraph-text-rendering: optimizeLegibility                          !default;
 $selection-background: $primary-color                                  !default;
 $selection-color:      $white                                          !default;
 
-$code-color:       $xdark-gray                                         !default;
-$code-font-family: $font-family-monospace                              !default;
-$code-font-weight: $global-weight-normal                               !default;
-$code-background:  $xlight-gray                                        !default;
-$code-border:      0                                                   !default;
-$code-padding:     rem-calc(2)                                         !default;
+$code-color:          $xdark-gray                                      !default;
+$code-font-family:    $font-family-monospace                           !default;
+$code-font-size:      $normal-font-size                                !default;
+$code-font-weight:    $global-weight-normal                            !default;
+$code-letter-spacing: normal                                           !default;
+$code-background:     $xlight-gray                                     !default;
+$code-border:         0                                                !default;
+$code-padding:        rem-calc(2)                                      !default;
 
 $anchor-color:                         $primary-color                  !default;
 $anchor-color-hover:                   scale-color($anchor-color, $lightness: -50%) !default;

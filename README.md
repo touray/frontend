@@ -94,6 +94,8 @@ For vulnerability reports, send an e-mail to `me at benmarshall dot me`.
   * `$anchor-text-decoration-visited-hover`
   * `$selection-background`
   * `$selection-color`
+  * `$paragraph-letter-spacing`
+  * `$code-letter-spacing`
 * New node modules:
   * `babel-preset-react` to support React applications by default
   * `css-loader` and `style-loader` to import CSS from JS (https://webpack.js.org/guides/code-splitting-css/)

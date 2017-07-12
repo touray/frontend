@@ -173,6 +173,7 @@ $xsmall-font-size:      rem-calc($global-font-size - 3);
 $xxsmall-font-size:     rem-calc($global-font-size - 5);
 $xxxsmall-font-size:    rem-calc($global-font-size - 7);
 
+$paragraph-letter-spacing: normal;
 $paragraph-lineheight:     $global-lineheight;
 $paragraph-margin-bottom:  rem-calc($global-margin);
 $paragraph-text-rendering: optimizeLegibility;
@@ -180,12 +181,14 @@ $paragraph-text-rendering: optimizeLegibility;
 $selection-background: $primary-color;
 $selection-color:      $white;
 
-$code-color:       $xdark-gray;
-$code-font-family: $font-family-monospace;
-$code-font-weight: $global-weight-normal;
-$code-background:  $xlight-gray;
-$code-border:      0;
-$code-padding:     rem-calc(2);
+$code-color:          $xdark-gray;
+$code-font-family:    $font-family-monospace;
+$code-font-size:      $normal-font-size;
+$code-font-weight:    $global-weight-normal;
+$code-letter-spacing: normal;
+$code-background:     $xlight-gray;
+$code-border:         0;
+$code-padding:        rem-calc(2);
 
 $anchor-color:                         $primary-color;
 $anchor-color-hover:                   scale-color($anchor-color, $lightness: -50%);

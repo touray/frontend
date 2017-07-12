@@ -4,22 +4,26 @@
 // Contains all global partials for the style.css stylesheet.
 ////////////////////////////////////////////////////////////////////////////////
 
-// Frontend
+// Frontend Build (core)
 //
-// REQUIRED. All Frontend imports.
+// Contains all core Frontend Build imports. <b>These imports should NEVER be
+// edited directly</b>, instead an override file should be created in the
+// application directory with the same filename, following the same directory
+// structure. Once created, it will need to be included below in the appropriate
+// section.
 //
 // Style guide: frontend
 
-// Frontend global partials.
+// Required - Frontend Build global imports
 @import 'frontend/global/global';
 
-// Reset & base Frontend partials, should only be included once per CSS file.
+// Optional - CSS reset - Should only be included once per CSS file
 @import 'compass/reset';
 
-// Frontend base styles.
+// Optional - Frontend Build base element styles
 @import 'frontend/base/base';
 
-// Frontend layout build.
+// Optional - Frontend Build layout styles
 @import 'frontend/layout/layouts';
 
 // Components
