@@ -41,7 +41,7 @@ const config = {
     bundle_exec : true,
     time        : true
   },
-  default: ['delete', 'uncss', 'js-transpile', 'kss'],
+  default: ['delete', 'compass', 'htmlmin', 'js-transpile', 'kss'],
   kss: {
     // Relative to src directory
     css: ['../dist/css/style.css'],
