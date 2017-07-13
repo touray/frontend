@@ -305,11 +305,11 @@ $table-head-font-color:    $body-font-color;
 // 8. Frontend
 // -----------------------------------------------------------------------------
 
-$pager-text-transform: uppercase;
+$pager-text-transform: none;
 $pager-transition:     all $global-transition-timing;
 $pager-text-align:     center;
 
-$pager-link-padding:       rem-calc(8 10);
+$pager-link-padding:       rem-calc(3 10);
 $pager-link-border:        0;
 $pager-link-border-radius: rem-calc($global-radius);
 $pager-link-color:         $black;
@@ -324,13 +324,13 @@ $pager-link-color-hover:      $primary-color;
 $pager-link-border-hover:     0;
 $pager-link-decoration-hover: $pager-link-decoration;
 
-$pager-current-padding:       rem-calc(8 10);
-$pager-current-border:        rem-calc(1) solid $gray;
+$pager-current-padding:       $pager-link-padding;
+$pager-current-border:        rem-calc(1) solid $primary-color;
 $pager-current-border-radius: rem-calc($global-radius);
 $pager-current-color:         $white;
-$pager-current-background:    $xdark-gray;
+$pager-current-background:    $primary-color;
 
-$pager-ellipsis-padding:      rem-calc(8 10);
+$pager-ellipsis-padding:       $pager-link-padding;
 $pager-ellipsis-border:        0;
 $pager-ellipsis-border-radius: rem-calc($global-radius);
 $pager-ellipsis-color:         $body-font-color;

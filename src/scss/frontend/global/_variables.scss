@@ -301,11 +301,11 @@ $table-head-font-color:    $body-font-color                            !default;
 // 8. Frontend
 // -----------------------------------------------------------------------------
 
-$pager-text-transform: uppercase                                       !default;
+$pager-text-transform: none                                            !default;
 $pager-transition:     all $global-transition-timing                   !default;
 $pager-text-align:     center                                          !default;
 
-$pager-link-padding:       rem-calc(8 10)                              !default;
+$pager-link-padding:       rem-calc(3 10)                              !default;
 $pager-link-border:        0                                           !default;
 $pager-link-border-radius: rem-calc($global-radius)                    !default;
 $pager-link-color:         $black                                      !default;
@@ -320,13 +320,13 @@ $pager-link-color-hover:      $primary-color                           !default;
 $pager-link-border-hover:     0                                        !default;
 $pager-link-decoration-hover: $pager-link-decoration                   !default;
 
-$pager-current-padding:       rem-calc(8 10)                           !default;
-$pager-current-border:        rem-calc(1) solid $gray                  !default;
+$pager-current-padding:       $pager-link-padding                      !default;
+$pager-current-border:        rem-calc(1) solid $primary-color         !default;
 $pager-current-border-radius: rem-calc($global-radius)                 !default;
 $pager-current-color:         $white                                   !default;
-$pager-current-background:    $xdark-gray                              !default;
+$pager-current-background:    $primary-color                           !default;
 
-$pager-ellipsis-padding:      rem-calc(8 10)                           !default;
+$pager-ellipsis-padding:       $pager-link-padding                     !default;
 $pager-ellipsis-border:        0                                       !default;
 $pager-ellipsis-border-radius: rem-calc($global-radius)                !default;
 $pager-ellipsis-color:         $body-font-color                        !default;

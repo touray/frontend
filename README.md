@@ -32,7 +32,7 @@ Navigate to the frontend directory in Terminal and run the following commands:
 
 The following commands can be run in the frontend directory during development. An optional `--prod` flag can be appended to run for production environments, defaults to development.
 
-- ```$ gulp``` Runs the default tasks (`delete`, `uncss`, `js-transpile`, `kss`)
+- ```$ gulp``` Runs the default tasks (`delete`, `compass`, `htmlmin`, `js-transpile`, `kss`)
 - ```$ gulp js-lint``` Lints JS files
 - ```$ gulp js-transpile``` Transpiles JS files
 - ```$ gulp scripts``` Lints and compiles JS files
@@ -43,7 +43,7 @@ The following commands can be run in the frontend directory during development. 
 - ```$ gulp kss``` Generates a styleguide
 - ```$ gulp scss-lint``` Lints SCSS files
 - ```$ gulp htmlmin``` Minifies HTML documents
-- ```$ gulp uncss``` Removes unused styles
+- ```$ gulp uncss``` Removes unused styles (needs configuration)
 
 **IMPORTANT: DO NOT EDIT ANYTHING IN THE `src/scss/frontend` OR `dist` DIRECTORIES!** This is for Frontend Build's core Sass setup. Updates will override any changes in these directories. In addition, all custom Sass variables should be placed in `src/scss/application/global/_variables-custom.scss`.
 

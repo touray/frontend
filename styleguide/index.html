@@ -71,7 +71,7 @@
 <h2 id="development-usage">Development Usage</h2>
 <p>The following commands can be run in the frontend directory during development. An optional <code>--prod</code> flag can be appended to run for production environments, defaults to development.</p>
 <ul>
-<li><code>$ gulp</code> Runs the default tasks (<code>delete</code>, <code>uncss</code>, <code>js-transpile</code>, <code>kss</code>)</li>
+<li><code>$ gulp</code> Runs the default tasks (<code>delete</code>, <code>compass</code>, <code>htmlmin</code>, <code>js-transpile</code>, <code>kss</code>)</li>
 <li><code>$ gulp js-lint</code> Lints JS files</li>
 <li><code>$ gulp js-transpile</code> Transpiles JS files</li>
 <li><code>$ gulp scripts</code> Lints and compiles JS files</li>
@@ -82,7 +82,7 @@
 <li><code>$ gulp kss</code> Generates a styleguide</li>
 <li><code>$ gulp scss-lint</code> Lints SCSS files</li>
 <li><code>$ gulp htmlmin</code> Minifies HTML documents</li>
-<li><code>$ gulp uncss</code> Removes unused styles</li>
+<li><code>$ gulp uncss</code> Removes unused styles (needs configuration)</li>
 </ul>
 <p><strong>IMPORTANT: DO NOT EDIT ANYTHING IN THE <code>src/scss/frontend</code> OR <code>dist</code> DIRECTORIES!</strong> This is for Frontend Build&#39;s core Sass setup. Updates will override any changes in these directories. In addition, all custom Sass variables should be placed in <code>src/scss/application/global/_variables-custom.scss</code>.</p>
 <h3 id="base-styles">Base Styles</h3>
