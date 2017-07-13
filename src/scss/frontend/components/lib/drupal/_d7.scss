@@ -84,3 +84,24 @@ div {
     font-size: inherit;
   }
 }
+
+.password-strength {
+  margin-top: rem-calc(23);
+}
+
+.password-indicator {
+  background-color: $xlight-gray;
+  border-radius: rem-calc($global-radius);
+  height: rem-calc(15);
+  overflow: hidden;
+
+  div {
+    background-color: $success-color;
+    border-radius: rem-calc(0 $global-radius $global-radius 0);
+  }
+}
+
+.password-strength-title,
+.password-strength-text {
+  font-size: $small-font-size;
+}
