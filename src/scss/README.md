@@ -70,7 +70,7 @@ For vulnerability reports, send an e-mail to `me at benmarshall dot me`.
 
 ## Changelog
 
-### v4.1.0 (TBD)
+### v4.1.0 (July 13, 2017)
 * Removed toolkit
 * Updated Drupal 7 styles
 * Updated documentation
