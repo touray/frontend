@@ -22,6 +22,8 @@
 
 // Optional - Frontend Build base element styles
 @import 'frontend/base/base';
+@import 'frontend/base/forms';
+@import 'frontend/base/typography';
 
 // Optional - Frontend Build layout styles
 @import 'frontend/layout/layouts';
@@ -31,6 +33,12 @@
 // All avaiable Frontend components.
 //
 // Style guide: frontend.components
+
+// Classes
+//
+// All avaiable Frontend Build class components.
+//
+// Style guide: frontend.components.classes
 
 @import 'frontend/components/classes/buttons';
 @import 'frontend/components/classes/colors';
@@ -53,7 +61,8 @@
 // Contains imports for Drupal.
 //
 // Style guide: frontend.components.lib.drupal
-@import 'frontend/components/lib/drupal/d7';
+
+//@import 'frontend/components/lib/drupal/d7';
 
 // Drupal Modules
 //
@@ -61,7 +70,7 @@
 //
 // Style guide: frontend.components.lib.drupal.modules
 
-@import 'frontend/components/lib/drupal/modules/d7-styleguide';
+//@import 'frontend/components/lib/drupal/modules/d7-styleguide';
 
 // WordPress
 //@import 'frontend/components/lib/wordpress/wordpress';
@@ -73,7 +82,7 @@
 //
 // Style guide: application
 
-// Application Global
+// Global
 //
 // Global application functions, mixins, default variables and extendables.
 //
@@ -81,7 +90,7 @@
 
 //@import 'application/global/..';
 
-// Application Base
+// Base
 //
 // Application selector declarations.
 //
@@ -89,7 +98,7 @@
 
 //@import 'application/base/..';
 
-// Application Layout
+// Layout
 //
 // Application layout selector declarations.
 //
@@ -97,7 +106,7 @@
 
 //@import 'application/layout/..';
 
-// Application Components
+// Components
 //
 // Application components.
 //

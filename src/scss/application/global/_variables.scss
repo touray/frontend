@@ -1,4 +1,4 @@
-// Application Variables
+// Variables
 //
 // Contains all of the Sass configuration variables.
 //
@@ -181,10 +181,12 @@ $paragraph-text-rendering: optimizeLegibility;
 $selection-background: $primary-color;
 $selection-color:      $white;
 
-$figure-border:        rem-calc(1) solid $gray;
-$figure-caption-style: italic;
-$figure-margin:        rem-calc(0 0 $global-margin 0);
-$figure-padding:       rem-calc(5);
+$figure-border:                 rem-calc(1) solid $gray;
+$figure-caption-letter-spacing: normal;
+$figure-caption-size:           $small-font-size;
+$figure-caption-style:          italic;
+$figure-margin:                 rem-calc(0 0 $global-margin 0);
+$figure-padding:                rem-calc(5);
 
 $code-color:          $xdark-gray;
 $code-font-family:    $font-family-monospace;
@@ -204,7 +206,7 @@ $anchor-text-decoration-visited-hover: $anchor-text-decoration;
 
 $hr-width:  100%;
 $hr-border: rem-calc(1) solid $gray;
-$hr-margin: rem-calc($global-margin * 2) auto;
+$hr-margin: rem-calc($global-margin) auto;
 
 $list-lineheight:             $paragraph-lineheight;
 $list-margin-bottom:          $paragraph-margin-bottom;

@@ -165,11 +165,11 @@ gulp.task('uncss', ['compass', 'htmlmin'], () => {
 // Task: variables
 gulp.task('variables', () => {
   gulp.src('src/scss/frontend/global/_variables-custom.scss')
-    .pipe(replace('// KSS //', '// Application Custom Variables\n//\n// Contains all of the Sass custom configuration variables.\n//\n// Style guide: application.global.custom-variables'))
+    .pipe(replace('// KSS //', '// Custom Variables\n//\n// Contains all of the Sass custom configuration variables.\n//\n// Style guide: application.global.custom-variables'))
     .pipe(gulp.dest('src/scss/application/global'));
 
   gulp.src('src/scss/frontend/global/_variables.scss')
-      .pipe(replace('// KSS //', '// Application Variables\n//\n// Contains all of the Sass configuration variables.\n//\n// Style guide: application.global.variables'))
+      .pipe(replace('// KSS //', '// Variables\n//\n// Contains all of the Sass configuration variables.\n//\n// Style guide: application.global.variables'))
       .pipe(replace(/\s*!default/g, ''))
       .pipe(gulp.dest('src/scss/application/global'));
 });

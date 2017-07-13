@@ -177,10 +177,12 @@ $paragraph-text-rendering: optimizeLegibility                          !default;
 $selection-background: $primary-color                                  !default;
 $selection-color:      $white                                          !default;
 
-$figure-border:        rem-calc(1) solid $gray                         !default;
-$figure-caption-style: italic                                          !default;
-$figure-margin:        rem-calc(0 0 $global-margin 0)                  !default;
-$figure-padding:       rem-calc(5)                                     !default;
+$figure-border:                 rem-calc(1) solid $gray                !default;
+$figure-caption-letter-spacing: normal                                 !default;
+$figure-caption-size:           $small-font-size                       !default;
+$figure-caption-style:          italic                                 !default;
+$figure-margin:                 rem-calc(0 0 $global-margin 0)         !default;
+$figure-padding:                rem-calc(5)                            !default;
 
 $code-color:          $xdark-gray                                      !default;
 $code-font-family:    $font-family-monospace                           !default;
@@ -200,7 +202,7 @@ $anchor-text-decoration-visited-hover: $anchor-text-decoration         !default;
 
 $hr-width:  100%                                                       !default;
 $hr-border: rem-calc(1) solid $gray                                    !default;
-$hr-margin: rem-calc($global-margin * 2) auto                          !default;
+$hr-margin: rem-calc($global-margin) auto                              !default;
 
 $list-lineheight:             $paragraph-lineheight                    !default;
 $list-margin-bottom:          $paragraph-margin-bottom                 !default;
