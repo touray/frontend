@@ -1,14 +1,16 @@
+# Import paths
+add_import_path 'node_modules/foundation-sites/scss'
+
 # Require any additional compass plugins here.
 require 'breakpoint'
-require 'singularitygs'
 
 # Set this to the root of your project when deployed:
-http_path = ""
-css_dir = "dist/css"
-sass_dir = "src/scss"
-images_dir = "dist/img"
-javascripts_dir = "dist/js"
-fonts_dir = "dist/font"
+http_path = ''
+css_dir = 'dist/css'
+sass_dir = 'src/scss'
+images_dir = 'dist/img'
+javascripts_dir = 'dist/js'
+fonts_dir = 'dist/font'
 
 # You can select your preferred output style here (can be overridden via the command line):
 # output_style = :compressed

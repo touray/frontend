@@ -45,12 +45,6 @@ The following commands can be run in the frontend directory during development. 
 - ```$ gulp htmlmin``` Minifies HTML documents
 - ```$ gulp uncss``` Removes unused styles (needs configuration)
 
-**IMPORTANT: DO NOT EDIT ANYTHING IN THE `src/scss/frontend` OR `dist` DIRECTORIES!** This is for Frontend Build's core Sass setup. Updates will override any changes in these directories. In addition, all custom Sass variables should be placed in `src/scss/application/global/_variables-custom.scss`.
-
-### Base Styles
-
-One feature to using Frontend Build is it's ability to quickly setup base and common styles. Edit the variables in `src/scss/application/global/_variables.scss` to configure your project's theme. To add additional variables, use the `src/scss/application/global/_variables-custom.scss` file (this allows Frontend Build to be updated in the future).
-
 ### Styleguides
 
 Another feature to using Frontend Build is it's ability to create a styleguide automatically using [KSS](http://warpspire.com/kss/styleguides/). For more information, see [the syntax documentation](http://warpspire.com/kss/syntax/) on how to utilize this feature.
@@ -70,8 +64,11 @@ For vulnerability reports, send an e-mail to `me at benmarshall dot me`.
 
 ## Changelog
 
-### v4.1.1 (TBD)
+### v4.2.0 (TBD)
 * Removed webpack from the build process, opting for gulp instead
+* Removed singularitygs, use CSS grid instead
+* Removed Frontend Build's default scss, use an existing framework like Foundation
+* Added [Foundation](http://foundation.zurb.com/) as the default frontend framework
 
 ### v4.1.0 (July 13, 2017)
 * Removed toolkit

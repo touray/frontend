@@ -72,6 +72,7 @@ For vulnerability reports, send an e-mail to `me at benmarshall dot me`.
 
 ### v4.1.1 (TBD)
 * Removed webpack from the build process, opting for gulp instead
+* Removed singularitygs now that CSS grid is supported in all major browsers
 
 ### v4.1.0 (July 13, 2017)
 * Removed toolkit

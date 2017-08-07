@@ -10,7 +10,6 @@ import htmlmin from 'gulp-htmlmin';
 import imagemin from 'gulp-imagemin';
 import plumber from 'gulp-plumber';
 import prefix from 'gulp-autoprefixer';
-import replace from 'gulp-replace';
 import scsslint from 'gulp-scss-lint';
 import uglify from 'gulp-uglify';
 
@@ -46,9 +45,8 @@ const config = {
   kss: {
     // Relative to src directory
     css: ['../dist/css/style.css'],
-    homepage: 'README.md',
-    js: ['../dist/js/app.js'],
-    title: 'Frontend Build Styleguide'
+    homepage: '../../README.md',
+    js: ['../dist/js/app.js']
   },
   paths: {
     fonts: src + '/font/**/*',
@@ -58,7 +56,7 @@ const config = {
     srcJs: src + '/js/**/*.js',
     styleguide: 'styleguide'
   },
-  prefix: ['last 1 version', '> 1%', 'ie 9'],
+  prefix: ['last 2 versions', 'ie >= 9', 'and_chr >= 2.3'],
   babelPresets: ['env']
 };
 
@@ -84,12 +82,6 @@ gulp.task('compass', ['images', 'scss-lint'], () => {
 gulp.task('copy-fonts', () => {
   return gulp.src(config.paths.fonts)
    .pipe(gulp.dest(paths.dirs().fonts));
-});
-
-// Task: copy-readme
-gulp.task('copy-readme', () => {
-  return gulp.src('README.md')
-    .pipe(gulp.dest(paths.dirs().sass));
 });
 
 // Task: default
@@ -141,7 +133,7 @@ gulp.task('js-transpile', ['js-lint'], () => {
 });
 
 // Task: kss
-gulp.task('kss', ['compass', 'copy-readme'], () => {
+gulp.task('kss', ['compass'], () => {
   return kss({
     source: paths.dirs().sass,
     destination: config.paths.styleguide,
@@ -167,18 +159,6 @@ gulp.task('uncss', ['compass', 'htmlmin'], () => {
     .pipe(gulp.dest(paths.dirs().css));
 });
 
-// Task: variables
-gulp.task('variables', () => {
-  gulp.src('src/scss/frontend/global/_variables-custom.scss')
-    .pipe(replace('// KSS //', '// Custom Variables\n//\n// Contains all of the Sass custom configuration variables.\n//\n// Style guide: application.global.custom-variables'))
-    .pipe(gulp.dest('src/scss/application/global'));
-
-  gulp.src('src/scss/frontend/global/_variables.scss')
-      .pipe(replace('// KSS //', '// Variables\n//\n// Contains all of the Sass configuration variables.\n//\n// Style guide: application.global.variables'))
-      .pipe(replace(/\s*!default/g, ''))
-      .pipe(gulp.dest('src/scss/application/global'));
-});
-
 // Task: watch
 gulp.task('watch', () => {
   gulp.watch(src + '/scss/frontend/**/*', () => {
@@ -192,6 +172,4 @@ gulp.task('watch', () => {
   gulp.watch(config.paths.srcImg, ['images']);
   gulp.watch(config.paths.srcJs, ['js-transpile']);
   gulp.watch(config.paths.srcHtml, ['htmlmin']);
-  gulp.watch('src/scss/frontend/global/_variables.scss', ['variables']);
-  gulp.watch('README.md', ['copy-readme', 'kss']);
 });

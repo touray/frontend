@@ -2,7 +2,7 @@
 <html class="no-js" lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Frontend Build Styleguide</title>
+  <title>KSS Style Guide</title>
 
   <meta name="description" content="">
   <meta name="generator" content="kss-node">
@@ -16,7 +16,7 @@
 
 <div class="kss-sidebar kss-style">
   <header class="kss-header">
-    <h1 class="kss-doc-title">Frontend Build Styleguide</h1>
+    <h1 class="kss-doc-title">KSS Style Guide</h1>
   </header>
   <nav class="kss-nav">
     <ul class="kss-nav__menu">
@@ -27,13 +27,13 @@
         </a>
       </li>
       <li class="kss-nav__menu-item">
-        <a class="kss-nav__menu-link" href="section-application.html">
-          <span class="kss-nav__ref">1</span><span class="kss-nav__name">Application</span>
+        <a class="kss-nav__menu-link" href="section-framework.html">
+          <span class="kss-nav__ref">1</span><span class="kss-nav__name">Framework</span>
         </a>
       </li>
       <li class="kss-nav__menu-item">
-        <a class="kss-nav__menu-link" href="section-frontend.html">
-          <span class="kss-nav__ref">2</span><span class="kss-nav__name">Frontend Build (core)</span>
+        <a class="kss-nav__menu-link" href="section-global.html">
+          <span class="kss-nav__ref">2</span><span class="kss-nav__name">Global Style Sheet</span>
         </a>
       </li>
     </ul>
@@ -84,9 +84,6 @@
 <li><code>$ gulp htmlmin</code> Minifies HTML documents</li>
 <li><code>$ gulp uncss</code> Removes unused styles (needs configuration)</li>
 </ul>
-<p><strong>IMPORTANT: DO NOT EDIT ANYTHING IN THE <code>src/scss/frontend</code> OR <code>dist</code> DIRECTORIES!</strong> This is for Frontend Build&#39;s core Sass setup. Updates will override any changes in these directories. In addition, all custom Sass variables should be placed in <code>src/scss/application/global/_variables-custom.scss</code>.</p>
-<h3 id="base-styles">Base Styles</h3>
-<p>One feature to using Frontend Build is it&#39;s ability to quickly setup base and common styles. Edit the variables in <code>src/scss/application/global/_variables.scss</code> to configure your project&#39;s theme. To add additional variables, use the <code>src/scss/application/global/_variables-custom.scss</code> file (this allows Frontend Build to be updated in the future).</p>
 <h3 id="styleguides">Styleguides</h3>
 <p>Another feature to using Frontend Build is it&#39;s ability to create a styleguide automatically using <a href="http://warpspire.com/kss/styleguides/">KSS</a>. For more information, see <a href="http://warpspire.com/kss/syntax/">the syntax documentation</a> on how to utilize this feature.</p>
 <h2 id="contributing">Contributing</h2>
@@ -99,9 +96,12 @@
 <li>And awesome <a href="https://github.com/bmarshall511/frontend/graphs/contributors">contributors</a></li>
 </ul>
 <h2 id="changelog">Changelog</h2>
-<h3 id="v4-1-1-tbd-">v4.1.1 (TBD)</h3>
+<h3 id="v4-2-0-tbd-">v4.2.0 (TBD)</h3>
 <ul>
 <li>Removed webpack from the build process, opting for gulp instead</li>
+<li>Removed singularitygs, use CSS grid instead</li>
+<li>Removed Frontend Build&#39;s default scss, use an existing framework like Foundation</li>
+<li>Added <a href="http://foundation.zurb.com/">Foundation</a> as the default frontend framework</li>
 </ul>
 <h3 id="v4-1-0-july-13-2017-">v4.1.0 (July 13, 2017)</h3>
 <ul>
