@@ -1,0 +1,102 @@
+// Drupal 7
+//
+// Contains default Drupal 7 styles.
+//
+// Style guide: components.drupal.drupal7
+
+// scss-lint:disable QualifyingElement
+
+button,
+[type='button'],
+[type='reset'],
+[type='submit'], {
+  @include button;
+}
+
+.pager {
+  @include pagination-container;
+}
+
+div {
+  &.messages {
+    background-position: 0% 0%;
+    margin: $global-margin;
+    padding: $global-padding;
+  }
+
+  &.status,
+  &.warning,
+  &.error {
+    background-image: none;
+  }
+
+  &.status {
+    border-color: darken($success-color, 50%);
+    color: $success-color;
+  }
+
+  &.warning {
+    border-color: darken($warning-color, 50%);
+    color: $warning-color;
+  }
+
+  &.error {
+    border-color: darken($alert-color, 50%);
+    color: $alert-color;
+  }
+}
+
+div.status,
+table tr.ok {
+  background-color: rgba($success-color, .5);
+}
+
+div.status,
+.ok {
+  color: darken($success-color, 50%);
+}
+
+div.warning,
+table tr.warning {
+  background-color: rgba($warning-color, .5);
+}
+
+div.warning,
+.warning {
+  color: darken($warning-color, 50%);
+}
+
+div.error,
+table tr.error {
+  background-color: rgba($alert-color, .5);
+}
+
+div.error,
+.error {
+  color: darken($alert-color, 50%);
+}
+
+.marker,
+.form-required {
+  color: $alert-color;
+}
+
+ul.menu {
+  li {
+    margin: 0;
+  }
+}
+
+li.expanded,
+li.collapsed,
+li.leaf {
+  padding: 0;
+}
+
+.search-results {
+  margin-left: 0;
+
+  .search-snippet-info {
+    padding-left: 0;
+  }
+}
