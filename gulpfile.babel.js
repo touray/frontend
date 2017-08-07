@@ -1,4 +1,5 @@
 // Gulp imports
+import babel from 'gulp-babel';
 import cleanCSS from 'gulp-clean-css';
 import concat from 'gulp-concat';
 import cond from 'gulp-cond';
@@ -11,12 +12,12 @@ import plumber from 'gulp-plumber';
 import prefix from 'gulp-autoprefixer';
 import replace from 'gulp-replace';
 import scsslint from 'gulp-scss-lint';
+import uglify from 'gulp-uglify';
 
 // Import required node modules
 import del from 'del';
 import kss from 'kss';
 import paths from 'compass-options';
-import webpack from 'webpack-stream';
 import {argv} from 'yargs';
 
 // Including gulp-uncss here due to a bug including before kss
@@ -57,7 +58,8 @@ const config = {
     srcJs: src + '/js/**/*.js',
     styleguide: 'styleguide'
   },
-  prefix: ["last 1 version", "> 1%", "ie 9"]
+  prefix: ['last 1 version', '> 1%', 'ie 9'],
+  babelPresets: ['env']
 };
 
 // app.js imports
@@ -128,10 +130,13 @@ gulp.task('js-lint', () => {
 
 // Task: js-transpile
 gulp.task('js-transpile', ['js-lint'], () => {
+  // app.js
+  // Use this as an example to create other JS files
   gulp.src(appJs)
     .pipe(plumber())
     .pipe(concat('app.js'))
-    .pipe(webpack(require('./webpack.config')))
+    .pipe(babel())
+    .pipe(uglify())
     .pipe(gulp.dest(paths.dirs().js));
 });
 
