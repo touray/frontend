@@ -64,7 +64,7 @@ For vulnerability reports, send an e-mail to `me at benmarshall dot me`.
 
 ## Changelog
 
-### v4.2.0 (TBD)
+### v4.2.0 (August 8, 2017)
 * Removed webpack from the build process, opting for gulp instead
 * Removed singularitygs, use CSS grid instead
 * Removed Frontend Build's default scss, use an existing framework like Foundation
