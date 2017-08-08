@@ -47,9 +47,9 @@ const config = {
     css: ['../dist/css/global.css'],
     homepage: '../../README.md',
     js: [
-      '../dist/js/jquery.min.js',
-      '../dist/js/what-input.min.js',
-      '../dist/js/foundation.min.js',
+      //'../dist/js/jquery.min.js',
+      //'../dist/js/what-input.min.js',
+      //'../dist/js/foundation.min.js',
       '../dist/js/app.js']
   },
   paths: {
@@ -93,7 +93,7 @@ gulp.task('default', config.default);
 
 // Task: delete
 gulp.task('delete', () => {
-  return del(['dist/**/*', 'styleguide/**/*'])
+  return del(['dist/**/*', 'docs/**/*'])
     .then(paths => {
       console.log('Deleted Files & Folders: ', paths.length);
     });
@@ -135,19 +135,19 @@ gulp.task('js-transpile', ['js-lint'], () => {
     .pipe(gulp.dest(paths.dirs().js));
 
   // foundation.min.js
-  gulp.src('node_modules/foundation-sites/dist/js/foundation.min.js')
-    .pipe(plumber())
-    .pipe(gulp.dest(paths.dirs().js));
+  //gulp.src('node_modules/foundation-sites/dist/js/foundation.min.js')
+  //  .pipe(plumber())
+  //  .pipe(gulp.dest(paths.dirs().js));
 
   // what-input.min.js
-  gulp.src('node_modules/what-input/dist/what-input.min.js')
-    .pipe(plumber())
-    .pipe(gulp.dest(paths.dirs().js));
+  //gulp.src('node_modules/what-input/dist/what-input.min.js')
+  //  .pipe(plumber())
+  //  .pipe(gulp.dest(paths.dirs().js));
 
   // jquery.min.js
-  gulp.src('node_modules/jquery/dist/jquery.min.js')
-    .pipe(plumber())
-    .pipe(gulp.dest(paths.dirs().js));
+  //gulp.src('node_modules/jquery/dist/jquery.min.js')
+  //  .pipe(plumber())
+  //  .pipe(gulp.dest(paths.dirs().js));
 });
 
 // Task: kss
