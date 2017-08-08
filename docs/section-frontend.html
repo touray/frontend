@@ -9,7 +9,7 @@
   <meta name="viewport" content="width=device-width">
 
   <link rel="stylesheet" href="kss-assets/kss.css">
-  <link rel="stylesheet" href="../dist/css/style.css">
+  <link rel="stylesheet" href="../dist/css/global.css">
 
 </head>
 <body id="kss-node" >
@@ -27,34 +27,34 @@
         </a>
       </li>
       <li class="kss-nav__menu-item">
-        <a class="kss-nav__menu-link" href="section-components.html">
-          <span class="kss-nav__ref">1</span><span class="kss-nav__name">Components</span>
+        <a class="kss-nav__menu-link" href="section-framework.html">
+          <span class="kss-nav__ref">1</span><span class="kss-nav__name">Framework</span>
+        </a>
+      </li>
+      <li class="kss-nav__menu-item">
+        <a class="kss-nav__menu-link" href="section-frontend.html">
+          <span class="kss-nav__ref">2</span><span class="kss-nav__name">Frontend Build</span>
         </a>
             <ul class="kss-nav__menu-child">
               <li class="kss-nav__menu-item">
-                <a class="kss-nav__menu-link" href="section-components.html#kssref-components-drupal">
-                  <span class="kss-nav__ref ">1.1</span
+                <a class="kss-nav__menu-link" href="section-frontend.html#kssref-frontend-drupal">
+                  <span class="kss-nav__ref ">2.1</span
                   ><span class="kss-nav__name">Drupal</span>
                 </a>
               </li>
               <li class="kss-nav__menu-item">
-                <a class="kss-nav__menu-link" href="section-components.html#kssref-components-drupal-drupal7">
-                  <span class="kss-nav__ref kss-nav__ref-child">1.1.1</span
+                <a class="kss-nav__menu-link" href="section-frontend.html#kssref-frontend-drupal-drupal7">
+                  <span class="kss-nav__ref kss-nav__ref-child">2.1.1</span
                   ><span class="kss-nav__name">Drupal 7</span>
                 </a>
               </li>
               <li class="kss-nav__menu-item">
-                <a class="kss-nav__menu-link" href="section-components.html#kssref-components-drupal-modules">
-                  <span class="kss-nav__ref kss-nav__ref-child">1.1.2</span
+                <a class="kss-nav__menu-link" href="section-frontend.html#kssref-frontend-drupal-modules">
+                  <span class="kss-nav__ref kss-nav__ref-child">2.1.2</span
                   ><span class="kss-nav__name">Drupal Modules</span>
                 </a>
               </li>
             </ul>
-      </li>
-      <li class="kss-nav__menu-item">
-        <a class="kss-nav__menu-link" href="section-framework.html">
-          <span class="kss-nav__ref">2</span><span class="kss-nav__name">Framework</span>
-        </a>
       </li>
       <li class="kss-nav__menu-item">
         <a class="kss-nav__menu-link" href="section-global.html">
@@ -66,22 +66,27 @@
 </div>
 <article role="main" class="kss-main">
 
-    <div id="kssref-components" class="kss-section kss-section--depth-1 ">
+    <div id="kssref-frontend" class="kss-section kss-section--depth-1 ">
 
       <div class="kss-style">
         <h1 class="kss-title kss-title--level-1">
-          <a class="kss-title__permalink" href="#kssref-components">
+          <a class="kss-title__permalink" href="#kssref-frontend">
             <span class="kss-title__ref">
-              1
+              2
               <span class="kss-title__permalink-hash">
-                  #components
+                  #frontend
               </span>
             </span>
-            Components
+            Frontend Build
           </a>
         </h1>
 
 
+          <div class="kss-description">
+            <p>Frontend Build comes with pre-built starter components to help speed up
+theming for common projects. Comment/uncomment accordingly.</p>
+
+          </div>
 
       </div>
 
@@ -91,15 +96,15 @@
         </div>
 
     </div>
-    <section id="kssref-components-drupal" class="kss-section kss-section--depth-2 ">
+    <section id="kssref-frontend-drupal" class="kss-section kss-section--depth-2 ">
 
       <div class="kss-style">
         <h2 class="kss-title kss-title--level-2">
-          <a class="kss-title__permalink" href="#kssref-components-drupal">
+          <a class="kss-title__permalink" href="#kssref-frontend-drupal">
             <span class="kss-title__ref">
-              1.1
+              2.1
               <span class="kss-title__permalink-hash">
-                  #components.drupal
+                  #frontend.drupal
               </span>
             </span>
             Drupal
@@ -112,19 +117,19 @@
 
 
         <div class="kss-source kss-style">
-          Source: <code>global.scss</code>, line 23
+          Source: <code>global.scss</code>, line 26
         </div>
 
     </section>
-    <section id="kssref-components-drupal-drupal7" class="kss-section kss-section--depth-3 ">
+    <section id="kssref-frontend-drupal-drupal7" class="kss-section kss-section--depth-3 ">
 
       <div class="kss-style">
         <h3 class="kss-title kss-title--level-3">
-          <a class="kss-title__permalink" href="#kssref-components-drupal-drupal7">
+          <a class="kss-title__permalink" href="#kssref-frontend-drupal-drupal7">
             <span class="kss-title__ref">
-              1.1.1
+              2.1.1
               <span class="kss-title__permalink-hash">
-                  #components.drupal.drupal7
+                  #frontend.drupal.drupal7
               </span>
             </span>
             Drupal 7
@@ -141,19 +146,19 @@
 
 
         <div class="kss-source kss-style">
-          Source: <code>components/drupal/_drupal7.scss</code>, line 1
+          Source: <code>frontend/drupal/_drupal7.scss</code>, line 1
         </div>
 
     </section>
-    <section id="kssref-components-drupal-modules" class="kss-section kss-section--depth-3 ">
+    <section id="kssref-frontend-drupal-modules" class="kss-section kss-section--depth-3 ">
 
       <div class="kss-style">
         <h3 class="kss-title kss-title--level-3">
-          <a class="kss-title__permalink" href="#kssref-components-drupal-modules">
+          <a class="kss-title__permalink" href="#kssref-frontend-drupal-modules">
             <span class="kss-title__ref">
-              1.1.2
+              2.1.2
               <span class="kss-title__permalink-hash">
-                  #components.drupal.modules
+                  #frontend.drupal.modules
               </span>
             </span>
             Drupal Modules
@@ -166,19 +171,19 @@
 
 
         <div class="kss-source kss-style">
-          Source: <code>global.scss</code>, line 28
+          Source: <code>global.scss</code>, line 31
         </div>
 
     </section>
-    <section id="kssref-components-drupal-modules-styleguide" class="kss-section kss-section--depth-4 ">
+    <section id="kssref-frontend-drupal-modules-styleguide" class="kss-section kss-section--depth-4 ">
 
       <div class="kss-style">
         <h4 class="kss-title kss-title--level-4">
-          <a class="kss-title__permalink" href="#kssref-components-drupal-modules-styleguide">
+          <a class="kss-title__permalink" href="#kssref-frontend-drupal-modules-styleguide">
             <span class="kss-title__ref">
-              1.1.2.1
+              2.1.2.1
               <span class="kss-title__permalink-hash">
-                  #components.drupal.modules.styleguide
+                  #frontend.drupal.modules.styleguide
               </span>
             </span>
             Styleguide
@@ -195,7 +200,7 @@
 
 
         <div class="kss-source kss-style">
-          Source: <code>components/drupal/modules/_styleguide.scss</code>, line 1
+          Source: <code>frontend/drupal/modules/_styleguide.scss</code>, line 1
         </div>
 
     </section>

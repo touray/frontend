@@ -7041,16 +7041,16 @@ div.status, div.warning, div.error {
   background-image: none;
 }
 div.status {
-  border-color: #031309;
-  color: #3adb76;
+  border: 0.0625rem solid #031309;
+  color: #031309;
 }
 div.warning {
-  border-color: black;
-  color: #ffae00;
+  border: 0.0625rem solid black;
+  color: black;
 }
 div.error {
-  border-color: #030101;
-  color: #cc4b37;
+  border: 0.0625rem solid #030101;
+  color: #030101;
 }
 
 div.status,
@@ -7079,13 +7079,10 @@ table tr.error {
 }
 
 div.error,
-.error {
-  color: #030101;
-}
-
+.error,
 .marker,
 .form-required {
-  color: #cc4b37;
+  color: #030101;
 }
 
 ul.menu li {
@@ -7103,4 +7100,11 @@ li.leaf {
 }
 .search-results .search-snippet-info {
   padding-left: 0;
+}
+
+#styleguide-header {
+  background: #e6e6e6;
+  border-color: 0.0625rem solid #cacaca;
+  color: #8a8a8a;
+  padding: 1rem;
 }

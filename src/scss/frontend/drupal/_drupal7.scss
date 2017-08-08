@@ -1,0 +1,118 @@
+// Drupal 7
+//
+// Contains default Drupal 7 styles.
+//
+// Style guide: frontend.drupal.drupal7
+
+// scss-lint:disable QualifyingElement
+
+// Drupal 7 Variables
+
+// Site messages
+$message-margin:  $global-margin                                       !default;
+$message-padding: $global-padding                                      !default;
+
+$message-error-background: rgba($alert-color, .5)                      !default;
+$message-error-border:     rem-calc(1) solid darken($alert-color, 50%) !default;
+$message-error-color:      darken($alert-color, 50%)                   !default;
+
+$message-status-background: rgba($success-color, .5)                   !default;
+$message-status-border:     rem-calc(1) solid darken($success-color, 50%) !default;
+$message-status-color:      darken($success-color, 50%)                !default;
+
+$message-warning-background: rgba($warning-color, .5)                  !default;
+$message-warning-border:     rem-calc(1) solid darken($warning-color, 50%) !default;
+$message-warning-color:      darken($warning-color, 50%)               !default;
+
+// Styles
+button,
+[type='button'],
+[type='reset'],
+[type='submit'], {
+  @include button;
+}
+
+.pager {
+  @include pagination-container;
+}
+
+div {
+  &.messages {
+    background-position: 0% 0%;
+    margin: $message-margin;
+    padding: $message-padding;
+  }
+
+  &.status,
+  &.warning,
+  &.error {
+    background-image: none;
+  }
+
+  &.status {
+    border: $message-status-border;
+    color: $message-status-color;
+  }
+
+  &.warning {
+    border: $message-warning-border;
+    color: $message-warning-color;
+  }
+
+  &.error {
+    border: $message-error-border;
+    color: $message-error-color;
+  }
+}
+
+div.status,
+table tr.ok {
+  background-color: $message-status-background;
+}
+
+div.status,
+.ok {
+  color: $message-status-color;
+}
+
+div.warning,
+table tr.warning {
+  background-color: $message-warning-background;
+}
+
+div.warning,
+.warning {
+  color: $message-warning-color;
+}
+
+div.error,
+table tr.error {
+  background-color: $message-error-background;
+}
+
+div.error,
+.error,
+.marker,
+.form-required {
+  color: $message-error-color;
+}
+
+ul.menu {
+  li {
+    margin: 0;
+  }
+}
+
+li.expanded,
+li.collapsed,
+li.leaf {
+  padding: 0;
+}
+
+.search-results {
+  margin-left: 0;
+
+  .search-snippet-info {
+    padding-left: 0;
+  }
+}

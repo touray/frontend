@@ -44,7 +44,7 @@ const config = {
   default: ['delete', 'compass', 'htmlmin', 'js-transpile', 'kss'],
   kss: {
     // Relative to src directory
-    css: ['../dist/css/style.css'],
+    css: ['../dist/css/global.css'],
     homepage: '../../README.md',
     js: ['../dist/js/app.js']
   },
@@ -54,7 +54,7 @@ const config = {
     srcHtml: src + '/**/*.html',
     srcImg: src + '/img/*',
     srcJs: src + '/js/**/*.js',
-    styleguide: 'styleguide'
+    styleguide: 'docs'
   },
   prefix: ['last 2 versions', 'ie >= 9', 'and_chr >= 2.3'],
   babelPresets: ['env']

@@ -16,16 +16,20 @@
 // Style guide: framework
 @import 'framework/foundation/framework';
 
-// Components
+// Frontend Build
 //
-// Style guide: components
+// Frontend Build comes with pre-built starter components to help speed up
+// theming for common projects. Comment/uncomment accordingly.
+//
+// Style guide: frontend
 
 // Drupal
 //
-// Style guide: components.drupal
-@import 'components/drupal/drupal7';
+// Style guide: frontend.drupal
+@import 'frontend/drupal/drupal7';
 
 // Drupal Modules
 //
-// Style guide: components.drupal.modules
-@import 'components/drupal/modules/styleguide';
+// Style guide: frontend.drupal.modules
+@import 'frontend/drupal/modules/styleguide';
+

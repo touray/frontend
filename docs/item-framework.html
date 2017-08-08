@@ -9,7 +9,7 @@
   <meta name="viewport" content="width=device-width">
 
   <link rel="stylesheet" href="kss-assets/kss.css">
-  <link rel="stylesheet" href="../dist/css/style.css">
+  <link rel="stylesheet" href="../dist/css/global.css">
 
 </head>
 <body id="kss-node" class="kss-fullscreen-mode">
@@ -27,13 +27,27 @@
         </a>
       </li>
       <li class="kss-nav__menu-item">
-        <a class="kss-nav__menu-link" href="section-components.html">
-          <span class="kss-nav__ref">1</span><span class="kss-nav__name">Components</span>
+        <a class="kss-nav__menu-link" href="section-framework.html">
+          <span class="kss-nav__ref">1</span><span class="kss-nav__name">Framework</span>
         </a>
+            <ul class="kss-nav__menu-child">
+              <li class="kss-nav__menu-item">
+                <a class="kss-nav__menu-link" href="section-framework.html#kssref-framework-foundation">
+                  <span class="kss-nav__ref ">1.1</span
+                  ><span class="kss-nav__name">Foundation</span>
+                </a>
+              </li>
+              <li class="kss-nav__menu-item">
+                <a class="kss-nav__menu-link" href="section-framework.html#kssref-framework-foundation-settings">
+                  <span class="kss-nav__ref kss-nav__ref-child">1.1.1</span
+                  ><span class="kss-nav__name">Settings</span>
+                </a>
+              </li>
+            </ul>
       </li>
       <li class="kss-nav__menu-item">
-        <a class="kss-nav__menu-link" href="section-framework.html">
-          <span class="kss-nav__ref">2</span><span class="kss-nav__name">Framework</span>
+        <a class="kss-nav__menu-link" href="section-frontend.html">
+          <span class="kss-nav__ref">2</span><span class="kss-nav__name">Frontend Build</span>
         </a>
       </li>
       <li class="kss-nav__menu-item">
@@ -46,28 +60,37 @@
 </div>
 <article role="main" class="kss-main">
 
-    <div id="kssref-components-drupal" class="kss-section kss-section--depth-2 is-fullscreen">
+    <div id="kssref-framework" class="kss-section kss-section--depth-1 is-fullscreen">
 
       <div class="kss-style">
-        <h2 class="kss-title kss-title--level-2">
-          <a class="kss-title__permalink" href="#kssref-components-drupal">
+        <h1 class="kss-title kss-title--level-1">
+          <a class="kss-title__permalink" href="#kssref-framework">
             <span class="kss-title__ref">
-              1.1
+              1
               <span class="kss-title__permalink-hash">
-                  #components.drupal
+                  #framework
               </span>
             </span>
-            Drupal
+            Framework
           </a>
-        </h2>
+        </h1>
 
 
+          <div class="kss-description">
+            <p>Frontend Build comes with the
+<a href="http://foundation.zurb.com/" target="_blank">Foundation</a>
+framework installed by default. If you prefer, you can comment it out,
+integrate another like
+<a href="http://getbootstrap.com/" target="_blank">Bootstrap</a> or build
+your own.</p>
+
+          </div>
 
       </div>
 
 
         <div class="kss-source kss-style">
-          Source: <code>global.scss</code>, line 23
+          Source: <code>global.scss</code>, line 7
         </div>
 
     </div>

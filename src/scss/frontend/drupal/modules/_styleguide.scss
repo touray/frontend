@@ -1,0 +1,22 @@
+// Styleguide
+//
+// Contains default Styleguide module styles.
+//
+// Style guide: frontend.drupal.modules.styleguide
+
+// scss-lint:disable IdSelector
+
+// Variables
+
+$styleguide-header-background: $light-gray;
+$styleguide-header-border:     rem-calc(1) solid $medium-gray;
+$styleguide-header-color:      $dark-gray;
+$styleguide-header-padding:    $global-padding;
+
+// Styles
+#styleguide-header {
+  background: $styleguide-header-background;
+  border-color: $styleguide-header-border;
+  color: $styleguide-header-color;
+  padding: $styleguide-header-padding;
+}
