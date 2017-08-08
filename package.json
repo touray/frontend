@@ -44,6 +44,7 @@
   },
   "homepage": "https://github.com/bmarshall511/frontend#readme",
   "devDependencies": {
+    "babel-core": "^6.25.0",
     "babel-preset-env": "^1.6.0",
     "compass-options": "^0.1.1",
     "del": "^3.0.0",
