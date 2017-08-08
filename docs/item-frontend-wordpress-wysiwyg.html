@@ -40,38 +40,6 @@
         <a class="kss-nav__menu-link" href="section-frontend.html">
           <span class="kss-nav__ref">3</span><span class="kss-nav__name">Frontend Build</span>
         </a>
-            <ul class="kss-nav__menu-child">
-              <li class="kss-nav__menu-item">
-                <a class="kss-nav__menu-link" href="section-frontend.html#kssref-frontend-drupal">
-                  <span class="kss-nav__ref ">3.1</span
-                  ><span class="kss-nav__name">Drupal</span>
-                </a>
-              </li>
-              <li class="kss-nav__menu-item">
-                <a class="kss-nav__menu-link" href="section-frontend.html#kssref-frontend-drupal-drupal7">
-                  <span class="kss-nav__ref kss-nav__ref-child">3.1.1</span
-                  ><span class="kss-nav__name">Drupal 7</span>
-                </a>
-              </li>
-              <li class="kss-nav__menu-item">
-                <a class="kss-nav__menu-link" href="section-frontend.html#kssref-frontend-drupal-modules">
-                  <span class="kss-nav__ref kss-nav__ref-child">3.1.2</span
-                  ><span class="kss-nav__name">Drupal Modules</span>
-                </a>
-              </li>
-              <li class="kss-nav__menu-item">
-                <a class="kss-nav__menu-link" href="section-frontend.html#kssref-frontend-wordpress">
-                  <span class="kss-nav__ref ">3.2</span
-                  ><span class="kss-nav__name">WordPress</span>
-                </a>
-              </li>
-              <li class="kss-nav__menu-item">
-                <a class="kss-nav__menu-link" href="section-frontend.html#kssref-frontend-wordpress-wysiwyg">
-                  <span class="kss-nav__ref kss-nav__ref-child">3.2.1</span
-                  ><span class="kss-nav__name">WYSIWYG Editor Styles</span>
-                </a>
-              </li>
-            </ul>
       </li>
       <li class="kss-nav__menu-item">
         <a class="kss-nav__menu-link" href="section-global.html">
@@ -83,25 +51,38 @@
 </div>
 <article role="main" class="kss-main">
 
-    <div id="kssref-frontend" class="kss-section kss-section--depth-1 is-fullscreen">
+    <div id="kssref-frontend-wordpress-wysiwyg" class="kss-section kss-section--depth-3 is-fullscreen">
 
       <div class="kss-style">
-        <h1 class="kss-title kss-title--level-1">
-          <a class="kss-title__permalink" href="#kssref-frontend">
+        <h3 class="kss-title kss-title--level-3">
+          <a class="kss-title__permalink" href="#kssref-frontend-wordpress-wysiwyg">
             <span class="kss-title__ref">
-              3
+              3.2.1
               <span class="kss-title__permalink-hash">
-                  #frontend
+                  #frontend.wordpress.wysiwyg
               </span>
             </span>
-            Frontend Build
+            WYSIWYG Editor Styles
           </a>
-        </h1>
+        </h3>
 
 
           <div class="kss-description">
-            <p>Frontend Build comes with pre-built starter components to help speed up
-theming for common projects. Comment/uncomment accordingly.</p>
+            <p>When you are working with WordPress’ WYSIWYG Editor in the Edit Post screen,
+WordPress applies context-specific CSS attributes to certain elements when
+they are included in your post. For example, when inserting images, you can
+specify whether the images are floated left, right, or even centered. To do
+this, WordPress applies classes such as <code>alignleft</code>,
+<code>alignright</code>, or <code>aligncenter</code>. Without defining styles
+for WordPress’ default hooks, images and other elements may not display as
+intended.<br>
+<br>
+Thus, at a bare minimum, if you are building a theme that will be used by
+the general public, it is wise to include the following basic styles for the
+items attributed via the WYSIWYG Editor.<br>
+<br>
+<em>Thanks to Jeff Starr for his
+<a href="https://digwp.com/2010/05/default-wordpress-css-styles-hooks/" target="_blank">WordPress Default Styles</a> post.</em></p>
 
           </div>
 
@@ -109,7 +90,7 @@ theming for common projects. Comment/uncomment accordingly.</p>
 
 
         <div class="kss-source kss-style">
-          Source: <code>global.scss</code>, line 19
+          Source: <code>frontend/wordpress/_wordpress.scss</code>, line 1
         </div>
 
     </div>

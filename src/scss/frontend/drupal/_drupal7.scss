@@ -9,7 +9,7 @@
 // Drupal 7 Variables
 
 // Site messages
-$message-margin:  $global-margin                                       !default;
+$message-margin:  rem-calc($global-margin 0)                           !default;
 $message-padding: $global-padding                                      !default;
 
 $message-error-background: rgba($alert-color, .5)                      !default;
@@ -24,7 +24,7 @@ $message-warning-background: rgba($warning-color, .5)                  !default;
 $message-warning-border:     rem-calc(1) solid darken($warning-color, 50%) !default;
 $message-warning-color:      darken($warning-color, 50%)               !default;
 
-// Styles
+// Base
 button,
 [type='button'],
 [type='reset'],
@@ -32,10 +32,12 @@ button,
   @include button;
 }
 
+// Pager
 .pager {
   @include pagination-container;
 }
 
+// Site messages
 div {
   &.messages {
     background-position: 0% 0%;
@@ -97,22 +99,63 @@ div.error,
   color: $message-error-color;
 }
 
-ul.menu {
+// Menu tree
+ul {
   li {
-    margin: 0;
+    &.collapsed,
+    &.expanded,
+    &.leaf {
+      list-style-image: none;
+      list-style-type: none;
+    }
+  }
+
+  &.menu {
+    li {
+      margin: 0;
+    }
   }
 }
 
 li.expanded,
 li.collapsed,
 li.leaf {
+  margin: 0;
   padding: 0;
 }
 
+// Search results
 .search-results {
   margin-left: 0;
 
   .search-snippet-info {
     padding-left: 0;
+  }
+}
+
+// Forms
+.form-item,
+.form-actions {
+  margin-bottom: rem-calc($global-margin);
+  margin-top: rem-calc($global-margin);
+}
+
+.form-actions {
+  button,
+  [type='button'],
+  [type='reset'],
+  [type='submit'] {
+    margin-bottom: 0;
+  }
+
+  .form-submit {
+    margin-right: $global-margin;
+  }
+}
+
+input {
+  &.form-checkbox,
+  &.form-radio {
+    vertical-align: baseline;
   }
 }

@@ -1,0 +1,98 @@
+// WYSIWYG Editor Styles
+//
+// When you are working with WordPress’ WYSIWYG Editor in the Edit Post screen,
+// WordPress applies context-specific CSS attributes to certain elements when
+// they are included in your post. For example, when inserting images, you can
+// specify whether the images are floated left, right, or even centered. To do
+// this, WordPress applies classes such as <code>alignleft</code>,
+// <code>alignright</code>, or <code>aligncenter</code>. Without defining styles
+// for WordPress’ default hooks, images and other elements may not display as
+// intended.<br>
+// <br>
+// Thus, at a bare minimum, if you are building a theme that will be used by
+// the general public, it is wise to include the following basic styles for the
+// items attributed via the WYSIWYG Editor.<br>
+// <br>
+// <em>Thanks to Jeff Starr for his
+// <a href="https://digwp.com/2010/05/default-wordpress-css-styles-hooks/" target="_blank">WordPress Default Styles</a> post.</em>
+//
+// Style guide: frontend.wordpress.wysiwyg
+
+// scss-lint:disable ImportantRule, QualifyingElement
+
+.entry-content img {
+  margin: rem-calc(0 0 $global-margin 0);
+}
+
+.alignleft,
+img.alignleft,
+.alignright,
+img.alignright {
+  display: inline;
+}
+
+.alignleft,
+img.alignleft {
+  float: left;
+  margin-right: rem-calc($global-margin);
+}
+
+.alignright,
+img.alignright {
+  float: right;
+  margin-left: rem-calc($global-margin);
+}
+
+.aligncenter,
+img.aligncenter {
+  clear: both;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.wp-caption {
+  margin-bottom: rem-calc($global-margin);
+  padding-top: rem-calc($global-padding);
+  text-align: center;
+
+  img {
+    border: 0 none;
+    margin: 0;
+    padding: 0;
+  }
+
+  p {
+    &.wp-caption-text {
+      font-size: $small-font-size;
+      line-height: $global-lineheight;
+      margin: 0;
+    }
+  }
+}
+
+.wp-smiley {
+  margin: 0 !important;
+  max-height: 1em;
+}
+
+blockquote {
+  &.left,
+  &.right {
+    width: 33%;
+  }
+
+  &.left {
+    float: left;
+    margin-left: 0;
+    margin-right: rem-calc($global-margin);
+    text-align: right;
+  }
+
+  &.right {
+    float: right;
+    margin-left: rem-calc($global-margin);
+    margin-right: 0;
+    text-align: left;
+  }
+}

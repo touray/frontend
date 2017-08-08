@@ -59,6 +59,18 @@
                   ><span class="kss-nav__name">Drupal Modules</span>
                 </a>
               </li>
+              <li class="kss-nav__menu-item">
+                <a class="kss-nav__menu-link" href="section-frontend.html#kssref-frontend-wordpress">
+                  <span class="kss-nav__ref ">3.2</span
+                  ><span class="kss-nav__name">WordPress</span>
+                </a>
+              </li>
+              <li class="kss-nav__menu-item">
+                <a class="kss-nav__menu-link" href="section-frontend.html#kssref-frontend-wordpress-wysiwyg">
+                  <span class="kss-nav__ref kss-nav__ref-child">3.2.1</span
+                  ><span class="kss-nav__name">WYSIWYG Editor Styles</span>
+                </a>
+              </li>
             </ul>
       </li>
       <li class="kss-nav__menu-item">
@@ -206,6 +218,74 @@ theming for common projects. Comment/uncomment accordingly.</p>
 
         <div class="kss-source kss-style">
           Source: <code>frontend/drupal/modules/_styleguide.scss</code>, line 1
+        </div>
+
+    </section>
+    <section id="kssref-frontend-wordpress" class="kss-section kss-section--depth-2 ">
+
+      <div class="kss-style">
+        <h2 class="kss-title kss-title--level-2">
+          <a class="kss-title__permalink" href="#kssref-frontend-wordpress">
+            <span class="kss-title__ref">
+              3.2
+              <span class="kss-title__permalink-hash">
+                  #frontend.wordpress
+              </span>
+            </span>
+            WordPress
+          </a>
+        </h2>
+
+
+
+      </div>
+
+
+        <div class="kss-source kss-style">
+          Source: <code>global.scss</code>, line 36
+        </div>
+
+    </section>
+    <section id="kssref-frontend-wordpress-wysiwyg" class="kss-section kss-section--depth-3 ">
+
+      <div class="kss-style">
+        <h3 class="kss-title kss-title--level-3">
+          <a class="kss-title__permalink" href="#kssref-frontend-wordpress-wysiwyg">
+            <span class="kss-title__ref">
+              3.2.1
+              <span class="kss-title__permalink-hash">
+                  #frontend.wordpress.wysiwyg
+              </span>
+            </span>
+            WYSIWYG Editor Styles
+          </a>
+        </h3>
+
+
+          <div class="kss-description">
+            <p>When you are working with WordPress’ WYSIWYG Editor in the Edit Post screen,
+WordPress applies context-specific CSS attributes to certain elements when
+they are included in your post. For example, when inserting images, you can
+specify whether the images are floated left, right, or even centered. To do
+this, WordPress applies classes such as <code>alignleft</code>,
+<code>alignright</code>, or <code>aligncenter</code>. Without defining styles
+for WordPress’ default hooks, images and other elements may not display as
+intended.<br>
+<br>
+Thus, at a bare minimum, if you are building a theme that will be used by
+the general public, it is wise to include the following basic styles for the
+items attributed via the WYSIWYG Editor.<br>
+<br>
+<em>Thanks to Jeff Starr for his
+<a href="https://digwp.com/2010/05/default-wordpress-css-styles-hooks/" target="_blank">WordPress Default Styles</a> post.</em></p>
+
+          </div>
+
+      </div>
+
+
+        <div class="kss-source kss-style">
+          Source: <code>frontend/wordpress/_wordpress.scss</code>, line 1
         </div>
 
     </section>

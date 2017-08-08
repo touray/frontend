@@ -64,6 +64,9 @@ For vulnerability reports, send an e-mail to `me at benmarshall dot me`.
 
 ## Changelog
 
+### v4.2.1 (TBD)
+* Updates to Drupal 7 scss frontend component
+
 ### v4.2.0 (August 8, 2017)
 * Removed webpack from the build process, opting for gulp instead
 * Removed singularitygs, use CSS grid instead
