@@ -1,1 +1,1 @@
-"use strict";
+"use strict";jQuery(document).foundation();

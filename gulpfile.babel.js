@@ -46,7 +46,11 @@ const config = {
     // Relative to src directory
     css: ['../dist/css/global.css'],
     homepage: '../../README.md',
-    js: ['../dist/js/app.js']
+    js: [
+      '../dist/js/jquery.min.js',
+      '../dist/js/what-input.min.js',
+      '../dist/js/foundation.min.js',
+      '../dist/js/app.js']
   },
   paths: {
     fonts: src + '/font/**/*',
@@ -64,7 +68,7 @@ const config = {
 const appJs = [src + '/js/app.js'];
 
 // Task: compass
-gulp.task('compass', ['images', 'scss-lint'], () => {
+gulp.task('compass', ['copy-fonts', 'images', 'scss-lint'], () => {
   return gulp.src(paths.dirs().sass + '/**/*.scss')
     .pipe(compass(config.compass))
     .on('error', function(error) {
@@ -123,12 +127,26 @@ gulp.task('js-lint', () => {
 // Task: js-transpile
 gulp.task('js-transpile', ['js-lint'], () => {
   // app.js
-  // Use this as an example to create other JS files
   gulp.src(appJs)
     .pipe(plumber())
     .pipe(concat('app.js'))
     .pipe(babel())
     .pipe(uglify())
+    .pipe(gulp.dest(paths.dirs().js));
+
+  // foundation.min.js
+  gulp.src('node_modules/foundation-sites/dist/js/foundation.min.js')
+    .pipe(plumber())
+    .pipe(gulp.dest(paths.dirs().js));
+
+  // what-input.min.js
+  gulp.src('node_modules/what-input/dist/what-input.min.js')
+    .pipe(plumber())
+    .pipe(gulp.dest(paths.dirs().js));
+
+  // jquery.min.js
+  gulp.src('node_modules/jquery/dist/jquery.min.js')
+    .pipe(plumber())
     .pipe(gulp.dest(paths.dirs().js));
 });
 
@@ -165,4 +183,5 @@ gulp.task('watch', () => {
   gulp.watch(config.paths.srcImg, ['images']);
   gulp.watch(config.paths.srcJs, ['js-transpile']);
   gulp.watch(config.paths.srcHtml, ['htmlmin']);
+  gulp.watch(config.paths.fonts, ['copy-fonts']);
 });
