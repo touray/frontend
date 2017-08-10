@@ -184,4 +184,12 @@ gulp.task('watch', () => {
   gulp.watch(config.paths.srcJs, ['js-transpile']);
   gulp.watch(config.paths.srcHtml, ['htmlmin']);
   gulp.watch(config.paths.fonts, ['copy-fonts']);
+
+  // Disable editing frontend components to allow the framework to be upgraded
+  gulp.watch(src + '/scss/frontend/**/*', () => {
+    console.log('\nWARNING: EDITING FILES/DIRECTORIES LOCATED IN SRC/SCSS/FRONTEND IS NOT RECOMMENDED.\n');
+    if (! argv.dev) {
+      process.exit();
+    }
+  });
 });

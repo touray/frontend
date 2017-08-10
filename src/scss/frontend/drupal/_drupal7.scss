@@ -1,6 +1,38 @@
 // Drupal 7
 //
-// Contains default Drupal 7 styles.
+// Contains default Drupal 7 styles. Available scss variables:<br>
+// <h5>Site Messages</h5>
+// <ul>
+//   <li><code>$message-margin</code></li>
+//   <li><code>$message-padding</code></li>
+//   <li><code>$message-error-background</code></li>
+//   <li><code>$message-error-border</code></li>
+//   <li><code>$message-error-color</code></li>
+//   <li><code>$message-status-background</code></li>
+//   <li><code>$message-status-border</code></li>
+//   <li><code>$message-status-color</code></li>
+//   <li><code>$message-warning-background</code></li>
+//   <li><code>$message-warning-border</code></li>
+//   <li><code>$message-warning-color</code></li>
+// </ul>
+// <h5>Progress Bar</h5>
+// <ul>
+//   <li><code>$progress-bar-background</code></li>
+//   <li><code>$progress-bar-border</code></li>
+//   <li><code>$progress-bar-margin</code></li>
+//   <li><code>$progress-bar-radius</code></li>
+//   <li><code>$progress-filled-background</code></li>
+//   <li><code>$progress-height</code></li>
+//   <li><code>$progress-weight</code></li>
+// </ul>
+// <h5>Password Strength</h5>
+// <ul>
+//   <li><code>$password-strength-margin</code></li>
+//   <li><code>$password-strength-width</code></li>
+//   <li><code>$password-indicator-background</code></li>
+//   <li><code>$password-indicator-fill-background</code></li>
+//   <li><code>$password-indicator-height</code></li>
+// </ul>
 //
 // Style guide: frontend.drupal.drupal7
 
@@ -24,6 +56,22 @@ $message-warning-background: rgba($warning-color, .5)                  !default;
 $message-warning-border:     rem-calc(1) solid darken($warning-color, 50%) !default;
 $message-warning-color:      darken($warning-color, 50%)               !default;
 
+// Progress bar
+$progress-bar-background:    $progress-background                      !default;
+$progress-bar-border:        rem-calc(1) solid $medium-gray            !default;
+$progress-bar-margin:        rem-calc($progress-margin-bottom)         !default;
+$progress-bar-radius:        rem-calc($progress-radius)                !default;
+$progress-filled-background: $progress-meter-background                !default;
+$progress-height:            $progress-height                          !default;
+$progress-weight:            $global-weight-bold                       !default;
+
+// Password strength
+$password-strength-margin:           0                                 !default;
+$password-strength-width:            rem-calc(300)                     !default;
+$password-indicator-background:      $progress-background              !default;
+$password-indicator-fill-background: $progress-meter-background        !default;
+$password-indicator-height:          rem-calc(24)                      !default;
+
 // Base
 button,
 [type='button'],
@@ -35,6 +83,23 @@ button,
 // Pager
 .pager {
   @include pagination-container;
+}
+
+// Progress bar
+.progress {
+  font-weight: $progress-weight;
+
+  .bar {
+    background: $progress-bar-background;
+    border: $progress-bar-border;
+    border-radius: $progress-bar-radius;
+    margin: 0 0 $progress-bar-margin 0;
+  }
+
+  .filled {
+    background: $progress-filled-background;
+    height: $progress-height;
+  }
 }
 
 // Site messages
@@ -157,5 +222,20 @@ input {
   &.form-checkbox,
   &.form-radio {
     vertical-align: baseline;
+  }
+}
+
+// Password strength
+.password-strength {
+  margin-top: $password-strength-margin;
+  width: $password-strength-width;
+}
+
+.password-indicator {
+  background: $password-indicator-background;
+  height: $password-indicator-height;
+
+  div {
+    background: $password-indicator-fill-background;
   }
 }

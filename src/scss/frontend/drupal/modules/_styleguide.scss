@@ -1,6 +1,12 @@
 // Styleguide
 //
-// Contains default Styleguide module styles.
+// Contains default Styleguide module styles. Available scss variables:<br>
+// <ul>
+//   <li><code>$styleguide-header-background</code></li>
+//   <li><code>$styleguide-header-border</code></li>
+//   <li><code>$styleguide-header-color</code></li>
+//   <li><code>$styleguide-header-padding</code></li>
+// </ul>
 //
 // Style guide: frontend.drupal.modules.styleguide
 
@@ -19,4 +25,17 @@ $styleguide-header-padding:    $global-padding;
   border-color: $styleguide-header-border;
   color: $styleguide-header-color;
   padding: $styleguide-header-padding;
+}
+
+.styleguide {
+  table {
+    .description,
+    .get {
+      width: 25%;
+    }
+
+    .type {
+      width: 50%;
+    }
+  }
 }
