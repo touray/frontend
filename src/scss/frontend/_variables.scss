@@ -1,0 +1,18 @@
+// Variables
+//
+// The variables file for Frontend Build components.
+//
+// Style guide: frontend.variables
+
+$global-width: $global-width                                           !default;
+
+// CSS Grid
+$css-grid-columns: (
+  small: 2,
+  medium: $grid-columns
+)                                                                      !default;
+$css-grid-column-gaps: $grid-margin-gutters                            !default;
+$css-grid-row-gaps: (
+  small: 0,
+  medium: 0
+)                                                                      !default;

@@ -1,0 +1,13 @@
+// Extendables
+//
+// Custom Frontend Build extendables.
+//
+// Style guide: frontend.extendables
+
+%container {
+  @include container;
+}
+
+%css-grid {
+  @include css-grid;
+}

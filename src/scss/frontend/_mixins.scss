@@ -1,0 +1,54 @@
+// Mixins
+//
+// Custom Frontend Build mixins.
+//
+// Style guide: frontend.mixins
+
+// Container
+//
+// Creates a max width container, designed to house your grid content.
+//
+// Markup:
+// <ul>
+//   <li><code>$width</code>: <code>numeric value</code><br>Default: <code>$css-grid-columns</code><br><i>Defines the max width.</i></li>
+// </ul>
+// <code>@include container($width);</code>
+//
+// Style guide: frontend.mixins.container
+@mixin container($width: $global-width) {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: $width;
+  width: 100%;
+}
+
+// CSS Grid
+//
+// Sets up a CSS grid container. <i>View in Firefox inspector to see a grid overlay.</i>
+//
+// Markup:
+// <ul>
+//   <li><code>$grid-columns</code>: <code>responsive list</code><br>Default: <code>$css-grid-columns</code><br><i>Defines the number of grid columns.</i></li>
+//   <li><code>$grid-rows</code>: <code>responsive list</code><br>Default: <code>(small: none, medium: none)</code><br><i>Defines the number of grid rows.</i></li>
+//   <li><code>$grid-column-gaps</code>: <code>responsive list</code><br>Default: <code>$css-grid-column-gaps</code><br><i>Specifies the size of the grid lines between the columns.</i></li>
+//   <li><code>$grid-row-gaps</code>: <code>responsive list</code><br>Default: <code>$css-grid-row-gaps</code><br><i>Specifies the size of the grid lines between the rows.</i></li>
+//   <li><code>$type</code>: <code>grid|inline-grid|subgrid</code><br>Default: <code>grid</code><br><i>Defines the grid formatting context.</i></li>
+// </ul>
+// <code>@include css-grid($grid-columns, $grid-rows, $grid-column-gaps, $grid-row-gaps, $type);</code>
+//
+// Style guide: frontend.mixins.grid
+@mixin css-grid($grid-columns: $css-grid-columns, $grid-rows: (small: none, medium: none), $grid-column-gaps: $css-grid-column-gaps, $grid-row-gaps: $css-grid-row-gaps, $type: grid) {
+  // scss-lint:disable PropertySpelling
+  display: $type;
+  grid-column-gap: map-get($grid-column-gaps, small);
+  grid-row-gap: map-get($grid-row-gaps, small);
+  grid-template-columns: repeat(map-get($grid-columns, small), 1fr);
+  grid-template-rows: map-get($grid-rows, small);
+
+  @include breakpoint(medium) {
+    grid-column-gap: map-get($grid-column-gaps, medium);
+    grid-row-gap: map-get($grid-row-gaps, medium);
+    grid-template-columns: repeat(map-get($grid-columns, medium), 1fr);
+    grid-template-rows: map-get($grid-rows, medium);
+  }
+}

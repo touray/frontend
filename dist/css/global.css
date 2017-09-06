@@ -1243,6 +1243,29 @@ ul.no-bullet, ol.no-bullet {
   display: none;
 }
 
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 75rem;
+  width: 100%;
+}
+
+.css-grid {
+  display: grid;
+  grid-column-gap: 20px;
+  grid-row-gap: 0;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: none;
+}
+@media print, screen and (min-width: 40em) {
+  .css-grid {
+    grid-column-gap: 30px;
+    grid-row-gap: 0;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: none;
+  }
+}
+
 button,
 [type='button'],
 [type='reset'],

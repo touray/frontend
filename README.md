@@ -67,6 +67,8 @@ For vulnerability reports, send an e-mail to `me at benmarshall dot me`.
 ### v4.2.2 (TBD)
 * Fix in package.json for issue URL
 * Added documentation to the frontend Drupal 7 and styleguide components
+* Added a container mixin & extendable
+* Added a CSS grid mixin & extendable
 
 ### v4.2.1 (August 8, 2017)
 * Updates to Drupal 7 scss frontend component
