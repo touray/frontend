@@ -10,6 +10,9 @@
 // Configuration
 @import 'settings';
 
+// Custom variables. Important this is placed here for overrides to work properly.
+@import '../../variables';
+
 // Import Foundation dependency
 @import 'foundation';
 
