@@ -1,22 +1,25 @@
 // Gulp imports
-import babel from 'gulp-babel';
 import cleanCSS from 'gulp-clean-css';
-import concat from 'gulp-concat';
 import cond from 'gulp-cond';
 import compass from 'gulp-compass';
 import eslint from 'gulp-eslint';
 import gulp from 'gulp';
 import htmlmin from 'gulp-htmlmin';
 import imagemin from 'gulp-imagemin';
-import plumber from 'gulp-plumber';
 import prefix from 'gulp-autoprefixer';
 import scsslint from 'gulp-scss-lint';
+import sourcemaps from 'gulp-sourcemaps';
 import uglify from 'gulp-uglify';
+import gutil from 'gulp-util';
 
 // Import required node modules
+import babelify from 'babelify';
+import browserify from 'browserify';
+import buffer from 'vinyl-buffer';
 import del from 'del';
 import kss from 'kss';
 import paths from 'compass-options';
+import source from 'vinyl-source-stream';
 import {argv} from 'yargs';
 
 // Including gulp-uncss here due to a bug including before kss
@@ -126,28 +129,26 @@ gulp.task('js-lint', () => {
 
 // Task: js-transpile
 gulp.task('js-transpile', ['js-lint'], () => {
-  // app.js
-  gulp.src(appJs)
-    .pipe(plumber())
-    .pipe(concat('app.js'))
-    .pipe(babel())
+  const browserified = (entries, filename) => {
+    return browserify({
+      entries: entries,
+      debug: true
+    })
+    .transform(babelify)
+    .bundle()
+    .on('error', err => {
+      gutil.log('Browserify Error', gutil.colors.red(err.message))
+    })
+    .pipe(source(filename))
+    .pipe(buffer())
     .pipe(uglify())
+    .pipe(sourcemaps.init({loadMaps: true}))
+    .pipe(sourcemaps.write('./dist/js/maps'))
     .pipe(gulp.dest(paths.dirs().js));
+  };
 
-  // foundation.min.js
-  //gulp.src('node_modules/foundation-sites/dist/js/foundation.min.js')
-  //  .pipe(plumber())
-  //  .pipe(gulp.dest(paths.dirs().js));
-
-  // what-input.min.js
-  //gulp.src('node_modules/what-input/dist/what-input.min.js')
-  //  .pipe(plumber())
-  //  .pipe(gulp.dest(paths.dirs().js));
-
-  // jquery.min.js
-  //gulp.src('node_modules/jquery/dist/jquery.min.js')
-  //  .pipe(plumber())
-  //  .pipe(gulp.dest(paths.dirs().js));
+  // app.js
+  browserified(appJs, 'app.js');
 });
 
 // Task: kss
@@ -181,7 +182,6 @@ gulp.task('uncss', ['compass', 'htmlmin'], () => {
 gulp.task('watch', () => {
   gulp.watch(paths.dirs().sass + '/**/*.scss', ['kss']);
   gulp.watch(config.paths.srcImg, ['images']);
-  gulp.watch(config.paths.srcJs, ['js-transpile']);
   gulp.watch(config.paths.srcHtml, ['htmlmin']);
   gulp.watch(config.paths.fonts, ['copy-fonts']);
 

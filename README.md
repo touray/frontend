@@ -73,6 +73,9 @@ For vulnerability reports, send an e-mail to `me at benmarshall dot me`.
 * Added a CSS grid mixin & extendable
 * Added a CSS grid item mixin
 * Added a Frontend Build variables file
+* Added <code>gulp-util</code> for better error handling (https://github.com/bmarshall511/frontend/issues/13)
+* Added <code>vinyl-buffer</code>, <code>vinyl-source-stream</code>, <code>browserify</code>, <code>browserify</code> &amp; <code>babel-preset-es2015</code> to enable ES2015 module support (https://github.com/bmarshall511/frontend/issues/13)
+* Removed <code>gulp-babel</code>, <code>gulp-concat</code> &amp; <code>gulp-plumber</code> (https://github.com/bmarshall511/frontend/issues/13)
 
 ### v4.2.1 (August 8, 2017)
 * Updates to Drupal 7 scss frontend component
