@@ -68,6 +68,7 @@
 //
 // Style guide: frontend.mixins.grid-item
 @mixin css-grid-item($column-start: (small: auto, medium: auto), $column-end: (small: auto, medium: auto), $row-start: (small: auto, medium: auto), $row-end: (small: auto, medium: auto)) {
+  // scss-lint:disable PropertySpelling
   grid-column-end: map-get($column-end, small);
   grid-column-start: map-get($column-start, small);
   grid-row-end: map-get($row-end, small);

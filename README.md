@@ -67,6 +67,7 @@ For vulnerability reports, send an e-mail to `me at benmarshall dot me`.
 ### v4.2.2 (TBD)
 * Fix in package.json for issue URL
 * Fix for missing gulp-cli in Travis CI build
+* Fix for scss-lint notices
 * Added documentation to the frontend Drupal 7 and styleguide components
 * Added a container mixin & extendable
 * Added a CSS grid mixin & extendable

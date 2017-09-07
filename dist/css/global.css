@@ -1353,7 +1353,10 @@ button:hover, button:focus,
   background: #cacaca;
   border: 0.0625rem solid #cacaca;
   border-radius: 0;
-  margin: 0 0 1rem 0;
+  margin-bottom: 1rem;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0;
 }
 .progress .filled {
   background: #1779ba;

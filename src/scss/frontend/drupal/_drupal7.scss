@@ -93,7 +93,10 @@ button,
     background: $progress-bar-background;
     border: $progress-bar-border;
     border-radius: $progress-bar-radius;
-    margin: 0 0 $progress-bar-margin 0;
+    margin-bottom: $progress-bar-margin;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
   }
 
   .filled {
