@@ -50,9 +50,6 @@ const config = {
     css: ['../dist/css/global.css'],
     homepage: '../../README.md',
     js: [
-      //'../dist/js/jquery.min.js',
-      //'../dist/js/what-input.min.js',
-      //'../dist/js/foundation.min.js',
       '../dist/js/app.js']
   },
   paths: {
