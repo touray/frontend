@@ -19,6 +19,7 @@ import buffer from 'vinyl-buffer';
 import del from 'del';
 import kss from 'kss';
 import paths from 'compass-options';
+import sequence from 'run-sequence';
 import source from 'vinyl-source-stream';
 import {argv} from 'yargs';
 
@@ -42,9 +43,11 @@ const config = {
     css         : paths.dirs().css,
     sass        : paths.dirs().sass,
     bundle_exec : true,
-    time        : true
+    time        : true,
+    sourcemap   : PROD ? false : true,
+    comments    : PROD ? false : true
   },
-  default: ['delete', 'compass', 'htmlmin', 'js-transpile', 'kss'],
+  default: ['compass', 'htmlmin', 'js-transpile', 'kss'],
   kss: {
     // Relative to src directory
     css: ['../dist/css/global.css'],
@@ -71,12 +74,12 @@ const appJs = [src + '/js/app.js'];
 gulp.task('compass', ['copy-fonts', 'images', 'scss-lint'], () => {
   return gulp.src(paths.dirs().sass + '/**/*.scss')
     .pipe(compass(config.compass))
-    .on('error', function(error) {
-      console.log(error);
+    .on('error', err => {
+      gutil.log('Compass Error', gutil.colors.red(err.message));
       this.emit('end');
     })
     .pipe(prefix(config.prefix))
-    .pipe(cond(PROD, function() {
+    .pipe(cond(PROD, () => {
       return cleanCSS(config.clean);
     }))
     .pipe(gulp.dest(paths.dirs().css));
@@ -89,7 +92,9 @@ gulp.task('copy-fonts', () => {
 });
 
 // Task: default
-gulp.task('default', config.default);
+gulp.task('default', () => {
+  sequence('delete', config.default);
+});
 
 // Task: delete
 gulp.task('delete', () => {
@@ -102,7 +107,9 @@ gulp.task('delete', () => {
 // Task: htmlmin
 gulp.task('htmlmin', () => {
   return gulp.src(config.paths.srcHtml)
-    .pipe(htmlmin({collapseWhitespace: true}))
+    .pipe(htmlmin({
+      collapseWhitespace: PROD ? true : false
+    }))
     .pipe(gulp.dest(config.paths.html));
 });
 
@@ -162,7 +169,7 @@ gulp.task('kss', ['compass'], () => {
 
 // Task: scss-lint
 gulp.task('scss-lint', () => {
-  return gulp.src(paths.dirs().sass + '/**/*.scss')
+  return gulp.src([paths.dirs().sass + '/**/*.scss', '!' + paths.dirs().sass + '/framework/foundation/*'])
     .pipe(scsslint());
 });
 

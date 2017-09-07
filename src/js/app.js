@@ -1,8 +1,8 @@
 // app.js
 
 global.$ = global.jQuery = require('jquery');
-require('what-input');
-require('foundation-sites');
+import 'what-input';
+import 'foundation-sites';
 
 (( $ ) => {
  // Initialize Foundation
