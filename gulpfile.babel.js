@@ -1,22 +1,26 @@
 // Gulp imports
-import babel from 'gulp-babel';
 import cleanCSS from 'gulp-clean-css';
-import concat from 'gulp-concat';
 import cond from 'gulp-cond';
 import compass from 'gulp-compass';
 import eslint from 'gulp-eslint';
 import gulp from 'gulp';
 import htmlmin from 'gulp-htmlmin';
 import imagemin from 'gulp-imagemin';
-import plumber from 'gulp-plumber';
 import prefix from 'gulp-autoprefixer';
 import scsslint from 'gulp-scss-lint';
+import sourcemaps from 'gulp-sourcemaps';
 import uglify from 'gulp-uglify';
+import gutil from 'gulp-util';
 
 // Import required node modules
+import babelify from 'babelify';
+import browserify from 'browserify';
+import buffer from 'vinyl-buffer';
 import del from 'del';
 import kss from 'kss';
 import paths from 'compass-options';
+import sequence from 'run-sequence';
+import source from 'vinyl-source-stream';
 import {argv} from 'yargs';
 
 // Including gulp-uncss here due to a bug including before kss
@@ -39,17 +43,16 @@ const config = {
     css         : paths.dirs().css,
     sass        : paths.dirs().sass,
     bundle_exec : true,
-    time        : true
+    time        : true,
+    sourcemap   : PROD ? false : true,
+    comments    : PROD ? false : true
   },
-  default: ['delete', 'compass', 'htmlmin', 'js-transpile', 'kss'],
+  default: ['compass', 'htmlmin', 'js-transpile', 'kss'],
   kss: {
     // Relative to src directory
     css: ['../dist/css/global.css'],
     homepage: '../../README.md',
     js: [
-      //'../dist/js/jquery.min.js',
-      //'../dist/js/what-input.min.js',
-      //'../dist/js/foundation.min.js',
       '../dist/js/app.js']
   },
   paths: {
@@ -71,12 +74,12 @@ const appJs = [src + '/js/app.js'];
 gulp.task('compass', ['copy-fonts', 'images', 'scss-lint'], () => {
   return gulp.src(paths.dirs().sass + '/**/*.scss')
     .pipe(compass(config.compass))
-    .on('error', function(error) {
-      console.log(error);
+    .on('error', err => {
+      gutil.log('Compass Error', gutil.colors.red(err.message));
       this.emit('end');
     })
     .pipe(prefix(config.prefix))
-    .pipe(cond(PROD, function() {
+    .pipe(cond(PROD, () => {
       return cleanCSS(config.clean);
     }))
     .pipe(gulp.dest(paths.dirs().css));
@@ -89,7 +92,9 @@ gulp.task('copy-fonts', () => {
 });
 
 // Task: default
-gulp.task('default', config.default);
+gulp.task('default', () => {
+  sequence('delete', config.default);
+});
 
 // Task: delete
 gulp.task('delete', () => {
@@ -102,7 +107,9 @@ gulp.task('delete', () => {
 // Task: htmlmin
 gulp.task('htmlmin', () => {
   return gulp.src(config.paths.srcHtml)
-    .pipe(htmlmin({collapseWhitespace: true}))
+    .pipe(htmlmin({
+      collapseWhitespace: PROD ? true : false
+    }))
     .pipe(gulp.dest(config.paths.html));
 });
 
@@ -126,28 +133,26 @@ gulp.task('js-lint', () => {
 
 // Task: js-transpile
 gulp.task('js-transpile', ['js-lint'], () => {
-  // app.js
-  gulp.src(appJs)
-    .pipe(plumber())
-    .pipe(concat('app.js'))
-    .pipe(babel())
+  const browserified = (entries, filename) => {
+    return browserify({
+      entries: entries,
+      debug: PROD ? false : true
+    })
+    .transform(babelify)
+    .bundle()
+    .on('error', err => {
+      gutil.log('Browserify Error', gutil.colors.red(err.message))
+    })
+    .pipe(source(filename))
+    .pipe(buffer())
     .pipe(uglify())
+    .pipe(sourcemaps.init({loadMaps: true}))
+    .pipe(sourcemaps.write('./dist/js/maps'))
     .pipe(gulp.dest(paths.dirs().js));
+  };
 
-  // foundation.min.js
-  //gulp.src('node_modules/foundation-sites/dist/js/foundation.min.js')
-  //  .pipe(plumber())
-  //  .pipe(gulp.dest(paths.dirs().js));
-
-  // what-input.min.js
-  //gulp.src('node_modules/what-input/dist/what-input.min.js')
-  //  .pipe(plumber())
-  //  .pipe(gulp.dest(paths.dirs().js));
-
-  // jquery.min.js
-  //gulp.src('node_modules/jquery/dist/jquery.min.js')
-  //  .pipe(plumber())
-  //  .pipe(gulp.dest(paths.dirs().js));
+  // app.js
+  browserified(appJs, 'app.js');
 });
 
 // Task: kss
@@ -164,7 +169,7 @@ gulp.task('kss', ['compass'], () => {
 
 // Task: scss-lint
 gulp.task('scss-lint', () => {
-  return gulp.src(paths.dirs().sass + '/**/*.scss')
+  return gulp.src([paths.dirs().sass + '/**/*.scss', '!' + paths.dirs().sass + '/framework/foundation/*'])
     .pipe(scsslint());
 });
 
@@ -181,9 +186,9 @@ gulp.task('uncss', ['compass', 'htmlmin'], () => {
 gulp.task('watch', () => {
   gulp.watch(paths.dirs().sass + '/**/*.scss', ['kss']);
   gulp.watch(config.paths.srcImg, ['images']);
-  gulp.watch(config.paths.srcJs, ['js-transpile']);
   gulp.watch(config.paths.srcHtml, ['htmlmin']);
   gulp.watch(config.paths.fonts, ['copy-fonts']);
+  gulp.watch(config.paths.srcJs, ['js-transpile']);
 
   // Disable editing frontend components to allow the framework to be upgraded
   gulp.watch(src + '/scss/frontend/**/*', () => {
