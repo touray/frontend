@@ -136,7 +136,7 @@ gulp.task('js-transpile', ['js-lint'], () => {
   const browserified = (entries, filename) => {
     return browserify({
       entries: entries,
-      debug: true
+      debug: PROD ? false : true
     })
     .transform(babelify)
     .bundle()
