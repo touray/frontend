@@ -24,7 +24,7 @@
 
 // CSS Grid
 //
-// Sets up a CSS grid container. <i>View in Firefox inspector to see a grid overlay.</i>
+// Creates a CSS grid container. <i>View in Firefox inspector to see a grid overlay.</i>
 //
 // Markup:
 // <ul>
@@ -50,5 +50,33 @@
     grid-row-gap: map-get($grid-row-gaps, medium);
     grid-template-columns: repeat(map-get($grid-columns, medium), 1fr);
     grid-template-rows: map-get($grid-rows, medium);
+  }
+}
+
+// CSS Grid Item
+//
+// Creates a CSS grid container item. <i>View in Firefox inspector to see a grid overlay.</i>
+//
+// Markup:
+// <ul>
+//   <li><code>$column-start</code>: <code>responsive list</code><br>Default: <code>(small: auto, medium: auto)</code><br><i>Defines which column the grid item should start at.</i></li>
+//   <li><code>$column-end</code>: <code>responsive list</code><br>Default: <code>(small: auto, medium: auto)</code><br><i>Defines which column the grid item should end at.</i></li>
+//   <li><code>$row-start</code>: <code>responsive list</code><br>Default: <code>(small: auto, medium: auto)</code><br><i>Defines which row the grid item should start at.</i></li>
+//   <li><code>$row-end</code>: <code>responsive list</code><br>Default: <code>(small: auto, medium: auto)</code><br><i>Defines which row the grid item should end at.</i></li>
+// </ul>
+// <code>@include css-grid-item($column-start, $column-end, $row-start, $row-end);</code>
+//
+// Style guide: frontend.mixins.grid-item
+@mixin css-grid-item($column-start: (small: auto, medium: auto), $column-end: (small: auto, medium: auto), $row-start: (small: auto, medium: auto), $row-end: (small: auto, medium: auto)) {
+  grid-column-end: map-get($column-end, small);
+  grid-column-start: map-get($column-start, small);
+  grid-row-end: map-get($row-end, small);
+  grid-row-start: map-get($row-start, small);
+
+  @include breakpoint(medium) {
+    grid-column-end: map-get($column-end, medium);
+    grid-column-start: map-get($column-start, medium);
+    grid-row-end: map-get($row-end, medium);
+    grid-row-start: map-get($row-start, medium);
   }
 }

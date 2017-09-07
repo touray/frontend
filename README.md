@@ -70,6 +70,8 @@ For vulnerability reports, send an e-mail to `me at benmarshall dot me`.
 * Added documentation to the frontend Drupal 7 and styleguide components
 * Added a container mixin & extendable
 * Added a CSS grid mixin & extendable
+* Added a CSS grid item mixin
+* Added a Frontend Build variables file
 
 ### v4.2.1 (August 8, 2017)
 * Updates to Drupal 7 scss frontend component
