@@ -184,6 +184,7 @@ gulp.task('watch', () => {
   gulp.watch(config.paths.srcImg, ['images']);
   gulp.watch(config.paths.srcHtml, ['htmlmin']);
   gulp.watch(config.paths.fonts, ['copy-fonts']);
+  gulp.watch(config.paths.srcJs, ['js-transpile']);
 
   // Disable editing frontend components to allow the framework to be upgraded
   gulp.watch(src + '/scss/frontend/**/*', () => {
