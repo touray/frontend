@@ -68,6 +68,7 @@ For vulnerability reports, send an e-mail to `me at benmarshall dot me`.
 * Fix in package.json for issue URL
 * Fix for missing gulp-cli in Travis CI build
 * Fix for scss-lint notices
+* Updated Foundation to 6.4.3
 * Added documentation to the frontend Drupal 7 and styleguide components
 * Added a container mixin & extendable
 * Added a CSS grid mixin & extendable
