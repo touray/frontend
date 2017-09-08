@@ -107,6 +107,10 @@ gulp.task('delete', () => {
 // Task: htmlmin
 gulp.task('htmlmin', () => {
   return gulp.src(config.paths.srcHtml)
+    .pipe(plumber(function(err) {
+      gutil.log('HTML Minify Error', gutil.colors.red(err.message));
+      this.emit('end');
+    }))
     .pipe(htmlmin({
       collapseWhitespace: PROD ? true : false
     }))
