@@ -6,6 +6,7 @@ import eslint from 'gulp-eslint';
 import gulp from 'gulp';
 import htmlmin from 'gulp-htmlmin';
 import imagemin from 'gulp-imagemin';
+import plumber from 'gulp-plumber';
 import prefix from 'gulp-autoprefixer';
 import scsslint from 'gulp-scss-lint';
 import sourcemaps from 'gulp-sourcemaps';
@@ -73,11 +74,10 @@ const appJs = [src + '/js/app.js'];
 // Task: compass
 gulp.task('compass', ['copy-fonts', 'images', 'scss-lint'], () => {
   return gulp.src(paths.dirs().sass + '/**/*.scss')
-    .pipe(compass(config.compass))
-    .on('error', err => {
-      gutil.log('Compass Error', gutil.colors.red(err.message));
+    .pipe(plumber(function() {
       this.emit('end');
-    })
+    }))
+    .pipe(compass(config.compass))
     .pipe(prefix(config.prefix))
     .pipe(cond(PROD, () => {
       return cleanCSS(config.clean);

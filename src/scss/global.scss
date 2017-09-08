@@ -16,6 +16,15 @@
 // Style guide: framework
 @import 'framework/foundation/framework';
 
+// Motion UI
+//
+// A Sass library for creating flexible UI transitions and animations. See <a href="http://foundation.zurb.com/sites/docs/motion-ui.html" target="_blank">http://foundation.zurb.com/sites/docs/motion-ui.html</a> for more information.
+//
+// Style guide: motion-ui
+@import 'motion-ui';
+@include motion-ui-transitions;
+@include motion-ui-animations;
+
 // Frontend Build
 //
 // Frontend Build comes with pre-built starter components to help speed up

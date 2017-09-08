@@ -72,14 +72,6 @@ $password-indicator-background:      $progress-background              !default;
 $password-indicator-fill-background: $progress-meter-background        !default;
 $password-indicator-height:          rem-calc(24)                      !default;
 
-// Base
-button,
-[type='button'],
-[type='reset'],
-[type='submit'], {
-  @include button;
-}
-
 // Pager
 .pager {
   @include pagination-container;
