@@ -10,25 +10,26 @@
 //
 // Drupal 7 component variables. To add/edit component variables, use <code>scss/_variables.scss</code>.
 //
-// $message-margin             - Defines the site message margin. Default: <code>rem-calc($global-margin 0)</code>
-// $message-padding            - Defines the site message padding. Default: <code>$global-padding</code>
-// $message-border             - Defines the site message border. Default: <code>rem-calc(1) solid</code>
-// $message-status-background  - Defines the status message background. Default: <code>rgba($success-color, .5)</code>
-// $message-status-border      - Defines the status message border. Default: <code>rem-calc(1) solid darken($success-color, 50%)</code>
-// $message-status-color       - Defines the status message color. Default: <code>darken($success-color, 50%)</code>
-// $message-warning-background - Defines the warning message background. Default: <code>rgba($warning-color, .5)</code>
-// $message-warning-border     - Defines the warning message border. Default: <code>rem-calc(1) solid darken($warning-color, 50%)</code>
-// $message-warning-color      - Defines the warning message color. Default: <code>darken($warning-color, 50%)</code>
-// $message-error-background   - Defines the error message background. Default: <code>rgba($alert-color, .5)</code>
-// $message-error-border       - Defines the error message border. Default: <code>rem-calc(1) solid darken($alert-color, 50%)</code>
-// $message-error-color        - Defines the error message color. Default: <code>darken($alert-color, 50%)</code>
-// $progress-bar-background    - Defines the progress bar background. Default: <code>$progress-background</code>
-// $progress-bar-border        - Defines the progress bar border. Default: <code>rem-calc(1) solid $medium-gray</code>
-// $progress-bar-margin        - Defines the progress bar margin. Default: <code>rem-calc($progress-margin-bottom)</code>
-// $progress-bar-radius        - Defines the progress bar radius. Default: <code>rem-calc($progress-radius)</code>
-// $progress-filled-background - Defines the progress filled background. Default: <code>$progress-meter-background</code>
-// $progress-height            - Defines the progress height. Default: <code>$progress-height</code>
-// $progress-weight            - Defines the progress weight. Default: <code>$global-weight-bold</code>
+// $message-margin                     - Defines the site message margin. Default: <code>rem-calc($global-margin 0)</code>
+// $message-padding                    - Defines the site message padding. Default: <code>$global-padding</code>
+// $message-border                     - Defines the site message border. Default: <code>rem-calc(1) solid</code>
+// $message-status-background          - Defines the status message background. Default: <code>rgba($success-color, .5)</code>
+// $message-status-border              - Defines the status message border. Default: <code>rem-calc(1) solid darken($success-color, 50%)</code>
+// $message-status-color               - Defines the status message color. Default: <code>darken($success-color, 50%)</code>
+// $message-warning-background         - Defines the warning message background. Default: <code>rgba($warning-color, .5)</code>
+// $message-warning-border             - Defines the warning message border. Default: <code>rem-calc(1) solid darken($warning-color, 50%)</code>
+// $message-warning-color              - Defines the warning message color. Default: <code>darken($warning-color, 50%)</code>
+// $message-error-background           - Defines the error message background. Default: <code>rgba($alert-color, .5)</code>
+// $message-error-border               - Defines the error message border. Default: <code>rem-calc(1) solid darken($alert-color, 50%)</code>
+// $message-error-color                - Defines the error message color. Default: <code>darken($alert-color, 50%)</code>
+// $progress-bar-background            - Defines the progress bar background. Default: <code>$progress-background</code>
+// $progress-bar-border                - Defines the progress bar border. Default: <code>rem-calc(1) solid $medium-gray</code>
+// $progress-bar-percentage-float      - Defines the percentage text float. Default: <code>right</code>
+// $progress-bar-margin                - Defines the progress bar margin. Default: <code>rem-calc(0 0 $global-margin 0)</code>
+// $progress-bar-radius                - Defines the progress bar radius. Default: <code>rem-calc($progress-radius)</code>
+// $progress-filled-background         - Defines the progress filled background. Default: <code>$progress-meter-background</code>
+// $progress-height                    - Defines the progress height. Default: <code>$progress-height</code>
+// $progress-weight                    - Defines the progress weight. Default: <code>$global-weight-bold</code>
 //
 // Weight: 1
 //
@@ -53,13 +54,15 @@ $message-error-border:     rem-calc(1) solid darken($alert-color, 30%) !default;
 $message-error-color:      darken($alert-color, 50%)                   !default;
 
 // Progress bar
-$progress-bar-background:    $progress-background                      !default;
-$progress-bar-border:        rem-calc(1) solid $medium-gray            !default;
-$progress-bar-margin:        rem-calc($progress-margin-bottom)         !default;
-$progress-bar-radius:        rem-calc($progress-radius)                !default;
-$progress-filled-background: $progress-meter-background                !default;
-$progress-height:            $progress-height                          !default;
-$progress-weight:            $global-weight-bold                       !default;
+$progress-bar-background:            $progress-background              !default;
+$progress-bar-border:                rem-calc(1) solid $medium-gray    !default;
+$progress-bar-percentage-float:      right                             !default;
+$progress-bar-message-margin:        rem-calc(0 0 $global-margin 0)    !default;
+$progress-margin-bottom:             $progress-margin-bottom           !default;
+$progress-bar-radius:                rem-calc($progress-radius)        !default;
+$progress-filled-background:         $progress-meter-background        !default;
+$progress-height:                    $progress-height                  !default;
+$progress-weight:                    $global-weight-bold               !default;
 
 // Message
 //
@@ -132,6 +135,8 @@ table tr.error {
 
 // Progress Bar
 //
+// <b>There is a known conflict between <a href="http://foundation.zurb.com/sites/docs/progress-bar.html" target="_blank">Foundation's progress bar</a> class and Drupal's.</b> If using Drupal, it's recommended to comment out Foundation's progress bar component in <code>src/scss/framework/_framework.scss</code>.
+//
 // .progress - Default progress bar styling.
 //
 // Markup:
@@ -153,13 +158,35 @@ table tr.error {
     background: $progress-bar-background;
     border-radius: $progress-bar-radius;
     border: $progress-bar-border;
-    margin: $progress-bar-margin;
+    margin: 0 0 $progress-margin-bottom 0;
   }
 
   .filled {
     background: $progress-filled-background;
     height: $progress-height;
   }
+
+  .percentage {
+    float: $progress-bar-percentage-float;
+  }
+
+  .message {
+    margin: $progress-bar-message-margin;
+  }
+}
+
+// Form Submit
+//
+// .form-submit - Styles all Drupal submit buttons.
+//
+// Markup:
+// <input type="button" class="form-submit" value="Submit" />
+//
+// Weight: 4
+//
+// Style guide: frontend.drupal.drupal7.form-submit
+.form-submit {
+  @include button;
 }
 
 

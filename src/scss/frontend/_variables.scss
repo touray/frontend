@@ -4,47 +4,76 @@
 //
 // Style guide: frontend.variables
 
-// Globals
-//
-// These are the default global variables. To add/edit, use <code>scss/_variables.scss</code>.
-//
-// $global-width       - Defines the application's global width. Default: <code>rem-calc(1200)</code>
-// $global-margin      - Defines the application's global margin. Default: <code>1rem</code>
-// $global-padding     - Defines the application's global padding. Default: <code>1rem</code>
-// $global-radius      - Defines the application's global radius. Default: <code>0</code>
-// $global-weight-bold - Defines the application's global bold weight. Default: <code>bold</code>
-//
-// Weight: 1
-//
-// Style guide: frontend.variables.globals
-$global-width:       rem-calc(1200)                                    !default;
-$global-margin:      1rem                                              !default;
-$global-padding:     1rem                                              !default;
-$global-radius:      0                                                 !default;
-$global-weight-bold: bold                                              !default;
-
 // Color Scheme
 //
 // These are the default color options. To add/edit, use <code>scss/_variables.scss</code>.
 //
-// $primary-color - #1779ba; Primary Color
-// $alert-color   - #cc4b37; Alert Color
-// $success-color - #3adb76; Success Color
-// $warning-color - #ffae00; Warning Color
-// $dark-gray     - #8a8a8a; Dark Gray
-// $medium-gray   - #cacaca; Medium Gray
-// $light-gray    - #e6e6e6; Light Gray
+// $primary-color   - #1779ba; Primary Color
+// $secondary-color - #767676; Secondary Color
+// $alert-color     - #cc4b37; Alert Color
+// $success-color   - #3adb76; Success Color
+// $warning-color   - #ffae00; Warning Color
+// $dark-gray       - #8a8a8a; Dark Gray
+// $medium-gray     - #cacaca; Medium Gray
+// $light-gray      - #e6e6e6; Light Gray
+// $black           - #000; Black
+// $white           - #fff; White
 //
 // Weight: 2
 //
 // Style guide: frontend.variables.colors
-$primary-color: #1779ba                                                !default;
-$alert-color:   #cc4b37                                                !default;
-$success-color: #3adb76                                                !default;
-$warning-color: #ffae00                                                !default;
-$dark-gray:     #8a8a8a                                                !default;
-$medium-gray:   #cacaca                                                !default;
-$light-gray:    #e6e6e6                                                !default;
+$primary-color:   #1779ba;
+$secondary-color: #767676;
+$alert-color:     #cc4b37;
+$success-color:   #3adb76;
+$warning-color:   #ffae00;
+$dark-gray:       #8a8a8a;
+$medium-gray:     #cacaca;
+$light-gray:      #e6e6e6;
+$black:           #000;
+$white:           #fff;
+
+// Globals
+//
+// These are the default global variables. To add/edit, use <code>scss/_variables.scss</code>.
+//
+// $global-font-size     - Defines the application's default font size. Default: <code>100%</code>
+// $global-lineheight    - Defines the application's default line height. Default: <code>1.5</code>
+// $global-width         - Defines the application's default max width. Default: <code>rem-calc(1200)</code>
+// $global-margin        - Defines the application's default margin. Default: <code>1rem</code>
+// $global-padding       - Defines the application's default padding. Default: <code>1rem</code>
+// $global-radius        - Defines the application's default radius. Default: <code>0</code>
+// $global-weight-normal - Defines the application's default normal weight. Default: <code>normal</code>
+// $global-weight-bold   - Defines the application's default bold weight. Default: <code>bold</code>
+// $body-font-family     - Defines the application's default font. Default: <code>'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif</code>
+// $body-font-color      - Defines the application's default font color. Default: <code>$black</code>
+//
+// Weight: 1
+//
+// Style guide: frontend.variables.globals
+$global-font-size:     100%;
+$global-lineheight:    1.5;
+$global-width:         rem-calc(1200);
+$global-margin:        1rem;
+$global-padding:       1rem;
+$global-radius:        rem-calc(3);
+$global-weight-normal: normal;
+$global-weight-bold:   bold;
+$body-font-family:     'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
+$body-font-color:      $black;
+
+// Typography
+//
+// These are the default typography variables. To add/edit, use <code>scss/_variables.scss</code>.
+//
+// $header-font-family   - Defines the application's default header font family. Default: <code>$body-font-family</code>
+// $header-font-weight   - Defines the application's default header font weight. Default: <code>$global-weight-normal</code>
+//
+// Weight: 3
+//
+// Style guide: frontend.variables.globals
+$header-font-family: $body-font-family;
+$header-font-weight: $global-weight-normal;
 
 // CSS Grid
 //
@@ -54,18 +83,38 @@ $light-gray:    #e6e6e6                                                !default;
 // $css-grid-column-gaps - Defines the grid's column gap using a responsive list. Default: <code>(small: 15px, medium: 30px)</code>
 // $css-grid-row-gaps - Defines the grid's row gap using a responsive list. Default: <code>(small: 0, medium: 0x)</code>
 //
-// Weight: 3
+// Weight: 4
 //
 // Style guide: frontend.variables.css-grid
 $css-grid-columns: (
   small: 2,
   medium: 12
-)                                                                      !default;
-$css-grid-column-gaps: $grid-margin-gutters                            !default;
+);
+$css-grid-column-gaps: (
+  small: 20px,
+  medium: 30px
+);
 $css-grid-row-gaps: (
   small: 0,
   medium: 0
-)                                                                      !default;
+);
+
+// Breakpoints
+//
+// These are the default options for breakpoints. To add/edit, use <code>scss/_variables.scss</code>.
+//
+// $breakpoints - Defines the number of breakpoints using a responsive list. Default: <code>(small: 0, medium: 640px, large: 1024px, xlarge: 1200px, xxlarge: 1440px)</code>
+//
+// Weight: 5
+//
+// Style guide: frontend.variables.breakpoints
+$breakpoints: (
+  small: 0,
+  medium: 640px,
+  large: 1024px,
+  xlarge: 1200px,
+  xxlarge: 1440px,
+);
 
 // Progress Bar
 //
@@ -77,11 +126,11 @@ $css-grid-row-gaps: (
 // $progress-meter-background - Defines the background of progress bar meter. Default: <code>$primary-color</code>
 // $progress-height - Defines the height of the progress bar. Default: <code>1rem</code>
 //
-// Weight: 4
+// Weight: 6
 //
 // Style guide: frontend.variables.progress-bar
-$progress-background:       $medium-gray                               !default;
-$progress-margin-bottom:    $global-margin                             !default;
-$progress-radius:           $global-radius                             !default;
-$progress-meter-background: $primary-color                             !default;
-$progress-height:           1rem                                       !default;
+$progress-background:       $medium-gray;
+$progress-margin-bottom:    rem-calc(5);
+$progress-radius:           $global-radius;
+$progress-meter-background: $primary-color;
+$progress-height:           rem-calc(20);

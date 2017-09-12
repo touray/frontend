@@ -39,38 +39,44 @@
           </a>
         </li>
           <li class="kss-nav__item">
-            <a class="" href="section-global.html">
+            <a class="" href="section-cheatsheet.html">
               <span class="kss-nav__ref">1</span>
+              <span class="kss-nav__name">Designer Cheatsheet</span>
+            </a>
+          </li>
+          <li class="kss-nav__item">
+            <a class="" href="section-global.html">
+              <span class="kss-nav__ref">2</span>
               <span class="kss-nav__name">Global Style Sheet</span>
             </a>
           </li>
           <li class="kss-nav__item">
             <a class="" href="section-variables.html">
-              <span class="kss-nav__ref">2</span>
+              <span class="kss-nav__ref">3</span>
               <span class="kss-nav__name">Custom Variables</span>
             </a>
           </li>
           <li class="kss-nav__item">
             <a class="" href="section-framework.html">
-              <span class="kss-nav__ref">3</span>
+              <span class="kss-nav__ref">4</span>
               <span class="kss-nav__name">Framework</span>
             </a>
           </li>
           <li class="kss-nav__item">
             <a class="" href="section-motion-ui-import-motion-ui-include-motion-ui-transitions-include-motion-ui-animations-.html">
-              <span class="kss-nav__ref">4</span>
+              <span class="kss-nav__ref">5</span>
               <span class="kss-nav__name">Motion UI</span>
             </a>
           </li>
           <li class="kss-nav__item">
             <a class="" href="section-frontend.html">
-              <span class="kss-nav__ref">5</span>
+              <span class="kss-nav__ref">6</span>
               <span class="kss-nav__name">Frontend Build</span>
             </a>
           </li>
           <li class="kss-nav__item">
             <a class="" href="section-components.html">
-              <span class="kss-nav__ref">6</span>
+              <span class="kss-nav__ref">7</span>
               <span class="kss-nav__name">Components</span>
             </a>
           </li>
@@ -90,53 +96,99 @@
             <header class="kss-section kss-section--depth-3" id="kssref-frontend-variables-globals">
 
             <article class="kss-section__content">
-                <p class="kss-section__source">Source: <span>frontend/_variables.scss</span>, line <span>7</span></p>
+                <p class="kss-section__source">Source: <span>frontend/_variables.scss</span>, line <span>65</span></p>
 
               <a class="kss-section__permalink" href="#kssref-frontend-variables-globals">
                 <h3 class="kss-section__item kss-section__item--depth-3">
-                  <span class="kss-section__ref">5.4.1</span>
-                  <span class="kss-section__name">Globals</span>
+                  <span class="kss-section__ref">6.4.2</span>
+                  <span class="kss-section__name">Typography</span>
                 </h3>
               </a>
 
-                <div class="kss-section__description"><p>These are the default global variables. To add/edit, use <code>scss/_variables.scss</code>.</p>
+                <div class="kss-section__description"><p>These are the default typography variables. To add/edit, use <code>scss/_variables.scss</code>.</p>
 </div>
 
                 <ul class="kss-parameters">
                   <li class="kss-parameters__item">
                     <p class="kss-parameters__description">
-                      Defines the application&#39;s global width. Default: <code>rem-calc(1200)</code>
+                      Defines the application&#39;s default header font family. Default: <code>$body-font-family</code>
 
                     </p>
-                    <code class="kss-parameters__name">$global-width</code>
+                    <code class="kss-parameters__name">$header-font-family</code>
                   </li>
                   <li class="kss-parameters__item">
                     <p class="kss-parameters__description">
-                      Defines the application&#39;s global margin. Default: <code>1rem</code>
+                      Defines the application&#39;s default header font weight. Default: <code>$global-weight-normal</code>
+
+                    </p>
+                    <code class="kss-parameters__name">$header-font-weight</code>
+                  </li>
+                </ul>
+            </article>
+
+
+            </header>
+    </section>
+    <!-- /documentation. -->
+
+
+
+  <!-- scripts. -->
+  <script src="kss-assets/vendor/jquery.js"></script>
+  <script src="kss-assets/vendor/prism.js"></script>
+  <script src="kss-assets/js/kss.js"></script>
+  <script src="../dist/js/app.js"></script>
+
+  <!-- /scripts. -->
+
+  </body>
+</html>-parameters__description">
+                      Defines the application&#39;s default margin. Default: <code>1rem</code>
 
                     </p>
                     <code class="kss-parameters__name">$global-margin</code>
                   </li>
                   <li class="kss-parameters__item">
                     <p class="kss-parameters__description">
-                      Defines the application&#39;s global padding. Default: <code>1rem</code>
+                      Defines the application&#39;s default padding. Default: <code>1rem</code>
 
                     </p>
                     <code class="kss-parameters__name">$global-padding</code>
                   </li>
                   <li class="kss-parameters__item">
                     <p class="kss-parameters__description">
-                      Defines the application&#39;s global radius. Default: <code>0</code>
+                      Defines the application&#39;s default radius. Default: <code>0</code>
 
                     </p>
                     <code class="kss-parameters__name">$global-radius</code>
                   </li>
                   <li class="kss-parameters__item">
                     <p class="kss-parameters__description">
-                      Defines the application&#39;s global bold weight. Default: <code>bold</code>
+                      Defines the application&#39;s default normal weight. Default: <code>normal</code>
+
+                    </p>
+                    <code class="kss-parameters__name">$global-weight-normal</code>
+                  </li>
+                  <li class="kss-parameters__item">
+                    <p class="kss-parameters__description">
+                      Defines the application&#39;s default bold weight. Default: <code>bold</code>
 
                     </p>
                     <code class="kss-parameters__name">$global-weight-bold</code>
+                  </li>
+                  <li class="kss-parameters__item">
+                    <p class="kss-parameters__description">
+                      Defines the application&#39;s default font. Default: <code>&#39;Helvetica Neue&#39;, Helvetica, Roboto, Arial, sans-serif</code>
+
+                    </p>
+                    <code class="kss-parameters__name">$body-font-family</code>
+                  </li>
+                  <li class="kss-parameters__item">
+                    <p class="kss-parameters__description">
+                      Defines the application&#39;s default font color. Default: <code>$black</code>
+
+                    </p>
+                    <code class="kss-parameters__name">$body-font-color</code>
                   </li>
                 </ul>
             </article>

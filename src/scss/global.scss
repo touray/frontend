@@ -4,6 +4,16 @@
 //
 // Style guide: global
 
+// Designer Cheatsheet
+//
+// The <a href="https://docs.google.com/spreadsheets/d/1-IEPnlD4zbl2XG7qD5h8SuXVf8WKTRoX5JC6hOM5jTs/edit?usp=sharing" target="_blank">Frontend Build Designer Cheatsheet</a> provides site and application designers a starting point for defining base styles before any design work is done. This helps keep styling consistent, speeds up development time and make manging future changes much easier.<br>
+// <br>
+// See <a href="https://docs.google.com/spreadsheets/d/1-IEPnlD4zbl2XG7qD5h8SuXVf8WKTRoX5JC6hOM5jTs/edit?usp=sharing" target="_blank">https://docs.google.com/spreadsheets/d/1-IEPnlD4zbl2XG7qD5h8SuXVf8WKTRoX5JC6hOM5jTs/edit?usp=sharing</a>.
+//
+// Weight: -1
+//
+// Style guide: cheatsheet
+
 // Framework
 //
 // Frontend Build comes with the
@@ -37,8 +47,7 @@
 // Weight: 3
 //
 // Style guide: frontend
-
-@import 'frontend/variables';
+//
 @import 'frontend/mixins';
 //@import 'frontend/common';
 
@@ -50,7 +59,7 @@
 //
 // Style guide: frontend.drupal
 
-//@import 'frontend/drupal/drupal7';
+@import 'frontend/drupal/drupal7';
 
 // Drupal Modules
 //
@@ -58,7 +67,7 @@
 //
 // Style guide: frontend.drupal.modules
 
-//@import 'frontend/drupal/modules/styleguide';
+@import 'frontend/drupal/modules/styleguide';
 
 // WordPress
 //
