@@ -1,60 +1,56 @@
 // Drupal 7
 //
-// Contains default Drupal 7 styles. Available scss variables:<br>
-// <h5>Site Messages</h5>
-// <ul>
-//   <li><code>$message-margin</code></li>
-//   <li><code>$message-padding</code></li>
-//   <li><code>$message-error-background</code></li>
-//   <li><code>$message-error-border</code></li>
-//   <li><code>$message-error-color</code></li>
-//   <li><code>$message-status-background</code></li>
-//   <li><code>$message-status-border</code></li>
-//   <li><code>$message-status-color</code></li>
-//   <li><code>$message-warning-background</code></li>
-//   <li><code>$message-warning-border</code></li>
-//   <li><code>$message-warning-color</code></li>
-// </ul>
-// <h5>Progress Bar</h5>
-// <ul>
-//   <li><code>$progress-bar-background</code></li>
-//   <li><code>$progress-bar-border</code></li>
-//   <li><code>$progress-bar-margin</code></li>
-//   <li><code>$progress-bar-radius</code></li>
-//   <li><code>$progress-filled-background</code></li>
-//   <li><code>$progress-height</code></li>
-//   <li><code>$progress-weight</code></li>
-// </ul>
-// <h5>Password Strength</h5>
-// <ul>
-//   <li><code>$password-strength-margin</code></li>
-//   <li><code>$password-strength-width</code></li>
-//   <li><code>$password-indicator-background</code></li>
-//   <li><code>$password-indicator-fill-background</code></li>
-//   <li><code>$password-indicator-height</code></li>
-// </ul>
+// Optional Drupal 7 component. Example styling below won't be accurate unless Drupal's stylesheets are added to the KSS config.
 //
 // Style guide: frontend.drupal.drupal7
 
-// scss-lint:disable QualifyingElement
+// scss-lint:disable QualifyingElement, MergeableSelector
 
-// Drupal 7 Variables
-
-// Site messages
+// Variables
+//
+// Drupal 7 component variables. To add/edit component variables, use <code>scss/_variables.scss</code>.
+//
+// $message-margin             - Defines the site message margin. Default: <code>rem-calc($global-margin 0)</code>
+// $message-padding            - Defines the site message padding. Default: <code>$global-padding</code>
+// $message-border             - Defines the site message border. Default: <code>rem-calc(1) solid</code>
+// $message-status-background  - Defines the status message background. Default: <code>rgba($success-color, .5)</code>
+// $message-status-border      - Defines the status message border. Default: <code>rem-calc(1) solid darken($success-color, 50%)</code>
+// $message-status-color       - Defines the status message color. Default: <code>darken($success-color, 50%)</code>
+// $message-warning-background - Defines the warning message background. Default: <code>rgba($warning-color, .5)</code>
+// $message-warning-border     - Defines the warning message border. Default: <code>rem-calc(1) solid darken($warning-color, 50%)</code>
+// $message-warning-color      - Defines the warning message color. Default: <code>darken($warning-color, 50%)</code>
+// $message-error-background   - Defines the error message background. Default: <code>rgba($alert-color, .5)</code>
+// $message-error-border       - Defines the error message border. Default: <code>rem-calc(1) solid darken($alert-color, 50%)</code>
+// $message-error-color        - Defines the error message color. Default: <code>darken($alert-color, 50%)</code>
+// $progress-bar-background    - Defines the progress bar background. Default: <code>$progress-background</code>
+// $progress-bar-border        - Defines the progress bar border. Default: <code>rem-calc(1) solid $medium-gray</code>
+// $progress-bar-margin        - Defines the progress bar margin. Default: <code>rem-calc($progress-margin-bottom)</code>
+// $progress-bar-radius        - Defines the progress bar radius. Default: <code>rem-calc($progress-radius)</code>
+// $progress-filled-background - Defines the progress filled background. Default: <code>$progress-meter-background</code>
+// $progress-height            - Defines the progress height. Default: <code>$progress-height</code>
+// $progress-weight            - Defines the progress weight. Default: <code>$global-weight-bold</code>
+//
+// Weight: 1
+//
+// Style guide: frontend.drupal.drupal7.variables
 $message-margin:  rem-calc($global-margin 0)                           !default;
 $message-padding: $global-padding                                      !default;
+$message-border:  rem-calc(1) solid                                    !default;
 
-$message-error-background: rgba($alert-color, .5)                      !default;
-$message-error-border:     rem-calc(1) solid darken($alert-color, 50%) !default;
-$message-error-color:      darken($alert-color, 50%)                   !default;
-
+// Status
 $message-status-background: rgba($success-color, .5)                   !default;
-$message-status-border:     rem-calc(1) solid darken($success-color, 50%) !default;
+$message-status-border:     rem-calc(1) solid darken($success-color, 30%) !default;
 $message-status-color:      darken($success-color, 50%)                !default;
 
+// Warning
 $message-warning-background: rgba($warning-color, .5)                  !default;
-$message-warning-border:     rem-calc(1) solid darken($warning-color, 50%) !default;
+$message-warning-border:     rem-calc(1) solid darken($warning-color, 30%) !default;
 $message-warning-color:      darken($warning-color, 50%)               !default;
+
+// Error
+$message-error-background: rgba($alert-color, .5)                      !default;
+$message-error-border:     rem-calc(1) solid darken($alert-color, 30%) !default;
+$message-error-color:      darken($alert-color, 50%)                   !default;
 
 // Progress bar
 $progress-bar-background:    $progress-background                      !default;
@@ -64,6 +60,108 @@ $progress-bar-radius:        rem-calc($progress-radius)                !default;
 $progress-filled-background: $progress-meter-background                !default;
 $progress-height:            $progress-height                          !default;
 $progress-weight:            $global-weight-bold                       !default;
+
+// Message
+//
+// .messages - Default message styling.
+// .status   - Status styling.
+// .warning  - Warning styling.
+// .error    - Error styling.
+//
+// Markup:
+// <div class="messages {{modifier_class}}">
+//   Sed feugiat velit sed magna aliquam accumsan.
+// </div>
+//
+// Weight: 2
+//
+// Style guide: frontend.drupal.drupal7.message
+div {
+  &.messages {
+    background-position: 0% 0%;
+    background-repeat: repeat;
+    border: $message-border;
+    margin: $message-margin;
+    padding: $message-padding;
+  }
+
+  &.status {
+    background: $message-status-background;
+    border: $message-status-border;
+    color: $message-status-color;
+  }
+
+  &.warning {
+    background: $message-warning-background;
+    border: $message-warning-border;
+    color: $message-warning-color;
+  }
+
+  &.error {
+    background: $message-error-background;
+    border: $message-error-border;
+    color: $message-error-color;
+  }
+}
+
+.ok {
+  color: $message-status-color;
+}
+
+.warning {
+  color: $message-warning-color;
+}
+
+.error,
+.marker,
+.form-required {
+  color: $message-error-color;
+}
+
+table tr.ok {
+  background: $message-status-background;
+}
+
+table tr.warning {
+  background: $message-warning-background;
+}
+
+table tr.error {
+  background: $message-error-background;
+}
+
+// Progress Bar
+//
+// .progress - Default progress bar styling.
+//
+// Markup:
+// <div class="progress {{modifier_class}}">
+//   <div class="bar">
+//     <div class="filled" style="width: 57%"></div>
+//   </div>
+//   <div class="percentage">57%</div>
+//   <div class="message">Curabitur quis nunc nibh.</div>
+// </div>
+//
+// Weight: 3
+//
+// Style guide: frontend.drupal.drupal7.error-message
+.progress {
+  font-weight: $progress-weight;
+
+  .bar {
+    background: $progress-bar-background;
+    border-radius: $progress-bar-radius;
+    border: $progress-bar-border;
+    margin: $progress-bar-margin;
+  }
+
+  .filled {
+    background: $progress-filled-background;
+    height: $progress-height;
+  }
+}
+
 
 // Password strength
 $password-strength-margin:           0                                 !default;
@@ -75,88 +173,6 @@ $password-indicator-height:          rem-calc(24)                      !default;
 // Pager
 .pager {
   @include pagination-container;
-}
-
-// Progress bar
-.progress {
-  font-weight: $progress-weight;
-
-  .bar {
-    background: $progress-bar-background;
-    border: $progress-bar-border;
-    border-radius: $progress-bar-radius;
-    margin-bottom: $progress-bar-margin;
-    margin-left: 0;
-    margin-right: 0;
-    margin-top: 0;
-  }
-
-  .filled {
-    background: $progress-filled-background;
-    height: $progress-height;
-  }
-}
-
-// Site messages
-div {
-  &.messages {
-    background-position: 0% 0%;
-    margin: $message-margin;
-    padding: $message-padding;
-  }
-
-  &.status,
-  &.warning,
-  &.error {
-    background-image: none;
-  }
-
-  &.status {
-    border: $message-status-border;
-    color: $message-status-color;
-  }
-
-  &.warning {
-    border: $message-warning-border;
-    color: $message-warning-color;
-  }
-
-  &.error {
-    border: $message-error-border;
-    color: $message-error-color;
-  }
-}
-
-div.status,
-table tr.ok {
-  background-color: $message-status-background;
-}
-
-div.status,
-.ok {
-  color: $message-status-color;
-}
-
-div.warning,
-table tr.warning {
-  background-color: $message-warning-background;
-}
-
-div.warning,
-.warning {
-  color: $message-warning-color;
-}
-
-div.error,
-table tr.error {
-  background-color: $message-error-background;
-}
-
-div.error,
-.error,
-.marker,
-.form-required {
-  color: $message-error-color;
 }
 
 // Menu tree

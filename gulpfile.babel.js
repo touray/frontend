@@ -45,16 +45,16 @@ const config = {
     sass        : paths.dirs().sass,
     bundle_exec : true,
     time        : true,
-    sourcemap   : PROD ? false : true,
-    comments    : PROD ? false : true
+    sourcemap   : (PROD) ? false : true,
+    comments    : (PROD) ? false : true
   },
   default: ['compass', 'htmlmin', 'js-transpile', 'kss'],
   kss: {
     // Relative to src directory
     css: ['../dist/css/global.css'],
     homepage: '../../README.md',
-    js: [
-      '../dist/js/app.js']
+    js: ['../dist/js/app.js'],
+    title: 'Frontend Build Docs'
   },
   paths: {
     fonts: src + '/font/**/*',
@@ -150,7 +150,7 @@ gulp.task('js-transpile', ['js-lint'], () => {
     .pipe(source(filename))
     .pipe(buffer())
     .pipe(uglify())
-    .pipe(sourcemaps.init({loadMaps: true}))
+    .pipe(sourcemaps.init())
     .pipe(sourcemaps.write('./dist/js/maps'))
     .pipe(gulp.dest(paths.dirs().js));
   };
@@ -167,7 +167,8 @@ gulp.task('kss', ['compass'], () => {
     css: config.kss.css,
     js: config.kss.js,
     homepage: config.kss.homepage,
-    title: config.kss.title
+    title: config.kss.title,
+    builder: 'node_modules/michelangelo/kss_styleguide/custom-template/'
   });
 });
 
@@ -188,7 +189,7 @@ gulp.task('uncss', ['compass', 'htmlmin'], () => {
 
 // Task: watch
 gulp.task('watch', () => {
-  gulp.watch(paths.dirs().sass + '/**/*.scss', ['kss']);
+  gulp.watch([paths.dirs().sass + '/**/*.scss', 'README.md'], ['kss']);
   gulp.watch(config.paths.srcImg, ['images']);
   gulp.watch(config.paths.srcHtml, ['htmlmin']);
   gulp.watch(config.paths.fonts, ['copy-fonts']);

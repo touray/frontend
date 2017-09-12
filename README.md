@@ -7,7 +7,7 @@
 [![Gratipay User](https://img.shields.io/gratipay/user/bmarshall511.svg)](https://gratipay.com/~bmarshall511/)
 [![Beerpay](https://beerpay.io/bmarshall511/frontend/badge.svg?style=flat)](https://beerpay.io/bmarshall511/frontend)
 
-> Frontend Build is a light-weight, no-bloat, front-end build framework. It's purpose is to give developers a jumpstart utilizing <a href="https://gulpjs.com/" target="_blank">Gulp</a> to automate repetitive tasks, a <a href="http://getbem.com/" target="_blank">BEM CSS methodology</a> for a standards-driven approach, pre-loaded with the <a href="http://foundation.zurb.com/" target="_blank">Foundation</a> front-end framework (easily add others or even your own!) and integrated with <a href="https://babeljs.io/" target="_blank">Babel</a> allowing developers to use the next generation JavaScript.
+Frontend Build is a light-weight, no-bloat, front-end build framework. It's purpose is to give developers a jumpstart utilizing <a href="https://gulpjs.com/" target="_blank">Gulp</a> to automate repetitive tasks, a <a href="http://getbem.com/" target="_blank">BEM CSS methodology</a> for a standards-driven approach, pre-loaded with the <a href="http://foundation.zurb.com/" target="_blank">Foundation</a> front-end framework (easily add others or even your own!) and integrated with <a href="https://babeljs.io/" target="_blank">Babel</a> allowing developers to use the next generation JavaScript.
 
 **If you're viewing this at https://github.com/bmarshall511/frontend, you're reading the documentation for the master branch.
 [View documentation for the latest release.](https://github.com/bmarshall511/frontend/tree/latest#readme)**

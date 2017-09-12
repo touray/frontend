@@ -1,394 +1,302 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>KSS Style Guide</title>
+<html>
+  <head>
+    <title>Frontend Build Docs</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="generator" content="kss-node">
 
-  <meta name="description" content="">
-  <meta name="generator" content="kss-node">
-  <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,300">
+    <link rel="stylesheet" href="kss-assets/vendor/prism.css">
+    <link rel="stylesheet" href="kss-assets/css/kss.css">
+    <link rel="stylesheet" href="../dist/css/global.css">
 
-  <link rel="stylesheet" href="kss-assets/kss.css">
-  <link rel="stylesheet" href="../dist/css/global.css">
+  </head>
 
-</head>
-<body id="kss-node" >
+  <body class="kss-body">
 
-<div class="kss-sidebar kss-style">
-  <header class="kss-header">
-    <h1 class="kss-doc-title">KSS Style Guide</h1>
-  </header>
-  <nav class="kss-nav">
-    <ul class="kss-nav__menu">
-      <li class="kss-nav__menu-item">
-        <a class="kss-nav__menu-link" href="./">
-          <span class="kss-nav__ref">0</span
-          ><span class="kss-nav__name">Overview</span>
+    <!-- header. -->
+    <header class="kss-header">
+      <section class="kss-header__inner">
+        <a class="kss-header__hamburger-trigger">
+          <div class="kss-header__hamburger"></div>
         </a>
-      </li>
-      <li class="kss-nav__menu-item">
-        <a class="kss-nav__menu-link" href="section-components.html">
-          <span class="kss-nav__ref">1</span><span class="kss-nav__name">Components</span>
-        </a>
-      </li>
-      <li class="kss-nav__menu-item">
-        <a class="kss-nav__menu-link" href="section-framework.html">
-          <span class="kss-nav__ref">2</span><span class="kss-nav__name">Framework</span>
-        </a>
-      </li>
-      <li class="kss-nav__menu-item">
-        <a class="kss-nav__menu-link" href="section-frontend.html">
-          <span class="kss-nav__ref">3</span><span class="kss-nav__name">Frontend Build</span>
-        </a>
-            <ul class="kss-nav__menu-child">
-              <li class="kss-nav__menu-item">
-                <a class="kss-nav__menu-link" href="section-frontend.html#kssref-frontend-common">
-                  <span class="kss-nav__ref ">3.1</span
-                  ><span class="kss-nav__name">Common</span>
-                </a>
-              </li>
-              <li class="kss-nav__menu-item">
-                <a class="kss-nav__menu-link" href="section-frontend.html#kssref-frontend-common-container">
-                  <span class="kss-nav__ref kss-nav__ref-child">3.1.1</span
-                  ><span class="kss-nav__name">Container</span>
-                </a>
-              </li>
-              <li class="kss-nav__menu-item">
-                <a class="kss-nav__menu-link" href="section-frontend.html#kssref-frontend-common-css-grid">
-                  <span class="kss-nav__ref kss-nav__ref-child">3.1.2</span
-                  ><span class="kss-nav__name">CSS Grid</span>
-                </a>
-              </li>
-              <li class="kss-nav__menu-item">
-                <a class="kss-nav__menu-link" href="section-frontend.html#kssref-frontend-drupal">
-                  <span class="kss-nav__ref ">3.2</span
-                  ><span class="kss-nav__name">Drupal</span>
-                </a>
-              </li>
-              <li class="kss-nav__menu-item">
-                <a class="kss-nav__menu-link" href="section-frontend.html#kssref-frontend-drupal-drupal7">
-                  <span class="kss-nav__ref kss-nav__ref-child">3.2.1</span
-                  ><span class="kss-nav__name">Drupal 7</span>
-                </a>
-              </li>
-              <li class="kss-nav__menu-item">
-                <a class="kss-nav__menu-link" href="section-frontend.html#kssref-frontend-drupal-modules">
-                  <span class="kss-nav__ref kss-nav__ref-child">3.2.2</span
-                  ><span class="kss-nav__name">Drupal Modules</span>
-                </a>
-              </li>
-              <li class="kss-nav__menu-item">
-                <a class="kss-nav__menu-link" href="section-frontend.html#kssref-frontend-extendables">
-                  <span class="kss-nav__ref ">3.3</span
-                  ><span class="kss-nav__name">Extendables</span>
-                </a>
-              </li>
-              <li class="kss-nav__menu-item">
-                <a class="kss-nav__menu-link" href="section-frontend.html#kssref-frontend-mixins">
-                  <span class="kss-nav__ref ">3.4</span
-                  ><span class="kss-nav__name">Mixins</span>
-                </a>
-              </li>
-              <li class="kss-nav__menu-item">
-                <a class="kss-nav__menu-link" href="section-frontend.html#kssref-frontend-mixins-container">
-                  <span class="kss-nav__ref kss-nav__ref-child">3.4.1</span
-                  ><span class="kss-nav__name">Container</span>
-                </a>
-              </li>
-              <li class="kss-nav__menu-item">
-                <a class="kss-nav__menu-link" href="section-frontend.html#kssref-frontend-mixins-grid">
-                  <span class="kss-nav__ref kss-nav__ref-child">3.4.2</span
-                  ><span class="kss-nav__name">CSS Grid</span>
-                </a>
-              </li>
-              <li class="kss-nav__menu-item">
-                <a class="kss-nav__menu-link" href="section-frontend.html#kssref-frontend-mixins-grid-item">
-                  <span class="kss-nav__ref kss-nav__ref-child">3.4.3</span
-                  ><span class="kss-nav__name">CSS Grid Item</span>
-                </a>
-              </li>
-              <li class="kss-nav__menu-item">
-                <a class="kss-nav__menu-link" href="section-frontend.html#kssref-frontend-variables">
-                  <span class="kss-nav__ref ">3.5</span
-                  ><span class="kss-nav__name">Variables</span>
-                </a>
-              </li>
-              <li class="kss-nav__menu-item">
-                <a class="kss-nav__menu-link" href="section-frontend.html#kssref-frontend-wordpress">
-                  <span class="kss-nav__ref ">3.6</span
-                  ><span class="kss-nav__name">WordPress</span>
-                </a>
-              </li>
-              <li class="kss-nav__menu-item">
-                <a class="kss-nav__menu-link" href="section-frontend.html#kssref-frontend-wordpress-wysiwyg">
-                  <span class="kss-nav__ref kss-nav__ref-child">3.6.1</span
-                  ><span class="kss-nav__name">WYSIWYG Editor</span>
-                </a>
-              </li>
-            </ul>
-      </li>
-      <li class="kss-nav__menu-item">
-        <a class="kss-nav__menu-link" href="section-global.html">
-          <span class="kss-nav__ref">4</span><span class="kss-nav__name">Global Style Sheet</span>
-        </a>
-      </li>
-      <li class="kss-nav__menu-item">
-        <a class="kss-nav__menu-link" href="section-motion-ui.html">
-          <span class="kss-nav__ref">5</span><span class="kss-nav__name">Motion UI</span>
-        </a>
-      </li>
-      <li class="kss-nav__menu-item">
-        <a class="kss-nav__menu-link" href="section-variables.html">
-          <span class="kss-nav__ref">6</span><span class="kss-nav__name">Custom Variables</span>
-        </a>
-      </li>
-    </ul>
-  </nav>
-</div>
-<article role="main" class="kss-main">
+        <h1 class="kss-header__title kss-title">Frontend Build Docs</h1>
+      </section>
+    </header>
+    <!-- /header. -->
 
-    <div id="kssref-frontend" class="kss-section kss-section--depth-1 ">
 
-      <div class="kss-style">
-        <h1 class="kss-title kss-title--level-1">
-          <a class="kss-title__permalink" href="#kssref-frontend">
-            <span class="kss-title__ref">
-              3
-              <span class="kss-title__permalink-hash">
-                  #frontend
-              </span>
-            </span>
-            Frontend Build
+    <!-- navigation. -->
+    <section class="kss-navigation">
+      <h1 class="kss-navigation__title kss-title">Frontend Build Docs</h1>
+      <ul class="kss-nav">
+        <li class="kss-nav__item">
+          <a href="index.html">
+            <span class="kss-nav__ref">0</span>
+            <span class="kss-nav__name">Introduction</span>
           </a>
-        </h1>
-
-
-          <div class="kss-description">
-            <p>Frontend Build comes with pre-built starter components to help speed up
-theming for common projects. Comment/uncomment accordingly.</p>
-
-          </div>
-
-      </div>
-
-
-        <div class="kss-source kss-style">
-          Source: <code>global.scss</code>, line 28
-        </div>
-
-    </div>
-    <section id="kssref-frontend-common" class="kss-section kss-section--depth-2 ">
-
-      <div class="kss-style">
-        <h2 class="kss-title kss-title--level-2">
-          <a class="kss-title__permalink" href="#kssref-frontend-common">
-            <span class="kss-title__ref">
-              3.1
-              <span class="kss-title__permalink-hash">
-                  #frontend.common
-              </span>
-            </span>
-            Common
-          </a>
-        </h2>
-
-
-          <div class="kss-description">
-            <p>Custom Frontend Build common classes. All classes here are also available as a sass extendable.</p>
-
-          </div>
-
-      </div>
-
-
-        <div class="kss-source kss-style">
-          Source: <code>frontend/_common.scss</code>, line 1
-        </div>
-
+        </li>
+          <li class="kss-nav__item">
+            <a class="" href="section-global.html">
+              <span class="kss-nav__ref">1</span>
+              <span class="kss-nav__name">Global Style Sheet</span>
+            </a>
+          </li>
+          <li class="kss-nav__item">
+            <a class="" href="section-variables.html">
+              <span class="kss-nav__ref">2</span>
+              <span class="kss-nav__name">Custom Variables</span>
+            </a>
+          </li>
+          <li class="kss-nav__item">
+            <a class="" href="section-framework.html">
+              <span class="kss-nav__ref">3</span>
+              <span class="kss-nav__name">Framework</span>
+            </a>
+          </li>
+          <li class="kss-nav__item">
+            <a class="" href="section-motion-ui-import-motion-ui-include-motion-ui-transitions-include-motion-ui-animations-.html">
+              <span class="kss-nav__ref">4</span>
+              <span class="kss-nav__name">Motion UI</span>
+            </a>
+          </li>
+          <li class="kss-nav__item">
+            <a class="kss-state-active" href="section-frontend.html">
+              <span class="kss-nav__ref">5</span>
+              <span class="kss-nav__name">Frontend Build</span>
+            </a>
+                <ul class="kss-nav__subnav">
+                    <li class="kss-nav__item ">
+                      <a href="section-frontend.html#kssref-frontend-common">
+                        <span class="kss-nav__ref">5.1</span>
+                        <span class="kss-nav__name">Common</span>
+                      </a>
+                    </li>
+                    <li class="kss-nav__item kss-nav__item--grandchild">
+                      <a href="section-frontend.html#kssref-frontend-common-container">
+                        <span class="kss-nav__ref">5.1.1</span>
+                        <span class="kss-nav__name">Container</span>
+                      </a>
+                    </li>
+                    <li class="kss-nav__item kss-nav__item--grandchild">
+                      <a href="section-frontend.html#kssref-frontend-common-css-grid">
+                        <span class="kss-nav__ref">5.1.2</span>
+                        <span class="kss-nav__name">CSS Grid</span>
+                      </a>
+                    </li>
+                    <li class="kss-nav__item ">
+                      <a href="section-frontend.html#kssref-frontend-extendables">
+                        <span class="kss-nav__ref">5.2</span>
+                        <span class="kss-nav__name">Extendables</span>
+                      </a>
+                    </li>
+                    <li class="kss-nav__item ">
+                      <a href="section-frontend.html#kssref-frontend-mixins">
+                        <span class="kss-nav__ref">5.3</span>
+                        <span class="kss-nav__name">Mixins</span>
+                      </a>
+                    </li>
+                    <li class="kss-nav__item kss-nav__item--grandchild">
+                      <a href="section-frontend.html#kssref-frontend-mixins-container">
+                        <span class="kss-nav__ref">5.3.1</span>
+                        <span class="kss-nav__name">container($width)</span>
+                      </a>
+                    </li>
+                    <li class="kss-nav__item kss-nav__item--grandchild">
+                      <a href="section-frontend.html#kssref-frontend-mixins-grid">
+                        <span class="kss-nav__ref">5.3.2</span>
+                        <span class="kss-nav__name">css-grid($columns, $rows, $column-gaps, $grid-row-gaps, $type)</span>
+                      </a>
+                    </li>
+                    <li class="kss-nav__item kss-nav__item--grandchild">
+                      <a href="section-frontend.html#kssref-frontend-mixins-grid-item">
+                        <span class="kss-nav__ref">5.3.3</span>
+                        <span class="kss-nav__name">css-grid-item($column-start, $column-end, $row-start, $row-end)</span>
+                      </a>
+                    </li>
+                    <li class="kss-nav__item ">
+                      <a href="section-frontend.html#kssref-frontend-variables">
+                        <span class="kss-nav__ref">5.4</span>
+                        <span class="kss-nav__name">Variables</span>
+                      </a>
+                    </li>
+                    <li class="kss-nav__item kss-nav__item--grandchild">
+                      <a href="section-frontend.html#kssref-frontend-variables-globals">
+                        <span class="kss-nav__ref">5.4.1</span>
+                        <span class="kss-nav__name">Globals</span>
+                      </a>
+                    </li>
+                    <li class="kss-nav__item kss-nav__item--grandchild">
+                      <a href="section-frontend.html#kssref-frontend-variables-colors">
+                        <span class="kss-nav__ref">5.4.2</span>
+                        <span class="kss-nav__name">Color Scheme</span>
+                      </a>
+                    </li>
+                    <li class="kss-nav__item kss-nav__item--grandchild">
+                      <a href="section-frontend.html#kssref-frontend-variables-css-grid">
+                        <span class="kss-nav__ref">5.4.3</span>
+                        <span class="kss-nav__name">CSS Grid</span>
+                      </a>
+                    </li>
+                    <li class="kss-nav__item kss-nav__item--grandchild">
+                      <a href="section-frontend.html#kssref-frontend-variables-progress-bar">
+                        <span class="kss-nav__ref">5.4.4</span>
+                        <span class="kss-nav__name">Progress Bar</span>
+                      </a>
+                    </li>
+                    <li class="kss-nav__item ">
+                      <a href="section-frontend.html#kssref-frontend-drupal">
+                        <span class="kss-nav__ref">5.5</span>
+                        <span class="kss-nav__name">Drupal</span>
+                      </a>
+                    </li>
+                    <li class="kss-nav__item kss-nav__item--grandchild">
+                      <a href="section-frontend.html#kssref-frontend-drupal-drupal7">
+                        <span class="kss-nav__ref">5.5.1</span>
+                        <span class="kss-nav__name">Drupal 7</span>
+                      </a>
+                    </li>
+                    <li class="kss-nav__item kss-nav__item--grandchild">
+                      <a href="section-frontend.html#kssref-frontend-drupal-modules">
+                        <span class="kss-nav__ref">5.5.2</span>
+                        <span class="kss-nav__name">Drupal Modules</span>
+                      </a>
+                    </li>
+                    <li class="kss-nav__item ">
+                      <a href="section-frontend.html#kssref-frontend-wordpress">
+                        <span class="kss-nav__ref">5.6</span>
+                        <span class="kss-nav__name">WordPress</span>
+                      </a>
+                    </li>
+                    <li class="kss-nav__item kss-nav__item--grandchild">
+                      <a href="section-frontend.html#kssref-frontend-wordpress-wysiwyg">
+                        <span class="kss-nav__ref">5.6.1</span>
+                        <span class="kss-nav__name">WYSIWYG Editor</span>
+                      </a>
+                    </li>
+                </ul>
+          </li>
+          <li class="kss-nav__item">
+            <a class="" href="section-components.html">
+              <span class="kss-nav__ref">6</span>
+              <span class="kss-nav__name">Components</span>
+            </a>
+          </li>
+      </ul>
     </section>
-    <section id="kssref-frontend-common-container" class="kss-section kss-section--depth-3 ">
+    <!-- /navigation. -->
 
-      <div class="kss-style">
-        <h3 class="kss-title kss-title--level-3">
-          <a class="kss-title__permalink" href="#kssref-frontend-common-container">
-            <span class="kss-title__ref">
-              3.1.1
-              <span class="kss-title__permalink-hash">
-                  #frontend.common.container
-              </span>
-            </span>
-            Container
-          </a>
-        </h3>
 
-          <p class="kss-toolbar">
-              <a href="#kssref-frontend-common-container" data-kss-fullscreen="kssref-frontend-common-container">
-                <span class="kss-toolbar__tooltip">Toggle full screen</span>
-                <svg class="off" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
-                  <path class="kss-toolbar__icon-fill" d="M64 0v26l-10-10-12 12-6-6 12-12-10-10zM28 42l-12 12 10 10h-26v-26l10 10 12-12z"></path>
-                </svg>
-                <svg class="on" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
-                  <path class="kss-toolbar__icon-fill" d="M28 36v26l-10-10-12 12-6-6 12-12-10-10zM64 6l-12 12 10 10h-26v-26l10 10 12-12z"></path>
-                </svg>
+    <!-- documentation. -->
+    <section class="kss-documentation">
+
+        <!--
+          display each section, in order.
+          the "root" element comes first in this loop, and can be detected using
+          the "#if @first" block as seen below.
+        -->
+            <header class="kss-section kss-section--depth-1" id="kssref-frontend">
+
+            <article class="kss-section__content">
+                <p class="kss-section__source">Source: <span>global.scss</span>, line <span>32</span></p>
+
+              <a class="kss-section__permalink" href="#kssref-frontend">
+                <h1 class="kss-section__item kss-section__item--depth-1">
+                  <span class="kss-section__ref">5</span>
+                  <span class="kss-section__name">Frontend Build</span>
+                </h1>
               </a>
-              <a href="item-frontend-common-container.html" target="_blank">
-                <span class="kss-toolbar__tooltip">Open in new window</span>
-                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
-                  <rect x="0" y="20" width="40" height="44" fill="#fff"/>
-                  <path class="kss-toolbar__icon-fill" d="M40,64l-40,0l0,-44l40,0l0,44Zm-36,-40l0,36l32,0l0,-36l-32,0Z"/>
-                  <rect class="kss-toolbar__icon-fill" x="0" y="20" width="40" height="10"/>
-                  <rect x="24" y="0" width="40" height="44" fill="#fff"/>
-                  <path class="kss-toolbar__icon-fill" d="M64,44l-40,0l0,-44l40,0l0,44Zm-36,-40l0,36l32,0l0,-36l-32,0Z"/>
-                  <rect class="kss-toolbar__icon-fill" x="24" y="0" width="40" height="10"/>
-                </svg>
-              </a>
-            <a href="#kssref-frontend-common-container" data-kss-guides="true">
-              <span class="kss-toolbar__tooltip">Toggle example guides</span>
-              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
-                <rect class="kss-toolbar__icon-fill" x="5" y="35" width="5" height="9"/>
-                <rect class="kss-toolbar__icon-fill" x="54" y="21" width="5" height="9"/>
-                <rect class="kss-toolbar__icon-fill" x="54" y="35" width="5" height="9"/>
-                <rect class="kss-toolbar__icon-fill" x="5" y="21" width="5" height="9"/>
-                <rect class="kss-toolbar__icon-fill" x="5" y="0" width="5" height="15"/>
-                <rect class="kss-toolbar__icon-fill" x="35" y="5" width="9" height="5"/>
-                <rect class="kss-toolbar__icon-fill" x="20" y="5" width="9" height="5"/>
-                <rect class="kss-toolbar__icon-fill" x="0" y="5" width="15" height="5"/>
-                <rect class="kss-toolbar__icon-fill" x="54" y="0" width="5" height="15"/>
-                <rect class="kss-toolbar__icon-fill" x="49" y="5" width="15" height="5"/>
-                <rect class="kss-toolbar__icon-fill" x="54" y="49" width="5" height="15"/>
-                <rect class="kss-toolbar__icon-fill" x="49" y="54" width="15" height="5"/>
-                <rect class="kss-toolbar__icon-fill" x="5" y="49" width="5" height="15"/>
-                <rect class="kss-toolbar__icon-fill" x="0" y="54" width="15" height="5"/>
-                <rect class="kss-toolbar__icon-fill" x="35" y="54" width="9" height="5"/>
-                <rect class="kss-toolbar__icon-fill" x="20" y="54" width="9" height="5"/>
-              </svg>
-            </a>
-            <a href="#kssref-frontend-common-container" data-kss-markup="true">
-              <span class="kss-toolbar__tooltip">Toggle HTML markup</span>
-              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
-                <path class="kss-toolbar__icon-fill" d="M37.555,46.239l6.103,6.103l20.342,-20.342l-20.342,-20.342l-6.103,6.103l14.24,14.239l-14.24,14.239Z"/>
-                <path class="kss-toolbar__icon-fill" d="M26.445,17.761l-6.103,-6.103l-20.342,20.342l20.342,20.342l6.103,-6.103l-14.24,-14.239l14.24,-14.239Z"/>
-              </svg>
-            </a>
-          </p>
 
-          <div class="kss-description">
-            <p>Creates a max width container, designed to house your grid content.</p>
-
-          </div>
-
-      </div>
-
-        <div class="kss-modifier__wrapper">
-          <div class="kss-modifier__heading kss-style">
-            Example
-          </div>
-
-
-          <div class="kss-modifier__example">
-            <div class="container">
-  <code>.container</code>
+                <div class="kss-section__description"><p>Frontend Build comes with pre-built starter components to help speed up
+theming for common projects.</p>
 </div>
-            <div class="kss-modifier__example-footer"></div>
-          </div>
 
-        </div>
+            </article>
 
-          <details class="kss-markup kss-style">
-            <summary>
-                Markup
-            </summary>
-            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class&#x3D;&quot;container&quot;&gt;
-  &lt;code&gt;.container&lt;/code&gt;
+
+            </header>
+            <section class="kss-section kss-section--depth-2" id="kssref-frontend-common">
+
+            <article class="kss-section__content">
+                <p class="kss-section__source">Source: <span>frontend/_common.scss</span>, line <span>1</span></p>
+
+              <a class="kss-section__permalink" href="#kssref-frontend-common">
+                <h2 class="kss-section__item kss-section__item--depth-2">
+                  <span class="kss-section__ref">5.1</span>
+                  <span class="kss-section__name">Common</span>
+                </h2>
+              </a>
+
+                <div class="kss-section__description"><p>Optional common classes. <em>All classes here are also available as a <a href="#kssref-frontend-extendables">extendable</a>.</em></p>
+</div>
+
+            </article>
+
+
+            </section>
+            <section class="kss-section kss-section--depth-3" id="kssref-frontend-common-container">
+
+            <article class="kss-section__content">
+                <p class="kss-section__source">Source: <span>frontend/_common.scss</span>, line <span>7</span></p>
+
+              <a class="kss-section__permalink" href="#kssref-frontend-common-container">
+                <h3 class="kss-section__item kss-section__item--depth-3">
+                  <span class="kss-section__ref">5.1.1</span>
+                  <span class="kss-section__name">Container</span>
+                </h3>
+              </a>
+
+
+            </article>
+
+              <article class="kss-section__modifiers">
+                <h1 class="kss-modifiers__heading">Examples</h1>
+
+                  <h2 class="kss-modifiers__name">Default styling</h2>
+
+                <div class="kss-modifiers__example"><div class="container">
+  <!-- Container content -->
+</div></div>
+
+                  <h2 class="kss-modifiers__name">.container</h2>
+
+                  <p class="kss-modifiers__description">Creates a max width container, designed to house your grid content.</p>
+
+                  <div class="kss-modifiers__example"><div class="container">
+  <!-- Container content -->
+</div></div>
+              </article>
+
+                <article class="kss-section__markup">
+                  <pre><code class="language-markup">&lt;div class&#x3D;&quot;container&quot;&gt;
+  &lt;!-- Container content --&gt;
 &lt;/div&gt;</code></pre>
-          </details>
+                </article>
 
-        <div class="kss-source kss-style">
-          Source: <code>frontend/_common.scss</code>, line 7
-        </div>
+            </section>
+            <section class="kss-section kss-section--depth-3" id="kssref-frontend-common-css-grid">
 
-    </section>
-    <section id="kssref-frontend-common-css-grid" class="kss-section kss-section--depth-3 ">
+            <article class="kss-section__content">
+                <p class="kss-section__source">Source: <span>frontend/_common.scss</span>, line <span>21</span></p>
 
-      <div class="kss-style">
-        <h3 class="kss-title kss-title--level-3">
-          <a class="kss-title__permalink" href="#kssref-frontend-common-css-grid">
-            <span class="kss-title__ref">
-              3.1.2
-              <span class="kss-title__permalink-hash">
-                  #frontend.common.css-grid
-              </span>
-            </span>
-            CSS Grid
-          </a>
-        </h3>
-
-          <p class="kss-toolbar">
-              <a href="#kssref-frontend-common-css-grid" data-kss-fullscreen="kssref-frontend-common-css-grid">
-                <span class="kss-toolbar__tooltip">Toggle full screen</span>
-                <svg class="off" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
-                  <path class="kss-toolbar__icon-fill" d="M64 0v26l-10-10-12 12-6-6 12-12-10-10zM28 42l-12 12 10 10h-26v-26l10 10 12-12z"></path>
-                </svg>
-                <svg class="on" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
-                  <path class="kss-toolbar__icon-fill" d="M28 36v26l-10-10-12 12-6-6 12-12-10-10zM64 6l-12 12 10 10h-26v-26l10 10 12-12z"></path>
-                </svg>
+              <a class="kss-section__permalink" href="#kssref-frontend-common-css-grid">
+                <h3 class="kss-section__item kss-section__item--depth-3">
+                  <span class="kss-section__ref">5.1.2</span>
+                  <span class="kss-section__name">CSS Grid</span>
+                </h3>
               </a>
-              <a href="item-frontend-common-css-grid.html" target="_blank">
-                <span class="kss-toolbar__tooltip">Open in new window</span>
-                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
-                  <rect x="0" y="20" width="40" height="44" fill="#fff"/>
-                  <path class="kss-toolbar__icon-fill" d="M40,64l-40,0l0,-44l40,0l0,44Zm-36,-40l0,36l32,0l0,-36l-32,0Z"/>
-                  <rect class="kss-toolbar__icon-fill" x="0" y="20" width="40" height="10"/>
-                  <rect x="24" y="0" width="40" height="44" fill="#fff"/>
-                  <path class="kss-toolbar__icon-fill" d="M64,44l-40,0l0,-44l40,0l0,44Zm-36,-40l0,36l32,0l0,-36l-32,0Z"/>
-                  <rect class="kss-toolbar__icon-fill" x="24" y="0" width="40" height="10"/>
-                </svg>
-              </a>
-            <a href="#kssref-frontend-common-css-grid" data-kss-guides="true">
-              <span class="kss-toolbar__tooltip">Toggle example guides</span>
-              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
-                <rect class="kss-toolbar__icon-fill" x="5" y="35" width="5" height="9"/>
-                <rect class="kss-toolbar__icon-fill" x="54" y="21" width="5" height="9"/>
-                <rect class="kss-toolbar__icon-fill" x="54" y="35" width="5" height="9"/>
-                <rect class="kss-toolbar__icon-fill" x="5" y="21" width="5" height="9"/>
-                <rect class="kss-toolbar__icon-fill" x="5" y="0" width="5" height="15"/>
-                <rect class="kss-toolbar__icon-fill" x="35" y="5" width="9" height="5"/>
-                <rect class="kss-toolbar__icon-fill" x="20" y="5" width="9" height="5"/>
-                <rect class="kss-toolbar__icon-fill" x="0" y="5" width="15" height="5"/>
-                <rect class="kss-toolbar__icon-fill" x="54" y="0" width="5" height="15"/>
-                <rect class="kss-toolbar__icon-fill" x="49" y="5" width="15" height="5"/>
-                <rect class="kss-toolbar__icon-fill" x="54" y="49" width="5" height="15"/>
-                <rect class="kss-toolbar__icon-fill" x="49" y="54" width="15" height="5"/>
-                <rect class="kss-toolbar__icon-fill" x="5" y="49" width="5" height="15"/>
-                <rect class="kss-toolbar__icon-fill" x="0" y="54" width="15" height="5"/>
-                <rect class="kss-toolbar__icon-fill" x="35" y="54" width="9" height="5"/>
-                <rect class="kss-toolbar__icon-fill" x="20" y="54" width="9" height="5"/>
-              </svg>
-            </a>
-            <a href="#kssref-frontend-common-css-grid" data-kss-markup="true">
-              <span class="kss-toolbar__tooltip">Toggle HTML markup</span>
-              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
-                <path class="kss-toolbar__icon-fill" d="M37.555,46.239l6.103,6.103l20.342,-20.342l-20.342,-20.342l-6.103,6.103l14.24,14.239l-14.24,14.239Z"/>
-                <path class="kss-toolbar__icon-fill" d="M26.445,17.761l-6.103,-6.103l-20.342,20.342l20.342,20.342l6.103,-6.103l-14.24,-14.239l14.24,-14.239Z"/>
-              </svg>
-            </a>
-          </p>
-
-          <div class="kss-description">
-            <p>Sets up a CSS grid container. <i>View in Firefox inspector to see a grid overlay.</i></p>
-
-          </div>
-
-      </div>
-
-        <div class="kss-modifier__wrapper">
-          <div class="kss-modifier__heading kss-style">
-            Example
-          </div>
 
 
-          <div class="kss-modifier__example">
-            <div class="css-grid">
+            </article>
+
+              <article class="kss-section__modifiers">
+                <h1 class="kss-modifiers__heading">Examples</h1>
+
+                  <h2 class="kss-modifiers__name">Default styling</h2>
+
+                <div class="kss-modifiers__example"><div class="css-grid">
   <div>1</div>
   <div>2</div>
   <div>3</div>
@@ -404,17 +312,33 @@ theming for common projects. Comment/uncomment accordingly.</p>
   <div>13</div>
   <div>14</div>
   <div>15</div>
-</div>
-            <div class="kss-modifier__example-footer"></div>
-          </div>
+</div></div>
 
-        </div>
+                  <h2 class="kss-modifiers__name">.css-grid</h2>
 
-          <details class="kss-markup kss-style">
-            <summary>
-                Markup
-            </summary>
-            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class&#x3D;&quot;css-grid&quot;&gt;
+                  <p class="kss-modifiers__description">Sets up a CSS grid container. <i>View in Firefox inspector to see a grid overlay.</i></p>
+
+                  <div class="kss-modifiers__example"><div class="css-grid">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+  <div>4</div>
+  <div>5</div>
+  <div>6</div>
+  <div>7</div>
+  <div>8</div>
+  <div>9</div>
+  <div>10</div>
+  <div>11</div>
+  <div>12</div>
+  <div>13</div>
+  <div>14</div>
+  <div>15</div>
+</div></div>
+              </article>
+
+                <article class="kss-section__markup">
+                  <pre><code class="language-markup">&lt;div class&#x3D;&quot;css-grid&quot;&gt;
   &lt;div&gt;1&lt;/div&gt;
   &lt;div&gt;2&lt;/div&gt;
   &lt;div&gt;3&lt;/div&gt;
@@ -431,644 +355,827 @@ theming for common projects. Comment/uncomment accordingly.</p>
   &lt;div&gt;14&lt;/div&gt;
   &lt;div&gt;15&lt;/div&gt;
 &lt;/div&gt;</code></pre>
-          </details>
+                </article>
 
-        <div class="kss-source kss-style">
-          Source: <code>frontend/_common.scss</code>, line 21
-        </div>
+            </section>
+            <section class="kss-section kss-section--depth-2" id="kssref-frontend-extendables">
 
-    </section>
-    <section id="kssref-frontend-drupal" class="kss-section kss-section--depth-2 ">
+            <article class="kss-section__content">
+                <p class="kss-section__source">Source: <span>frontend/_extendables.scss</span>, line <span>1</span></p>
 
-      <div class="kss-style">
-        <h2 class="kss-title kss-title--level-2">
-          <a class="kss-title__permalink" href="#kssref-frontend-drupal">
-            <span class="kss-title__ref">
-              3.2
-              <span class="kss-title__permalink-hash">
-                  #frontend.drupal
-              </span>
-            </span>
-            Drupal
-          </a>
-        </h2>
-
-
-
-      </div>
-
-
-        <div class="kss-source kss-style">
-          Source: <code>global.scss</code>, line 39
-        </div>
-
-    </section>
-    <section id="kssref-frontend-drupal-drupal7" class="kss-section kss-section--depth-3 ">
-
-      <div class="kss-style">
-        <h3 class="kss-title kss-title--level-3">
-          <a class="kss-title__permalink" href="#kssref-frontend-drupal-drupal7">
-            <span class="kss-title__ref">
-              3.2.1
-              <span class="kss-title__permalink-hash">
-                  #frontend.drupal.drupal7
-              </span>
-            </span>
-            Drupal 7
-          </a>
-        </h3>
-
-
-          <div class="kss-description">
-            <p>Contains default Drupal 7 styles. Available scss variables:<br></p>
-<p><h5>Site Messages</h5></p>
-<ul>
-  <li><code>$message-margin</code></li>
-  <li><code>$message-padding</code></li>
-  <li><code>$message-error-background</code></li>
-  <li><code>$message-error-border</code></li>
-  <li><code>$message-error-color</code></li>
-  <li><code>$message-status-background</code></li>
-  <li><code>$message-status-border</code></li>
-  <li><code>$message-status-color</code></li>
-  <li><code>$message-warning-background</code></li>
-  <li><code>$message-warning-border</code></li>
-  <li><code>$message-warning-color</code></li>
-</ul>
-<h5>Progress Bar</h5>
-<ul>
-  <li><code>$progress-bar-background</code></li>
-  <li><code>$progress-bar-border</code></li>
-  <li><code>$progress-bar-margin</code></li>
-  <li><code>$progress-bar-radius</code></li>
-  <li><code>$progress-filled-background</code></li>
-  <li><code>$progress-height</code></li>
-  <li><code>$progress-weight</code></li>
-</ul>
-<h5>Password Strength</h5>
-<ul>
-  <li><code>$password-strength-margin</code></li>
-  <li><code>$password-strength-width</code></li>
-  <li><code>$password-indicator-background</code></li>
-  <li><code>$password-indicator-fill-background</code></li>
-  <li><code>$password-indicator-height</code></li>
-</ul>
-          </div>
-
-      </div>
-
-
-        <div class="kss-source kss-style">
-          Source: <code>frontend/drupal/_drupal7.scss</code>, line 1
-        </div>
-
-    </section>
-    <section id="kssref-frontend-drupal-modules" class="kss-section kss-section--depth-3 ">
-
-      <div class="kss-style">
-        <h3 class="kss-title kss-title--level-3">
-          <a class="kss-title__permalink" href="#kssref-frontend-drupal-modules">
-            <span class="kss-title__ref">
-              3.2.2
-              <span class="kss-title__permalink-hash">
-                  #frontend.drupal.modules
-              </span>
-            </span>
-            Drupal Modules
-          </a>
-        </h3>
-
-
-
-      </div>
-
-
-        <div class="kss-source kss-style">
-          Source: <code>global.scss</code>, line 45
-        </div>
-
-    </section>
-    <section id="kssref-frontend-drupal-modules-styleguide" class="kss-section kss-section--depth-4 ">
-
-      <div class="kss-style">
-        <h4 class="kss-title kss-title--level-4">
-          <a class="kss-title__permalink" href="#kssref-frontend-drupal-modules-styleguide">
-            <span class="kss-title__ref">
-              3.2.2.1
-              <span class="kss-title__permalink-hash">
-                  #frontend.drupal.modules.styleguide
-              </span>
-            </span>
-            Styleguide
-          </a>
-        </h4>
-
-
-          <div class="kss-description">
-            <p>Contains default Styleguide module styles. Available scss variables:<br></p>
-<ul>
-  <li><code>$styleguide-header-background</code></li>
-  <li><code>$styleguide-header-border</code></li>
-  <li><code>$styleguide-header-color</code></li>
-  <li><code>$styleguide-header-padding</code></li>
-</ul>
-          </div>
-
-      </div>
-
-
-        <div class="kss-source kss-style">
-          Source: <code>frontend/drupal/modules/_styleguide.scss</code>, line 1
-        </div>
-
-    </section>
-    <section id="kssref-frontend-extendables" class="kss-section kss-section--depth-2 ">
-
-      <div class="kss-style">
-        <h2 class="kss-title kss-title--level-2">
-          <a class="kss-title__permalink" href="#kssref-frontend-extendables">
-            <span class="kss-title__ref">
-              3.3
-              <span class="kss-title__permalink-hash">
-                  #frontend.extendables
-              </span>
-            </span>
-            Extendables
-          </a>
-        </h2>
-
-
-          <div class="kss-description">
-            <p>Custom Frontend Build extendables.</p>
-
-          </div>
-
-      </div>
-
-
-        <div class="kss-source kss-style">
-          Source: <code>frontend/_extendables.scss</code>, line 1
-        </div>
-
-    </section>
-    <section id="kssref-frontend-mixins" class="kss-section kss-section--depth-2 ">
-
-      <div class="kss-style">
-        <h2 class="kss-title kss-title--level-2">
-          <a class="kss-title__permalink" href="#kssref-frontend-mixins">
-            <span class="kss-title__ref">
-              3.4
-              <span class="kss-title__permalink-hash">
-                  #frontend.mixins
-              </span>
-            </span>
-            Mixins
-          </a>
-        </h2>
-
-
-          <div class="kss-description">
-            <p>Custom Frontend Build mixins.</p>
-
-          </div>
-
-      </div>
-
-
-        <div class="kss-source kss-style">
-          Source: <code>frontend/_mixins.scss</code>, line 1
-        </div>
-
-    </section>
-    <section id="kssref-frontend-mixins-container" class="kss-section kss-section--depth-3 ">
-
-      <div class="kss-style">
-        <h3 class="kss-title kss-title--level-3">
-          <a class="kss-title__permalink" href="#kssref-frontend-mixins-container">
-            <span class="kss-title__ref">
-              3.4.1
-              <span class="kss-title__permalink-hash">
-                  #frontend.mixins.container
-              </span>
-            </span>
-            Container
-          </a>
-        </h3>
-
-          <p class="kss-toolbar">
-              <a href="#kssref-frontend-mixins-container" data-kss-fullscreen="kssref-frontend-mixins-container">
-                <span class="kss-toolbar__tooltip">Toggle full screen</span>
-                <svg class="off" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
-                  <path class="kss-toolbar__icon-fill" d="M64 0v26l-10-10-12 12-6-6 12-12-10-10zM28 42l-12 12 10 10h-26v-26l10 10 12-12z"></path>
-                </svg>
-                <svg class="on" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
-                  <path class="kss-toolbar__icon-fill" d="M28 36v26l-10-10-12 12-6-6 12-12-10-10zM64 6l-12 12 10 10h-26v-26l10 10 12-12z"></path>
-                </svg>
+              <a class="kss-section__permalink" href="#kssref-frontend-extendables">
+                <h2 class="kss-section__item kss-section__item--depth-2">
+                  <span class="kss-section__ref">5.2</span>
+                  <span class="kss-section__name">Extendables</span>
+                </h2>
               </a>
-              <a href="item-frontend-mixins-container.html" target="_blank">
-                <span class="kss-toolbar__tooltip">Open in new window</span>
-                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
-                  <rect x="0" y="20" width="40" height="44" fill="#fff"/>
-                  <path class="kss-toolbar__icon-fill" d="M40,64l-40,0l0,-44l40,0l0,44Zm-36,-40l0,36l32,0l0,-36l-32,0Z"/>
-                  <rect class="kss-toolbar__icon-fill" x="0" y="20" width="40" height="10"/>
-                  <rect x="24" y="0" width="40" height="44" fill="#fff"/>
-                  <path class="kss-toolbar__icon-fill" d="M64,44l-40,0l0,-44l40,0l0,44Zm-36,-40l0,36l32,0l0,-36l-32,0Z"/>
-                  <rect class="kss-toolbar__icon-fill" x="24" y="0" width="40" height="10"/>
-                </svg>
+
+                <div class="kss-section__description"><p>Custom Frontend Build extendables.</p>
+</div>
+
+            </article>
+
+
+            </section>
+            <section class="kss-section kss-section--depth-2" id="kssref-frontend-mixins">
+
+            <article class="kss-section__content">
+                <p class="kss-section__source">Source: <span>frontend/_mixins.scss</span>, line <span>1</span></p>
+
+              <a class="kss-section__permalink" href="#kssref-frontend-mixins">
+                <h2 class="kss-section__item kss-section__item--depth-2">
+                  <span class="kss-section__ref">5.3</span>
+                  <span class="kss-section__name">Mixins</span>
+                </h2>
               </a>
-            <a href="#kssref-frontend-mixins-container" data-kss-guides="true">
-              <span class="kss-toolbar__tooltip">Toggle example guides</span>
-              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
-                <rect class="kss-toolbar__icon-fill" x="5" y="35" width="5" height="9"/>
-                <rect class="kss-toolbar__icon-fill" x="54" y="21" width="5" height="9"/>
-                <rect class="kss-toolbar__icon-fill" x="54" y="35" width="5" height="9"/>
-                <rect class="kss-toolbar__icon-fill" x="5" y="21" width="5" height="9"/>
-                <rect class="kss-toolbar__icon-fill" x="5" y="0" width="5" height="15"/>
-                <rect class="kss-toolbar__icon-fill" x="35" y="5" width="9" height="5"/>
-                <rect class="kss-toolbar__icon-fill" x="20" y="5" width="9" height="5"/>
-                <rect class="kss-toolbar__icon-fill" x="0" y="5" width="15" height="5"/>
-                <rect class="kss-toolbar__icon-fill" x="54" y="0" width="5" height="15"/>
-                <rect class="kss-toolbar__icon-fill" x="49" y="5" width="15" height="5"/>
-                <rect class="kss-toolbar__icon-fill" x="54" y="49" width="5" height="15"/>
-                <rect class="kss-toolbar__icon-fill" x="49" y="54" width="15" height="5"/>
-                <rect class="kss-toolbar__icon-fill" x="5" y="49" width="5" height="15"/>
-                <rect class="kss-toolbar__icon-fill" x="0" y="54" width="15" height="5"/>
-                <rect class="kss-toolbar__icon-fill" x="35" y="54" width="9" height="5"/>
-                <rect class="kss-toolbar__icon-fill" x="20" y="54" width="9" height="5"/>
-              </svg>
-            </a>
-            <a href="#kssref-frontend-mixins-container" data-kss-markup="true">
-              <span class="kss-toolbar__tooltip">Toggle HTML markup</span>
-              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
-                <path class="kss-toolbar__icon-fill" d="M37.555,46.239l6.103,6.103l20.342,-20.342l-20.342,-20.342l-6.103,6.103l14.24,14.239l-14.24,14.239Z"/>
-                <path class="kss-toolbar__icon-fill" d="M26.445,17.761l-6.103,-6.103l-20.342,20.342l20.342,20.342l6.103,-6.103l-14.24,-14.239l14.24,-14.239Z"/>
-              </svg>
-            </a>
-          </p>
 
-          <div class="kss-description">
-            <p>Creates a max width container, designed to house your grid content.</p>
+                <div class="kss-section__description"><p>These are the default Frontend Build mixins. Frontend uses <a href="http://foundation.zurb.com/" target="_blank">Foundation</a> by default and if enabled provides a wide range of other mixins not listed below.</p>
+</div>
 
-          </div>
-
-      </div>
-
-        <div class="kss-modifier__wrapper">
-          <div class="kss-modifier__heading kss-style">
-            Example
-          </div>
+            </article>
 
 
-          <div class="kss-modifier__example">
-            <ul>
-  <li><code>$width</code>: <code>numeric value</code><br>Default: <code>$css-grid-columns</code><br><i>Defines the max width.</i></li>
-</ul>
-<code>@include container($width);</code>
-            <div class="kss-modifier__example-footer"></div>
-          </div>
+            </section>
+            <section class="kss-section kss-section--depth-3" id="kssref-frontend-mixins-container">
 
-        </div>
+            <article class="kss-section__content">
+                <p class="kss-section__source">Source: <span>frontend/_mixins.scss</span>, line <span>7</span></p>
 
-          <details class="kss-markup kss-style">
-            <summary>
-                Markup
-            </summary>
-            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;ul&gt;
-  &lt;li&gt;&lt;code&gt;$width&lt;/code&gt;: &lt;code&gt;numeric value&lt;/code&gt;&lt;br&gt;Default: &lt;code&gt;$css-grid-columns&lt;/code&gt;&lt;br&gt;&lt;i&gt;Defines the max width.&lt;/i&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;code&gt;@include container($width);&lt;/code&gt;</code></pre>
-          </details>
-
-        <div class="kss-source kss-style">
-          Source: <code>frontend/_mixins.scss</code>, line 7
-        </div>
-
-    </section>
-    <section id="kssref-frontend-mixins-grid" class="kss-section kss-section--depth-3 ">
-
-      <div class="kss-style">
-        <h3 class="kss-title kss-title--level-3">
-          <a class="kss-title__permalink" href="#kssref-frontend-mixins-grid">
-            <span class="kss-title__ref">
-              3.4.2
-              <span class="kss-title__permalink-hash">
-                  #frontend.mixins.grid
-              </span>
-            </span>
-            CSS Grid
-          </a>
-        </h3>
-
-          <p class="kss-toolbar">
-              <a href="#kssref-frontend-mixins-grid" data-kss-fullscreen="kssref-frontend-mixins-grid">
-                <span class="kss-toolbar__tooltip">Toggle full screen</span>
-                <svg class="off" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
-                  <path class="kss-toolbar__icon-fill" d="M64 0v26l-10-10-12 12-6-6 12-12-10-10zM28 42l-12 12 10 10h-26v-26l10 10 12-12z"></path>
-                </svg>
-                <svg class="on" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
-                  <path class="kss-toolbar__icon-fill" d="M28 36v26l-10-10-12 12-6-6 12-12-10-10zM64 6l-12 12 10 10h-26v-26l10 10 12-12z"></path>
-                </svg>
+              <a class="kss-section__permalink" href="#kssref-frontend-mixins-container">
+                <h3 class="kss-section__item kss-section__item--depth-3">
+                  <span class="kss-section__ref">5.3.1</span>
+                  <span class="kss-section__name">container($width)</span>
+                </h3>
               </a>
-              <a href="item-frontend-mixins-grid.html" target="_blank">
-                <span class="kss-toolbar__tooltip">Open in new window</span>
-                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
-                  <rect x="0" y="20" width="40" height="44" fill="#fff"/>
-                  <path class="kss-toolbar__icon-fill" d="M40,64l-40,0l0,-44l40,0l0,44Zm-36,-40l0,36l32,0l0,-36l-32,0Z"/>
-                  <rect class="kss-toolbar__icon-fill" x="0" y="20" width="40" height="10"/>
-                  <rect x="24" y="0" width="40" height="44" fill="#fff"/>
-                  <path class="kss-toolbar__icon-fill" d="M64,44l-40,0l0,-44l40,0l0,44Zm-36,-40l0,36l32,0l0,-36l-32,0Z"/>
-                  <rect class="kss-toolbar__icon-fill" x="24" y="0" width="40" height="10"/>
-                </svg>
+
+                <div class="kss-section__description"><p>Creates a max width container, designed to house your grid content.</p>
+<p>Compatible in IE6+, Firefox 2+, Safari 4+, Chrome 49+.</p>
+</div>
+
+                <ul class="kss-parameters">
+                  <li class="kss-parameters__item">
+                    <p class="kss-parameters__description">
+                      Defines the container max width. Default: <code>$global-width</code>
+
+                    </p>
+                    <code class="kss-parameters__name">$width</code>
+                  </li>
+                </ul>
+            </article>
+
+
+            </section>
+            <section class="kss-section kss-section--depth-3" id="kssref-frontend-mixins-grid">
+
+            <article class="kss-section__content">
+                <p class="kss-section__source">Source: <span>frontend/_mixins.scss</span>, line <span>23</span></p>
+
+              <a class="kss-section__permalink" href="#kssref-frontend-mixins-grid">
+                <h3 class="kss-section__item kss-section__item--depth-3">
+                  <span class="kss-section__ref">5.3.2</span>
+                  <span class="kss-section__name">css-grid($columns, $rows, $column-gaps, $grid-row-gaps, $type)</span>
+                </h3>
               </a>
-            <a href="#kssref-frontend-mixins-grid" data-kss-guides="true">
-              <span class="kss-toolbar__tooltip">Toggle example guides</span>
-              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
-                <rect class="kss-toolbar__icon-fill" x="5" y="35" width="5" height="9"/>
-                <rect class="kss-toolbar__icon-fill" x="54" y="21" width="5" height="9"/>
-                <rect class="kss-toolbar__icon-fill" x="54" y="35" width="5" height="9"/>
-                <rect class="kss-toolbar__icon-fill" x="5" y="21" width="5" height="9"/>
-                <rect class="kss-toolbar__icon-fill" x="5" y="0" width="5" height="15"/>
-                <rect class="kss-toolbar__icon-fill" x="35" y="5" width="9" height="5"/>
-                <rect class="kss-toolbar__icon-fill" x="20" y="5" width="9" height="5"/>
-                <rect class="kss-toolbar__icon-fill" x="0" y="5" width="15" height="5"/>
-                <rect class="kss-toolbar__icon-fill" x="54" y="0" width="5" height="15"/>
-                <rect class="kss-toolbar__icon-fill" x="49" y="5" width="15" height="5"/>
-                <rect class="kss-toolbar__icon-fill" x="54" y="49" width="5" height="15"/>
-                <rect class="kss-toolbar__icon-fill" x="49" y="54" width="15" height="5"/>
-                <rect class="kss-toolbar__icon-fill" x="5" y="49" width="5" height="15"/>
-                <rect class="kss-toolbar__icon-fill" x="0" y="54" width="15" height="5"/>
-                <rect class="kss-toolbar__icon-fill" x="35" y="54" width="9" height="5"/>
-                <rect class="kss-toolbar__icon-fill" x="20" y="54" width="9" height="5"/>
-              </svg>
-            </a>
-            <a href="#kssref-frontend-mixins-grid" data-kss-markup="true">
-              <span class="kss-toolbar__tooltip">Toggle HTML markup</span>
-              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
-                <path class="kss-toolbar__icon-fill" d="M37.555,46.239l6.103,6.103l20.342,-20.342l-20.342,-20.342l-6.103,6.103l14.24,14.239l-14.24,14.239Z"/>
-                <path class="kss-toolbar__icon-fill" d="M26.445,17.761l-6.103,-6.103l-20.342,20.342l20.342,20.342l6.103,-6.103l-14.24,-14.239l14.24,-14.239Z"/>
-              </svg>
-            </a>
-          </p>
 
-          <div class="kss-description">
-            <p>Creates a CSS grid container. <i>View in Firefox inspector to see a grid overlay.</i></p>
+                <div class="kss-section__description"><p>Creates a CSS grid container. <i>To debug, view in Firefox inspector and enable the grid overlay.</i></p>
+<p>Compatible in IE11+, Firefox 54+, Safari 10.1+, Chrome 59+.</p>
+</div>
 
-          </div>
+                <ul class="kss-parameters">
+                  <li class="kss-parameters__item">
+                    <p class="kss-parameters__description">
+                      Defines the number of grid columns. Default: <code>$css-grid-columns</code>
 
-      </div>
+                    </p>
+                    <code class="kss-parameters__name">$columns</code>
+                  </li>
+                  <li class="kss-parameters__item">
+                    <p class="kss-parameters__description">
+                      Defines the number of grid rows. Default: <code>(small: none, medium: none)</code>
 
-        <div class="kss-modifier__wrapper">
-          <div class="kss-modifier__heading kss-style">
-            Example
-          </div>
+                    </p>
+                    <code class="kss-parameters__name">$rows</code>
+                  </li>
+                  <li class="kss-parameters__item">
+                    <p class="kss-parameters__description">
+                      Specifies the size of the grid lines between the columns. Default: <code>$css-grid-column-gaps</code>
+
+                    </p>
+                    <code class="kss-parameters__name">$column-gaps</code>
+                  </li>
+                  <li class="kss-parameters__item">
+                    <p class="kss-parameters__description">
+                      Specifies the size of the grid lines between the rows. Default: <code>$css-grid-row-gaps</code>
+
+                    </p>
+                    <code class="kss-parameters__name">$row-gaps</code>
+                  </li>
+                  <li class="kss-parameters__item">
+                    <p class="kss-parameters__description">
+                      Defines the grid formatting context. Default: <code>grid</code>
+
+                    </p>
+                    <code class="kss-parameters__name">$type</code>
+                  </li>
+                </ul>
+            </article>
 
 
-          <div class="kss-modifier__example">
-            <ul>
-  <li><code>$grid-columns</code>: <code>responsive list</code><br>Default: <code>$css-grid-columns</code><br><i>Defines the number of grid columns.</i></li>
-  <li><code>$grid-rows</code>: <code>responsive list</code><br>Default: <code>(small: none, medium: none)</code><br><i>Defines the number of grid rows.</i></li>
-  <li><code>$grid-column-gaps</code>: <code>responsive list</code><br>Default: <code>$css-grid-column-gaps</code><br><i>Specifies the size of the grid lines between the columns.</i></li>
-  <li><code>$grid-row-gaps</code>: <code>responsive list</code><br>Default: <code>$css-grid-row-gaps</code><br><i>Specifies the size of the grid lines between the rows.</i></li>
-  <li><code>$type</code>: <code>grid|inline-grid|subgrid</code><br>Default: <code>grid</code><br><i>Defines the grid formatting context.</i></li>
-</ul>
-<code>@include css-grid($grid-columns, $grid-rows, $grid-column-gaps, $grid-row-gaps, $type);</code>
-            <div class="kss-modifier__example-footer"></div>
-          </div>
+            </section>
+            <section class="kss-section kss-section--depth-3" id="kssref-frontend-mixins-grid-item">
 
-        </div>
+            <article class="kss-section__content">
+                <p class="kss-section__source">Source: <span>frontend/_mixins.scss</span>, line <span>52</span></p>
 
-          <details class="kss-markup kss-style">
-            <summary>
-                Markup
-            </summary>
-            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;ul&gt;
-  &lt;li&gt;&lt;code&gt;$grid-columns&lt;/code&gt;: &lt;code&gt;responsive list&lt;/code&gt;&lt;br&gt;Default: &lt;code&gt;$css-grid-columns&lt;/code&gt;&lt;br&gt;&lt;i&gt;Defines the number of grid columns.&lt;/i&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;code&gt;$grid-rows&lt;/code&gt;: &lt;code&gt;responsive list&lt;/code&gt;&lt;br&gt;Default: &lt;code&gt;(small: none, medium: none)&lt;/code&gt;&lt;br&gt;&lt;i&gt;Defines the number of grid rows.&lt;/i&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;code&gt;$grid-column-gaps&lt;/code&gt;: &lt;code&gt;responsive list&lt;/code&gt;&lt;br&gt;Default: &lt;code&gt;$css-grid-column-gaps&lt;/code&gt;&lt;br&gt;&lt;i&gt;Specifies the size of the grid lines between the columns.&lt;/i&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;code&gt;$grid-row-gaps&lt;/code&gt;: &lt;code&gt;responsive list&lt;/code&gt;&lt;br&gt;Default: &lt;code&gt;$css-grid-row-gaps&lt;/code&gt;&lt;br&gt;&lt;i&gt;Specifies the size of the grid lines between the rows.&lt;/i&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;code&gt;$type&lt;/code&gt;: &lt;code&gt;grid|inline-grid|subgrid&lt;/code&gt;&lt;br&gt;Default: &lt;code&gt;grid&lt;/code&gt;&lt;br&gt;&lt;i&gt;Defines the grid formatting context.&lt;/i&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;code&gt;@include css-grid($grid-columns, $grid-rows, $grid-column-gaps, $grid-row-gaps, $type);&lt;/code&gt;</code></pre>
-          </details>
-
-        <div class="kss-source kss-style">
-          Source: <code>frontend/_mixins.scss</code>, line 25
-        </div>
-
-    </section>
-    <section id="kssref-frontend-mixins-grid-item" class="kss-section kss-section--depth-3 ">
-
-      <div class="kss-style">
-        <h3 class="kss-title kss-title--level-3">
-          <a class="kss-title__permalink" href="#kssref-frontend-mixins-grid-item">
-            <span class="kss-title__ref">
-              3.4.3
-              <span class="kss-title__permalink-hash">
-                  #frontend.mixins.grid-item
-              </span>
-            </span>
-            CSS Grid Item
-          </a>
-        </h3>
-
-          <p class="kss-toolbar">
-              <a href="#kssref-frontend-mixins-grid-item" data-kss-fullscreen="kssref-frontend-mixins-grid-item">
-                <span class="kss-toolbar__tooltip">Toggle full screen</span>
-                <svg class="off" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
-                  <path class="kss-toolbar__icon-fill" d="M64 0v26l-10-10-12 12-6-6 12-12-10-10zM28 42l-12 12 10 10h-26v-26l10 10 12-12z"></path>
-                </svg>
-                <svg class="on" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
-                  <path class="kss-toolbar__icon-fill" d="M28 36v26l-10-10-12 12-6-6 12-12-10-10zM64 6l-12 12 10 10h-26v-26l10 10 12-12z"></path>
-                </svg>
+              <a class="kss-section__permalink" href="#kssref-frontend-mixins-grid-item">
+                <h3 class="kss-section__item kss-section__item--depth-3">
+                  <span class="kss-section__ref">5.3.3</span>
+                  <span class="kss-section__name">css-grid-item($column-start, $column-end, $row-start, $row-end)</span>
+                </h3>
               </a>
-              <a href="item-frontend-mixins-grid-item.html" target="_blank">
-                <span class="kss-toolbar__tooltip">Open in new window</span>
-                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
-                  <rect x="0" y="20" width="40" height="44" fill="#fff"/>
-                  <path class="kss-toolbar__icon-fill" d="M40,64l-40,0l0,-44l40,0l0,44Zm-36,-40l0,36l32,0l0,-36l-32,0Z"/>
-                  <rect class="kss-toolbar__icon-fill" x="0" y="20" width="40" height="10"/>
-                  <rect x="24" y="0" width="40" height="44" fill="#fff"/>
-                  <path class="kss-toolbar__icon-fill" d="M64,44l-40,0l0,-44l40,0l0,44Zm-36,-40l0,36l32,0l0,-36l-32,0Z"/>
-                  <rect class="kss-toolbar__icon-fill" x="24" y="0" width="40" height="10"/>
-                </svg>
+
+                <div class="kss-section__description"><p>Creates a CSS grid container item. <i>View in Firefox inspector to see a grid overlay.</i></p>
+<p>Compatible in IE11+, Firefox 54+, Safari 10.1+, Chrome 59+.</p>
+</div>
+
+                <ul class="kss-parameters">
+                  <li class="kss-parameters__item">
+                    <p class="kss-parameters__description">
+                      Defines which column the grid item should start at. Default: <code>(small: auto, medium: auto)</code>
+
+                    </p>
+                    <code class="kss-parameters__name">$column-start</code>
+                  </li>
+                  <li class="kss-parameters__item">
+                    <p class="kss-parameters__description">
+                      Defines which column the grid item should end at. Default: <code>(small: auto, medium: auto)</code>
+
+                    </p>
+                    <code class="kss-parameters__name">$column-end</code>
+                  </li>
+                  <li class="kss-parameters__item">
+                    <p class="kss-parameters__description">
+                      Defines which row the grid item should start at. Default: <code>(small: auto, medium: auto)</code>
+
+                    </p>
+                    <code class="kss-parameters__name">$row-start</code>
+                  </li>
+                  <li class="kss-parameters__item">
+                    <p class="kss-parameters__description">
+                      Defines which row the grid item should end at. Default: <code>(small: auto, medium: auto)</code>
+
+                    </p>
+                    <code class="kss-parameters__name">$row-end</code>
+                  </li>
+                </ul>
+            </article>
+
+
+            </section>
+            <section class="kss-section kss-section--depth-2" id="kssref-frontend-variables">
+
+            <article class="kss-section__content">
+                <p class="kss-section__source">Source: <span>frontend/_variables.scss</span>, line <span>1</span></p>
+
+              <a class="kss-section__permalink" href="#kssref-frontend-variables">
+                <h2 class="kss-section__item kss-section__item--depth-2">
+                  <span class="kss-section__ref">5.4</span>
+                  <span class="kss-section__name">Variables</span>
+                </h2>
               </a>
-            <a href="#kssref-frontend-mixins-grid-item" data-kss-guides="true">
-              <span class="kss-toolbar__tooltip">Toggle example guides</span>
-              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
-                <rect class="kss-toolbar__icon-fill" x="5" y="35" width="5" height="9"/>
-                <rect class="kss-toolbar__icon-fill" x="54" y="21" width="5" height="9"/>
-                <rect class="kss-toolbar__icon-fill" x="54" y="35" width="5" height="9"/>
-                <rect class="kss-toolbar__icon-fill" x="5" y="21" width="5" height="9"/>
-                <rect class="kss-toolbar__icon-fill" x="5" y="0" width="5" height="15"/>
-                <rect class="kss-toolbar__icon-fill" x="35" y="5" width="9" height="5"/>
-                <rect class="kss-toolbar__icon-fill" x="20" y="5" width="9" height="5"/>
-                <rect class="kss-toolbar__icon-fill" x="0" y="5" width="15" height="5"/>
-                <rect class="kss-toolbar__icon-fill" x="54" y="0" width="5" height="15"/>
-                <rect class="kss-toolbar__icon-fill" x="49" y="5" width="15" height="5"/>
-                <rect class="kss-toolbar__icon-fill" x="54" y="49" width="5" height="15"/>
-                <rect class="kss-toolbar__icon-fill" x="49" y="54" width="15" height="5"/>
-                <rect class="kss-toolbar__icon-fill" x="5" y="49" width="5" height="15"/>
-                <rect class="kss-toolbar__icon-fill" x="0" y="54" width="15" height="5"/>
-                <rect class="kss-toolbar__icon-fill" x="35" y="54" width="9" height="5"/>
-                <rect class="kss-toolbar__icon-fill" x="20" y="54" width="9" height="5"/>
-              </svg>
-            </a>
-            <a href="#kssref-frontend-mixins-grid-item" data-kss-markup="true">
-              <span class="kss-toolbar__tooltip">Toggle HTML markup</span>
-              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
-                <path class="kss-toolbar__icon-fill" d="M37.555,46.239l6.103,6.103l20.342,-20.342l-20.342,-20.342l-6.103,6.103l14.24,14.239l-14.24,14.239Z"/>
-                <path class="kss-toolbar__icon-fill" d="M26.445,17.761l-6.103,-6.103l-20.342,20.342l20.342,20.342l6.103,-6.103l-14.24,-14.239l14.24,-14.239Z"/>
-              </svg>
-            </a>
-          </p>
 
-          <div class="kss-description">
-            <p>Creates a CSS grid container item. <i>View in Firefox inspector to see a grid overlay.</i></p>
+                <div class="kss-section__description"><p>These are the default variables for Frontend Build. If <a href="http://foundation.zurb.com/" target="_blank">Foundation</a> is enabled, matching variable names from this file override those in Foundation&#39;s settings file. To add/edit variables, use <code>scss/_variables.scss</code>.</p>
+</div>
 
-          </div>
-
-      </div>
-
-        <div class="kss-modifier__wrapper">
-          <div class="kss-modifier__heading kss-style">
-            Example
-          </div>
+            </article>
 
 
-          <div class="kss-modifier__example">
-            <ul>
-  <li><code>$column-start</code>: <code>responsive list</code><br>Default: <code>(small: auto, medium: auto)</code><br><i>Defines which column the grid item should start at.</i></li>
-  <li><code>$column-end</code>: <code>responsive list</code><br>Default: <code>(small: auto, medium: auto)</code><br><i>Defines which column the grid item should end at.</i></li>
-  <li><code>$row-start</code>: <code>responsive list</code><br>Default: <code>(small: auto, medium: auto)</code><br><i>Defines which row the grid item should start at.</i></li>
-  <li><code>$row-end</code>: <code>responsive list</code><br>Default: <code>(small: auto, medium: auto)</code><br><i>Defines which row the grid item should end at.</i></li>
-</ul>
-<code>@include css-grid-item($column-start, $column-end, $row-start, $row-end);</code>
-            <div class="kss-modifier__example-footer"></div>
-          </div>
+            </section>
+            <section class="kss-section kss-section--depth-3" id="kssref-frontend-variables-globals">
 
-        </div>
+            <article class="kss-section__content">
+                <p class="kss-section__source">Source: <span>frontend/_variables.scss</span>, line <span>7</span></p>
 
-          <details class="kss-markup kss-style">
-            <summary>
-                Markup
-            </summary>
-            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;ul&gt;
-  &lt;li&gt;&lt;code&gt;$column-start&lt;/code&gt;: &lt;code&gt;responsive list&lt;/code&gt;&lt;br&gt;Default: &lt;code&gt;(small: auto, medium: auto)&lt;/code&gt;&lt;br&gt;&lt;i&gt;Defines which column the grid item should start at.&lt;/i&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;code&gt;$column-end&lt;/code&gt;: &lt;code&gt;responsive list&lt;/code&gt;&lt;br&gt;Default: &lt;code&gt;(small: auto, medium: auto)&lt;/code&gt;&lt;br&gt;&lt;i&gt;Defines which column the grid item should end at.&lt;/i&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;code&gt;$row-start&lt;/code&gt;: &lt;code&gt;responsive list&lt;/code&gt;&lt;br&gt;Default: &lt;code&gt;(small: auto, medium: auto)&lt;/code&gt;&lt;br&gt;&lt;i&gt;Defines which row the grid item should start at.&lt;/i&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;code&gt;$row-end&lt;/code&gt;: &lt;code&gt;responsive list&lt;/code&gt;&lt;br&gt;Default: &lt;code&gt;(small: auto, medium: auto)&lt;/code&gt;&lt;br&gt;&lt;i&gt;Defines which row the grid item should end at.&lt;/i&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;code&gt;@include css-grid-item($column-start, $column-end, $row-start, $row-end);&lt;/code&gt;</code></pre>
-          </details>
+              <a class="kss-section__permalink" href="#kssref-frontend-variables-globals">
+                <h3 class="kss-section__item kss-section__item--depth-3">
+                  <span class="kss-section__ref">5.4.1</span>
+                  <span class="kss-section__name">Globals</span>
+                </h3>
+              </a>
 
-        <div class="kss-source kss-style">
-          Source: <code>frontend/_mixins.scss</code>, line 56
-        </div>
+                <div class="kss-section__description"><p>These are the default global variables. To add/edit, use <code>scss/_variables.scss</code>.</p>
+</div>
 
-    </section>
-    <section id="kssref-frontend-variables" class="kss-section kss-section--depth-2 ">
+                <ul class="kss-parameters">
+                  <li class="kss-parameters__item">
+                    <p class="kss-parameters__description">
+                      Defines the application&#39;s global width. Default: <code>rem-calc(1200)</code>
 
-      <div class="kss-style">
-        <h2 class="kss-title kss-title--level-2">
-          <a class="kss-title__permalink" href="#kssref-frontend-variables">
-            <span class="kss-title__ref">
-              3.5
-              <span class="kss-title__permalink-hash">
-                  #frontend.variables
-              </span>
-            </span>
-            Variables
-          </a>
-        </h2>
+                    </p>
+                    <code class="kss-parameters__name">$global-width</code>
+                  </li>
+                  <li class="kss-parameters__item">
+                    <p class="kss-parameters__description">
+                      Defines the application&#39;s global margin. Default: <code>1rem</code>
 
+                    </p>
+                    <code class="kss-parameters__name">$global-margin</code>
+                  </li>
+                  <li class="kss-parameters__item">
+                    <p class="kss-parameters__description">
+                      Defines the application&#39;s global padding. Default: <code>1rem</code>
 
-          <div class="kss-description">
-            <p>The variables file for Frontend Build components. Foundation is used by default in Frontend Build, so uses it&#39;s settings to define many of the default Frontend Build component variables. It&#39;s best to edit those variables from Foundation&#39;s <code>scss/framework/foundation/_settings.scss</code>. All other variables and custom variables should be defined in the <code>scss/_variables.scss</code> file.</p>
-<p><h5>Globals</h5></p>
-<ul>
-  <li><code>$global-width</code>: <code>$global-width</code> (<em>Foundation setting</em>)</li>
-  <li><code>$global-margin</code>: <code>$global-margin</code> (<em>Foundation setting</em>)</li>
-  <li><code>$global-padding</code>: <code>$global-padding</code> (<em>Foundation setting</em>)</li>
-  <li><code>$global-radius</code>: <code>$global-radius</code> (<em>Foundation setting</em>)</li>
-  <li><code>$global-weight-bold</code>: <code>$global-weight-bold</code> (<em>Foundation setting</em>)</li>
-</ul>
-<h5>Colors</h5>
-<ul>
-  <li><code>$primary-color</code>: <code>$primary-color</code> (<em>Foundation setting</em>)</li>
-  <li><code>$alert-color</code>: <code>$alert-color</code> (<em>Foundation setting</em>)</li>
-  <li><code>$success-color</code>: <code>$success-color</code> (<em>Foundation setting</em>)</li>
-  <li><code>$warning-color</code>: <code>$warning-color</code> (<em>Foundation setting</em>)</li>
-  <li><code>$dark-gray</code>: <code>$dark-gray</code> (<em>Foundation setting</em>)</li>
-  <li><code>$medium-gray</code>: <code>$medium-gray</code> (<em>Foundation setting</em>)</li>
-  <li><code>$light-gray</code>: <code>$light-gray</code> (<em>Foundation setting</em>)</li>
-</ul>
-<h5>Progress Bar</h5>
-<ul>
-  <li><code>$progress-background</code>: <code>$progress-background</code> (<em>Foundation setting</em>)</li>
-  <li><code>$progress-margin-bottom</code>: <code>$progress-margin-bottom</code> (<em>Foundation setting</em>)</li>
-  <li><code>$progress-radius</code>: <code>$progress-radius</code> (<em>Foundation setting</em>)</li>
-  <li><code>$progress-meter-background</code>: <code>$progress-meter-background</code> (<em>Foundation setting</em>)</li>
-  <li><code>$progress-height</code>: <code>$progress-height</code> (<em>Foundation setting</em>)</li>
-</ul>
-<h5>CSS Grid</h5>
-<ul>
-  <li><code>$css-grid-columns</code>: <code>(small: 2, medium: $grid-columns)</code> (<em>Foundation setting</em>)</li>
-  <li><code>$css-grid-column-gaps</code>: <code>$grid-margin-gutters</code> (<em>Foundation setting</em>)</li>
-  <li><code>$css-grid-row-gaps</code>: <code>(small: 0, medium: 0)</code></li>
-</ul>
-          </div>
+                    </p>
+                    <code class="kss-parameters__name">$global-padding</code>
+                  </li>
+                  <li class="kss-parameters__item">
+                    <p class="kss-parameters__description">
+                      Defines the application&#39;s global radius. Default: <code>0</code>
 
-      </div>
+                    </p>
+                    <code class="kss-parameters__name">$global-radius</code>
+                  </li>
+                  <li class="kss-parameters__item">
+                    <p class="kss-parameters__description">
+                      Defines the application&#39;s global bold weight. Default: <code>bold</code>
+
+                    </p>
+                    <code class="kss-parameters__name">$global-weight-bold</code>
+                  </li>
+                </ul>
+            </article>
 
 
-        <div class="kss-source kss-style">
-          Source: <code>frontend/_variables.scss</code>, line 1
-        </div>
+            </section>
+            <section class="kss-section kss-section--depth-3" id="kssref-frontend-variables-colors">
 
-    </section>
-    <section id="kssref-frontend-wordpress" class="kss-section kss-section--depth-2 ">
+            <article class="kss-section__content">
+                <p class="kss-section__source">Source: <span>frontend/_variables.scss</span>, line <span>26</span></p>
 
-      <div class="kss-style">
-        <h2 class="kss-title kss-title--level-2">
-          <a class="kss-title__permalink" href="#kssref-frontend-wordpress">
-            <span class="kss-title__ref">
-              3.6
-              <span class="kss-title__permalink-hash">
-                  #frontend.wordpress
-              </span>
-            </span>
-            WordPress
-          </a>
-        </h2>
+              <a class="kss-section__permalink" href="#kssref-frontend-variables-colors">
+                <h3 class="kss-section__item kss-section__item--depth-3">
+                  <span class="kss-section__ref">5.4.2</span>
+                  <span class="kss-section__name">Color Scheme</span>
+                </h3>
+              </a>
+
+                <div class="kss-section__description"><p>These are the default color options. To add/edit, use <code>scss/_variables.scss</code>.</p>
+</div>
+
+                <ul class="kss-parameters">
+                  <li class="kss-parameters__item">
+                    <p class="kss-parameters__description">
+                      #1779ba; Primary Color
+
+                    </p>
+                    <code class="kss-parameters__name">$primary-color</code>
+                  </li>
+                  <li class="kss-parameters__item">
+                    <p class="kss-parameters__description">
+                      #cc4b37; Alert Color
+
+                    </p>
+                    <code class="kss-parameters__name">$alert-color</code>
+                  </li>
+                  <li class="kss-parameters__item">
+                    <p class="kss-parameters__description">
+                      #3adb76; Success Color
+
+                    </p>
+                    <code class="kss-parameters__name">$success-color</code>
+                  </li>
+                  <li class="kss-parameters__item">
+                    <p class="kss-parameters__description">
+                      #ffae00; Warning Color
+
+                    </p>
+                    <code class="kss-parameters__name">$warning-color</code>
+                  </li>
+                  <li class="kss-parameters__item">
+                    <p class="kss-parameters__description">
+                      #8a8a8a; Dark Gray
+
+                    </p>
+                    <code class="kss-parameters__name">$dark-gray</code>
+                  </li>
+                  <li class="kss-parameters__item">
+                    <p class="kss-parameters__description">
+                      #cacaca; Medium Gray
+
+                    </p>
+                    <code class="kss-parameters__name">$medium-gray</code>
+                  </li>
+                  <li class="kss-parameters__item">
+                    <p class="kss-parameters__description">
+                      #e6e6e6; Light Gray
+
+                    </p>
+                    <code class="kss-parameters__name">$light-gray</code>
+                  </li>
+                </ul>
+            </article>
 
 
+            </section>
+            <section class="kss-section kss-section--depth-3" id="kssref-frontend-variables-css-grid">
 
-      </div>
+            <article class="kss-section__content">
+                <p class="kss-section__source">Source: <span>frontend/_variables.scss</span>, line <span>49</span></p>
+
+              <a class="kss-section__permalink" href="#kssref-frontend-variables-css-grid">
+                <h3 class="kss-section__item kss-section__item--depth-3">
+                  <span class="kss-section__ref">5.4.3</span>
+                  <span class="kss-section__name">CSS Grid</span>
+                </h3>
+              </a>
+
+                <div class="kss-section__description"><p>These are the default options for CSS grids. To add/edit, use <code>scss/_variables.scss</code>.</p>
+</div>
+
+                <ul class="kss-parameters">
+                  <li class="kss-parameters__item">
+                    <p class="kss-parameters__description">
+                      Defines the number of columns to use in a grid using a responsive list. Default: <code>(small: 2, medium: 12)</code>
+
+                    </p>
+                    <code class="kss-parameters__name">$css-grid-columns</code>
+                  </li>
+                  <li class="kss-parameters__item">
+                    <p class="kss-parameters__description">
+                      Defines the grid&#39;s column gap using a responsive list. Default: <code>(small: 15px, medium: 30px)</code>
+
+                    </p>
+                    <code class="kss-parameters__name">$css-grid-column-gaps</code>
+                  </li>
+                  <li class="kss-parameters__item">
+                    <p class="kss-parameters__description">
+                      Defines the grid&#39;s row gap using a responsive list. Default: <code>(small: 0, medium: 0x)</code>
+
+                    </p>
+                    <code class="kss-parameters__name">$css-grid-row-gaps</code>
+                  </li>
+                </ul>
+            </article>
 
 
-        <div class="kss-source kss-style">
-          Source: <code>global.scss</code>, line 51
-        </div>
+            </section>
+            <section class="kss-section kss-section--depth-3" id="kssref-frontend-variables-progress-bar">
 
-    </section>
-    <section id="kssref-frontend-wordpress-wysiwyg" class="kss-section kss-section--depth-3 ">
+            <article class="kss-section__content">
+                <p class="kss-section__source">Source: <span>frontend/_variables.scss</span>, line <span>70</span></p>
 
-      <div class="kss-style">
-        <h3 class="kss-title kss-title--level-3">
-          <a class="kss-title__permalink" href="#kssref-frontend-wordpress-wysiwyg">
-            <span class="kss-title__ref">
-              3.6.1
-              <span class="kss-title__permalink-hash">
-                  #frontend.wordpress.wysiwyg
-              </span>
-            </span>
-            WYSIWYG Editor
-          </a>
-        </h3>
+              <a class="kss-section__permalink" href="#kssref-frontend-variables-progress-bar">
+                <h3 class="kss-section__item kss-section__item--depth-3">
+                  <span class="kss-section__ref">5.4.4</span>
+                  <span class="kss-section__name">Progress Bar</span>
+                </h3>
+              </a>
+
+                <div class="kss-section__description"><p>These are the default options for progress bars. To add/edit, use <code>scss/_variables.scss</code>.</p>
+</div>
+
+                <ul class="kss-parameters">
+                  <li class="kss-parameters__item">
+                    <p class="kss-parameters__description">
+                      Defines the background of progress bars. Default: <code>$medium-gray</code>
+
+                    </p>
+                    <code class="kss-parameters__name">$progress-background</code>
+                  </li>
+                  <li class="kss-parameters__item">
+                    <p class="kss-parameters__description">
+                      Defines the progress bar margin. Default: <code>$global-margin</code>
+
+                    </p>
+                    <code class="kss-parameters__name">$progress-margin-bottom</code>
+                  </li>
+                  <li class="kss-parameters__item">
+                    <p class="kss-parameters__description">
+                      Defines the progress bar radius. Default: <code>$global-radius</code>
+
+                    </p>
+                    <code class="kss-parameters__name">$progress-radius</code>
+                  </li>
+                  <li class="kss-parameters__item">
+                    <p class="kss-parameters__description">
+                      Defines the background of progress bar meter. Default: <code>$primary-color</code>
+
+                    </p>
+                    <code class="kss-parameters__name">$progress-meter-background</code>
+                  </li>
+                  <li class="kss-parameters__item">
+                    <p class="kss-parameters__description">
+                      Defines the height of the progress bar. Default: <code>1rem</code>
+
+                    </p>
+                    <code class="kss-parameters__name">$progress-height</code>
+                  </li>
+                </ul>
+            </article>
 
 
-          <div class="kss-description">
-            <p>When you are working with WordPress’ WYSIWYG Editor in the Edit Post screen,
+            </section>
+            <section class="kss-section kss-section--depth-2" id="kssref-frontend-drupal">
+
+            <article class="kss-section__content">
+                <p class="kss-section__source">Source: <span>global.scss</span>, line <span>45</span></p>
+
+              <a class="kss-section__permalink" href="#kssref-frontend-drupal">
+                <h2 class="kss-section__item kss-section__item--depth-2">
+                  <span class="kss-section__ref">5.5</span>
+                  <span class="kss-section__name">Drupal</span>
+                </h2>
+              </a>
+
+                <div class="kss-section__description"><p>Optional styles if your application is using <a href="https://www.drupal.org/" target="_blank">Drupal</a>.</p>
+</div>
+
+            </article>
+
+
+            </section>
+            <section class="kss-section kss-section--depth-3" id="kssref-frontend-drupal-drupal7">
+
+            <article class="kss-section__content">
+                <p class="kss-section__source">Source: <span>frontend/drupal/_drupal7.scss</span>, line <span>1</span></p>
+
+              <a class="kss-section__permalink" href="#kssref-frontend-drupal-drupal7">
+                <h3 class="kss-section__item kss-section__item--depth-3">
+                  <span class="kss-section__ref">5.5.1</span>
+                  <span class="kss-section__name">Drupal 7</span>
+                </h3>
+              </a>
+
+                <div class="kss-section__description"><p>Optional Drupal 7 component. Example styling below won&#39;t be accurate unless Drupal&#39;s stylesheets are added to the KSS config.</p>
+</div>
+
+            </article>
+
+
+            </section>
+            <section class="kss-section kss-section--depth-4" id="kssref-frontend-drupal-drupal7-variables">
+
+            <article class="kss-section__content">
+                <p class="kss-section__source">Source: <span>frontend/drupal/_drupal7.scss</span>, line <span>9</span></p>
+
+              <a class="kss-section__permalink" href="#kssref-frontend-drupal-drupal7-variables">
+                <h4 class="kss-section__item kss-section__item--depth-4">
+                  <span class="kss-section__ref">5.5.1.1</span>
+                  <span class="kss-section__name">Variables</span>
+                </h4>
+              </a>
+
+                <div class="kss-section__description"><p>Drupal 7 component variables. To add/edit component variables, use <code>scss/_variables.scss</code>.</p>
+</div>
+
+                <ul class="kss-parameters">
+                  <li class="kss-parameters__item">
+                    <p class="kss-parameters__description">
+                      Defines the site message margin. Default: <code>rem-calc($global-margin 0)</code>
+
+                    </p>
+                    <code class="kss-parameters__name">$message-margin</code>
+                  </li>
+                  <li class="kss-parameters__item">
+                    <p class="kss-parameters__description">
+                      Defines the site message padding. Default: <code>$global-padding</code>
+
+                    </p>
+                    <code class="kss-parameters__name">$message-padding</code>
+                  </li>
+                  <li class="kss-parameters__item">
+                    <p class="kss-parameters__description">
+                      Defines the site message border. Default: <code>rem-calc(1) solid</code>
+
+                    </p>
+                    <code class="kss-parameters__name">$message-border</code>
+                  </li>
+                  <li class="kss-parameters__item">
+                    <p class="kss-parameters__description">
+                      Defines the status message background. Default: <code>rgba($success-color, .5)</code>
+
+                    </p>
+                    <code class="kss-parameters__name">$message-status-background</code>
+                  </li>
+                  <li class="kss-parameters__item">
+                    <p class="kss-parameters__description">
+                      Defines the status message border. Default: <code>rem-calc(1) solid darken($success-color, 50%)</code>
+
+                    </p>
+                    <code class="kss-parameters__name">$message-status-border</code>
+                  </li>
+                  <li class="kss-parameters__item">
+                    <p class="kss-parameters__description">
+                      Defines the status message color. Default: <code>darken($success-color, 50%)</code>
+
+                    </p>
+                    <code class="kss-parameters__name">$message-status-color</code>
+                  </li>
+                  <li class="kss-parameters__item">
+                    <p class="kss-parameters__description">
+                      Defines the warning message background. Default: <code>rgba($warning-color, .5)</code>
+
+                    </p>
+                    <code class="kss-parameters__name">$message-warning-background</code>
+                  </li>
+                  <li class="kss-parameters__item">
+                    <p class="kss-parameters__description">
+                      Defines the warning message border. Default: <code>rem-calc(1) solid darken($warning-color, 50%)</code>
+
+                    </p>
+                    <code class="kss-parameters__name">$message-warning-border</code>
+                  </li>
+                  <li class="kss-parameters__item">
+                    <p class="kss-parameters__description">
+                      Defines the warning message color. Default: <code>darken($warning-color, 50%)</code>
+
+                    </p>
+                    <code class="kss-parameters__name">$message-warning-color</code>
+                  </li>
+                  <li class="kss-parameters__item">
+                    <p class="kss-parameters__description">
+                      Defines the error message background. Default: <code>rgba($alert-color, .5)</code>
+
+                    </p>
+                    <code class="kss-parameters__name">$message-error-background</code>
+                  </li>
+                  <li class="kss-parameters__item">
+                    <p class="kss-parameters__description">
+                      Defines the error message border. Default: <code>rem-calc(1) solid darken($alert-color, 50%)</code>
+
+                    </p>
+                    <code class="kss-parameters__name">$message-error-border</code>
+                  </li>
+                  <li class="kss-parameters__item">
+                    <p class="kss-parameters__description">
+                      Defines the error message color. Default: <code>darken($alert-color, 50%)</code>
+
+                    </p>
+                    <code class="kss-parameters__name">$message-error-color</code>
+                  </li>
+                  <li class="kss-parameters__item">
+                    <p class="kss-parameters__description">
+                      Defines the progress bar background. Default: <code>$progress-background</code>
+
+                    </p>
+                    <code class="kss-parameters__name">$progress-bar-background</code>
+                  </li>
+                  <li class="kss-parameters__item">
+                    <p class="kss-parameters__description">
+                      Defines the progress bar border. Default: <code>rem-calc(1) solid $medium-gray</code>
+
+                    </p>
+                    <code class="kss-parameters__name">$progress-bar-border</code>
+                  </li>
+                  <li class="kss-parameters__item">
+                    <p class="kss-parameters__description">
+                      Defines the progress bar margin. Default: <code>rem-calc($progress-margin-bottom)</code>
+
+                    </p>
+                    <code class="kss-parameters__name">$progress-bar-margin</code>
+                  </li>
+                  <li class="kss-parameters__item">
+                    <p class="kss-parameters__description">
+                      Defines the progress bar radius. Default: <code>rem-calc($progress-radius)</code>
+
+                    </p>
+                    <code class="kss-parameters__name">$progress-bar-radius</code>
+                  </li>
+                  <li class="kss-parameters__item">
+                    <p class="kss-parameters__description">
+                      Defines the progress filled background. Default: <code>$progress-meter-background</code>
+
+                    </p>
+                    <code class="kss-parameters__name">$progress-filled-background</code>
+                  </li>
+                  <li class="kss-parameters__item">
+                    <p class="kss-parameters__description">
+                      Defines the progress height. Default: <code>$progress-height</code>
+
+                    </p>
+                    <code class="kss-parameters__name">$progress-height</code>
+                  </li>
+                  <li class="kss-parameters__item">
+                    <p class="kss-parameters__description">
+                      Defines the progress weight. Default: <code>$global-weight-bold</code>
+
+                    </p>
+                    <code class="kss-parameters__name">$progress-weight</code>
+                  </li>
+                </ul>
+            </article>
+
+
+            </section>
+            <section class="kss-section kss-section--depth-4" id="kssref-frontend-drupal-drupal7-message">
+
+            <article class="kss-section__content">
+                <p class="kss-section__source">Source: <span>frontend/drupal/_drupal7.scss</span>, line <span>64</span></p>
+
+              <a class="kss-section__permalink" href="#kssref-frontend-drupal-drupal7-message">
+                <h4 class="kss-section__item kss-section__item--depth-4">
+                  <span class="kss-section__ref">5.5.1.2</span>
+                  <span class="kss-section__name">Message</span>
+                </h4>
+              </a>
+
+
+            </article>
+
+              <article class="kss-section__modifiers">
+                <h1 class="kss-modifiers__heading">Examples</h1>
+
+                  <h2 class="kss-modifiers__name">Default styling</h2>
+
+                <div class="kss-modifiers__example"><div class="messages [modifier class]">
+  Sed feugiat velit sed magna aliquam accumsan.
+</div></div>
+
+                  <h2 class="kss-modifiers__name">.messages</h2>
+
+                  <p class="kss-modifiers__description">Default message styling.</p>
+
+                  <div class="kss-modifiers__example"><div class="messages messages">
+  Sed feugiat velit sed magna aliquam accumsan.
+</div></div>
+                  <h2 class="kss-modifiers__name">.status</h2>
+
+                  <p class="kss-modifiers__description">Status styling.</p>
+
+                  <div class="kss-modifiers__example"><div class="messages status">
+  Sed feugiat velit sed magna aliquam accumsan.
+</div></div>
+                  <h2 class="kss-modifiers__name">.warning</h2>
+
+                  <p class="kss-modifiers__description">Warning styling.</p>
+
+                  <div class="kss-modifiers__example"><div class="messages warning">
+  Sed feugiat velit sed magna aliquam accumsan.
+</div></div>
+                  <h2 class="kss-modifiers__name">.error</h2>
+
+                  <p class="kss-modifiers__description">Error styling.</p>
+
+                  <div class="kss-modifiers__example"><div class="messages error">
+  Sed feugiat velit sed magna aliquam accumsan.
+</div></div>
+              </article>
+
+                <article class="kss-section__markup">
+                  <pre><code class="language-markup">&lt;div class&#x3D;&quot;messages [modifier class]&quot;&gt;
+  Sed feugiat velit sed magna aliquam accumsan.
+&lt;/div&gt;</code></pre>
+                </article>
+
+            </section>
+            <section class="kss-section kss-section--depth-4" id="kssref-frontend-drupal-drupal7-error-message">
+
+            <article class="kss-section__content">
+                <p class="kss-section__source">Source: <span>frontend/drupal/_drupal7.scss</span>, line <span>133</span></p>
+
+              <a class="kss-section__permalink" href="#kssref-frontend-drupal-drupal7-error-message">
+                <h4 class="kss-section__item kss-section__item--depth-4">
+                  <span class="kss-section__ref">5.5.1.3</span>
+                  <span class="kss-section__name">Progress Bar</span>
+                </h4>
+              </a>
+
+
+            </article>
+
+              <article class="kss-section__modifiers">
+                <h1 class="kss-modifiers__heading">Examples</h1>
+
+                  <h2 class="kss-modifiers__name">Default styling</h2>
+
+                <div class="kss-modifiers__example"><div class="progress [modifier class]">
+  <div class="bar">
+    <div class="filled" style="width: 57%"></div>
+  </div>
+  <div class="percentage">57%</div>
+  <div class="message">Curabitur quis nunc nibh.</div>
+</div></div>
+
+                  <h2 class="kss-modifiers__name">.progress</h2>
+
+                  <p class="kss-modifiers__description">Default progress bar styling.</p>
+
+                  <div class="kss-modifiers__example"><div class="progress progress">
+  <div class="bar">
+    <div class="filled" style="width: 57%"></div>
+  </div>
+  <div class="percentage">57%</div>
+  <div class="message">Curabitur quis nunc nibh.</div>
+</div></div>
+              </article>
+
+                <article class="kss-section__markup">
+                  <pre><code class="language-markup">&lt;div class&#x3D;&quot;progress [modifier class]&quot;&gt;
+  &lt;div class&#x3D;&quot;bar&quot;&gt;
+    &lt;div class&#x3D;&quot;filled&quot; style&#x3D;&quot;width: 57%&quot;&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class&#x3D;&quot;percentage&quot;&gt;57%&lt;/div&gt;
+  &lt;div class&#x3D;&quot;message&quot;&gt;Curabitur quis nunc nibh.&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                </article>
+
+            </section>
+            <section class="kss-section kss-section--depth-3" id="kssref-frontend-drupal-modules">
+
+            <article class="kss-section__content">
+                <p class="kss-section__source">Source: <span>global.scss</span>, line <span>55</span></p>
+
+              <a class="kss-section__permalink" href="#kssref-frontend-drupal-modules">
+                <h3 class="kss-section__item kss-section__item--depth-3">
+                  <span class="kss-section__ref">5.5.2</span>
+                  <span class="kss-section__name">Drupal Modules</span>
+                </h3>
+              </a>
+
+
+            </article>
+
+
+            </section>
+            <section class="kss-section kss-section--depth-4" id="kssref-frontend-drupal-modules-styleguide">
+
+            <article class="kss-section__content">
+                <p class="kss-section__source">Source: <span>frontend/drupal/modules/_styleguide.scss</span>, line <span>1</span></p>
+
+              <a class="kss-section__permalink" href="#kssref-frontend-drupal-modules-styleguide">
+                <h4 class="kss-section__item kss-section__item--depth-4">
+                  <span class="kss-section__ref">5.5.2.1</span>
+                  <span class="kss-section__name">Style Guide</span>
+                </h4>
+              </a>
+
+                <div class="kss-section__description"><p>Contains default <a href="https://www.drupal.org/project/styleguide" target="_blank">Style Guide module</a> styles. To add/edit component variables, use <code>scss/_variables.scss</code>.</p>
+</div>
+
+                <ul class="kss-parameters">
+                  <li class="kss-parameters__item">
+                    <p class="kss-parameters__description">
+                      Defines the style guide header background. Default: <code>$light-gray</code>
+
+                    </p>
+                    <code class="kss-parameters__name">$styleguide-header-background</code>
+                  </li>
+                  <li class="kss-parameters__item">
+                    <p class="kss-parameters__description">
+                      Defines the style guide header border. Default: <code>rem-calc(1) solid $medium-gray</code>
+
+                    </p>
+                    <code class="kss-parameters__name">$styleguide-header-border</code>
+                  </li>
+                  <li class="kss-parameters__item">
+                    <p class="kss-parameters__description">
+                      Defines the style guide header color. Default: <code>$dark-gray</code>
+
+                    </p>
+                    <code class="kss-parameters__name">$styleguide-header-color</code>
+                  </li>
+                  <li class="kss-parameters__item">
+                    <p class="kss-parameters__description">
+                      Defines the style guide header padding. Default: <code>$global-padding</code>
+
+                    </p>
+                    <code class="kss-parameters__name">$styleguide-header-padding</code>
+                  </li>
+                </ul>
+            </article>
+
+
+            </section>
+            <section class="kss-section kss-section--depth-2" id="kssref-frontend-wordpress">
+
+            <article class="kss-section__content">
+                <p class="kss-section__source">Source: <span>global.scss</span>, line <span>63</span></p>
+
+              <a class="kss-section__permalink" href="#kssref-frontend-wordpress">
+                <h2 class="kss-section__item kss-section__item--depth-2">
+                  <span class="kss-section__ref">5.6</span>
+                  <span class="kss-section__name">WordPress</span>
+                </h2>
+              </a>
+
+
+            </article>
+
+
+            </section>
+            <section class="kss-section kss-section--depth-3" id="kssref-frontend-wordpress-wysiwyg">
+
+            <article class="kss-section__content">
+                <p class="kss-section__source">Source: <span>frontend/wordpress/_wordpress.scss</span>, line <span>1</span></p>
+
+              <a class="kss-section__permalink" href="#kssref-frontend-wordpress-wysiwyg">
+                <h3 class="kss-section__item kss-section__item--depth-3">
+                  <span class="kss-section__ref">5.6.1</span>
+                  <span class="kss-section__name">WYSIWYG Editor</span>
+                </h3>
+              </a>
+
+                <div class="kss-section__description"><p>When you are working with WordPress’ WYSIWYG Editor in the Edit Post screen,
 WordPress applies context-specific CSS attributes to certain elements when
 they are included in your post. For example, when inserting images, you can
 specify whether the images are floated left, right, or even centered. To do
@@ -1083,49 +1190,24 @@ items attributed via the WYSIWYG Editor.<br>
 <br>
 <em>Thanks to Jeff Starr for his
 <a href="https://digwp.com/2010/05/default-wordpress-css-styles-hooks/" target="_blank">WordPress Default Styles</a> post.</em></p>
+</div>
 
-          </div>
-
-      </div>
+            </article>
 
 
-        <div class="kss-source kss-style">
-          Source: <code>frontend/wordpress/_wordpress.scss</code>, line 1
-        </div>
-
+            </section>
     </section>
-</article>
-
-<!-- SCRIPTS -->
-<script src="kss-assets/kss.js"></script>
-<script src="kss-assets/scrollspy.js"></script>
-<script src="kss-assets/prettify.js"></script>
-<script src="kss-assets/kss-fullscreen.js"></script>
-<script src="kss-assets/kss-guides.js"></script>
-<script src="kss-assets/kss-markup.js"></script>
-<script>
-  prettyPrint();
-  var spy = new ScrollSpy('#kss-node', {
-    nav: '.kss-nav__menu-child > li > a',
-    className: 'is-in-viewport'
-  });
-  var kssFullScreen = new KssFullScreen({
-    idPrefix: 'kss-fullscreen-',
-    bodyClass: 'kss-fullscreen-mode',
-    elementClass: 'is-fullscreen'
-  });
-  var kssGuides = new KssGuides({
-    bodyClass: 'kss-guides-mode'
-  });
-  var kssMarkup = new KssMarkup({
-    bodyClass: 'kss-markup-mode',
-    detailsClass: 'kss-markup'
-  });
-</script>
-<script src="../dist/js/app.js"></script>
+    <!-- /documentation. -->
 
 
 
-<!-- Automatically built using <a href="https://github.com/kss-node/kss-node">kss-node</a>. -->
-</body>
+  <!-- scripts. -->
+  <script src="kss-assets/vendor/jquery.js"></script>
+  <script src="kss-assets/vendor/prism.js"></script>
+  <script src="kss-assets/js/kss.js"></script>
+  <script src="../dist/js/app.js"></script>
+
+  <!-- /scripts. -->
+
+  </body>
 </html>

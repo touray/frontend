@@ -13,6 +13,8 @@
 // <a href="http://getbootstrap.com/" target="_blank">Bootstrap</a> or build
 // your own.
 //
+// Weight: 1
+//
 // Style guide: framework
 @import 'framework/foundation/framework';
 
@@ -20,35 +22,47 @@
 //
 // A Sass library for creating flexible UI transitions and animations. See <a href="http://foundation.zurb.com/sites/docs/motion-ui.html" target="_blank">http://foundation.zurb.com/sites/docs/motion-ui.html</a> for more information.
 //
+// Weight: 2
+//
 // Style guide: motion-ui
-@import 'motion-ui';
-@include motion-ui-transitions;
-@include motion-ui-animations;
+//@import 'motion-ui';
+//@include motion-ui-transitions;
+//@include motion-ui-animations;
 
 // Frontend Build
 //
 // Frontend Build comes with pre-built starter components to help speed up
-// theming for common projects. Comment/uncomment accordingly.
+// theming for common projects.
+//
+// Weight: 3
 //
 // Style guide: frontend
 
 @import 'frontend/variables';
 @import 'frontend/mixins';
-@import 'frontend/common';
+//@import 'frontend/common';
 
 // Drupal
 //
+// Optional styles if your application is using <a href="https://www.drupal.org/" target="_blank">Drupal</a>.
+//
+// Weight: 4
+//
 // Style guide: frontend.drupal
 
-@import 'frontend/drupal/drupal7';
+//@import 'frontend/drupal/drupal7';
 
 // Drupal Modules
 //
+// Weight: 5
+//
 // Style guide: frontend.drupal.modules
 
-@import 'frontend/drupal/modules/styleguide';
+//@import 'frontend/drupal/modules/styleguide';
 
 // WordPress
+//
+// Weight: 6
 //
 // Style guide: frontend.wordpress
 
@@ -60,6 +74,8 @@
 // <a href="http://getbem.com/" target="_blank">BEM methodology</a>. This means
 // all styles should be self-contained components that follow a specific
 // naming convention. Once built, you can import your components here.
+//
+// Weight: 7
 //
 // Style guide: components
 

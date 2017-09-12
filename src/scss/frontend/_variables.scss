@@ -1,71 +1,87 @@
 // Variables
 //
-// The variables file for Frontend Build components. Foundation is used by default in Frontend Build, so uses it's settings to define many of the default Frontend Build component variables. It's best to edit those variables from Foundation's <code>scss/framework/foundation/_settings.scss</code>. All other variables and custom variables should be defined in the <code>scss/_variables.scss</code> file.
-// <h5>Globals</h5>
-// <ul>
-//   <li><code>$global-width</code>: <code>$global-width</code> (<em>Foundation setting</em>)</li>
-//   <li><code>$global-margin</code>: <code>$global-margin</code> (<em>Foundation setting</em>)</li>
-//   <li><code>$global-padding</code>: <code>$global-padding</code> (<em>Foundation setting</em>)</li>
-//   <li><code>$global-radius</code>: <code>$global-radius</code> (<em>Foundation setting</em>)</li>
-//   <li><code>$global-weight-bold</code>: <code>$global-weight-bold</code> (<em>Foundation setting</em>)</li>
-// </ul>
-// <h5>Colors</h5>
-// <ul>
-//   <li><code>$primary-color</code>: <code>$primary-color</code> (<em>Foundation setting</em>)</li>
-//   <li><code>$alert-color</code>: <code>$alert-color</code> (<em>Foundation setting</em>)</li>
-//   <li><code>$success-color</code>: <code>$success-color</code> (<em>Foundation setting</em>)</li>
-//   <li><code>$warning-color</code>: <code>$warning-color</code> (<em>Foundation setting</em>)</li>
-//   <li><code>$dark-gray</code>: <code>$dark-gray</code> (<em>Foundation setting</em>)</li>
-//   <li><code>$medium-gray</code>: <code>$medium-gray</code> (<em>Foundation setting</em>)</li>
-//   <li><code>$light-gray</code>: <code>$light-gray</code> (<em>Foundation setting</em>)</li>
-// </ul>
-// <h5>Progress Bar</h5>
-// <ul>
-//   <li><code>$progress-background</code>: <code>$progress-background</code> (<em>Foundation setting</em>)</li>
-//   <li><code>$progress-margin-bottom</code>: <code>$progress-margin-bottom</code> (<em>Foundation setting</em>)</li>
-//   <li><code>$progress-radius</code>: <code>$progress-radius</code> (<em>Foundation setting</em>)</li>
-//   <li><code>$progress-meter-background</code>: <code>$progress-meter-background</code> (<em>Foundation setting</em>)</li>
-//   <li><code>$progress-height</code>: <code>$progress-height</code> (<em>Foundation setting</em>)</li>
-// </ul>
-// <h5>CSS Grid</h5>
-// <ul>
-//   <li><code>$css-grid-columns</code>: <code>(small: 2, medium: $grid-columns)</code> (<em>Foundation setting</em>)</li>
-//   <li><code>$css-grid-column-gaps</code>: <code>$grid-margin-gutters</code> (<em>Foundation setting</em>)</li>
-//   <li><code>$css-grid-row-gaps</code>: <code>(small: 0, medium: 0)</code></li>
-// </ul>
+// These are the default variables for Frontend Build. If <a href="http://foundation.zurb.com/" target="_blank">Foundation</a> is enabled, matching variable names from this file override those in Foundation's settings file. To add/edit variables, use <code>scss/_variables.scss</code>.
 //
 // Style guide: frontend.variables
 
 // Globals
-$global-width:       $global-width                                     !default;
-$global-margin:      $global-margin                                    !default;
-$global-padding:     $global-padding                                   !default;
-$global-radius:      $global-radius                                    !default;
-$global-weight-bold: $global-weight-bold                               !default;
+//
+// These are the default global variables. To add/edit, use <code>scss/_variables.scss</code>.
+//
+// $global-width       - Defines the application's global width. Default: <code>rem-calc(1200)</code>
+// $global-margin      - Defines the application's global margin. Default: <code>1rem</code>
+// $global-padding     - Defines the application's global padding. Default: <code>1rem</code>
+// $global-radius      - Defines the application's global radius. Default: <code>0</code>
+// $global-weight-bold - Defines the application's global bold weight. Default: <code>bold</code>
+//
+// Weight: 1
+//
+// Style guide: frontend.variables.globals
+$global-width:       rem-calc(1200)                                    !default;
+$global-margin:      1rem                                              !default;
+$global-padding:     1rem                                              !default;
+$global-radius:      0                                                 !default;
+$global-weight-bold: bold                                              !default;
 
-// Colors
-$primary-color: $primary-color                                         !default;
-$alert-color:   $alert-color                                           !default;
-$success-color: $success-color                                         !default;
-$warning-color: $warning-color                                         !default;
-$dark-gray:     $dark-gray                                             !default;
-$medium-gray:   $medium-gray                                           !default;
-$light-gray:    $light-gray                                            !default;
-
-// Progress Bar
-$progress-background:       $progress-background                       !default;
-$progress-margin-bottom:    $progress-margin-bottom                    !default;
-$progress-radius:           $progress-radius                           !default;
-$progress-meter-background: $progress-meter-background                 !default;
-$progress-height:           $progress-height                           !default;
+// Color Scheme
+//
+// These are the default color options. To add/edit, use <code>scss/_variables.scss</code>.
+//
+// $primary-color - #1779ba; Primary Color
+// $alert-color   - #cc4b37; Alert Color
+// $success-color - #3adb76; Success Color
+// $warning-color - #ffae00; Warning Color
+// $dark-gray     - #8a8a8a; Dark Gray
+// $medium-gray   - #cacaca; Medium Gray
+// $light-gray    - #e6e6e6; Light Gray
+//
+// Weight: 2
+//
+// Style guide: frontend.variables.colors
+$primary-color: #1779ba                                                !default;
+$alert-color:   #cc4b37                                                !default;
+$success-color: #3adb76                                                !default;
+$warning-color: #ffae00                                                !default;
+$dark-gray:     #8a8a8a                                                !default;
+$medium-gray:   #cacaca                                                !default;
+$light-gray:    #e6e6e6                                                !default;
 
 // CSS Grid
+//
+// These are the default options for CSS grids. To add/edit, use <code>scss/_variables.scss</code>.
+//
+// $css-grid-columns - Defines the number of columns to use in a grid using a responsive list. Default: <code>(small: 2, medium: 12)</code>
+// $css-grid-column-gaps - Defines the grid's column gap using a responsive list. Default: <code>(small: 15px, medium: 30px)</code>
+// $css-grid-row-gaps - Defines the grid's row gap using a responsive list. Default: <code>(small: 0, medium: 0x)</code>
+//
+// Weight: 3
+//
+// Style guide: frontend.variables.css-grid
 $css-grid-columns: (
   small: 2,
-  medium: $grid-columns
+  medium: 12
 )                                                                      !default;
 $css-grid-column-gaps: $grid-margin-gutters                            !default;
 $css-grid-row-gaps: (
   small: 0,
   medium: 0
 )                                                                      !default;
+
+// Progress Bar
+//
+// These are the default options for progress bars. To add/edit, use <code>scss/_variables.scss</code>.
+//
+// $progress-background - Defines the background of progress bars. Default: <code>$medium-gray</code>
+// $progress-margin-bottom - Defines the progress bar margin. Default: <code>$global-margin</code>
+// $progress-radius - Defines the progress bar radius. Default: <code>$global-radius</code>
+// $progress-meter-background - Defines the background of progress bar meter. Default: <code>$primary-color</code>
+// $progress-height - Defines the height of the progress bar. Default: <code>1rem</code>
+//
+// Weight: 4
+//
+// Style guide: frontend.variables.progress-bar
+$progress-background:       $medium-gray                               !default;
+$progress-margin-bottom:    $global-margin                             !default;
+$progress-radius:           $global-radius                             !default;
+$progress-meter-background: $primary-color                             !default;
+$progress-height:           1rem                                       !default;

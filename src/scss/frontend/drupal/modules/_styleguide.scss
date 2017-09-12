@@ -1,25 +1,21 @@
-// Styleguide
+// Style Guide
 //
-// Contains default Styleguide module styles. Available scss variables:<br>
-// <ul>
-//   <li><code>$styleguide-header-background</code></li>
-//   <li><code>$styleguide-header-border</code></li>
-//   <li><code>$styleguide-header-color</code></li>
-//   <li><code>$styleguide-header-padding</code></li>
-// </ul>
+// Contains default <a href="https://www.drupal.org/project/styleguide" target="_blank">Style Guide module</a> styles. To add/edit component variables, use <code>scss/_variables.scss</code>.
+//
+// $styleguide-header-background - Defines the style guide header background. Default: <code>$light-gray</code>
+// $styleguide-header-border     - Defines the style guide header border. Default: <code>rem-calc(1) solid $medium-gray</code>
+// $styleguide-header-color      - Defines the style guide header color. Default: <code>$dark-gray</code>
+// $styleguide-header-padding    - Defines the style guide header padding. Default: <code>$global-padding</code>
 //
 // Style guide: frontend.drupal.modules.styleguide
 
 // scss-lint:disable IdSelector
-
-// Variables
 
 $styleguide-header-background: $light-gray;
 $styleguide-header-border:     rem-calc(1) solid $medium-gray;
 $styleguide-header-color:      $dark-gray;
 $styleguide-header-padding:    $global-padding;
 
-// Styles
 #styleguide-header {
   background: $styleguide-header-background;
   border-color: $styleguide-header-border;

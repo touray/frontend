@@ -1,16 +1,16 @@
 // Common
 //
-// Custom Frontend Build common classes. All classes here are also available as a sass extendable.
+// Optional common classes. <em>All classes here are also available as a <a href="#kssref-frontend-extendables">extendable</a>.</em>
 //
 // Style guide: frontend.common
 
 // Container
 //
-// Creates a max width container, designed to house your grid content.
+// .container - Creates a max width container, designed to house your grid content.
 //
 // Markup:
 // <div class="container">
-//   <code>.container</code>
+//   <!-- Container content -->
 // </div>
 //
 // Style guide: frontend.common.container
@@ -20,7 +20,7 @@
 
 // CSS Grid
 //
-// Sets up a CSS grid container. <i>View in Firefox inspector to see a grid overlay.</i>
+// .css-grid - Sets up a CSS grid container. <i>View in Firefox inspector to see a grid overlay.</i>
 //
 // Markup:
 // <div class="css-grid">

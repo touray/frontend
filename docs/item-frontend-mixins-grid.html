@@ -1,190 +1,161 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>KSS Style Guide</title>
+<html>
+  <head>
+    <title>Frontend Build Docs</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="generator" content="kss-node">
 
-  <meta name="description" content="">
-  <meta name="generator" content="kss-node">
-  <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,300">
+    <link rel="stylesheet" href="kss-assets/vendor/prism.css">
+    <link rel="stylesheet" href="kss-assets/css/kss.css">
+    <link rel="stylesheet" href="../dist/css/global.css">
 
-  <link rel="stylesheet" href="kss-assets/kss.css">
-  <link rel="stylesheet" href="../dist/css/global.css">
+  </head>
 
-</head>
-<body id="kss-node" class="kss-fullscreen-mode">
+  <body class="kss-body">
 
-<div class="kss-sidebar kss-style">
-  <header class="kss-header">
-    <h1 class="kss-doc-title">KSS Style Guide</h1>
-  </header>
-  <nav class="kss-nav">
-    <ul class="kss-nav__menu">
-      <li class="kss-nav__menu-item">
-        <a class="kss-nav__menu-link" href="./">
-          <span class="kss-nav__ref">0</span
-          ><span class="kss-nav__name">Overview</span>
+    <!-- header. -->
+    <header class="kss-header">
+      <section class="kss-header__inner">
+        <a class="kss-header__hamburger-trigger">
+          <div class="kss-header__hamburger"></div>
         </a>
-      </li>
-      <li class="kss-nav__menu-item">
-        <a class="kss-nav__menu-link" href="section-components.html">
-          <span class="kss-nav__ref">1</span><span class="kss-nav__name">Components</span>
-        </a>
-      </li>
-      <li class="kss-nav__menu-item">
-        <a class="kss-nav__menu-link" href="section-framework.html">
-          <span class="kss-nav__ref">2</span><span class="kss-nav__name">Framework</span>
-        </a>
-      </li>
-      <li class="kss-nav__menu-item">
-        <a class="kss-nav__menu-link" href="section-frontend.html">
-          <span class="kss-nav__ref">3</span><span class="kss-nav__name">Frontend Build</span>
-        </a>
-      </li>
-      <li class="kss-nav__menu-item">
-        <a class="kss-nav__menu-link" href="section-global.html">
-          <span class="kss-nav__ref">4</span><span class="kss-nav__name">Global Style Sheet</span>
-        </a>
-      </li>
-      <li class="kss-nav__menu-item">
-        <a class="kss-nav__menu-link" href="section-motion-ui.html">
-          <span class="kss-nav__ref">5</span><span class="kss-nav__name">Motion UI</span>
-        </a>
-      </li>
-      <li class="kss-nav__menu-item">
-        <a class="kss-nav__menu-link" href="section-variables.html">
-          <span class="kss-nav__ref">6</span><span class="kss-nav__name">Custom Variables</span>
-        </a>
-      </li>
-    </ul>
-  </nav>
-</div>
-<article role="main" class="kss-main">
+        <h1 class="kss-header__title kss-title">Frontend Build Docs</h1>
+      </section>
+    </header>
+    <!-- /header. -->
 
-    <div id="kssref-frontend-mixins-grid" class="kss-section kss-section--depth-3 is-fullscreen">
 
-      <div class="kss-style">
-        <h3 class="kss-title kss-title--level-3">
-          <a class="kss-title__permalink" href="#kssref-frontend-mixins-grid">
-            <span class="kss-title__ref">
-              3.4.2
-              <span class="kss-title__permalink-hash">
-                  #frontend.mixins.grid
-              </span>
-            </span>
-            CSS Grid
+    <!-- navigation. -->
+    <section class="kss-navigation">
+      <h1 class="kss-navigation__title kss-title">Frontend Build Docs</h1>
+      <ul class="kss-nav">
+        <li class="kss-nav__item">
+          <a href="index.html">
+            <span class="kss-nav__ref">0</span>
+            <span class="kss-nav__name">Introduction</span>
           </a>
-        </h3>
-
-          <p class="kss-toolbar">
-            <a href="#kssref-frontend-mixins-grid" data-kss-guides="true">
-              <span class="kss-toolbar__tooltip">Toggle example guides</span>
-              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
-                <rect class="kss-toolbar__icon-fill" x="5" y="35" width="5" height="9"/>
-                <rect class="kss-toolbar__icon-fill" x="54" y="21" width="5" height="9"/>
-                <rect class="kss-toolbar__icon-fill" x="54" y="35" width="5" height="9"/>
-                <rect class="kss-toolbar__icon-fill" x="5" y="21" width="5" height="9"/>
-                <rect class="kss-toolbar__icon-fill" x="5" y="0" width="5" height="15"/>
-                <rect class="kss-toolbar__icon-fill" x="35" y="5" width="9" height="5"/>
-                <rect class="kss-toolbar__icon-fill" x="20" y="5" width="9" height="5"/>
-                <rect class="kss-toolbar__icon-fill" x="0" y="5" width="15" height="5"/>
-                <rect class="kss-toolbar__icon-fill" x="54" y="0" width="5" height="15"/>
-                <rect class="kss-toolbar__icon-fill" x="49" y="5" width="15" height="5"/>
-                <rect class="kss-toolbar__icon-fill" x="54" y="49" width="5" height="15"/>
-                <rect class="kss-toolbar__icon-fill" x="49" y="54" width="15" height="5"/>
-                <rect class="kss-toolbar__icon-fill" x="5" y="49" width="5" height="15"/>
-                <rect class="kss-toolbar__icon-fill" x="0" y="54" width="15" height="5"/>
-                <rect class="kss-toolbar__icon-fill" x="35" y="54" width="9" height="5"/>
-                <rect class="kss-toolbar__icon-fill" x="20" y="54" width="9" height="5"/>
-              </svg>
+        </li>
+          <li class="kss-nav__item">
+            <a class="" href="section-global.html">
+              <span class="kss-nav__ref">1</span>
+              <span class="kss-nav__name">Global Style Sheet</span>
             </a>
-            <a href="#kssref-frontend-mixins-grid" data-kss-markup="true">
-              <span class="kss-toolbar__tooltip">Toggle HTML markup</span>
-              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
-                <path class="kss-toolbar__icon-fill" d="M37.555,46.239l6.103,6.103l20.342,-20.342l-20.342,-20.342l-6.103,6.103l14.24,14.239l-14.24,14.239Z"/>
-                <path class="kss-toolbar__icon-fill" d="M26.445,17.761l-6.103,-6.103l-20.342,20.342l20.342,20.342l6.103,-6.103l-14.24,-14.239l14.24,-14.239Z"/>
-              </svg>
+          </li>
+          <li class="kss-nav__item">
+            <a class="" href="section-variables.html">
+              <span class="kss-nav__ref">2</span>
+              <span class="kss-nav__name">Custom Variables</span>
             </a>
-          </p>
-
-          <div class="kss-description">
-            <p>Creates a CSS grid container. <i>View in Firefox inspector to see a grid overlay.</i></p>
-
-          </div>
-
-      </div>
-
-        <div class="kss-modifier__wrapper">
-          <div class="kss-modifier__heading kss-style">
-            Example
-          </div>
-
-
-          <div class="kss-modifier__example">
-            <ul>
-  <li><code>$grid-columns</code>: <code>responsive list</code><br>Default: <code>$css-grid-columns</code><br><i>Defines the number of grid columns.</i></li>
-  <li><code>$grid-rows</code>: <code>responsive list</code><br>Default: <code>(small: none, medium: none)</code><br><i>Defines the number of grid rows.</i></li>
-  <li><code>$grid-column-gaps</code>: <code>responsive list</code><br>Default: <code>$css-grid-column-gaps</code><br><i>Specifies the size of the grid lines between the columns.</i></li>
-  <li><code>$grid-row-gaps</code>: <code>responsive list</code><br>Default: <code>$css-grid-row-gaps</code><br><i>Specifies the size of the grid lines between the rows.</i></li>
-  <li><code>$type</code>: <code>grid|inline-grid|subgrid</code><br>Default: <code>grid</code><br><i>Defines the grid formatting context.</i></li>
-</ul>
-<code>@include css-grid($grid-columns, $grid-rows, $grid-column-gaps, $grid-row-gaps, $type);</code>
-            <div class="kss-modifier__example-footer"></div>
-          </div>
-
-        </div>
-
-          <details class="kss-markup kss-style">
-            <summary>
-                Markup
-            </summary>
-            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;ul&gt;
-  &lt;li&gt;&lt;code&gt;$grid-columns&lt;/code&gt;: &lt;code&gt;responsive list&lt;/code&gt;&lt;br&gt;Default: &lt;code&gt;$css-grid-columns&lt;/code&gt;&lt;br&gt;&lt;i&gt;Defines the number of grid columns.&lt;/i&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;code&gt;$grid-rows&lt;/code&gt;: &lt;code&gt;responsive list&lt;/code&gt;&lt;br&gt;Default: &lt;code&gt;(small: none, medium: none)&lt;/code&gt;&lt;br&gt;&lt;i&gt;Defines the number of grid rows.&lt;/i&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;code&gt;$grid-column-gaps&lt;/code&gt;: &lt;code&gt;responsive list&lt;/code&gt;&lt;br&gt;Default: &lt;code&gt;$css-grid-column-gaps&lt;/code&gt;&lt;br&gt;&lt;i&gt;Specifies the size of the grid lines between the columns.&lt;/i&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;code&gt;$grid-row-gaps&lt;/code&gt;: &lt;code&gt;responsive list&lt;/code&gt;&lt;br&gt;Default: &lt;code&gt;$css-grid-row-gaps&lt;/code&gt;&lt;br&gt;&lt;i&gt;Specifies the size of the grid lines between the rows.&lt;/i&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;code&gt;$type&lt;/code&gt;: &lt;code&gt;grid|inline-grid|subgrid&lt;/code&gt;&lt;br&gt;Default: &lt;code&gt;grid&lt;/code&gt;&lt;br&gt;&lt;i&gt;Defines the grid formatting context.&lt;/i&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;code&gt;@include css-grid($grid-columns, $grid-rows, $grid-column-gaps, $grid-row-gaps, $type);&lt;/code&gt;</code></pre>
-          </details>
-
-        <div class="kss-source kss-style">
-          Source: <code>frontend/_mixins.scss</code>, line 25
-        </div>
-
-    </div>
-</article>
-
-<!-- SCRIPTS -->
-<script src="kss-assets/kss.js"></script>
-<script src="kss-assets/scrollspy.js"></script>
-<script src="kss-assets/prettify.js"></script>
-<script src="kss-assets/kss-fullscreen.js"></script>
-<script src="kss-assets/kss-guides.js"></script>
-<script src="kss-assets/kss-markup.js"></script>
-<script>
-  prettyPrint();
-  var spy = new ScrollSpy('#kss-node', {
-    nav: '.kss-nav__menu-child > li > a',
-    className: 'is-in-viewport'
-  });
-  var kssFullScreen = new KssFullScreen({
-    idPrefix: 'kss-fullscreen-',
-    bodyClass: 'kss-fullscreen-mode',
-    elementClass: 'is-fullscreen'
-  });
-  var kssGuides = new KssGuides({
-    bodyClass: 'kss-guides-mode'
-  });
-  var kssMarkup = new KssMarkup({
-    bodyClass: 'kss-markup-mode',
-    detailsClass: 'kss-markup'
-  });
-</script>
-<script src="../dist/js/app.js"></script>
+          </li>
+          <li class="kss-nav__item">
+            <a class="" href="section-framework.html">
+              <span class="kss-nav__ref">3</span>
+              <span class="kss-nav__name">Framework</span>
+            </a>
+          </li>
+          <li class="kss-nav__item">
+            <a class="" href="section-motion-ui-import-motion-ui-include-motion-ui-transitions-include-motion-ui-animations-.html">
+              <span class="kss-nav__ref">4</span>
+              <span class="kss-nav__name">Motion UI</span>
+            </a>
+          </li>
+          <li class="kss-nav__item">
+            <a class="" href="section-frontend.html">
+              <span class="kss-nav__ref">5</span>
+              <span class="kss-nav__name">Frontend Build</span>
+            </a>
+          </li>
+          <li class="kss-nav__item">
+            <a class="" href="section-components.html">
+              <span class="kss-nav__ref">6</span>
+              <span class="kss-nav__name">Components</span>
+            </a>
+          </li>
+      </ul>
+    </section>
+    <!-- /navigation. -->
 
 
+    <!-- documentation. -->
+    <section class="kss-documentation">
 
-<!-- Automatically built using <a href="https://github.com/kss-node/kss-node">kss-node</a>. -->
-</body>
+        <!--
+          display each section, in order.
+          the "root" element comes first in this loop, and can be detected using
+          the "#if @first" block as seen below.
+        -->
+            <header class="kss-section kss-section--depth-3" id="kssref-frontend-mixins-grid">
+
+            <article class="kss-section__content">
+                <p class="kss-section__source">Source: <span>frontend/_mixins.scss</span>, line <span>23</span></p>
+
+              <a class="kss-section__permalink" href="#kssref-frontend-mixins-grid">
+                <h3 class="kss-section__item kss-section__item--depth-3">
+                  <span class="kss-section__ref">5.3.2</span>
+                  <span class="kss-section__name">css-grid($columns, $rows, $column-gaps, $grid-row-gaps, $type)</span>
+                </h3>
+              </a>
+
+                <div class="kss-section__description"><p>Creates a CSS grid container. <i>To debug, view in Firefox inspector and enable the grid overlay.</i></p>
+<p>Compatible in IE11+, Firefox 54+, Safari 10.1+, Chrome 59+.</p>
+</div>
+
+                <ul class="kss-parameters">
+                  <li class="kss-parameters__item">
+                    <p class="kss-parameters__description">
+                      Defines the number of grid columns. Default: <code>$css-grid-columns</code>
+
+                    </p>
+                    <code class="kss-parameters__name">$columns</code>
+                  </li>
+                  <li class="kss-parameters__item">
+                    <p class="kss-parameters__description">
+                      Defines the number of grid rows. Default: <code>(small: none, medium: none)</code>
+
+                    </p>
+                    <code class="kss-parameters__name">$rows</code>
+                  </li>
+                  <li class="kss-parameters__item">
+                    <p class="kss-parameters__description">
+                      Specifies the size of the grid lines between the columns. Default: <code>$css-grid-column-gaps</code>
+
+                    </p>
+                    <code class="kss-parameters__name">$column-gaps</code>
+                  </li>
+                  <li class="kss-parameters__item">
+                    <p class="kss-parameters__description">
+                      Specifies the size of the grid lines between the rows. Default: <code>$css-grid-row-gaps</code>
+
+                    </p>
+                    <code class="kss-parameters__name">$row-gaps</code>
+                  </li>
+                  <li class="kss-parameters__item">
+                    <p class="kss-parameters__description">
+                      Defines the grid formatting context. Default: <code>grid</code>
+
+                    </p>
+                    <code class="kss-parameters__name">$type</code>
+                  </li>
+                </ul>
+            </article>
+
+
+            </header>
+    </section>
+    <!-- /documentation. -->
+
+
+
+  <!-- scripts. -->
+  <script src="kss-assets/vendor/jquery.js"></script>
+  <script src="kss-assets/vendor/prism.js"></script>
+  <script src="kss-assets/js/kss.js"></script>
+  <script src="../dist/js/app.js"></script>
+
+  <!-- /scripts. -->
+
+  </body>
 </html>
