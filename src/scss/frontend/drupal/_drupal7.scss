@@ -10,9 +10,12 @@
 //
 // Drupal 7 component variables. To add/edit component variables, use <code>scss/_variables.scss</code>.
 //
+// $form-item-margin-bottom            - Defines the form item bottom margin. Default: <code>rem-calc($global-margin)</code>
+// $form-item-margin-top               - Defines the form item top margin. Default: <code>rem-calc($global-margin)</code>
 // $message-margin                     - Defines the site message margin. Default: <code>rem-calc($global-margin 0)</code>
 // $message-padding                    - Defines the site message padding. Default: <code>$global-padding</code>
-// $message-border                     - Defines the site message border. Default: <code>rem-calc(1) solid</code>
+// $message-border                     - Defines the site message radius. Default: <code>$global-radius</code>
+// $message-radius                     - Defines the site message border. Default: <code>rem-calc(1) solid</code>
 // $message-status-background          - Defines the status message background. Default: <code>rgba($success-color, .5)</code>
 // $message-status-border              - Defines the status message border. Default: <code>rem-calc(1) solid darken($success-color, 50%)</code>
 // $message-status-color               - Defines the status message color. Default: <code>darken($success-color, 50%)</code>
@@ -22,21 +25,36 @@
 // $message-error-background           - Defines the error message background. Default: <code>rgba($alert-color, .5)</code>
 // $message-error-border               - Defines the error message border. Default: <code>rem-calc(1) solid darken($alert-color, 50%)</code>
 // $message-error-color                - Defines the error message color. Default: <code>darken($alert-color, 50%)</code>
-// $progress-bar-background            - Defines the progress bar background. Default: <code>$progress-background</code>
+// $progress-bar-background            - Defines the progress bar background. Default: <code>$medium-gray</code>
 // $progress-bar-border                - Defines the progress bar border. Default: <code>rem-calc(1) solid $medium-gray</code>
 // $progress-bar-percentage-float      - Defines the percentage text float. Default: <code>right</code>
 // $progress-bar-margin                - Defines the progress bar margin. Default: <code>rem-calc(0 0 $global-margin 0)</code>
 // $progress-bar-radius                - Defines the progress bar radius. Default: <code>rem-calc($progress-radius)</code>
-// $progress-filled-background         - Defines the progress filled background. Default: <code>$progress-meter-background</code>
+// $progress-filled-background         - Defines the progress filled background. Default: <code>$primary-color</code>
 // $progress-height                    - Defines the progress height. Default: <code>$progress-height</code>
 // $progress-weight                    - Defines the progress weight. Default: <code>$global-weight-bold</code>
+// $password-strength-margin           - Defines the password strength margin. Default: <code>0</code>
+// $password-strength-width            - Defines the password strength width. Default: <code>rem-calc(300)</code>
+// $password-indicator-background      - Defines the password strength indicator background. Default: <code>$medium-gray</code>
+// $password-indicator-fill-background - Defines the password strength indicator fill background. Default: <code>$primary-color</code>
+// $password-indicator-height          - Defines the password strength indicator height. Default: <code>rem-calc(39)</code>
+// $password-strength-title-margin     - Defines the password strength indicator height. Default: <code>rem-calc(0 0 1 0)</code>
+// $password-indicator-radius          - Defines the password strength indicator radius. Default: <code>$global-radius</code>
+// $password-strength-title-size       - Defines the password strength title font size. Default: <code>$form-label-font-size</code>
 //
-// Weight: 1
+// Weight: 0
 //
 // Style guide: frontend.drupal.drupal7.variables
+
+// Forms
+$form-item-margin-bottom: rem-calc($global-margin)                     !default;
+$form-item-margin-top:    rem-calc($global-margin)                     !default;
+
+// Messages
 $message-margin:  rem-calc($global-margin 0)                           !default;
 $message-padding: $global-padding                                      !default;
 $message-border:  rem-calc(1) solid                                    !default;
+$message-radius:  $global-radius                                       !default;
 
 // Status
 $message-status-background: rgba($success-color, .5)                   !default;
@@ -54,15 +72,69 @@ $message-error-border:     rem-calc(1) solid darken($alert-color, 30%) !default;
 $message-error-color:      darken($alert-color, 50%)                   !default;
 
 // Progress bar
-$progress-bar-background:            $progress-background              !default;
+$progress-bar-background:            $medium-gray                      !default;
 $progress-bar-border:                rem-calc(1) solid $medium-gray    !default;
 $progress-bar-percentage-float:      right                             !default;
 $progress-bar-message-margin:        rem-calc(0 0 $global-margin 0)    !default;
 $progress-margin-bottom:             $progress-margin-bottom           !default;
 $progress-bar-radius:                rem-calc($progress-radius)        !default;
-$progress-filled-background:         $progress-meter-background        !default;
+$progress-filled-background:         $primary-color                    !default;
 $progress-height:                    $progress-height                  !default;
 $progress-weight:                    $global-weight-bold               !default;
+
+// Password strength
+$password-strength-margin:           0                                 !default;
+$password-strength-width:            rem-calc(300)                     !default;
+$password-indicator-background:      $medium-gray                      !default;
+$password-indicator-fill-background: $primary-color                    !default;
+$password-indicator-height:          rem-calc(39)                      !default;
+$password-strength-title-margin:     rem-calc(0 0 1 0)                 !default;
+$password-indicator-radius:          $global-radius                    !default;
+$password-strength-title-size:       $form-label-font-size             !default;
+
+// Lists
+//
+// Styles Drupal's default lists.
+//
+// Markup:
+// <ul>
+//   <li class="collapsed">Item 1</li>
+//   <li class="expanded">Item 2</li>
+//   <li class="leaf">Item 3
+//     <ul class="menu">
+//       <li>Subitem 1</li>
+//       <li>Subitem 2</li>
+//       <li>Subitem 3</li>
+//     </ul>
+//   </li>
+// </ul>
+//
+// Weight: 1
+//
+// Style guide: frontend.drupal.drupal7.lists
+ul {
+  li {
+    &.collapsed,
+    &.expanded,
+    &.leaf {
+      list-style-image: none;
+      list-style-type: none;
+    }
+  }
+
+  &.menu {
+    li {
+      margin: 0;
+    }
+  }
+}
+
+li.expanded,
+li.collapsed,
+li.leaf {
+  margin: 0;
+  padding: 0;
+}
 
 // Message
 //
@@ -84,6 +156,7 @@ div {
     background-position: 0% 0%;
     background-repeat: repeat;
     border: $message-border;
+    border-radius: $message-radius;
     margin: $message-margin;
     padding: $message-padding;
   }
@@ -163,6 +236,7 @@ table tr.error {
 
   .filled {
     background: $progress-filled-background;
+    border-radius: $progress-bar-radius;
     height: $progress-height;
   }
 
@@ -175,72 +249,37 @@ table tr.error {
   }
 }
 
-// Form Submit
+// Forms
 //
-// .form-submit - Styles all Drupal submit buttons.
+// Styles Drupal's default form markup.
 //
 // Markup:
-// <input type="button" class="form-submit" value="Submit" />
+// <div class="form-item">
+//   <label>Label</label>
+//   <input type="text" value="Mattis lacinia nam" size="60" maxlength="128" class="form-text">
+// </div>
+// <div class="form-item">
+//   <input type="checkbox" value="Convallis convallis lorem" class="form-checkbox">
+//   <label class="option">Convallis convallis lorem</label>
+// </div>
+// <div class="form-item">
+//   <input type="radio" value="Convallis convallis lorem" class="form-radio">
+//   <label class="option">Convallis convallis lorem</label>
+// </div>
+// <div class="form-actions">
+//   <button type="button">Button</button>
+//   <input type="button" value="Button">
+//   <input type="submit" value="Submit" class="form-submit">
+//   <input type="reset" value="Reset">
+// </div>
 //
 // Weight: 4
 //
-// Style guide: frontend.drupal.drupal7.form-submit
-.form-submit {
-  @include button;
-}
-
-
-// Password strength
-$password-strength-margin:           0                                 !default;
-$password-strength-width:            rem-calc(300)                     !default;
-$password-indicator-background:      $progress-background              !default;
-$password-indicator-fill-background: $progress-meter-background        !default;
-$password-indicator-height:          rem-calc(24)                      !default;
-
-// Pager
-.pager {
-  @include pagination-container;
-}
-
-// Menu tree
-ul {
-  li {
-    &.collapsed,
-    &.expanded,
-    &.leaf {
-      list-style-image: none;
-      list-style-type: none;
-    }
-  }
-
-  &.menu {
-    li {
-      margin: 0;
-    }
-  }
-}
-
-li.expanded,
-li.collapsed,
-li.leaf {
-  margin: 0;
-  padding: 0;
-}
-
-// Search results
-.search-results {
-  margin-left: 0;
-
-  .search-snippet-info {
-    padding-left: 0;
-  }
-}
-
-// Forms
+// Style guide: frontend.drupal.drupal7.forms
 .form-item,
 .form-actions {
-  margin-bottom: rem-calc($global-margin);
-  margin-top: rem-calc($global-margin);
+  margin-bottom: $form-item-margin-bottom;
+  margin-top: $form-item-margin-top;
 }
 
 .form-actions {
@@ -263,17 +302,96 @@ input {
   }
 }
 
-// Password strength
+// Form Submit
+//
+// .form-submit - Styles all Drupal submit buttons.
+//
+// Markup:
+// <input type="button" class="form-submit" value="Submit" />
+//
+// Weight: 5
+//
+// Style guide: frontend.drupal.drupal7.form-submit
+.form-submit {
+  @include button;
+}
+
+// Password Strength
+//
+// .password-strength - Styles the Drupal password strength components.
+//
+// Markup:
+// <div class="password-strength">
+//   <div class="password-strength-text">Weak</div>
+//   <div class="password-strength-title">Password strength:</div>
+//   <div class="password-indicator">
+//     <div class="indicator" style="width: 15%;"></div>
+//   </div>
+// </div>
+//
+// Weight: 6
+//
+// Style guide: frontend.drupal.drupal7.password-strength
 .password-strength {
   margin-top: $password-strength-margin;
   width: $password-strength-width;
 }
 
+.password-strength-title {
+  font-size: $password-strength-title-size;
+  display: inline-block;
+  margin: $password-strength-title-margin;
+}
+
 .password-indicator {
   background: $password-indicator-background;
+  border-radius: $password-indicator-radius;
   height: $password-indicator-height;
+  overflow: hidden;
 
   div {
     background: $password-indicator-fill-background;
+    border-radius: $password-indicator-radius;
+  }
+}
+
+// Search Results
+//
+// .search-results - Styles Drupal default search result listings.
+//
+// Weight: 6
+//
+// Style guide: frontend.drupal.drupal7.search-results
+.search-results {
+  margin-left: 0;
+
+  .search-snippet-info {
+    padding-left: 0;
+  }
+}
+
+// Pager
+//
+// .pager - Styles Drupal's default pager.
+//
+// Weight: 7
+//
+// Style guide: frontend.drupal.drupal7.pager
+.pager {
+  @include pagination-container;
+}
+
+// Admin Menu
+//
+// #admin-menu - Styles the Drupal admin menu component.
+//
+// Weight: 8
+//
+// Style guide: frontend.drupal.drupal7.admin-menu
+#admin-menu {
+  display: none;
+
+  @include breakpoint(medium) {
+    display: block;
   }
 }

@@ -49,7 +49,8 @@
 // Style guide: frontend
 //
 @import 'frontend/mixins';
-//@import 'frontend/common';
+@import 'frontend/extendables';
+@import 'frontend/common';
 
 // Drupal
 //

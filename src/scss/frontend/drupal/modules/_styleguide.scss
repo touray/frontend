@@ -9,13 +9,12 @@
 //
 // Style guide: frontend.drupal.modules.styleguide
 
-// scss-lint:disable IdSelector
-
 $styleguide-header-background: $light-gray;
 $styleguide-header-border:     rem-calc(1) solid $medium-gray;
 $styleguide-header-color:      $dark-gray;
 $styleguide-header-padding:    $global-padding;
 
+// scss-lint:disable IdSelector
 #styleguide-header {
   background: $styleguide-header-background;
   border-color: $styleguide-header-border;

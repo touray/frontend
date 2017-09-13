@@ -4,6 +4,27 @@
 //
 // Style guide: frontend.variables
 
+// Globals
+//
+// These are the default global variables. To add/edit, use <code>scss/_variables.scss</code>.
+//
+// $global-width         - Defines the application's default max width. Default: <code>rem-calc(1200)</code>
+// $global-margin        - Defines the application's default margin. Default: <code>1rem</code>
+// $global-padding       - Defines the application's default padding. Default: <code>1rem</code>
+// $global-radius        - Defines the application's default radius. Default: <code>0</code>
+// $global-weight-normal - Defines the application's default normal weight. Default: <code>normal</code>
+// $global-weight-bold   - Defines the application's default bold weight. Default: <code>bold</code>
+//
+// Weight: 1
+//
+// Style guide: frontend.variables.globals
+$global-width:         rem-calc(1200);
+$global-margin:        1rem;
+$global-padding:       1rem;
+$global-radius:        rem-calc(3);
+$global-weight-normal: normal;
+$global-weight-bold:   bold;
+
 // Color Scheme
 //
 // These are the default color options. To add/edit, use <code>scss/_variables.scss</code>.
@@ -33,48 +54,6 @@ $light-gray:      #e6e6e6;
 $black:           #000;
 $white:           #fff;
 
-// Globals
-//
-// These are the default global variables. To add/edit, use <code>scss/_variables.scss</code>.
-//
-// $global-font-size     - Defines the application's default font size. Default: <code>100%</code>
-// $global-lineheight    - Defines the application's default line height. Default: <code>1.5</code>
-// $global-width         - Defines the application's default max width. Default: <code>rem-calc(1200)</code>
-// $global-margin        - Defines the application's default margin. Default: <code>1rem</code>
-// $global-padding       - Defines the application's default padding. Default: <code>1rem</code>
-// $global-radius        - Defines the application's default radius. Default: <code>0</code>
-// $global-weight-normal - Defines the application's default normal weight. Default: <code>normal</code>
-// $global-weight-bold   - Defines the application's default bold weight. Default: <code>bold</code>
-// $body-font-family     - Defines the application's default font. Default: <code>'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif</code>
-// $body-font-color      - Defines the application's default font color. Default: <code>$black</code>
-//
-// Weight: 1
-//
-// Style guide: frontend.variables.globals
-$global-font-size:     100%;
-$global-lineheight:    1.5;
-$global-width:         rem-calc(1200);
-$global-margin:        1rem;
-$global-padding:       1rem;
-$global-radius:        rem-calc(3);
-$global-weight-normal: normal;
-$global-weight-bold:   bold;
-$body-font-family:     'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
-$body-font-color:      $black;
-
-// Typography
-//
-// These are the default typography variables. To add/edit, use <code>scss/_variables.scss</code>.
-//
-// $header-font-family   - Defines the application's default header font family. Default: <code>$body-font-family</code>
-// $header-font-weight   - Defines the application's default header font weight. Default: <code>$global-weight-normal</code>
-//
-// Weight: 3
-//
-// Style guide: frontend.variables.globals
-$header-font-family: $body-font-family;
-$header-font-weight: $global-weight-normal;
-
 // CSS Grid
 //
 // These are the default options for CSS grids. To add/edit, use <code>scss/_variables.scss</code>.
@@ -83,7 +62,7 @@ $header-font-weight: $global-weight-normal;
 // $css-grid-column-gaps - Defines the grid's column gap using a responsive list. Default: <code>(small: 15px, medium: 30px)</code>
 // $css-grid-row-gaps - Defines the grid's row gap using a responsive list. Default: <code>(small: 0, medium: 0x)</code>
 //
-// Weight: 4
+// Weight: 3
 //
 // Style guide: frontend.variables.css-grid
 $css-grid-columns: (
@@ -99,22 +78,16 @@ $css-grid-row-gaps: (
   medium: 0
 );
 
-// Breakpoints
+// Forms
 //
-// These are the default options for breakpoints. To add/edit, use <code>scss/_variables.scss</code>.
+// These are the default options for form styling. To add/edit, use <code>scss/_variables.scss</code>.
 //
-// $breakpoints - Defines the number of breakpoints using a responsive list. Default: <code>(small: 0, medium: 640px, large: 1024px, xlarge: 1200px, xxlarge: 1440px)</code>
+// $form-label-font-size - Defines the font size for form labels. Default: <code>rem-calc(14)</code>
 //
-// Weight: 5
+// Weight: 4
 //
-// Style guide: frontend.variables.breakpoints
-$breakpoints: (
-  small: 0,
-  medium: 640px,
-  large: 1024px,
-  xlarge: 1200px,
-  xxlarge: 1440px,
-);
+// Style guide: frontend.variables.forms
+$form-label-font-size: rem-calc(14);
 
 // Progress Bar
 //
@@ -126,7 +99,7 @@ $breakpoints: (
 // $progress-meter-background - Defines the background of progress bar meter. Default: <code>$primary-color</code>
 // $progress-height - Defines the height of the progress bar. Default: <code>1rem</code>
 //
-// Weight: 6
+// Weight: 5
 //
 // Style guide: frontend.variables.progress-bar
 $progress-background:       $medium-gray;

@@ -93,95 +93,54 @@
           the "root" element comes first in this loop, and can be detected using
           the "#if @first" block as seen below.
         -->
-            <header class="kss-section kss-section--depth-3" id="kssref-frontend-variables-colors">
+            <header class="kss-section kss-section--depth-4" id="kssref-frontend-drupal-drupal7-lists">
 
             <article class="kss-section__content">
-                <p class="kss-section__source">Source: <span>frontend/_variables.scss</span>, line <span>28</span></p>
+                <p class="kss-section__source">Source: <span>frontend/drupal/_drupal7.scss</span>, line <span>95</span></p>
 
-              <a class="kss-section__permalink" href="#kssref-frontend-variables-colors">
-                <h3 class="kss-section__item kss-section__item--depth-3">
-                  <span class="kss-section__ref">6.4.2</span>
-                  <span class="kss-section__name">Color Scheme</span>
-                </h3>
+              <a class="kss-section__permalink" href="#kssref-frontend-drupal-drupal7-lists">
+                <h4 class="kss-section__item kss-section__item--depth-4">
+                  <span class="kss-section__ref">6.5.1.2</span>
+                  <span class="kss-section__name">Lists</span>
+                </h4>
               </a>
 
-                <div class="kss-section__description"><p>These are the default color options. To add/edit, use <code>scss/_variables.scss</code>.</p>
+                <div class="kss-section__description"><p>Styles Drupal&#39;s default lists.</p>
 </div>
 
-                <ul class="kss-parameters">
-                  <li class="kss-parameters__item">
-                    <p class="kss-parameters__description">
-                      #1779ba; Primary Color
-
-                    </p>
-                    <code class="kss-parameters__name">$primary-color</code>
-                  </li>
-                  <li class="kss-parameters__item">
-                    <p class="kss-parameters__description">
-                      #767676; Secondary Color
-
-                    </p>
-                    <code class="kss-parameters__name">$secondary-color</code>
-                  </li>
-                  <li class="kss-parameters__item">
-                    <p class="kss-parameters__description">
-                      #cc4b37; Alert Color
-
-                    </p>
-                    <code class="kss-parameters__name">$alert-color</code>
-                  </li>
-                  <li class="kss-parameters__item">
-                    <p class="kss-parameters__description">
-                      #3adb76; Success Color
-
-                    </p>
-                    <code class="kss-parameters__name">$success-color</code>
-                  </li>
-                  <li class="kss-parameters__item">
-                    <p class="kss-parameters__description">
-                      #ffae00; Warning Color
-
-                    </p>
-                    <code class="kss-parameters__name">$warning-color</code>
-                  </li>
-                  <li class="kss-parameters__item">
-                    <p class="kss-parameters__description">
-                      #8a8a8a; Dark Gray
-
-                    </p>
-                    <code class="kss-parameters__name">$dark-gray</code>
-                  </li>
-                  <li class="kss-parameters__item">
-                    <p class="kss-parameters__description">
-                      #cacaca; Medium Gray
-
-                    </p>
-                    <code class="kss-parameters__name">$medium-gray</code>
-                  </li>
-                  <li class="kss-parameters__item">
-                    <p class="kss-parameters__description">
-                      #e6e6e6; Light Gray
-
-                    </p>
-                    <code class="kss-parameters__name">$light-gray</code>
-                  </li>
-                  <li class="kss-parameters__item">
-                    <p class="kss-parameters__description">
-                      #000; Black
-
-                    </p>
-                    <code class="kss-parameters__name">$black</code>
-                  </li>
-                  <li class="kss-parameters__item">
-                    <p class="kss-parameters__description">
-                      #fff; White
-
-                    </p>
-                    <code class="kss-parameters__name">$white</code>
-                  </li>
-                </ul>
             </article>
 
+              <article class="kss-section__modifiers">
+                <h1 class="kss-modifiers__heading">Example</h1>
+
+
+                <div class="kss-modifiers__example"><ul>
+  <li class="collapsed">Item 1</li>
+  <li class="expanded">Item 2</li>
+  <li class="leaf">Item 3
+    <ul class="menu">
+      <li>Subitem 1</li>
+      <li>Subitem 2</li>
+      <li>Subitem 3</li>
+    </ul>
+  </li>
+</ul></div>
+
+              </article>
+
+                <article class="kss-section__markup">
+                  <pre><code class="language-markup">&lt;ul&gt;
+  &lt;li class&#x3D;&quot;collapsed&quot;&gt;Item 1&lt;/li&gt;
+  &lt;li class&#x3D;&quot;expanded&quot;&gt;Item 2&lt;/li&gt;
+  &lt;li class&#x3D;&quot;leaf&quot;&gt;Item 3
+    &lt;ul class&#x3D;&quot;menu&quot;&gt;
+      &lt;li&gt;Subitem 1&lt;/li&gt;
+      &lt;li&gt;Subitem 2&lt;/li&gt;
+      &lt;li&gt;Subitem 3&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+                </article>
 
             </header>
     </section>

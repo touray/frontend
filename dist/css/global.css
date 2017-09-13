@@ -558,7 +558,7 @@ body {
   font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
   font-weight: normal;
   line-height: 1.5;
-  color: #000;
+  color: #0a0a0a;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -8240,91 +8240,161 @@ a.thumbnail image {
   clear: both;
 }
 
-/* line 83, ../../src/scss/frontend/drupal/_drupal7.scss */
+/* line 17, ../../src/scss/frontend/_common.scss */
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 75rem;
+  width: 100%;
+}
+
+/* line 45, ../../src/scss/frontend/_common.scss */
+.css-grid {
+  display: grid;
+  grid-column-gap: 20px;
+  grid-row-gap: 0;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: none;
+}
+@media print, screen and (min-width: 40em) {
+  /* line 45, ../../src/scss/frontend/_common.scss */
+  .css-grid {
+    grid-column-gap: 30px;
+    grid-row-gap: 0;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: none;
+  }
+}
+
+/* line 117, ../../src/scss/frontend/drupal/_drupal7.scss */
+ul li.collapsed, ul li.expanded, ul li.leaf {
+  list-style-image: none;
+  list-style-type: none;
+}
+/* line 126, ../../src/scss/frontend/drupal/_drupal7.scss */
+ul.menu li {
+  margin: 0;
+}
+
+/* line 132, ../../src/scss/frontend/drupal/_drupal7.scss */
+li.expanded,
+li.collapsed,
+li.leaf {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 155, ../../src/scss/frontend/drupal/_drupal7.scss */
 div.messages {
   background-position: 0% 0%;
   background-repeat: repeat;
   border: 0.0625rem solid;
+  border-radius: 0.1875rem;
   margin: 1rem 0;
   padding: 1rem;
 }
-/* line 91, ../../src/scss/frontend/drupal/_drupal7.scss */
+/* line 164, ../../src/scss/frontend/drupal/_drupal7.scss */
 div.status {
   background: rgba(58, 219, 118, 0.5);
   border: 0.0625rem solid #136933;
   color: #031309;
 }
-/* line 97, ../../src/scss/frontend/drupal/_drupal7.scss */
+/* line 170, ../../src/scss/frontend/drupal/_drupal7.scss */
 div.warning {
   background: rgba(255, 174, 0, 0.5);
   border: 0.0625rem solid #664600;
   color: black;
 }
-/* line 103, ../../src/scss/frontend/drupal/_drupal7.scss */
+/* line 176, ../../src/scss/frontend/drupal/_drupal7.scss */
 div.error {
   background: rgba(204, 75, 55, 0.5);
   border: 0.0625rem solid #541e16;
   color: #030101;
 }
 
-/* line 110, ../../src/scss/frontend/drupal/_drupal7.scss */
+/* line 183, ../../src/scss/frontend/drupal/_drupal7.scss */
 .ok {
   color: #031309;
 }
 
-/* line 114, ../../src/scss/frontend/drupal/_drupal7.scss */
+/* line 187, ../../src/scss/frontend/drupal/_drupal7.scss */
 .warning {
   color: black;
 }
 
-/* line 118, ../../src/scss/frontend/drupal/_drupal7.scss */
+/* line 191, ../../src/scss/frontend/drupal/_drupal7.scss */
 .error,
 .marker,
 .form-required {
   color: #030101;
 }
 
-/* line 124, ../../src/scss/frontend/drupal/_drupal7.scss */
+/* line 197, ../../src/scss/frontend/drupal/_drupal7.scss */
 table tr.ok {
   background: rgba(58, 219, 118, 0.5);
 }
 
-/* line 128, ../../src/scss/frontend/drupal/_drupal7.scss */
+/* line 201, ../../src/scss/frontend/drupal/_drupal7.scss */
 table tr.warning {
   background: rgba(255, 174, 0, 0.5);
 }
 
-/* line 132, ../../src/scss/frontend/drupal/_drupal7.scss */
+/* line 205, ../../src/scss/frontend/drupal/_drupal7.scss */
 table tr.error {
   background: rgba(204, 75, 55, 0.5);
 }
 
-/* line 154, ../../src/scss/frontend/drupal/_drupal7.scss */
+/* line 227, ../../src/scss/frontend/drupal/_drupal7.scss */
 .progress {
   font-weight: bold;
 }
-/* line 157, ../../src/scss/frontend/drupal/_drupal7.scss */
+/* line 230, ../../src/scss/frontend/drupal/_drupal7.scss */
 .progress .bar {
   background: #cacaca;
   border-radius: 0.1875rem;
   border: 0.0625rem solid #cacaca;
   margin: 0 0 0.3125rem 0;
 }
-/* line 164, ../../src/scss/frontend/drupal/_drupal7.scss */
+/* line 237, ../../src/scss/frontend/drupal/_drupal7.scss */
 .progress .filled {
   background: #1779ba;
+  border-radius: 0.1875rem;
   height: 1.25rem;
 }
-/* line 169, ../../src/scss/frontend/drupal/_drupal7.scss */
+/* line 243, ../../src/scss/frontend/drupal/_drupal7.scss */
 .progress .percentage {
   float: right;
 }
-/* line 173, ../../src/scss/frontend/drupal/_drupal7.scss */
+/* line 247, ../../src/scss/frontend/drupal/_drupal7.scss */
 .progress .message {
   margin: 0 0 1rem 0;
 }
 
-/* line 188, ../../src/scss/frontend/drupal/_drupal7.scss */
+/* line 279, ../../src/scss/frontend/drupal/_drupal7.scss */
+.form-item,
+.form-actions {
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+/* line 286, ../../src/scss/frontend/drupal/_drupal7.scss */
+.form-actions button,
+.form-actions [type='button'],
+.form-actions [type='reset'],
+.form-actions [type='submit'] {
+  margin-bottom: 0;
+}
+/* line 293, ../../src/scss/frontend/drupal/_drupal7.scss */
+.form-actions .form-submit {
+  margin-right: 1rem;
+}
+
+/* line 299, ../../src/scss/frontend/drupal/_drupal7.scss */
+input.form-checkbox, input.form-radio {
+  vertical-align: baseline;
+}
+
+/* line 315, ../../src/scss/frontend/drupal/_drupal7.scss */
 .form-submit {
   display: inline-block;
   vertical-align: middle;
@@ -8353,7 +8423,42 @@ table tr.error {
   color: #fefefe;
 }
 
-/* line 201, ../../src/scss/frontend/drupal/_drupal7.scss */
+/* line 335, ../../src/scss/frontend/drupal/_drupal7.scss */
+.password-strength {
+  margin-top: 0;
+  width: 18.75rem;
+}
+
+/* line 340, ../../src/scss/frontend/drupal/_drupal7.scss */
+.password-strength-title {
+  font-size: 0.875rem;
+  display: inline-block;
+  margin: 0 0 0.0625rem 0;
+}
+
+/* line 346, ../../src/scss/frontend/drupal/_drupal7.scss */
+.password-indicator {
+  background: #cacaca;
+  border-radius: 0.1875rem;
+  height: 2.4375rem;
+  overflow: hidden;
+}
+/* line 352, ../../src/scss/frontend/drupal/_drupal7.scss */
+.password-indicator div {
+  background: #1779ba;
+  border-radius: 0.1875rem;
+}
+
+/* line 365, ../../src/scss/frontend/drupal/_drupal7.scss */
+.search-results {
+  margin-left: 0;
+}
+/* line 368, ../../src/scss/frontend/drupal/_drupal7.scss */
+.search-results .search-snippet-info {
+  padding-left: 0;
+}
+
+/* line 380, ../../src/scss/frontend/drupal/_drupal7.scss */
 .pager {
   margin-left: 0;
   margin-bottom: 1rem;
@@ -8403,74 +8508,18 @@ table tr.error {
   background: #e6e6e6;
 }
 
-/* line 208, ../../src/scss/frontend/drupal/_drupal7.scss */
-ul li.collapsed, ul li.expanded, ul li.leaf {
-  list-style-image: none;
-  list-style-type: none;
+/* line 391, ../../src/scss/frontend/drupal/_drupal7.scss */
+#admin-menu {
+  display: none;
 }
-/* line 217, ../../src/scss/frontend/drupal/_drupal7.scss */
-ul.menu li {
-  margin: 0;
-}
-
-/* line 223, ../../src/scss/frontend/drupal/_drupal7.scss */
-li.expanded,
-li.collapsed,
-li.leaf {
-  margin: 0;
-  padding: 0;
+@media print, screen and (min-width: 40em) {
+  /* line 391, ../../src/scss/frontend/drupal/_drupal7.scss */
+  #admin-menu {
+    display: block;
+  }
 }
 
-/* line 231, ../../src/scss/frontend/drupal/_drupal7.scss */
-.search-results {
-  margin-left: 0;
-}
-/* line 234, ../../src/scss/frontend/drupal/_drupal7.scss */
-.search-results .search-snippet-info {
-  padding-left: 0;
-}
-
-/* line 240, ../../src/scss/frontend/drupal/_drupal7.scss */
-.form-item,
-.form-actions {
-  margin-bottom: 1rem;
-  margin-top: 1rem;
-}
-
-/* line 247, ../../src/scss/frontend/drupal/_drupal7.scss */
-.form-actions button,
-.form-actions [type='button'],
-.form-actions [type='reset'],
-.form-actions [type='submit'] {
-  margin-bottom: 0;
-}
-/* line 254, ../../src/scss/frontend/drupal/_drupal7.scss */
-.form-actions .form-submit {
-  margin-right: 1rem;
-}
-
-/* line 260, ../../src/scss/frontend/drupal/_drupal7.scss */
-input.form-checkbox, input.form-radio {
-  vertical-align: baseline;
-}
-
-/* line 267, ../../src/scss/frontend/drupal/_drupal7.scss */
-.password-strength {
-  margin-top: 0;
-  width: 18.75rem;
-}
-
-/* line 272, ../../src/scss/frontend/drupal/_drupal7.scss */
-.password-indicator {
-  background: #cacaca;
-  height: 1.5rem;
-}
-/* line 276, ../../src/scss/frontend/drupal/_drupal7.scss */
-.password-indicator div {
-  background: #1779ba;
-}
-
-/* line 19, ../../src/scss/frontend/drupal/modules/_styleguide.scss */
+/* line 18, ../../src/scss/frontend/drupal/modules/_styleguide.scss */
 #styleguide-header {
   background: #e6e6e6;
   border-color: 0.0625rem solid #cacaca;
@@ -8478,12 +8527,12 @@ input.form-checkbox, input.form-radio {
   padding: 1rem;
 }
 
-/* line 28, ../../src/scss/frontend/drupal/modules/_styleguide.scss */
+/* line 27, ../../src/scss/frontend/drupal/modules/_styleguide.scss */
 .styleguide table .description,
 .styleguide table .get {
   width: 25%;
 }
-/* line 33, ../../src/scss/frontend/drupal/modules/_styleguide.scss */
+/* line 32, ../../src/scss/frontend/drupal/modules/_styleguide.scss */
 .styleguide table .type {
   width: 50%;
 }
