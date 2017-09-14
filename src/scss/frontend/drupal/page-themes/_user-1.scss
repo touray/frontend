@@ -20,6 +20,8 @@
 // $user-page-block-title-weight       - Defines the title font weight for the main block on the logged out version of the user page. Default: <code>$global-weight-bold</code>
 // $user-page-input-border-color       - Defines the border color for the input on the logged out version of the user page. Default: <code>$light-gray</code>
 // $user-page-input-border-color-focus - Defines the focus border color for the input on the logged out version of the user page. Default: <code>$primary-color</code>
+// $user-page-input-color              - Defines the color for the input on the logged out version of the user page. Default: <code>$dark-gray</code>
+// $user-page-input-color-focus        - Defines the focus color for the input on the logged out version of the user page. Default: <code>$primary-color</code>
 // $user-page-label-size               - Defines the label font size on the logged out version of the user page. Default: <code>$small-font-size</code>
 // $user-page-label-color              - Defines the label font color on the logged out version of the user page. Default: <code>$black</code>
 // $user-page-input-desc-size          - Defines the input description font size on the logged out version of the user page. Default: <code>$small-font-size</code>
@@ -35,21 +37,23 @@ $user-page-footer:                   false                             !default;
 $user-page-background:               $light-gray                       !default;
 $user-page-block-background:         $white                            !default;
 $user-page-block-padding:            $global-padding                   !default;
-$user-page-block-shadow:             0 0 25px rgba(0, 0, 0, 0.07)      !default;
+$user-page-block-shadow:             0 0 25px rgba($black, .07)        !default;
 $user-page-block-width:              rem-calc(400)                     !default;
-$user-page-block-title:              "Sign In"                         !default;
+$user-page-block-title:              'Sign In'                         !default;
 $user-page-block-title-weight:       $global-weight-bold               !default;
 $user-page-block-title-size:         precent-size(18)                  !default;
 $user-page-input-border-color:       $light-gray                       !default;
 $user-page-input-border-color-focus: $primary-color                    !default;
+$user-page-input-color:              $dark-gray                        !default;
+$user-page-input-color-focus:        $primary-color                    !default;
 $user-page-label-size:               $small-font-size                  !default;
 $user-page-label-color:              $black                            !default;
 $user-page-input-desc-size:          $small-font-size                  !default;
 $user-page-input-desc-color:         $medium-gray                      !default;
 $user-page-input-desc-color-focus:   $dark-gray                        !default;
 
+// scss-lint:disable QualifyingElement, IdSelector, NestingDepth
 body.page-user.not-logged-in {
-  // scss-lint:disable IdSelector
   background: $user-page-background;
 
   @if $user-page-header == false {
@@ -74,8 +78,8 @@ body.page-user.not-logged-in {
       left: 50%;
       max-width: $user-page-block-width;
       position: absolute;
-      transform: translateY(-50%) translateX(-50%);
       top: 50%;
+      transform: translateY(-50%) translateX(-50%);
       width: 100%;
     }
   }
@@ -95,18 +99,20 @@ body.page-user.not-logged-in {
     [type='tel'],
     [type='url'],
     [type='number'] {
-      border: 0;
-      background-image: linear-gradient($user-page-input-border-color-focus, $user-page-input-border-color-focus),linear-gradient($user-page-input-border-color, $user-page-input-border-color);
-      background-position: center bottom,center calc(100% - 1px);
+      background-image: linear-gradient($user-page-input-border-color-focus, $user-page-input-border-color-focus), linear-gradient($user-page-input-border-color, $user-page-input-border-color);
+      background-position: center bottom, center calc(100% - 1px);
       background-repeat: no-repeat;
       background-size: 0 2px, 100% 1px;
+      border: 0;
       box-shadow: none;
+      color: $user-page-input-color;
       padding-left: 0;
       padding-right: 0;
-      transition: background .3s, margin .3s;
+      transition: background .3s, margin .3s, color .3s;
 
       &:focus {
         background-size: 100% 2px, 100% 1px;
+        color: $user-page-input-color-focus;
 
         + .description {
           color: $user-page-input-desc-color-focus;

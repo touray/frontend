@@ -15,5 +15,5 @@
 //
 // Style guide: frontend.functions.precent-size
 @function precent-size($num, $base: 16) {
-    @return ((100 * $num) / $base) * 1%;
+  @return ((100 * $num) / $base) * 1%;
 }

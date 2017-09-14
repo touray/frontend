@@ -4,7 +4,7 @@
 //
 // Style guide: frontend.drupal.drupal7
 
-// scss-lint:disable QualifyingElement, MergeableSelector
+// scss-lint:disable QualifyingElement, MergeableSelector, IdSelector
 
 // Variables
 //
@@ -229,9 +229,9 @@ table tr.error {
 
   .bar {
     background: $progress-bar-background;
-    border-radius: $progress-bar-radius;
     border: $progress-bar-border;
-    margin: 0 0 $progress-margin-bottom 0;
+    border-radius: $progress-bar-radius;
+    margin: 0 0 $progress-margin-bottom;
   }
 
   .filled {
@@ -338,8 +338,8 @@ input {
 }
 
 .password-strength-title {
-  font-size: $password-strength-title-size;
   display: inline-block;
+  font-size: $password-strength-title-size;
   margin: $password-strength-title-margin;
 }
 
