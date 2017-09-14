@@ -19,8 +19,8 @@
 //
 // Style guide: frontend.variables.globals
 $global-width:         rem-calc(1200);
-$global-margin:        1rem;
-$global-padding:       1rem;
+$global-margin:        rem-calc(30);
+$global-padding:       rem-calc(30);
 $global-radius:        rem-calc(3);
 $global-weight-normal: normal;
 $global-weight-bold:   bold;
@@ -50,19 +50,30 @@ $success-color:   #3adb76;
 $warning-color:   #ffae00;
 $dark-gray:       #8a8a8a;
 $medium-gray:     #cacaca;
-$light-gray:      #e6e6e6;
+$light-gray:      #f4f5f7;
 $black:           #000;
 $white:           #fff;
+
+// Typography
+//
+// These are the default typography options.
+//
+// $small-font-size - Defines the small font size. Default: <code>80%</code>
+//
+// Weight: 3
+//
+// Style guide: frontend.variables.typography
+$small-font-size: 80%;
 
 // CSS Grid
 //
 // These are the default options for CSS grids. To add/edit, use <code>scss/_variables.scss</code>.
 //
-// $css-grid-columns - Defines the number of columns to use in a grid using a responsive list. Default: <code>(small: 2, medium: 12)</code>
+// $css-grid-columns     - Defines the number of columns to use in a grid using a responsive list. Default: <code>(small: 2, medium: 12)</code>
 // $css-grid-column-gaps - Defines the grid's column gap using a responsive list. Default: <code>(small: 15px, medium: 30px)</code>
-// $css-grid-row-gaps - Defines the grid's row gap using a responsive list. Default: <code>(small: 0, medium: 0x)</code>
+// $css-grid-row-gaps    - Defines the grid's row gap using a responsive list. Default: <code>(small: 0, medium: 0x)</code>
 //
-// Weight: 3
+// Weight: 4
 //
 // Style guide: frontend.variables.css-grid
 $css-grid-columns: (
@@ -83,11 +94,13 @@ $css-grid-row-gaps: (
 // These are the default options for form styling. To add/edit, use <code>scss/_variables.scss</code>.
 //
 // $form-label-font-size - Defines the font size for form labels. Default: <code>rem-calc(14)</code>
+// $form-spacing         - Defines the form input bottom margin. Default: <code>rem-calc(16)</code>
 //
-// Weight: 4
+// Weight: 5
 //
 // Style guide: frontend.variables.forms
 $form-label-font-size: rem-calc(14);
+$form-spacing:         rem-calc(16);
 
 // Progress Bar
 //
@@ -99,7 +112,7 @@ $form-label-font-size: rem-calc(14);
 // $progress-meter-background - Defines the background of progress bar meter. Default: <code>$primary-color</code>
 // $progress-height - Defines the height of the progress bar. Default: <code>1rem</code>
 //
-// Weight: 5
+// Weight: 6
 //
 // Style guide: frontend.variables.progress-bar
 $progress-background:       $medium-gray;

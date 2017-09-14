@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Frontend Build Docs</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="generator" content="kss-node">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,300">
+    <link rel="stylesheet" href="kss-assets/vendor/prism.css">
+    <link rel="stylesheet" href="kss-assets/css/kss.css">
+    <link rel="stylesheet" href="../dist/css/global.css">
+
+  </head>
+
+  <body class="kss-body">
+
+    <!-- header. -->
+    <header class="kss-header">
+      <section class="kss-header__inner">
+        <a class="kss-header__hamburger-trigger">
+          <div class="kss-header__hamburger"></div>
+        </a>
+        <h1 class="kss-header__title kss-title">Frontend Build Docs</h1>
+      </section>
+    </header>
+    <!-- /header. -->
+
+
+    <!-- navigation. -->
+    <section class="kss-navigation">
+      <h1 class="kss-navigation__title kss-title">Frontend Build Docs</h1>
+      <ul class="kss-nav">
+        <li class="kss-nav__item">
+          <a href="index.html">
+            <span class="kss-nav__ref">0</span>
+            <span class="kss-nav__name">Introduction</span>
+          </a>
+        </li>
+          <li class="kss-nav__item">
+            <a class="" href="section-cheatsheet.html">
+              <span class="kss-nav__ref">1</span>
+              <span class="kss-nav__name">Designer Cheatsheet</span>
+            </a>
+          </li>
+          <li class="kss-nav__item">
+            <a class="" href="section-global.html">
+              <span class="kss-nav__ref">2</span>
+              <span class="kss-nav__name">Global Style Sheet</span>
+            </a>
+          </li>
+          <li class="kss-nav__item">
+            <a class="" href="section-variables.html">
+              <span class="kss-nav__ref">3</span>
+              <span class="kss-nav__name">Custom Variables</span>
+            </a>
+          </li>
+          <li class="kss-nav__item">
+            <a class="" href="section-framework.html">
+              <span class="kss-nav__ref">4</span>
+              <span class="kss-nav__name">Framework</span>
+            </a>
+          </li>
+          <li class="kss-nav__item">
+            <a class="" href="section-motion-ui-import-motion-ui-include-motion-ui-transitions-include-motion-ui-animations-.html">
+              <span class="kss-nav__ref">5</span>
+              <span class="kss-nav__name">Motion UI</span>
+            </a>
+          </li>
+          <li class="kss-nav__item">
+            <a class="" href="section-frontend.html">
+              <span class="kss-nav__ref">6</span>
+              <span class="kss-nav__name">Frontend Build</span>
+            </a>
+          </li>
+          <li class="kss-nav__item">
+            <a class="" href="section-components.html">
+              <span class="kss-nav__ref">7</span>
+              <span class="kss-nav__name">Components</span>
+            </a>
+          </li>
+      </ul>
+    </section>
+    <!-- /navigation. -->
+
+
+    <!-- documentation. -->
+    <section class="kss-documentation">
+
+        <!--
+          display each section, in order.
+          the "root" element comes first in this loop, and can be detected using
+          the "#if @first" block as seen below.
+        -->
+            <header class="kss-section kss-section--depth-5" id="kssref-frontend-drupal-page-themes-user-page-1-variables">
+
+            <article class="kss-section__content">
+                <p class="kss-section__source">Source: <span>frontend/drupal/page-themes/_user-1.scss</span>, line <span>7</span></p>
+
+              <a class="kss-section__permalink" href="#kssref-frontend-drupal-page-themes-user-page-1-variables">
+                <h5 class="kss-section__item kss-section__item--depth-5">
+                  <span class="kss-section__ref">6.6.3.1.1</span>
+                  <span class="kss-section__name">Variables</span>
+                </h5>
+              </a>
+
+                <div class="kss-section__description"><p>User Page 1 component variables. To add/edit component variables, use <code>scss/_variables.scss</code>.</p>
+</div>
+
+                <ul class="kss-parameters">
+                  <li class="kss-parameters__item">
+                    <p class="kss-parameters__description">
+                      If true, display the site header. Default: <code>false</code>
+
+                    </p>
+                    <code class="kss-parameters__name">$user-page-header</code>
+                  </li>
+                  <li class="kss-parameters__item">
+                    <p class="kss-parameters__description">
+                      If true, display the site footer. Default: <code>false</code>
+
+                    </p>
+                    <code class="kss-parameters__name">$user-page-footer</code>
+                  </li>
+                  <li class="kss-parameters__item">
+                    <p class="kss-parameters__description">
+                      Defines the body background for the logged out version of the user page. Default: <code>$light-gray</code>
+
+                    </p>
+                    <code class="kss-parameters__name">$user-page-background</code>
+                  </li>
+                  <li class="kss-parameters__item">
+                    <p class="kss-parameters__description">
+                      Defines the background for the main block on the logged out version of the user page. Default: <code>$white</code>
+
+                    </p>
+                    <code class="kss-parameters__name">$user-page-block-background</code>
+                  </li>
+                  <li class="kss-parameters__item">
+                    <p class="kss-parameters__description">
+                      Defines the padding for the main block on the logged out version of the user page. Default: <code>$global-padding</code>
+
+                    </p>
+                    <code class="kss-parameters__name">$user-page-block-padding</code>
+                  </li>
+                  <li class="kss-parameters__item">
+                    <p class="kss-parameters__description">
+                      Defines the shadow for the main block on the logged out version of the user page. Default: <code>0 0 25px rgba(0, 0, 0, 0.07)</code>
+
+                    </p>
+                    <code class="kss-parameters__name">$user-page-block-shadow</code>
+                  </li>
+                  <li class="kss-parameters__item">
+                    <p class="kss-parameters__description">
+                      Defines the max-width for the main block on the logged out version of the user page. Default: <code>rem-calc(400)</code>
+
+                    </p>
+                    <code class="kss-parameters__name">$user-page-block-width</code>
+                  </li>
+                  <li class="kss-parameters__item">
+                    <p class="kss-parameters__description">
+                      Defines the title for the main block on the logged out version of the user page. Default: <code>&quot;Sign In&quot;</code>
+
+                    </p>
+                    <code class="kss-parameters__name">$user-page-block-title</code>
+                  </li>
+                  <li class="kss-parameters__item">
+                    <p class="kss-parameters__description">
+                      Defines the title size for the main block on the logged out version of the user page. Default: <code>precent-size(22)</code>
+
+                    </p>
+                    <code class="kss-parameters__name">$user-page-block-title-size</code>
+                  </li>
+                  <li class="kss-parameters__item">
+                    <p class="kss-parameters__description">
+                      Defines the title font weight for the main block on the logged out version of the user page. Default: <code>$global-weight-bold</code>
+
+                    </p>
+                    <code class="kss-parameters__name">$user-page-block-title-weight</code>
+                  </li>
+                  <li class="kss-parameters__item">
+                    <p class="kss-parameters__description">
+                      Defines the border color for the input on the logged out version of the user page. Default: <code>$light-gray</code>
+
+                    </p>
+                    <code class="kss-parameters__name">$user-page-input-border-color</code>
+                  </li>
+                  <li class="kss-parameters__item">
+                    <p class="kss-parameters__description">
+                      Defines the focus border color for the input on the logged out version of the user page. Default: <code>$primary-color</code>
+
+                    </p>
+                    <code class="kss-parameters__name">$user-page-input-border-color-focus</code>
+                  </li>
+                  <li class="kss-parameters__item">
+                    <p class="kss-parameters__description">
+                      Defines the label font size on the logged out version of the user page. Default: <code>$small-font-size</code>
+
+                    </p>
+                    <code class="kss-parameters__name">$user-page-label-size</code>
+                  </li>
+                  <li class="kss-parameters__item">
+                    <p class="kss-parameters__description">
+                      Defines the label font color on the logged out version of the user page. Default: <code>$black</code>
+
+                    </p>
+                    <code class="kss-parameters__name">$user-page-label-color</code>
+                  </li>
+                  <li class="kss-parameters__item">
+                    <p class="kss-parameters__description">
+                      Defines the input description font size on the logged out version of the user page. Default: <code>$small-font-size</code>
+
+                    </p>
+                    <code class="kss-parameters__name">$user-page-input-desc-size</code>
+                  </li>
+                  <li class="kss-parameters__item">
+                    <p class="kss-parameters__description">
+                      Defines the input description font color on the logged out version of the user page. Default: <code>$medium-gray</code>
+
+                    </p>
+                    <code class="kss-parameters__name">$user-page-input-desc-color</code>
+                  </li>
+                  <li class="kss-parameters__item">
+                    <p class="kss-parameters__description">
+                      Defines the input description focus font color on the logged out version of the user page. Default: <code>$dark-gray</code>
+
+                    </p>
+                    <code class="kss-parameters__name">$user-page-input-desc-color-focus</code>
+                  </li>
+                </ul>
+            </article>
+
+
+            </header>
+    </section>
+    <!-- /documentation. -->
+
+
+
+  <!-- scripts. -->
+  <script src="kss-assets/vendor/jquery.js"></script>
+  <script src="kss-assets/vendor/prism.js"></script>
+  <script src="kss-assets/js/kss.js"></script>
+  <script src="../dist/js/app.js"></script>
+
+  <!-- /scripts. -->
+
+  </body>
+</html>

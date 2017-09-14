@@ -7531,7 +7531,7 @@ input:checked + label > .switch-inactive {
 table {
   border-collapse: collapse;
   width: 100%;
-  margin-bottom: 1rem;
+  margin-bottom: 1.875rem;
   border-radius: 0.1875rem;
 }
 /* line 111, ../../node_modules/foundation-sites/scss/components/_table.scss */
@@ -8290,8 +8290,8 @@ div.messages {
   background-repeat: repeat;
   border: 0.0625rem solid;
   border-radius: 0.1875rem;
-  margin: 1rem 0;
-  padding: 1rem;
+  margin: 1.875rem 0;
+  padding: 1.875rem;
 }
 /* line 164, ../../src/scss/frontend/drupal/_drupal7.scss */
 div.status {
@@ -8367,14 +8367,14 @@ table tr.error {
 }
 /* line 247, ../../src/scss/frontend/drupal/_drupal7.scss */
 .progress .message {
-  margin: 0 0 1rem 0;
+  margin: 0 0 1.875rem 0;
 }
 
 /* line 279, ../../src/scss/frontend/drupal/_drupal7.scss */
 .form-item,
 .form-actions {
-  margin-bottom: 1rem;
-  margin-top: 1rem;
+  margin-bottom: 1.875rem;
+  margin-top: 1.875rem;
 }
 
 /* line 286, ../../src/scss/frontend/drupal/_drupal7.scss */
@@ -8386,7 +8386,7 @@ table tr.error {
 }
 /* line 293, ../../src/scss/frontend/drupal/_drupal7.scss */
 .form-actions .form-submit {
-  margin-right: 1rem;
+  margin-right: 1.875rem;
 }
 
 /* line 299, ../../src/scss/frontend/drupal/_drupal7.scss */
@@ -8521,10 +8521,10 @@ input.form-checkbox, input.form-radio {
 
 /* line 18, ../../src/scss/frontend/drupal/modules/_styleguide.scss */
 #styleguide-header {
-  background: #e6e6e6;
+  background: #f4f5f7;
   border-color: 0.0625rem solid #cacaca;
   color: #8a8a8a;
-  padding: 1rem;
+  padding: 1.875rem;
 }
 
 /* line 27, ../../src/scss/frontend/drupal/modules/_styleguide.scss */
@@ -8535,4 +8535,112 @@ input.form-checkbox, input.form-radio {
 /* line 32, ../../src/scss/frontend/drupal/modules/_styleguide.scss */
 .styleguide table .type {
   width: 50%;
+}
+
+/* line 51, ../../src/scss/frontend/drupal/page-themes/_user-1.scss */
+body.page-user.not-logged-in {
+  background: #f4f5f7;
+}
+/* line 56, ../../src/scss/frontend/drupal/page-themes/_user-1.scss */
+body.page-user.not-logged-in #header {
+  display: none;
+}
+/* line 62, ../../src/scss/frontend/drupal/page-themes/_user-1.scss */
+body.page-user.not-logged-in #footer {
+  display: none;
+}
+/* line 67, ../../src/scss/frontend/drupal/page-themes/_user-1.scss */
+body.page-user.not-logged-in #main {
+  background: #fff;
+  -webkit-box-shadow: 0 0 25px rgba(0, 0, 0, 0.07);
+          box-shadow: 0 0 25px rgba(0, 0, 0, 0.07);
+  display: inline-block;
+  padding: 1.875rem;
+}
+@media print, screen and (min-width: 40em) {
+  /* line 67, ../../src/scss/frontend/drupal/page-themes/_user-1.scss */
+  body.page-user.not-logged-in #main {
+    left: 50%;
+    max-width: 25rem;
+    position: absolute;
+    -webkit-transform: translateY(-50%) translateX(-50%);
+        -ms-transform: translateY(-50%) translateX(-50%);
+            transform: translateY(-50%) translateX(-50%);
+    top: 50%;
+    width: 100%;
+  }
+}
+/* line 84, ../../src/scss/frontend/drupal/page-themes/_user-1.scss */
+body.page-user.not-logged-in #user-login::before {
+  content: "Sign In";
+  display: block;
+  font-size: 112.5%;
+  font-weight: bold;
+}
+/* line 91, ../../src/scss/frontend/drupal/page-themes/_user-1.scss */
+body.page-user.not-logged-in #user-login [type='text'],
+body.page-user.not-logged-in #user-login [type='password'],
+body.page-user.not-logged-in #user-login [type='email'],
+body.page-user.not-logged-in #user-login [type='search'],
+body.page-user.not-logged-in #user-login [type='tel'],
+body.page-user.not-logged-in #user-login [type='url'],
+body.page-user.not-logged-in #user-login [type='number'] {
+  border: 0;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#1779ba), to(#1779ba)), -webkit-gradient(linear, left top, left bottom, from(#f4f5f7), to(#f4f5f7));
+  background-image: linear-gradient(#1779ba, #1779ba), linear-gradient(#f4f5f7, #f4f5f7);
+  background-position: center bottom, center calc(100% - 1px);
+  background-repeat: no-repeat;
+  background-size: 0 2px, 100% 1px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  padding-left: 0;
+  padding-right: 0;
+  -webkit-transition: background .3s, margin .3s;
+  transition: background .3s, margin .3s;
+}
+/* line 108, ../../src/scss/frontend/drupal/page-themes/_user-1.scss */
+body.page-user.not-logged-in #user-login [type='text']:focus,
+body.page-user.not-logged-in #user-login [type='password']:focus,
+body.page-user.not-logged-in #user-login [type='email']:focus,
+body.page-user.not-logged-in #user-login [type='search']:focus,
+body.page-user.not-logged-in #user-login [type='tel']:focus,
+body.page-user.not-logged-in #user-login [type='url']:focus,
+body.page-user.not-logged-in #user-login [type='number']:focus {
+  background-size: 100% 2px, 100% 1px;
+}
+/* line 111, ../../src/scss/frontend/drupal/page-themes/_user-1.scss */
+body.page-user.not-logged-in #user-login [type='text']:focus + .description,
+body.page-user.not-logged-in #user-login [type='password']:focus + .description,
+body.page-user.not-logged-in #user-login [type='email']:focus + .description,
+body.page-user.not-logged-in #user-login [type='search']:focus + .description,
+body.page-user.not-logged-in #user-login [type='tel']:focus + .description,
+body.page-user.not-logged-in #user-login [type='url']:focus + .description,
+body.page-user.not-logged-in #user-login [type='number']:focus + .description {
+  color: #8a8a8a;
+}
+/* line 117, ../../src/scss/frontend/drupal/page-themes/_user-1.scss */
+body.page-user.not-logged-in #user-login label {
+  color: #000;
+  cursor: pointer;
+  font-size: 80%;
+}
+/* line 123, ../../src/scss/frontend/drupal/page-themes/_user-1.scss */
+body.page-user.not-logged-in #user-login .description {
+  color: #cacaca;
+  font-size: 80%;
+  margin-top: -1rem;
+  -webkit-transition: color .3s;
+  transition: color .3s;
+}
+/* line 130, ../../src/scss/frontend/drupal/page-themes/_user-1.scss */
+body.page-user.not-logged-in #user-login .form-required {
+  color: #cc4b37;
+}
+/* line 134, ../../src/scss/frontend/drupal/page-themes/_user-1.scss */
+body.page-user.not-logged-in #user-login .form-actions {
+  margin-bottom: 0;
+}
+/* line 138, ../../src/scss/frontend/drupal/page-themes/_user-1.scss */
+body.page-user.not-logged-in #user-login .form-submit {
+  width: 100%;
 }

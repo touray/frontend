@@ -48,6 +48,7 @@
 //
 // Style guide: frontend
 //
+@import 'frontend/functions';
 @import 'frontend/mixins';
 @import 'frontend/extendables';
 @import 'frontend/common';
@@ -70,9 +71,19 @@
 
 @import 'frontend/drupal/modules/styleguide';
 
-// WordPress
+// Drupal Page Themes
+//
+// Optional page themes for Drupal's default page output.
 //
 // Weight: 6
+//
+// Style guide: frontend.drupal.page-themes
+
+@import 'frontend/drupal/page-themes/user-1';
+
+// WordPress
+//
+// Weight: 7
 //
 // Style guide: frontend.wordpress
 
@@ -85,7 +96,7 @@
 // all styles should be self-contained components that follow a specific
 // naming convention. Once built, you can import your components here.
 //
-// Weight: 7
+// Weight: 8
 //
 // Style guide: components
 

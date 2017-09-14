@@ -1,0 +1,19 @@
+// Functions
+//
+// These are the default Frontend Build functions. Frontend uses <a href="http://foundation.zurb.com/" target="_blank">Foundation</a> by default and if enabled provides a wide range of other functions not listed below.
+//
+// Style guide: frontend.functions
+
+// precent-size($num)
+//
+// Outputs a percetage relative to the browsers default text size (normally 16px) and the desired px.
+//
+// Compatible in IE6+, Firefox 2+, Safari 4+, Chrome 49+.
+//
+// $num   - Defines the font size.
+// $base - Override the browser's default font size. Default: <code>16</code>
+//
+// Style guide: frontend.functions.precent-size
+@function precent-size($num, $base: 16) {
+    @return ((100 * $num) / $base) * 1%;
+}
