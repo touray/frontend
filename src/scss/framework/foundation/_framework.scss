@@ -20,10 +20,10 @@
 @import '../../variables';
 
 // Import ALL Foundation components (not recommended)
-//@include foundation-everything;
+@include foundation-everything;
 
 // Import Foundation components individually
-@include foundation-global-styles;
+//@include foundation-global-styles;
 //@include foundation-xy-grid-classes;
 //@include foundation-grid;                // DEPRECATED
 //@include foundation-flex-grid;           // DEPRECATED

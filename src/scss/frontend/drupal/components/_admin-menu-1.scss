@@ -1,0 +1,43 @@
+// Admin Menu 1
+//
+// Themes the Drupal admin menu.
+//
+// Style guide: frontend.drupal.components.admin-menu-1
+
+// Variables
+//
+// Admin Menu 1 component variables. To add/edit component variables, use <code>scss/_variables.scss</code>.
+//
+// $admin-menu-height          - Admin menu height. Default: <code>rem-calc(30)</code>
+// $admin-menu-background      - Admin menu background. Default: <code>$black</code>
+// $admin-menu-font-family     - Admin menu font family. Default: <code>$body-font-family</code>
+// $admin-menu-size            - Admin menu font size. Default: <code>inherit</code>
+// $admin-menu-user-background - Admin menu user link background. Default: <code>$alert-color</code>
+//
+// Weight: 0
+//
+// Style guide: frontend.drupal.components.admin-menu.variables
+$admin-menu-height:      rem-calc(27);
+$admin-menu-background:  $black;
+$admin-menu-font-family: $body-font-family;
+$admin-menu-size:        precent-size(13);
+
+body {
+  &.admin-menu {
+    margin-top: $admin-menu-height !important;
+  }
+}
+
+#admin-menu {
+  background: $admin-menu-background;
+  font-family: $admin-menu-font-family;
+  font-size: $admin-menu-size;
+
+  li {
+    &.admin-menu-account {
+      > a {
+        background: $alert-color;
+      }
+    }
+  }
+}

@@ -93,56 +93,64 @@
           the "root" element comes first in this loop, and can be detected using
           the "#if @first" block as seen below.
         -->
-            <header class="kss-section kss-section--depth-3" id="kssref-frontend-variables-progress-bar">
+            <header class="kss-section kss-section--depth-3" id="kssref-frontend-mixins-throbber">
 
             <article class="kss-section__content">
-                <p class="kss-section__source">Source: <span>frontend/_variables.scss</span>, line <span>141</span></p>
+                <p class="kss-section__source">Source: <span>frontend/_mixins.scss</span>, line <span>79</span></p>
 
-              <a class="kss-section__permalink" href="#kssref-frontend-variables-progress-bar">
+              <a class="kss-section__permalink" href="#kssref-frontend-mixins-throbber">
                 <h3 class="kss-section__item kss-section__item--depth-3">
-                  <span class="kss-section__ref">6.5.7</span>
-                  <span class="kss-section__name">Progress Bar</span>
+                  <span class="kss-section__ref">6.4.4</span>
+                  <span class="kss-section__name">throbber($style)</span>
                 </h3>
               </a>
 
-                <div class="kss-section__description"><p>These are the default options for progress bars. To add/edit, use <code>scss/_variables.scss</code>.</p>
+                <div class="kss-section__description"><p>Styles a throbber element.</p>
+<p>Compatible in IE11+, Firefox 54+, Safari 10.1+, Chrome 49+.</p>
 </div>
 
                 <ul class="kss-parameters">
                   <li class="kss-parameters__item">
                     <p class="kss-parameters__description">
-                      Defines the background of progress bars. Default: <code>$medium-gray</code>
+                      Defines the throbber width. Default: <code>rem-calc(40)</code>
 
                     </p>
-                    <code class="kss-parameters__name">$progress-background</code>
+                    <code class="kss-parameters__name">$width</code>
                   </li>
                   <li class="kss-parameters__item">
                     <p class="kss-parameters__description">
-                      Defines the progress bar margin. Default: <code>$global-margin</code>
+                      Defines the throbber height. Default: <code>rem-calc(40)</code>
 
                     </p>
-                    <code class="kss-parameters__name">$progress-margin-bottom</code>
+                    <code class="kss-parameters__name">$height</code>
                   </li>
                   <li class="kss-parameters__item">
                     <p class="kss-parameters__description">
-                      Defines the progress bar radius. Default: <code>$global-radius</code>
+                      Defines the throbber color. Default: <code>$primary-color</code>
 
                     </p>
-                    <code class="kss-parameters__name">$progress-radius</code>
+                    <code class="kss-parameters__name">$color</code>
                   </li>
                   <li class="kss-parameters__item">
                     <p class="kss-parameters__description">
-                      Defines the background of progress bar meter. Default: <code>$primary-color</code>
+                      Defines the throbber opacity. Default: <code>$opacity</code>
 
                     </p>
-                    <code class="kss-parameters__name">$progress-meter-background</code>
+                    <code class="kss-parameters__name">$opacity</code>
                   </li>
                   <li class="kss-parameters__item">
                     <p class="kss-parameters__description">
-                      Defines the height of the progress bar. Default: <code>1rem</code>
+                      Defines the throbber radius. Default: <code>$global-radius</code>
 
                     </p>
-                    <code class="kss-parameters__name">$progress-height</code>
+                    <code class="kss-parameters__name">$radius</code>
+                  </li>
+                  <li class="kss-parameters__item">
+                    <p class="kss-parameters__description">
+                      Defines the throbber animation (<em>keyframes available: throbber-rotateplane|throbber-scaleout</em>). Default: <code>throbber-rotateplane 1.2s infinite ease-in-out</code>
+
+                    </p>
+                    <code class="kss-parameters__name">$animation</code>
                   </li>
                 </ul>
             </article>

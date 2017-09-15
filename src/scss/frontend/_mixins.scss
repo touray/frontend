@@ -75,3 +75,67 @@
     grid-row-start: map-get($row-start, medium);
   }
 }
+
+// throbber($style)
+//
+// Styles a throbber element.
+//
+// Compatible in IE11+, Firefox 54+, Safari 10.1+, Chrome 49+.
+//
+// $width     - Defines the throbber width. Default: <code>rem-calc(40)</code>
+// $height    - Defines the throbber height. Default: <code>rem-calc(40)</code>
+// $color     - Defines the throbber color. Default: <code>$primary-color</code>
+// $opacity   - Defines the throbber opacity. Default: <code>$opacity</code>
+// $radius    - Defines the throbber radius. Default: <code>$global-radius</code>
+// $animation - Defines the throbber animation (<em>keyframes available: throbber-rotateplane|throbber-scaleout</em>). Default: <code>throbber-rotateplane 1.2s infinite ease-in-out</code>
+//
+// Style guide: frontend.mixins.throbber
+@mixin throbber($width: rem-calc(40), $height: rem-calc(40), $color: $primary-color, $opacity: .9, $radius: $global-radius, $animation: throbber-rotateplane 1.2s infinite ease-in-out) {
+  animation: $animation;
+  background: $color;
+  border-radius: $radius;
+  height: $height;
+  left: 50%;
+  opacity: $opacity;
+  top: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  width: $width;
+
+  @-webkit-keyframes throbber-rotateplane {
+    0% { -webkit-transform: perspective(120px) }
+    50% { -webkit-transform: perspective(120px) rotateY(180deg) }
+    100% { -webkit-transform: perspective(120px) rotateY(180deg)  rotateX(180deg) }
+  }
+
+  @keyframes throbber-rotateplane {
+    0% {
+      transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+      -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg)
+    } 50% {
+      transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+      -webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg)
+    } 100% {
+      transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+      -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+    }
+  }
+
+  @-webkit-keyframes throbber-scaleout {
+    0% { -webkit-transform: scale(0) }
+    100% {
+      -webkit-transform: scale(1.0);
+      opacity: 0;
+    }
+  }
+
+  @keyframes throbber-scaleout {
+    0% {
+      -webkit-transform: scale(0);
+      transform: scale(0);
+    } 100% {
+      -webkit-transform: scale(1.0);
+      transform: scale(1.0);
+      opacity: 0;
+    }
+  }
+}

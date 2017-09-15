@@ -1,0 +1,173 @@
+// Panels In-Place Editor
+//
+// Contains default <a href="https://www.drupal.org/project/panels" target="_blank">Panels In-Place Editor module</a> styles. To add/edit component variables, use <code>scss/_variables.scss</code>.
+//
+// $control-container-height        - Sticky control container height. Default: <code>$black</code>
+// $control-container-background    - Sticky control container background. Default: <code>$black</code>
+// $control-container-shadow        - Sticky control container box shadow. Default: <code>none</code>
+// $control-container-padding       - Sticky control container padding. Default: <code>rem-calc(10 0)</code>
+// $control-button-background       - Sticky control button background. Default: <code>$button-background</code>
+// $control-button-background-hover - Sticky control button hover background. Default: <code>$button-background-hover</code>
+// $control-button-color            - Sticky control button color. Default: <code>$button-color</code>
+// $control-button-color-hover      - Sticky control button hover color. Default: <code>$button-color-hover</code>
+// $control-button-font-family      - Sticky control button font family. Default: <code>$button-font-family</code>
+// $control-button-padding          - Sticky control button padding. Default: <code>$button-padding</code>
+// $control-button-size             - Sticky control button font sizes. Default: <code>map-get($button-sizes, small)</code>
+// $control-button-weight           - Sticky control button weight. Default: <code>$global-weight-bold</code>
+//
+// Style guide: frontend.drupal.modules.panels-in-place-editor
+
+$control-container-height:        rem-calc(60);
+$control-container-background:    $black;
+$control-container-shadow:        none;
+$control-container-padding:       rem-calc(10 0);
+$control-button-background:       $button-background;
+$control-button-color:            $button-color;
+$control-button-color-hover:      $button-color-hover;
+$control-button-radius:           $button-radius;
+$control-button-background-hover: $button-background-hover;
+$control-button-font-family:      $button-font-family;
+$control-button-padding:          $button-padding;
+$control-button-size:             map-get($button-sizes, small);
+$control-button-weight:           $button-weight;
+
+body {
+  &.panels-ip {
+    margin-bottom: $control-container-height;
+  }
+}
+
+div {
+  &#panels-ipe-control-container {
+    background-color: $black;
+    box-shadow: $control-container-shadow;
+    height: $control-container-height;
+    padding: $control-container-padding;
+  }
+
+  &.panels-ipe-button-container {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+  }
+
+  &.panels-ipe-pseudobutton-container,
+  &.panels-ipe-control .form-submit {
+    background: $control-button-background;
+    border-radius: $control-button-radius;
+    color: $control-button-color;
+    font-family: $control-button-font-family;
+    font-size: $control-button-size;
+    font-weight: $control-button-weight;
+    height: auto;
+    line-height: 1;
+    padding: $control-button-padding;
+
+    &:hover,
+    &:focus {
+      background: $control-button-background-hover;
+    }
+
+    a {
+      color: $control-button-color;
+      height: auto;
+      padding: 0;
+
+      &:hover {
+        color: $control-button-color-hover;
+      }
+    }
+  }
+
+  &.panels-ipe-pseudobutton-container {
+    a {
+      &.panels-ipe-startedit,
+      &.panels-ipe-change-layout {
+        background: transparent;
+        padding-left: 0;
+      }
+    }
+  }
+
+  &.panels-ipe-placeholder {
+    background: rgba($primary-color, .3);
+    border: 0;
+    color: $black;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: $global-lineheight;
+    margin: 0;
+    padding: rem-calc(10);
+
+    h3 {
+      color: $primary-color;
+      font-size: precent-size(12, 12);
+      font-weight: $global-weight-bold;
+      margin: 0;
+      width: auto;
+    }
+  }
+
+  &.panels-ipe-newblock {
+    box-shadow: none;
+    margin: 0;
+    right: rem-calc(10);
+    transform: translateY(-50%);
+  }
+
+  &.panels-ipe-draghandle {
+    position: relative;
+  }
+
+  &.panels-ipe-handlebar-wrapper {
+    border: 0;
+  }
+}
+
+div.panels-ipe-handlebar-wrapper li a,
+div.panels-ipe-dragtitle span,
+div.panels-ipe-newblock a,
+span.panels-ipe-draghandle-icon {
+  background-color: $primary-color;
+  box-shadow: none;
+}
+
+.ipe-throbber {
+  @include throbber;
+}
+
+.panels-ipe-dragbar-admin-title {
+  display: inline-block;
+  font-weight: $global-weight-bold;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.panels-ipe-editing {
+  div {
+    &.panels-ipe-portlet-wrapper {
+      border: rem-calc(2) solid transparent;
+      margin-top: 0;
+      transition: border-color .3s;
+
+      &:hover {
+        border: rem-calc(2) dashed $medium-gray;
+      }
+    }
+  }
+
+  .panels-ipe-region {
+    border: 0;
+  }
+}
+
+div.panels-ipe-draghandle,
+div.panels-ipe-nodraghandle {
+  background: $primary-color;
+  color: $white;
+  padding: rem-calc(10);
+}

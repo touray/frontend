@@ -61,7 +61,7 @@
 //
 // Style guide: frontend.drupal
 
-//@import 'frontend/drupal/drupal7';
+@import 'frontend/drupal/drupal7';
 
 // Drupal Modules
 //
@@ -69,17 +69,19 @@
 //
 // Style guide: frontend.drupal.modules
 
-//@import 'frontend/drupal/modules/styleguide';
+@import 'frontend/drupal/modules/styleguide';
+@import 'frontend/drupal/modules/panels-in-place-editor';
 
-// Drupal Page Themes
+// Frontend Build Drupal Components
 //
-// Optional page themes for Drupal's default page output.
+// Frontend Build optional components for default Drupal output.
 //
 // Weight: 6
 //
-// Style guide: frontend.drupal.page-themes
+// Style guide: frontend.drupal.components
 
-//@import 'frontend/drupal/page-themes/user-1';
+@import 'frontend/drupal/components/admin-menu-1';
+@import 'frontend/drupal/components/user-1';
 
 // WordPress
 //

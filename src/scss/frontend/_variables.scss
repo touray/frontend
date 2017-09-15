@@ -14,6 +14,8 @@
 // $global-radius        - Defines the application's default radius. Default: <code>0</code>
 // $global-weight-normal - Defines the application's default normal weight. Default: <code>normal</code>
 // $global-weight-bold   - Defines the application's default bold weight. Default: <code>bold</code>
+// $global-lineheight    - Defines the application's default line height. Default: <code>1.5</code>
+// $body-font-family     - Defines the body font family. Default: <code>'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif</code>
 //
 // Weight: 1
 //
@@ -24,6 +26,8 @@ $global-padding:       rem-calc(30);
 $global-radius:        rem-calc(3);
 $global-weight-normal: normal;
 $global-weight-bold:   bold;
+$global-lineheight:    1.5;
+$body-font-family:     'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
 
 // Color Scheme
 //
@@ -102,6 +106,38 @@ $css-grid-row-gaps: (
 $form-label-font-size: rem-calc(14);
 $form-spacing:         rem-calc(16);
 
+// Buttons
+//
+// These are the default options for button styling. To add/edit, use <code>scss/_variables.scss</code>.
+//
+// $button-background       - Defines the button background. Default: <code>$primary-color</code>
+// $button-background-hover - Defines the button hover background. Default: <code>scale-color($button-background, $lightness: -15%)</code>
+// $button-radius           - Defines the button radius. Default: <code>$global-radius</code>
+// $button-color            - Defines the button color. Default: <code>$white</code>
+// $button-color-hover      - Defines the button hover color. Default: <code>$white</code>
+// $button-font-family      - Defines the button font family. Default: <code>inherit</code>
+// $button-padding          - Defines the button padding. Default: <code>0.85em 1em</code>
+// $button-sizes            - Defines button font sizes. Default: <code>list</code>
+// $button-weight           - Defines button weight. Default: <code>$global-weight-bold</code>
+//
+// Weight: 6
+//
+// Style guide: frontend.variables.buttons
+$button-background:       $primary-color;
+$button-radius:           $global-radius;
+$button-background-hover: scale-color($button-background, $lightness: -15%);
+$button-color:            $white;
+$button-color-hover:      $white;
+$button-font-family:      inherit;
+$button-padding:          .85em 1em;
+$button-sizes: (
+  tiny: 0.6rem,
+  small: 0.75rem,
+  default: 0.9rem,
+  large: 1.25rem,
+);
+$button-weight:           $global-weight-bold;
+
 // Progress Bar
 //
 // These are the default options for progress bars. To add/edit, use <code>scss/_variables.scss</code>.
@@ -112,7 +148,7 @@ $form-spacing:         rem-calc(16);
 // $progress-meter-background - Defines the background of progress bar meter. Default: <code>$primary-color</code>
 // $progress-height - Defines the height of the progress bar. Default: <code>1rem</code>
 //
-// Weight: 6
+// Weight: 7
 //
 // Style guide: frontend.variables.progress-bar
 $progress-background:       $medium-gray;

@@ -1,8 +1,8 @@
 // User Page 1 (WordPress style)
 //
-// Themes the logged out version of the Drupal user page. Similar style to the default WordPress user login page style.
+// Themes the logged out version of the Drupal user page. Similar style to the default WordPress user login page style. <b>Requires the Foundation's global styles, forms and the Drupal 7 component.</b>
 //
-// Style guide: frontend.drupal.page-themes.user-page-1
+// Style guide: frontend.drupal.components.user-page-1
 
 // Variables
 //
@@ -30,7 +30,7 @@
 //
 // Weight: 0
 //
-// Style guide: frontend.drupal.page-themes.user-page-1.variables
+// Style guide: frontend.drupal.components.user-page-1.variables
 
 $user-page-header:                   false                             !default;
 $user-page-footer:                   false                             !default;

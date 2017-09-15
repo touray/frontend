@@ -93,21 +93,86 @@
           the "root" element comes first in this loop, and can be detected using
           the "#if @first" block as seen below.
         -->
-            <header class="kss-section kss-section--depth-3" id="kssref-frontend-drupal-page-themes">
+            <header class="kss-section kss-section--depth-3" id="kssref-frontend-variables-buttons">
 
             <article class="kss-section__content">
-                <p class="kss-section__source">Source: <span>global.scss</span>, line <span>74</span></p>
+                <p class="kss-section__source">Source: <span>frontend/_variables.scss</span>, line <span>109</span></p>
 
-              <a class="kss-section__permalink" href="#kssref-frontend-drupal-page-themes">
+              <a class="kss-section__permalink" href="#kssref-frontend-variables-buttons">
                 <h3 class="kss-section__item kss-section__item--depth-3">
-                  <span class="kss-section__ref">6.6.3</span>
-                  <span class="kss-section__name">Drupal Page Themes</span>
+                  <span class="kss-section__ref">6.5.6</span>
+                  <span class="kss-section__name">Buttons</span>
                 </h3>
               </a>
 
-                <div class="kss-section__description"><p>Optional page themes for Drupal&#39;s default page output.</p>
+                <div class="kss-section__description"><p>These are the default options for button styling. To add/edit, use <code>scss/_variables.scss</code>.</p>
 </div>
 
+                <ul class="kss-parameters">
+                  <li class="kss-parameters__item">
+                    <p class="kss-parameters__description">
+                      Defines the button background. Default: <code>$primary-color</code>
+
+                    </p>
+                    <code class="kss-parameters__name">$button-background</code>
+                  </li>
+                  <li class="kss-parameters__item">
+                    <p class="kss-parameters__description">
+                      Defines the button hover background. Default: <code>scale-color($button-background, $lightness: -15%)</code>
+
+                    </p>
+                    <code class="kss-parameters__name">$button-background-hover</code>
+                  </li>
+                  <li class="kss-parameters__item">
+                    <p class="kss-parameters__description">
+                      Defines the button radius. Default: <code>$global-radius</code>
+
+                    </p>
+                    <code class="kss-parameters__name">$button-radius</code>
+                  </li>
+                  <li class="kss-parameters__item">
+                    <p class="kss-parameters__description">
+                      Defines the button color. Default: <code>$white</code>
+
+                    </p>
+                    <code class="kss-parameters__name">$button-color</code>
+                  </li>
+                  <li class="kss-parameters__item">
+                    <p class="kss-parameters__description">
+                      Defines the button hover color. Default: <code>$white</code>
+
+                    </p>
+                    <code class="kss-parameters__name">$button-color-hover</code>
+                  </li>
+                  <li class="kss-parameters__item">
+                    <p class="kss-parameters__description">
+                      Defines the button font family. Default: <code>inherit</code>
+
+                    </p>
+                    <code class="kss-parameters__name">$button-font-family</code>
+                  </li>
+                  <li class="kss-parameters__item">
+                    <p class="kss-parameters__description">
+                      Defines the button padding. Default: <code>0.85em 1em</code>
+
+                    </p>
+                    <code class="kss-parameters__name">$button-padding</code>
+                  </li>
+                  <li class="kss-parameters__item">
+                    <p class="kss-parameters__description">
+                      Defines button font sizes. Default: <code>list</code>
+
+                    </p>
+                    <code class="kss-parameters__name">$button-sizes</code>
+                  </li>
+                  <li class="kss-parameters__item">
+                    <p class="kss-parameters__description">
+                      Defines button weight. Default: <code>$global-weight-bold</code>
+
+                    </p>
+                    <code class="kss-parameters__name">$button-weight</code>
+                  </li>
+                </ul>
             </article>
 
 

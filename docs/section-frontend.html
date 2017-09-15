@@ -134,6 +134,12 @@
                         <span class="kss-nav__name">css-grid-item($column-start, $column-end, $row-start, $row-end)</span>
                       </a>
                     </li>
+                    <li class="kss-nav__item kss-nav__item--grandchild">
+                      <a href="section-frontend.html#kssref-frontend-mixins-throbber">
+                        <span class="kss-nav__ref">6.4.4</span>
+                        <span class="kss-nav__name">throbber($style)</span>
+                      </a>
+                    </li>
                     <li class="kss-nav__item ">
                       <a href="section-frontend.html#kssref-frontend-variables">
                         <span class="kss-nav__ref">6.5</span>
@@ -171,8 +177,14 @@
                       </a>
                     </li>
                     <li class="kss-nav__item kss-nav__item--grandchild">
-                      <a href="section-frontend.html#kssref-frontend-variables-progress-bar">
+                      <a href="section-frontend.html#kssref-frontend-variables-buttons">
                         <span class="kss-nav__ref">6.5.6</span>
+                        <span class="kss-nav__name">Buttons</span>
+                      </a>
+                    </li>
+                    <li class="kss-nav__item kss-nav__item--grandchild">
+                      <a href="section-frontend.html#kssref-frontend-variables-progress-bar">
+                        <span class="kss-nav__ref">6.5.7</span>
                         <span class="kss-nav__name">Progress Bar</span>
                       </a>
                     </li>
@@ -195,9 +207,9 @@
                       </a>
                     </li>
                     <li class="kss-nav__item kss-nav__item--grandchild">
-                      <a href="section-frontend.html#kssref-frontend-drupal-page-themes">
+                      <a href="section-frontend.html#kssref-frontend-drupal-components">
                         <span class="kss-nav__ref">6.6.3</span>
-                        <span class="kss-nav__name">Drupal Page Themes</span>
+                        <span class="kss-nav__name">Frontend Build Drupal Components</span>
                       </a>
                     </li>
                     <li class="kss-nav__item ">
@@ -623,6 +635,70 @@ theming for common projects.</p>
 
 
             </section>
+            <section class="kss-section kss-section--depth-3" id="kssref-frontend-mixins-throbber">
+
+            <article class="kss-section__content">
+                <p class="kss-section__source">Source: <span>frontend/_mixins.scss</span>, line <span>79</span></p>
+
+              <a class="kss-section__permalink" href="#kssref-frontend-mixins-throbber">
+                <h3 class="kss-section__item kss-section__item--depth-3">
+                  <span class="kss-section__ref">6.4.4</span>
+                  <span class="kss-section__name">throbber($style)</span>
+                </h3>
+              </a>
+
+                <div class="kss-section__description"><p>Styles a throbber element.</p>
+<p>Compatible in IE11+, Firefox 54+, Safari 10.1+, Chrome 49+.</p>
+</div>
+
+                <ul class="kss-parameters">
+                  <li class="kss-parameters__item">
+                    <p class="kss-parameters__description">
+                      Defines the throbber width. Default: <code>rem-calc(40)</code>
+
+                    </p>
+                    <code class="kss-parameters__name">$width</code>
+                  </li>
+                  <li class="kss-parameters__item">
+                    <p class="kss-parameters__description">
+                      Defines the throbber height. Default: <code>rem-calc(40)</code>
+
+                    </p>
+                    <code class="kss-parameters__name">$height</code>
+                  </li>
+                  <li class="kss-parameters__item">
+                    <p class="kss-parameters__description">
+                      Defines the throbber color. Default: <code>$primary-color</code>
+
+                    </p>
+                    <code class="kss-parameters__name">$color</code>
+                  </li>
+                  <li class="kss-parameters__item">
+                    <p class="kss-parameters__description">
+                      Defines the throbber opacity. Default: <code>$opacity</code>
+
+                    </p>
+                    <code class="kss-parameters__name">$opacity</code>
+                  </li>
+                  <li class="kss-parameters__item">
+                    <p class="kss-parameters__description">
+                      Defines the throbber radius. Default: <code>$global-radius</code>
+
+                    </p>
+                    <code class="kss-parameters__name">$radius</code>
+                  </li>
+                  <li class="kss-parameters__item">
+                    <p class="kss-parameters__description">
+                      Defines the throbber animation (<em>keyframes available: throbber-rotateplane|throbber-scaleout</em>). Default: <code>throbber-rotateplane 1.2s infinite ease-in-out</code>
+
+                    </p>
+                    <code class="kss-parameters__name">$animation</code>
+                  </li>
+                </ul>
+            </article>
+
+
+            </section>
             <section class="kss-section kss-section--depth-2" id="kssref-frontend-variables">
 
             <article class="kss-section__content">
@@ -700,6 +776,20 @@ theming for common projects.</p>
                     </p>
                     <code class="kss-parameters__name">$global-weight-bold</code>
                   </li>
+                  <li class="kss-parameters__item">
+                    <p class="kss-parameters__description">
+                      Defines the application&#39;s default line height. Default: <code>1.5</code>
+
+                    </p>
+                    <code class="kss-parameters__name">$global-lineheight</code>
+                  </li>
+                  <li class="kss-parameters__item">
+                    <p class="kss-parameters__description">
+                      Defines the body font family. Default: <code>&#39;Helvetica Neue&#39;, Helvetica, Roboto, Arial, sans-serif</code>
+
+                    </p>
+                    <code class="kss-parameters__name">$body-font-family</code>
+                  </li>
                 </ul>
             </article>
 
@@ -708,7 +798,7 @@ theming for common projects.</p>
             <section class="kss-section kss-section--depth-3" id="kssref-frontend-variables-colors">
 
             <article class="kss-section__content">
-                <p class="kss-section__source">Source: <span>frontend/_variables.scss</span>, line <span>28</span></p>
+                <p class="kss-section__source">Source: <span>frontend/_variables.scss</span>, line <span>32</span></p>
 
               <a class="kss-section__permalink" href="#kssref-frontend-variables-colors">
                 <h3 class="kss-section__item kss-section__item--depth-3">
@@ -799,7 +889,7 @@ theming for common projects.</p>
             <section class="kss-section kss-section--depth-3" id="kssref-frontend-variables-typography">
 
             <article class="kss-section__content">
-                <p class="kss-section__source">Source: <span>frontend/_variables.scss</span>, line <span>57</span></p>
+                <p class="kss-section__source">Source: <span>frontend/_variables.scss</span>, line <span>61</span></p>
 
               <a class="kss-section__permalink" href="#kssref-frontend-variables-typography">
                 <h3 class="kss-section__item kss-section__item--depth-3">
@@ -827,7 +917,7 @@ theming for common projects.</p>
             <section class="kss-section kss-section--depth-3" id="kssref-frontend-variables-css-grid">
 
             <article class="kss-section__content">
-                <p class="kss-section__source">Source: <span>frontend/_variables.scss</span>, line <span>68</span></p>
+                <p class="kss-section__source">Source: <span>frontend/_variables.scss</span>, line <span>72</span></p>
 
               <a class="kss-section__permalink" href="#kssref-frontend-variables-css-grid">
                 <h3 class="kss-section__item kss-section__item--depth-3">
@@ -869,7 +959,7 @@ theming for common projects.</p>
             <section class="kss-section kss-section--depth-3" id="kssref-frontend-variables-forms">
 
             <article class="kss-section__content">
-                <p class="kss-section__source">Source: <span>frontend/_variables.scss</span>, line <span>92</span></p>
+                <p class="kss-section__source">Source: <span>frontend/_variables.scss</span>, line <span>96</span></p>
 
               <a class="kss-section__permalink" href="#kssref-frontend-variables-forms">
                 <h3 class="kss-section__item kss-section__item--depth-3">
@@ -901,14 +991,98 @@ theming for common projects.</p>
 
 
             </section>
+            <section class="kss-section kss-section--depth-3" id="kssref-frontend-variables-buttons">
+
+            <article class="kss-section__content">
+                <p class="kss-section__source">Source: <span>frontend/_variables.scss</span>, line <span>109</span></p>
+
+              <a class="kss-section__permalink" href="#kssref-frontend-variables-buttons">
+                <h3 class="kss-section__item kss-section__item--depth-3">
+                  <span class="kss-section__ref">6.5.6</span>
+                  <span class="kss-section__name">Buttons</span>
+                </h3>
+              </a>
+
+                <div class="kss-section__description"><p>These are the default options for button styling. To add/edit, use <code>scss/_variables.scss</code>.</p>
+</div>
+
+                <ul class="kss-parameters">
+                  <li class="kss-parameters__item">
+                    <p class="kss-parameters__description">
+                      Defines the button background. Default: <code>$primary-color</code>
+
+                    </p>
+                    <code class="kss-parameters__name">$button-background</code>
+                  </li>
+                  <li class="kss-parameters__item">
+                    <p class="kss-parameters__description">
+                      Defines the button hover background. Default: <code>scale-color($button-background, $lightness: -15%)</code>
+
+                    </p>
+                    <code class="kss-parameters__name">$button-background-hover</code>
+                  </li>
+                  <li class="kss-parameters__item">
+                    <p class="kss-parameters__description">
+                      Defines the button radius. Default: <code>$global-radius</code>
+
+                    </p>
+                    <code class="kss-parameters__name">$button-radius</code>
+                  </li>
+                  <li class="kss-parameters__item">
+                    <p class="kss-parameters__description">
+                      Defines the button color. Default: <code>$white</code>
+
+                    </p>
+                    <code class="kss-parameters__name">$button-color</code>
+                  </li>
+                  <li class="kss-parameters__item">
+                    <p class="kss-parameters__description">
+                      Defines the button hover color. Default: <code>$white</code>
+
+                    </p>
+                    <code class="kss-parameters__name">$button-color-hover</code>
+                  </li>
+                  <li class="kss-parameters__item">
+                    <p class="kss-parameters__description">
+                      Defines the button font family. Default: <code>inherit</code>
+
+                    </p>
+                    <code class="kss-parameters__name">$button-font-family</code>
+                  </li>
+                  <li class="kss-parameters__item">
+                    <p class="kss-parameters__description">
+                      Defines the button padding. Default: <code>0.85em 1em</code>
+
+                    </p>
+                    <code class="kss-parameters__name">$button-padding</code>
+                  </li>
+                  <li class="kss-parameters__item">
+                    <p class="kss-parameters__description">
+                      Defines button font sizes. Default: <code>list</code>
+
+                    </p>
+                    <code class="kss-parameters__name">$button-sizes</code>
+                  </li>
+                  <li class="kss-parameters__item">
+                    <p class="kss-parameters__description">
+                      Defines button weight. Default: <code>$global-weight-bold</code>
+
+                    </p>
+                    <code class="kss-parameters__name">$button-weight</code>
+                  </li>
+                </ul>
+            </article>
+
+
+            </section>
             <section class="kss-section kss-section--depth-3" id="kssref-frontend-variables-progress-bar">
 
             <article class="kss-section__content">
-                <p class="kss-section__source">Source: <span>frontend/_variables.scss</span>, line <span>105</span></p>
+                <p class="kss-section__source">Source: <span>frontend/_variables.scss</span>, line <span>141</span></p>
 
               <a class="kss-section__permalink" href="#kssref-frontend-variables-progress-bar">
                 <h3 class="kss-section__item kss-section__item--depth-3">
-                  <span class="kss-section__ref">6.5.6</span>
+                  <span class="kss-section__ref">6.5.7</span>
                   <span class="kss-section__name">Progress Bar</span>
                 </h3>
               </a>
@@ -1643,6 +1817,111 @@ theming for common projects.</p>
 
 
             </section>
+            <section class="kss-section kss-section--depth-4" id="kssref-frontend-drupal-modules-panels-in-place-editor">
+
+            <article class="kss-section__content">
+                <p class="kss-section__source">Source: <span>frontend/drupal/modules/_panels-in-place-editor.scss</span>, line <span>1</span></p>
+
+              <a class="kss-section__permalink" href="#kssref-frontend-drupal-modules-panels-in-place-editor">
+                <h4 class="kss-section__item kss-section__item--depth-4">
+                  <span class="kss-section__ref">6.6.2.1</span>
+                  <span class="kss-section__name">Panels In-Place Editor</span>
+                </h4>
+              </a>
+
+                <div class="kss-section__description"><p>Contains default <a href="https://www.drupal.org/project/panels" target="_blank">Panels In-Place Editor module</a> styles. To add/edit component variables, use <code>scss/_variables.scss</code>.</p>
+</div>
+
+                <ul class="kss-parameters">
+                  <li class="kss-parameters__item">
+                    <p class="kss-parameters__description">
+                      Sticky control container height. Default: <code>$black</code>
+
+                    </p>
+                    <code class="kss-parameters__name">$control-container-height</code>
+                  </li>
+                  <li class="kss-parameters__item">
+                    <p class="kss-parameters__description">
+                      Sticky control container background. Default: <code>$black</code>
+
+                    </p>
+                    <code class="kss-parameters__name">$control-container-background</code>
+                  </li>
+                  <li class="kss-parameters__item">
+                    <p class="kss-parameters__description">
+                      Sticky control container box shadow. Default: <code>none</code>
+
+                    </p>
+                    <code class="kss-parameters__name">$control-container-shadow</code>
+                  </li>
+                  <li class="kss-parameters__item">
+                    <p class="kss-parameters__description">
+                      Sticky control container padding. Default: <code>rem-calc(10 0)</code>
+
+                    </p>
+                    <code class="kss-parameters__name">$control-container-padding</code>
+                  </li>
+                  <li class="kss-parameters__item">
+                    <p class="kss-parameters__description">
+                      Sticky control button background. Default: <code>$button-background</code>
+
+                    </p>
+                    <code class="kss-parameters__name">$control-button-background</code>
+                  </li>
+                  <li class="kss-parameters__item">
+                    <p class="kss-parameters__description">
+                      Sticky control button hover background. Default: <code>$button-background-hover</code>
+
+                    </p>
+                    <code class="kss-parameters__name">$control-button-background-hover</code>
+                  </li>
+                  <li class="kss-parameters__item">
+                    <p class="kss-parameters__description">
+                      Sticky control button color. Default: <code>$button-color</code>
+
+                    </p>
+                    <code class="kss-parameters__name">$control-button-color</code>
+                  </li>
+                  <li class="kss-parameters__item">
+                    <p class="kss-parameters__description">
+                      Sticky control button hover color. Default: <code>$button-color-hover</code>
+
+                    </p>
+                    <code class="kss-parameters__name">$control-button-color-hover</code>
+                  </li>
+                  <li class="kss-parameters__item">
+                    <p class="kss-parameters__description">
+                      Sticky control button font family. Default: <code>$button-font-family</code>
+
+                    </p>
+                    <code class="kss-parameters__name">$control-button-font-family</code>
+                  </li>
+                  <li class="kss-parameters__item">
+                    <p class="kss-parameters__description">
+                      Sticky control button padding. Default: <code>$button-padding</code>
+
+                    </p>
+                    <code class="kss-parameters__name">$control-button-padding</code>
+                  </li>
+                  <li class="kss-parameters__item">
+                    <p class="kss-parameters__description">
+                      Sticky control button font sizes. Default: <code>map-get($button-sizes, small)</code>
+
+                    </p>
+                    <code class="kss-parameters__name">$control-button-size</code>
+                  </li>
+                  <li class="kss-parameters__item">
+                    <p class="kss-parameters__description">
+                      Sticky control button weight. Default: <code>$global-weight-bold</code>
+
+                    </p>
+                    <code class="kss-parameters__name">$control-button-weight</code>
+                  </li>
+                </ul>
+            </article>
+
+
+            </section>
             <section class="kss-section kss-section--depth-4" id="kssref-frontend-drupal-modules-styleguide">
 
             <article class="kss-section__content">
@@ -1650,7 +1929,7 @@ theming for common projects.</p>
 
               <a class="kss-section__permalink" href="#kssref-frontend-drupal-modules-styleguide">
                 <h4 class="kss-section__item kss-section__item--depth-4">
-                  <span class="kss-section__ref">6.6.2.1</span>
+                  <span class="kss-section__ref">6.6.2.2</span>
                   <span class="kss-section__name">Style Guide</span>
                 </h4>
               </a>
@@ -1699,52 +1978,143 @@ theming for common projects.</p>
 
 
             </section>
-            <section class="kss-section kss-section--depth-3" id="kssref-frontend-drupal-page-themes">
+            <section class="kss-section kss-section--depth-3" id="kssref-frontend-drupal-components">
 
             <article class="kss-section__content">
-                <p class="kss-section__source">Source: <span>global.scss</span>, line <span>74</span></p>
+                <p class="kss-section__source">Source: <span>global.scss</span>, line <span>75</span></p>
 
-              <a class="kss-section__permalink" href="#kssref-frontend-drupal-page-themes">
+              <a class="kss-section__permalink" href="#kssref-frontend-drupal-components">
                 <h3 class="kss-section__item kss-section__item--depth-3">
                   <span class="kss-section__ref">6.6.3</span>
-                  <span class="kss-section__name">Drupal Page Themes</span>
+                  <span class="kss-section__name">Frontend Build Drupal Components</span>
                 </h3>
               </a>
 
-                <div class="kss-section__description"><p>Optional page themes for Drupal&#39;s default page output.</p>
+                <div class="kss-section__description"><p>Frontend Build optional components for default Drupal output.</p>
 </div>
 
             </article>
 
 
             </section>
-            <section class="kss-section kss-section--depth-4" id="kssref-frontend-drupal-page-themes-user-page-1">
+            <section class="kss-section kss-section--depth-4" id="kssref-frontend-drupal-components-admin-menu">
 
             <article class="kss-section__content">
-                <p class="kss-section__source">Source: <span>frontend/drupal/page-themes/_user-1.scss</span>, line <span>1</span></p>
 
-              <a class="kss-section__permalink" href="#kssref-frontend-drupal-page-themes-user-page-1">
+              <a class="kss-section__permalink" href="#kssref-frontend-drupal-components-admin-menu">
                 <h4 class="kss-section__item kss-section__item--depth-4">
                   <span class="kss-section__ref">6.6.3.1</span>
+                  <span class="kss-section__name">frontend.drupal.components.admin-menu</span>
+                </h4>
+              </a>
+
+
+            </article>
+
+
+            </section>
+            <section class="kss-section kss-section--depth-5" id="kssref-frontend-drupal-components-admin-menu-variables">
+
+            <article class="kss-section__content">
+                <p class="kss-section__source">Source: <span>frontend/drupal/components/_admin-menu-1.scss</span>, line <span>7</span></p>
+
+              <a class="kss-section__permalink" href="#kssref-frontend-drupal-components-admin-menu-variables">
+                <h5 class="kss-section__item kss-section__item--depth-5">
+                  <span class="kss-section__ref">6.6.3.1.1</span>
+                  <span class="kss-section__name">Variables</span>
+                </h5>
+              </a>
+
+                <div class="kss-section__description"><p>Admin Menu 1 component variables. To add/edit component variables, use <code>scss/_variables.scss</code>.</p>
+</div>
+
+                <ul class="kss-parameters">
+                  <li class="kss-parameters__item">
+                    <p class="kss-parameters__description">
+                      Admin menu height. Default: <code>rem-calc(30)</code>
+
+                    </p>
+                    <code class="kss-parameters__name">$admin-menu-height</code>
+                  </li>
+                  <li class="kss-parameters__item">
+                    <p class="kss-parameters__description">
+                      Admin menu background. Default: <code>$black</code>
+
+                    </p>
+                    <code class="kss-parameters__name">$admin-menu-background</code>
+                  </li>
+                  <li class="kss-parameters__item">
+                    <p class="kss-parameters__description">
+                      Admin menu font family. Default: <code>$body-font-family</code>
+
+                    </p>
+                    <code class="kss-parameters__name">$admin-menu-font-family</code>
+                  </li>
+                  <li class="kss-parameters__item">
+                    <p class="kss-parameters__description">
+                      Admin menu font size. Default: <code>inherit</code>
+
+                    </p>
+                    <code class="kss-parameters__name">$admin-menu-size</code>
+                  </li>
+                  <li class="kss-parameters__item">
+                    <p class="kss-parameters__description">
+                      Admin menu user link background. Default: <code>$alert-color</code>
+
+                    </p>
+                    <code class="kss-parameters__name">$admin-menu-user-background</code>
+                  </li>
+                </ul>
+            </article>
+
+
+            </section>
+            <section class="kss-section kss-section--depth-4" id="kssref-frontend-drupal-components-admin-menu-1">
+
+            <article class="kss-section__content">
+                <p class="kss-section__source">Source: <span>frontend/drupal/components/_admin-menu-1.scss</span>, line <span>1</span></p>
+
+              <a class="kss-section__permalink" href="#kssref-frontend-drupal-components-admin-menu-1">
+                <h4 class="kss-section__item kss-section__item--depth-4">
+                  <span class="kss-section__ref">6.6.3.2</span>
+                  <span class="kss-section__name">Admin Menu 1</span>
+                </h4>
+              </a>
+
+                <div class="kss-section__description"><p>Themes the Drupal admin menu.</p>
+</div>
+
+            </article>
+
+
+            </section>
+            <section class="kss-section kss-section--depth-4" id="kssref-frontend-drupal-components-user-page-1">
+
+            <article class="kss-section__content">
+                <p class="kss-section__source">Source: <span>frontend/drupal/components/_user-1.scss</span>, line <span>1</span></p>
+
+              <a class="kss-section__permalink" href="#kssref-frontend-drupal-components-user-page-1">
+                <h4 class="kss-section__item kss-section__item--depth-4">
+                  <span class="kss-section__ref">6.6.3.3</span>
                   <span class="kss-section__name">User Page 1 (WordPress style)</span>
                 </h4>
               </a>
 
-                <div class="kss-section__description"><p>Themes the logged out version of the Drupal user page. Similar style to the default WordPress user login page style.</p>
+                <div class="kss-section__description"><p>Themes the logged out version of the Drupal user page. Similar style to the default WordPress user login page style. <b>Requires the Foundation&#39;s global styles, forms and the Drupal 7 component.</b></p>
 </div>
 
             </article>
 
 
             </section>
-            <section class="kss-section kss-section--depth-5" id="kssref-frontend-drupal-page-themes-user-page-1-variables">
+            <section class="kss-section kss-section--depth-5" id="kssref-frontend-drupal-components-user-page-1-variables">
 
             <article class="kss-section__content">
-                <p class="kss-section__source">Source: <span>frontend/drupal/page-themes/_user-1.scss</span>, line <span>7</span></p>
+                <p class="kss-section__source">Source: <span>frontend/drupal/components/_user-1.scss</span>, line <span>7</span></p>
 
-              <a class="kss-section__permalink" href="#kssref-frontend-drupal-page-themes-user-page-1-variables">
+              <a class="kss-section__permalink" href="#kssref-frontend-drupal-components-user-page-1-variables">
                 <h5 class="kss-section__item kss-section__item--depth-5">
-                  <span class="kss-section__ref">6.6.3.1.1</span>
+                  <span class="kss-section__ref">6.6.3.3.1</span>
                   <span class="kss-section__name">Variables</span>
                 </h5>
               </a>
@@ -1894,7 +2264,7 @@ theming for common projects.</p>
             <section class="kss-section kss-section--depth-2" id="kssref-frontend-wordpress">
 
             <article class="kss-section__content">
-                <p class="kss-section__source">Source: <span>global.scss</span>, line <span>84</span></p>
+                <p class="kss-section__source">Source: <span>global.scss</span>, line <span>86</span></p>
 
               <a class="kss-section__permalink" href="#kssref-frontend-wordpress">
                 <h2 class="kss-section__item kss-section__item--depth-2">
