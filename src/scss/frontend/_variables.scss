@@ -97,14 +97,16 @@ $css-grid-row-gaps: (
 //
 // These are the default options for form styling. To add/edit, use <code>scss/_variables.scss</code>.
 //
-// $form-label-font-size - Defines the font size for form labels. Default: <code>rem-calc(14)</code>
-// $form-spacing         - Defines the form input bottom margin. Default: <code>rem-calc(16)</code>
+// $form-label-font-size   - Defines the font size for form labels. Default: <code>rem-calc(14)</code>
+// $form-spacing           - Defines the form input bottom margin. Default: <code>rem-calc(16)</code>
+// $form-label-font-weight - Defines the form label font weight. Default: <code>$global-weight-bold</code>
 //
 // Weight: 5
 //
 // Style guide: frontend.variables.forms
-$form-label-font-size: rem-calc(14);
-$form-spacing:         rem-calc(16);
+$form-label-font-size:   rem-calc(14);
+$form-spacing:           rem-calc(16);
+$form-label-font-weight: $global-weight-bold;
 
 // Buttons
 //

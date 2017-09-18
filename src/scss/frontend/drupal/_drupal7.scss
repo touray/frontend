@@ -263,6 +263,12 @@ table tr.error {
 //   <label class="option">Convallis convallis lorem</label>
 // </div>
 // <div class="form-item">
+//   <input type="checkbox" class="form-checkbox">  <label class="option">Checkbox label</label>
+//   <div class="description">
+//     Form input description.
+//   </div>
+// </div>
+// <div class="form-item">
 //   <input type="radio" value="Convallis convallis lorem" class="form-radio">
 //   <label class="option">Convallis convallis lorem</label>
 // </div>
@@ -276,10 +282,33 @@ table tr.error {
 // Weight: 4
 //
 // Style guide: frontend.drupal.drupal7.forms
+.description {
+  color: $dark-gray;
+  font-size: $small-font-size;
+}
+
 .form-item,
 .form-actions {
   margin-bottom: $form-item-margin-bottom;
   margin-top: $form-item-margin-top;
+}
+
+.form-item {
+  &:first-of-type {
+    margin-top: 0;
+  }
+
+  select {
+    margin-bottom: 0;
+
+    + .description {
+      margin-top: 0;
+    }
+  }
+
+  .description {
+    margin-top: $form-spacing * -1;
+  }
 }
 
 .form-actions {
@@ -299,6 +328,17 @@ input {
   &.form-checkbox,
   &.form-radio {
     vertical-align: baseline;
+  }
+}
+
+.form-type-radio .description,
+.form-type-checkbox .description {
+  margin-left: rem-calc(26);
+}
+
+.content-type-button {
+  img {
+    vertical-align: unset;
   }
 }
 

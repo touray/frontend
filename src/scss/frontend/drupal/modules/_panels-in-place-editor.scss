@@ -17,7 +17,7 @@
 //
 // Style guide: frontend.drupal.modules.panels-in-place-editor
 
-$control-container-height:        rem-calc(60);
+$control-container-height:        rem-calc(53);
 $control-container-background:    $black;
 $control-container-shadow:        none;
 $control-container-padding:       rem-calc(10 0);
@@ -41,16 +41,11 @@ div {
   &#panels-ipe-control-container {
     background-color: $black;
     box-shadow: $control-container-shadow;
-    height: $control-container-height;
     padding: $control-container-padding;
   }
 
   &.panels-ipe-button-container {
     margin: 0;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 100%;
   }
 
   &.panels-ipe-pseudobutton-container,
@@ -61,8 +56,8 @@ div {
     font-family: $control-button-font-family;
     font-size: $control-button-size;
     font-weight: $control-button-weight;
-    height: auto;
-    line-height: 1;
+    height: rem-calc(33);
+    line-height: 1.2;
     padding: $control-button-padding;
 
     &:hover,

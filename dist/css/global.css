@@ -3699,7 +3699,7 @@ label {
   display: block;
   margin: 0;
   font-size: 0.875rem;
-  font-weight: normal;
+  font-weight: bold;
   line-height: 1.8;
   color: #0a0a0a;
 }
@@ -8407,31 +8407,65 @@ table tr.error {
   margin: 0 0 1.875rem 0;
 }
 
-/* line 279, ../../src/scss/frontend/drupal/_drupal7.scss */
+/* line 285, ../../src/scss/frontend/drupal/_drupal7.scss */
+.description {
+  color: #8a8a8a;
+  font-size: 80%;
+}
+
+/* line 290, ../../src/scss/frontend/drupal/_drupal7.scss */
 .form-item,
 .form-actions {
   margin-bottom: 1.875rem;
   margin-top: 1.875rem;
 }
 
-/* line 286, ../../src/scss/frontend/drupal/_drupal7.scss */
+/* line 297, ../../src/scss/frontend/drupal/_drupal7.scss */
+.form-item:first-of-type {
+  margin-top: 0;
+}
+/* line 301, ../../src/scss/frontend/drupal/_drupal7.scss */
+.form-item select {
+  margin-bottom: 0;
+}
+/* line 304, ../../src/scss/frontend/drupal/_drupal7.scss */
+.form-item select + .description {
+  margin-top: 0;
+}
+/* line 309, ../../src/scss/frontend/drupal/_drupal7.scss */
+.form-item .description {
+  margin-top: -1rem;
+}
+
+/* line 315, ../../src/scss/frontend/drupal/_drupal7.scss */
 .form-actions button,
 .form-actions [type='button'],
 .form-actions [type='reset'],
 .form-actions [type='submit'] {
   margin-bottom: 0;
 }
-/* line 293, ../../src/scss/frontend/drupal/_drupal7.scss */
+/* line 322, ../../src/scss/frontend/drupal/_drupal7.scss */
 .form-actions .form-submit {
   margin-right: 1.875rem;
 }
 
-/* line 299, ../../src/scss/frontend/drupal/_drupal7.scss */
+/* line 328, ../../src/scss/frontend/drupal/_drupal7.scss */
 input.form-checkbox, input.form-radio {
   vertical-align: baseline;
 }
 
-/* line 315, ../../src/scss/frontend/drupal/_drupal7.scss */
+/* line 334, ../../src/scss/frontend/drupal/_drupal7.scss */
+.form-type-radio .description,
+.form-type-checkbox .description {
+  margin-left: 1.625rem;
+}
+
+/* line 340, ../../src/scss/frontend/drupal/_drupal7.scss */
+.content-type-button img {
+  vertical-align: unset;
+}
+
+/* line 355, ../../src/scss/frontend/drupal/_drupal7.scss */
 .form-submit {
   display: inline-block;
   vertical-align: middle;
@@ -8460,42 +8494,42 @@ input.form-checkbox, input.form-radio {
   color: #fff;
 }
 
-/* line 335, ../../src/scss/frontend/drupal/_drupal7.scss */
+/* line 375, ../../src/scss/frontend/drupal/_drupal7.scss */
 .password-strength {
   margin-top: 0;
   width: 18.75rem;
 }
 
-/* line 340, ../../src/scss/frontend/drupal/_drupal7.scss */
+/* line 380, ../../src/scss/frontend/drupal/_drupal7.scss */
 .password-strength-title {
   display: inline-block;
   font-size: 0.875rem;
   margin: 0 0 0.0625rem 0;
 }
 
-/* line 346, ../../src/scss/frontend/drupal/_drupal7.scss */
+/* line 386, ../../src/scss/frontend/drupal/_drupal7.scss */
 .password-indicator {
   background: #cacaca;
   border-radius: 0.1875rem;
   height: 2.4375rem;
   overflow: hidden;
 }
-/* line 352, ../../src/scss/frontend/drupal/_drupal7.scss */
+/* line 392, ../../src/scss/frontend/drupal/_drupal7.scss */
 .password-indicator div {
   background: #1779ba;
   border-radius: 0.1875rem;
 }
 
-/* line 365, ../../src/scss/frontend/drupal/_drupal7.scss */
+/* line 405, ../../src/scss/frontend/drupal/_drupal7.scss */
 .search-results {
   margin-left: 0;
 }
-/* line 368, ../../src/scss/frontend/drupal/_drupal7.scss */
+/* line 408, ../../src/scss/frontend/drupal/_drupal7.scss */
 .search-results .search-snippet-info {
   padding-left: 0;
 }
 
-/* line 380, ../../src/scss/frontend/drupal/_drupal7.scss */
+/* line 420, ../../src/scss/frontend/drupal/_drupal7.scss */
 .pager {
   margin-left: 0;
   margin-bottom: 1rem;
@@ -8545,12 +8579,12 @@ input.form-checkbox, input.form-radio {
   background: #e6e6e6;
 }
 
-/* line 391, ../../src/scss/frontend/drupal/_drupal7.scss */
+/* line 431, ../../src/scss/frontend/drupal/_drupal7.scss */
 #admin-menu {
   display: none;
 }
 @media print, screen and (min-width: 40em) {
-  /* line 391, ../../src/scss/frontend/drupal/_drupal7.scss */
+  /* line 431, ../../src/scss/frontend/drupal/_drupal7.scss */
   #admin-menu {
     display: block;
   }
@@ -8574,9 +8608,17 @@ input.form-checkbox, input.form-radio {
   width: 50%;
 }
 
+/* line 6, ../../src/scss/frontend/drupal/modules/_panels.scss */
+.panels-section-columns-quickfilter {
+  padding-bottom: 1.875rem;
+  padding-left: 1.875rem;
+  padding-right: 1.875rem;
+  padding-top: 1.875rem;
+}
+
 /* line 35, ../../src/scss/frontend/drupal/modules/_panels-in-place-editor.scss */
 body.panels-ip {
-  margin-bottom: 3.75rem;
+  margin-bottom: 3.3125rem;
 }
 
 /* line 41, ../../src/scss/frontend/drupal/modules/_panels-in-place-editor.scss */
@@ -8584,20 +8626,13 @@ div#panels-ipe-control-container {
   background-color: #000;
   -webkit-box-shadow: none;
           box-shadow: none;
-  height: 3.75rem;
   padding: 0.625rem 0;
 }
-/* line 48, ../../src/scss/frontend/drupal/modules/_panels-in-place-editor.scss */
+/* line 47, ../../src/scss/frontend/drupal/modules/_panels-in-place-editor.scss */
 div.panels-ipe-button-container {
   margin: 0;
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-          transform: translateY(-50%);
-  width: 100%;
 }
-/* line 56, ../../src/scss/frontend/drupal/modules/_panels-in-place-editor.scss */
+/* line 51, ../../src/scss/frontend/drupal/modules/_panels-in-place-editor.scss */
 div.panels-ipe-pseudobutton-container, div.panels-ipe-control .form-submit {
   background: #1779ba;
   border-radius: 0.1875rem;
@@ -8605,30 +8640,30 @@ div.panels-ipe-pseudobutton-container, div.panels-ipe-control .form-submit {
   font-family: inherit;
   font-size: 0.75rem;
   font-weight: bold;
-  height: auto;
-  line-height: 1;
+  height: 2.0625rem;
+  line-height: 1.2;
   padding: 0.85em 1em;
 }
-/* line 68, ../../src/scss/frontend/drupal/modules/_panels-in-place-editor.scss */
+/* line 63, ../../src/scss/frontend/drupal/modules/_panels-in-place-editor.scss */
 div.panels-ipe-pseudobutton-container:hover, div.panels-ipe-pseudobutton-container:focus, div.panels-ipe-control .form-submit:hover, div.panels-ipe-control .form-submit:focus {
   background: #14679e;
 }
-/* line 73, ../../src/scss/frontend/drupal/modules/_panels-in-place-editor.scss */
+/* line 68, ../../src/scss/frontend/drupal/modules/_panels-in-place-editor.scss */
 div.panels-ipe-pseudobutton-container a, div.panels-ipe-control .form-submit a {
   color: #fff;
   height: auto;
   padding: 0;
 }
-/* line 78, ../../src/scss/frontend/drupal/modules/_panels-in-place-editor.scss */
+/* line 73, ../../src/scss/frontend/drupal/modules/_panels-in-place-editor.scss */
 div.panels-ipe-pseudobutton-container a:hover, div.panels-ipe-control .form-submit a:hover {
   color: #fff;
 }
-/* line 86, ../../src/scss/frontend/drupal/modules/_panels-in-place-editor.scss */
+/* line 81, ../../src/scss/frontend/drupal/modules/_panels-in-place-editor.scss */
 div.panels-ipe-pseudobutton-container a.panels-ipe-startedit, div.panels-ipe-pseudobutton-container a.panels-ipe-change-layout {
   background: transparent;
   padding-left: 0;
 }
-/* line 94, ../../src/scss/frontend/drupal/modules/_panels-in-place-editor.scss */
+/* line 89, ../../src/scss/frontend/drupal/modules/_panels-in-place-editor.scss */
 div.panels-ipe-placeholder {
   background: rgba(23, 121, 186, 0.3);
   border: 0;
@@ -8639,7 +8674,7 @@ div.panels-ipe-placeholder {
   margin: 0;
   padding: 0.625rem;
 }
-/* line 104, ../../src/scss/frontend/drupal/modules/_panels-in-place-editor.scss */
+/* line 99, ../../src/scss/frontend/drupal/modules/_panels-in-place-editor.scss */
 div.panels-ipe-placeholder h3 {
   color: #1779ba;
   font-size: 100%;
@@ -8647,7 +8682,7 @@ div.panels-ipe-placeholder h3 {
   margin: 0;
   width: auto;
 }
-/* line 113, ../../src/scss/frontend/drupal/modules/_panels-in-place-editor.scss */
+/* line 108, ../../src/scss/frontend/drupal/modules/_panels-in-place-editor.scss */
 div.panels-ipe-newblock {
   -webkit-box-shadow: none;
           box-shadow: none;
@@ -8657,16 +8692,16 @@ div.panels-ipe-newblock {
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
 }
-/* line 120, ../../src/scss/frontend/drupal/modules/_panels-in-place-editor.scss */
+/* line 115, ../../src/scss/frontend/drupal/modules/_panels-in-place-editor.scss */
 div.panels-ipe-draghandle {
   position: relative;
 }
-/* line 124, ../../src/scss/frontend/drupal/modules/_panels-in-place-editor.scss */
+/* line 119, ../../src/scss/frontend/drupal/modules/_panels-in-place-editor.scss */
 div.panels-ipe-handlebar-wrapper {
   border: 0;
 }
 
-/* line 129, ../../src/scss/frontend/drupal/modules/_panels-in-place-editor.scss */
+/* line 124, ../../src/scss/frontend/drupal/modules/_panels-in-place-editor.scss */
 div.panels-ipe-handlebar-wrapper li a,
 div.panels-ipe-dragtitle span,
 div.panels-ipe-newblock a,
@@ -8676,7 +8711,7 @@ span.panels-ipe-draghandle-icon {
           box-shadow: none;
 }
 
-/* line 137, ../../src/scss/frontend/drupal/modules/_panels-in-place-editor.scss */
+/* line 132, ../../src/scss/frontend/drupal/modules/_panels-in-place-editor.scss */
 .ipe-throbber {
   -webkit-animation: throbber-rotateplane 1.2s infinite ease-in-out;
           animation: throbber-rotateplane 1.2s infinite ease-in-out;
@@ -8736,7 +8771,7 @@ span.panels-ipe-draghandle-icon {
     opacity: 0;
   }
 }
-/* line 141, ../../src/scss/frontend/drupal/modules/_panels-in-place-editor.scss */
+/* line 136, ../../src/scss/frontend/drupal/modules/_panels-in-place-editor.scss */
 .panels-ipe-dragbar-admin-title {
   display: inline-block;
   font-weight: bold;
@@ -8748,23 +8783,23 @@ span.panels-ipe-draghandle-icon {
           transform: translateX(-50%) translateY(-50%);
 }
 
-/* line 152, ../../src/scss/frontend/drupal/modules/_panels-in-place-editor.scss */
+/* line 147, ../../src/scss/frontend/drupal/modules/_panels-in-place-editor.scss */
 .panels-ipe-editing div.panels-ipe-portlet-wrapper {
   border: 0.125rem solid transparent;
   margin-top: 0;
   -webkit-transition: border-color .3s;
   transition: border-color .3s;
 }
-/* line 157, ../../src/scss/frontend/drupal/modules/_panels-in-place-editor.scss */
+/* line 152, ../../src/scss/frontend/drupal/modules/_panels-in-place-editor.scss */
 .panels-ipe-editing div.panels-ipe-portlet-wrapper:hover {
   border: 0.125rem dashed #cacaca;
 }
-/* line 163, ../../src/scss/frontend/drupal/modules/_panels-in-place-editor.scss */
+/* line 158, ../../src/scss/frontend/drupal/modules/_panels-in-place-editor.scss */
 .panels-ipe-editing .panels-ipe-region {
   border: 0;
 }
 
-/* line 168, ../../src/scss/frontend/drupal/modules/_panels-in-place-editor.scss */
+/* line 163, ../../src/scss/frontend/drupal/modules/_panels-in-place-editor.scss */
 div.panels-ipe-draghandle,
 div.panels-ipe-nodraghandle {
   background: #1779ba;
@@ -8786,6 +8821,54 @@ body.admin-menu {
 /* line 38, ../../src/scss/frontend/drupal/components/_admin-menu-1.scss */
 #admin-menu li.admin-menu-account > a {
   background: #cc4b37;
+}
+
+/* line 49, ../../src/scss/frontend/drupal/components/_modal-1.scss */
+div.ctools-modal-content {
+  border: 0;
+  border-radius: 0.1875rem;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  font-size: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+/* line 58, ../../src/scss/frontend/drupal/components/_modal-1.scss */
+div.ctools-modal-content a.close {
+  background-position: -10.375rem -105.125rem;
+  color: #fff;
+  font-size: 0.8125rem;
+  line-height: 1.4375rem;
+  outline: none;
+}
+/* line 67, ../../src/scss/frontend/drupal/components/_modal-1.scss */
+div.ctools-modal-content .modal-header {
+  background: #000;
+  border-radius: 0;
+}
+/* line 72, ../../src/scss/frontend/drupal/components/_modal-1.scss */
+div.ctools-modal-content .modal-title {
+  color: #fff;
+  font-size: 100%;
+  font-weight: bold;
+  text-shadow: none;
+}
+/* line 79, ../../src/scss/frontend/drupal/components/_modal-1.scss */
+div.ctools-modal-content .modal-content {
+  height: calc(100% - 32pxx) !important;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100% !important;
+}
+
+/* line 88, ../../src/scss/frontend/drupal/components/_modal-1.scss */
+.panels-add-content-modal {
+  background: #fff;
+}
+/* line 91, ../../src/scss/frontend/drupal/components/_modal-1.scss */
+.panels-add-content-modal .panels-modal-add-category {
+  background-color: #f4f5f7;
+  font-size: 80%;
 }
 
 /* line 56, ../../src/scss/frontend/drupal/components/_user-1.scss */

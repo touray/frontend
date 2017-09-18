@@ -70,6 +70,7 @@
 // Style guide: frontend.drupal.modules
 
 @import 'frontend/drupal/modules/styleguide';
+@import 'frontend/drupal/modules/panels';
 @import 'frontend/drupal/modules/panels-in-place-editor';
 
 // Frontend Build Drupal Components
@@ -81,6 +82,7 @@
 // Style guide: frontend.drupal.components
 
 @import 'frontend/drupal/components/admin-menu-1';
+@import 'frontend/drupal/components/modal-1';
 @import 'frontend/drupal/components/user-1';
 
 // WordPress

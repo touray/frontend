@@ -1,0 +1,11 @@
+// Panels
+//
+// Contains default <a href="https://www.drupal.org/project/panels" target="_blank">Panels module</a> styles. To add/edit component variables, use <code>scss/_variables.scss</code>.
+//
+// Style guide: frontend.drupal.modules.panels
+.panels-section-columns-quickfilter {
+  padding-bottom: rem-calc($global-padding);
+  padding-left: rem-calc($global-padding);
+  padding-right: rem-calc($global-padding);
+  padding-top: rem-calc($global-padding);
+}
