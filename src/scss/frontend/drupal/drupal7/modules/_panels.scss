@@ -9,3 +9,39 @@
   padding-right: rem-calc($global-padding);
   padding-top: rem-calc($global-padding);
 }
+
+.option-text-aligner {
+  .form-item {
+    > .form-select {
+      margin-top: rem-calc(25);
+    }
+  }
+}
+
+.content-type-button {
+  a {
+    &:focus {
+      border: 0;
+    }
+  }
+}
+
+.panels-section-column {
+  .content-type-button {
+    font-size: $small-font-size;
+  }
+}
+
+.layout-link {
+  font-size: $small-font-size;
+  text-align: center;
+
+  a {
+    display: block;
+    padding: rem-calc(5);
+
+    &:hover {
+      background-color: $light-gray;
+    }
+  }
+}

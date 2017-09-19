@@ -14,22 +14,22 @@
 @import 'foundation';
 
 // Frontend Build variables. Important this is placed here for overrides to work properly.
-@import '../../frontend/variables';
+@import '../../frontend/settings';
 
 // Custom variables. Important this is placed here for overrides to work properly.
 @import '../../variables';
 
 // Import ALL Foundation components (not recommended)
-@include foundation-everything;
+//@include foundation-everything;
 
 // Import Foundation components individually
-//@include foundation-global-styles;
+@include foundation-global-styles;                                              // RECOMMENDED
 //@include foundation-xy-grid-classes;
-//@include foundation-grid;                // DEPRECATED
-//@include foundation-flex-grid;           // DEPRECATED
+//@include foundation-grid;                                                     // DEPRECATED
+//@include foundation-flex-grid;                                                // DEPRECATED
 //@include foundation-flex-classes;
-//@include foundation-typography;
-//@include foundation-forms;
+@include foundation-typography;                                                 // RECOMMENDED
+@include foundation-forms;                                                      // RECOMMENDED
 //@include foundation-button;
 //@include foundation-accordion;
 //@include foundation-accordion-menu;
@@ -50,13 +50,13 @@
 //@include foundation-off-canvas;
 //@include foundation-orbit;
 //@include foundation-pagination;
-//@include foundation-progress-bar;        // NOT COMPATIABLE WITH DRUPAL 7 STYLES
+//@include foundation-progress-bar;                                             // NOT COMPATIABLE WITH DRUPAL 7 STYLES
 //@include foundation-slider;
 //@include foundation-sticky;
 //@include foundation-reveal;
 //@include foundation-switch;
 //@include foundation-table;
-//@include foundation-tabs;
+//@include foundation-tabs;                                                     // NOT COMPATIABLE WITH DRUPAL 7 STYLES
 //@include foundation-thumbnail;
 //@include foundation-title-bar;
 //@include foundation-tooltip;

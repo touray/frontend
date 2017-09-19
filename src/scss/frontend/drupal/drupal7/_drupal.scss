@@ -10,6 +10,7 @@
 //
 // Drupal 7 component variables. To add/edit component variables, use <code>scss/_variables.scss</code>.
 //
+// $user-layout                        - If enabled, styles the user page layout within a container. Default: <code>true</code>
 // $form-item-margin-bottom            - Defines the form item bottom margin. Default: <code>rem-calc($global-margin)</code>
 // $form-item-margin-top               - Defines the form item top margin. Default: <code>rem-calc($global-margin)</code>
 // $message-margin                     - Defines the site message margin. Default: <code>rem-calc($global-margin 0)</code>
@@ -45,6 +46,9 @@
 // Weight: 0
 //
 // Style guide: frontend.drupal.drupal7.variables
+
+// Layouts
+$user-layout: true;
 
 // Forms
 $form-item-margin-bottom: rem-calc($global-margin)                     !default;
@@ -92,6 +96,16 @@ $password-strength-title-margin:     rem-calc(0 0 1 0)                 !default;
 $password-indicator-radius:          $global-radius                    !default;
 $password-strength-title-size:       $form-label-font-size             !default;
 
+// scss-lint:disable NestingDepth
+
+@if $user-layout == true {
+  body.page-user.not-logged-in {
+    #main {
+      @extend %container;
+    }
+  }
+}
+
 // Lists
 //
 // Styles Drupal's default lists.
@@ -134,6 +148,70 @@ li.collapsed,
 li.leaf {
   margin: 0;
   padding: 0;
+}
+
+// System Menus
+//
+// Styles Drupal's default system menus.
+//
+// Markup:
+// <ul class="primary">
+//   <li><a href="#">Link 1</a></li>
+//   <li class="active"><a href="#" class="active">Link 2</a></li>
+//   <li><a href="#">Link 3</a></li>
+// </ul>
+//
+// Weight: 2
+//
+// Style guide: frontend.drupal.drupal7.system-menus
+ul {
+  &.primary {
+    border-bottom: 1px solid $medium-gray;
+    margin: rem-calc(0 0 $global-margin 0);
+    padding: 0;
+
+    &::after {
+      clear: both;
+      content: '';
+      display: table;
+    }
+
+    li {
+      display: inline-block;
+      float: left;
+      position: relative;
+
+      a {
+        background: $white;
+        border: 1px solid transparent;
+        border-bottom: 0;
+        border-top: 2px solid transparent;
+        color: $medium-gray;
+        display: block;
+        font-weight: $global-weight-bold;
+        margin-right: 0;
+        padding: .9em 1.6em;
+        transition: color .3s, border .3s;
+
+        &:hover {
+          background-color: $white;
+          border-color: transparent;
+          color: $dark-gray;
+        }
+      }
+
+      &.active {
+        bottom: -1px;
+
+        a {
+          border: 1px solid $medium-gray;
+          border-bottom: 0;
+          border-top: rem-calc(2) solid $primary-color;
+          color: $black;
+        }
+      }
+    }
+  }
 }
 
 // Message
@@ -296,18 +374,6 @@ table tr.error {
 .form-item {
   &:first-of-type {
     margin-top: 0;
-  }
-
-  select {
-    margin-bottom: 0;
-
-    + .description {
-      margin-top: 0;
-    }
-  }
-
-  .description {
-    margin-top: $form-spacing * -1;
   }
 }
 

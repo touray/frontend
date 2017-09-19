@@ -1,4 +1,4 @@
-// Modal 1
+// Modal
 //
 // Themes the Drupal CTools modal.
 //
@@ -12,7 +12,7 @@
 //   </div>
 // </div>
 //
-// Style guide: frontend.drupal.components.modal-1
+// Style guide: frontend.drupal.components.modal
 
 // Variables
 //
@@ -44,6 +44,8 @@ $modal-title-weight:      $global-weight-bold;
 $modal-header-background: $black;
 $modal-close-color:       $white;
 $modal-close-size:        rem-calc(13);
+
+// scss-lint:disable NestingDepth
 
 div {
   &.ctools-modal-content {
@@ -77,10 +79,15 @@ div {
     }
 
     .modal-content {
+      // scss-lint:disable ImportantRule
       height: calc(100% - 32pxx) !important;
       margin-left: auto;
       margin-right: auto;
       width: 100% !important;
+    }
+
+    .dependent-options {
+      padding-left: 0;
     }
   }
 }

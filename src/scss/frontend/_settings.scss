@@ -1,8 +1,8 @@
-// Variables
+// Settings
 //
 // These are the default variables for Frontend Build. If <a href="http://foundation.zurb.com/" target="_blank">Foundation</a> is enabled, matching variable names from this file override those in Foundation's settings file. To add/edit variables, use <code>scss/_variables.scss</code>.
 //
-// Style guide: frontend.variables
+// Style guide: frontend.settings
 
 // Globals
 //
@@ -100,6 +100,8 @@ $css-grid-row-gaps: (
 // $form-label-font-size   - Defines the font size for form labels. Default: <code>rem-calc(14)</code>
 // $form-spacing           - Defines the form input bottom margin. Default: <code>rem-calc(16)</code>
 // $form-label-font-weight - Defines the form label font weight. Default: <code>$global-weight-bold</code>
+// $input-radius           - Defines the form input radius. Default: <code>$global-radius</code>
+// $select-radius          - Defines the select radius. Default: <code>$input-radius</code>
 //
 // Weight: 5
 //
@@ -107,6 +109,8 @@ $css-grid-row-gaps: (
 $form-label-font-size:   rem-calc(14);
 $form-spacing:           rem-calc(16);
 $form-label-font-weight: $global-weight-bold;
+$input-radius:           $global-radius;
+$select-radius:          $input-radius;
 
 // Buttons
 //
@@ -133,9 +137,9 @@ $button-color-hover:      $white;
 $button-font-family:      inherit;
 $button-padding:          .85em 1em;
 $button-sizes: (
-  tiny: 0.6rem,
-  small: 0.75rem,
-  default: 0.9rem,
+  tiny: .6rem,
+  small: .75rem,
+  default: .9rem,
   large: 1.25rem,
 );
 $button-weight:           $global-weight-bold;

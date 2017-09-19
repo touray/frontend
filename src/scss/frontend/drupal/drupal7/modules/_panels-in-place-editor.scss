@@ -31,6 +31,8 @@ $control-button-padding:          $button-padding;
 $control-button-size:             map-get($button-sizes, small);
 $control-button-weight:           $button-weight;
 
+// scss-lint:disable QualifyingElement, NestingDepth, IdSelector
+
 body {
   &.panels-ip {
     margin-bottom: $control-container-height;

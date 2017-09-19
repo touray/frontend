@@ -1,8 +1,8 @@
-// Admin Menu 1
+// Admin Menu
 //
 // Themes the Drupal admin menu.
 //
-// Style guide: frontend.drupal.components.admin-menu-1
+// Style guide: frontend.drupal.components.admin-menu
 
 // Variables
 //
@@ -21,6 +21,8 @@ $admin-menu-height:      rem-calc(27);
 $admin-menu-background:  $black;
 $admin-menu-font-family: $body-font-family;
 $admin-menu-size:        precent-size(13);
+
+// scss-lint:disable NestingDepth, IdSelector, ImportantRule
 
 body {
   &.admin-menu {
