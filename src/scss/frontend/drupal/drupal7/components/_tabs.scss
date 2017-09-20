@@ -10,10 +10,42 @@
 // </ul>
 //
 // Style guide: frontend.drupal.drupal7.tabs
+
+// Variables
+//
+// Tab component variables. To add/edit component variables, use <code>scss/_variables.scss</code>.
+//
+// $tab-border-width        - Tab border width. Default: <code>1px</code>
+// $tab-active-border-width - Active tab border width. Default: <code>2px</code>
+// $tab-border-color        - Tab border color. Default: <code>#cacaca</code>
+// $tab-active-border-color - Active tab border color. Default: <code>#1779ba</code>
+// $tab-margin              - Tab margin. Default: <code>0 0 1rem</code>
+// $tab-padding             - Tab padding. Default: <code>.9em 1.6em</code>
+// $tab-weight              - Tab weight. Default: <code>normal</code>
+// $tab-color               - Tab color. Default: <code>#cacaca</code>
+// $tab-active-color        - Active tab color. Default: <code>#000</code>
+// $tab-color-hover         - Tab hover color. Default: <code>#8a8a8a</code>
+// $tab-background          - Tab background. Default: <code>#fff</code>
+// $tab-background-hover    - Tab hover background. Default: <code>#fff</code>
+//
+// Style guide: frontend.drupal.drupal7.tabs.variables
+$tab-border-width:        1px                                          !default;
+$tab-border-color:        #cacaca                                      !default;
+$tab-active-border-width: 2px                                          !default;
+$tab-active-border-color: #1779ba                                      !default;
+$tab-margin:              0 0 1rem                                     !default;
+$tab-padding:             .9em 1.6em                                   !default;
+$tab-weight:              normal                                       !default;
+$tab-color:               #cacaca                                      !default;
+$tab-active-color:        #000                                         !default;
+$tab-color-hover:         #8a8a8a                                      !default;
+$tab-background:          #fff                                         !default;
+$tab-background-hover:    #fff                                         !default;
+
 ul {
   &.primary {
-    border-bottom: 1px solid #cacaca;
-    margin: 0 0 1rem;
+    border-bottom: $tab-border-width solid $tab-border-color;
+    margin: $tab-margin;
     padding: 0;
 
     &::after {
@@ -28,21 +60,21 @@ ul {
       position: relative;
 
       a {
-        background: #fff;
-        border: 1px solid transparent;
+        background: $tab-background;
+        border: $tab-border-width solid transparent;
         border-bottom: 0;
-        border-top: 2px solid transparent;
-        color: #cacaca;
+        border-top: $tab-active-border-width solid transparent;
+        color: $tab-color;
         display: block;
-        font-weight: bold;
+        font-weight: $tab-weight;
         margin-right: 0;
-        padding: .9em 1.6em;
+        padding: $tab-padding;
         transition: color .3s, border .3s;
 
         &:hover {
-          background-color: #fff;
+          background-color: $tab-background-hover;
           border-color: transparent;
-          color: #8a8a8a;
+          color: $tab-color-hover;
         }
       }
 
@@ -50,10 +82,10 @@ ul {
         bottom: -1px;
 
         a {
-          border: 1px solid #cacaca;
+          border: $tab-border-width solid $tab-border-color;
           border-bottom: 0;
-          border-top: rem-calc(2) solid #1779ba;
-          color: #000;
+          border-top: $tab-active-border-width solid $tab-active-border-color;
+          color: $tab-active-color;
         }
       }
     }

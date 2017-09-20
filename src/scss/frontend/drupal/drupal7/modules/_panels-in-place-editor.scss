@@ -45,8 +45,13 @@ div {
   &#panels-ipe-control-container {
     background: $ipe-control-container-background;
     box-shadow: $ipe-control-container-shadow;
+    display: none !important;
     left: 0;
     padding: $ipe-control-container-padding;
+
+    @include breakpoint(medium) {
+      display: block !important;
+    }
   }
 
   &.panels-ipe-button-container {
@@ -96,4 +101,8 @@ div.panels-ipe-pseudobutton-container:focus,
 div.panels-ipe-control .form-submit:focus {
   background: $ipe-button-background-hover;
   color: $ipe-button-color-hover;
+}
+
+.ipe-throbber {
+  @include throbber;
 }

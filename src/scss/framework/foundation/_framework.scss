@@ -20,13 +20,13 @@
 //@include foundation-everything;
 
 // Import Foundation components individually
-//@include foundation-global-styles;                                              // RECOMMENDED
+@include foundation-global-styles;                                            // RECOMMENDED
 //@include foundation-xy-grid-classes;
 //@include foundation-grid;                                                     // DEPRECATED
 //@include foundation-flex-grid;                                                // DEPRECATED
 //@include foundation-flex-classes;
-//@include foundation-typography;                                                 // RECOMMENDED
-//@include foundation-forms;                                                      // RECOMMENDED
+@include foundation-typography;                                               // RECOMMENDED
+@include foundation-forms;                                                    // RECOMMENDED
 //@include foundation-button;
 //@include foundation-accordion;
 //@include foundation-accordion-menu;

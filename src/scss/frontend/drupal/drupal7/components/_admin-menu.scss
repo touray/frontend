@@ -10,12 +10,38 @@
 //
 // Admin Menu 1 component variables. To add/edit component variables, use <code>scss/_variables.scss</code>.
 //
+// $admin-menu-background  - Admin menu background. Default: <code>#000</code>
+// $admin-menu-size        - Admin menu font size. Default: <code>12px</code>
+// $admin-menu-font-family - Admin menu font family. Default: <code>inherit</code>
+// $admin-menu-line-height - Admin menu line height. Default: <code>1.4</code>
+//
 // Style guide: frontend.drupal.drupal7.components.admin-menu.variables
+$admin-menu-background:         #000                                   !default;
+$admin-menu-size:               12px                                   !default;
+$admin-menu-font-family:        inherit                                !default;
+$admin-menu-line-height:        1.4                                    !default;
+$admin-menu-account-background: #a94442                                !default;
 
 #admin-menu {
+  background: $admin-menu-background;
   display: none;
+  font-family: $admin-menu-font-family;
+  font-size: $admin-menu-size;
 
   @include breakpoint(medium) {
     display: block;
   }
+
+  li {
+    &.admin-menu-account {
+      > a {
+        background: $admin-menu-account-background;
+      }
+    }
+  }
+}
+
+#admin-menu,
+#admin-menu .dropdown {
+  line-height: $admin-menu-line-height;
 }
