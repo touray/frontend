@@ -2,102 +2,11 @@
 //
 // Themes the Drupal CTools modal.
 //
-// Markup:
-// <div class="modal-default">
-//   <div class="ctools-modal-content">
-//     <div class="modal-header">
-//       <a href="#" class="close">Close Window <img src="/sites/all/modules/contrib/ctools/images/icon-close-window.png"></a>
-//       <span class="modal-title">Modal Title</span>
-//     </div>
-//   </div>
-// </div>
-//
-// Style guide: frontend.drupal.components.modal
+// Style guide: frontend.drupal.drupal7.components.modal
 
 // Variables
 //
 // Modal 1 component variables. To add/edit component variables, use <code>scss/_variables.scss</code>.
 //
-// $modal-border            - Modal border. Default: <code>0</code>
-// $modal-radius            - Modal radius. Default: <code>$global-radius</code>
-// $modal-size              - Modal font size. Default: <code>$global-font-size</code>
-// $modal-shadow            - Modal shadow. Default: <code>$modal-shadow</code>
-// $modal-title-size        - Modal title font size. Default: <code>$global-font-size</code>
-// $modal-title-color       - Modal title font color. Default: <code>$white</code>
-// $modal-title-shadow      - Modal title font shadow. Default: <code>none</code>
-// $modal-title-weight      - Modal title font weight. Default: <code>$global-weight-bold</code>
-// $modal-header-background - Modal header background. Default: <code>$black</code>
-// $modal-close-color       - Modal close link color. Default: <code>$white</code>
-// $modal-close-size        - Modal close link font size. Default: <code>rem-calc(13)</code>
-//
-// Weight: 0
-//
-// Style guide: frontend.drupal.components.modal-1.variables
-$modal-border:            0;
-$modal-radius:            $global-radius;
-$modal-size:              $global-font-size;
-$modal-shadow:            none;
-$modal-title-size:        $global-font-size;
-$modal-title-color:       $white;
-$modal-title-shadow:      none;
-$modal-title-weight:      $global-weight-bold;
-$modal-header-background: $black;
-$modal-close-color:       $white;
-$modal-close-size:        rem-calc(13);
-
-// scss-lint:disable NestingDepth
-
-div {
-  &.ctools-modal-content {
-    border: $modal-border;
-    border-radius: $modal-radius;
-    box-shadow: $modal-shadow;
-    font-size: $modal-size;
-    margin: 0;
-    overflow: hidden;
-
-    a {
-      &.close {
-        background-position: rem-calc(-166 -1682);
-        color: $modal-close-color;
-        font-size: $modal-close-size;
-        line-height: rem-calc(23);
-        outline: none;
-      }
-    }
-
-    .modal-header {
-      background: $modal-header-background;
-      border-radius: 0;
-    }
-
-    .modal-title {
-      color: $modal-title-color;
-      font-size: $modal-title-size;
-      font-weight: $modal-title-weight;
-      text-shadow: $modal-title-shadow;
-    }
-
-    .modal-content {
-      // scss-lint:disable ImportantRule
-      height: calc(100% - 32pxx) !important;
-      margin-left: auto;
-      margin-right: auto;
-      width: 100% !important;
-    }
-
-    .dependent-options {
-      padding-left: 0;
-    }
-  }
-}
-
-.panels-add-content-modal {
-  background: $white;
-
-  .panels-modal-add-category {
-    background-color: $light-gray;
-    font-size: $small-font-size;
-  }
-}
+// Style guide: frontend.drupal.drupal7.components.modal.variables
 

@@ -1,0 +1,61 @@
+// Tabs
+//
+// .primary - Drupal's default tab markup styling.
+//
+// Markup:
+// <ul class="primary">
+//   <li><a href="#">Tab 1</a></li>
+//   <li class="active"><a href="#" class="active">Tab 1</a></li>
+//   <li><a href="#">Tab 1</a></li>
+// </ul>
+//
+// Style guide: frontend.drupal.drupal7.tabs
+ul {
+  &.primary {
+    border-bottom: 1px solid #cacaca;
+    margin: 0 0 1rem;
+    padding: 0;
+
+    &::after {
+      clear: both;
+      content: '';
+      display: table;
+    }
+
+    li {
+      display: inline-block;
+      float: left;
+      position: relative;
+
+      a {
+        background: #fff;
+        border: 1px solid transparent;
+        border-bottom: 0;
+        border-top: 2px solid transparent;
+        color: #cacaca;
+        display: block;
+        font-weight: bold;
+        margin-right: 0;
+        padding: .9em 1.6em;
+        transition: color .3s, border .3s;
+
+        &:hover {
+          background-color: #fff;
+          border-color: transparent;
+          color: #8a8a8a;
+        }
+      }
+
+      &.active {
+        bottom: -1px;
+
+        a {
+          border: 1px solid #cacaca;
+          border-bottom: 0;
+          border-top: rem-calc(2) solid #1779ba;
+          color: #000;
+        }
+      }
+    }
+  }
+}

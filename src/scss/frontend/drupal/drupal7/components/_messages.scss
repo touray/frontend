@@ -1,0 +1,103 @@
+// Messages
+//
+// .messages - Drupal's default message markup styling.
+// .status   - Status styling.
+// .warning  - Warning styling.
+// .error    - Error styling.
+//
+// Markup:
+// <div class="messages {{modifier_class}}">
+//   Curabitur rutrum, diam vel tempor commodo, augue nunc viverra risus, in pellentesque neque justo eget dolor.
+// </div>
+//
+// Style guide: frontend.drupal.drupal7.messages
+
+// Variables
+//
+// Drupal 7 message component variables. To add/edit component variables, use <code>scss/_variables.scss</code>.
+//
+// $message-background - Message background. Default: <code></code>
+// $message-border - Message border. Default: <code></code>
+// $message-margin - Message margin. Default: <code>1rem</code>
+// $message-padding - Message padding. Default: <code>1rem</code>
+// $message-radius - Message radius. Default: <code>0</code>
+// $message-status-background - Message status background. Default: <code>#dff0d8</code>
+// $message-status-border - Message status border. Default: <code>1px solid #d6e9c6</code>
+// $message-status-color - Message status color. Default: <code>#3c763d</code>
+// $message-warning-background - Message warning background. Default: <code>#fcf8e3</code>
+// $message-warning-border - Message warning border. Default: <code>#faebcc</code>
+// $message-warning-color - Message warning color. Default: <code>#8a6d3b</code>
+// $message-error-background - Message error background. Default: <code>#f2dede</code>
+// $message-error-border - Message error border. Default: <code>1px solid #ebccd1</code>
+// $message-error-color - Message error color. Default: <code>#a94442</code>
+//
+// Style guide: frontend.drupal.drupal7.messages.variables
+$message-background: transparent                                       !default;
+$message-border:     1px solid                                         !default;
+$message-margin:     1rem 0                                            !default;
+$message-padding:    1rem                                              !default;
+$message-radius:     0                                                 !default;
+
+$message-status-background: #dff0d8                                    !default;
+$message-status-border: 1px solid #d6e9c6                              !default;
+$message-status-color: #3c763d                                         !default;
+
+$message-warning-background: #fcf8e3                                   !default;
+$message-warning-border: 1px solid #faebcc                             !default;
+$message-warning-color: #8a6d3b                                        !default;
+
+$message-error-background: #f2dede                                     !default;
+$message-error-border: 1px solid #ebccd1                               !default;
+$message-error-color: #a94442                                          !default;
+
+div {
+  &.messages {
+    background: $message-background;
+    border: $message-border;
+    border-radius: $message-radius;
+    margin: $message-margin;
+    padding: $message-padding;
+  }
+
+  &.status {
+    border: $message-status-border;
+  }
+
+  &.warning {
+    border: $message-warning-border;
+  }
+
+  &.error {
+    border: $message-error-border;
+  }
+}
+
+div.status,
+.ok {
+  color: $message-status-color;
+}
+
+div.status,
+table tr.ok {
+  background: $message-status-background;
+}
+
+div.warning,
+.warning {
+  color: $message-warning-color;
+}
+
+div.warning,
+table tr.warning {
+  background: $message-warning-background;
+}
+
+div.error,
+.error {
+  color: $message-error-color;
+}
+
+div.error,
+table tr.error {
+  background: $message-error-background;
+}

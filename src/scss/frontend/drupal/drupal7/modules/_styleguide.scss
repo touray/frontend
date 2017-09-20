@@ -1,47 +1,20 @@
 // Style Guide
 //
-// Contains default <a href="https://www.drupal.org/project/styleguide" target="_blank">Style Guide module</a> styles. To add/edit component variables, use <code>scss/_variables.scss</code>.
+// Contains default <a href="https://www.drupal.org/project/styleguide" target="_blank">Style Guide module</a> styles.
 //
-// $styleguide-layout            - If enabled, styles the styleguide page layout within a container. Default: <code>true</code>
-// $styleguide-header-background - Defines the style guide header background. Default: <code>$light-gray</code>
-// $styleguide-header-border     - Defines the style guide header border. Default: <code>rem-calc(1) solid $medium-gray</code>
-// $styleguide-header-color      - Defines the style guide header color. Default: <code>$dark-gray</code>
-// $styleguide-header-padding    - Defines the style guide header padding. Default: <code>$global-padding</code>
+// Style guide: frontend.drupal.drupal7.modules.styleguide
+
+// Variables
 //
-// Style guide: frontend.drupal.modules.styleguide
+// Style Guide component variables. To add/edit component variables, use <code>scss/_variables.scss</code>.
+//
+// Style guide: frontend.drupal.drupal7.modules.styleguide.variables
+$styleguide-layout: true                                               !default;
 
-$styleguide-layout:            true;
-$styleguide-header-background: $light-gray;
-$styleguide-header-border:     rem-calc(1) solid $medium-gray;
-$styleguide-header-color:      $dark-gray;
-$styleguide-header-padding:    $global-padding;
-
-// scss-lint:disable IdSelector
-#styleguide-header {
-  background: $styleguide-header-background;
-  border-color: $styleguide-header-border;
-  color: $styleguide-header-color;
-  padding: $styleguide-header-padding;
-}
-
-.styleguide {
-  table {
-    .description,
-    .get {
-      width: 25%;
-    }
-
-    .type {
-      width: 50%;
-    }
-  }
-}
-
-@if $styleguide-layout == true {
-  // scss-lint:disable QualifyingElement
-  body.page-admin-appearance-styleguide {
+@if $styleguide-layout {
+  .page-admin-appearance-styleguide {
     #main {
-      @extend %container;
+      @include container;
     }
   }
 }

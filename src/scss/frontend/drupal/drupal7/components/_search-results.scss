@@ -1,0 +1,23 @@
+// Search Results
+//
+// .search-results - Drupal's default search results markup styling.
+//
+// Markup:
+// <ol class="search-results">
+//   <li class="search-result">
+//     <h3 class="title">In faucibus feugiat urna sit amet elementum.</h3>
+//     <div class="search-snippet-info">
+//       <p class="search-snippet">sed egestas elit duis turpis orci luctus egestas cras aliquam ut est neque consectetur felis ac luctus erat elit felis consectetur velit ante viverra in</p>
+//       <p class="search-info"><a href="#" class="username">bmarshall</a> - 09/20/2017 - 09:20 - magna viverra</p>
+//     </div>
+//   </li>
+// </ol>
+//
+// Style guide: frontend.drupal.drupal7.search-results
+.search-results {
+  padding-left: 0;
+
+  .search-snippet-info {
+    padding-left: 0;
+  }
+}

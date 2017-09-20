@@ -1,47 +1,11 @@
 // Panels
 //
-// Contains default <a href="https://www.drupal.org/project/panels" target="_blank">Panels module</a> styles. To add/edit component variables, use <code>scss/_variables.scss</code>.
+// Contains default <a href="https://www.drupal.org/project/panels" target="_blank">Panels module</a> styles.
 //
-// Style guide: frontend.drupal.modules.panels
-.panels-section-columns-quickfilter {
-  padding-bottom: rem-calc($global-padding);
-  padding-left: rem-calc($global-padding);
-  padding-right: rem-calc($global-padding);
-  padding-top: rem-calc($global-padding);
-}
+// Style guide: frontend.drupal.drupal7.modules.panels
 
-.option-text-aligner {
-  .form-item {
-    > .form-select {
-      margin-top: rem-calc(25);
-    }
-  }
-}
-
-.content-type-button {
-  a {
-    &:focus {
-      border: 0;
-    }
-  }
-}
-
-.panels-section-column {
-  .content-type-button {
-    font-size: $small-font-size;
-  }
-}
-
-.layout-link {
-  font-size: $small-font-size;
-  text-align: center;
-
-  a {
-    display: block;
-    padding: rem-calc(5);
-
-    &:hover {
-      background-color: $light-gray;
-    }
-  }
-}
+// Variables
+//
+// Panels component variables. To add/edit component variables, use <code>scss/_variables.scss</code>.
+//
+// Style guide: frontend.drupal.drupal7.modules.panels.variables
