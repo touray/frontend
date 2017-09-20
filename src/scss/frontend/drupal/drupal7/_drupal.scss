@@ -11,10 +11,10 @@
 // Drupal 7 component variables. To add/edit component variables, use <code>scss/_variables.scss</code>.
 //
 // $user-layout                        - If enabled, styles the user page layout within a container. Default: <code>true</code>
-// $form-item-margin-bottom            - Defines the form item bottom margin. Default: <code>rem-calc($global-margin)</code>
-// $form-item-margin-top               - Defines the form item top margin. Default: <code>rem-calc($global-margin)</code>
+// $form-item-margin-bottom            - Defines the form item bottom margin. Default: <code>1rem</code>
+// $form-item-margin-top               - Defines the form item top margin. Default: <code>1rem</code>
 // $message-margin                     - Defines the site message margin. Default: <code>rem-calc($global-margin 0)</code>
-// $message-padding                    - Defines the site message padding. Default: <code>$global-padding</code>
+// $message-padding                    - Defines the site message padding. Default: <code>1rem</code>
 // $message-border                     - Defines the site message radius. Default: <code>$global-radius</code>
 // $message-radius                     - Defines the site message border. Default: <code>rem-calc(1) solid</code>
 // $message-status-background          - Defines the status message background. Default: <code>rgba($success-color, .5)</code>
@@ -48,17 +48,17 @@
 // Style guide: frontend.drupal.drupal7.variables
 
 // Layouts
-$user-layout: true;
+$user-layout: true                                                     !default;
 
 // Forms
-$form-item-margin-bottom: rem-calc($global-margin)                     !default;
-$form-item-margin-top:    rem-calc($global-margin)                     !default;
+$form-item-margin-bottom: 1rem                                         !default;
+$form-item-margin-top:    1rem                                         !default;
 
 // Messages
-$message-margin:  rem-calc($global-margin 0)                           !default;
-$message-padding: $global-padding                                      !default;
+$message-margin:  1rem 0                                               !default;
+$message-padding: 1rem                                                 !default;
 $message-border:  rem-calc(1) solid                                    !default;
-$message-radius:  $global-radius                                       !default;
+$message-radius:  0                                                    !default;
 
 // Status
 $message-status-background: rgba($success-color, .5)                   !default;

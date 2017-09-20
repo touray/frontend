@@ -18,6 +18,21 @@
 //
 // Style guide: frontend.wordpress.wysiwyg
 
+// Variables
+//
+// WYSIWYG Editor default variables. To add/edit component variables, use <code>scss/_variables.scss</code>.
+//
+// $global-margin     - Application global margin.
+// $global-padding    - Application global paddding.
+// $global-lineheight - Application global line height.
+// $small-font-size   - Application small font size.
+//
+// Style guide: frontend.wordpress.wysiwyg.variables
+$global-margin:     1rem !default;
+$global-padding:    1rem !default;
+$global-lineheight: 1.5 !default;
+$small-font-size:   80% !default;
+
 // scss-lint:disable ImportantRule, QualifyingElement
 
 .entry-content img {

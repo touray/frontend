@@ -4,6 +4,35 @@
 //
 // Style guide: frontend.mixins
 
+
+// Variables
+//
+// Mixin default variables. To add/edit component variables, use <code>scss/_variables.scss</code>.
+//
+// $primary-color        - Primary application color.
+// $global-width         - Application global width.
+// $global-radius        - Application global radius.
+// $css-grid-columns     - Responsive list for the number of columns at each breakpoint.
+// $css-grid-column-gaps - Responsive list for the size of column gaps at each breakpoint.
+// $css-grid-row-gaps    - Responsive list for the size of row gaps at each breakpoint.
+//
+// Style guide: frontend.mixins.variables
+$primary-color: #1779ba !default;
+$global-width:  rem-calc(1200) !default;
+$global-radius: 0 !default;
+$css-grid-columns: (
+  small: 2,
+  medium: 12
+) !default;
+$css-grid-column-gaps: (
+  small: 20px,
+  medium: 30px
+) !default;
+$css-grid-row-gaps: (
+  small: 0,
+  medium: 0
+) !default;
+
 // container($width)
 //
 // Creates a max width container, designed to house your grid content.
