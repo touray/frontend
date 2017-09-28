@@ -45,39 +45,45 @@
             </a>
           </li>
           <li class="kss-nav__item">
-            <a class="" href="section-global.html">
+            <a class="" href="section-compass-import-compass-.html">
               <span class="kss-nav__ref">2</span>
-              <span class="kss-nav__name">Global Style Sheet</span>
-            </a>
-          </li>
-          <li class="kss-nav__item">
-            <a class="" href="section-variables.html">
-              <span class="kss-nav__ref">3</span>
-              <span class="kss-nav__name">Custom Variables</span>
-            </a>
-          </li>
-          <li class="kss-nav__item">
-            <a class="" href="section-framework.html">
-              <span class="kss-nav__ref">4</span>
-              <span class="kss-nav__name">Framework</span>
-            </a>
-          </li>
-          <li class="kss-nav__item">
-            <a class="" href="section-motion-ui-import-motion-ui-include-motion-ui-transitions-include-motion-ui-animations-.html">
-              <span class="kss-nav__ref">5</span>
-              <span class="kss-nav__name">Motion UI</span>
-            </a>
-          </li>
-          <li class="kss-nav__item">
-            <a class="" href="section-frontend.html">
-              <span class="kss-nav__ref">6</span>
-              <span class="kss-nav__name">Frontend Build</span>
+              <span class="kss-nav__name">Compass (optional)</span>
             </a>
           </li>
           <li class="kss-nav__item">
             <a class="" href="section-components.html">
+              <span class="kss-nav__ref">3</span>
+              <span class="kss-nav__name">Components (optional)</span>
+            </a>
+          </li>
+          <li class="kss-nav__item">
+            <a class="" href="section-foundation.html">
+              <span class="kss-nav__ref">4</span>
+              <span class="kss-nav__name">Foundation (required)</span>
+            </a>
+          </li>
+          <li class="kss-nav__item">
+            <a class="" href="section-frontend.html">
+              <span class="kss-nav__ref">5</span>
+              <span class="kss-nav__name">Frontend Build (optional)</span>
+            </a>
+          </li>
+          <li class="kss-nav__item">
+            <a class="" href="section-global.html">
+              <span class="kss-nav__ref">6</span>
+              <span class="kss-nav__name">Global Style Sheet</span>
+            </a>
+          </li>
+          <li class="kss-nav__item">
+            <a class="" href="section-motion-ui.html">
               <span class="kss-nav__ref">7</span>
-              <span class="kss-nav__name">Components</span>
+              <span class="kss-nav__name">Motion UI (optional)</span>
+            </a>
+          </li>
+          <li class="kss-nav__item">
+            <a class="" href="section-variables.html">
+              <span class="kss-nav__ref">8</span>
+              <span class="kss-nav__name">Custom Variables</span>
             </a>
           </li>
       </ul>
@@ -141,114 +147,6 @@
 <li>And awesome <a href="https://github.com/bmarshall511/frontend/graphs/contributors">contributors</a></li>
 </ul>
 <h2 id="changelog">Changelog</h2>
-<h3 id="v4-2-2-tbd-">v4.2.2 (TBD)</h3>
-<ul>
-<li>Fix in package.json for issue URL</li>
-<li>Fix for missing gulp-cli in Travis CI build</li>
-<li>Fix for scss-lint notices</li>
-<li>Updated Foundation to 6.4.3</li>
-<li>Added documentation to the frontend Drupal 7 and styleguide components</li>
-<li>Added a container mixin &amp; extendable</li>
-<li>Added a CSS grid mixin &amp; extendable</li>
-<li>Added a CSS grid item mixin</li>
-<li>Added a Frontend Build variables file</li>
-<li>Added <code>gulp-util</code> for better error handling (<a href="https://github.com/bmarshall511/frontend/issues/13">https://github.com/bmarshall511/frontend/issues/13</a>)</li>
-<li>Added <code>vinyl-buffer</code>, <code>vinyl-source-stream</code>, <code>browserify</code>, <code>browserify</code> &amp; <code>babel-preset-es2015</code> to enable ES2015 module support (<a href="https://github.com/bmarshall511/frontend/issues/13">https://github.com/bmarshall511/frontend/issues/13</a>)</li>
-<li>Removed <code>gulp-babel</code>, <code>gulp-concat</code> &amp; <code>gulp-plumber</code> (<a href="https://github.com/bmarshall511/frontend/issues/13">https://github.com/bmarshall511/frontend/issues/13</a>)</li>
-</ul>
-<h3 id="v4-2-1-august-8-2017-">v4.2.1 (August 8, 2017)</h3>
-<ul>
-<li>Updates to Drupal 7 scss frontend component</li>
-<li>New WordPress scss frontend component</li>
-</ul>
-<h3 id="v4-2-0-august-8-2017-">v4.2.0 (August 8, 2017)</h3>
-<ul>
-<li>Removed webpack from the build process, opting for gulp instead</li>
-<li>Removed singularitygs, use CSS grid instead</li>
-<li>Removed Frontend Build&#39;s default scss, use an existing framework like Foundation</li>
-<li>Added <a href="http://foundation.zurb.com/">Foundation</a> as the default frontend framework</li>
-</ul>
-<h3 id="v4-1-0-july-13-2017-">v4.1.0 (July 13, 2017)</h3>
-<ul>
-<li>Removed toolkit</li>
-<li>Updated Drupal 7 styles</li>
-<li>Updated documentation</li>
-<li>Updated plumber error handling</li>
-<li>Fix for font directory copying issue (<a href="https://github.com/bmarshall511/frontend/issues/6">https://github.com/bmarshall511/frontend/issues/6</a>)</li>
-<li>Fix for styleguide typos</li>
-<li>Fix for gulp image path</li>
-<li>Fix for <code>js-transpile</code> task error from stopping the build</li>
-<li>Fix for Compass compile issue during watch when an error is found</li>
-<li>Fix for npm publish error</li>
-<li>Fix for elint error bug</li>
-<li>Fix for README typo</li>
-<li>New scss-lint config file</li>
-<li>New warning when editing Frontend Build core scss files</li>
-<li>New mixins</li>
-<li>New SCSS variables:<ul>
-<li><code>$blockquote-letter-spacing</code></li>
-<li><code>$global-min-width</code></li>
-<li><code>$button-letter-spacing</code></li>
-<li><code>$anchor-color-visited</code></li>
-<li><code>$anchor-text-decoration-visited-hover</code></li>
-<li><code>$selection-background</code></li>
-<li><code>$selection-color</code></li>
-<li><code>$paragraph-letter-spacing</code></li>
-<li><code>$code-letter-spacing</code></li>
-<li><code>$pager-link-decoration</code></li>
-<li><code>$pager-link-decoration-hover</code></li>
-<li><code>$figure-caption-style</code></li>
-<li><code>$figure-border</code></li>
-<li><code>$figure-margin</code></li>
-<li><code>$figure-padding</code></li>
-<li><code>$figure-caption-letter-spacing</code></li>
-<li><code>$figure-caption-size</code></li>
-</ul>
-</li>
-<li>New node modules:<ul>
-<li><code>babel-preset-react</code> to support React applications by default</li>
-<li><code>css-loader</code> and <code>style-loader</code> to import CSS from JS (<a href="https://webpack.js.org/guides/code-splitting-css/">https://webpack.js.org/guides/code-splitting-css/</a>)</li>
-<li><code>json-loader</code> to fix webpack error with json files (<a href="https://github.com/request/request/issues/1529#issuecomment-103454943">https://github.com/request/request/issues/1529#issuecomment-103454943</a>)</li>
-</ul>
-</li>
-</ul>
-<h3 id="v4-0-0-june-21-2017-">v4.0.0 (June 21, 2017)</h3>
-<ul>
-<li>A complete rewrite of the NPM package and gulp using Babel and ES2015</li>
-<li>Now supports React, ES2016 and Babel</li>
-<li>Integrates with <a href="https://github.com/kss-node/kss-node">kss</a> to automate the creation of stylesheets</li>
-</ul>
-<h3 id="v3-0-3-dev-">v3.0.3 (dev)</h3>
-<ul>
-<li>Integrated <a href="https://www.npmjs.com/package/gulp-cached">gulp-cached</a>.</li>
-<li>Integrated <a href="https://www.npmjs.com/package/gulp-plumber">gulp-plumber</a>.</li>
-<li>Integrated <a href="https://www.npmjs.com/package/gulp-notify">gulp-notify</a>.</li>
-<li>Changed <code>gulp compile</code> to <code>gulp dev</code></li>
-</ul>
-<h3 id="v3-0-2-april-27-2017-">v3.0.2 (April 27, 2017)</h3>
-<ul>
-<li>Integrated <a href="https://www.npmjs.com/package/gulp-htmlmin">gulp-htmlmin</a>.</li>
-<li>Integrated <a href="https://www.npmjs.com/package/gulp-uncss">gulp-uncss</a>.</li>
-</ul>
-<h3 id="v3-0-1-april-5-2017-">v3.0.1 (April 5, 2017)</h3>
-<ul>
-<li>Removed optional compiled JS libraries.</li>
-<li>Removed deprecated table variables.</li>
-<li>Updated documentation.</li>
-<li>Created a <code>gulp variables</code> task to automatically setup a application <code>_variables.scss</code> file.</li>
-<li>Added the <code>$button-font-weight</code> variable.</li>
-<li>Changed the default value of the <code>$button-background</code> variable.</li>
-<li>Added the the <code>.screen-reader-text</code> styles as an extendable (<code>%screen-reader-text</code>).</li>
-<li>Added the <code>$header-letter-spacing</code> variable.</li>
-<li>Updated the variable names for the site header from <code>$header</code> to <code>$site-header</code> to fix variable naming conflicts.</li>
-<li>Updated the default values for the <code>$site-header-padding-top</code> and <code>$site-header-padding-bottom</code>.</li>
-<li>Updated the default value for the <code>$gutter-style</code> variable.</li>
-<li>Several updates to the default variable for grid layout.</li>
-<li>Added the <code>$global-weight-light</code> variable.</li>
-<li>Created a <code>gulp setup</code> task to automatically setup a application for the first time.</li>
-<li>Added additional breakpoint variables for header font sizes.</li>
-<li>Added SCSS linter</li>
-</ul>
 
         </article>
     </section>

@@ -3,7 +3,6 @@ add_import_path 'node_modules/foundation-sites/scss'
 add_import_path 'node_modules/motion-ui/src'
 
 # Require any additional compass plugins here.
-require 'breakpoint'
 
 # Set this to the root of your project when deployed:
 http_path = ''

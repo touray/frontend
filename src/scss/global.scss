@@ -10,77 +10,62 @@
 // <br>
 // See <a href="https://docs.google.com/spreadsheets/d/1-IEPnlD4zbl2XG7qD5h8SuXVf8WKTRoX5JC6hOM5jTs/edit?usp=sharing" target="_blank">https://docs.google.com/spreadsheets/d/1-IEPnlD4zbl2XG7qD5h8SuXVf8WKTRoX5JC6hOM5jTs/edit?usp=sharing</a>.
 //
-// Weight: 0
-//
 // Style guide: cheatsheet
 
-// Framework
+// Compass (optional)
 //
-// Frontend Build comes with the
-// <a href="http://foundation.zurb.com/" target="_blank">Foundation</a>
-// framework installed by default. If you prefer, you can comment it out,
-// integrate another like
-// <a href="http://getbootstrap.com/" target="_blank">Bootstrap</a> or build
-// your own.
+// <a href="http://compass-style.org/" target="_blank">Compass</a> is an open-source CSS Authoring Framework.
 //
-// Weight: 1
+// Style guide: compass
+//@import 'compass';
+
+// Foundation (required)
 //
-// Style guide: framework
+// A Framework for any device, medium, and accessibility. <a href="http://foundation.zurb.com/" target="_blank">Foundation</a> is a family of responsive front-end frameworks that make it easy to design beautiful responsive websites, apps and emails that look amazing on any device. Foundation is semantic, readable, flexible, and completely customizable. See <a href="http://foundation.zurb.com/" target="_blank">http://foundation.zurb.com/</a> for more information.
+//
+// Style guide: foundation
 @import 'framework/foundation/framework';
 
-// Motion UI
+// Motion UI (optional)
 //
 // A Sass library for creating flexible UI transitions and animations. See <a href="http://foundation.zurb.com/sites/docs/motion-ui.html" target="_blank">http://foundation.zurb.com/sites/docs/motion-ui.html</a> for more information.
 //
-// Weight: 2
-//
 // Style guide: motion-ui
+
 //@import 'motion-ui';
 //@include motion-ui-transitions;
 //@include motion-ui-animations;
 
-// Frontend Build
+// Frontend Build (optional)
 //
-// Frontend Build comes with pre-built starter components to help speed up
-// theming for common projects.
-//
-// Weight: 3
+// Frontend Build comes with pre-built starter components to help speed up theming for common projects.
 //
 // Style guide: frontend
-//
-@import 'frontend/functions';
-@import 'frontend/mixins';
-@import 'frontend/extendables';
+
+//@import 'frontend/functions';
+//@import 'frontend/mixins';
+//@import 'frontend/extendables';
 //@import 'frontend/common';
 
-// Drupal
+// Drupal (optional)
 //
 // Optional styles if your application is using <a href="https://www.drupal.org/" target="_blank">Drupal</a>.
 //
-// Weight: 4
-//
 // Style guide: frontend.drupal
 
-@import 'frontend/drupal/drupal';
+//@import 'frontend/drupal/drupal';
 
-// WordPress
+// WordPress (optional)
 //
 // Optional styles if your application is using <a href="https://wordpress.org/" target="_blank">WordPress</a>.
-//
-// Weight: 5
 //
 // Style guide: frontend.wordpress
 
 //@import 'frontend/wordpress/wordpress';
 
-// Components
+// Components (optional)
 //
-// Frontend Build is meant to be built using the
-// <a href="http://getbem.com/" target="_blank">BEM methodology</a>. This means
-// all styles should be self-contained components that follow a specific
-// naming convention. Once built, you can import your components here.
-//
-// Weight: 6
+// Frontend Build is meant to be built using the <a href="http://getbem.com/" target="_blank">BEM methodology</a>. This means all styles should be self-contained components that follow a specific naming convention. Once built, you can import your components here.
 //
 // Style guide: components
 

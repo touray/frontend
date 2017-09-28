@@ -1,11 +1,8 @@
-// Foundation
+// Framework
 //
-// A Framework for any device, medium, and accessibility. <a href="http://foundation.zurb.com/" target="_blank">Foundation</a> is a family
-// of responsive front-end frameworks that make it easy to design beautiful
-// responsive websites, apps and emails that look amazing on any device.
-// Foundation is semantic, readable, flexible, and completely customizable. See <a href="http://foundation.zurb.com/" target="_blank">http://foundation.zurb.com/</a> for more information.
+// Add/remove individual Foundation framework components.
 //
-// Style guide: framework.foundation
+// Style guide: foundation.framework
 
 // Configuration
 @import 'settings';
@@ -20,13 +17,13 @@
 //@include foundation-everything;
 
 // Import Foundation components individually
-@include foundation-global-styles;                                            // RECOMMENDED
+//@include foundation-global-styles;
 //@include foundation-xy-grid-classes;
 //@include foundation-grid;                                                     // DEPRECATED
 //@include foundation-flex-grid;                                                // DEPRECATED
 //@include foundation-flex-classes;
-@include foundation-typography;                                               // RECOMMENDED
-@include foundation-forms;                                                    // RECOMMENDED
+//@include foundation-typography;
+//@include foundation-forms;
 //@include foundation-button;
 //@include foundation-accordion;
 //@include foundation-accordion-menu;
