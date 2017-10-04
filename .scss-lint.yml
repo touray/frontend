@@ -1,3 +1,5 @@
 linters:
   SelectorFormat:
     convention: hyphenated_BEM
+  Compass::*:
+    enabled: true

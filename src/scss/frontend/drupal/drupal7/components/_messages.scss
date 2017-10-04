@@ -12,6 +12,8 @@
 //
 // Style guide: frontend.drupal.drupal7.messages
 
+// scss-lint:disable QualifyingElement, ColorVariable
+
 // Variables
 //
 // Drupal 7 message component variables. To add/edit component variables, use <code>scss/_variables.scss</code>.
@@ -52,9 +54,9 @@ $message-error-color: #a94442                                          !default;
 
 div {
   &.messages {
+    @include border-radius($message-radius);
     background: $message-background;
     border: $message-border;
-    border-radius: $message-radius;
     margin: $message-margin;
     padding: $message-padding;
   }

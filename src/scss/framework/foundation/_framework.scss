@@ -10,19 +10,19 @@
 // Import Foundation dependency
 @import 'foundation';
 
-// Custom variables. Important this is placed here for overrides to work properly.
+// Custom & Frontend Build variables. Important this is placed here for overrides to work properly.
 @import '../../variables';
 
 // Import ALL Foundation components (not recommended)
 //@include foundation-everything;
 
 // Import Foundation components individually
-//@include foundation-global-styles;
+@include foundation-global-styles;
 //@include foundation-xy-grid-classes;
 //@include foundation-grid;                                                     // DEPRECATED
 //@include foundation-flex-grid;                                                // DEPRECATED
 //@include foundation-flex-classes;
-//@include foundation-typography;
+@include foundation-typography;
 //@include foundation-forms;
 //@include foundation-button;
 //@include foundation-accordion;

@@ -119,38 +119,38 @@ $css-grid-row-gaps: (
 //
 // Style guide: frontend.mixins.throbber
 @mixin throbber($width: rem-calc(40), $height: rem-calc(40), $color: $primary-color, $opacity: .9, $radius: $global-radius, $animation: throbber-rotateplane 1.2s infinite ease-in-out) {
+  @include border-radius($radius);
+  @include opacity($opacity);
+  @include transform(translateY(-50%) translateX(-50%));
   animation: $animation;
   background: $color;
-  border-radius: $radius;
   height: $height;
   left: 50%;
-  opacity: $opacity;
   top: 50%;
-  transform: translateY(-50%) translateX(-50%);
   width: $width;
 
   @keyframes throbber-rotateplane {
     0% {
-      transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+      @include transform(perspective(120px) rotateX(0deg) rotateY(0deg));
     }
 
     50% {
-      transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+      @include transform(perspective(120px) rotateX(-180.1deg) rotateY(0deg));
     }
 
     100% {
-      transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+      @include transform(perspective(120px) rotateX(-180deg) rotateY(-179.9deg));
     }
   }
 
   @keyframes throbber-scaleout {
     0% {
-      transform: scale(0);
+      @include transform(scale(0));
     }
 
     100% {
-      opacity: 0;
-      transform: scale(1);
+      @include opacity(0);
+      @include transform(scale(1));
     }
   }
 }

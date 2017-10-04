@@ -12,6 +12,7 @@ import scsslint from 'gulp-scss-lint';
 import sourcemaps from 'gulp-sourcemaps';
 import uglify from 'gulp-uglify';
 import gutil from 'gulp-util';
+import stylelint from 'gulp-stylelint';
 
 // Import required node modules
 import babelify from 'babelify';
@@ -64,8 +65,7 @@ const config = {
     srcJs: src + '/js/**/*.js',
     styleguide: 'docs'
   },
-  prefix: ['last 2 versions', 'ie >= 9', 'and_chr >= 2.3'],
-  babelPresets: ['env']
+  prefix: ['last 2 versions', 'ie >= 9', 'and_chr >= 2.3']
 };
 
 // app.js imports
@@ -83,6 +83,7 @@ gulp.task('compass', ['copy-fonts', 'images', 'scss-lint'], () => {
       return cleanCSS(config.clean);
     }))
     .pipe(gulp.dest(paths.dirs().css));
+
 });
 
 // Task: copy-fonts
@@ -172,6 +173,16 @@ gulp.task('kss', ['compass'], () => {
   });
 });
 
+// Task: style-lint
+gulp.task('style-lint', ['compass'], () => {
+  return gulp.src(paths.dirs().css + '/**/*.css')
+    .pipe(stylelint({
+      reporters: [
+        {formatter: 'verbose', console: true}
+      ]
+    }));
+});
+
 // Task: scss-lint
 gulp.task('scss-lint', () => {
   return gulp.src([paths.dirs().sass + '/**/*.scss', '!' + paths.dirs().sass + '/framework/foundation/*'])
@@ -197,7 +208,7 @@ gulp.task('watch', () => {
 
   // Disable editing frontend components to allow the framework to be upgraded
   gulp.watch(src + '/scss/frontend/**/*', () => {
-    console.log('\nWARNING: EDITING FILES/DIRECTORIES LOCATED IN SRC/SCSS/FRONTEND IS NOT RECOMMENDED.\n');
+    console.warn('\nWARNING: EDITING FILES/DIRECTORIES LOCATED IN SRC/SCSS/FRONTEND IS NOT RECOMMENDED.\n');
     if (! argv.dev) {
       process.exit();
     }

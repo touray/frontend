@@ -4,6 +4,8 @@
 //
 // Style guide: frontend.drupal.drupal7.modules.panels-in-place-editor
 
+// scss-lint:disable QualifyingElement, NestingDepth, ImportantRule, IdSelector
+
 // Variables
 //
 // Panels In-Place Editor component variables. To add/edit component variables, use <code>scss/_variables.scss</code>.
@@ -43,8 +45,8 @@ $ipe-button-weight:                normal                              !default;
 
 div {
   &#panels-ipe-control-container {
+    @include box-shadow($ipe-control-container-shadow);
     background: $ipe-control-container-background;
-    box-shadow: $ipe-control-container-shadow;
     display: none !important;
     left: 0;
     padding: $ipe-control-container-padding;
@@ -69,8 +71,8 @@ div {
 
       &.panels-ipe-startedit,
       &.panels-ipe-change-layout {
-        padding: $ipe-button-padding;
         background-image: none;
+        padding: $ipe-button-padding;
       }
     }
   }
@@ -84,8 +86,8 @@ div {
 
 div.panels-ipe-pseudobutton-container,
 div.panels-ipe-control .form-submit {
+  @include border-radius($ipe-button-radius);
   background: $ipe-button-background;
-  border-radius: $ipe-button-radius;
   color: $ipe-button-color;
   font-family: $ipe-button-font-family;
   font-size: $ipe-button-font-size;

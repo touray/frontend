@@ -44,6 +44,7 @@ The following commands can be run in the frontend directory during development. 
 - ```$ gulp scss-lint``` Lints SCSS files
 - ```$ gulp htmlmin``` Minifies HTML documents
 - ```$ gulp uncss``` Removes unused styles (needs configuration)
+- ```$ gulp style-lint``` Lints the compiled CSS files (needs configuration)
 
 ### Styleguides
 

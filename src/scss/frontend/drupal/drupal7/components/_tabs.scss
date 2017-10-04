@@ -11,6 +11,8 @@
 //
 // Style guide: frontend.drupal.drupal7.tabs
 
+// scss-lint:disable NestingDepth
+
 // Variables
 //
 // Tab component variables. To add/edit component variables, use <code>scss/_variables.scss</code>.
@@ -55,7 +57,7 @@ ul {
     }
 
     li {
-      display: inline-block;
+      @include inline-block;
       float: left;
       position: relative;
 
