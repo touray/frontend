@@ -1,6 +1,6 @@
 {
   "name": "frontendbyben",
-  "version": "4.2.1",
+  "version": "4.2.2",
   "description": "A light-weight frontend framework for any project.",
   "main": "index.js",
   "scripts": {
